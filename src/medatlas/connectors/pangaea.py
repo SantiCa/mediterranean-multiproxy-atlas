@@ -1,8 +1,9 @@
 """PANGAEA DOI retrieval and OAI-PMH metadata harvest."""
 
 from urllib.parse import urlencode
+import re
 
-from .base import HTTPConnector
+from .base import HTTPConnector, ConnectorError
 
 
 class PANGAEAConnector(HTTPConnector):
@@ -13,14 +14,18 @@ class PANGAEAConnector(HTTPConnector):
     @staticmethod
     def normalize_doi(doi: str) -> str:
         value = doi.strip().removeprefix("https://doi.org/").removeprefix("http://doi.org/")
-        if not value.lower().startswith("10.1594/pangaea."):
+        if not re.fullmatch(r"10\.1594/pangaea\.[0-9]+", value, re.IGNORECASE):
             raise ValueError(f"Expected a PANGAEA DOI, got {doi!r}")
-        return value
+        return "10.1594/PANGAEA." + value.rsplit(".", 1)[1]
 
     def dataset_table(self, doi: str):
         doi = self.normalize_doi(doi)
         url = f"{self.base_url}/{doi}?format=textfile"
-        return self.get(url, accept="text/tab-separated-values, text/plain;q=0.9")
+        artifact = self.get(url, accept="text/tab-separated-values, text/plain;q=0.9")
+        # Collections and access pages are not tabular measurements, even on HTTP 200.
+        if b"/* DATA DESCRIPTION:" not in artifact.body or b"*/" not in artifact.body:
+            raise ConnectorError(f"PANGAEA response is not a text table: {url}")
+        return artifact
 
     def dataset_metadata(self, doi: str):
         doi = self.normalize_doi(doi)

@@ -10,9 +10,12 @@ def select(rows, *, proxy=None, age_min=None, age_max=None, paper_year_min=None,
     for row in rows:
         if proxy is not None and row["proxy"] != proxy:
             continue
-        if paper_year_min is not None and row["publication_year"] < paper_year_min:
+        year = row["publication_year"]
+        if (paper_year_min is not None or paper_year_max is not None) and year is None:
             continue
-        if paper_year_max is not None and row["publication_year"] > paper_year_max:
+        if paper_year_min is not None and year < paper_year_min:
+            continue
+        if paper_year_max is not None and year > paper_year_max:
             continue
         if age_min is not None or age_max is not None:
             if row["age_ka_bp"] is None:

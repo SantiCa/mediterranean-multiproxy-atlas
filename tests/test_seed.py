@@ -15,6 +15,9 @@ from seed_query import select
 class ScientificIntegrity(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        if not all((ROOT / f"data/raw/pangaea/{item}.tsv").exists()
+                   for item in (438816, 901666, 759535, 898587, 921230)):
+            raise unittest.SkipTest("Seed originals absent: run python scripts/fetch_seed.py")
         cls.rows = json.loads((ROOT / "data/processed/observations.json").read_text(encoding="utf-8"))
 
     def test_all_raw_objects_match_manifest(self):

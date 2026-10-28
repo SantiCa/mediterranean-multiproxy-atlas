@@ -1,30 +1,39 @@
-"""Create a local handoff archive with source report and reviewed evidence."""
+"""Export tracked project files; ignored local material never enters the archive."""
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT.parent / "outputs"
-OUT.mkdir(exist_ok=True)
-target = OUT / "Mediterranean_Multiproxy_Atlas_viabilidad_2026-10-28.zip"
-members = []
-with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED, strict_timestamps=False) as archive:
-    for path in sorted(ROOT.rglob("*")):
-        if not path.is_file():
-            continue
-        rel = path.relative_to(ROOT)
-        if any(part in {"__pycache__", ".git", "node_modules", ".data-app-offline"} for part in rel.parts):
-            continue
-        # The installed Node/NPM build toolchain is unavailable here; exclude the
-        # older compiled preview so this package cannot present stale report text.
-        if rel.parts[:2] == ("report-app", "dist"):
-            continue
-        archive.write(path, rel.as_posix())
-        members.append(dict(path=rel.as_posix(), sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
-    archive.writestr("DELIVERY_MANIFEST.json", json.dumps(members, indent=2))
-with zipfile.ZipFile(target) as archive:
-    assert archive.testzip() is None
-    for entry in members:
-        assert hashlib.sha256(archive.read(entry["path"])).hexdigest() == entry["sha256"]
-print(json.dumps(dict(path=str(target), members=len(members), bytes=target.stat().st_size, sha256=hashlib.sha256(target.read_bytes()).hexdigest()), indent=2))
+
+
+def package_project(root: Path, target: Path) -> dict:
+    root = root.resolve()
+    # Match Git's explicit publication boundary, rather than walking the workspace.
+    listing = subprocess.check_output(["git", "ls-files", "-z"], cwd=root)
+    files = [root / name.decode("utf-8") for name in listing.split(b"\0") if name]
+    missing = [str(path) for path in files if not path.is_file() or path.is_symlink()]
+    if missing:
+        raise RuntimeError(f"Tracked files missing or symbolic links: {missing}")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    members = []
+    with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
+        for path in sorted(files):
+            raw = path.read_bytes()
+            relative = path.relative_to(root).as_posix()
+            archive.writestr(relative, raw)
+            members.append(dict(path=relative, sha256=hashlib.sha256(raw).hexdigest()))
+        archive.writestr("DELIVERY_MANIFEST.json", json.dumps(members, indent=2))
+    with zipfile.ZipFile(target) as archive:
+        if archive.testzip() is not None:
+            raise RuntimeError("Archive CRC verification failed")
+        for entry in members:
+            if hashlib.sha256(archive.read(entry["path"])).hexdigest() != entry["sha256"]:
+                raise RuntimeError(f"Archive hash mismatch: {entry['path']}")
+    return dict(path=str(target), members=len(members), bytes=target.stat().st_size,
+                sha256=hashlib.sha256(target.read_bytes()).hexdigest())
+
+
+if __name__ == "__main__":
+    print(json.dumps(package_project(ROOT, ROOT.parent / "outputs" / "medatlas-source.zip"), indent=2))

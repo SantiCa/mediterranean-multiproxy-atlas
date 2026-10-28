@@ -2,9 +2,14 @@
 
 **Global in architecture; Mediterranean first in the research workflow.** A research software project to discover, document, connect and visualize georeferenced paleoclimate records while preserving source metadata, age models, transformations, licensing and uncertainty.
 
-The model is designed for marine and continental archives. An analysis region is configured with versioned geography; it is not built into database keys or tables. Current work is a research prototype: connectors and schema are being established, but the complete web atlas and Mediterranean synthesis have not been built.
+The model is designed for marine and continental archives. The proposed relational architecture uses versioned geography independently of records; region storage and migrations remain to be implemented. Current work is a research prototype: connectors and schema are being established, but the complete web atlas and Mediterranean synthesis have not been built.
 
 ## Project documents
+
+- Agent instructions: [`AGENTS.md`](AGENTS.md); Claude entry: [`CLAUDE.md`](CLAUDE.md)
+- Short current state and backlog: [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md)
+- Specialist chat prompts: [`docs/CHAT_PROMPTS.md`](docs/CHAT_PROMPTS.md)
+- Technical review and remaining issues: [`reports/revision_codigo_2026-10-28.md`](reports/revision_codigo_2026-10-28.md)
 
 - Feasibility report: [`reports/informe_viabilidad.md`](reports/informe_viabilidad.md)
 - Thesis and publication review: [`docs/revision_tesis.md`](docs/revision_tesis.md)
@@ -19,6 +24,10 @@ The model is designed for marine and continental archives. An analysis region is
 The source thesis and full-page thesis images are retained in the local workspace, excluded from Git by default, and are not required to install or run the code. The report viewer is separate from the atlas application and excluded from the Git project.
 
 ## Connected sources
+
+Live retrieval status is recorded in [`reports/live_source_check.json`](reports/live_source_check.json).
+The latest bounded checks retrieved JSON from NOAA, Neotoma and DataCite; PANGAEA
+returned HTTP 400. These checks do not certify full ingestion or scientific validity.
 
 The Python package provides read-only interfaces for PANGAEA DOI/OAI-PMH retrieval, NOAA/NCEI WDS Paleo JSON search, Neotoma v2 site/dataset/chronology/data endpoints, DataCite DOI discovery and local LiPD `.lpd` packages. Exact API capability and limitations are listed per provider in `config/sources.json`. PaleoMED20, the World Paleoceanographic Atlas, WDB-Paleo and SISAL are registered for source-specific evaluation; this repository does not claim live connectors for those sources yet.
 
@@ -69,6 +78,22 @@ The data seed can be reproduced from the official PANGAEA DOI endpoints. No age 
 ## Research publication
 
 `manuscript/database_paper_draft.md` is an explicitly labeled manuscript draft about the database design and publication path. It separates software/curation contributions from potential new paleoenvironmental results and makes no claim that the proposed atlas is already complete.
+
+## Verification and source delivery
+
+```powershell
+python -m unittest discover -s tests -v
+python scripts/check_live_sources.py
+python scripts/package_delivery.py
+```
+
+The unit suite is offline. Seed-integrity checks require downloaded originals and
+are explicitly skipped otherwise. The live-provider command is separate, makes one
+bounded request per service and records failures as well as successful retrievals.
+GitHub Actions runs offline checks on Windows/Linux with Python 3.10/3.14.
+The delivery command exports tracked files only to `../outputs/medatlas-source.zip`;
+review `git ls-files` first. Old local thesis-containing archives are private working
+artifacts and are not source releases.
 
 ## Licenses and citation
 

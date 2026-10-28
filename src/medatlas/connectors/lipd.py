@@ -20,11 +20,14 @@ class LiPDArchive:
         try:
             with ZipFile(self.path) as archive:
                 names = archive.namelist()
-                metadata_name = next((name for name in names if name.endswith("metadata.jsonld")), None)
-                if metadata_name is None:
-                    raise ConnectorError("LiPD archive has no metadata.jsonld")
+                candidates = [name for name in names if name.endswith("metadata.jsonld")]
+                if len(candidates) != 1:
+                    raise ConnectorError("Expected exactly one metadata.jsonld in LiPD archive")
+                metadata_name = candidates[0]
                 metadata = json.loads(archive.read(metadata_name).decode("utf-8"))
-        except (BadZipFile, UnicodeDecodeError, json.JSONDecodeError) as exc:
+                if not isinstance(metadata, dict):
+                    raise ConnectorError("LiPD metadata must be a JSON object")
+        except (OSError, BadZipFile, UnicodeDecodeError, json.JSONDecodeError) as exc:
             raise ConnectorError(f"Invalid LiPD archive: {self.path}") from exc
         return {"path": str(self.path), "metadata_path": metadata_name, "metadata": metadata,
                 "table_paths": [name for name in names if name.lower().endswith(".csv")],

@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-10-28T16:02:05.926254+00:00",
+  "scope": "One bounded request per provider; retrieval only, not scientific or full schema validation",
+  "results": [
+    {
+      "source": "pangaea",
+      "status": "failed",
+      "error": "ConnectorError: pangaea request failed: https://doi.pangaea.de/10.1594/PANGAEA.438816?format=textfile: HTTP Error 400: Bad Request"
+    },
+    {
+      "source": "noaa_wds_paleo",
+      "status": "retrieved",
+      "request_url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?dataPublisher=NOAA&headersOnly=true&limit=1",
+      "resolved_url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?dataPublisher=NOAA&headersOnly=true&limit=1",
+      "accessed_at_utc": "2026-10-28T16:01:43.046499+00:00",
+      "sha256": "c5a810f4ba77c4ce8fc514cc94067393af3e07b6fcb89375c6d65907cef56ecf",
+      "bytes": 459,
+      "content_type": "application/json",
+      "top_level_keys": [
+        "study"
+      ]
+    },
+    {
+      "source": "neotoma",
+      "status": "retrieved",
+      "request_url": "https://api.neotomadb.org/v2.0/data/sites?sitename=Marion+Lake",
+      "resolved_url": "https://api.neotomadb.org/v2.0/data/sites?sitename=Marion+Lake",
+      "accessed_at_utc": "2026-10-28T16:02:05.925940+00:00",
+      "sha256": "96470305b2de9b5355e811f9e6e5c8330d8d871f12c710fd34e055e233e39caa",
+      "bytes": 1483,
+      "content_type": "application/json; charset=utf-8",
+      "top_level_keys": [
+        "status",
+        "data",
+        "message"
+      ]
+    },
+    {
+      "source": "datacite",
+      "status": "retrieved",
+      "request_url": "https://api.datacite.org/dois/10.1594/PANGAEA.438816",
+      "resolved_url": "https://api.datacite.org/dois/10.1594/PANGAEA.438816",
+      "accessed_at_utc": "2026-10-28T16:01:36.583519+00:00",
+      "sha256": "f8d416d55ebe382f27c2d81e017a51d90cac7c0cadd521baabe1eb4a474dc1ad",
+      "bytes": 9991,
+      "content_type": "application/json; charset=utf-8",
+      "top_level_keys": [
+        "data"
+      ]
+    }
+  ]
+}

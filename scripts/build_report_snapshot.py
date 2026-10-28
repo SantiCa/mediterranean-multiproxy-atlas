@@ -15,7 +15,7 @@ prior_art = [
     dict(name="LiPD", year=2016, url="https://cp.copernicus.org/articles/12/1093/2016/", scope="Marco de intercambio; no implementado"),
 ]
 snapshot = dict(surface="report", title="Mediterranean Multiproxy Atlas · informe de viabilidad", generatedAt=datetime.now(timezone.utc).isoformat(),
-                status="reviewed-evidence-with-limitations", buildStatus="creating", filters=[],
+                status="reviewed-evidence-with-limitations", filters=[],
                 scientificReportMarkdown=(ROOT / "reports/informe_viabilidad.md").read_text(encoding="utf-8"),
                 architectureMarkdown=(ROOT / "docs/arquitectura_datos.md").read_text(encoding="utf-8"),
                 report=dict(asOf="2026-10-28", audience="Investigación paleoceanográfica"), queries={
