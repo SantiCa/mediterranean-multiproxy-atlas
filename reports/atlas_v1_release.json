@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-28",
+  "release": "atlas-v1-2026-10-28-r2",
+  "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "site_source_commit": "3ec430c578a1a6d5e944c5e495c62ec11fa4d53e",
+  "deployment_id": "appgdep_6ae22679cd6c8191a38d34008871b285",
+  "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_2e118c2a99c48191aeaa21a5d05ec71c",
+  "deployment_status": "succeeded",
+  "audience": "owner_private",
+  "url": "https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site",
+  "seed_sha256": "0b3bf69f5261a58fdc7d889626a84a23fac10d06a5bc7a4f23eb1fb670393897",
+  "python_tests_local_passed": 26,
+  "node_science_tests_passed": 6,
+  "typescript": "passed",
+  "production_build": "passed",
+  "local_D1_roundtrip": {
+    "observations": 14751,
+    "fields_per_observation": 9,
+    "result": "all matched canonical seed"
+  },
+  "export_check": {
+    "csv_rows": 543,
+    "csv_selection": "continental speleothem d18O, 6-8 ka BP",
+    "map_svg_xml": "valid"
+  },
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "browser_online_status": "Private sign-in gate reached; authenticated online functional test pending owner login",
+  "limitations": "Deployment success does not itself verify the authenticated application, production seed import or scientific reconstruction."
+}
