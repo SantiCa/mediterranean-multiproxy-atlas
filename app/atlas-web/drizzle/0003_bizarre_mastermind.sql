@@ -1,0 +1,1 @@
+CREATE INDEX `atlas_inventory_record_campaign_idx` ON `atlas_inventory_campaigns` (`record_id`,`campaign_id`);

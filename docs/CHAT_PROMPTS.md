@@ -5,7 +5,7 @@ especialidad; las reglas y el estado están en el repositorio. En un chat sin ac
 a archivos, adjuntar `AGENTS.md`, `PROJECT_STATE.md` y los archivos mínimos indicados;
 el agente debe entregar un parche y señalar qué no pudo ejecutar.
 
-Antes de trabajar en la web, leer docs/WEB_V1.md; SRC-01/DB-01/API-01 del estado histórico ya tienen implementación v1. Usar el backlog actualizado.
+Antes de trabajar en la web, leer docs/DISCOVERY_V2.md y docs/WEB_V1.md; SRC-01/DB-01/API-01 del estado histórico ya tienen implementación v1. Usar el backlog actualizado.
 
 Orden recomendado: coordinador asigna contratos → arquitectura y conectores →
 curación científica → interfaz. El manuscrito puede avanzar en paralelo con la
@@ -90,7 +90,7 @@ de la tesis como originales. Expresa bloqueos concretos con fuentes verificadas.
 ```text
 Actúa como desarrollador de herramientas científicas y visualización. Lee AGENTS.md,
 docs/PROJECT_STATE.md, docs/WEB_V1.md y docs/arquitectura_plataforma.md.
-La web v1 ya existe en app/atlas-web y tiene D1, mapa, filtros, normalización, IDW y
+La web v2 ya existe en app/atlas-web y tiene D1, mapa, filtros, normalización, IDW y
 exportación. Primer entregable: proponer y medir paginación/agregación de servidor
 para evitar cargar todo el catálogo al ampliar los datos (API-02). Mantener el contrato
 científico de lib/science.mjs y sus pruebas. No reemplazar la web por report-app ni
@@ -121,4 +121,21 @@ docs/handoffs/<ID>.md. Comprueba el commit y el estado real de los archivos.
 Continúa desde la siguiente acción documentada; lee fuentes adicionales solo cuando
 una decisión lo necesite. Si el handoff contradice el código o la fuente, documenta
 la diferencia. Entrega resultado, verificación y handoff actualizado en ≤250 palabras.
+```
+
+
+## 8. Datos publicados en artículos y suplementos
+
+```text
+Actúa como curador científico del Mediterranean Multiproxy Atlas. Lee AGENTS.md,
+docs/PROJECT_STATE.md, docs/DISCOVERY_V2.md y
+docs/curation/article_scout_2026-10-28.md. Elige UN artículo candidato y consulta
+su fuente primaria y suplementos autorizados. Contrasta DOI, core/IGSN, ubicación,
+licencia, método, tabla, edad/unidad originales, incertidumbre y duplicación contra
+el catálogo. No conviertas una representación BioC en celdas nativas equivalentes
+sin comprobarla. Primer entregable: mapeo de una tabla numérica con localizadores,
+hash, reglas explícitas y revisión de una muestra; después generar staging. No
+modifiques semillas ni publiques directamente. Entrega parche y handoff breve;
+separa medición, reconstrucción publicada y modelo. Usa versiones abiertas o de
+autor; no eludas controles de acceso ni inventes valores digitalizados.
 ```

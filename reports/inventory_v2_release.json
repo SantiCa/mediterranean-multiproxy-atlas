@@ -1,0 +1,183 @@
+{
+  "data_version": "atlas-inventory-2026-10-28-v2-r2",
+  "counts": {
+    "entries": 15572,
+    "georeferenced": 9175,
+    "core_site_entries": 5846,
+    "dataset_references": 9726,
+    "campaigns": 289
+  },
+  "counts_by_source": {
+    "PANGAEA discovery": 9726,
+    "NOAA IMLGS": 2723,
+    "Neotoma": 1153,
+    "NOAA WDS": 355,
+    "PaleoMED20": 1524,
+    "PANGAEA": 10,
+    "WPA 2025.0": 81
+  },
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "time_extent": {
+    "numeric_min": -0.056,
+    "numeric_max": 429.69,
+    "metadata_max": 121000.0,
+    "metadata_max_record": "DSDP 545",
+    "metadata_max_source": "https://www.ncei.noaa.gov/access/paleo-search/study/14568?siteId=55009"
+  },
+  "snapshot_sha256": "4ed5e4f46c66a0407fbf8258c6a23c981f4199717227f94f8c0aef8e6804466e",
+  "coverage": [
+    {
+      "provider": "PaleoMED20",
+      "reported_core_rows": 1524,
+      "read_core_rows": 1524,
+      "mapped_entries": 1524,
+      "excluded_rows": [],
+      "version": "10.6084/m9.figshare.28303013.v1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://doi.org/10.6084/m9.figshare.28303013.v1",
+      "source_sha256": "b7fc1418b6b5d454482888874a288fc00f38dd9ae034246ef4e59f75a96268ba",
+      "complete_for_published_file": true,
+      "limitations": [
+        "Metadata inventory, not 1524 quantitative series",
+        "Publication DOI cells are retained as archived; not all original articles independently checked",
+        "Record Density intervals are coverage statements, not harmonized age models"
+      ]
+    },
+    {
+      "provider": "NOAA IMLGS",
+      "queried_rows": 3578,
+      "mapped_entries": 2723,
+      "excluded_devices": {
+        "dredge": 110,
+        "grab": 326,
+        "dredge, rock": 71,
+        "grab, rov": 346,
+        "unknown device": 2
+      },
+      "source_url": "https://www.ncei.noaa.gov/erddap/tabledap/IMLGS_Marine_Geology.json?latitude,longitude,FACILITY,URL_LINK,DOI_LINK,PLATFORM,CRUISE_NAME,SAMPLE,DEVICE,BEGIN_DATE,WATER_DEPTH,CORED_LENGTH,LAKE,IGSN,SHOW_SAMPL,IMLGS&longitude%3E=-10&longitude%3C=42&latitude%3E=28&latitude%3C=48&distinct()",
+      "source_sha256": "a8ec34459fb0062dfc8d3666a10249808529a09863ab2037005974f905bea8ac",
+      "pagination": "ERDDAP server-filtered distinct response; no row limit applied",
+      "snapshot": "Source ERDDAP metadata date_created 2024-11-11; legacy viewer retired in 2025",
+      "limitations": [
+        "Includes adjacent Atlantic/Black Sea/Red Sea sites in the declared rectangle",
+        "Samples with same cruise/sample can be distinct devices/IGSNs; retained separately",
+        "Current physical sample availability requires curator confirmation"
+      ]
+    },
+    {
+      "provider": "WPA 2025.0",
+      "mapped_entries": 81,
+      "queried_table_rows": 81,
+      "source_url": "https://paleodataview.marum.de/fora_search_25/?q_st_sp=39&q_meta_sp=3&q_coll_sp=WPA_2025.0&q_name_sp=Raw+Data&q_core_sp=&q_species_sp=&q_lon_min=-10&q_lon_max=42&q_lat_min=28&q_lat_max=48&q_depth_min=0&q_depth_max=99999&q_device_sp=&q_type_sp=&q_lab_sp=&q_paper_sp=&q_com_sp=&q_source_sp=&q_ref_sp=&q_ouse_sp=&q_cuse_sp=&q_ocor_min=-999999&q_ocor_max=999999&q_ccor_min=-999999&q_ccor_max=999999&q_ojust_sp=&q_cjust_sp=&q_basin_sp=&q_imp_sp=&q_file_sp=&q_option_sp=",
+      "source_sha256": "41473a10d5488e47d57036b4704b1b7c3e5fe8cbfbb386ca523019680fd3efa2",
+      "limitations": [
+        "Exactly the named public Raw Data search result and table, not asserted complete across all WPA views",
+        "Species is preserved; no proxy variable is inferred from an undocumented query code",
+        "No numerical series ingested; native campaigns and paper relationships require further review"
+      ]
+    },
+    {
+      "provider": "PANGAEA via DataCite + source-native seed XML",
+      "query": "geoLocations.geoLocationPoint.pointLatitude:[28 TO 48] AND geoLocations.geoLocationPoint.pointLongitude:[-10 TO 42] AND (subjects.subject:sediment* OR titles.title:core* OR subjects.subject:drilling)",
+      "repository_filter": "client-id=pangaea.repository",
+      "reported_datasets": 9726,
+      "retrieved_unique_datasets": 9726,
+      "page_size": 1000,
+      "pages_retrieved": 10,
+      "pagination_complete": true,
+      "datasets_with_point_inside_bbox": 3329,
+      "point_count": 3329,
+      "native_datasets_requested": 10,
+      "native_datasets_retrieved": 10,
+      "native_failures": [],
+      "real_event_count": 10,
+      "events_with_campaign": 6,
+      "limitations": [
+        "Exhaustive only for this explicit DataCite query at retrieval time; not all PANGAEA sediment cores",
+        "Point filters omit records with only bounding boxes or missing georeferencing; query may match sediment datasets without cores",
+        "Separate latitude/longitude index fields can match different points; canonical points are post-filtered within bbox",
+        "DataCite points are dataset-level; not promoted to named cores or sampling events",
+        "Native event/campaign enrichment restricted explicitly to the ten existing PANGAEA seed datasets",
+        "Current source XML can contain old and new names; labels preferred and all unknown fields remain in cached originals",
+        "No measurements downloaded or parsed; publication_year here is dataset metadata year, not automatically paper year"
+      ]
+    },
+    {
+      "provider": "NOAA WDS and Neotoma",
+      "noaa_header_rows": 1881,
+      "noaa_selected_studies": 298,
+      "noaa_retrieved_studies": 298,
+      "noaa_failures": [],
+      "noaa_entries": 355,
+      "neotoma_sites": 1186,
+      "neotoma_pages": 2,
+      "neotoma_entries": 1983,
+      "neotoma_pagination_complete": true,
+      "limitations": [
+        "Point locations only; site bounds are not converted to invented coordinates",
+        "NOAA archive-type filter excludes global climate reconstructions/tree rings/corals; campaigns are not inferred from studies",
+        "Neotoma includes collection units; multiple units at a site are not automatically independent locations",
+        "No observations downloaded; licenses and chronology require record-level review"
+      ]
+    }
+  ],
+  "python_tests_local_passed": 30,
+  "node_tests_passed": 9,
+  "typescript": "passed",
+  "local_API_checks": {
+    "all_sites": 5846,
+    "PaleoMED20": 1524,
+    "dataset_references": 9726,
+    "page_size": 60,
+    "groups_including_unknown": 290,
+    "SQL_wildcards_literal": true,
+    "campaign_filter_example": "LEG161 / PaleoMED20 / source year1996: 6 entries"
+  },
+  "series_export_check": {
+    "sites": 6,
+    "values": 294,
+    "csv": "all exported numeric ages and values matched canonical seed",
+    "SVG": "294 circles, 6 distinct series colors, valid XML"
+  },
+  "limitations": [
+    "Counts are source entries, not de-duplicated independent physical cores",
+    "No campaigns inferred from core prefixes",
+    "Metadata locations and reported proxy presence do not imply reviewed numeric data",
+    "Coverage is documented per query/snapshot, never universal completeness"
+  ],
+  "deployment": {
+    "id": "appgdep_6ae27811069c8191b67f16b1d1200c48",
+    "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+    "title": "Mediterranean Multiproxy Atlas",
+    "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_b34ba94532488191bfaed897cc91281f",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ae21e92359c819185d57ecd9bed0133",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-28T22:33:05.524479+00:00",
+    "site_source_commit": "ec01fba023706cc8434158b61fd2013a5da23138",
+    "audience": "owner_private"
+  },
+  "production_initial_catalogue": "Authenticated browser loaded 5846 core/site entries after initial D1 import",
+  "production_checks": {
+    "authenticated_catalogue_entries": 5846,
+    "campaign_filter": "LEG161 / PaleoMED20 / 1996: 6 entries",
+    "moving_window": "6-8 to 8-10 ka with fixed width 2 ka; global metadata and numeric extent selectors",
+    "series_comparison": "custom 2 cores/133 points; all 6 compatible SST cores/294 points",
+    "candidate_queue": "Four new article candidates plus existing PaleoMED20; no new numerical observations ingested",
+    "D1_persistence": "Original curated release and candidate preserved; inventory release 15572 rows recorded",
+    "metadata_CSV": "Production filtered CSV preparation yields download link. Local IAB actual file: 6 rows, 2432 bytes. Chrome automation cannot confirm Blob file downloads; do not claim production file download verified."
+  }
+}

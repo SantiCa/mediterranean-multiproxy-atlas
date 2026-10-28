@@ -4,9 +4,9 @@
 
 The model is designed for marine and continental archives. The proposed relational architecture uses versioned geography independently of records; region storage and migrations remain to be implemented. The first interactive web pilot is implemented with a D1/SQLite database; Mediterranean synthesis and full scientific validation remain future work.
 
-## Interactive v1
+## Interactive v2
 
-[Open the atlas](https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site) (owner-private). Marine and continental records, proxy/age filters, original or normalized values, optional exploratory color fields, time series, CSV and editable SVG. [Implementation, reproduction and scientific limits](docs/WEB_V1.md). Web source: `app/atlas-web/`; reproducible SQLite: `python scripts/build_atlas_v1.py --from-seed --sqlite data/processed/atlas-v1-local.sqlite`.
+[Open the atlas](https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site) (owner-private). Linked catalogue with 5,846 core/site entries, 9,726 PANGAEA dataset references and 289 declared campaign labels. Quantitative marine/continental collection: 13 records and 14,751 values. Campaign grouping, moving time windows, multiple-core point clouds, CSV and editable SVG. [Current implementation and coverage](docs/DISCOVERY_V2.md); [v1 scientific contracts](docs/WEB_V1.md). Web source: `app/atlas-web/`; reproducible SQLite: `python scripts/build_atlas_v1.py --from-seed --sqlite data/processed/atlas-v1-local.sqlite`.
 
 ## Project documents
 

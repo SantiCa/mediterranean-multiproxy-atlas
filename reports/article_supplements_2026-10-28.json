@@ -1,0 +1,30 @@
+[
+  {
+    "pmcid": "PMC10858959",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10858959/bin/41467_2024_45123_MOESM4_ESM.xlsx",
+    "bioc_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/supplmat.cgi/BioC_json/PMC10858959/4",
+    "status": "not_retrieved",
+    "error": "Expected spreadsheet; no challenge bypass attempted"
+  },
+  {
+    "pmcid": "PMC11573988",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11573988/bin/41467_2024_53781_MOESM3_ESM.xlsx",
+    "bioc_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/supplmat.cgi/BioC_json/PMC11573988/3",
+    "status": "not_retrieved",
+    "error": "Expected spreadsheet; no challenge bypass attempted"
+  },
+  {
+    "pmcid": "PMC8417336",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8417336/bin/mmc1.xlsx",
+    "bioc_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/supplmat.cgi/BioC_json/PMC8417336/1",
+    "status": "not_retrieved",
+    "error": "Expected spreadsheet; no challenge bypass attempted"
+  },
+  {
+    "pmcid": "PMC8417336",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8417336/bin/mmc2.xlsx",
+    "bioc_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/supplmat.cgi/BioC_json/PMC8417336/2",
+    "status": "not_retrieved",
+    "error": "Expected spreadsheet; no challenge bypass attempted"
+  }
+]

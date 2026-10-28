@@ -1,31 +1,27 @@
 # Estado breve del proyecto
 
-Actualizado: 28-10-2026. GitHub `SantiCa/mediterranean-multiproxy-atlas`, privado. Usar `git log -1` para el commit efectivo.
+Actualizado: 28-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Usar git log para el commit efectivo.
 
-## Ejecutable
+## Ejecutable v2
 
-- Web v1 en https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado): mapa de proxies, capas base, selección por edad/publicación/archivo, z o valores originales, IDW optativo, series y exportaciones CSV/SVG.
-- Base propia D1/SQLite: 13 registros, 22 series, 14.751 valores. 10 registros PANGAEA y 3 espeleotemas NOAA. 40 valores sin edad preservados; no se ubican en ventanas cronológicas. Semilla `data/processed/atlas-v1.json`, release `atlas-v1-2026-10-28-r2`.
-- Fuente web en `app/atlas-web/`; migraciones en `migrations/`; construcción SQLite/semilla `scripts/build_atlas_v1.py`. Detalles y reproducción: `docs/WEB_V1.md`.
-- Clientes Python PANGAEA, NOAA, Neotoma, DataCite; lector LiPD. Los últimos cuatro checks HTTP recuperan datos/metadatos; solo PANGAEA y NOAA aportan valores al atlas.
-- Cola DOI persistente: verifica identidad bibliográfica y deja la fuente pendiente de curación; no inventa extracción automática de artículos.
-- AGENTS.md/CLAUDE.md, prompts en docs/CHAT_PROMPTS.md, tesis revisada y borrador de publicación disponibles.
+- URL: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado del propietario).
+- Inventario enlazado: 15.572 entradas de fuente, con 5.846 de sondeos/sitios/unidades y 9.726 referencias a datasets PANGAEA. 289 etiquetas de campaña. No equivalen a ubicaciones físicas independientes ya depuradas.
+- Fuentes: PaleoMED20 (1.524), NOAA IMLGS (2.723), Neotoma (1.153 unidades), NOAA WDS (355 sitios), PANGAEA XML (10 eventos) y WPA 2025.0 (81 entradas de la consulta); PANGAEA/DataCite 9.726 DOI separados de identidades de core. Consultas/versiones/límites en docs/DISCOVERY_V2.md.
+- Mapa/lista, búsquedas y filtros por campaña/fuente/archivo/tipo, agrupación por campaña y exportación CSV. Lista paginada en D1 y puntos compactos con agrupación de navegación.
+- Colección cuantitativa conserva 13 registros, 22 series y 14.751 valores. No se atribuyen miles de series numéricas al inventario de metadatos.
+- Ventanas temporales de ancho fijo, desplazamiento/recorrido y rango global, con separación de cobertura publicada frente a edades numéricas. Nube de varios/todos los sondeos compatibles, figura ampliada, zoom de intervalo, original/z, opacidad y CSV/SVG trazables.
+- Primera prospección de artículos/suplementos documentada en docs/curation/article_scout_2026-10-28.md; convertidos BioC y versión de autor GP03PC en área local. Candidatos pendientes de revisión, sin números inventados.
 
-## Verificación
+## Archivos y verificación
 
-26 pruebas Python locales, 6 Node, TypeScript y build. Fidelidad de las 14.751 filas D1 locales contra semilla con 9 campos. Exportaciones reales CSV/SVG y móvil probados. Tras iniciar sesión se verificó también producción: catálogo, superficies y exclusiones, mapas base, navegación y persistencia de cola DOI tras recarga. Los CSV online de 64 valores SST y 543 δ18O coinciden en edades y celdas originales con la semilla. Evidencia en `reports/atlas_v1_release.json`. Los conteos no prueban representatividad ni independencia de muestras. CI remota se consulta por ejecución; no inferir su éxito a partir de pruebas locales.
+Fuente web app/atlas-web; semillas data/processed/atlas-v1.json e inventory-v2.json; migraciones 0000–0003. 30 pruebas Python locales, 9 Node, TypeScript; informes en reports/atlas_v1_release.json y reports/inventory_v2_release.json. El informe v2 se actualiza con el despliegue/verificación efectivos. No inferir CI remota de comprobaciones locales.
 
-## Backlog
+## Pendientes científicos / tecnológicos
 
-| ID | Entregable |
-|---|---|
-| CUR-02 | Doble revisión por artículo: tablas, métodos, cronología, licencia, duplicados; resolver profundidad ODP 977 y disponibilidad GP03 |
-| CON-02 | Un registro lacustre/polínico Neotoma real, con taxonomía y cronología preservadas |
-| DB-02 | Versionar cronologías/regiones/transformaciones en tablas; contrato compatible con v1 y migración reversible |
-| MAP-02 | Validación espacial/temporal, propagación de incertidumbre, resolución apropiada y criterios de exclusión |
-| API-02 | Paginación/consultas por viewport y agregación servidor; pruebas de escala antes de ampliar miles de registros |
-| PUB-02 | Comparación cuantitativa versionada con antecedentes y evaluación independiente; elegir licencia de código |
+- Revisar identidad entre fuentes y correspondencias de campaña; corregir solo con evidencia/versiones. Resolver profundidad ODP 977 y datos GP03.
+- Importar una primera serie desde suplemento de artículo con doble curación, derechos y cronología comprobados.
+- Cronologías alternativas, taxonomías/denominadores, incertidumbre de edad y validación espacial del IDW.
+- Sincronización general con retiradas/correcciones/historial; consultas por viewport antes de escalar más allá del límite explícito de puntos.
+- Cosecha independiente SISAL/SeaDataNet/ISMAR y servicio WDB-Paleo verificable; evaluación editorial frente a antecedentes, licencia de código pendiente.
 
-## Límites
-
-z compara anomalías de la misma variable, no convierte proxies distintos en una reconstrucción común. IDW es exploratorio. Sin cronologías armonizadas ni incertidumbre espacial. El modelo relacional operativo es menor que la arquitectura científica propuesta. Continental actual = espeleotemas, no todos los archivos. Basemaps externos pueden cambiar. El visor `report-app/` es auxiliar, distinto de la web del atlas. No cargar la tesis completa para desarrollo rutinario: usar `docs/revision_tesis.md`.
+No cargar tesis/JSON completos para interfaz rutinaria. Usar AGENTS.md, docs/DISCOVERY_V2.md y el handoff pertinente. No se presenta una nueva reconstrucción paleoambiental validada.
