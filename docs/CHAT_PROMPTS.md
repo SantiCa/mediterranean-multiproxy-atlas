@@ -5,6 +5,8 @@ especialidad; las reglas y el estado están en el repositorio. En un chat sin ac
 a archivos, adjuntar `AGENTS.md`, `PROJECT_STATE.md` y los archivos mínimos indicados;
 el agente debe entregar un parche y señalar qué no pudo ejecutar.
 
+Antes de trabajar en la web, leer docs/WEB_V1.md; SRC-01/DB-01/API-01 del estado histórico ya tienen implementación v1. Usar el backlog actualizado.
+
 Orden recomendado: coordinador asigna contratos → arquitectura y conectores →
 curación científica → interfaz. El manuscrito puede avanzar en paralelo con la
 evidencia disponible. Cada ejecución aborda un entregable acotado, no toda su fase.
@@ -28,10 +30,10 @@ ni contactar colaboradores. Cierra con handoff breve usando TEMPLATE.md.
 ```text
 Actúa como arquitecto de datos científicos. Lee AGENTS.md, docs/PROJECT_STATE.md,
 docs/arquitectura_datos.md, docs/arquitectura_plataforma.md y src/medatlas/models.py.
-Diseña la primera migración SQLite para publicación/dataset/versiones, sitio/región,
+Revisa la proyección D1/SQLite v1 en docs/WEB_V1.md y migrations/. Diseña la siguiente migración SQLite para publicación/dataset/versiones, sitio/región,
 muestra/observación, modelo/asignación de edad y transformaciones. Mantén marine y
 continental como contextos extensibles; no fijes límites geográficos en las tablas.
-Primer entregable: migración versionada en migrations/ y decisiones de claves,
+No sustituyas las migraciones ya desplegadas. Primer entregable: nueva migración versionada en migrations/ y decisiones de claves,
 unidades/tiempo y cardinalidades en docs/decisions/storage-v1.md, con pruebas de
 integridad referencial y de una muestra con dos modelos de edad. No migres los datos
 reales hasta revisar sus mapeos. Propón cambios al modelo central en tu handoff.
@@ -87,15 +89,13 @@ de la tesis como originales. Expresa bloqueos concretos con fuentes verificadas.
 
 ```text
 Actúa como desarrollador de herramientas científicas y visualización. Lee AGENTS.md,
-docs/PROJECT_STATE.md y docs/arquitectura_plataforma.md. Revisa el contrato de datos
-aprobado por arquitectura y los filtros existentes antes de implementar.
-Primer entregable: contrato de API de lectura en docs/api-v1.md con filtros separados
-por región/realm, proxy, edad de muestra y año de publicación, y exportaciones con
-procedencia. Después desarrolla en app/ una vista mínima con datos reales del piloto,
-mapa/ficha/serie, unidades y exclusiones por edad desconocida. No uses report-app como
-si fuera el atlas. No inventes valores ni bandas; no interpolar por defecto. SVG
-exportado debe conservar texto editable y el conjunto exacto filtrado. Si falta un
-contrato, documenta la propuesta y evita cambiar modelos compartidos en paralelo.
+docs/PROJECT_STATE.md, docs/WEB_V1.md y docs/arquitectura_plataforma.md.
+La web v1 ya existe en app/atlas-web y tiene D1, mapa, filtros, normalización, IDW y
+exportación. Primer entregable: proponer y medir paginación/agregación de servidor
+para evitar cargar todo el catálogo al ampliar los datos (API-02). Mantener el contrato
+científico de lib/science.mjs y sus pruebas. No reemplazar la web por report-app ni
+alterar semilla, calibraciones o cronologías. Entregar parche acotado, medidas y
+handoff; no publicar otra web ni crear un nuevo proyecto Sites.
 ```
 
 ## 7. Manuscrito y comparación con antecedentes

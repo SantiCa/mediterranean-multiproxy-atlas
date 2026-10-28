@@ -19,11 +19,14 @@ class HTTPConnector:
     source = "unknown"
     user_agent = "medatlas/0.2 (research data discovery; contact: project maintainers)"
 
-    def get(self, url: str, *, accept: str = "application/json", timeout: int = 45,
+    def get(self, url: str, *, accept: str | None = "application/json", timeout: int = 45,
             max_bytes: int = 64 * 1024 * 1024) -> RetrievedArtifact:
         if max_bytes <= 0:
             raise ValueError("max_bytes must be positive")
-        request = Request(url, headers={"Accept": accept, "User-Agent": self.user_agent})
+        headers = {"User-Agent": self.user_agent}
+        if accept is not None:
+            headers["Accept"] = accept
+        request = Request(url, headers=headers)
         try:
             with urlopen(request, timeout=timeout) as response:
                 # Bound provider responses; large datasets need an explicit limit.

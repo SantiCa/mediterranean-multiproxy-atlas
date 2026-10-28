@@ -45,3 +45,8 @@ Reglas comunes en `AGENTS.md`, entrada de Claude en `CLAUDE.md`, estado breve en
 `PROJECT_STATE.md`, siete prompts con archivos/dueños/dependencias y plantilla de
 handoff en `docs/`. Los comentarios añadidos explican supuestos científicos y motivos
 de comportamiento; no se comenta mecánicamente cada instrucción.
+
+
+## Seguimiento posterior: web v1
+
+Se resolvió HTTP 400 PANGAEA omitiendo Accept en la petición textfile (bytes idénticos). Se implementaron migraciones SQLite/D1, API y mapa v1; el estado histórico anterior se conserva. Ver docs/WEB_V1.md y docs/PROJECT_STATE.md para límites, pruebas y backlog actuales.

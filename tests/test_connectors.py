@@ -26,6 +26,12 @@ def artifact(body=b"{}"):
 
 
 class ConnectorContracts(unittest.TestCase):
+    def test_pangaea_explicit_table_format_omits_accept_header(self):
+        client=PANGAEAConnector()
+        with patch.object(client,'get',return_value=artifact(b'/* DATA DESCRIPTION: x */\nage\tvalue')) as get:
+            client.dataset_table('10.1594/PANGAEA.438816')
+        self.assertIsNone(get.call_args.kwargs['accept'])
+
     def test_pangaea_does_not_accept_html_as_measurements(self):
         with patch.object(PANGAEAConnector, "get", return_value=artifact(b"<html>Access required</html>")):
             with self.assertRaises(ConnectorError):

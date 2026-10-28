@@ -2,7 +2,11 @@
 
 **Global in architecture; Mediterranean first in the research workflow.** A research software project to discover, document, connect and visualize georeferenced paleoclimate records while preserving source metadata, age models, transformations, licensing and uncertainty.
 
-The model is designed for marine and continental archives. The proposed relational architecture uses versioned geography independently of records; region storage and migrations remain to be implemented. Current work is a research prototype: connectors and schema are being established, but the complete web atlas and Mediterranean synthesis have not been built.
+The model is designed for marine and continental archives. The proposed relational architecture uses versioned geography independently of records; region storage and migrations remain to be implemented. The first interactive web pilot is implemented with a D1/SQLite database; Mediterranean synthesis and full scientific validation remain future work.
+
+## Interactive v1
+
+[Open the atlas](https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site) (owner-private). Marine and continental records, proxy/age filters, original or normalized values, optional exploratory color fields, time series, CSV and editable SVG. [Implementation, reproduction and scientific limits](docs/WEB_V1.md). Web source: `app/atlas-web/`; reproducible SQLite: `python scripts/build_atlas_v1.py --from-seed --sqlite data/processed/atlas-v1-local.sqlite`.
 
 ## Project documents
 
@@ -26,8 +30,7 @@ The source thesis and full-page thesis images are retained in the local workspac
 ## Connected sources
 
 Live retrieval status is recorded in [`reports/live_source_check.json`](reports/live_source_check.json).
-The latest bounded checks retrieved JSON from NOAA, Neotoma and DataCite; PANGAEA
-returned HTTP 400. These checks do not certify full ingestion or scientific validity.
+The latest bounded checks retrieved responses from PANGAEA, NOAA, Neotoma and DataCite. The PANGAEA HTTP 400 was resolved by omitting Accept on explicit textfile requests. These checks do not certify full ingestion or scientific validity.
 
 The Python package provides read-only interfaces for PANGAEA DOI/OAI-PMH retrieval, NOAA/NCEI WDS Paleo JSON search, Neotoma v2 site/dataset/chronology/data endpoints, DataCite DOI discovery and local LiPD `.lpd` packages. Exact API capability and limitations are listed per provider in `config/sources.json`. PaleoMED20, the World Paleoceanographic Atlas, WDB-Paleo and SISAL are registered for source-specific evaluation; this repository does not claim live connectors for those sources yet.
 
@@ -97,16 +100,16 @@ artifacts and are not source releases.
 
 ## Licenses and citation
 
-The seed datasets retain the CC-BY-3.0 or CC-BY-4.0 license shown in their PANGAEA records. Cite the dataset DOI and associated paper. The project does not modify third-party licenses or grant rights over publisher images. A project code license remains to be selected before public release.
+The PANGAEA seed datasets retain their CC-BY-3.0 or CC-BY-4.0 licenses. NOAA record-specific licenses are not declared; the documented WDS unrestricted-access reuse basis and required citation are retained, without assigning CC0. Cite the dataset DOI and associated paper. The project does not modify third-party licenses or grant rights over publisher images. A project code license remains to be selected before public release.
 
 ## Scientific scope and limits
 
-The seed contains five records selected to exercise data heterogeneity, not for representativeness. LC21 has depth but no sample-age column in the downloaded table. ODP 977 includes an MIS 11 interval. Age models have not been audited. A depth-unit conflict in ODP 977 is preserved and that field must not be used in depth–age joins until resolved.
+The original seed contains five records selected to exercise data heterogeneity, not for representativeness. The web v1 expands to 13 records, 22 series and 14,751 values from PANGAEA/NOAA; it remains purpose-selected. LC21 has depth but no sample-age column in the downloaded table. ODP 977 includes an MIS 11 interval. Age models have not been audited. A depth-unit conflict in ODP 977 is preserved and that field must not be used in depth–age joins until resolved.
 
 The counts of 1,026 rows and 2,684 values apply only to this selected seed, not all data available for those sites. Values are not statistically independent samples. These counts do not validate paleoenvironmental interpretations.
 
 ## Feasibility-report viewer
 
-`report-app` is a viewer for the feasibility report, not the atlas application. Its source report data is updated, but the compiled preview has not been rebuilt in this environment because npm is unavailable.
+`report-app` is a viewer for the feasibility report, not the atlas application. It is a separate historical local artifact; use the online atlas above for the current application.
 
 The local report viewer is outside this software project; the scientific Python package and source connectors do not depend on its runtime.

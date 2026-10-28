@@ -26,7 +26,9 @@ class PANGAEAConnector(HTTPConnector):
     def dataset_table(self, doi: str):
         doi = self.normalize_doi(doi)
         url = f"{self.base_url}/{doi}?format=textfile"
-        artifact = self.get(url, accept="text/tab-separated-values, text/plain;q=0.9")
+        # An explicit format parameter suffices. Live checks returned HTTP 400
+        # with Accept headers and byte-identical valid TSV without that header.
+        artifact = self.get(url, accept=None)
         # Collections and access pages are not tabular measurements, even on HTTP 200.
         if b"/* DATA DESCRIPTION:" not in artifact.body or b"*/" not in artifact.body:
             raise ConnectorError(f"PANGAEA response is not a text table: {url}")

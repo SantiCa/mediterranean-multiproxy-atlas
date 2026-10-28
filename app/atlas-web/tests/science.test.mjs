@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {summarize,fieldGrid,median,convexHull,haversine} from '../lib/science.mjs';
+const data={records:[{id:'a',latitude:0,longitude:0,realm:'marine',publication_year:2000}],series:[{id:'s',record_id:'a',proxy:'p',rows:[[0,0],[1,1],[2,2],[3,3],[4,4],[null,99]]}]};
+const f={proxy:'p',min:0,max:4,refMin:0,refMax:4,minN:1,mode:'z',stat:'median',realm:'all'};
+test('z uses fixed reference; real zeros retained; unknown ages excluded',()=>{const a=summarize(data,f)[0];assert.equal(a.value,0);assert.equal(a.n,5);assert.equal(a.ageMissing,1);assert.equal(a.reference.mean,2);const b=summarize(data,{...f,min:0,max:0})[0];assert.equal(b.value,-2/Math.sqrt(2));});
+test('empty window and insufficient normalization do not invent values',()=>{assert.equal(summarize(data,{...f,min:10,max:12})[0].value,null);assert.equal(summarize(data,{...f,refMax:1})[0].value,null);assert.throws(()=>summarize(data,{...f,min:5,max:1}));});
+test('publication year is independent of age',()=>assert.equal(summarize(data,{...f,yearMin:2001}).length,0));
+test('median does not mutate original',()=>{const a=[4,0,1,3];assert.equal(median(a),2);assert.deepEqual(a,[4,0,1,3]);});
+test('spatial interpolation requires non-collinear distinct sites',()=>{assert.deepEqual(convexHull([[0,0],[0,0],[1,1],[2,2]]).length,2);assert.equal(fieldGrid([]).cells.length,0);});
+test('spatial interpolation cannot extrapolate or cross a mask',()=>{const a=[[0,0],[1,0],[0,1]].map((c,i)=>({record:{longitude:c[0],latitude:c[1],realm:'marine'},value:i}));assert.equal(fieldGrid(a,1).cells.length,0);assert.equal(fieldGrid(a,1000,()=>true).cells.length,0);const grid=fieldGrid(a,1000);assert.ok(grid.cells.length>0);assert.ok(grid.cells.every(c=>c.lon>=0&&c.lat>=0&&c.lon+c.lat<=1&&c.neighbors===3));assert.ok(Math.abs(haversine([0,0],[1,0])-111.195)<.01);});

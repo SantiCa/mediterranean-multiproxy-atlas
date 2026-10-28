@@ -1,38 +1,31 @@
 # Estado breve del proyecto
 
-Actualizado: 28-10-2026. Repositorio: `SantiCa/mediterranean-multiproxy-atlas`, privado.
-Usar `git log -1` para el commit efectivo; este archivo no sustituye el estado Git.
+Actualizado: 28-10-2026. GitHub `SantiCa/mediterranean-multiproxy-atlas`, privado. Usar `git log -1` para el commit efectivo.
 
-## Disponible
+## Ejecutable
 
-- Piloto PANGAEA: 5 conjuntos, 11 series, 2.684 valores seleccionados (2.646 con edad archivada, 38 solo profundidad). Datos numéricos en `data/processed/`; originales locales en `data/raw/`, recuperables por script.
-- Paquete Python `medatlas` instalable. Clientes de lectura PANGAEA, NOAA, Neotoma, DataCite y lector local LiPD. Mantienen respuestas nativas; no implementan una normalización completa.
-- Arquitectura relacional/global propuesta, dataclasses iniciales, scripts de semilla, filtros y figuras SVG. No hay todavía base relacional, API del atlas ni mapa interactivo del atlas implementados.
-- Borrador de artículo en `manuscript/`, revisión de tesis y antecedentes en `docs/`, informe de viabilidad en `reports/`.
-- Guía común `AGENTS.md`, entrada `CLAUDE.md`, roles/prompts en `docs/CHAT_PROMPTS.md`, handoffs cortos en `docs/handoffs/`.
+- Web v1 en https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado): mapa de proxies, capas base, selección por edad/publicación/archivo, z o valores originales, IDW optativo, series y exportaciones CSV/SVG.
+- Base propia D1/SQLite: 13 registros, 22 series, 14.751 valores. 10 registros PANGAEA y 3 espeleotemas NOAA. 40 valores sin edad preservados; no se ubican en ventanas cronológicas. Semilla `data/processed/atlas-v1.json`, release `atlas-v1-2026-10-28-r2`.
+- Fuente web en `app/atlas-web/`; migraciones en `migrations/`; construcción SQLite/semilla `scripts/build_atlas_v1.py`. Detalles y reproducción: `docs/WEB_V1.md`.
+- Clientes Python PANGAEA, NOAA, Neotoma, DataCite; lector LiPD. Los últimos cuatro checks HTTP recuperan datos/metadatos; solo PANGAEA y NOAA aportan valores al atlas.
+- Cola DOI persistente: verifica identidad bibliográfica y deja la fuente pendiente de curación; no inventa extracción automática de artículos.
+- AGENTS.md/CLAUDE.md, prompts en docs/CHAT_PROMPTS.md, tesis revisada y borrador de publicación disponibles.
 
-## Verificación realizada
+## Verificación
 
-- Instalación editable correcta en Windows/Python 3.14; 22 pruebas locales pasan, incluidas 8 de integridad contra originales de la semilla.
-- Clon limpio independiente: 14 pruebas offline pasan y se omite explícitamente la clase de integridad de semilla porque sus originales no se distribuyen por Git.
-- Suite offline sobre conectores, conservación/hash/bloqueo, paquete de entrega y sincronización de visor. CI configurada para Windows/Linux y Python 3.10/3.14; consultar Actions para su resultado efectivo.
-- Primera ejecución remota `40722350578`, commit `50cc278`: cuatro combinaciones de CI correctas (Windows/Linux × Python 3.10/3.14). Comprobar por separado el resultado de commits posteriores.
-- Consulta acotada por proveedor en `reports/live_source_check.json`: NOAA, Neotoma y DataCite devolvieron JSON; PANGAEA devolvió HTTP 400. Eso mide recuperación, no fidelidad científica ni normalización de todo el esquema.
-- LiPD comprobado con fixture controlado; falta paquete científico real/versionado. No se ha validado BagIt ni migrado cronologías.
+26 pruebas Python locales, 6 Node, TypeScript y build. Fidelidad de las 14.751 filas D1 locales contra semilla con 9 campos. Exportaciones reales CSV/SVG y móvil probados. Los conteos no prueban representatividad ni independencia de muestras. CI remota se consulta por ejecución; no inferir su éxito a partir de pruebas locales.
 
-## Siguientes entregables
+## Backlog
 
-| ID | Dueño sugerido | Entregable / dependencia |
-|---|---|---|
-| SRC-01 | PANGAEA/NOAA | Diagnosticar HTTP 400 en PANGAEA con documentación/servicio oficial; verificar paginación y archivo NOAA sin descargas amplias |
-| DB-01 | Arquitectura | Primera migración SQLite con claves y marcos de tiempo/profundidad versionados |
-| CON-01 | Continental | Registro Neotoma lacustre + paquete LiPD real; mapeo de taxones, muestras, cronologías y permisos |
-| SCI-01 | Curación | Resolver profundidad ODP 977 m/cmbsf y auditar disponibilidad/licencia GP03 |
-| API-01 | API/visualización | Contrato de consulta/exportación tras DB-01 y mapeos revisados |
-| PUB-01 | Manuscrito | Matriz de antecedentes/versiones y contribuciones demostradas; sin reclamar reconstrucción nueva |
+| ID | Entregable |
+|---|---|
+| CUR-02 | Doble revisión por artículo: tablas, métodos, cronología, licencia, duplicados; resolver profundidad ODP 977 y disponibilidad GP03 |
+| CON-02 | Un registro lacustre/polínico Neotoma real, con taxonomía y cronología preservadas |
+| DB-02 | Versionar cronologías/regiones/transformaciones en tablas; contrato compatible con v1 y migración reversible |
+| MAP-02 | Validación espacial/temporal, propagación de incertidumbre, resolución apropiada y criterios de exclusión |
+| API-02 | Paginación/consultas por viewport y agregación servidor; pruebas de escala antes de ampliar miles de registros |
+| PUB-02 | Comparación cuantitativa versionada con antecedentes y evaluación independiente; elegir licencia de código |
 
-## Límites y decisiones pendientes
+## Límites
 
-El código aún no tiene licencia de distribución seleccionada. Las licencias de cada dataset son independientes. Los clientes no tienen aún un sistema general de reintentos/backoff ni un validador completo de esquemas de proveedor. `preserve_raw` falla explícitamente si otro proceso escribe el manifiesto. La semilla es intencional y no representa toda la cuenca. La arquitectura de regiones y las extensiones de taxonomía/cronología están diseñadas, todavía no implementadas en almacenamiento. El visor local `report-app/` es auxiliar, ignorado y requiere recompilación propia.
-
-No cargar la tesis completa para desarrollo rutinario. Consultar `docs/revision_tesis.md`; acudir a capítulos/páginas concretos cuando una pregunta científica lo requiera.
+z compara anomalías de la misma variable, no convierte proxies distintos en una reconstrucción común. IDW es exploratorio. Sin cronologías armonizadas ni incertidumbre espacial. El modelo relacional operativo es menor que la arquitectura científica propuesta. Continental actual = espeleotemas, no todos los archivos. Basemaps externos pueden cambiar. El visor `report-app/` es auxiliar, distinto de la web del atlas. No cargar la tesis completa para desarrollo rutinario: usar `docs/revision_tesis.md`.

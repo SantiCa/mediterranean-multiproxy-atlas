@@ -15,3 +15,5 @@ data/interim/
 report-app/
 report-app/dist/
 report-app/.data-app-offline/
+
+data/processed/*.sqlite
