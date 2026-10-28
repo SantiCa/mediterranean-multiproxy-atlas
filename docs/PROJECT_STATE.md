@@ -13,7 +13,7 @@ Actualizado: 28-10-2026. GitHub `SantiCa/mediterranean-multiproxy-atlas`, privad
 
 ## Verificación
 
-26 pruebas Python locales, 6 Node, TypeScript y build. Fidelidad de las 14.751 filas D1 locales contra semilla con 9 campos. Exportaciones reales CSV/SVG y móvil probados. Los conteos no prueban representatividad ni independencia de muestras. CI remota se consulta por ejecución; no inferir su éxito a partir de pruebas locales.
+26 pruebas Python locales, 6 Node, TypeScript y build. Fidelidad de las 14.751 filas D1 locales contra semilla con 9 campos. Exportaciones reales CSV/SVG y móvil probados. Tras iniciar sesión se verificó también producción: catálogo, superficies y exclusiones, mapas base, navegación y persistencia de cola DOI tras recarga. Los CSV online de 64 valores SST y 543 δ18O coinciden en edades y celdas originales con la semilla. Evidencia en `reports/atlas_v1_release.json`. Los conteos no prueban representatividad ni independencia de muestras. CI remota se consulta por ejecución; no inferir su éxito a partir de pruebas locales.
 
 ## Backlog
 

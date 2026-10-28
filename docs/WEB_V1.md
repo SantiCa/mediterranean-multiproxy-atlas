@@ -67,3 +67,8 @@ Web (Node >=22.13, npm): desde `app/atlas-web`, `npm ci`, `npm run build`; aplic
 PANGAEA HTTP 400 se resolvió omitiendo Accept para `?format=textfile`; los bytes recuperados coinciden con el original. Comprobación remota acotada de los 4 proveedores correcta. Neotoma y DataCite están conectados para recuperación/metadatos; no se presenta ninguna serie Neotoma como ingerida. LiPD sigue limitado al lector y fixture.
 
 Prioridades: protocolo de curación de artículos y doble revisión; taxonomía y cronologías/duplicados; un archivo lacustre de Neotoma; validación de superficies y propagación de edad/medición; pruebas de escala; persistencia/versionado de consultas; revisión de licencias antes de difusión pública. El código del proyecto sigue sin licencia elegida. NOAA conserva licencia de registro no declarada y base de reutilización WDS documentada, sin inventar CC0. Véase `docs/curation/v1_continental.md`.
+
+
+### Comprobación autenticada online
+
+El 28-10-2026 se verificó el despliegue con sesión del propietario: catálogo 13/22/14.751, selección SST 6–8 ka con 64 valores y 300 celdas IDW a 600 km; selección δ18O continental con 543 valores y 2 de 3 sitios, sin superficie por falta de soporte. Ambas exportaciones CSV coinciden para cada fila en edad/valor numéricos y sus celdas originales con la semilla. SVG mapa y serie válidos. Se probaron las cuatro capas base, navegación catálogo/mapa y exclusión por año de artículo. PaleoMED20 se verificó por DOI y permanece pendiente de curación tras recarga; no se añadieron sus valores. No se capturaron errores/avisos de consola durante estas pruebas. Véase `reports/atlas_v1_release.json`; esta verificación funcional no es validación paleoclimática.

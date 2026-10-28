@@ -27,6 +27,62 @@
     390,
     844
   ],
-  "browser_online_status": "Private sign-in gate reached; authenticated online functional test pending owner login",
-  "limitations": "Deployment success does not itself verify the authenticated application, production seed import or scientific reconstruction."
+  "browser_online_status": "Authenticated production checks passed in Chrome after owner sign-in",
+  "limitations": "Functional production checks and subset export fidelity are confirmed. Scientific chronology/calibration audit, spatial validation and uncertainty propagation remain pending; no new environmental reconstruction is validated.",
+  "online_verified_at_utc": "2026-10-28T16:58:39.185058+00:00",
+  "online_checks": {
+    "catalogue": {
+      "records": 13,
+      "series": 22,
+      "values": 14751,
+      "available_after_reload": true
+    },
+    "marine_sst_6_8ka": {
+      "sites_with_data": 6,
+      "selected_values": 64,
+      "idw_supported_cells": 300,
+      "radius_km": 600,
+      "mode": "within-series z, reference 0-10 ka"
+    },
+    "continental_d18o_6_8ka": {
+      "sites_with_data": 2,
+      "sites_total": 3,
+      "selected_values": 543,
+      "idw": "no cells; insufficient sites",
+      "mode": "original values, per mil VPDB"
+    },
+    "downloaded_csv": {
+      "rows": [
+        64,
+        543
+      ],
+      "columns": 30,
+      "comparison": "Every exported numeric age/value and original age/value cell matched canonical seed for both selections"
+    },
+    "downloaded_svg": {
+      "map": "Valid XML; 458 elements, selection/provenance metadata",
+      "series": "Valid XML; 116 elements, source/unit/selection metadata"
+    },
+    "basemaps": [
+      "bathymetry displayed",
+      "political displayed",
+      "topography: 20/20 current DOM tiles loaded",
+      "imagery: 20/20 current DOM tiles loaded"
+    ],
+    "guards": [
+      "Invalid reference rejected",
+      "No marine SST records from article year >=2020 gives an empty result",
+      "Insufficient spatial support retains points without a fabricated field"
+    ],
+    "catalogue_navigation": "Selected MD95-2043 series from catalogue and returned to working map",
+    "doi_queue": {
+      "doi": "10.1038/s41597-025-05451-5",
+      "state": "pending_review",
+      "verified_title": "Mediterranean marine sediment cores database: unlocking paleoclimatic signals for the last 20,000 years",
+      "persisted_after_reload": true,
+      "numeric_values_added": false
+    },
+    "captured_console_errors_or_warnings": 0,
+    "screenshot": "../outputs/medatlas-v1-online-verified.jpg"
+  }
 }
