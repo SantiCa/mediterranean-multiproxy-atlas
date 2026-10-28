@@ -13,6 +13,7 @@ dependencies = []
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+py-modules = ["seed_query"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

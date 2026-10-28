@@ -6,6 +6,11 @@ from .base import HTTPConnector, ConnectorError
 
 
 class NeotomaConnector(HTTPConnector):
+    """Return (native JSON, RetrievedArtifact); leave taxonomy and ages untouched.
+
+    An HTTP response is not a validated scientific dataset. Inspect the provider's
+    status/data envelope before mapping a downloaded record to canonical entities.
+    """
     source = "neotoma"
     api_root = "https://api.neotomadb.org/v2.0"
 

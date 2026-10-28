@@ -7,6 +7,11 @@ from .base import HTTPConnector, ConnectorError
 
 
 class PANGAEAConnector(HTTPConnector):
+    """Retrieve original bytes; XML metadata/OAI error elements need caller review.
+
+    Dataset tables are signature-checked; collections must be resolved into their
+    citable children before requesting measurements.
+    """
     source = "pangaea"
     base_url = "https://doi.pangaea.de"
     oai_url = "https://ws.pangaea.de/oai/provider"

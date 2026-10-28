@@ -9,6 +9,10 @@ from .base import ConnectorError
 
 
 class LiPDArchive:
+    """Inspect package metadata and member names without extraction or conversion.
+
+    This does not validate BagIt manifests, chronology, ontology or table mappings.
+    """
     source = "lipd"
 
     def __init__(self, path: str | Path):

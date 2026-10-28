@@ -14,7 +14,9 @@ Usar `git log -1` para el commit efectivo; este archivo no sustituye el estado G
 ## Verificación realizada
 
 - Instalación editable correcta en Windows/Python 3.14; 22 pruebas locales pasan, incluidas 8 de integridad contra originales de la semilla.
+- Clon limpio independiente: 14 pruebas offline pasan y se omite explícitamente la clase de integridad de semilla porque sus originales no se distribuyen por Git.
 - Suite offline sobre conectores, conservación/hash/bloqueo, paquete de entrega y sincronización de visor. CI configurada para Windows/Linux y Python 3.10/3.14; consultar Actions para su resultado efectivo.
+- Primera ejecución remota `40722350578`, commit `50cc278`: cuatro combinaciones de CI correctas (Windows/Linux × Python 3.10/3.14). Comprobar por separado el resultado de commits posteriores.
 - Consulta acotada por proveedor en `reports/live_source_check.json`: NOAA, Neotoma y DataCite devolvieron JSON; PANGAEA devolvió HTTP 400. Eso mide recuperación, no fidelidad científica ni normalización de todo el esquema.
 - LiPD comprobado con fixture controlado; falta paquete científico real/versionado. No se ha validado BagIt ni migrado cronologías.
 

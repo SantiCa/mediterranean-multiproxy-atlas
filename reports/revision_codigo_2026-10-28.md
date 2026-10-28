@@ -20,6 +20,8 @@ Esta revisión no demuestra ausencia de todos los defectos ni certifica las infe
 
 Instalación editable correcta y 22 pruebas locales pasan. Los originales locales
 siguen coincidiendo con los hashes y las celdas seleccionadas de la semilla.
+Un clon limpio independiente pasa 14 pruebas offline; omite explícitamente la clase
+de integridad de semilla hasta recuperar los originales.
 Las regresiones de entrega prueban que documentos locales ignorados y archivos sin
 seguimiento no entran en el ZIP. La regresión de visor verifica identidad y ausencia
 de modificaciones falsas de `dist`.
@@ -34,6 +36,8 @@ Pendientes: resolver esa descarga PANGAEA; validación de paginación y respuest
 completas de proveedores; reintentos/rate limits; validación LiPD real; migraciones;
 revisión independiente de cronología/unidades/taxonomía/licencias y licencia del código.
 CI añadida: consultar Actions tras la subida para ver resultados de otras plataformas.
+La ejecución [40722350578](https://github.com/SantiCa/mediterranean-multiproxy-atlas/actions/runs/40722350578)
+del commit `50cc278` pasó en las cuatro combinaciones Windows/Linux y Python 3.10/3.14.
 
 ## Organización para agentes
 
