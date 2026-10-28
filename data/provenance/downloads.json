@@ -1,0 +1,102 @@
+[
+  {
+    "path": "data/raw/pangaea/438816.tsv",
+    "doi": "10.1594/PANGAEA.438816",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.438816?format=textfile",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.438816?format=textfile",
+    "content_type": "text/tab-separated-values; charset=UTF-8",
+    "sha256": "73edaf96101ea2f9ec14f61503b4cc406f09c05cc383adc276dbca33304e6531",
+    "accessed_at_utc": "2026-10-28T15:23:57.664590+00:00",
+    "bytes": 3543
+  },
+  {
+    "path": "data/raw/pangaea/438816.html",
+    "doi": "10.1594/PANGAEA.438816",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.438816",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.438816",
+    "content_type": "text/html;charset=utf-8",
+    "sha256": "6f940072d5bddcb5e14baa5c3a6a99feb69e9f1dd7dab9d1b18d421884df3aa7",
+    "accessed_at_utc": "2026-10-28T15:23:58.009832+00:00",
+    "bytes": 72285
+  },
+  {
+    "path": "data/raw/pangaea/901666.tsv",
+    "doi": "10.1594/PANGAEA.901666",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.901666?format=textfile",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.901666?format=textfile",
+    "content_type": "text/tab-separated-values; charset=UTF-8",
+    "sha256": "48dcb11a0432189faabf7345894b33b246c03ef78a3fbdcf4838dda09f23d52d",
+    "accessed_at_utc": "2026-10-28T15:23:58.277361+00:00",
+    "bytes": 11865
+  },
+  {
+    "path": "data/raw/pangaea/901666.html",
+    "doi": "10.1594/PANGAEA.901666",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.901666",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.901666",
+    "content_type": "text/html;charset=utf-8",
+    "sha256": "b8c47753adf85abe7acd00978f60b0244ea6607893c095d7fd652ab9532d19c4",
+    "accessed_at_utc": "2026-10-28T15:23:58.619921+00:00",
+    "bytes": 73925
+  },
+  {
+    "path": "data/raw/pangaea/759535.tsv",
+    "doi": "10.1594/PANGAEA.759535",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.759535?format=textfile",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.759535?format=textfile",
+    "content_type": "text/tab-separated-values; charset=UTF-8",
+    "sha256": "85ec9ae5d6158b907b467da64810acde8ca835dc87c9460ae0a732c353ea5bcd",
+    "accessed_at_utc": "2026-10-28T15:23:58.848469+00:00",
+    "bytes": 15797
+  },
+  {
+    "path": "data/raw/pangaea/759535.html",
+    "doi": "10.1594/PANGAEA.759535",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.759535",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.759535",
+    "content_type": "text/html;charset=utf-8",
+    "sha256": "2c39a3e4bac7efa9df02a7a28c42ffd53b3026ab19a512a7f4dc031b03667718",
+    "accessed_at_utc": "2026-10-28T15:23:59.195366+00:00",
+    "bytes": 87123
+  },
+  {
+    "path": "data/raw/pangaea/898587.tsv",
+    "doi": "10.1594/PANGAEA.898587",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.898587?format=textfile",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.898587?format=textfile",
+    "content_type": "text/tab-separated-values; charset=UTF-8",
+    "sha256": "69af806295c0bce778ace50e31e1d41e5b66e35926f2518368ec04b4e9aef87a",
+    "accessed_at_utc": "2026-10-28T15:23:59.398436+00:00",
+    "bytes": 3072
+  },
+  {
+    "path": "data/raw/pangaea/898587.html",
+    "doi": "10.1594/PANGAEA.898587",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.898587",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.898587",
+    "content_type": "text/html;charset=utf-8",
+    "sha256": "baa8497e807486122fa4779420e62149de3ad4cf023f67f81f1380fee00e0dd7",
+    "accessed_at_utc": "2026-10-28T15:23:59.708674+00:00",
+    "bytes": 72860
+  },
+  {
+    "path": "data/raw/pangaea/921230.tsv",
+    "doi": "10.1594/PANGAEA.921230",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.921230?format=textfile",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.921230?format=textfile",
+    "content_type": "text/tab-separated-values; charset=UTF-8",
+    "sha256": "b8739412ed7d26be05ca0d9d4c9bab807dab4bf2c8edb33d755071037c3d2dd5",
+    "accessed_at_utc": "2026-10-28T15:24:27.646449+00:00",
+    "bytes": 40168
+  },
+  {
+    "path": "data/raw/pangaea/921230.html",
+    "doi": "10.1594/PANGAEA.921230",
+    "requested_url": "https://doi.pangaea.de/10.1594/PANGAEA.921230",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.921230",
+    "content_type": "text/html;charset=utf-8",
+    "sha256": "7b76597c36c580257be1d3e866491b95863a6dc4e70c0885255d9866e5998e23",
+    "accessed_at_utc": "2026-10-28T15:24:28.053767+00:00",
+    "bytes": 172798
+  }
+]

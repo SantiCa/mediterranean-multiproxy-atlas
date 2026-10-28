@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or its curated data, cite the release and the original dataset DOIs."
+title: "Mediterranean Multiproxy Atlas"
+abstract: >-
+  Research software for provenance-first discovery, curation and visualization
+  of georeferenced paleoclimate records across marine and continental archives.
+authors:
+  - family-names: Casanova-Arenillas
+    given-names: Santiago
+version: 0.2.0
+date-released: 2026-10-28
+keywords:
+  - paleoclimate
+  - paleoceanography
+  - sedimentology
+  - micropaleontology
+  - data provenance
+  - open science

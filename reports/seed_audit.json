@@ -1,0 +1,33 @@
+{
+  "datasets": 5,
+  "cores": 5,
+  "raw_sample_rows": 1026,
+  "selected_series": 11,
+  "observations": 2684,
+  "dated_observations": 2646,
+  "null_values": 0,
+  "warnings": [
+    {
+      "dataset_id": 901666,
+      "flag": "negative_BP_age_preserved"
+    },
+    {
+      "dataset_id": 898587,
+      "flag": "no_age_column_depth_only"
+    },
+    {
+      "dataset_id": 898587,
+      "flag": "section_bottom_zeros_preserved_no_geometry_inference"
+    },
+    {
+      "dataset_id": 921230,
+      "flag": "depth_header_m_vs_metadata_comment_cmbsf_conflict"
+    }
+  ],
+  "transformations": [
+    {
+      "id": "T001_extract_selected_columns_v1",
+      "action": "Select columns; parse decimal strings to floats; attach archived age and provenance; do not alter raw text, normalize ages, interpolate, smooth, or impute"
+    }
+  ]
+}

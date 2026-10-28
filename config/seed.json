@@ -1,0 +1,68 @@
+[
+  {
+    "id": 438816,
+    "core": "MD95-2043",
+    "paper_year": 1999,
+    "paper_doi": "10.1029/1999PA900044",
+    "dataset_citation_year": 1999,
+    "depth_column": "Depth sed [m]",
+    "depth_reference": "sediment_depth_as_archived",
+    "proxies": [
+      {"column": "SST (1-12) [°C]", "proxy": "alkenone_SST", "unit": "degC", "kind": "published_reconstruction", "method": "UK'37; Müller et al. 1998 calibration as archived"}
+    ]
+  },
+  {
+    "id": 901666,
+    "core": "HER-GC-ALB2",
+    "paper_year": 2019,
+    "paper_doi": "10.5194/cp-15-927-2019",
+    "dataset_citation_year": 2019,
+    "depth_column": "Depth comp [mcd]",
+    "depth_reference": "composite_mcd",
+    "proxies": [
+      {"column": "G. bulloides Mg/Ca [mmol/mol]", "proxy": "G_bulloides_MgCa_archived", "unit": "mmol/mol", "kind": "archived_measurement", "method": "G. bulloides Mg/Ca; laboratory preparation requires paper review"},
+      {"column": "G. bulloides Mg/Ca [mmol/mol] (Reductive correction)", "proxy": "G_bulloides_MgCa_corrected", "unit": "mmol/mol", "kind": "published_transformation", "method": "Published reductive correction; not recomputed locally"},
+      {"column": "SST [°C] (Reductive correction)", "proxy": "MgCa_SST", "unit": "degC", "kind": "published_reconstruction", "method": "Published Mg/Ca SST with reductive correction; not recomputed locally", "uncertainty_column": "SST e [±]", "uncertainty_type": "standard_error_as_archived_not_age_uncertainty"}
+    ]
+  },
+  {
+    "id": 759535,
+    "core": "MD99-2343",
+    "paper_year": 2008,
+    "paper_doi": "10.1016/j.quaint.2007.06.016",
+    "dataset_citation_year": 2008,
+    "depth_column": "Depth sed [m]",
+    "depth_reference": "sediment_depth_as_archived",
+    "proxies": [
+      {"column": "D50 [µm]", "proxy": "D50_noncarbonate", "unit": "um", "kind": "archived_measurement", "method": "Non-carbonate fraction; Beckman Coulter LS 200 laser diffraction, as archived"},
+      {"column": "Silt/clay", "proxy": "silt_clay_noncarbonate", "unit": "ratio", "kind": "published_transformation", "method": "Non-carbonate fraction; archived silt/clay ratio"},
+      {"column": ">10 µm [%]", "proxy": "UP10_noncarbonate", "unit": "percent", "kind": "published_transformation", "method": "Non-carbonate fraction; archived fraction >10 micrometres"}
+    ]
+  },
+  {
+    "id": 898587,
+    "core": "MD81-LC21",
+    "paper_year": 2019,
+    "paper_doi": "10.5194/bg-16-2467-2019",
+    "dataset_citation_year": 2019,
+    "depth_column": "Depth sed [m] (mbsf)",
+    "depth_reference": "mbsf",
+    "proxies": [
+      {"column": "BHT isomer/TOC [µg/g]", "proxy": "BHT_isomer_per_TOC", "unit": "ug/g_TOC", "kind": "published_transformation", "method": "TOC-normalized biomarker; method details in linked paper"},
+      {"column": "Lad OC [ng/g] (FAMES)", "proxy": "ladderane_per_OC", "unit": "ng/g_OC", "kind": "published_transformation", "method": "OC-normalized ladderanes, FAMES; archived zeros retained without interpreting detection limits"}
+    ]
+  },
+  {
+    "id": 921230,
+    "core": "161-977A",
+    "paper_year": 2020,
+    "paper_doi": "10.1016/j.quascirev.2020.106520",
+    "dataset_citation_year": 2024,
+    "depth_column": "Depth corr [m]",
+    "depth_reference": "corrected_depth_unit_comment_conflict_pending_review",
+    "proxies": [
+      {"column": "G. muellerae [%]", "proxy": "G_muellerae_relative_abundance", "unit": "percent", "kind": "published_transformation", "method": "Published relative abundance; denominator and taxonomy to be reviewed before synthesis"},
+      {"column": "Cocco [10**6 #/g]", "proxy": "coccolith_absolute_abundance", "unit": "1e6_count/g", "kind": "archived_measurement", "method": "Published absolute abundance; original counting protocol not audited"}
+    ]
+  }
+]

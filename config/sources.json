@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "policy": {
+    "read_only_connectors": true,
+    "preserve_source_payloads": true,
+    "download_measurements_only_on_explicit_request": true,
+    "deduplicate_by_doi_and_source_record_id": true,
+    "license_unknown_blocks_redistribution": true,
+    "geographic_scope_is_configured_not_hard_coded": true
+  },
+  "sources": [
+    {
+      "id": "pangaea",
+      "name": "PANGAEA Data Publisher for Earth & Environmental Science",
+      "url": "https://www.pangaea.de/",
+      "api": ["OAI-PMH", "DOI content negotiation", "DataCite REST for cross-source discovery"],
+      "connector": "medatlas.connectors.PANGAEAConnector",
+      "realms": ["marine", "terrestrial", "lake", "river", "atmosphere", "ice"],
+      "access": "metadata_and_open_data_by_dataset_license",
+      "status": "connector_implemented_read_only",
+      "limits": ["no separate public search API documented; do not depend on internal search endpoints", "individual dataset license governs reuse"]
+    },
+    {
+      "id": "noaa_wds_paleo",
+      "name": "NOAA/NCEI World Data Service for Paleoclimatology",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/",
+      "api": ["public JSON metadata search", "paged study search", "data file preview/download endpoints"],
+      "connector": "medatlas.connectors.NOAAWDSConnector",
+      "realms": ["marine", "terrestrial", "lake", "tree_ring", "ice", "speleothem", "coral"],
+      "access": "metadata_search_and_source_dependent_download",
+      "status": "connector_implemented_read_only",
+      "limits": ["maximum ten full study results per response; follow returned next page", "publisher and third-party download restrictions must be honored"]
+    },
+    {
+      "id": "neotoma",
+      "name": "Neotoma Paleoecology Database",
+      "url": "https://www.neotomadb.org/",
+      "api": ["public REST API v2.0 JSON", "site, dataset, chronology, taxon, and data-download endpoints"],
+      "connector": "medatlas.connectors.NeotomaConnector",
+      "realms": ["terrestrial", "lacustrine", "fluvial", "peat", "marine_coastal"],
+      "access": "metadata_and_taxonomic_dataset_download",
+      "status": "connector_implemented_read_only",
+      "limits": ["taxonomy, age model, and dataset versions remain Neotoma-native until curated", "do not treat site-level coordinates as sample locations"]
+    },
+    {
+      "id": "datacite",
+      "name": "DataCite REST API",
+      "url": "https://api.datacite.org/",
+      "api": ["DOI search and metadata JSON"],
+      "connector": "medatlas.connectors.DataCiteConnector",
+      "realms": ["global"],
+      "access": "cross_repository_metadata_discovery",
+      "status": "connector_implemented_read_only",
+      "limits": ["discovery index only; never assume DataCite has measurement tables"]
+    },
+    {
+      "id": "lipd",
+      "name": "LiPD (Linked Paleo Data) format",
+      "url": "https://lipd.net/format",
+      "api": ["versioned local .lpd archive import"],
+      "connector": "medatlas.connectors.LiPDArchive",
+      "realms": ["marine", "terrestrial", "lake", "ice", "speleothem", "coral"],
+      "access": "local_exchange_package",
+      "status": "archive_reader_implemented",
+      "limits": ["LiPD is an exchange format rather than a source repository", "validate ontology and package version before normalization"]
+    },
+    {
+      "id": "paleomed20",
+      "name": "PaleoMED20",
+      "url": "https://doi.org/10.6084/m9.figshare.28303013",
+      "api": ["Figshare dataset package"],
+      "connector": null,
+      "realms": ["marine"],
+      "time_coverage": "last 20,000 years",
+      "status": "catalogued_not_yet_ingested",
+      "limits": ["metadata and proxy-presence inventory; audit deposited files and their license before use"]
+    },
+    {
+      "id": "world_paleoceanographic_atlas",
+      "name": "World Paleoceanographic Atlas / PaleoDataView",
+      "url": "https://paleodataview.marum.de/",
+      "api": [],
+      "connector": null,
+      "realms": ["marine"],
+      "status": "catalogued_manual_review_required",
+      "limits": ["global marine precedent; inspect current release, export mechanisms, and terms before adapter development"]
+    },
+    {
+      "id": "wdb_paleo",
+      "name": "WDB-Paleo",
+      "url": "https://www.pi.ingv.it/252362-2/",
+      "api": [],
+      "connector": null,
+      "realms": ["marine"],
+      "status": "catalogued_service_status_unverified",
+      "limits": ["do not depend on an unverified live endpoint"]
+    },
+    {
+      "id": "sisal",
+      "name": "Speleothem Isotopes Synthesis and AnaLysis (SISAL)",
+      "url": "https://pastglobalchanges.org/science/wg/2k-network/projects/sisal",
+      "api": ["published database releases / file packages"],
+      "connector": null,
+      "realms": ["speleothem"],
+      "status": "catalogued_release_import_planned",
+      "limits": ["select a citable release and capture collection version, source papers, and terms"]
+    }
+  ]
+}

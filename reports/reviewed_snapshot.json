@@ -1,0 +1,1056 @@
+{
+  "surface": "report",
+  "title": "Mediterranean Multiproxy Atlas · informe de viabilidad",
+  "generatedAt": "2026-10-28T15:46:31.453403+00:00",
+  "status": "reviewed-evidence-with-limitations",
+  "buildStatus": "creating",
+  "filters": [],
+  "scientificReportMarkdown": "# Mediterranean Multiproxy Atlas — informe de viabilidad\n\n**Fecha de corte: 28 de octubre de 2026. Versión 0.2, revisión con tesis.**\n\n## Dictamen\n\nEl atlas es técnicamente viable como catálogo geográfico con series cuantitativas trazables. Su publicabilidad exige una contribución demostrable de curación, interoperabilidad o metodología: el mapa y los filtros, por sí solos, tienen antecedentes directos. Una reconstrucción paleoambiental original del Mediterráneo es una segunda investigación, condicionada a la disponibilidad, independencia y comparabilidad de los registros. Esta evaluación no demuestra todavía que existan los datos suficientes para ella.\n\nSe ha preparado una semilla de evidencia, código Python y especificaciones; **no se ha construido el atlas completo**. La semilla incluye cinco conjuntos de PANGAEA, cinco testigos, 1.026 filas de muestras en las tablas originales y 11 series seleccionadas, equivalentes a 2.684 valores. De estos valores, 2.646 tienen edad archivada y 38 solo profundidad. Los recuentos proceden de los archivos descargados, no del número de “data points” que muestra el repositorio. Una fila de muestra puede contener varias variables; estos valores no son réplicas independientes.\n\n**Alcance de la revisión:** la tesis fue examinada en su versión Markdown con imágenes. Se identificaron los tres artículos publicados que reproduce y la continuidad de un capítulo sometido en 2023 con un artículo publicado en 2024. El archivo conserva figuras como imágenes y algunos detalles de tablas no se pueden auditar solo desde el texto extraído; por tanto, no se han transcrito curvas ni afirmado disponibilidad/licencia de los datos que no se verificaron.\n\n## 1. Estado de las seis tareas solicitadas\n\n| Tarea | Resultado y límite |\n|---|---|\n| Examinar tesis y tres artículos | Completada a nivel de estructura, texto de los capítulos/artículos, abstracts, métodos y resultados principales; ver fichas en `docs/revision_tesis.md`. Pendiente auditoría completa de suplementos, figuras y datos |\n| Investigar antecedentes | Revisión dirigida de publicaciones y páginas oficiales; no es una revisión sistemática exhaustiva |\n| Arquitectura y carpetas | Diseño propuesto en este informe y en `docs/arquitectura_datos.md` |\n| Desafíos científicos y técnicos | Evaluados; cuatro alertas concretas detectadas en la semilla |\n| Diseñar MVP con registros reales | Especificado con cinco fuentes descargadas y verificadas; sin aplicación cartográfica |\n| Informe de viabilidad y originalidad | Entregado como evaluación provisional, con decisiones condicionadas |\n\n### Resultado de la revisión de tesis\n\nEl ZIP recibido contiene la tesis de Santiago Casanova-Arenillas (2023), UGR, *Análisis integrado del impacto de la variabilidad ambiental en las condiciones del fondo marino en el Mediterráneo durante el Último Ciclo Glacial* ([handle 10481/88714](https://hdl.handle.net/10481/88714)). Los capítulos V–VII reproducen tres artículos publicados (2020, 2021 y 2022); el capítulo VIII consta como manuscrito enviado en 2023 y el IX como trabajo en curso. El capítulo VIII tiene continuidad en un artículo de 2024 sobre el testigo GP03, DOI [10.1016/j.palaeo.2024.112427](https://doi.org/10.1016/j.palaeo.2024.112427), con registro institucional UGR [10481/109754](https://hdl.handle.net/10481/109754). El detalle está en [`docs/revision_tesis.md`](../docs/revision_tesis.md).\n\nEsta lectura identifica temas y testigos, pero no reemplaza la comparación de suplementos, conjuntos de datos y versiones editoriales. Las figuras del Markdown conservan gráficos como imágenes; sus curvas no se han digitalizado.\n\n#### Consecuencia científica inmediata\n\nLa tesis hace de la icnología y la oxigenación del fondo marino un foco claro, con ODP Sites 976/977 y ORLs en el Alborán occidental; incluye además un capítulo multiproxy vinculado a GP03 y trabajo del Mediterráneo oriental. El piloto actual con ODP 977A ya se conecta con el artículo metodológico y no debe contarse como una nueva réplica independiente. El siguiente registro para ampliar el prototipo debería ser GP03, si se localizan series reutilizables y licencia verificable. Las publicaciones 2020–2022 cubren en buena medida las interpretaciones ya planteadas por la tesis: un artículo original debe aportar datos o análisis adicionales y responder una pregunta no resuelta, no volver a empaquetar sus curvas.\n\nLa tesis ya interpreta que ORLs y sapropeles suelen ser asincrónicos, que sus controles dominantes difieren entre Este y Oeste y que las ORLs varían internamente, con reoxigenaciones breves en ORL1. El proyecto no puede reclamar esas observaciones como novedades. La posibilidad original que queda abierta es someter la asincronía y la heterogeneidad espacial a una comparación cuantitativa con edades/proxies independientes, incertidumbre temporal propagada y cobertura adicional de sitios; la factibilidad dependerá de esa auditoría. La tesis atribuye estas conclusiones a sus registros y métodos, no se presentan aquí como consenso general.\n\n## 2. Antecedentes y espacio de contribución\n\n### PaleoMED20\n\nViganò y Agnini (2025) reúnen metadatos de 1.524 testigos mediterráneos para los últimos 20.000 años. El artículo distingue 465 testigos con información paleoclimática y realiza una comprobación sobre 36. Es un antecedente directo para localización, disponibilidad de proxies y cobertura, no evidencia de que cada entrada contenga series numéricas listas para combinar. [Artículo, DOI 10.1038/s41597-025-05451-5](https://www.nature.com/articles/s41597-025-05451-5).\n\n**Consecuencia de diseño:** usarlo como índice de descubrimiento y comparación de cobertura. Para cada serie se debe llegar al depósito o suplemento original. El archivo de Figshare no se descargó ni auditó en esta fase; su licencia específica y estructura efectiva quedan pendientes. La licencia del artículo no debe trasladarse a sus datos ni a figuras de terceros. El candidato de novedad sería una capa cuantitativa auditable y ampliable, con prueba explícita de qué añade a este inventario.\n\n### WDB-Paleo\n\nAlberico et al. (2017) describen un modelo de 20 entidades que combina metadatos, presencia de proxies en unas 200 publicaciones y datos cuantitativos de unos 14 testigos. El trabajo presenta aplicaciones al Younger Dryas. Esto impide sostener que una base mediterránea relacional y multiproxy sea, por sí sola, una innovación. [Artículo y resumen institucional, DOI 10.1515/geo-2017-0019](https://www.pi.ingv.it/252362-2/).\n\n**Consecuencia:** aprender de sus entidades y de la distinción entre existencia y cuantificación. Se verificó el trabajo publicado; no se verificó un servicio de consulta activo ni su código actual. No se propone depender de una instancia cuyo mantenimiento no se ha comprobado.\n\n### PANGAEA\n\nEs la fuente numérica de esta semilla: proporciona DOI de conjunto, eventos, parámetros, métodos y licencias individualizadas en los registros inspeccionados. El trabajo que describe el repositorio ofrece el contexto institucional y técnico. [Felden et al., 2023, DOI 10.1038/s41597-023-02269-x](https://doi.org/10.1038/s41597-023-02269-x).\n\n**Consecuencia:** conservar los ficheros originales, citar conjunto y artículo, registrar la fecha de acceso y comprobar relaciones padre/hijo y versiones. Un DOI de colección no equivale a una tabla: la colección ODP 977 contiene conjuntos hijos, y el año del hijo descargado difiere del artículo.\n\n### NOAA / WDS for Paleoclimatology\n\nEl servicio oficial permite descubrir estudios por localización, investigador y parámetros; ofrece API de metadatos y enlaces a datos. La API documenta paginación y diferencias entre contenido propio y terceros. [Paleoceanography, NCEI](https://www.ncei.noaa.gov/products/paleoclimatology/paleoceanography), [documentación API](https://www.ncei.noaa.gov/access/paleo-search/api).\n\n**Consecuencia:** incorporar un adaptador separado y respetar la paginación. No asumir que una entrada de PANGAEA encontrada mediante NOAA es otro registro independiente, ni que la API redistribuya todos los datos externos. En esta fase se revisó documentación; no se incorporaron ni verificaron tablas numéricas de NOAA.\n\n### World Paleoceanographic Atlas / PaleoDataView\n\nLa interfaz de MARUM ofrece datos por profundidad y series por edad, incluidas series equidistantes. Su descripción de la versión 2024 especifica paso de 0,5 kyr y rangos de incertidumbre a partir de 1.000 realizaciones. La página también muestra una versión 2025; no se auditó su contenido ni se atribuyen automáticamente a ella los métodos de 2024. [Interfaz y descripción](https://paleodataview.marum.de/).\n\nLa compilación isotópica publicada por Mulitza et al. (2022) es otro antecedente esencial. [DOI 10.5194/essd-14-2553-2022](https://essd.copernicus.org/articles/14/2553/2022/).\n\n**Consecuencia:** una interfaz con series e incertidumbre tampoco es nueva por sí misma. El atlas mediterráneo deberá diferenciar los valores archivados de reconstrucciones armonizadas y demostrar el beneficio de integrar familias adicionales, especialmente sedimentología, micropaleontología e icnología.\n\n### Interoperabilidad\n\nLiPD proporciona un marco publicado para empaquetar datos paleoclimáticos y metadatos estructurados. Se propone como formato de intercambio cuando la correspondencia de campos se haya probado; no como sustituto automático del modelo relacional. [McKay y Emile-Geay, 2016, DOI 10.5194/cp-12-1093-2016](https://cp.copernicus.org/articles/12/1093/2016/).\n\n### Selección bibliográfica\n\nLa primera prioridad será la publicación revisada por pares y el acceso al conjunto original, al método y a la cronología. Se registrarán `quartile_system`, `quartile_year`, `subject_category`, `quartile_value` y evidencia de consulta; hasta entonces el cuartil será desconocido. **No se han verificado clasificaciones JCR/SJR y no se asigna aquí Q1/Q2 a ninguna revista.** La prioridad solicitada no debe excluir trabajos fundacionales o conjuntos técnicamente esenciales por su antigüedad, ni sustituir la evaluación de cada registro.\n\n## 3. Semilla real y verificable\n\nLa selección es intencional para probar heterogeneidad, no una muestra representativa del Mediterráneo. Predomina el sector occidental; LC21 aporta un caso oriental sin cronología tabulada. No permite inferir patrones de toda la cuenca.\n\n| Testigo y DOI del conjunto | Variables seleccionadas | Filas | Edades archivadas, ka BP | Año artículo / cita del conjunto |\n|---|---|---:|---|---|\n| MD95-2043 — [438816](https://doi.pangaea.de/10.1594/PANGAEA.438816) | SST anual de alquenonas | 97 | 1,01–11,50 | 1999 / 1999 |\n| HER-GC-ALB2 — [901666](https://doi.pangaea.de/10.1594/PANGAEA.901666) | Mg/Ca, Mg/Ca corregido, SST corregida | 292 | −0,0124–15,0388 | 2019 / 2019 |\n| MD99-2343 — [759535](https://doi.pangaea.de/10.1594/PANGAEA.759535) | D50, limo/arcilla, UP10; fracción no carbonatada | 437 | 0,062–52,480 | 2008 / 2008 |\n| MD81-LC21 — [898587](https://doi.pangaea.de/10.1594/PANGAEA.898587) | BHT/TOC, ladderanos/OC | 19 | Sin columna de edad; profundidad 1,50–9,70 mbsf | 2019 / 2019 |\n| ODP 161-977A — [921230](https://doi.pangaea.de/10.1594/PANGAEA.921230) | Abundancia relativa de G. muellerae y abundancia absoluta de cocolitos | 181 | 375,97–429,69 | 2020 / 2024 |\n\nLas coordenadas, profundidad de agua, autores, métodos, licencias y huellas se conservan en `data/processed/catalog.csv` y en las cabeceras de `data/raw/pangaea/*.tsv`. Los ficheros de 438816 y 759535 indican CC-BY-3.0; los otros tres, CC-BY-4.0. Se mantiene la atribución en las exportaciones.\n\nEl artículo de Català et al. identifica la comparación multiproxy como un problema ya estudiado en Alborán; una nueva aplicación deberá ir más allá de reproducirla. [DOI 10.5194/cp-15-927-2019](https://cp.copernicus.org/articles/15/927/2019/). El registro de nanofósiles corresponde al artículo de González-Lanchas et al. de 2020, no a un supuesto artículo de 2024. [DOI 10.1016/j.quascirev.2020.106520](https://doi.org/10.1016/j.quascirev.2020.106520).\n\n### Hallazgos de integridad\n\n- **Edad negativa:** HER-GC-ALB2 contiene −0,0124 ka BP. Se conserva; una edad posterior a 1950 no debe transformarse automáticamente en cero. Su interpretación cronológica exacta requiere revisar el modelo.\n- **Cronología ausente:** LC21 conserva edades nulas. “S1”, “S3” o “S5” son etiquetas estratigráficas, no edades individuales de muestra. Los filtros cronológicos lo excluyen y deben informar de esta exclusión; la consulta por profundidad sigue disponible.\n- **Geometría de sección:** algunos límites inferiores de sección de LC21 aparecen como cero. Se preservan y se señala que no permiten calcular espesores sin revisión.\n- **Unidad de profundidad conflictiva:** en ODP 977, la cabecera dice `Depth corr [m]` y el comentario menciona `[cmbsf]`. No se aplica una conversión de factor 100. Este campo queda inhabilitado para unión profundidad–edad hasta resolver la discrepancia con el trabajo original. La vista por edad usa la columna de edad ya publicada.\n\nLas edades se muestran como **“edad archivada (ka BP)”**. No se certifican aquí como una cronología calendarizada armonizada. Se conserva el error estándar de SST que incluye HER-GC-ALB2; no se usa como error de edad ni se inventan intervalos para las otras series.\n\n### Figuras de evidencia\n\n`figures/seed_timeseries.svg` muestra cuatro series en paneles de escalas independientes; los puntos no se interpolan. Las barras de HER-GC-ALB2 representan exclusivamente el error estándar de SST archivado. El panel MIS 11 tiene un dominio distinto: no es una comparación sincrónica con el Holoceno. `figures/lc21_depth_only.svg` muestra BHT/TOC contra profundidad.\n\nAmbos SVG conservan texto editable (`svg.fonttype=none`), unidades y marcas vectoriales. Se acompañan de PNG para inspección. La edición en Adobe Illustrator debe preservar ejes, valores, atribución y archivo maestro; no se ha probado la apertura en Illustrator.\n\n## 4. Arquitectura científica y de datos\n\n### Separación de productos\n\n1. **Archivo original:** bytes de la fuente, metadatos, licencia, acceso y hash. “Archivado” no significa necesariamente medición instrumental sin tratamiento.\n2. **Metadatos normalizados:** ubicación, testigo, publicación, muestras, profundidad, método, taxón, unidad y cobertura.\n3. **Observaciones:** medidas, recuentos, porcentajes o cocientes con su soporte de muestra y estado de control.\n4. **Reconstrucciones y transformaciones:** SST, flujos, cocientes recalculados o edades modelizadas; cada resultado enlaza entradas, ecuación, parámetros, código y versión.\n5. **Interpretaciones:** inferencias ambientales atribuidas al autor, evidencia de apoyo/contradicción y alcance. “Ventilación reducida” no se almacena como si fuera una concentración medida de oxígeno.\n\nEl diseño detallado de entidades, campos y relaciones está en `docs/arquitectura_datos.md`. La unidad fundamental será **una observación de una variable sobre una muestra o intervalo, bajo un método y una versión de procesamiento**. Una edad es una asignación de un modelo a una profundidad, no una propiedad fija e irreversible de la observación.\n\n### Decisión tecnológica\n\nPara el MVP: Python, ficheros originales inmutables, tablas normalizadas CSV/Parquet y SQLite para el catálogo. La extracción experimental entregada usa CSV/JSON y biblioteca estándar; no se ha desplegado SQLite ni Parquet. Una aplicación local pequeña podría usar Streamlit, con selección cartográfica y gráficos interactivos, después de validar el contrato científico.\n\nPara colaboración y publicación sostenida: PostgreSQL/PostGIS, almacenamiento versionado de ficheros, API de lectura y una interfaz web con mapa y gráficos. Esta es una opción de evolución, no un requisito inicial. Evitar una migración temprana reduce mantenimiento mientras cambien taxonomía y esquema. Los formatos de exportación deben ser independientes de la interfaz.\n\nLiPD/GeoJSON serían salidas de intercambio; CSV/Parquet conservan los datos tabulares, y SVG las figuras. Una licencia de software futura —por ejemplo una licencia permisiva elegida por el titular— no cambia las licencias de los conjuntos incorporados.\n\n## 5. Desafíos científicos\n\n| Riesgo | Efecto | Tratamiento propuesto |\n|---|---|---|\n| Modelos de edad distintos y reservorio marino variable | Sincronías y desfases aparentes | Conservar modelo publicado y crear escenarios separados; registrar curvas, ΔR y dependencias |\n| Edad ajustada al proxy que se quiere comparar | Circularidad en correlación o fase | Grafo de dependencias y análisis restringido a cronologías independientes |\n| Bioturbación, condensación, hiatus y retrabajamiento | Resolución efectiva inferior al muestreo | Registrar soporte, mezcla y discontinuidades; no interpolar a través de hiatus |\n| Proxies sensibles a varios procesos | Atribución ambiental no unívoca | Formular mecanismos alternativos y buscar convergencia entre familias independientes |\n| TOC y redox afectados por diagénesis y dilución | Confusión entre producción, preservación y aporte | Metadatos sedimentarios y geoquímicos conjuntos; no convertir un proxy en O₂ sin calibración |\n| XRF counts frente a concentraciones | Mezcla de escalas y efectos de matriz | Conservar instrumento, normalización y calibración; no fusionar counts/cps/ppm |\n| Fracciones granulométricas y pretratamientos diferentes | Cocientes incomparables | Registrar límites de clases, fracción y eliminación de carbonato/OM |\n| Taxonomía, fracción de tamiz y denominador | Sesgo de porcentajes micropaleontológicos | Nombre original y aceptado, protocolo y recuento total; tratar composición explícitamente |\n| Escalas icnológicas y preservación | Índices ordinales tratados como medidas continuas | Registrar escala, observador, tamaño del área, imágenes y acuerdo entre observadores |\n| Desigual cobertura geográfica y batimétrica | Generalización excesiva | Mostrar cobertura de cada análisis; ponderación/sensibilidad por región y testigo |\n| Series reutilizadas en varios artículos/repositorios | Pseudorreplicación | Relaciones de identidad, versión y derivación; unidad independiente = testigo/archivo, no DOI |\n\nUna revisión de la cronología marina debe partir del material fechado y la definición de la corrección de reservorio. Marine20 es una referencia metodológica para muestras marinas; no debe aplicarse directamente una curva atmosférica a un fechado marino sin un procedimiento explícito de reservorio. **En esta fase no se ha recalibrado ninguna fecha.** [Heaton et al., 2020, DOI 10.1017/RDC.2020.68](https://doi.org/10.1017/RDC.2020.68).\n\nLa icnología puede aportar restricciones sobre colonización bentónica, mezcla y oxigenación, pero la presencia de una traza no equivale automáticamente a una concentración de oxígeno ni a ausencia de anoxia en toda la columna de agua. La propuesta deberá distinguir ausencia observada, ausencia de observación y falta de preservación. Un estudio multiproxy de ODP 977 declara imágenes y datos icnológicos disponibles bajo solicitud; esta barrera debe resolverse antes de incorporarlos como datos abiertos. [Marine Geology, 2022, artículo 106774, depósito institucional](https://gredos.usal.es/bitstream/handle/10366/159437/DGL_Mediterranean.pdf?sequence=1). No se ha solicitado material a autores ni se han redistribuido imágenes.\n\n## 6. Desafíos tecnológicos y de mantenimiento\n\n- Los conectores deberán soportar cambios de esquema, colecciones y versiones sin alterar registros ya publicados. Una descarga que cambia se conserva como nueva versión pendiente de curación.\n- Los filtros espaciales deben usar coordenadas verificadas, CRS explícito y convenciones de longitud; una caja envolvente mediterránea también incluye tierra y áreas ajenas. Para una selección regional robusta se necesita un polígono marino documentado.\n- El rendimiento se resolverá primero mediante consultas e índices y, después, mediante agregaciones para visualización. Una línea simplificada en pantalla nunca sustituirá los datos completos de descarga.\n- Cada valor tendrá una ruta hasta fuente, fila/columna, muestra y transformación. La interfaz mostrará las limitaciones al lado de la variable, incluidas edades y licencias desconocidas.\n- Se necesitan pruebas de contrato para los adaptadores, comprobaciones de unidades y relaciones y un registro de cambios. No se utilizará OCR o extracción automática de tablas sin revisión humana.\n- El mantenimiento requiere responsable científico, responsable técnico, revisión de incorporaciones y un mecanismo de correcciones. El atlas no debe prometer actualizaciones continuas sin recursos para curarlas.\n\n## 7. MVP propuesto\n\n### Alcance y secuencia\n\n**MVP-A, demostración de integridad:** los cinco conjuntos actuales; vista de cada serie en su soporte original, mapa de sitios y búsqueda por proxy/año. La semilla ya valida el tratamiento de edades negativas, cronología ausente, versiones y unidades problemáticas. El registro MIS 11 demuestra flexibilidad temporal; no amplía por sí solo el alcance científico del piloto holoceno.\n\n**MVP-B, piloto científico:** comenzar con Alborán occidental, 0–37 ka, enlazando GP03 (multiproxy, continuación publicada en 2024), ODP 976/977 (icnología/ORLs) y registros de comparación solo cuando compartan ventana, marco cronológico y variable interpretable. En una segunda etapa, contrastar cobertura con PaleoMED20 y añadir testigos orientales. La presencia de múltiples proxies en un sitio no garantiza independencia: medir y declarar relaciones de derivación y calibración.\n\n### Recorrido funcional\n\n1. Mapa con un marcador por testigo; ficha con alias, coordenadas, profundidad de agua y fuentes.\n2. Filtros separados: **edad de muestra, ka BP**; **año del artículo, año CE**; proxy, región y tipo de evidencia. El año de depósito será un filtro distinto, opcional.\n3. La edad filtra valores reales; para descubrir registros también puede consultarse el solapamiento de coberturas. No basta con que un testigo tenga alguna edad dentro de un intervalo si sus valores seleccionados están fuera.\n4. Mostrar recuento de muestras/valores seleccionados, excluidos por edad ausente y excluidos por calidad; indicar si la búsqueda usa cronología archivada o armonizada.\n5. Gráficos con ejes numéricos, puntos originales, unidades, errores disponibles y opción edad/profundidad cuando sea válida. Mantener escalas independientes para variables distintas. No unir series con un eje común si el método o soporte lo hace engañoso.\n6. Descargar selección, metadatos, DOI, licencias y manifiesto; generar SVG mediante el mismo conjunto seleccionado en Python. La figura debe incluir configuración de filtros y estado cronológico.\n\n### Exclusiones del MVP\n\nNo habrá reconstrucción espacial continua, índice ambiental global, cronología recalculada masivamente, conversión automática a oxígeno, interpolación por defecto ni “curva mediterránea media”. Tampoco se interpretará el número de publicaciones como densidad temporal de datos.\n\n### Criterios de aceptación\n\n| Prueba | Resultado requerido |\n|---|---|\n| Trazabilidad | Cada valor exportado resuelve archivo original, hash, fila y columna; artículo y conjunto citados |\n| Filtrado | Proxy, edad y año funcionan conjuntamente; ODP 977 figura por artículo 2020 aunque el conjunto se cite como 2024 |\n| Ausencia | LC21 no aparece en una selección numérica de edades; sí en catálogo y vista en profundidad |\n| Unidades | La profundidad conflictiva de ODP 977 no entra en una unión ni se convierte sin revisión |\n| Incertidumbre | Ninguna banda inventada; distinguir error analítico/calibración de error cronológico |\n| Exportación | CSV coincide con los valores de la vista; SVG conserva texto y unidades |\n| Curación científica | Un segundo revisor verifica un subconjunto de extracciones y todas las conversiones no triviales |\n| Publicación | Cada recurso redistribuido tiene atribución y licencia/permiso documentado |\n\nEl código entregado cubre extracción, trazabilidad, filtros y figuras estáticas. En esta versión la tesis y los tres artículos reproducidos están identificados; la auditoría de suplementos/datos, la revisión por segundo investigador, la interfaz cartográfica y la apertura real de SVG en Illustrator permanecen pendientes.\n\n## 8. Qué sería contribución científica original\n\n| Producto | Funcionalidad técnica | Aportación que habría que demostrar |\n|---|---|---|\n| Atlas | Mapa, filtros, descarga y gráficos | Por sí solos no prueban originalidad |\n| Compilación curada | Importar, normalizar y enlazar fuentes | Cobertura cuantitativa nueva, esquema reproducible, resolución documentada de inconsistencias y comparación con antecedentes |\n| Método | Implementar cronologías, controles o calibraciones | Validación independiente, mejora demostrada y límites frente a métodos existentes |\n| Reconstrucción | Analizar series y generar figuras | Hipótesis nueva, evidencia independiente, incertidumbre propagada y conclusión que exceda las publicaciones fuente |\n\n### Preguntas candidatas, todavía no resultados\n\n**Acoplamiento superficie–fondo:** ¿los cambios en productividad, aporte terrígeno y colonización bentónica son compatibles con cambios de ventilación en un intervalo definido? Exige registros co-localizados o correlacionados con justificación, no proxies dispersos llamados todos “oxigenación”. Evaluar modelos alternativos de preservación y dilución. La dirección de una asociación no demostrará causalidad.\n\n**Magnitud de la asincronía entre Este y Oeste:** ¿se mantiene al comparar observaciones compatibles bajo modelos cronológicos independientes y ensambles de edad? La tesis ya propone asincronía general y controles distintos; la contribución nueva tendría que cuantificar el desfase y su incertidumbre con más sitios, y evaluar sensibilidad a la selección de proxies. ORLs y sapropeles se mantienen como procesos/contextos distintos, no como capas equivalentes. [Rogerson et al., 2008, DOI 10.1029/2007GC001936](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2007GC001936).\n\n**Valor añadido de la icnología:** ¿reduce ambigüedad o cambia una inferencia obtenida con geoquímica/microfósiles? Requiere evaluar interpretaciones con y sin datos icnológicos y comprobar reproducibilidad de la clasificación. La mera incorporación de imágenes no basta.\n\nPara analizar desfases se usarían realizaciones de edad, resolución efectiva y dependencia entre registros; un desfase inferior a la incertidumbre combinada no se interpretaría como secuencia de procesos. No se alinearán primero los proxies al evento para después “descubrir” su sincronía. Si las dataciones o ensambles no están disponibles, el alcance se reducirá a comparación exploratoria en profundidad o edad archivada.\n\n### Puertas de decisión editorial\n\n1. **Auditoría de datos de tesis y seguimiento:** identificar qué series de ODP 976/977 y GP03 están disponibles y bajo qué términos; separar la publicación de tesis, el artículo GP03 de 2024 y datos originales/suplementos.\n2. **Auditoría de cobertura:** construir una matriz región × profundidad × proxy × tiempo con disponibilidad numérica, calidad cronológica e independencia. Un recuento de metadatos no la sustituye.\n3. **Originalidad:** comparación explícita de contenido y métodos con PaleoMED20, WDB-Paleo y WPA; describir solapamientos sin llamarlos datos nuevos.\n4. **Ruta de datos/herramienta:** viable si hay curación reutilizable, documentación, licencia, validación y una versión archivada. No exige vender el atlas como reconstrucción nueva.\n5. **Ruta de artículo paleoambiental:** avanzar solo si la hipótesis tiene cobertura y cronología suficiente y sobrevive a pruebas de sensibilidad por testigo, subcuenca, método y modelo de edad. No hay una cifra universal de testigos que garantice potencia; debe evaluarse tras definir el efecto y la resolución.\n\n## 9. Plan de trabajo y recursos\n\nLas duraciones siguientes son estimaciones de planificación para una persona investigadora con apoyo técnico puntual, no costes medidos ni compromisos de entrega. Dependen del formato/acceso a suplementos y datos.\n\n| Fase | Entregable y decisión | Orden de esfuerzo estimado |\n|---|---|---|\n| A. Tesis y originales | Fichas preliminares completadas; auditoría de datos, versiones y permisos por cerrar | 3–5 jornadas adicionales con suplementos y conjuntos accesibles |\n| B. Curación piloto | Diccionario, controles, licencias y cronologías revisadas | 1–3 semanas; más si hay solicitudes a autores |\n| C. MVP local | Mapa, filtros, series y exportación coherentes | 1–2 semanas tras estabilizar el esquema |\n| D. Validación científica | Segunda revisión, casos de uso y comparación con antecedentes | 1–2 semanas según cobertura |\n| E. Evaluación de reconstrucción | Análisis de potencia/resolución y diseño de hipótesis | Decisión posterior a B–D; sin duración comprometida |\n\nSe recomienda empezar con la auditoría A y curación B, priorizando GP03 y los enlaces de ODP 976/977. La restricción ahora es la localización y permiso de los datos fuente y sus cronologías; el mayor riesgo es científico y de curación, no cartográfico. Una versión pública debe contar con repositorio versionado, entorno reproducible, archivo con DOI y responsable de mantenimiento.\n\n## 10. Reproducibilidad, verificaciones y pendientes\n\nEjecutar desde la raíz del proyecto:\n\n```powershell\npython scripts/fetch_seed.py\npython scripts/prepare_seed.py\npython -m unittest discover -s tests -v\npython scripts/make_figures.py\n```\n\nLa primera instrucción descarga solo los archivos ausentes y verifica los existentes. `--refresh` compara y rechaza cambios de bytes; no sobrescribe un original distinto. La extracción selecciona columnas declaradas en `config/seed.json`, conserva texto original y transforma únicamente la representación numérica de las celdas. Se registra como `T001_extract_selected_columns_v1`.\n\n**No ejecutado:** recalibración radiocarbónica, armonización taxonómica, recálculo de SST, interpolación, suavizado, imputación, modelos jerárquicos o reconstrucciones regionales. No se han evaluado los protocolos completos de laboratorio de todos los artículos fuente. Las figuras demuestran lectura de datos, no validación de sus interpretaciones originales.\n\nLos resultados exactos están en `reports/seed_audit.json`; el entorno de figuras, en `reports/environment.json`; las descargas, en `data/provenance/downloads.json`. La revisión de tesis está resumida en `docs/revision_tesis.md`; el ZIP recibido y sus imágenes se conservan en `thesis_source/`. La viabilidad técnica del atlas queda respaldada por una semilla reproducible; el camino de contribución más sólido es curación cuantitativa auditable e integración explícita de icnología con otros proxies. La opción de artículo original sigue abierta, pero no demostrada: primero se requiere inventariar los datos de GP03 y los testigos ODP, luego definir una pregunta que exceda los artículos publicados y someterla a pruebas de resolución, independencia cronológica y sensibilidad.\n",
+  "architectureMarkdown": "# Arquitectura propuesta — versión de diseño 0.1\n\nEste documento es una especificación; no describe una base de producción desplegada. La extracción de prueba es una tabla larga CSV/JSON. La tesis identifica un caso particularmente útil para validar el modelo: ODP Sites 976/977 (artículos de icnología/ORLs) y GP03PC (capítulo multiproxy y artículo de seguimiento de 2024). El esquema debe preservar publicaciones, datos, observaciones, interpretaciones y transformaciones como entidades relacionadas, sin colapsarlas.\n\n## Relaciones principales\n\n```mermaid\nerDiagram\n    SITE ||--o{ CORE : contains\n    CORE ||--o{ CORE_ALIAS : has\n    CORE ||--o{ DEPTH_FRAME : defines\n    DEPTH_FRAME ||--o{ SAMPLE : locates\n    SAMPLE ||--o{ OBSERVATION : supports\n    PROXY_VARIABLE ||--o{ OBSERVATION : defines\n    METHOD ||--o{ OBSERVATION : qualifies\n    DATASET_VERSION ||--o{ OBSERVATION : provides\n    PUBLICATION ||--o{ PUBLICATION_DATASET : cites\n    DATASET ||--o{ PUBLICATION_DATASET : linked_to\n    DATASET ||--o{ DATASET_VERSION : versions\n    DEPTH_FRAME ||--o{ AGE_MODEL : supports\n    AGE_MODEL ||--o{ AGE_ASSIGNMENT : predicts\n    SAMPLE ||--o{ AGE_ASSIGNMENT : receives\n    AGE_MODEL ||--o{ DATING_CONTROL : constrained_by\n    TRANSFORMATION ||--o{ DERIVATION_INPUT : uses\n    OBSERVATION ||--o{ DERIVATION_INPUT : feeds\n    TRANSFORMATION ||--o{ OBSERVATION : produces\n    INTERPRETATION ||--o{ INTERPRETATION_EVIDENCE : supported_by\n    OBSERVATION ||--o{ INTERPRETATION_EVIDENCE : informs\n```\n\nLas conexiones modelo–control y transformación–salida pueden ser muchos a muchos en una implementación general; usar tablas puente cuando un control se reutilice o un procesamiento produzca varios conjuntos. Un sitio puede tener varios sondeos. Un composite puede utilizar varios testigos, por lo que requiere `composite_member` además de este diagrama simplificado.\n\n## Entidades y campos mínimos\n\n| Entidad | Identidad, campos y restricciones |\n|---|---|\n| `publication` | UUID, DOI normalizado único cuando exista; título, autores ordenados/ORCID, revista, año de artículo, versión, corrección/retractación; prueba de revisión por pares; cuartil con sistema/año/categoría, nullable |\n| `site` | UUID, nombre, geometría WGS84 EPSG:4326, coordenadas originales/CRS, precisión y fuente, subcuenca y versión de límites; profundidad de agua positiva y convención original |\n| `core` | UUID, sitio, campaña, plataforma, dispositivo, recovery y penetration separados; identificador externo/IGSN si existe |\n| `core_alias` | Nombre original, fuente y relación validada con `core`; un alias sin contexto no es clave global |\n| `depth_frame` | `mbsf`, `mcd`, sección/local u otro; unidad, datum, corrección y referencia; estado validado/ambiguo |\n| `composite_member` | Testigo y tramo, marco de entrada/salida, ecuación/offset, incertidumbre y versión; no sumar offsets tácitos |\n| `sample` | UUID, marco, top/bottom, profundidad puntual si procede, unidad original, identificador del laboratorio, soporte/volumen, fracción y preservación; distinguir muestra puntual de intervalo |\n| `dataset` | UUID, repositorio, DOI u otro identificador, título, creadores, relación colección/hijo; distinto de publicación |\n| `dataset_version` | UUID, dataset padre, versión/repositorio, fecha de publicación/registro/acceso separadas, URL, archivo, SHA-256, licencia y permiso; objetos originales inmutables |\n| `publication_dataset` | Publicación, conjunto, tipo de relación (`supplement`, `related`, `reuse`, `collection`) y prueba de la relación |\n| `proxy_variable` | UUID, etiqueta original y canónica, familia, analito/taxón/material, magnitud, unidad y escala nominal/ordinal/continua; objetivo ambiental separado |\n| `method` | Instrumento, protocolo, tratamiento, fracción, estándares, límite de detección/cuantificación, calibración y cita; parámetros versionados |\n| `observation` | UUID, muestra, variable, método, versión de conjunto, réplica, valor numérico o categórico, texto original, cualificador `<`/`>`, unidad original y canónica, error/tipo/nivel, estado QC, localizador fila/columna/página; valor nulo requiere razón explícita |\n| `dating_control` | Material/taxón, profundidad y marco, fecha 14C sin calibrar y error/laboratorio, tefra/U-Th/tie point, curva/versión, ΔR/error y convención, fecha calibrada/distribución; conservar cada etapa |\n| `age_model` | Testigo/marco, nombre, versión, método/software, parámetros, controles/prior, discontinuidades, referencia temporal, curva/reservorio, independencia y dependencias del tuning; estado publicado/recalculado |\n| `age_assignment` | Modelo + muestra/profundidad, edad mediana/central y tipo de resumen, unidad/base temporal, límites/probabilidad o referencia a ensamble; múltiples modelos por muestra permitidos |\n| `transformation` | UUID, descripción, fórmula, entradas, parámetros y unidades, versión de script/commit y entorno, fecha, responsable, incertidumbre/propagación; grafo acíclico |\n| `derivation_input` | Resultado/transformación y cada entrada, papel y versión exacta; no guardar solo una lista de DOI |\n| `interpretation` | Autor, publicación, afirmación, variable ambiental, lugar/intervalo, método y nivel de confianza atribuido; separar interpretación fuente de la del atlas |\n| `interpretation_evidence` | Interpretación + observación/conjunto, sentido apoyo/contradicción y justificación |\n| `qc_issue` | Entidad/campo afectado, regla, gravedad, evidencia, decisión, revisor y estado; no borrar alertas resueltas, guardar resolución |\n| `asset` | Imágenes, cortes, escalas, área y resolución, licencia y checksum; trazas/índices enlazados a área y observador |\n\n## Icnología y micropaleontología\n\nExtensiones `taxonomy_name`, `taxon_mapping`, `assemblage_count` y `ichnology_assessment` conservan nombres originales, revisión taxonómica, lista y denominador, fracción de tamiz, recuentos, escala de bioturbación y definición, observador, área/volumen, incertidumbre y recurso gráfico. La ausencia observada requiere un esfuerzo/método definido. Un campo vacío significa desconocido, no ausencia.\n\nNo mezclar abundancia absoluta, proporción, flujo y número de individuos. La escala ordinal de bioturbación conserva sus categorías; una media aritmética requiere justificar el modelo que la hace interpretable. Las transformaciones porcentuales y las tasas de acumulación necesitan sus denominadores, densidad seca y sedimentación cuando corresponda.\n\n## Tiempo y cronología\n\n- Campo de interfaz `sample_age_ka_bp`: miles de años antes de 1950, con `time_scale` (`calendar`, `radiocarbon`, `relative`, `unknown`) y `age_model_id`. Un número 14C no se vuelve edad calendario por dividir entre mil.\n- `publication_year_ce`: año de publicación del artículo principal, no de la muestra, DOI, depósito o acceso.\n- `dataset_published_at`, `doi_registered_at`, `accessed_at_utc`: fechas separadas.\n- Conservar valores BP negativos cuando estén publicados. No usar `age >= 0` como restricción universal.\n- Filtros de edad: límites inclusivos y numeración de joven a antiguo; rechazar rangos invertidos. En una búsqueda por cobertura: `record_min <= query_max AND record_max >= query_min`; en la gráfica: filtrar las edades de cada valor. La cobertura no prueba continuidad.\n- Ensambles: Parquet/NetCDF/Zarr según volumen, ejes explícitos `(age_model, draw, depth)`, unidades, semilla y dependencias. No guardar solo bandas si se pretende propagar incertidumbre temporal.\n- Unir por profundidad solo entre marcos compatibles y validados. No ajustar una cronología con el mismo proxy que se utiliza después para demostrar fase sin declarar circularidad.\n\n## Control y trazabilidad\n\n`status` separa `unreviewed`, `source_verified`, `method_reviewed`, `harmonized_validated`, `quarantined`. Verificar el DOI no certifica el método. Licencia desconocida permite catalogar metadatos conforme a sus condiciones, pero no autoriza redistribuir el contenido numérico o imágenes.\n\nLos controles son dimensionales y semánticos: integridad referencial, coordenadas, rango y unidad, duplicados, censura, monotonía/hiatus, taxonomía y método. Los posibles outliers se señalan; no se eliminan sin regla y decisión registrada. Los valores publicados y las versiones armonizadas se consultan por separado.\n\nLa tabla larga de prueba no sustituye este diseño. Sus campos `age_model_id=archived:<dataset>` son identificadores de procedencia provisionales, no modelos de edad auditados. `dataset_citation_year` es solo el año de la cita del conjunto; no pretende sustituir la fecha de depósito.\n\n## Estructura de carpetas\n\n```text\nmediterranean-multiproxy-atlas/\n  README.md\n  config/seed.json                 # columnas y decisiones de selección explícitas\n  thesis_source/                   # tesis recibida + hash/manifest; referencia, no instrucciones\n  data/\n    raw/pangaea/                  # bytes originales TSV + página HTML\n    provenance/downloads.json     # URL, acceso, SHA-256 y tipo de contenido\n    processed/                    # catálogo y observaciones de prueba CSV/JSON\n    interim/                      # futuro: extracción revisable antes de normalizar\n    harmonized/                   # futuro: resultados derivados, nunca sobre raw\n  docs/\n    arquitectura_datos.md\n    revision_tesis.md\n    fuentes_y_busquedas.md\n    dictionaries/                 # futuro: variables, unidades, taxones y marcos\n    decisions/                    # futuro: resoluciones y cambios de esquema\n  scripts/                        # descarga, extracción, figuras y empaquetado\n  src/seed_query.py               # filtros puros de prueba\n  tests/                          # integridad y semántica de filtros\n  figures/                        # SVG maestros y PNG de inspección\n  reports/                        # informe, auditoría y entorno\n  report-app/                     # visor local del informe; no es el atlas\n  notebooks/                      # futuro: análisis exploratorio documentado\n  app/                            # futuro: interfaz del atlas, aún no creada\n  api/                            # futuro: API, si se justifica\n  releases/                       # futuro: manifiestos y versiones archivadas\n```\n\nLas carpetas marcadas “futuro” son una propuesta y no se han creado con datos vacíos. No duplicar datos en notebooks o en el frontend; las salidas consumen la misma selección y manifiesto de procedencia. Versionar código, configuración y documentación; archivar conjuntos grandes por versión y hash con licencia. Un futuro paquete reproducible debe poder reconstruir desde originales preservados, incluso si el proveedor deja de responder.\n",
+  "report": {
+    "asOf": "2026-10-28",
+    "audience": "Investigación paleoceanográfica"
+  },
+  "queries": {
+    "seed_catalog": {
+      "rows": [
+        {
+          "dataset_id": 438816,
+          "core": "MD95-2043",
+          "authors": "Cacho, Isabel; Grimalt, Joan O; Pelejero, Carles; Canals, Miquel; Sierro, Francisco Javier; Flores, José-Abel; Shackleton, Nicholas J",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "paper_doi": "10.1029/1999PA900044",
+          "paper_year": 1999,
+          "dataset_citation_year": 1999,
+          "latitude": 36.143333,
+          "longitude": -2.621167,
+          "water_depth_m": 1841.0,
+          "raw_rows": 97,
+          "selected_series": 1,
+          "license": "CC-BY-3.0",
+          "age_min_ka_bp": 1.01,
+          "age_max_ka_bp": 11.5,
+          "median_positive_age_step_ka": 0.09999999999999964,
+          "age_scale_status": "as_archived_calibration_not_audited",
+          "flags": "",
+          "raw_sha256": "73edaf96101ea2f9ec14f61503b4cc406f09c05cc383adc276dbca33304e6531"
+        },
+        {
+          "dataset_id": 901666,
+          "core": "HER-GC-ALB2",
+          "authors": "Català, Albert; Cacho, Isabel; Frigola, Jaime; Pena, Leopoldo D; Lirer, Fabrizio",
+          "dataset_doi": "10.1594/PANGAEA.901666",
+          "paper_doi": "10.5194/cp-15-927-2019",
+          "paper_year": 2019,
+          "dataset_citation_year": 2019,
+          "latitude": 36.0124,
+          "longitude": -4.2734,
+          "water_depth_m": 1313.0,
+          "raw_rows": 292,
+          "selected_series": 3,
+          "license": "CC-BY-4.0",
+          "age_min_ka_bp": -0.0124,
+          "age_max_ka_bp": 15.0388,
+          "median_positive_age_step_ka": 0.04679999999999929,
+          "age_scale_status": "as_archived_calibration_not_audited",
+          "flags": "negative_BP_age_preserved",
+          "raw_sha256": "48dcb11a0432189faabf7345894b33b246c03ef78a3fbdcf4838dda09f23d52d"
+        },
+        {
+          "dataset_id": 759535,
+          "core": "MD99-2343",
+          "authors": "Frigola, Jaime; Moreno, Ana; Cacho, Isabel; Canals, Miquel; Sierro, Francisco Javier; Flores, José-Abel; Grimalt, Joan O",
+          "dataset_doi": "10.1594/PANGAEA.759535",
+          "paper_doi": "10.1016/j.quaint.2007.06.016",
+          "paper_year": 2008,
+          "dataset_citation_year": 2008,
+          "latitude": 40.497333,
+          "longitude": 4.028167,
+          "water_depth_m": 2391.0,
+          "raw_rows": 437,
+          "selected_series": 3,
+          "license": "CC-BY-3.0",
+          "age_min_ka_bp": 0.062,
+          "age_max_ka_bp": 52.48,
+          "median_positive_age_step_ka": 0.10699999999999932,
+          "age_scale_status": "as_archived_calibration_not_audited",
+          "flags": "",
+          "raw_sha256": "85ec9ae5d6158b907b467da64810acde8ca835dc87c9460ae0a732c353ea5bcd"
+        },
+        {
+          "dataset_id": 898587,
+          "core": "MD81-LC21",
+          "authors": "Rush, Darci; Talbot, Helen M; van der Meer, Marcel T J; Hopmans, Ellen C; Douglas, Ben; Sinninghe Damsté, Jaap S",
+          "dataset_doi": "10.1594/PANGAEA.898587",
+          "paper_doi": "10.5194/bg-16-2467-2019",
+          "paper_year": 2019,
+          "dataset_citation_year": 2019,
+          "latitude": 35.66,
+          "longitude": 26.58,
+          "water_depth_m": 1522.0,
+          "raw_rows": 19,
+          "selected_series": 2,
+          "license": "CC-BY-4.0",
+          "age_min_ka_bp": null,
+          "age_max_ka_bp": null,
+          "median_positive_age_step_ka": null,
+          "age_scale_status": "unavailable",
+          "flags": "no_age_column_depth_only;section_bottom_zeros_preserved_no_geometry_inference",
+          "raw_sha256": "69af806295c0bce778ace50e31e1d41e5b66e35926f2518368ec04b4e9aef87a"
+        },
+        {
+          "dataset_id": 921230,
+          "core": "161-977A",
+          "authors": "González-Lanchas, Alba; Flores, José-Abel; Sierro, Francisco Javier; Bárcena, María Angeles; Cortina, Aleix; Cacho, Isabel; Grimalt, Joan O",
+          "dataset_doi": "10.1594/PANGAEA.921230",
+          "paper_doi": "10.1016/j.quascirev.2020.106520",
+          "paper_year": 2020,
+          "dataset_citation_year": 2024,
+          "latitude": 36.0317,
+          "longitude": -1.95528,
+          "water_depth_m": 1984.0,
+          "raw_rows": 181,
+          "selected_series": 2,
+          "license": "CC-BY-4.0",
+          "age_min_ka_bp": 375.97,
+          "age_max_ka_bp": 429.69,
+          "median_positive_age_step_ka": 0.26000000000004775,
+          "age_scale_status": "as_archived_calibration_not_audited",
+          "flags": "depth_header_m_vs_metadata_comment_cmbsf_conflict",
+          "raw_sha256": "b8739412ed7d26be05ca0d9d4c9bab807dab4bf2c8edb33d755071037c3d2dd5"
+        }
+      ],
+      "source": {
+        "label": "Cinco conjuntos PANGAEA descargados y verificados",
+        "provider": "PANGAEA",
+        "files": [
+          "data/raw/pangaea/438816.tsv",
+          "data/raw/pangaea/901666.tsv",
+          "data/raw/pangaea/759535.tsv",
+          "data/raw/pangaea/898587.tsv",
+          "data/raw/pangaea/921230.tsv"
+        ],
+        "links": [
+          {
+            "label": "MD95-2043",
+            "url": "https://doi.pangaea.de/10.1594/PANGAEA.438816"
+          },
+          {
+            "label": "HER-GC-ALB2",
+            "url": "https://doi.pangaea.de/10.1594/PANGAEA.901666"
+          },
+          {
+            "label": "MD99-2343",
+            "url": "https://doi.pangaea.de/10.1594/PANGAEA.759535"
+          },
+          {
+            "label": "MD81-LC21",
+            "url": "https://doi.pangaea.de/10.1594/PANGAEA.898587"
+          },
+          {
+            "label": "161-977A",
+            "url": "https://doi.pangaea.de/10.1594/PANGAEA.921230"
+          }
+        ],
+        "transformations": [
+          "T001: extracción explícita sin armonización de edades ni imputación"
+        ],
+        "caveats": [
+          "Selección intencional, sin representatividad mediterránea",
+          "Edad archivada, no modelo de edad auditado",
+          "Tesis revisada; suplementos y datos fuente pendientes de auditoría"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "Filas originales",
+            "definition": "Filas de muestra por tabla TSV; no número de valores ni réplicas independientes",
+            "componentIds": [
+              "catalog-evidence"
+            ]
+          }
+        ]
+      }
+    },
+    "prior_art": {
+      "rows": [
+        {
+          "name": "PaleoMED20",
+          "year": 2025,
+          "url": "https://www.nature.com/articles/s41597-025-05451-5",
+          "scope": "Inventario mediterráneo de metadatos; no auditado el fichero Figshare"
+        },
+        {
+          "name": "WDB-Paleo",
+          "year": 2017,
+          "url": "https://www.pi.ingv.it/252362-2/",
+          "scope": "Modelo relacional y datos cuantitativos publicados; servicio actual no probado"
+        },
+        {
+          "name": "World Paleoceanographic Atlas",
+          "year": null,
+          "url": "https://paleodataview.marum.de/",
+          "scope": "Datos por profundidad y edad; detalles de incertidumbre documentados para 2024"
+        },
+        {
+          "name": "NOAA WDS Paleo",
+          "year": null,
+          "url": "https://www.ncei.noaa.gov/access/paleo-search/api",
+          "scope": "Documentación de búsqueda y acceso; sin importación numérica"
+        },
+        {
+          "name": "PANGAEA",
+          "year": 2023,
+          "url": "https://doi.org/10.1038/s41597-023-02269-x",
+          "scope": "Repositorio original de los cinco conjuntos descargados"
+        },
+        {
+          "name": "LiPD",
+          "year": 2016,
+          "url": "https://cp.copernicus.org/articles/12/1093/2016/",
+          "scope": "Marco de intercambio; no implementado"
+        }
+      ],
+      "source": {
+        "label": "Fuentes editoriales e institucionales consultadas",
+        "links": [
+          {
+            "label": "PaleoMED20",
+            "url": "https://www.nature.com/articles/s41597-025-05451-5"
+          },
+          {
+            "label": "WDB-Paleo",
+            "url": "https://www.pi.ingv.it/252362-2/"
+          },
+          {
+            "label": "World Paleoceanographic Atlas",
+            "url": "https://paleodataview.marum.de/"
+          },
+          {
+            "label": "NOAA WDS Paleo",
+            "url": "https://www.ncei.noaa.gov/access/paleo-search/api"
+          },
+          {
+            "label": "PANGAEA",
+            "url": "https://doi.org/10.1038/s41597-023-02269-x"
+          },
+          {
+            "label": "LiPD",
+            "url": "https://cp.copernicus.org/articles/12/1093/2016/"
+          }
+        ],
+        "caveats": [
+          "Revisión dirigida; no revisión sistemática exhaustiva",
+          "Cuartiles no verificados"
+        ]
+      }
+    },
+    "sst_example": {
+      "rows": [
+        {
+          "age_ka_bp": 1.01,
+          "value": 18.8,
+          "source_row": 1,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 1.08,
+          "value": 18.3,
+          "source_row": 2,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 1.16,
+          "value": 18.3,
+          "source_row": 3,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 1.38,
+          "value": 17.9,
+          "source_row": 4,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 1.53,
+          "value": 18.1,
+          "source_row": 5,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 1.75,
+          "value": 18.4,
+          "source_row": 6,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 1.9,
+          "value": 19.0,
+          "source_row": 7,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 2.12,
+          "value": 18.4,
+          "source_row": 8,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 2.27,
+          "value": 18.5,
+          "source_row": 9,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 2.49,
+          "value": 18.3,
+          "source_row": 10,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 2.64,
+          "value": 18.5,
+          "source_row": 11,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 2.86,
+          "value": 18.3,
+          "source_row": 12,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.01,
+          "value": 18.7,
+          "source_row": 13,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.21,
+          "value": 18.2,
+          "source_row": 14,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.34,
+          "value": 19.1,
+          "source_row": 15,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.41,
+          "value": 18.5,
+          "source_row": 16,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.54,
+          "value": 18.6,
+          "source_row": 17,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.67,
+          "value": 19.0,
+          "source_row": 18,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 3.87,
+          "value": 18.9,
+          "source_row": 19,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.0,
+          "value": 19.0,
+          "source_row": 20,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.2,
+          "value": 18.7,
+          "source_row": 21,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.33,
+          "value": 19.0,
+          "source_row": 22,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.48,
+          "value": 19.0,
+          "source_row": 23,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.55,
+          "value": 18.8,
+          "source_row": 24,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.67,
+          "value": 19.3,
+          "source_row": 25,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.75,
+          "value": 19.6,
+          "source_row": 26,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.87,
+          "value": 18.5,
+          "source_row": 27,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 4.95,
+          "value": 18.6,
+          "source_row": 28,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.07,
+          "value": 18.8,
+          "source_row": 29,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.15,
+          "value": 18.8,
+          "source_row": 30,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.27,
+          "value": 18.3,
+          "source_row": 31,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.46,
+          "value": 18.3,
+          "source_row": 32,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.54,
+          "value": 18.3,
+          "source_row": 33,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.66,
+          "value": 18.7,
+          "source_row": 34,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.74,
+          "value": 18.4,
+          "source_row": 35,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.86,
+          "value": 18.9,
+          "source_row": 36,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 5.94,
+          "value": 19.6,
+          "source_row": 37,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.06,
+          "value": 19.2,
+          "source_row": 38,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.16,
+          "value": 19.4,
+          "source_row": 39,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.29,
+          "value": 19.4,
+          "source_row": 40,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.39,
+          "value": 19.5,
+          "source_row": 41,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.53,
+          "value": 19.5,
+          "source_row": 42,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.62,
+          "value": 19.4,
+          "source_row": 43,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.76,
+          "value": 19.1,
+          "source_row": 44,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.85,
+          "value": 18.8,
+          "source_row": 45,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 6.99,
+          "value": 18.8,
+          "source_row": 46,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.08,
+          "value": 19.4,
+          "source_row": 47,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.22,
+          "value": 19.7,
+          "source_row": 48,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.31,
+          "value": 19.2,
+          "source_row": 49,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.45,
+          "value": 19.3,
+          "source_row": 50,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.56,
+          "value": 19.5,
+          "source_row": 51,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.72,
+          "value": 18.9,
+          "source_row": 52,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.82,
+          "value": 18.8,
+          "source_row": 53,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 7.98,
+          "value": 18.8,
+          "source_row": 54,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.08,
+          "value": 19.0,
+          "source_row": 55,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.24,
+          "value": 18.0,
+          "source_row": 56,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.35,
+          "value": 18.9,
+          "source_row": 57,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.5,
+          "value": 18.2,
+          "source_row": 58,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.61,
+          "value": 18.5,
+          "source_row": 59,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.77,
+          "value": 18.5,
+          "source_row": 60,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 8.87,
+          "value": 18.8,
+          "source_row": 61,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.01,
+          "value": 19.1,
+          "source_row": 62,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.08,
+          "value": 19.6,
+          "source_row": 63,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.18,
+          "value": 18.9,
+          "source_row": 64,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.25,
+          "value": 19.6,
+          "source_row": 65,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.35,
+          "value": 19.1,
+          "source_row": 66,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.42,
+          "value": 19.8,
+          "source_row": 67,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.52,
+          "value": 19.1,
+          "source_row": 68,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.55,
+          "value": 19.6,
+          "source_row": 69,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.59,
+          "value": 19.2,
+          "source_row": 70,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.69,
+          "value": 19.1,
+          "source_row": 71,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.76,
+          "value": 19.9,
+          "source_row": 72,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.86,
+          "value": 19.4,
+          "source_row": 73,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 9.91,
+          "value": 19.8,
+          "source_row": 74,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.0,
+          "value": 19.0,
+          "source_row": 75,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.05,
+          "value": 18.7,
+          "source_row": 76,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.14,
+          "value": 18.3,
+          "source_row": 77,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.19,
+          "value": 18.2,
+          "source_row": 78,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.28,
+          "value": 18.1,
+          "source_row": 79,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.34,
+          "value": 19.2,
+          "source_row": 80,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.42,
+          "value": 18.6,
+          "source_row": 81,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.48,
+          "value": 19.1,
+          "source_row": 82,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.56,
+          "value": 18.9,
+          "source_row": 83,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.62,
+          "value": 18.4,
+          "source_row": 84,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.7,
+          "value": 18.4,
+          "source_row": 85,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.76,
+          "value": 18.6,
+          "source_row": 86,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.84,
+          "value": 18.8,
+          "source_row": 87,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.89,
+          "value": 18.6,
+          "source_row": 88,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 10.96,
+          "value": 18.2,
+          "source_row": 89,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.01,
+          "value": 17.2,
+          "source_row": 90,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.08,
+          "value": 17.6,
+          "source_row": 91,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.13,
+          "value": 17.9,
+          "source_row": 92,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.21,
+          "value": 18.2,
+          "source_row": 93,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.26,
+          "value": 17.9,
+          "source_row": 94,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.33,
+          "value": 18.0,
+          "source_row": 95,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.45,
+          "value": 17.0,
+          "source_row": 96,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        },
+        {
+          "age_ka_bp": 11.5,
+          "value": 16.8,
+          "source_row": 97,
+          "core": "MD95-2043",
+          "dataset_doi": "10.1594/PANGAEA.438816",
+          "unit": "degC"
+        }
+      ],
+      "source": {
+        "label": "Cacho et al. (1999), MD95-2043, PANGAEA.438816",
+        "files": [
+          "data/raw/pangaea/438816.tsv"
+        ],
+        "links": [
+          {
+            "label": "PANGAEA.438816",
+            "url": "https://doi.pangaea.de/10.1594/PANGAEA.438816"
+          }
+        ],
+        "filters": [
+          "Todas las 97 filas originales, SST anual de alquenonas"
+        ],
+        "caveats": [
+          "Cronología archivada sin armonizar",
+          "SST es reconstrucción publicada; incertidumbre no informada en esta tabla"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "SST anual",
+            "definition": "Valor publicado de SST anual de alquenonas, grados Celsius; sin recálculo local",
+            "componentIds": [
+              "sst-evidence"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
