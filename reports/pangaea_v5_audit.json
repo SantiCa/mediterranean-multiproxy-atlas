@@ -8,7 +8,7 @@
  },
  "audit": [
   {
-   "id": "pangaea5-54940:Foraminifera_benthic_g~e3f3640c",
+   "id": "pangaea5-54940:Foraminifera_benthic_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 94,
    "missing": 0,
@@ -23,7 +23,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-54940:Globocassidulina_subglobosa_~99cd4d77",
+   "id": "pangaea5-54940:Globocassidulina_subglobosa_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 94,
    "missing": 0,
@@ -38,7 +38,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-54940:Oridorsalis_umbonatus_~66a6a137",
+   "id": "pangaea5-54940:Oridorsalis_umbonatus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 94,
    "missing": 0,
@@ -68,7 +68,7 @@
    "age_model": "10.1594/PANGAEA.733069"
   },
   {
-   "id": "pangaea5-66714:Orbulina_universa_~34004d5d",
+   "id": "pangaea5-66714:Orbulina_universa_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -83,7 +83,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinoides_conglobatus_~45a5db5e",
+   "id": "pangaea5-66714:Globigerinoides_conglobatus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -98,7 +98,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinoides_ruber_pink_~6d6ea6ef",
+   "id": "pangaea5-66714:Globigerinoides_ruber_pink_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -113,7 +113,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinoides_ruber_white_~e874cfc4",
+   "id": "pangaea5-66714:Globigerinoides_ruber_white_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -128,7 +128,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinoides_tenellus_~97e90148",
+   "id": "pangaea5-66714:Globigerinoides_tenellus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -143,7 +143,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinoides_sacculifer_~33fc2b11",
+   "id": "pangaea5-66714:Globigerinoides_sacculifer_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -158,7 +158,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinella_aequilateralis_~d6d1d162",
+   "id": "pangaea5-66714:Globigerinella_aequilateralis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -173,7 +173,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerina_calida_~8b95ab89",
+   "id": "pangaea5-66714:Globigerina_calida_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 731,
    "missing": 1,
@@ -188,7 +188,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerina_bulloides_~00b8ede0",
+   "id": "pangaea5-66714:Globigerina_bulloides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -203,7 +203,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerina_falconensis_~6a5e9a64",
+   "id": "pangaea5-66714:Globigerina_falconensis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -218,7 +218,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Beella_digitata_~15b32bf9",
+   "id": "pangaea5-66714:Beella_digitata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -233,7 +233,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerina_rubescens_~6bbf6ca7",
+   "id": "pangaea5-66714:Globigerina_rubescens_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -248,7 +248,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Turborotalita_quinqueloba_~fe7ca543",
+   "id": "pangaea5-66714:Turborotalita_quinqueloba_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -263,7 +263,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Neogloboquadrina_pachyderma_sinistral_~b3d7dc39",
+   "id": "pangaea5-66714:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -278,7 +278,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Neogloboquadrina_pachyderma_dextral_~d1ba188d",
+   "id": "pangaea5-66714:Neogloboquadrina_pachyderma_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -293,7 +293,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Neogloboquadrina_dutertrei_~71be9394",
+   "id": "pangaea5-66714:Neogloboquadrina_dutertrei_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -308,7 +308,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globorotalia_inflata_~6a1e87e2",
+   "id": "pangaea5-66714:Globorotalia_inflata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -323,7 +323,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globorotalia_truncatulinoides_sinistral_~e3e4ce5c",
+   "id": "pangaea5-66714:Globorotalia_truncatulinoides_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -338,7 +338,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globorotalia_truncatulinoides_dextral_~1015d05b",
+   "id": "pangaea5-66714:Globorotalia_truncatulinoides_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -353,7 +353,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globorotalia_crassaformis_~79e8d7a8",
+   "id": "pangaea5-66714:Globorotalia_crassaformis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -368,7 +368,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Neogloboquadrina_pachyderma_dextral_and_dutertrei_intergrade_~a1f5d80a",
+   "id": "pangaea5-66714:Neogloboquadrina_pachyderma_dextral_and_dutertrei_intergrade_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -383,7 +383,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globorotalia_scitula_~d686b0b6",
+   "id": "pangaea5-66714:Globorotalia_scitula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -398,7 +398,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globorotalia_menardii_~79e8d7a8",
+   "id": "pangaea5-66714:Globorotalia_menardii_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -413,7 +413,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinita_glutinata_~670f05ad",
+   "id": "pangaea5-66714:Globigerinita_glutinata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -428,7 +428,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinita_uvula_~c18d2e08",
+   "id": "pangaea5-66714:Globigerinita_uvula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -443,7 +443,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Globigerinita_iota_~79e8d7a8",
+   "id": "pangaea5-66714:Globigerinita_iota_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -458,7 +458,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66714:Foraminifera_benthic_~1f84e38d",
+   "id": "pangaea5-66714:Foraminifera_benthic_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 732,
    "missing": 0,
@@ -473,7 +473,7 @@
    "age_model": "10.1594/PANGAEA.207848"
   },
   {
-   "id": "pangaea5-66811:Globigerina_bulloides_18O_PDB~a5e5fe0f",
+   "id": "pangaea5-66811:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 701,
    "missing": 15,
@@ -488,7 +488,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-66811:Globigerina_bulloides_13C_PDB~a51e3c74",
+   "id": "pangaea5-66811:Globigerina_bulloides_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 700,
    "missing": 16,
@@ -503,7 +503,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-66811:Neogloboquadrina_pachyderma_sinistral_~ff1301c4",
+   "id": "pangaea5-66811:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 703,
    "missing": 13,
@@ -518,7 +518,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-66811:Sea_surface_temperature_summer_C~5b8d5a6a",
+   "id": "pangaea5-66811:Sea_surface_temperature_summer_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 698,
    "missing": 18,
@@ -533,7 +533,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-82051:Cibicidoides_wuellerstorfi_13C_PDB~21ad3b75",
+   "id": "pangaea5-82051:Cibicidoides_wuellerstorfi_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 112,
    "missing": 0,
@@ -548,7 +548,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-82055:Neogloboquadrina_pachyderma_sinistral_~6e4a89b5",
+   "id": "pangaea5-82055:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 526,
    "missing": 0,
@@ -563,7 +563,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-82056:Carbon_organic_total_~30ee9923",
+   "id": "pangaea5-82056:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 100,
    "missing": 0,
@@ -578,7 +578,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-82361:Globigerina_bulloides_18O_PDB~6f1bbd11",
+   "id": "pangaea5-82361:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 536,
    "missing": 0,
@@ -593,7 +593,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Globigerinoides_ruber_~8534e982",
+   "id": "pangaea5-89473:Globigerinoides_ruber_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 154,
    "missing": 33,
@@ -608,7 +608,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Turborotalita_quinqueloba_~53f73dc4",
+   "id": "pangaea5-89473:Turborotalita_quinqueloba_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 154,
    "missing": 33,
@@ -623,7 +623,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Neogloboquadrina_incompta_~a7adeed9",
+   "id": "pangaea5-89473:Neogloboquadrina_incompta_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 154,
    "missing": 33,
@@ -638,7 +638,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Globigerina_bulloides_~b854dbd6",
+   "id": "pangaea5-89473:Globigerina_bulloides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 154,
    "missing": 33,
@@ -653,7 +653,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Carbon_organic_total_~e15a13ad",
+   "id": "pangaea5-89473:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 108,
    "missing": 79,
@@ -668,7 +668,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Turborotalita_quinqueloba_18O_PDB~8c7fc8e1",
+   "id": "pangaea5-89473:Turborotalita_quinqueloba_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 113,
    "missing": 74,
@@ -683,7 +683,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-89473:Sea_surface_temperature_annual_mean_C~17a0a2dd",
+   "id": "pangaea5-89473:Sea_surface_temperature_annual_mean_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 52,
    "missing": 135,
@@ -1013,7 +1013,7 @@
    "age_model": "10.1594/PANGAEA.919703"
   },
   {
-   "id": "pangaea5-327443:Potassium_cps~555c1346",
+   "id": "pangaea5-327443:Potassium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 741,
    "missing": 0,
@@ -1058,7 +1058,7 @@
    "age_model": "10.1594/PANGAEA.872812"
   },
   {
-   "id": "pangaea5-667479:Titanium_Calcium_ratio_sin_unidad~2a32535a",
+   "id": "pangaea5-667479:Titanium_Calcium_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 658,
    "missing": 0,
@@ -1073,7 +1073,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-667479:Calcium_cps~a45be3bf",
+   "id": "pangaea5-667479:Calcium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 658,
    "missing": 0,
@@ -1403,7 +1403,7 @@
    "age_model": "10.1594/PANGAEA.872812"
   },
   {
-   "id": "pangaea5-704428:Calcium_carbonate_~505dbe12",
+   "id": "pangaea5-704428:Calcium_carbonate_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 0,
@@ -1418,7 +1418,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-704428:Carbon_organic_total_~308b56e1",
+   "id": "pangaea5-704428:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 0,
@@ -1433,7 +1433,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-704428:Median_grain_size_D50_phi~3dd2ff08",
+   "id": "pangaea5-704428:Median_grain_size_D50_phi",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 0,
@@ -1448,7 +1448,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Abies_~0e9e5d66",
+   "id": "pangaea5-711649:Abies_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1463,7 +1463,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Artemisia_~d39fa0fd",
+   "id": "pangaea5-711649:Artemisia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1478,7 +1478,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Betula_~5dad6bdc",
+   "id": "pangaea5-711649:Betula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1493,7 +1493,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Carpinus_~48cb3e71",
+   "id": "pangaea5-711649:Carpinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1508,7 +1508,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Cedrus_~6d9880f3",
+   "id": "pangaea5-711649:Cedrus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1523,7 +1523,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Chenopodiaceae_~230ddc79",
+   "id": "pangaea5-711649:Chenopodiaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1538,7 +1538,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Cupressaceae_~1c0e38d7",
+   "id": "pangaea5-711649:Cupressaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1553,7 +1553,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Ephedra_distachya_type_~42542239",
+   "id": "pangaea5-711649:Ephedra_distachya_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1568,7 +1568,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Ephedra_fragilis_type_~a761aaf1",
+   "id": "pangaea5-711649:Ephedra_fragilis_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1583,7 +1583,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Ericaceae_~3f66fed7",
+   "id": "pangaea5-711649:Ericaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1598,7 +1598,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Olea_~70172b09",
+   "id": "pangaea5-711649:Olea_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1613,7 +1613,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Pistacia_~489f45c4",
+   "id": "pangaea5-711649:Pistacia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1628,7 +1628,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Poaceae_~fb26f916",
+   "id": "pangaea5-711649:Poaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1643,7 +1643,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Pinus_~741c6339",
+   "id": "pangaea5-711649:Pinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1658,7 +1658,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-711649:Pollen_total_cm_3~54ac40eb",
+   "id": "pangaea5-711649:Pollen_total_cm_3",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 262,
    "missing": 0,
@@ -1673,7 +1673,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globigerinoides_ruber_white_18O_PDB~160f084c",
+   "id": "pangaea5-733069:Globigerinoides_ruber_white_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 43,
    "missing": 26,
@@ -1688,7 +1688,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globigerinoides_ruber_white_13C_PDB~17aa6145",
+   "id": "pangaea5-733069:Globigerinoides_ruber_white_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 43,
    "missing": 26,
@@ -1703,7 +1703,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_dextral_18O_PDB~744426e1",
+   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 65,
    "missing": 4,
@@ -1718,7 +1718,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_dextral_13C_PDB~da3ad5f4",
+   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 65,
    "missing": 4,
@@ -1733,7 +1733,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_sinistral_18O_PDB~2921553d",
+   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 22,
    "missing": 47,
@@ -1748,7 +1748,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_sinistral_13C_PDB~7c2cd749",
+   "id": "pangaea5-733069:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 22,
    "missing": 47,
@@ -1763,7 +1763,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globorotalia_inflata_18O_PDB~f951c2f0",
+   "id": "pangaea5-733069:Globorotalia_inflata_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 67,
    "missing": 2,
@@ -1778,7 +1778,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globorotalia_inflata_13C_PDB~4679d5ec",
+   "id": "pangaea5-733069:Globorotalia_inflata_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 67,
    "missing": 2,
@@ -1793,7 +1793,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globorotalia_scitula_18O_PDB~0202209a",
+   "id": "pangaea5-733069:Globorotalia_scitula_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 39,
    "missing": 30,
@@ -1808,7 +1808,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globorotalia_scitula_13C_PDB~bd68dd6a",
+   "id": "pangaea5-733069:Globorotalia_scitula_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 39,
    "missing": 30,
@@ -1823,7 +1823,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globorotalia_truncatulinoides_dextral_18O_PDB~deffe4fd",
+   "id": "pangaea5-733069:Globorotalia_truncatulinoides_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 49,
    "missing": 20,
@@ -1838,7 +1838,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733069:Globorotalia_truncatulinoides_dextral_13C_PDB~cf5a5e9c",
+   "id": "pangaea5-733069:Globorotalia_truncatulinoides_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 49,
    "missing": 20,
@@ -1853,7 +1853,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globigerinoides_ruber_white_18O_PDB~6e45c6ab",
+   "id": "pangaea5-733070:Globigerinoides_ruber_white_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 29,
    "missing": 93,
@@ -1868,7 +1868,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globigerinoides_ruber_white_13C_PDB~83e03649",
+   "id": "pangaea5-733070:Globigerinoides_ruber_white_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 29,
    "missing": 93,
@@ -1883,7 +1883,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_dextral_18O_PDB~0fa3cd83",
+   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 85,
    "missing": 37,
@@ -1898,7 +1898,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_dextral_13C_PDB~d21eeff2",
+   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 85,
    "missing": 37,
@@ -1913,7 +1913,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_sinistral_18O_PDB~461bbb09",
+   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 78,
    "missing": 44,
@@ -1928,7 +1928,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_sinistral_13C_PDB~fa9318de",
+   "id": "pangaea5-733070:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 78,
    "missing": 44,
@@ -1943,7 +1943,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globorotalia_scitula_18O_PDB~64d465e3",
+   "id": "pangaea5-733070:Globorotalia_scitula_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 62,
@@ -1958,7 +1958,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globorotalia_scitula_13C_PDB~c7e13e36",
+   "id": "pangaea5-733070:Globorotalia_scitula_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 62,
@@ -1973,7 +1973,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globorotalia_inflata_18O_PDB~35993837",
+   "id": "pangaea5-733070:Globorotalia_inflata_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 82,
    "missing": 40,
@@ -1988,7 +1988,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globorotalia_inflata_13C_PDB~6da1cd77",
+   "id": "pangaea5-733070:Globorotalia_inflata_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 82,
    "missing": 40,
@@ -2003,7 +2003,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globorotalia_truncatulinoides_dextral_18O_PDB~865289a0",
+   "id": "pangaea5-733070:Globorotalia_truncatulinoides_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 79,
    "missing": 43,
@@ -2018,7 +2018,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733070:Globorotalia_truncatulinoides_dextral_13C_PDB~e60c1b16",
+   "id": "pangaea5-733070:Globorotalia_truncatulinoides_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 79,
    "missing": 43,
@@ -2033,7 +2033,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733076:Neogloboquadrina_pachyderma_sinistral_~9ab75a51",
+   "id": "pangaea5-733076:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 195,
    "missing": 0,
@@ -2048,7 +2048,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733076:Sea_surface_temperature_January_March_C~6865f612",
+   "id": "pangaea5-733076:Sea_surface_temperature_January_March_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 195,
    "missing": 0,
@@ -2063,7 +2063,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733076:Sea_surface_temperature_July_September_C~e44eac26",
+   "id": "pangaea5-733076:Sea_surface_temperature_July_September_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 195,
    "missing": 0,
@@ -2078,7 +2078,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733077:Neogloboquadrina_pachyderma_sinistral_~31c713d8",
+   "id": "pangaea5-733077:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 114,
    "missing": 0,
@@ -2093,7 +2093,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733077:Sea_surface_temperature_January_March_C~82dac334",
+   "id": "pangaea5-733077:Sea_surface_temperature_January_March_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 114,
    "missing": 0,
@@ -2108,7 +2108,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733077:Sea_surface_temperature_July_September_C~685ef5b3",
+   "id": "pangaea5-733077:Sea_surface_temperature_July_September_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 114,
    "missing": 0,
@@ -2123,7 +2123,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_inflata_18O_PDB~7e10af96",
+   "id": "pangaea5-733096:Globorotalia_inflata_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 170,
    "missing": 45,
@@ -2138,7 +2138,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_inflata_13C_PDB~e956f6c0",
+   "id": "pangaea5-733096:Globorotalia_inflata_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 170,
    "missing": 45,
@@ -2153,7 +2153,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_truncatulinoides_dextral_18O_PDB~fec0d925",
+   "id": "pangaea5-733096:Globorotalia_truncatulinoides_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 122,
    "missing": 93,
@@ -2168,7 +2168,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_truncatulinoides_dextral_13C_PDB~a3757f0b",
+   "id": "pangaea5-733096:Globorotalia_truncatulinoides_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 122,
    "missing": 93,
@@ -2183,7 +2183,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_truncatulinoides_sinistral_18O_PDB~f8d11355",
+   "id": "pangaea5-733096:Globorotalia_truncatulinoides_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 157,
    "missing": 58,
@@ -2198,7 +2198,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_truncatulinoides_sinistral_13C_PDB~ced50710",
+   "id": "pangaea5-733096:Globorotalia_truncatulinoides_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 157,
    "missing": 58,
@@ -2213,7 +2213,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_18O_PDB~5853b71e",
+   "id": "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 20,
    "missing": 195,
@@ -2228,7 +2228,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_13C_PDB~e8bbe6f6",
+   "id": "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 20,
    "missing": 195,
@@ -2243,7 +2243,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_scitula_18O_PDB~20730002",
+   "id": "pangaea5-733096:Globorotalia_scitula_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 5,
    "missing": 210,
@@ -2258,7 +2258,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733096:Globorotalia_scitula_13C_PDB~b4004300",
+   "id": "pangaea5-733096:Globorotalia_scitula_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 5,
    "missing": 210,
@@ -2273,7 +2273,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globigerinoides_ruber_white_18O_PDB~4867258f",
+   "id": "pangaea5-733108:Globigerinoides_ruber_white_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 45,
    "missing": 40,
@@ -2288,7 +2288,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globigerinoides_ruber_white_13C_PDB~811ce5e4",
+   "id": "pangaea5-733108:Globigerinoides_ruber_white_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 45,
    "missing": 40,
@@ -2303,7 +2303,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globorotalia_inflata_18O_PDB~ed3a4d21",
+   "id": "pangaea5-733108:Globorotalia_inflata_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 62,
    "missing": 23,
@@ -2318,7 +2318,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globorotalia_inflata_13C_PDB~619f7f6c",
+   "id": "pangaea5-733108:Globorotalia_inflata_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 62,
    "missing": 23,
@@ -2333,7 +2333,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globorotalia_scitula_18O_PDB~f47a4abc",
+   "id": "pangaea5-733108:Globorotalia_scitula_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 60,
@@ -2348,7 +2348,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globorotalia_scitula_13C_PDB~2660dffc",
+   "id": "pangaea5-733108:Globorotalia_scitula_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 60,
@@ -2363,7 +2363,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globorotalia_truncatulinoides_sinistral_18O_PDB~8ff843ae",
+   "id": "pangaea5-733108:Globorotalia_truncatulinoides_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 65,
    "missing": 20,
@@ -2378,7 +2378,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Globorotalia_truncatulinoides_sinistral_13C_PDB~96aa72c8",
+   "id": "pangaea5-733108:Globorotalia_truncatulinoides_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 65,
    "missing": 20,
@@ -2393,7 +2393,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_dextral_18O_PDB~cca08ade",
+   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 83,
    "missing": 2,
@@ -2408,7 +2408,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_dextral_13C_PDB~6009b546",
+   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 83,
    "missing": 2,
@@ -2423,7 +2423,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_sinistral_18O_PDB~24d0059f",
+   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 32,
    "missing": 53,
@@ -2438,7 +2438,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_sinistral_13C_PDB~0ac53f61",
+   "id": "pangaea5-733108:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 32,
    "missing": 53,
@@ -2453,7 +2453,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globigerinoides_ruber_white_18O_PDB~4cd6a2a7",
+   "id": "pangaea5-733110:Globigerinoides_ruber_white_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 24,
    "missing": 35,
@@ -2468,7 +2468,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globigerinoides_ruber_white_13C_PDB~1fd3c570",
+   "id": "pangaea5-733110:Globigerinoides_ruber_white_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 24,
    "missing": 35,
@@ -2483,7 +2483,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_inflata_18O_PDB~c1e28fe9",
+   "id": "pangaea5-733110:Globorotalia_inflata_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 50,
    "missing": 9,
@@ -2498,7 +2498,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_inflata_13C_PDB~6f6543b0",
+   "id": "pangaea5-733110:Globorotalia_inflata_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 50,
    "missing": 9,
@@ -2513,7 +2513,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_scitula_18O_PDB~7b595ab4",
+   "id": "pangaea5-733110:Globorotalia_scitula_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 22,
    "missing": 37,
@@ -2528,7 +2528,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_scitula_13C_PDB~134e79eb",
+   "id": "pangaea5-733110:Globorotalia_scitula_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 22,
    "missing": 37,
@@ -2543,7 +2543,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_truncatulinoides_dextral_18O_PDB~68b4f394",
+   "id": "pangaea5-733110:Globorotalia_truncatulinoides_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 4,
    "missing": 55,
@@ -2558,7 +2558,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_truncatulinoides_dextral_13C_PDB~17b74b89",
+   "id": "pangaea5-733110:Globorotalia_truncatulinoides_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 4,
    "missing": 55,
@@ -2573,7 +2573,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_truncatulinoides_sinistral_18O_PDB~fba0a3de",
+   "id": "pangaea5-733110:Globorotalia_truncatulinoides_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 32,
    "missing": 27,
@@ -2588,7 +2588,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Globorotalia_truncatulinoides_sinistral_13C_PDB~9d1725a9",
+   "id": "pangaea5-733110:Globorotalia_truncatulinoides_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 32,
    "missing": 27,
@@ -2603,7 +2603,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_dextral_18O_PDB~bea8709a",
+   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 55,
    "missing": 4,
@@ -2618,7 +2618,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_dextral_13C_PDB~0808bf8d",
+   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 55,
    "missing": 4,
@@ -2633,7 +2633,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_sinistral_18O_PDB~70072a84",
+   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 40,
    "missing": 19,
@@ -2648,7 +2648,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_sinistral_13C_PDB~d31b650d",
+   "id": "pangaea5-733110:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 40,
    "missing": 19,
@@ -2663,7 +2663,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737129:Globigerina_bulloides_18O_PDB~54065f4c",
+   "id": "pangaea5-737129:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 446,
    "missing": 0,
@@ -2678,7 +2678,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737129:Globigerina_bulloides_13C_PDB~5a68065d",
+   "id": "pangaea5-737129:Globigerina_bulloides_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 446,
    "missing": 0,
@@ -2693,7 +2693,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Orbulina_universa_~c26ca8bb",
+   "id": "pangaea5-737130:Orbulina_universa_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2708,7 +2708,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerina_bulloides_~cef118b0",
+   "id": "pangaea5-737130:Globigerina_bulloides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2723,7 +2723,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerina_falconensis_~3f8b5c74",
+   "id": "pangaea5-737130:Globigerina_falconensis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2738,7 +2738,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerina_rubescens_~8aa8de31",
+   "id": "pangaea5-737130:Globigerina_rubescens_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2753,7 +2753,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerina_calida_~b69d16a9",
+   "id": "pangaea5-737130:Globigerina_calida_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2768,7 +2768,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Beella_digitata_~613b901b",
+   "id": "pangaea5-737130:Beella_digitata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2783,7 +2783,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinoides_ruber_white_~351cd8cc",
+   "id": "pangaea5-737130:Globigerinoides_ruber_white_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2798,7 +2798,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinoides_ruber_pink_~c5547b39",
+   "id": "pangaea5-737130:Globigerinoides_ruber_pink_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2813,7 +2813,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinoides_sacculifer_~92dced2e",
+   "id": "pangaea5-737130:Globigerinoides_sacculifer_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2828,7 +2828,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinoides_trilobus_~b75b9b41",
+   "id": "pangaea5-737130:Globigerinoides_trilobus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2843,7 +2843,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinoides_tenellus_~dbf12c44",
+   "id": "pangaea5-737130:Globigerinoides_tenellus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2858,7 +2858,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinoides_conglobatus_~95b8c1de",
+   "id": "pangaea5-737130:Globigerinoides_conglobatus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2873,7 +2873,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Neogloboquadrina_pachyderma_sinistral_~7f6f5d14",
+   "id": "pangaea5-737130:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2888,7 +2888,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Neogloboquadrina_pachyderma_dextral_~88280263",
+   "id": "pangaea5-737130:Neogloboquadrina_pachyderma_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2903,7 +2903,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Neogloboquadrina_dutertrei_~55b1ba72",
+   "id": "pangaea5-737130:Neogloboquadrina_dutertrei_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2918,7 +2918,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Neogloboquadrina_pachyderma_dextral_and_dutertrei_intergrade_~2cb0c0c9",
+   "id": "pangaea5-737130:Neogloboquadrina_pachyderma_dextral_and_dutertrei_intergrade_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2933,7 +2933,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globorotalia_scitula_~f79cedb3",
+   "id": "pangaea5-737130:Globorotalia_scitula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2948,7 +2948,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globorotalia_inflata_~764dde3a",
+   "id": "pangaea5-737130:Globorotalia_inflata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2963,7 +2963,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globorotalia_truncatulinoides_sinistral_~42f6fdab",
+   "id": "pangaea5-737130:Globorotalia_truncatulinoides_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2978,7 +2978,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globorotalia_truncatulinoides_dextral_~ba6bddb7",
+   "id": "pangaea5-737130:Globorotalia_truncatulinoides_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -2993,7 +2993,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globorotalia_menardii_~6fcf9289",
+   "id": "pangaea5-737130:Globorotalia_menardii_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -3008,7 +3008,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinella_aequilateralis_~f038ec11",
+   "id": "pangaea5-737130:Globigerinella_aequilateralis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -3023,7 +3023,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Turborotalita_quinqueloba_~6caea581",
+   "id": "pangaea5-737130:Turborotalita_quinqueloba_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -3038,7 +3038,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinita_glutinata_~adbbf2fa",
+   "id": "pangaea5-737130:Globigerinita_glutinata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -3053,7 +3053,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinita_uvula_~98333583",
+   "id": "pangaea5-737130:Globigerinita_uvula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -3068,7 +3068,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737130:Globigerinita_iota_~e2649899",
+   "id": "pangaea5-737130:Globigerinita_iota_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 450,
    "missing": 0,
@@ -3083,7 +3083,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737135:Foraminifera_benthic_18O_PDB~85261129",
+   "id": "pangaea5-737135:Foraminifera_benthic_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 843,
    "missing": 1,
@@ -3098,7 +3098,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737135:Cibicidoides_wuellerstorfi_13C_PDB~2a94650a",
+   "id": "pangaea5-737135:Cibicidoides_wuellerstorfi_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 726,
    "missing": 118,
@@ -3113,7 +3113,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737413:Globigerina_bulloides_18O_PDB~52fc883e",
+   "id": "pangaea5-737413:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 1149,
    "missing": 0,
@@ -3128,7 +3128,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737413:Globigerina_bulloides_13C_PDB~b6bb74f9",
+   "id": "pangaea5-737413:Globigerina_bulloides_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 1148,
    "missing": 1,
@@ -3143,7 +3143,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Neogloboquadrina_pachyderma_dextral_18O_PDB~de02b022",
+   "id": "pangaea5-737419:Neogloboquadrina_pachyderma_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 188,
    "missing": 4,
@@ -3158,7 +3158,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Neogloboquadrina_pachyderma_dextral_13C_PDB~126afacd",
+   "id": "pangaea5-737419:Neogloboquadrina_pachyderma_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 188,
    "missing": 4,
@@ -3173,7 +3173,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Globorotalia_inflata_18O_PDB~c3354c54",
+   "id": "pangaea5-737419:Globorotalia_inflata_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 181,
    "missing": 11,
@@ -3188,7 +3188,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Globorotalia_inflata_13C_PDB~4879fc7d",
+   "id": "pangaea5-737419:Globorotalia_inflata_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 184,
    "missing": 8,
@@ -3203,7 +3203,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Globigerinoides_ruber_18O_PDB~55f25e86",
+   "id": "pangaea5-737419:Globigerinoides_ruber_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 117,
    "missing": 75,
@@ -3218,7 +3218,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Globigerinoides_ruber_13C_PDB~1a14db33",
+   "id": "pangaea5-737419:Globigerinoides_ruber_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 117,
    "missing": 75,
@@ -3233,7 +3233,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Globorotalia_truncatulinoides_dextral_13C_PDB~b33d2cb7",
+   "id": "pangaea5-737419:Globorotalia_truncatulinoides_dextral_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 7,
    "missing": 185,
@@ -3248,7 +3248,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-737419:Globorotalia_truncatulinoides_dextral_18O_PDB~31665d46",
+   "id": "pangaea5-737419:Globorotalia_truncatulinoides_dextral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 7,
    "missing": 185,
@@ -3263,7 +3263,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-738133:Globigerina_bulloides_18O_PDB~c0454e6b",
+   "id": "pangaea5-738133:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 360,
    "missing": 5,
@@ -3278,7 +3278,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-738133:Neogloboquadrina_pachyderma_sinistral_~f598335a",
+   "id": "pangaea5-738133:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 353,
    "missing": 12,
@@ -3293,7 +3293,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-738136:Globigerina_bulloides_18O_PDB~974ba86d",
+   "id": "pangaea5-738136:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 273,
    "missing": 1,
@@ -3308,7 +3308,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-738136:Neogloboquadrina_pachyderma_sinistral_~4be0d2c9",
+   "id": "pangaea5-738136:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 274,
    "missing": 0,
@@ -3323,7 +3323,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-738990:Abies_~4288d963",
+   "id": "pangaea5-738990:Abies_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3338,7 +3338,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Artemisia_~3b411a12",
+   "id": "pangaea5-738990:Artemisia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3353,7 +3353,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Betula_~5eb48174",
+   "id": "pangaea5-738990:Betula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3368,7 +3368,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Chenopodiaceae_~04d79b8d",
+   "id": "pangaea5-738990:Chenopodiaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3383,7 +3383,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Ephedra_~734b0c9b",
+   "id": "pangaea5-738990:Ephedra_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3398,7 +3398,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Ericaceae_~b6eb996e",
+   "id": "pangaea5-738990:Ericaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3413,7 +3413,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Juniperus_~23858111",
+   "id": "pangaea5-738990:Juniperus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3428,7 +3428,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Monolete_spore_s_~38d81c84",
+   "id": "pangaea5-738990:Monolete_spore_s_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3443,7 +3443,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Olea_~3a5c7f24",
+   "id": "pangaea5-738990:Olea_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3458,7 +3458,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Pinus_~33dda4ef",
+   "id": "pangaea5-738990:Pinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3473,7 +3473,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Pistacia_~661b9896",
+   "id": "pangaea5-738990:Pistacia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3488,7 +3488,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Quercus_robur_type_~1b1622c1",
+   "id": "pangaea5-738990:Quercus_robur_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3503,7 +3503,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-738990:Spores_trilete_~3d76d7b9",
+   "id": "pangaea5-738990:Spores_trilete_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -3518,7 +3518,7 @@
    "age_model": "10.1594/PANGAEA.872778"
   },
   {
-   "id": "pangaea5-758353:Calcium_cps~23afd154",
+   "id": "pangaea5-758353:Calcium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 11667,
    "missing": 0,
@@ -3533,7 +3533,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758353:Aluminium_cps~eec33fa5",
+   "id": "pangaea5-758353:Aluminium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 11667,
    "missing": 0,
@@ -3548,7 +3548,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758356:Carbon_inorganic_total_~d95651c2",
+   "id": "pangaea5-758356:Carbon_inorganic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 215,
    "missing": 0,
@@ -3563,7 +3563,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758356:Carbon_organic_total_~836bb120",
+   "id": "pangaea5-758356:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 215,
    "missing": 0,
@@ -3578,7 +3578,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Betula_~dfe714c1",
+   "id": "pangaea5-758357:Betula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3593,7 +3593,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Pinus_~f247dab1",
+   "id": "pangaea5-758357:Pinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3608,7 +3608,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Arboreal_pollen_~61cd53f0",
+   "id": "pangaea5-758357:Arboreal_pollen_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3623,7 +3623,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Non_arboreal_pollen_~29b30605",
+   "id": "pangaea5-758357:Non_arboreal_pollen_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3638,7 +3638,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Poaceae_~f09f1aef",
+   "id": "pangaea5-758357:Poaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3653,7 +3653,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Juniperus_~9571656b",
+   "id": "pangaea5-758357:Juniperus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3668,7 +3668,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Artemisia_~019f8a46",
+   "id": "pangaea5-758357:Artemisia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3683,7 +3683,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758357:Chenopodiaceae_~fef6ac61",
+   "id": "pangaea5-758357:Chenopodiaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3698,7 +3698,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758359:Betula_g~5a1643ac",
+   "id": "pangaea5-758359:Betula_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3713,7 +3713,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758359:Pinus_g~440d046f",
+   "id": "pangaea5-758359:Pinus_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3728,7 +3728,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758359:Juniperus_g~8fbb1ac7",
+   "id": "pangaea5-758359:Juniperus_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3743,7 +3743,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758359:Poaceae_g~a71190c7",
+   "id": "pangaea5-758359:Poaceae_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3758,7 +3758,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758359:Artemisia_g~5d35e1a7",
+   "id": "pangaea5-758359:Artemisia_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3773,7 +3773,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758359:Chenopodiaceae_g~e4ac7f8b",
+   "id": "pangaea5-758359:Chenopodiaceae_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3788,7 +3788,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Pinus_~9b4f8d61",
+   "id": "pangaea5-758497:Pinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3803,7 +3803,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Betula_~06dd1493",
+   "id": "pangaea5-758497:Betula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3818,7 +3818,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Quercus_~2e7c5e5a",
+   "id": "pangaea5-758497:Quercus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3833,7 +3833,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Abies_~759c3b6b",
+   "id": "pangaea5-758497:Abies_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3848,7 +3848,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Juniperus_~de709a30",
+   "id": "pangaea5-758497:Juniperus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3863,7 +3863,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Ephedra_fragilis_type_~28cb769d",
+   "id": "pangaea5-758497:Ephedra_fragilis_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3878,7 +3878,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Ephedra_distachya_type_~d5e6d5c2",
+   "id": "pangaea5-758497:Ephedra_distachya_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3893,7 +3893,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Ericaceae_~a9e65a13",
+   "id": "pangaea5-758497:Ericaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3908,7 +3908,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Poaceae_~c7c671b5",
+   "id": "pangaea5-758497:Poaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3923,7 +3923,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Artemisia_~e1d67863",
+   "id": "pangaea5-758497:Artemisia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3938,7 +3938,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Chenopodiaceae_~d0c03856",
+   "id": "pangaea5-758497:Chenopodiaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3953,7 +3953,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758497:Spores_trilete_~590daaad",
+   "id": "pangaea5-758497:Spores_trilete_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 0,
@@ -3968,7 +3968,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Carbon_organic_total_~dbe85d6e",
+   "id": "pangaea5-758620:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -3983,7 +3983,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Nitrogen_total_~55ff9366",
+   "id": "pangaea5-758620:Nitrogen_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -3998,7 +3998,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Carbon_inorganic_total_~3f36403c",
+   "id": "pangaea5-758620:Carbon_inorganic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4013,7 +4013,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Calcium_carbonate_~b4188fb8",
+   "id": "pangaea5-758620:Calcium_carbonate_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4028,7 +4028,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:15N_air~6383a345",
+   "id": "pangaea5-758620:15N_air",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4043,7 +4043,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Aluminium_~4cd8c456",
+   "id": "pangaea5-758620:Aluminium_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4058,7 +4058,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Iron_~411e41c8",
+   "id": "pangaea5-758620:Iron_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4073,7 +4073,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Manganese_~d6bcdafb",
+   "id": "pangaea5-758620:Manganese_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4088,7 +4088,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Potassium_~75802d80",
+   "id": "pangaea5-758620:Potassium_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4103,7 +4103,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Titanium_~f84f6168",
+   "id": "pangaea5-758620:Titanium_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4118,7 +4118,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Copper_mg_kg~47ed31e0",
+   "id": "pangaea5-758620:Copper_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4133,7 +4133,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Lead_mg_kg~cb59dcc5",
+   "id": "pangaea5-758620:Lead_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4148,7 +4148,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Zinc_mg_kg~ca6be4b6",
+   "id": "pangaea5-758620:Zinc_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4163,7 +4163,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Rubidium_mg_kg~46e80eeb",
+   "id": "pangaea5-758620:Rubidium_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4178,7 +4178,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Zirconium_mg_kg~e94fb511",
+   "id": "pangaea5-758620:Zirconium_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4193,7 +4193,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-758620:Barium_mg_kg~72dc8613",
+   "id": "pangaea5-758620:Barium_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -4238,7 +4238,7 @@
    "age_model": "10.1594/PANGAEA.810294"
   },
   {
-   "id": "pangaea5-759784:Carbon_organic_total_~e4c3703b",
+   "id": "pangaea5-759784:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 538,
    "missing": 0,
@@ -4253,7 +4253,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-759784:Nitrogen_total_~35853d78",
+   "id": "pangaea5-759784:Nitrogen_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 538,
    "missing": 0,
@@ -4268,7 +4268,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-759784:Calcium_carbonate_~d3e0f16c",
+   "id": "pangaea5-759784:Calcium_carbonate_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 517,
    "missing": 21,
@@ -4343,7 +4343,7 @@
    "age_model": "10.1594/PANGAEA.777487"
   },
   {
-   "id": "pangaea5-780234:Aluminium_oxide_~ea831146",
+   "id": "pangaea5-780234:Aluminium_oxide_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 2,
@@ -4358,7 +4358,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Iron_oxide_FeO_~888f1597",
+   "id": "pangaea5-780234:Iron_oxide_FeO_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 2,
@@ -4373,7 +4373,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Manganese_oxide_~0a8a00ae",
+   "id": "pangaea5-780234:Manganese_oxide_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 2,
@@ -4388,7 +4388,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Carbon_organic_total_~4460b309",
+   "id": "pangaea5-780234:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 26,
    "missing": 13,
@@ -4403,7 +4403,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Vanadium_mg_kg~78fd83ff",
+   "id": "pangaea5-780234:Vanadium_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 2,
@@ -4418,7 +4418,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Molybdenum_mg_kg~657d495c",
+   "id": "pangaea5-780234:Molybdenum_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 39,
    "missing": 0,
@@ -4433,7 +4433,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Barium_mg_kg~cfd50925",
+   "id": "pangaea5-780234:Barium_mg_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 24,
    "missing": 15,
@@ -4448,7 +4448,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-780234:Iron_Aluminium_ratio_sin_unidad~ff3078f3",
+   "id": "pangaea5-780234:Iron_Aluminium_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 37,
    "missing": 2,
@@ -4463,7 +4463,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Sea_surface_temperature_August_C~8900c261",
+   "id": "pangaea5-810294:Sea_surface_temperature_August_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 182,
    "missing": 4,
@@ -4478,7 +4478,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Globigerina_bulloides_18O_PDB~3d947c18",
+   "id": "pangaea5-810294:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 104,
    "missing": 82,
@@ -4493,7 +4493,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_18O_PDB~ffa2dc48",
+   "id": "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 104,
    "missing": 82,
@@ -4508,7 +4508,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_~17bf9233",
+   "id": "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 161,
    "missing": 25,
@@ -4523,7 +4523,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Sea_surface_temperature_February_C~e09faba0",
+   "id": "pangaea5-810294:Sea_surface_temperature_February_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 91,
    "missing": 95,
@@ -4538,7 +4538,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Sea_surface_temperature_August_C_col14~7974cf0d",
+   "id": "pangaea5-810294:Sea_surface_temperature_August_C_col14",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 91,
    "missing": 95,
@@ -4643,7 +4643,7 @@
    "age_model": "10.1594/PANGAEA.987450"
   },
   {
-   "id": "pangaea5-857149:Globigerina_bulloides_18O_PDB~10b6ef1d",
+   "id": "pangaea5-857149:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 271,
    "missing": 5,
@@ -4658,7 +4658,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-857149:Neogloboquadrina_pachyderma_sinistral_~e4af969b",
+   "id": "pangaea5-857149:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 265,
    "missing": 11,
@@ -4673,7 +4673,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-857149:Sea_surface_temperature_summer_C~6d9e5958",
+   "id": "pangaea5-857149:Sea_surface_temperature_summer_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 265,
    "missing": 11,
@@ -4688,7 +4688,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-857150:Globigerina_bulloides_18O_PDB~a4b824d7",
+   "id": "pangaea5-857150:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 146,
    "missing": 1,
@@ -4703,7 +4703,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-857150:Neogloboquadrina_pachyderma_sinistral_~30c16d5a",
+   "id": "pangaea5-857150:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 147,
    "missing": 0,
@@ -4718,7 +4718,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-857150:Sea_surface_temperature_summer_C~c1898650",
+   "id": "pangaea5-857150:Sea_surface_temperature_summer_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 147,
    "missing": 0,
@@ -4733,7 +4733,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861972:Lead_210_dpm_g~43c5eb39",
+   "id": "pangaea5-861972:Lead_210_dpm_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 11,
    "missing": 12,
@@ -4748,7 +4748,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861972:Uvigerina_sp_18O_PDB~907d89f2",
+   "id": "pangaea5-861972:Uvigerina_sp_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 23,
    "missing": 0,
@@ -4763,7 +4763,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861972:Globigerinoides_ruber_18O_PDB~516b528f",
+   "id": "pangaea5-861972:Globigerinoides_ruber_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 23,
    "missing": 0,
@@ -4778,7 +4778,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861972:Sea_surface_temperature_annual_mean_C~1d7b1262",
+   "id": "pangaea5-861972:Sea_surface_temperature_annual_mean_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 21,
    "missing": 2,
@@ -4793,7 +4793,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861972:Sea_surface_temperature_annual_mean_C_col10~254cb4fa",
+   "id": "pangaea5-861972:Sea_surface_temperature_annual_mean_C_col10",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 23,
    "missing": 0,
@@ -4808,7 +4808,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861973:Lead_210_dpm_g~639a5768",
+   "id": "pangaea5-861973:Lead_210_dpm_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 13,
@@ -4823,7 +4823,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861973:Globigerinoides_ruber_18O_PDB~30068aeb",
+   "id": "pangaea5-861973:Globigerinoides_ruber_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 24,
    "missing": 1,
@@ -4838,7 +4838,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861973:Sea_surface_temperature_annual_mean_C~856bcc57",
+   "id": "pangaea5-861973:Sea_surface_temperature_annual_mean_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 21,
    "missing": 4,
@@ -4853,7 +4853,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861973:Sea_surface_temperature_annual_mean_C_col9~d03ef75d",
+   "id": "pangaea5-861973:Sea_surface_temperature_annual_mean_C_col9",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -4868,7 +4868,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-863947:Foraminifera_benthic_18O_PDB~147c7aeb",
+   "id": "pangaea5-863947:Foraminifera_benthic_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 370,
    "missing": 0,
@@ -4943,7 +4943,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Betula_~f9cee356",
+   "id": "pangaea5-867316:Betula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -4958,7 +4958,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Cedrus_~d39aa422",
+   "id": "pangaea5-867316:Cedrus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -4973,7 +4973,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Ephedra_distachya_type_~39243698",
+   "id": "pangaea5-867316:Ephedra_distachya_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -4988,7 +4988,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Ephedra_fragilis_type_~938e890a",
+   "id": "pangaea5-867316:Ephedra_fragilis_type_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5003,7 +5003,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Juniperus_~fefb9ac6",
+   "id": "pangaea5-867316:Juniperus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5018,7 +5018,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Pinus_~e2f47f15",
+   "id": "pangaea5-867316:Pinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5033,7 +5033,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Pistacia_~306793d8",
+   "id": "pangaea5-867316:Pistacia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5048,7 +5048,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Arboreal_pollen_~a4d62fdd",
+   "id": "pangaea5-867316:Arboreal_pollen_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5063,7 +5063,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Artemisia_~d4105ce6",
+   "id": "pangaea5-867316:Artemisia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5078,7 +5078,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Chenopodiaceae_~8539ab1a",
+   "id": "pangaea5-867316:Chenopodiaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5093,7 +5093,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Poaceae_~a473d7c0",
+   "id": "pangaea5-867316:Poaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5108,7 +5108,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Non_arboreal_pollen_~81a7c663",
+   "id": "pangaea5-867316:Non_arboreal_pollen_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5123,7 +5123,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Pollen_total_~bdd03a5f",
+   "id": "pangaea5-867316:Pollen_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5138,7 +5138,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-867316:Spores_trilete_~d9aad3bf",
+   "id": "pangaea5-867316:Spores_trilete_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 60,
    "missing": 0,
@@ -5153,7 +5153,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872767:Pollen_temperate_forest_~a54eca66",
+   "id": "pangaea5-872767:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 256,
    "missing": 0,
@@ -5168,7 +5168,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872776:Pollen_temperate_forest_~682c4953",
+   "id": "pangaea5-872776:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 98,
    "missing": 0,
@@ -5183,7 +5183,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872777:Pollen_temperate_forest_~7faa6c93",
+   "id": "pangaea5-872777:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 240,
    "missing": 8,
@@ -5198,7 +5198,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872778:Pollen_temperate_forest_~d1957313",
+   "id": "pangaea5-872778:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 110,
    "missing": 0,
@@ -5213,7 +5213,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872788:Pollen_temperate_forest_~388a8840",
+   "id": "pangaea5-872788:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 121,
    "missing": 1,
@@ -5228,7 +5228,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872791:Pollen_temperate_forest_~c5d204e1",
+   "id": "pangaea5-872791:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 291,
    "missing": 0,
@@ -5243,7 +5243,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872797:Pollen_temperate_forest_~269c9781",
+   "id": "pangaea5-872797:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 505,
    "missing": 0,
@@ -5258,7 +5258,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-872798:Pollen_temperate_forest_~73c036c6",
+   "id": "pangaea5-872798:Pollen_temperate_forest_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 235,
    "missing": 0,
@@ -5273,7 +5273,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-882263:Carbon_organic_total_~8898e555",
+   "id": "pangaea5-882263:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 78,
    "missing": 0,
@@ -5288,7 +5288,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-882263:Calcium_carbonate_~b30e0953",
+   "id": "pangaea5-882263:Calcium_carbonate_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 78,
    "missing": 0,
@@ -5303,7 +5303,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-895657:Globigerina_bulloides_18O_PDB~49b52fd0",
+   "id": "pangaea5-895657:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 315,
    "missing": 0,
@@ -5318,7 +5318,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-895658:Globigerina_bulloides_18O_PDB~061b53f2",
+   "id": "pangaea5-895658:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 111,
    "missing": 0,
@@ -5333,7 +5333,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-895677:Globigerina_bulloides_18O_PDB~14de215f",
+   "id": "pangaea5-895677:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 66,
    "missing": 0,
@@ -5348,7 +5348,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-901746:Sea_surface_temperature_C~dde41ea6",
+   "id": "pangaea5-901746:Sea_surface_temperature_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 221,
    "missing": 0,
@@ -5363,7 +5363,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-903772:Carbon_organic_total_g_g~43fdc561",
+   "id": "pangaea5-903772:Carbon_organic_total_g_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 40,
    "missing": 0,
@@ -5378,7 +5378,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Foraminifera_benthic_g~229637e1",
+   "id": "pangaea5-910794:Foraminifera_benthic_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 44,
    "missing": 0,
@@ -5393,7 +5393,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Foraminifera_benthic_~62fc1064",
+   "id": "pangaea5-910794:Foraminifera_benthic_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 40,
    "missing": 4,
@@ -5408,7 +5408,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Bolivina_dilatata_~a5142599",
+   "id": "pangaea5-910794:Bolivina_dilatata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 44,
    "missing": 0,
@@ -5423,7 +5423,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Bolivina_spathulata_~3b5701c3",
+   "id": "pangaea5-910794:Bolivina_spathulata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 44,
    "missing": 0,
@@ -5438,7 +5438,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Bulimina_marginata_~8a33fa8a",
+   "id": "pangaea5-910794:Bulimina_marginata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 44,
    "missing": 0,
@@ -5453,7 +5453,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Low_oxygen_indicators_~610dede8",
+   "id": "pangaea5-910794:Low_oxygen_indicators_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 44,
    "missing": 0,
@@ -5468,7 +5468,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910794:Gyroidina_spp_~2f03d7a0",
+   "id": "pangaea5-910794:Gyroidina_spp_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 44,
    "missing": 0,
@@ -5483,7 +5483,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910795:Foraminifera_benthic_g~b798a56e",
+   "id": "pangaea5-910795:Foraminifera_benthic_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 93,
    "missing": 0,
@@ -5498,7 +5498,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910795:Foraminifera_benthic_~40221b84",
+   "id": "pangaea5-910795:Foraminifera_benthic_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 89,
    "missing": 4,
@@ -5513,7 +5513,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910795:Low_oxygen_indicators_~3145506e",
+   "id": "pangaea5-910795:Low_oxygen_indicators_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 93,
    "missing": 0,
@@ -5528,7 +5528,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910795:Gyroidina_spp_~974c9bc6",
+   "id": "pangaea5-910795:Gyroidina_spp_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 93,
    "missing": 0,
@@ -5543,7 +5543,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910796:Foraminifera_benthic_g~869025d5",
+   "id": "pangaea5-910796:Foraminifera_benthic_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 80,
    "missing": 0,
@@ -5558,7 +5558,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910796:Foraminifera_benthic_~866051aa",
+   "id": "pangaea5-910796:Foraminifera_benthic_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 80,
    "missing": 0,
@@ -5573,7 +5573,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910796:Low_oxygen_indicators_~28504056",
+   "id": "pangaea5-910796:Low_oxygen_indicators_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 80,
    "missing": 0,
@@ -5588,7 +5588,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910796:Gyroidina_spp_~f734ef32",
+   "id": "pangaea5-910796:Gyroidina_spp_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 80,
    "missing": 0,
@@ -5603,7 +5603,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910798:Cibicidoides_pachyderma_18O_PDB~ea65cd6f",
+   "id": "pangaea5-910798:Cibicidoides_pachyderma_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 82,
    "missing": 8,
@@ -5618,7 +5618,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910798:Cibicidoides_pachyderma_13C_PDB~40dd34db",
+   "id": "pangaea5-910798:Cibicidoides_pachyderma_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 82,
    "missing": 8,
@@ -5633,7 +5633,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910798:Uvigerina_peregrina_18O_PDB~15ff2515",
+   "id": "pangaea5-910798:Uvigerina_peregrina_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 84,
    "missing": 6,
@@ -5648,7 +5648,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910798:Uvigerina_peregrina_13C_PDB~bb82d669",
+   "id": "pangaea5-910798:Uvigerina_peregrina_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 38,
    "missing": 52,
@@ -5663,7 +5663,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910799:Cibicidoides_pachyderma_13C_PDB~a8a42ea4",
+   "id": "pangaea5-910799:Cibicidoides_pachyderma_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 40,
    "missing": 0,
@@ -5678,7 +5678,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910800:Cibicidoides_pachyderma_13C_PDB~46d869d7",
+   "id": "pangaea5-910800:Cibicidoides_pachyderma_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 77,
    "missing": 0,
@@ -5693,7 +5693,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910802:Globigerina_bulloides_18O_PDB~c1043769",
+   "id": "pangaea5-910802:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 67,
    "missing": 0,
@@ -5708,7 +5708,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910802:Globigerina_bulloides_13C_PDB~894fc199",
+   "id": "pangaea5-910802:Globigerina_bulloides_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 67,
    "missing": 0,
@@ -5723,7 +5723,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910806:Carbon_organic_total_~86e3606f",
+   "id": "pangaea5-910806:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 53,
    "missing": 0,
@@ -5738,7 +5738,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910807:Carbon_organic_total_~a8489732",
+   "id": "pangaea5-910807:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -5753,7 +5753,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-910808:Carbon_organic_total_~3fcf06ca",
+   "id": "pangaea5-910808:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 26,
    "missing": 0,
@@ -5768,7 +5768,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-914105:Nitrogen_total_~61175078",
+   "id": "pangaea5-914105:Nitrogen_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 527,
    "missing": 0,
@@ -5783,7 +5783,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-914105:Carbon_organic_total_~36e4ac14",
+   "id": "pangaea5-914105:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 526,
    "missing": 1,
@@ -5813,7 +5813,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-914105:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad~4173ea1d",
+   "id": "pangaea5-914105:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 526,
    "missing": 1,
@@ -5828,7 +5828,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-914401:Globigerina_bulloides_18O_PDB~26e13d75",
+   "id": "pangaea5-914401:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 435,
    "missing": 0,
@@ -5843,7 +5843,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Potassium_ng_g~26db2248",
+   "id": "pangaea5-929110:Potassium_ng_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5858,7 +5858,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Abies_~a899444f",
+   "id": "pangaea5-929110:Abies_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5873,7 +5873,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Pinus_~6937d36a",
+   "id": "pangaea5-929110:Pinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5888,7 +5888,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Betula_~ee1d888d",
+   "id": "pangaea5-929110:Betula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5903,7 +5903,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Carpinus_~f8b50787",
+   "id": "pangaea5-929110:Carpinus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5918,7 +5918,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Quercus_~a9851c3c",
+   "id": "pangaea5-929110:Quercus_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5933,7 +5933,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Artemisia_~3618ffaf",
+   "id": "pangaea5-929110:Artemisia_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 95,
    "missing": 6,
@@ -5948,7 +5948,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-929110:Poaceae_~df38a340",
+   "id": "pangaea5-929110:Poaceae_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 101,
    "missing": 0,
@@ -5963,7 +5963,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-932703:Uvigerina_sp_18O_PDB~736bd5a5",
+   "id": "pangaea5-932703:Uvigerina_sp_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 21,
    "missing": 0,
@@ -5978,7 +5978,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-932720:Manganese_Calcium_ratio_mol_mol~a2e8fe99",
+   "id": "pangaea5-932720:Manganese_Calcium_ratio_mol_mol",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 22,
    "missing": 10,
@@ -5993,7 +5993,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-932720:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka~f1f14488",
+   "id": "pangaea5-932720:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 22,
    "missing": 10,
@@ -6008,7 +6008,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-932737:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka~98628de7",
+   "id": "pangaea5-932737:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
@@ -6023,7 +6023,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-932746:Manganese_Calcium_ratio_mol_mol~4597b761",
+   "id": "pangaea5-932746:Manganese_Calcium_ratio_mol_mol",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 41,
    "missing": 4,
@@ -6038,7 +6038,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-932746:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka~59d180fe",
+   "id": "pangaea5-932746:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 41,
    "missing": 4,
@@ -6068,7 +6068,7 @@
    "age_model": "10.1594/PANGAEA.940816"
   },
   {
-   "id": "pangaea5-940835:Carbon_organic_total_~3e699e33",
+   "id": "pangaea5-940835:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 43,
    "missing": 0,
@@ -6083,7 +6083,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-940835:Carbon_inorganic_total_~c938ee85",
+   "id": "pangaea5-940835:Carbon_inorganic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 43,
    "missing": 0,
@@ -6098,7 +6098,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-940835:Calcium_carbonate_~8e81abfc",
+   "id": "pangaea5-940835:Calcium_carbonate_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 43,
    "missing": 0,
@@ -6263,7 +6263,7 @@
    "age_model": "10.1594/PANGAEA.940872"
   },
   {
-   "id": "pangaea5-944303:Globigerina_bulloides_18O_PDB~4b20b58f",
+   "id": "pangaea5-944303:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 99,
    "missing": 0,
@@ -6278,7 +6278,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944304:Globigerinoides_ruber_18O_PDB~ec791c09",
+   "id": "pangaea5-944304:Globigerinoides_ruber_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 40,
    "missing": 0,
@@ -6293,7 +6293,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globigerina_bulloides_~1afc3bec",
+   "id": "pangaea5-944305:Globigerina_bulloides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6308,7 +6308,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globigerinita_glutinata_~05fcb5b9",
+   "id": "pangaea5-944305:Globigerinita_glutinata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6323,7 +6323,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globigerinoides_ruber_white_~e1859018",
+   "id": "pangaea5-944305:Globigerinoides_ruber_white_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6338,7 +6338,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globigerinoides_ruber_pink_~4eb9af57",
+   "id": "pangaea5-944305:Globigerinoides_ruber_pink_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6353,7 +6353,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globigerinoides_sacculifer_~b0fc0dc4",
+   "id": "pangaea5-944305:Globigerinoides_sacculifer_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6368,7 +6368,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globorotalia_inflata_~55013759",
+   "id": "pangaea5-944305:Globorotalia_inflata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6383,7 +6383,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globorotalia_scitula_dextral_~749c3c81",
+   "id": "pangaea5-944305:Globorotalia_scitula_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6398,7 +6398,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globorotalia_truncatulinoides_sinistral_~479b8204",
+   "id": "pangaea5-944305:Globorotalia_truncatulinoides_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6413,7 +6413,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Globorotalia_truncatulinoides_dextral_~1c9a4552",
+   "id": "pangaea5-944305:Globorotalia_truncatulinoides_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6428,7 +6428,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Neogloboquadrina_incompta_dextral_~453c93c3",
+   "id": "pangaea5-944305:Neogloboquadrina_incompta_dextral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6443,7 +6443,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Neogloboquadrina_pachyderma_sinistral_~02b1bb4f",
+   "id": "pangaea5-944305:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6458,7 +6458,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Neogloboquadrina_dutertrei_~21aff21e",
+   "id": "pangaea5-944305:Neogloboquadrina_dutertrei_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6473,7 +6473,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-944305:Orbulina_universa_~642c1369",
+   "id": "pangaea5-944305:Orbulina_universa_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 70,
    "missing": 0,
@@ -6488,7 +6488,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949594:Bulimina_marginata_g~1c433cf2",
+   "id": "pangaea5-949594:Bulimina_marginata_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 16,
    "missing": 0,
@@ -6503,7 +6503,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949594:Uvigerina_spp_g~f1f372be",
+   "id": "pangaea5-949594:Uvigerina_spp_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 16,
    "missing": 0,
@@ -6518,7 +6518,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949594:Size_fraction_0_063_mm_sand_g~1912adb6",
+   "id": "pangaea5-949594:Size_fraction_0_063_mm_sand_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 16,
    "missing": 0,
@@ -6533,7 +6533,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949594:Foraminifera_benthic_extinction_group_g~161571cc",
+   "id": "pangaea5-949594:Foraminifera_benthic_extinction_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 16,
    "missing": 0,
@@ -6548,7 +6548,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949594:Foraminifera_benthic_survivor_group_g~33c90f0b",
+   "id": "pangaea5-949594:Foraminifera_benthic_survivor_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 16,
    "missing": 0,
@@ -6563,7 +6563,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949594:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka~c43b4eeb",
+   "id": "pangaea5-949594:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 16,
    "missing": 0,
@@ -6578,7 +6578,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_g~b671584e",
+   "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 24,
    "missing": 1,
@@ -6608,7 +6608,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_~fb2bff1c",
+   "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6623,7 +6623,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Foraminifera_benthic_extinction_group_g~76988681",
+   "id": "pangaea5-949638:Foraminifera_benthic_extinction_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6638,7 +6638,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Foraminifera_benthic_extinction_group_~0995ea14",
+   "id": "pangaea5-949638:Foraminifera_benthic_extinction_group_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6653,7 +6653,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Foraminifera_benthic_survivor_group_g~df233b06",
+   "id": "pangaea5-949638:Foraminifera_benthic_survivor_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6668,7 +6668,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Foraminifera_benthic_survivor_group_~cbb6158c",
+   "id": "pangaea5-949638:Foraminifera_benthic_survivor_group_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6683,7 +6683,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka~821484ca",
+   "id": "pangaea5-949638:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6698,7 +6698,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949639:Foraminifera_benthic_extinction_group_g~81985e84",
+   "id": "pangaea5-949639:Foraminifera_benthic_extinction_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 0,
@@ -6713,7 +6713,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949639:Size_fraction_0_063_mm_sand_g~b338f3b2",
+   "id": "pangaea5-949639:Size_fraction_0_063_mm_sand_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 0,
@@ -6743,7 +6743,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949639:Foraminifera_benthic_survivor_group_g~f30aa976",
+   "id": "pangaea5-949639:Foraminifera_benthic_survivor_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 0,
@@ -6758,7 +6758,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949639:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka~46b567ed",
+   "id": "pangaea5-949639:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 0,
@@ -6773,7 +6773,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949639:Foraminifera_benthic_g~bb92c8c5",
+   "id": "pangaea5-949639:Foraminifera_benthic_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 0,
@@ -6788,7 +6788,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949641:Size_fraction_0_063_mm_sand_g~d2c9890b",
+   "id": "pangaea5-949641:Size_fraction_0_063_mm_sand_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 0,
@@ -6803,7 +6803,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949641:Size_fraction_0_063_mm_sand_~98886cb0",
+   "id": "pangaea5-949641:Size_fraction_0_063_mm_sand_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 0,
@@ -6818,7 +6818,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949641:Foraminifera_benthic_extinction_group_g~ba3733fb",
+   "id": "pangaea5-949641:Foraminifera_benthic_extinction_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 0,
@@ -6833,7 +6833,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949641:Foraminifera_benthic_survivor_group_g~9da8e313",
+   "id": "pangaea5-949641:Foraminifera_benthic_survivor_group_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 0,
@@ -6848,7 +6848,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949641:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka~6f8f0974",
+   "id": "pangaea5-949641:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 0,
@@ -6863,7 +6863,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949641:Foraminifera_benthic_g~d9639953",
+   "id": "pangaea5-949641:Foraminifera_benthic_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 0,
@@ -6878,7 +6878,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-954411:Chlorine_Carbon_organic_total_ratio_sin_unidad~95698fca",
+   "id": "pangaea5-954411:Chlorine_Carbon_organic_total_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 170,
    "missing": 0,
@@ -6893,7 +6893,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-954411:Titanium_Calcium_ratio_sin_unidad~5acf6de9",
+   "id": "pangaea5-954411:Titanium_Calcium_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 170,
    "missing": 0,
@@ -6908,7 +6908,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-955015:Alkenone_unsaturation_index_UK_37_sin_unidad~c37efaa8",
+   "id": "pangaea5-955015:Alkenone_unsaturation_index_UK_37_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 21,
    "missing": 26,
@@ -6923,7 +6923,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-955015:Sea_surface_temperature_annual_mean_C~c0d3d412",
+   "id": "pangaea5-955015:Sea_surface_temperature_annual_mean_C",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 21,
    "missing": 26,
@@ -6938,7 +6938,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Globigerina_bulloides_13C_PDB~0cec8a49",
+   "id": "pangaea5-966663:Globigerina_bulloides_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
@@ -6953,7 +6953,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Globigerina_bulloides_13C_PDB_col5~40e83d65",
+   "id": "pangaea5-966663:Globigerina_bulloides_13C_PDB_col5",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -6968,7 +6968,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Globigerina_bulloides_18O_PDB~cd71afe8",
+   "id": "pangaea5-966663:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
@@ -6983,7 +6983,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Globigerina_bulloides_18O_PDB_col7~ae18fd13",
+   "id": "pangaea5-966663:Globigerina_bulloides_18O_PDB_col7",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -6998,7 +6998,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB~931a1320",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
@@ -7013,7 +7013,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB_col9~8710e0f6",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB_col9",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -7028,7 +7028,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB~605ea45f",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
@@ -7043,7 +7043,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col11~06d17ef4",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col11",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -7058,7 +7058,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col12~400bb1ca",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col12",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
@@ -7073,7 +7073,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966840:Neogloboquadrina_pachyderma_sinistral_~637151f3",
+   "id": "pangaea5-966840:Neogloboquadrina_pachyderma_sinistral_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 27,
    "missing": 0,
@@ -7088,7 +7088,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966840:Globorotalia_scitula_~87e5fcf9",
+   "id": "pangaea5-966840:Globorotalia_scitula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 27,
    "missing": 0,
@@ -7103,7 +7103,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966842:Iron_Aluminium_ratio_sin_unidad~80fbcb09",
+   "id": "pangaea5-966842:Iron_Aluminium_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 212,
    "missing": 0,
@@ -7118,7 +7118,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966996:Lead_210_Bq_kg~da0eb783",
+   "id": "pangaea5-966996:Lead_210_Bq_kg",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 30,
    "missing": 26,
@@ -7133,7 +7133,7 @@
    "age_model": "10.1594/PANGAEA.966997"
   },
   {
-   "id": "pangaea5-966998:Nitrogen_total_~5fd934e1",
+   "id": "pangaea5-966998:Nitrogen_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 56,
    "missing": 0,
@@ -7148,7 +7148,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966998:Carbon_organic_total_~91042045",
+   "id": "pangaea5-966998:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 56,
    "missing": 0,
@@ -7178,7 +7178,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966998:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad~341048e0",
+   "id": "pangaea5-966998:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 56,
    "missing": 0,
@@ -7193,7 +7193,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966998:13C_total_organic_carbon_PDB~c1a743ee",
+   "id": "pangaea5-966998:13C_total_organic_carbon_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 56,
    "missing": 0,
@@ -7208,7 +7208,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966998:15N_air~43ce63d0",
+   "id": "pangaea5-966998:15N_air",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 56,
    "missing": 0,
@@ -8948,7 +8948,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Size_fraction_0_063_mm_sand_g~6b4d930b",
+   "id": "pangaea5-987449:Size_fraction_0_063_mm_sand_g",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 550,
    "missing": 7,
@@ -8963,7 +8963,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Size_fraction_0_063_mm_sand_~2ed82b01",
+   "id": "pangaea5-987449:Size_fraction_0_063_mm_sand_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 550,
    "missing": 7,
@@ -8978,7 +8978,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Planulina_ariminensis_18O_PDB~a9759dc4",
+   "id": "pangaea5-987449:Planulina_ariminensis_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 181,
    "missing": 376,
@@ -8993,7 +8993,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Cibicides_pachyderma_18O_PDB~4521c1bb",
+   "id": "pangaea5-987449:Cibicides_pachyderma_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 303,
    "missing": 254,
@@ -9008,7 +9008,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Cibicides_sp_18O_PDB~fc4479a4",
+   "id": "pangaea5-987449:Cibicides_sp_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 543,
@@ -9023,7 +9023,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Uvigerina_sp_18O_PDB~16d87922",
+   "id": "pangaea5-987449:Uvigerina_sp_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 6,
    "missing": 551,
@@ -9038,7 +9038,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Planulina_ariminensis_13C_PDB~ff510d85",
+   "id": "pangaea5-987449:Planulina_ariminensis_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 181,
    "missing": 376,
@@ -9053,7 +9053,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Cibicides_pachyderma_13C_PDB~eafa46fc",
+   "id": "pangaea5-987449:Cibicides_pachyderma_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 305,
    "missing": 252,
@@ -9068,7 +9068,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Cibicides_sp_13C_PDB~4ef07c74",
+   "id": "pangaea5-987449:Cibicides_sp_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 14,
    "missing": 543,
@@ -9083,7 +9083,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Uvigerina_sp_13C_PDB~955910e6",
+   "id": "pangaea5-987449:Uvigerina_sp_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 6,
    "missing": 551,
@@ -9098,7 +9098,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Foraminifera_benthic_18O_PDB~e0c1caa4",
+   "id": "pangaea5-987449:Foraminifera_benthic_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 504,
    "missing": 53,
@@ -9113,7 +9113,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-987449:Foraminifera_benthic_13C_PDB~31c2bf8a",
+   "id": "pangaea5-987449:Foraminifera_benthic_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 498,
    "missing": 59,
@@ -9128,7 +9128,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globigerinoides_ruber_~e2c20f80",
+   "id": "pangaea5-988002:Globigerinoides_ruber_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9143,7 +9143,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globigerina_bulloides_~2d61963f",
+   "id": "pangaea5-988002:Globigerina_bulloides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9158,7 +9158,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globorotalia_inflata_~594101bd",
+   "id": "pangaea5-988002:Globorotalia_inflata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9173,7 +9173,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globorotalia_truncatulinoides_~ec1a6e8f",
+   "id": "pangaea5-988002:Globorotalia_truncatulinoides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9188,7 +9188,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Orbulina_universa_~3e7232fa",
+   "id": "pangaea5-988002:Orbulina_universa_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9203,7 +9203,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globigerinoides_ruber_pink_~ee4466e0",
+   "id": "pangaea5-988002:Globigerinoides_ruber_pink_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9218,7 +9218,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globigerinita_glutinata_~707555cb",
+   "id": "pangaea5-988002:Globigerinita_glutinata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9233,7 +9233,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globigerina_falconensis_~a1d03ce2",
+   "id": "pangaea5-988002:Globigerina_falconensis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9248,7 +9248,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Neogloboquadrina_incompta_~10906d0b",
+   "id": "pangaea5-988002:Neogloboquadrina_incompta_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9263,7 +9263,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Neogloboquadrina_dutertrei_~85c494c5",
+   "id": "pangaea5-988002:Neogloboquadrina_dutertrei_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9278,7 +9278,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globigerinita_uvula_~1b0d02bf",
+   "id": "pangaea5-988002:Globigerinita_uvula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9293,7 +9293,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Beella_digitata_~f10e004e",
+   "id": "pangaea5-988002:Beella_digitata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9308,7 +9308,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Turborotalita_quinqueloba_~7bfaf4f6",
+   "id": "pangaea5-988002:Turborotalita_quinqueloba_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9323,7 +9323,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globorotalia_hirsuta_~5591b9a6",
+   "id": "pangaea5-988002:Globorotalia_hirsuta_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9338,7 +9338,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988002:Globorotalia_scitula_~6c170824",
+   "id": "pangaea5-988002:Globorotalia_scitula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 33,
    "missing": 0,
@@ -9353,7 +9353,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globigerinoides_ruber_~0e97349e",
+   "id": "pangaea5-988003:Globigerinoides_ruber_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9368,7 +9368,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globigerina_bulloides_~f6aadb21",
+   "id": "pangaea5-988003:Globigerina_bulloides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9383,7 +9383,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globorotalia_inflata_~ad3a26b6",
+   "id": "pangaea5-988003:Globorotalia_inflata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9398,7 +9398,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globorotalia_truncatulinoides_~083f7b1c",
+   "id": "pangaea5-988003:Globorotalia_truncatulinoides_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9413,7 +9413,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Orbulina_universa_~6cd171cc",
+   "id": "pangaea5-988003:Orbulina_universa_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9428,7 +9428,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globigerinoides_ruber_pink_~bbbef75c",
+   "id": "pangaea5-988003:Globigerinoides_ruber_pink_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9443,7 +9443,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globigerinita_glutinata_~a2ae2bff",
+   "id": "pangaea5-988003:Globigerinita_glutinata_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9458,7 +9458,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Neogloboquadrina_incompta_~596ea4f9",
+   "id": "pangaea5-988003:Neogloboquadrina_incompta_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9473,7 +9473,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Neogloboquadrina_dutertrei_~a21cd962",
+   "id": "pangaea5-988003:Neogloboquadrina_dutertrei_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9488,7 +9488,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Turborotalita_quinqueloba_~d673a277",
+   "id": "pangaea5-988003:Turborotalita_quinqueloba_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9503,7 +9503,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globigerina_falconensis_~bee6ace7",
+   "id": "pangaea5-988003:Globigerina_falconensis_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9518,7 +9518,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-988003:Globigerinita_uvula_~241c6fff",
+   "id": "pangaea5-988003:Globigerinita_uvula_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 47,
    "missing": 0,
@@ -9533,7 +9533,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-991018:Strontium_87_Strontium_86_ratio_sin_unidad~35abc24f",
+   "id": "pangaea5-991018:Strontium_87_Strontium_86_ratio_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 10,
    "missing": 0,
@@ -9548,7 +9548,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-991019:Globigerina_bulloides_18O_PDB~4587ce9d",
+   "id": "pangaea5-991019:Globigerina_bulloides_18O_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 88,
    "missing": 0,
@@ -9563,7 +9563,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-991019:Globigerina_bulloides_13C_PDB~ba28e1bf",
+   "id": "pangaea5-991019:Globigerina_bulloides_13C_PDB",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 88,
    "missing": 0,
@@ -9578,7 +9578,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Carbon_organic_total_~a2456873",
+   "id": "pangaea5-992690:Carbon_organic_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 93,
    "missing": 586,
@@ -9593,7 +9593,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Nitrogen_total_~631931db",
+   "id": "pangaea5-992690:Nitrogen_total_",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 93,
    "missing": 586,
@@ -9608,7 +9608,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Aluminium_cps~eb8169fb",
+   "id": "pangaea5-992690:Aluminium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9623,7 +9623,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Potassium_cps~7839352a",
+   "id": "pangaea5-992690:Potassium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9638,7 +9638,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Titanium_cps~f24abedb",
+   "id": "pangaea5-992690:Titanium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9653,7 +9653,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Rubidium_cps~466af911",
+   "id": "pangaea5-992690:Rubidium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9668,7 +9668,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Zirconium_cps~fc1f9bd8",
+   "id": "pangaea5-992690:Zirconium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9683,7 +9683,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Iron_cps~aab3b8b3",
+   "id": "pangaea5-992690:Iron_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9698,7 +9698,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Calcium_cps~3f45b0b8",
+   "id": "pangaea5-992690:Calcium_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9713,7 +9713,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Bromine_cps~3447463d",
+   "id": "pangaea5-992690:Bromine_cps",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9728,7 +9728,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Color_L_lightness_sin_unidad~c0ec3651",
+   "id": "pangaea5-992690:Color_L_lightness_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9743,7 +9743,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Color_a_sin_unidad~f5344fa8",
+   "id": "pangaea5-992690:Color_a_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
@@ -9758,7 +9758,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-992690:Color_b_sin_unidad~cdf42480",
+   "id": "pangaea5-992690:Color_b_sin_unidad",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 679,
    "missing": 0,
