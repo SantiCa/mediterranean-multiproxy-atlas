@@ -517,7 +517,7 @@ def curate():
                 group += '_dataset_' + i  # cuentas/razones de escáner: instrumento y laboratorio específicos
             label = c['parameter'] + ' · ' + ev['label']
             sid = f'pangaea5-{i}:{proxy}'
-            if any(x['id'] == sid for x in series + quarantined):
+            if any(x['id'].split('~')[0] == sid for x in series + quarantined):
                 sid += f'_col{k}'  # cabeceras nativas repetidas: identidad por posición
             # D1 es append-only por id: si cambia el contenido de una serie (edades de un modelo,
             # muestras fuera de rango) debe cambiar su id, o la release nueva nunca cuadraría.
