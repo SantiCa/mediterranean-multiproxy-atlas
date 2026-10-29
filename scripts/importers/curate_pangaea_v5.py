@@ -246,6 +246,7 @@ def slug(s):
 
 
 AGGREGATED = re.compile(r'sea surface temp|δ18O|δ13C|18O|13C|carbon, organic, total|calcium carbonate|CaCO3', re.I)
+PUBLISHED = json.loads((ROOT / 'reports/pangaea_v5_published_ids.json').read_text(encoding='utf-8'))['series'] if (ROOT / 'reports/pangaea_v5_published_ids.json').exists() else {}
 MIN_EVENTS = 3  # petición 29-10-2026 (19:02): priorizar proxies con muchos registros (mapas)
 
 
@@ -521,7 +522,10 @@ def curate():
                 sid += f'_col{k}'  # cabeceras nativas repetidas: identidad por posición
             # D1 es append-only por id: si cambia el contenido de una serie (edades de un modelo,
             # muestras fuera de rango) debe cambiar su id, o la release nueva nunca cuadraría.
-            sid += '~' + sha(json.dumps(out, separators=(',', ':')).encode())[:8]
+            digest = sha(json.dumps(out, separators=(',', ':')).encode())[:8]
+            # Ya publicada en D1 sin hash y con el mismo contenido: se conserva el id.
+            if PUBLISHED.get(sid) != digest:
+                sid += '~' + digest
             s = dict(id=sid, record_id=rid, proxy=proxy, variable_id=proxy, label=label, unit=c['unit'],
                      family=FAMILY_LABEL[BROAD.get(fam0, 'geo')], method=c['method'] or 'no declarado en metadatos PANGAEA', compatibility_group=group,
                      evidence_type='as_archived_parameter', taxon=None, source_column=c['header'], source_column_index=k,
