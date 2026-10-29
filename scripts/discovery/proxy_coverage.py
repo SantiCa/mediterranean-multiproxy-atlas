@@ -43,6 +43,9 @@ FAMILIES = {
     'toc': ('Carbono orgánico (TOC/Corg)', lambda p: re.search(r'Carbon, organic|organic carbon|\bTOC\b|C org\b|Corg', p, re.I)),
     'mo_otros': ('Materia orgánica: N total, C/N, δ13Corg, Rock-Eval, biomarcadores totales', lambda p: re.search(r'Nitrogen, total|\bC/N\b|C org/N|δ13C, organic|δ13C org|Hydrogen index|Oxygen index, Rock|Rock-Eval|Kerogen|Alkenones, total|n-Alkanes, total|Chlorin|Porphyrin', p, re.I)),
     'bioturbacion': ('Bioturbación / icnología / laminación', lambda p: re.search(r'Bioturb|Ichno|Burrow|trace fossil|Zoophycos|Chondrites|Planolites|Thalassinoides|Skolithos|Mottl|Lamina', p, re.I)),
+    # Litología: variable categórica (descripciones/facies), no numérica. Base de futuros mapas
+    # litológicos por edad (petición 29-10-2026): requiere columna AGE o modelo de edad del sondeo.
+    'litologia': ('Litología / facies / descripción sedimentaria (categórica)', lambda p: re.search(r'Lithology|Facies|Sediment type|Sedimentary structure|Color description|Colour description|Description\b|Composition', p, re.I)),
     'sst': ('Temperatura (SST/subsuperficial: UK′37, Mg/Ca, TEX86, MAT)', lambda p: re.search(r'Sea surface temperature|\bSST\b|U\[?K\]?.?37|UK.37|alkenone unsaturation|TEX86|Temperature, water', p, re.I)),
     'caco3': ('Carbonato (CaCO3)', lambda p: re.search(r'Calcium carbonate|CaCO3|Carbonate, total|Carbon, inorganic', p, re.I)),
     'detritico_xrf': ('Detrítico/elementos (Ti, Zr, K, Al, Rb, Fe y razones)', lambda p: re.search(r'\b(Titanium|Zirconium|Potassium|Aluminium|Aluminum|Rubidium|Iron)\b|\b(Ti|Zr|K|Rb|Fe)/(Al|Ca|Ti|Rb)\b', p)),
