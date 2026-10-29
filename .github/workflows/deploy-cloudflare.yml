@@ -32,6 +32,7 @@ jobs:
     steps:
       - name: Check secrets
         id: gate
+        working-directory: .
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
             echo "::notice::Cloudflare secrets not configured; skipping deploy."
