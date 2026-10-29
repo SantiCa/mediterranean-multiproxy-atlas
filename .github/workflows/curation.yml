@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
           git add reports/proxy_coverage_pangaea.json docs/curation/proxy_coverage_pangaea.md
-          git diff --cached --quiet || { git commit -m "Coverage: PANGAEA proxy coverage report (CI)"; git pull --rebase origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }
+          git diff --cached --quiet || { git commit -m "Coverage: PANGAEA proxy coverage report (CI)"; git pull --rebase -X theirs origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }
   reproduce-v4:
     if: contains(github.event.head_commit.message, '[v4]') || (github.event_name == 'workflow_dispatch' && inputs.job != 'coverage')
     runs-on: ubuntu-latest
@@ -56,9 +56,10 @@ jobs:
           mkdir -p ci-logs; set -o pipefail
           step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
           step pangaea python scripts/importers/curate_pangaea_v4.py --download
-          step noaa python scripts/importers/curate_noaa_v4.py --fetch
+          step noaa python scripts/importers/curate_noaa_v4.py --fetch --refresh-metadata
           step build python scripts/build_quantitative_v4.py
           step diff git diff --stat --exit-code data/processed/atlas-v4.json
+          step reports git diff --stat reports/ && step refresh cat reports/noaa_v4_metadata_refresh.json
           step tests python -m unittest discover -s tests
       - uses: actions/upload-artifact@v4
         if: always()

@@ -24,17 +24,30 @@ def sha(raw):
     """Fingerprint source bytes or deterministic numeric vectors."""
     return hashlib.sha256(raw).hexdigest()
 
+REFRESHED=[]  # metadatos JSON aceptados con --refresh-metadata: [{filename, contract_sha256, new_sha256}]
+REFRESH_METADATA=False
+
 def native(resource,fetch=False):
-    """Read immutable cached bytes, optionally fetching only an absent resource."""
+    """Read immutable cached bytes, optionally fetching only an absent resource.
+
+    Las tablas de datos (.txt) exigen siempre el hash del contrato. Solo con --refresh-metadata,
+    las respuestas JSON de API (búsqueda NOAA, Crossref, BioC), que cambian sin cambiar las
+    mediciones, pueden aceptarse con hash nuevo; quedan listadas en REFRESHED y el flujo CI exige
+    después que la release reconstruida sea idéntica a la comprometida.
+    """
     path=CACHE/resource['filename']
+    tolerant=REFRESH_METADATA and resource['filename'].endswith('.json')
     if not path.exists() and fetch:
         with urlopen(Request(resource['url'],headers={'User-Agent':'MediterraneanMultiproxyAtlas/0.4'}),timeout=45) as response:
             raw=response.read(8_000_001)
         if len(raw)>8_000_000:raise ValueError('Bounded resource size exceeded')
-        if sha(raw)!=resource['sha256']:raise ValueError('Upstream bytes changed: '+resource['filename'])
+        if sha(raw)!=resource['sha256'] and not tolerant:raise ValueError('Upstream bytes changed: '+resource['filename'])
         path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw)
     raw=path.read_bytes()
-    if sha(raw)!=resource['sha256']:raise ValueError('Native hash mismatch: '+resource['filename'])
+    if sha(raw)!=resource['sha256']:
+        if not tolerant:raise ValueError('Native hash mismatch: '+resource['filename'])
+        if not any(x['filename']==resource['filename'] for x in REFRESHED):
+            REFRESHED.append(dict(filename=resource['filename'],url=resource['url'],contract_sha256=resource['sha256'],new_sha256=sha(raw)))
     return raw
 
 def number(cell):
@@ -216,7 +229,9 @@ def curate(fetch=False):
     return output
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--fetch',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--fetch',action='store_true');p.add_argument('--refresh-metadata',action='store_true',help='Aceptar JSON de API con hash nuevo (registrado en REFRESHED)');a=p.parse_args()
+    if getattr(a,'refresh_metadata',False):
+        REFRESH_METADATA=True
     result=curate(a.fetch);OUTPUT.parent.mkdir(parents=True,exist_ok=True)
     OUTPUT.write_text(json.dumps(result,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf8')
     report={k:v for k,v in result.items() if k not in ('records','series','quarantined_series')}
@@ -224,4 +239,5 @@ if __name__=='__main__':
                               quarantined_series=len(result['quarantined_series']),quarantined_values=sum(len(s['rows']) for s in result['quarantined_series'])),
                   quarantine=[{k:s[k] for k in ('id','quarantine_reason','negative_value_cells')}|{'values':len(s['rows'])} for s in result['quarantined_series']])
     AUDIT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    print(json.dumps(report['counts']))
+    if REFRESHED:(ROOT/'reports/noaa_v4_metadata_refresh.json').write_text(json.dumps(REFRESHED,indent=2)+'\n',encoding='utf8')
+    print(json.dumps(report['counts']),'refreshed_metadata',len(REFRESHED))
