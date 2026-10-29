@@ -6,7 +6,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 - Fecha: 29-10-2026
 - Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
 - Estado: web sirve v5 validada celda a celda (V20: API dentro del límite de CPU Free). V22: lote con modelos de edad del mismo evento (+91 series interpolated_from_age_model) fusionado; release v5-c58d9be4128 se carga en D1 (puede tardar un día). Antes: PUBLICAR-V5 hecho (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
-- Hecho: V19 trocea metadatos <90 KB por sentencia (D1 rechazó el registro de release en V18; observaciones v4+v5 ya cargadas). Validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
+- Hecho: V27 respaldo estático (`public/snapshot/`, generado en el build) cuando D1 no responde. V26 reduce lecturas D1 (recuentos solo de series pendientes por índice; validación completa solo al completar una release). V19 trocea metadatos <90 KB por sentencia (D1 rechazó el registro de release en V18; observaciones v4+v5 ya cargadas). Validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
@@ -16,6 +16,8 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 3. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`: el orden ya prioriza parámetros con más sondeos fechados; columnas con < 3 sondeos se difieren (reversible) salvo las de agrupaciones (SST, δ18O/δ13C, TOC, CaCO3). Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
+
+- 29-10 (22:02) HECHO (V27, docs/handoffs/respaldo-estatico.md): la web cae cuando se agota el límite diario de D1 (API 5xx, «Conectando con el catálogo…»). Respaldo: instantánea estática de la última semilla (catálogo + observaciones por grupo) en `public/snapshot/`, generada en el build; el cliente la usa si la API falla, con aviso.
 
 - 29-10 (19:02) (1)–(3) HECHOS en V23; (4) V24: curado por cobertura (docs/handoffs/claude-curado.md). Petición: (1) subir datos propios en cuenta privada con identificación, coherentes con la base; (2) búsqueda de proxies ordenable por nº de registros y nº de datos; (3) opción de agrupar en el mapa proxies que miden lo mismo (p. ej. SST); (4) seguir curando priorizando proxies con muchos registros (mapas espaciales), evitando proliferación de proxies distintos.
 
