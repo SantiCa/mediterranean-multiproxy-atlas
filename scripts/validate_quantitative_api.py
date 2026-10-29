@@ -11,11 +11,15 @@ from urllib.request import Request,urlopen
 from urllib.parse import urlencode,urlsplit
 ROOT=Path(__file__).resolve().parents[1]
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--url',default='http://127.0.0.1:5173');p.add_argument('--site-service-access',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--url',default='http://127.0.0.1:5173');p.add_argument('--site-service-access',action='store_true');p.add_argument('--public-https',action='store_true',help='Self-hosted public Cloudflare URL (no credentials sent)');a=p.parse_args()
     headers={'Content-Type':'application/json'}
     if a.site_service_access:
         if a.url!='https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site':raise ValueError('Unexpected Site destination')
         headers['OAI-Sites-Authorization']='Bearer '+getpass.getpass('Sites service token (hidden): ')
+    elif a.public_https:
+        # Public self-hosted deployment: HTTPS only, *.workers.dev, never sends a credential.
+        u=urlsplit(a.url)
+        if u.scheme!='https' or not (u.hostname or '').endswith('.workers.dev'):raise ValueError('--public-https expects an https://*.workers.dev URL')
     elif urlsplit(a.url).hostname not in ('localhost','127.0.0.1'):raise ValueError('Nonlocal API requires explicit Site service access')
     def call(path,body=None):
         request=Request(a.url+path,data=json.dumps(body).encode() if body is not None else None,headers=headers)
@@ -55,7 +59,7 @@ def main():
     link=call('/api/inventory?view=detail&id=noaa%3A28070%3A58190')
     assert link['curated_record_id']=='noaa-28070-58190'
     report={'version':seed['version'],'bootstrap_requests':requests,'records':len(catalog['records']),'series':series_count,'values_compared_cell_by_cell':checked,'groups':len(groups),'largest_group_values':max_payload_group,'metadata_has_no_observations':True,'combined_filter_checked':True,'exact_inventory_link_checked':True}
-    report['destination']='owner-private production' if a.site_service_access else 'local'
+    report['destination']='owner-private production' if a.site_service_access else ('public cloudflare '+a.url if a.public_https else 'local')
     report_name='quantitative_v3_production_check.json' if a.site_service_access else 'quantitative_v3_api_check.json'
     (ROOT/'reports'/report_name).write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
     print(json.dumps(report))

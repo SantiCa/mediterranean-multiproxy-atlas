@@ -180,6 +180,7 @@ jobs:
         env:
           URL: ${{ steps.deploy.outputs.url }}
         run: |
-          out="$(python scripts/validate_quantitative_api.py --url "$URL" | tail -1)"
-          echo "$out"
+          set -o pipefail
+          python scripts/validate_quantitative_api.py --url "$URL" --public-https | tee validate.log
+          out="$(tail -1 validate.log)"
           echo "::notice title=Validación::$out"
