@@ -18,6 +18,7 @@ import {
   Compass,
   Database,
   ExternalLink,
+  Lock,
 } from "lucide-react";
 import {
   summarize,
@@ -33,7 +34,8 @@ import TimeWindow from "../components/TimeWindow";
 import SeriesComparison from "../components/SeriesComparison";
 import { timeExtent } from "../lib/timeline.mjs";
 import ProxyPicker from "../components/ProxyPicker";
-import { groupKey, proxyGroups } from "../lib/proxies.mjs";
+import { groupKey, proxyCatalog as proxyGroups, isAggregateKey, inGroup } from "../lib/proxies.mjs";
+import PrivateData from "../components/PrivateData";
 import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
 import { scientificNumber } from "../lib/format.mjs";
 
@@ -128,6 +130,28 @@ export default function Atlas() {
     [coast, setCoast] = useState<any>(null),
     [mapReady, setMapReady] = useState(false),
     [mapError, setMapError] = useState("");
+  const [privateSets, setPrivateSets] = useState<any[]>([]);
+  // Owner datasets are merged client-side only; public endpoints never include them.
+  useEffect(() => {
+    setCatalog((c: any) => {
+      if (!c) return c;
+      const recs = c.records.filter((r: any) => !r.private),
+        ser = c.series.filter((s: any) => !s.private);
+      return {
+        ...c,
+        records: [...recs, ...privateSets.map((d: any) => d.record)],
+        series: [...ser, ...privateSets.flatMap((d: any) => d.series.map((s: any) => ({ ...s, rows: [] })))],
+      };
+    });
+  }, [privateSets]);
+  useEffect(() => {
+    fetch("/api/private/session")
+      .then((r) => r.json())
+      .then(async (s: any) => {
+        if (s.owner) setPrivateSets(((await (await fetch("/api/private/data")).json()) as any).datasets || []);
+      })
+      .catch(() => {});
+  }, []);
   const [candidates, setCandidates] = useState<any[]>([]),
     [newDoi, setNewDoi] = useState(""),
     [adding, setAdding] = useState(false),
@@ -302,21 +326,35 @@ export default function Atlas() {
     setSeriesLoading(true);
     setSeriesError("");
     setData({ ...catalog, series: [] });
-    const params = new URLSearchParams({
-      group: f.group,
+    const base = {
       provider: f.provider,
       realm: f.realm,
       yearMin: String(f.yearMin),
       yearMax: String(f.yearMax),
       chronology: f.chronology,
-    });
-    fetch("/api/observations?" + params, { signal: controller.signal })
-      .then(async (response) => {
+    };
+    // An aggregation is fetched as its member comparison groups (each validated).
+    const keys = isAggregateKey(f.group)
+      ? proxies.find((p: any) => p.key === f.group)?.members || []
+      : [f.group];
+    const one = (group: string) =>
+      fetch("/api/observations?" + new URLSearchParams({ group, ...base }), {
+        signal: controller.signal,
+      }).then(async (response) => {
         const result: any = await response.json();
         if (!response.ok)
           throw new Error(result.error || "No se pudieron cargar las series");
-        if (!controller.signal.aborted)
-          setData({ ...catalog, series: result.series });
+        return result.series;
+      });
+    (async () => {
+      const out: any[] = [];
+      for (let i = 0; i < keys.length; i += 6)
+        out.push(...(await Promise.all(keys.slice(i, i + 6).filter((k: string) => !k.includes('"private_')).map(one))).flat());
+      const mine = privateSets.flatMap((d: any) => d.series).filter((s: any) => inGroup(s, f.group));
+      return [...out, ...mine];
+    })()
+      .then((series) => {
+        if (!controller.signal.aborted) setData({ ...catalog, series });
       })
       .catch((e) => {
         if (e.name !== "AbortError") setSeriesError(e.message);
@@ -333,6 +371,7 @@ export default function Atlas() {
     f.yearMin,
     f.yearMax,
     f.chronology,
+    privateSets,
   ]);
   const summary = useMemo(() => {
     if (!data) return { items: [], error: "" };
@@ -675,6 +714,9 @@ export default function Atlas() {
             <i /> ATLAS · datos v
             {data.release.id.match(/-v([0-9]+)-/)?.[1] || "3"}
           </span>
+          <button className="add-source" onClick={() => setModal("private")}>
+            <Lock size={15} /> Mis datos
+          </button>
           <button className="add-source" onClick={openSources}>
             <Plus size={15} /> Añadir fuente
           </button>
@@ -1406,7 +1448,13 @@ export default function Atlas() {
             >
               <X size={20} />
             </button>
-            {modal === "methods" ? (
+            {modal === "private" ? (
+              <PrivateData
+                catalog={catalog}
+                datasets={privateSets}
+                onDatasets={setPrivateSets}
+              />
+            ) : modal === "methods" ? (
               <>
                 <span className="overline">TRANSPARENCIA CIENTÍFICA</span>
                 <h2>Del dato al mapa</h2>
