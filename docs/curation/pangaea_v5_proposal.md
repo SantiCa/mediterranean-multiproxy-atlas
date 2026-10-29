@@ -1,6 +1,6 @@
 # PANGAEA v5 — propuesta de lote
 
-Activos: 55 registros, 578 series, 110206 valores; cuarentena 3 series. Revisar y marcar `status` en `scripts/importers/pangaea_v5_sources.json`.
+Activos: 55 registros, 559 series, 109382 valores; cuarentena 22 series. Revisar y marcar `status` en `scripts/importers/pangaea_v5_sources.json`.
 
 | Dataset | Evento | Lat, Lon | Estado | Familias | Series (cuar.) | Edad | Referencia |
 |---|---|---|---|---|---:|---|---|
@@ -108,5 +108,5 @@ Activos: 55 registros, 578 series, 110206 valores; cuarentena 3 series. Revisar 
 | [991018](https://doi.pangaea.de/10.1594/PANGAEA.991018) | OTE-2019_KC-13 | 38.243, 25.104 | proposed | corrientes, isot_radiogenicos, tierras_raras_eu | 4 (0) | 0.56–41.07 ka | — |
 | [991019](https://doi.pangaea.de/10.1594/PANGAEA.991019) | OTE-2019_KC-13 | 38.243, 25.104 | proposed | d13C_planct, d18O_planct | 2 (0) | 1.03–42.38 ka | — |
 | [992690](https://doi.pangaea.de/10.1594/PANGAEA.992690) | Laguna_Seca_LS-01 | 37.098, -2.968 | proposed | bromo_mo, color_grises, detritico_xrf, mo_otros, toc, xrf_escaner | 15 (0) | -0.07–15.76 ka | — |
-| [993109](https://doi.pangaea.de/10.1594/PANGAEA.993109) | UBE22-COMP1 | 46.734, 7.565 | proposed | caco3, detritico_xrf, mo_otros, mo_ratios, polen, redox, toc | 19 (0) | 10003.00–16000.00 ka | — |
+| [993109](https://doi.pangaea.de/10.1594/PANGAEA.993109) | UBE22-COMP1 | 46.734, 7.565 | proposed | caco3, detritico_xrf, mo_otros, mo_ratios, polen, redox, toc | 19 (19) | 10003.00–16000.00 ka | — |
 | [993400](https://doi.pangaea.de/10.1594/PANGAEA.993400) | OUM_MAG_23 | 30.642, -5.092 | rejected: sin columna de edad admitida (ka BP, a BP o a AD/CE) | corrientes, detritico_xrf, isot_radiogenicos, oligoelementos, tierras_raras_eu | 0 (0) | — | — |

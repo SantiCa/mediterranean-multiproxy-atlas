@@ -1,10 +1,10 @@
 {
  "counts": {
   "records": 55,
-  "series": 578,
-  "values": 110206,
-  "quarantined_series": 3,
-  "quarantined_values": 626
+  "series": 559,
+  "values": 109382,
+  "quarantined_series": 22,
+  "quarantined_values": 1450
  },
  "audit": [
   {
@@ -7877,7 +7877,7 @@
   },
   {
    "id": "pangaea5-993109:Arboreal_pollen_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7891,7 +7891,7 @@
   },
   {
    "id": "pangaea5-993109:Betula_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7905,7 +7905,7 @@
   },
   {
    "id": "pangaea5-993109:Juniperus_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7919,7 +7919,7 @@
   },
   {
    "id": "pangaea5-993109:Pinus_subgen_Pinus_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7933,7 +7933,7 @@
   },
   {
    "id": "pangaea5-993109:Artemisia_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7947,7 +7947,7 @@
   },
   {
    "id": "pangaea5-993109:Poaceae_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7961,7 +7961,7 @@
   },
   {
    "id": "pangaea5-993109:Pollen_total_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 24,
    "missing": 43,
    "rejected_cells": 0,
@@ -7975,7 +7975,7 @@
   },
   {
    "id": "pangaea5-993109:Carbon_organic_total_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 60,
    "missing": 7,
    "rejected_cells": 0,
@@ -7989,7 +7989,7 @@
   },
   {
    "id": "pangaea5-993109:Carbon_inorganic_total_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 60,
    "missing": 7,
    "rejected_cells": 0,
@@ -8003,7 +8003,7 @@
   },
   {
    "id": "pangaea5-993109:Nitrogen_total_",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 60,
    "missing": 7,
    "rejected_cells": 0,
@@ -8017,7 +8017,7 @@
   },
   {
    "id": "pangaea5-993109:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 60,
    "missing": 7,
    "rejected_cells": 0,
@@ -8031,7 +8031,7 @@
   },
   {
    "id": "pangaea5-993109:Manganese_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8045,7 +8045,7 @@
   },
   {
    "id": "pangaea5-993109:Manganese_redox_sensitive_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8059,7 +8059,7 @@
   },
   {
    "id": "pangaea5-993109:Manganese_organic_bound_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8073,7 +8073,7 @@
   },
   {
    "id": "pangaea5-993109:Manganese_carbonate_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8087,7 +8087,7 @@
   },
   {
    "id": "pangaea5-993109:Iron_redox_sensitive_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8101,7 +8101,7 @@
   },
   {
    "id": "pangaea5-993109:Iron_organic_bound_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8115,7 +8115,7 @@
   },
   {
    "id": "pangaea5-993109:Iron_carbonate_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
@@ -8129,7 +8129,7 @@
   },
   {
    "id": "pangaea5-993109:Iron_residual_per_unit_sediment_dry_mass_g_mg",
-   "status": "contract_v5_auto_rules; manual review pending",
+   "status": "quarantined",
    "values": 52,
    "missing": 15,
    "rejected_cells": 0,
