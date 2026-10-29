@@ -8879,5 +8879,5311 @@
     "status": "approved"
    }
   ]
+ },
+ "810295": {
+  "status": "proposed",
+  "families": [
+   "bioturbacion",
+   "cronologia"
+  ],
+  "tsv_sha256": "d4b685d415d41bd087961e80224a1f0b2d62f67bd335e6c3566c8489f81726e6",
+  "xml_sha256": "37af7592212dd13498017779eb825e961910f91bcd325ff42419ebe075fb1559",
+  "event": {
+   "label": "MD95-2002",
+   "lat": 47.452,
+   "lon": -8.5338333333333,
+   "elevation": "-2174.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Lamina [#/cm]"
+  ],
+  "n_rows": 1650,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Eynaud, Frédérique; Malaizé, Bruno; Zaragosi, Sebastien; de Vernal, Anne; Scourse, James D; Pujol, Claude; Cortijo, Elsa; Grousset, Francis E; Penaud, Aurélie; Toucanne, Samuel; Turon, Jean-Louis; Auffret, Gérard A (2012): Number of laminae in sediment core MD95-2002, Celtic Margin [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.810295, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Lamina [#/cm]",
+    "parameter": "Number of lamina",
+    "unit": "#/cm",
+    "method": null,
+    "comment": null,
+    "families": [
+     "bioturbacion"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "955014": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "oligoelementos"
+  ],
+  "tsv_sha256": "3085938516e96d17653c4ab2cad93a9ebffea0fea5f451af828515db01a0a63d",
+  "xml_sha256": "50ccf3f13196f2f5e2b1fb29057dfef9942b29bf4d44cd792d916087db67c2cf",
+  "event": {
+   "label": "MedSeA-S7-c2",
+   "lat": 37.708,
+   "lon": 12.40553,
+   "elevation": "-281.09",
+   "campaign": "MedSeA2013/1",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "Age unc [±]",
+   "Age [ka BP]",
+   "DBD [g/cm**3]",
+   "210Pb [Bq/kg]",
+   "210Pb act unc [±]",
+   "137Cs [Bq/kg]",
+   "137Cs act unc [±]"
+  ],
+  "n_rows": 47,
+  "age_column": 1,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pallacks, Sven; Ziveri, Patrizia; Schiebel, Ralf; Vonhof, Hubert B; Rae, James W B; Littley, Eloise; García-Orellana, Jordi; Langer, Gerald; Grelaud, Michaël; Martrat, Belén (2023): Age model of sediment core MedSeA-S7-c2 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.955014, ",
+  "columns": [
+   {
+    "column": 5,
+    "header": "210Pb [Bq/kg]",
+    "parameter": "Lead-210 activity per mass",
+    "unit": "Bq/kg",
+    "method": null,
+    "comment": "210Pb total",
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "210Pb act unc [±]",
+    "parameter": "Lead-210, activity, uncertainty",
+    "unit": "±",
+    "method": null,
+    "comment": null,
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "758961": {
+  "status": "rejected",
+  "families": [
+   "cronologia",
+   "isot_radiogenicos",
+   "tierras_raras_eu"
+  ],
+  "tsv_sha256": "6f5d0a56a99fa04104761f339995e3c69bd18b3388491c34fa09db0a285dbd6d",
+  "xml_sha256": "d2cfe41040634825c94c2240cd1fa2d3a331c04e8cd0cc2111a559cac42a2305",
+  "event": {
+   "label": "MD95-2002",
+   "lat": 47.452,
+   "lon": -8.5338333333333,
+   "elevation": "-2174.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Comm",
+   "Sr [mg/kg]",
+   "87Sr/86Sr",
+   "87Sr/86Sr e [±]",
+   "Nd [mg/kg]",
+   "143Nd/144Nd",
+   "143Nd/144Nd e [±]",
+   "ε-Nd(0)",
+   "Carb detr [%]"
+  ],
+  "n_rows": 24,
+  "age_column": null,
+  "age_transformation": null,
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Auffret, Gérard A; Zaragosi, Sebastien; Dennielou, Bernard; Cortijo, Elsa; Van Rooij, David; Grousset, Francis E; Pujol, Claude; Eynaud, Frédérique; Siegert, Martin J (2002): (Table 2) Sr/Nd isotopic composition of the non-calcareous lithic coarser fraction and detrital carbonate content of sediment core MD95-2002 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758961, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "87Sr/86Sr",
+    "parameter": "Strontium-87/Strontium-86 ratio",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": null,
+    "families": [
+     "isot_radiogenicos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "87Sr/86Sr e [±]",
+    "parameter": "Strontium-87/Strontium-86 ratio, error",
+    "unit": "±",
+    "method": null,
+    "comment": null,
+    "families": [
+     "isot_radiogenicos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Nd [mg/kg]",
+    "parameter": "Neodymium",
+    "unit": "mg/kg",
+    "method": null,
+    "comment": null,
+    "families": [
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "143Nd/144Nd",
+    "parameter": "Neodymium-143/Neodymium-144 ratio",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "143Nd/144Nd e [±]",
+    "parameter": "Neodymium-143/Neodymium-144 ratio, error",
+    "unit": "±",
+    "method": null,
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "ε-Nd(0)",
+    "parameter": "ε-Neodymium (0)",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE)"
+ },
+ "993400": {
+  "status": "rejected",
+  "families": [
+   "cronologia",
+   "detritico_xrf",
+   "isot_radiogenicos",
+   "litologia",
+   "oligoelementos",
+   "tierras_raras_eu"
+  ],
+  "tsv_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+  "xml_sha256": "c2924ec4af46b0ff6c6fa9913fc0fe311eb4bb2353767dd9c2b15ad942ea4819",
+  "event": {
+   "label": "OUM_MAG_23",
+   "lat": 30.641843,
+   "lon": -5.092385,
+   "elevation": "800.0",
+   "campaign": "Oumjrane_Explo_2023",
+   "device": null
+  },
+  "header": [
+   "Sample ID",
+   "Depth sed [m]",
+   "Main lith",
+   "Age [Ma] (Absolute age)",
+   "δ18O [‰] (vs. V-SMOW, Isotope ratio mas...)",
+   "87Rb/86Sr (Multi-collector ICP-MS (MC-IC...)",
+   "87Sr/86Sr (Multi-collector ICP-MS (MC-IC...)",
+   "87Sr/86Sr std dev [±] (1Sigma, Multi-collector ICP-M...)",
+   "87Sr/86Sr (Initial isotopic composition ...)",
+   "147Sm/144Nd (Multi-collector ICP-MS (MC-IC...)",
+   "143Nd/144Nd (Multi-collector ICP-MS (MC-IC...)",
+   "143Nd/144Nd std dev [±] (1Sigma, Multi-collector ICP-M...)",
+   "143Nd/144Nd (Initial isotopic composition ...)",
+   "ε-Nd(T)",
+   "Age [Ga] (T DM)",
+   "206Pb/204Pb (Multi-collector ICP-MS (MC-IC...)",
+   "206Pb/204Pb std dev [±] (1Sigma, Multi-collector ICP-M...)",
+   "207Pb/204Pb (Multi-collector ICP-MS (MC-IC...)",
+   "207Pb/204Pb std dev [±] (1Sigma, Multi-collector ICP-M...)",
+   "208Pb/204Pb (Multi-collector ICP-MS (MC-IC...)",
+   "208Pb/204Pb std dev [±] (1Sigma, Multi-collector ICP-M...)",
+   "206Pb/204Pb (Initial isotopic composition ...)",
+   "207Pb/204Pb (Initial isotopic composition ...)",
+   "208Pb/204Pb (Initial isotopic composition ...)"
+  ],
+  "n_rows": 5,
+  "age_column": null,
+  "age_transformation": null,
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+  "columns": [
+   {
+    "column": 5,
+    "header": "87Rb/86Sr (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Rubidium-87/Strontium-86 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "87Sr/86Sr (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Strontium-87/Strontium-86 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "isot_radiogenicos"
+    ],
+    "error_column": 7,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "87Sr/86Sr (Initial isotopic composition ...)",
+    "parameter": "Strontium-87/Strontium-86 ratio",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": "Initial isotopic composition calculated at the time of magmatism.",
+    "families": [
+     "isot_radiogenicos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "147Sm/144Nd (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Samarium-147/Neodymium-144 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "143Nd/144Nd (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Neodymium-143/Neodymium-144 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": 11,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "143Nd/144Nd (Initial isotopic composition ...)",
+    "parameter": "Neodymium-143/Neodymium-144 ratio",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": "Initial isotopic composition calculated at the time of magmatism.",
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "ε-Nd(T)",
+    "parameter": "ε-Neodymium (T)",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "206Pb/204Pb (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Lead-206/Lead-204 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "isot_radiogenicos",
+     "oligoelementos"
+    ],
+    "error_column": 16,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "207Pb/204Pb (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Lead-207/Lead-204 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "isot_radiogenicos",
+     "oligoelementos"
+    ],
+    "error_column": 18,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "208Pb/204Pb (Multi-collector ICP-MS (MC-IC...)",
+    "parameter": "Lead-208/Lead-204 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "isot_radiogenicos",
+     "oligoelementos"
+    ],
+    "error_column": 20,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "206Pb/204Pb (Initial isotopic composition ...)",
+    "parameter": "Lead-206/Lead-204 ratio",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": "Initial isotopic composition calculated at the time of magmatism. Magmatic event (411 Ma).",
+    "families": [
+     "isot_radiogenicos",
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "207Pb/204Pb (Initial isotopic composition ...)",
+    "parameter": "Lead-207/Lead-204 ratio",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": "Initial isotopic composition calculated at the time of magmatism. Magmatic event (411 Ma).",
+    "families": [
+     "isot_radiogenicos",
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "208Pb/204Pb (Initial isotopic composition ...)",
+    "parameter": "Lead-208/Lead-204 ratio",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": "Initial isotopic composition calculated at the time of magmatism. Magmatic event (411 Ma).",
+    "families": [
+     "isot_radiogenicos",
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE)"
+ },
+ "991018": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "isot_radiogenicos",
+   "tierras_raras_eu"
+  ],
+  "tsv_sha256": "0fda322cdf33bb82a379ca50158d922167d4de860d62ef5e6c32fe625308935e",
+  "xml_sha256": "1b734f5e976606021935d52a42a03ee8a18a267c8c812101bcee24dbdbc6a6ec",
+  "event": {
+   "label": "OTE-2019_KC-13",
+   "lat": 38.24335,
+   "lon": 25.10412,
+   "elevation": "-652.0",
+   "campaign": "OTE-2019",
+   "device": null
+  },
+  "header": [
+   "Sample label",
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "ε-Nd",
+   "ε-Nd e [±]",
+   "87Sr/86Sr",
+   "87Sr/86Sr e [±]"
+  ],
+  "n_rows": 10,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Evangelinos, Dimitris; Campderrós, Sara; Trias-Navarro, Sergio; Garcia Briña, Cristina; Paredes, Eduardo; Pena, Leopoldo D; Frigola, Jaime; Hasiotis, Thomas; Rousakis, Grigoris; Sakellariou, Dimitris; Cacho, Isabel (2026): Sr-Nd detrital sediment fraction from sediment core KC-13, Central Aegean, Greece [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.991018, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "ε-Nd",
+    "parameter": "ε-Neodymium",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "ε-Nd e [±]",
+    "parameter": "ε-Neodymium, error",
+    "unit": "±",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "corrientes",
+     "isot_radiogenicos",
+     "tierras_raras_eu"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "87Sr/86Sr",
+    "parameter": "Strontium-87/Strontium-86 ratio",
+    "unit": "sin unidad",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "isot_radiogenicos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "87Sr/86Sr e [±]",
+    "parameter": "Strontium-87/Strontium-86 ratio, error",
+    "unit": "±",
+    "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+    "comment": null,
+    "families": [
+     "isot_radiogenicos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "327443": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "detritico_xrf"
+  ],
+  "tsv_sha256": "f1f453d62a649c788709f9d72e6982c77865474738ebc130db368c885d1f6770",
+  "xml_sha256": "4d9f9aabb5b60d9990239b92d6befa795f41efe24e17ee55acde7da7828da9ec",
+  "event": {
+   "label": "GeoB7616-4",
+   "lat": 43.683333333333,
+   "lon": 30.041666666667,
+   "elevation": "-168.0",
+   "campaign": "M51/4",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "K [cps]"
+  ],
+  "n_rows": 741,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Bahr, André (2005): X-ray fluorescence measurements of potassium in 2 mm intervals in sediment core GeoB7616-4 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.327443",
+  "columns": [
+   {
+    "column": 2,
+    "header": "K [cps]",
+    "parameter": "Potassium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF)",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "966838": {
+  "status": "proposed",
+  "families": [
+   "corrientes",
+   "cronologia",
+   "granulometria"
+  ],
+  "tsv_sha256": "86c366b361df468ce3c1b7e5a757e02b894d8e38b1ed30cd3a0f5a50f2d85964",
+  "xml_sha256": "81a0877ee3f77cf08bc1ace8c6262a28bb5ed5677378e0d507fde9ef470a6969",
+  "event": {
+   "label": "MVSEIS08_TG-2",
+   "lat": 34.97133,
+   "lon": -6.84117,
+   "elevation": "-530.0",
+   "campaign": "MVSEIS2008",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m] (Depth in core)",
+   "Age [ka BP]",
+   "16-10 µm [%] (fines (medium silt))",
+   "31-16 µm [%] (fines (coarse silt))",
+   "63-31 µm [%] (fines (very coarse silt))",
+   "63-10 µm sort silt [%] (pelagics)",
+   "63-10 µm sort silt [%] (contourites)",
+   "63-10 µm sort silt [%] (mean, carb-free)"
+  ],
+  "n_rows": 44,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Sortable silt of sediment core MVSEIS08_TG-2 from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966838, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "16-10 µm [%] (fines (medium silt))",
+    "parameter": "Size fraction 0.016-0.010 mm",
+    "unit": "%",
+    "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+    "comment": "fines (medium silt)",
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "31-16 µm [%] (fines (coarse silt))",
+    "parameter": "Size fraction 0.031-0.016 mm, coarse silt",
+    "unit": "%",
+    "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+    "comment": "fines (coarse silt)",
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "63-31 µm [%] (fines (very coarse silt))",
+    "parameter": "Size fraction 0.063-0.031 mm, very coarse silt",
+    "unit": "%",
+    "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+    "comment": "fines (very coarse silt)",
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "63-10 µm sort silt [%] (pelagics)",
+    "parameter": "Size fraction 0.063-0.010 mm, sortable silt",
+    "unit": "%",
+    "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+    "comment": "pelagics",
+    "families": [
+     "corrientes",
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "63-10 µm sort silt [%] (contourites)",
+    "parameter": "Size fraction 0.063-0.010 mm, sortable silt",
+    "unit": "%",
+    "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+    "comment": "contourites",
+    "families": [
+     "corrientes",
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "63-10 µm sort silt [%] (mean, carb-free)",
+    "parameter": "Size fraction 0.063-0.010 mm, sortable silt",
+    "unit": "%",
+    "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+    "comment": "mean, carb-free",
+    "families": [
+     "corrientes",
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "667479": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "detritico_xrf"
+  ],
+  "tsv_sha256": "7e60f3a9b2252b27b4fa5bf951a779a9f3dbe3508524b31debd5e9e255beb2ea",
+  "xml_sha256": "7054d8f464cdbecac5fac1559d93fdb0d4e85cdc5af7891bdc49c0f7178068c2",
+  "event": {
+   "label": "GeoB7608-1",
+   "lat": 43.486666666667,
+   "lon": 30.196666666667,
+   "elevation": "-1202.0",
+   "campaign": "M51/4",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Ti/Ca",
+   "Ca [cps]"
+  ],
+  "n_rows": 658,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Bahr, André (2007): Age and x-ray fluorescence measurements of sediment core GeoB7608-1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.667479, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Ti/Ca",
+    "parameter": "Titanium/Calcium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF)",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "Ca [cps]",
+    "parameter": "Calcium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF)",
+    "comment": null,
+    "families": [
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "670332": {
+  "status": "rejected",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "c3e181c42933ba8bae209b6d790ac35b6c350f5d6fcec409aca34e1742653888",
+  "xml_sha256": "e5cb44c67bd6a75d4a66f77ee3b9b9171641fdf69a266894ccd96334e6d961e6",
+  "event": {
+   "label": "C-136A/301",
+   "lat": 43.45,
+   "lon": 28.25,
+   "elevation": null,
+   "campaign": "NECLIME_campaign",
+   "device": null
+  },
+  "header": [
+   "Age min [ka]",
+   "Age max [ka]",
+   "Epoch",
+   "Stage",
+   "A. striatus",
+   "A. euphorii",
+   "C. sambucoides",
+   "C. simplex",
+   "C. major",
+   "C. pseudovallatus",
+   "C. coryloides",
+   "Cupressacites sp.",
+   "Cyperaceaepollis sp.",
+   "Ericipites sp.",
+   "I. iliacus",
+   "I. hiatus",
+   "J. maculosus",
+   "Laevigatosporites sp.",
+   "L. orientaliformis",
+   "M. gracilis",
+   "N. kruschi",
+   "O. primarius",
+   "P. labdacus",
+   "P. microalatus",
+   "P. stellatus",
+   "Quercoidites sp.",
+   "R. retic reticuloides",
+   "S. serratus",
+   "S. polyformosus",
+   "S. vestibulum",
+   "Thalictrum sp.",
+   "Tsugaepollenites sp.",
+   "U. undulosus"
+  ],
+  "n_rows": 1,
+  "age_column": null,
+  "age_transformation": null,
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Ivanov, Dimiter A (2007): Middle Miocene microflora of core C-136A/301 (Bulgaria) [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.670332",
+  "columns": [
+   {
+    "column": 4,
+    "header": "A. striatus",
+    "parameter": "Aceripollenites striatus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "A. euphorii",
+    "parameter": "Araliaceoipollenites euphorii",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "C. simplex",
+    "parameter": "Caryapollenites simplex",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "I. iliacus",
+    "parameter": "Ilexpollenites iliacus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "I. hiatus",
+    "parameter": "Inaperturopollenites hiatus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "L. orientaliformis",
+    "parameter": "Liquidambarpollenites orientaliformis",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "N. kruschi",
+    "parameter": "Nyssapollenites kruschi",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "P. stellatus",
+    "parameter": "Pterocaryapollenites stellatus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 27,
+    "header": "S. serratus",
+    "parameter": "Sciadopityspollenites serratus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 28,
+    "header": "S. polyformosus",
+    "parameter": "Sequoiapollenites polyformosus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 29,
+    "header": "S. vestibulum",
+    "parameter": "Symplocoipollenites vestibulum",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 31,
+    "header": "Tsugaepollenites sp.",
+    "parameter": "Tsugaepollenites sp.",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 32,
+    "header": "U. undulosus",
+    "parameter": "Ulmipollenites undulosus",
+    "unit": "sin unidad",
+    "method": "Fossil determination",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE)"
+ },
+ "693593": {
+  "status": "rejected",
+  "reason": "descarga/parseo: ",
+  "families": [
+   "cronologia",
+   "detritico_xrf"
+  ]
+ },
+ "711649": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "53a9f158b7816a857311c4705a85de215521f215edc8fb1e47384c3bf6a51142",
+  "xml_sha256": "aa4559a61aa738f2ffabc94c0c5ef3c8b504f0c9e607715a57c22f50c3cceb30",
+  "event": {
+   "label": "MD95-2043",
+   "lat": 36.143333333333,
+   "lon": -2.6211666666667,
+   "elevation": "-1841.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Abi [#]",
+   "Ace [#]",
+   "Aln [#]",
+   "Amb-T [#]",
+   "Ant-T [#]",
+   "Apiae [#]",
+   "Arceu [#]",
+   "Art [#]",
+   "Aph [#]",
+   "Ast-T [#]",
+   "Bet [#]",
+   "Borae [#]",
+   "Braae [#]",
+   "Bup-T [#]",
+   "Bux [#]",
+   "Cal [#]",
+   "Camae [#]",
+   "Car [#]",
+   "Cphae [#]",
+   "Ced [#]",
+   "Cen.n-T [#]",
+   "Cen.s-T [#]",
+   "Cei [#]",
+   "Crl-T [#]",
+   "Cheae [#]",
+   "Cir-T [#]",
+   "Ciu [#]",
+   "Cor.f [#]",
+   "Cor [#]",
+   "Craae [#]",
+   "Cupae [#]",
+   "Cypae [#]",
+   "Eop [#]",
+   "Eph.d-T [#]",
+   "Eph.f-T [#]",
+   "Eriae [#]",
+   "Ero [#]",
+   "Eup [#]",
+   "Fabae [#]",
+   "Flp [#]",
+   "Fra.e-T [#]",
+   "Gal-T [#]",
+   "Genae [#]",
+   "Ger [#]",
+   "Ham [#]",
+   "Hed.h [#]",
+   "Hel [#]",
+   "Hpp [#]",
+   "Lamae [#]",
+   "Lilae [#]",
+   "Lin [#]",
+   "Lym.s [#]",
+   "Lyt [#]",
+   "Men-T [#]",
+   "Mer-T [#]",
+   "Myr [#]",
+   "Ole [#]",
+   "Ped [#]",
+   "Phi [#]",
+   "Pic [#]",
+   "Pst [#]",
+   "Pla [#]",
+   "Pla.l-T [#]",
+   "Pluae [#]",
+   "Poac [#]",
+   "Pol.i-T [#]",
+   "Pop [#]",
+   "Priae [#]",
+   "Quercus deci-T [#]",
+   "Q. evergreen-t [#]",
+   "Que.s-T [#]",
+   "Ranae [#]",
+   "Rha-T [#]",
+   "Rosae [#]",
+   "Rum [#]",
+   "Sal [#]",
+   "San.m [#]",
+   "San.o [#]",
+   "Sca [#]",
+   "Scoae [#]",
+   "Ser-T [#]",
+   "Spg-T [#]",
+   "Tam [#]",
+   "Tar [#]",
+   "Tax [#]",
+   "Tha [#]",
+   "Til [#]",
+   "Ule-T [#]",
+   "Ulm [#]",
+   "Urt [#]",
+   "Valae [#]",
+   "Ver-T [#]",
+   "Vic-T [#]",
+   "Vts [#]",
+   "Pin [#]",
+   "Ali-T [#]",
+   "Lem [#]",
+   "Pol.p-T [#]",
+   "Pot [#]",
+   "Typ [#]",
+   "Iso [#]",
+   "Ppd.v-T [#]",
+   "Spores mono psil [#]",
+   "Spores mono orna [#]",
+   "Ano.l [#]",
+   "Bot-T [#]",
+   "Cry [#]",
+   "Oph.l [#]",
+   "Pil.g [#]",
+   "S. denticulata [#]",
+   "trilorna [#]",
+   "trilpsil [#]",
+   "trilete rew [#]",
+   "Ind.brok [#]",
+   "Ind.hidd [#]",
+   "Ind.corr [#]",
+   "Ind.crum [#]",
+   "Ind.unkn [#]",
+   "Concys [#]",
+   "Pollen te medit forest [#]",
+   "Pollen main [#]",
+   "Pollen+spores [#]",
+   "Taxa anal [#]",
+   "Mark found [#]",
+   "Samp vol [cm**3]",
+   "Mark add [#]",
+   "Pollen main concentration [#/cm**3]",
+   "Pollen tot [#/cm**3]"
+  ],
+  "n_rows": 262,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": {
+   "doi": "10.1016/j.yqres.2008.07.002",
+   "year": "2008",
+   "title": "Orbital- and sub-orbital-scale climate impacts on vegetation of the western Mediterranean basin over the last 48,000 yr"
+  },
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Fletcher, William J; Sanchez Goñi, Maria Fernanda (2008): Pollen record of sediment core MD95-2043 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.711649, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Abi [#]",
+    "parameter": "Abies",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "Art [#]",
+    "parameter": "Artemisia",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Bet [#]",
+    "parameter": "Betula",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "Car [#]",
+    "parameter": "Carpinus",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "Ced [#]",
+    "parameter": "Cedrus",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 26,
+    "header": "Cheae [#]",
+    "parameter": "Chenopodiaceae",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 32,
+    "header": "Cupae [#]",
+    "parameter": "Cupressaceae",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 35,
+    "header": "Eph.d-T [#]",
+    "parameter": "Ephedra distachya-type",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 36,
+    "header": "Eph.f-T [#]",
+    "parameter": "Ephedra fragilis-type",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 37,
+    "header": "Eriae [#]",
+    "parameter": "Ericaceae",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 58,
+    "header": "Ole [#]",
+    "parameter": "Olea",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 62,
+    "header": "Pst [#]",
+    "parameter": "Pistacia",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 66,
+    "header": "Poac [#]",
+    "parameter": "Poaceae",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 70,
+    "header": "Quercus deci-T [#]",
+    "parameter": "Quercus, deciduous-type",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 71,
+    "header": "Q. evergreen-t [#]",
+    "parameter": "Quercus evergreen-type",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 72,
+    "header": "Que.s-T [#]",
+    "parameter": "Quercus suber-type",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 85,
+    "header": "Tar [#]",
+    "parameter": "Taraxacum",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "biomarcadores_indices"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 96,
+    "header": "Pin [#]",
+    "parameter": "Pinus",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 104,
+    "header": "Spores mono psil [#]",
+    "parameter": "Spores, monolete psilate",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 105,
+    "header": "Spores mono orna [#]",
+    "parameter": "Spores, monolete ornamented",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 112,
+    "header": "trilorna [#]",
+    "parameter": "Spores, trilete ornamented",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 113,
+    "header": "trilpsil [#]",
+    "parameter": "Spores, trilete psilate",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 114,
+    "header": "trilete rew [#]",
+    "parameter": "Spores, trilete reworked",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 121,
+    "header": "Pollen te medit forest [#]",
+    "parameter": "Pollen, temperate Mediterranean forest",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": "includes Acer, Alnus, Betula, Carpinus, Cistus, Coriaria myrtifolia, Corylus, Fraxinus excelsior type, Olea, Phillyrea, Pistacia, Populus, Quercus deciduous type, Quercus evergreen type, Quercus suber type, Taxus, Ulmus.",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 122,
+    "header": "Pollen main [#]",
+    "parameter": "Pollen, main",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": "includes all terrestrial pollen excluding Pinus",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 123,
+    "header": "Pollen+spores [#]",
+    "parameter": "Pollen and spores",
+    "unit": "#",
+    "method": "Counting, palynology",
+    "comment": "total",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 128,
+    "header": "Pollen main concentration [#/cm**3]",
+    "parameter": "Pollen, main concentration",
+    "unit": "#/cm**3",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 129,
+    "header": "Pollen tot [#/cm**3]",
+    "parameter": "Pollen, total",
+    "unit": "#/cm**3",
+    "method": "Counting, palynology",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "crossref_sha256": "adfc30b9dd07c49fa3dbe1a2f56ef3e904474e79581d169aa44d90b282506d19"
+ },
+ "82056": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "03cf59d3b02e2dec1cd3911ed901919c6c0fdb93b37b4dd76b6f735d0f9e35d5",
+  "xml_sha256": "43d7834a749486c598b048f41601e257391c2dfa03b41de52d1e085028802cc1",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "TOC [%]"
+  ],
+  "n_rows": 100,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schönfeld, Joachim; Zahn, Rainer; de Abreu, Lucia (2003): Organic carbon of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.82056, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "758353": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "detritico_xrf"
+  ],
+  "tsv_sha256": "88ce2326867c49aa83bc385b38161324dfcc80a58a5735de0ce83e28377c22a9",
+  "xml_sha256": "2d6fb20be993b6731ad9213d359ef648f1acdcfde9d6953d23495620cd66a403",
+  "event": {
+   "label": "Mo05",
+   "lat": 47.8114,
+   "lon": 13.4025,
+   "elevation": "481.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Comm",
+   "Mg [cps]",
+   "Ca [cps]",
+   "Al [cps]",
+   "Ca/Mg"
+  ],
+  "n_rows": 11667,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Lauterbach, Stefan; Brauer, Achim; Andersen, Nils; Danielopol, Dan L; Dulski, Peter; Hüls, Matthias; Milecka, Krystyna; Namiotko, Tadeusz; Obremska, Milena; von Grafenstein, Ulrich; DecLakes participants (2011): (Figure 4) Mg, Al, and Ca concentrations in composite sediment core Mo05 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758353, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "Ca [cps]",
+    "parameter": "Calcium",
+    "unit": "cps",
+    "method": "XRF spectrometer, Edax, EAGLE III XL µ-Probe",
+    "comment": null,
+    "families": [
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Al [cps]",
+    "parameter": "Aluminium",
+    "unit": "cps",
+    "method": "XRF spectrometer, Edax, EAGLE III XL µ-Probe",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "758357": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "4e182e57dd4e5e78d5b5a7114170ab55e39fabc630030520deccbe66d03aa3de",
+  "xml_sha256": "3474706f68f06b62564b02d53d17d247c2fe000e261271e524adc5da4ecdd7b2",
+  "event": {
+   "label": "Mo05",
+   "lat": 47.8114,
+   "lon": 13.4025,
+   "elevation": "481.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Betula [%]",
+   "Pinus [%]",
+   "AP [%]",
+   "NAP [%]",
+   "Poac [%]",
+   "Salix [%]",
+   "Jun [%]",
+   "H. rhamnoides [%]",
+   "Drp.f [%]",
+   "Artemisia [%]",
+   "Chenopod [%]",
+   "Car-T [%]",
+   "Cyperac [%]"
+  ],
+  "n_rows": 121,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Lauterbach, Stefan; Brauer, Achim; Andersen, Nils; Danielopol, Dan L; Dulski, Peter; Hüls, Matthias; Milecka, Krystyna; Namiotko, Tadeusz; Obremska, Milena; von Grafenstein, Ulrich; DecLakes participants (2011): (Figure 6) Relative abundances of pollen in composite sediment core Mo05 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758357, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Betula [%]",
+    "parameter": "Betula",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "Pinus [%]",
+    "parameter": "Pinus",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "AP [%]",
+    "parameter": "Arboreal pollen",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "NAP [%]",
+    "parameter": "Non arboreal pollen",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "Poac [%]",
+    "parameter": "Poaceae",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Jun [%]",
+    "parameter": "Juniperus",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "Artemisia [%]",
+    "parameter": "Artemisia",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Chenopod [%]",
+    "parameter": "Chenopodiaceae",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "882263": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "bd9fbbffcf8673f721a96947a61f82a877dd64c85f6b62c45443d09816840a1d",
+  "xml_sha256": "43025da14e604014eaf0921248225987d4ad0fbb4d8c8ac2e8553cd55263a674",
+  "event": {
+   "label": "POPEI_VC2B",
+   "lat": 36.88,
+   "lon": -8.07,
+   "elevation": "-96.0",
+   "campaign": "POPEI0113",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "Age [ka BP]",
+   "TOC [%]",
+   "N org [%]",
+   "CaCO3 [%]"
+  ],
+  "n_rows": 78,
+  "age_column": 1,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Abrantes, Fatima F; Rodrigues, Teresa; Rufino, Marta M; Salgueiro, Emilia; Oliveira, Dulce; Gomes, Sandra D; Costa, Ana Cristina; Mil-Homens, Mário; Drago, Teresa; Naughton, Filipa (2017): TOC, Norg and CaCO3 content of sediment core POPEI_VC2B [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.882263, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "CaCO3 [%]",
+    "parameter": "Calcium carbonate",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "780235": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "detritico_xrf",
+   "litologia"
+  ],
+  "tsv_sha256": "4dcfe5d01041b87ee3b6ec70a6189be647d7ca91e5ee0769efe4671953ba374d",
+  "xml_sha256": "ad2815cf5484166d637b187802f9c31f648516911259ad913a9db8f105005748",
+  "event": {
+   "label": "160-969D",
+   "lat": 33.8386,
+   "lon": 24.8833,
+   "elevation": "-2192.0",
+   "campaign": "Leg160",
+   "device": null
+  },
+  "header": [
+   "Sample label",
+   "Lithology",
+   "Age [ka BP]",
+   "S Py [µmol/g]",
+   "S/Al",
+   "δ34S Py [‰ CDT]",
+   "Δδ33S [‰ CDT]",
+   "Δδ36S [‰ CDT]"
+  ],
+  "n_rows": 11,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Scheiderich, Kathleen; Zerkle, Aubrey L; Helz, George R; Farquhar, James; Walker, Richard J (2010): (Table 4) Sulfur isotope ratios of pyrite of ODP Hole 160-969D sediments [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.780235, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "S/Al",
+    "parameter": "Sulfur/Aluminium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": "S of pyrite",
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "758359": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "8645ef45fb262126abb0af3a5a0f757f29ce07d1dc73c94e783b583a0b52eef7",
+  "xml_sha256": "aaf106b1f784694a97cb0c3437e814a3912dd0e73f03e4fee24275d26172f7f6",
+  "event": {
+   "label": "Mo05",
+   "lat": 47.8114,
+   "lon": 13.4025,
+   "elevation": "481.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Betula [#/g]",
+   "Pinus [#/g]",
+   "Salix [#/g]",
+   "Juniperus [#/g]",
+   "H. rhamnoides [#/g]",
+   "Drp.f [#/g]",
+   "Poac [#/g]",
+   "Artemisia [#/g]",
+   "Chenopod [#/g]",
+   "Car-T [#/g]",
+   "Cyperac [#/g]"
+  ],
+  "n_rows": 121,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Lauterbach, Stefan; Brauer, Achim; Andersen, Nils; Danielopol, Dan L; Dulski, Peter; Hüls, Matthias; Milecka, Krystyna; Namiotko, Tadeusz; Obremska, Milena; von Grafenstein, Ulrich; DecLakes participants (2011): (Figure 6) Absolute abundances of pollen in composite sediment core Mo05 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758359, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Betula [#/g]",
+    "parameter": "Betula",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "Pinus [#/g]",
+    "parameter": "Pinus",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Juniperus [#/g]",
+    "parameter": "Juniperus",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Poac [#/g]",
+    "parameter": "Poaceae",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "Artemisia [#/g]",
+    "parameter": "Artemisia",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "Chenopod [#/g]",
+    "parameter": "Chenopodiaceae",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "896609": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "4dcd5b32bed5ab8ec201e9c1651a237553d2fa1b455253f634da0f4c0da74fdb",
+  "xml_sha256": "9b2238865c5f2d1c919794f6976cf2ce76c46b26aa9377e9f6aa6314d8d9b699",
+  "event": {
+   "label": "BEN14-P4",
+   "lat": 46.02769,
+   "lon": 6.50402,
+   "elevation": null,
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Depth top [m]",
+   "Depth bot [m]",
+   "Age [ka BP]",
+   "C org/sed [mg/g]",
+   "N/sed [mg/g]",
+   "P/sed [µg/g]"
+  ],
+  "n_rows": 33,
+  "age_column": 3,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Bajard, Manon; Etienne, David; Quinsac, Sébastien; Dambrine, Etienne; Sabatier, Pierre; Frossard, Victor; Gaillard, Jérémie; Develle, Anne-Lise; Poulenard, Jérôme; Arnaud, Fabien; Dorioz, Jean-Marcel (2018): Organic carbon, nitrogen and phosphorus in sediment core BEN14-P4 from Lake Benit [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.896609, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "C org/sed [mg/g]",
+    "parameter": "Carbon, organic, per unit sediment mass",
+    "unit": "mg/g",
+    "method": "Element analyser CHN",
+    "comment": "Corg",
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "929110": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "detritico_xrf",
+   "polen"
+  ],
+  "tsv_sha256": "b6b778aae62fb8d58e1ea3518a1150e5fcd136e64b3338ecc2e8f0ad4d93aa06",
+  "xml_sha256": "e29e0ad82014db81a6f67a0091bfd5e16428a45e318bb1e30af66d7b8da38520",
+  "event": {
+   "label": "Mo05",
+   "lat": 47.8114,
+   "lon": 13.4025,
+   "elevation": "481.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "Age [a AD/CE]",
+   "K [ng/g]",
+   "δ18O [‰]",
+   "NAO",
+   "Abies [%]",
+   "Picea [%]",
+   "Abies/Picea [%]",
+   "Pinus [%]",
+   "Alnus [%]",
+   "Betula [%]",
+   "Alnus/Betula [%]",
+   "Car [%]",
+   "Corylus [%]",
+   "Fagus [%]",
+   "Frx [%]",
+   "Juglans [%]",
+   "Quercus [%]",
+   "Ulmus [%]",
+   "A. fruticosa-T [%]",
+   "Salix [%]",
+   "Artemisia [%]",
+   "Cichorioideae [%]",
+   "Plantago [%]",
+   "Poac [%]",
+   "Cerealia-T [%]",
+   "Rumex [%]",
+   "Rosae [%]",
+   "Urt [%]",
+   "Vts [%]",
+   "Cyperac [%]"
+  ],
+  "n_rows": 101,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Schubert, Anna; Lauterbach, Stefan; Leipe, Christian; Scholz, Vitus; Brauer, Achim; Tarasov, Pavel E (2026): Records and pollen percentages of the composite core MO-05 from Lake Mondsee for the period 1500 BCE to 500 CE re-sampled to 20-year resolution (Supplementary Material Table 2) [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.929110, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "K [ng/g]",
+    "parameter": "Potassium",
+    "unit": "ng/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Abies [%]",
+    "parameter": "Abies",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "Abies/Picea [%]",
+    "parameter": "Abies/Picea",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Pinus [%]",
+    "parameter": "Pinus",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "Betula [%]",
+    "parameter": "Betula",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "Alnus/Betula [%]",
+    "parameter": "Alnus/Betula",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Car [%]",
+    "parameter": "Carpinus",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "Quercus [%]",
+    "parameter": "Quercus",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "Artemisia [%]",
+    "parameter": "Artemisia",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "Poac [%]",
+    "parameter": "Poaceae",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "758497": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "2a0356d09161a56ba9bdd680fd1c0dd853deef64f306b1ddb962d9972b6a1a19",
+  "xml_sha256": "0a5706201b4f3d77fec3a2f36d527e76e99265fefd01b6bcd1886811d8dcbc3d",
+  "event": {
+   "label": "Mo05",
+   "lat": 47.8114,
+   "lon": 13.4025,
+   "elevation": "481.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Pin [#]",
+   "Bet [#]",
+   "Bet.n [#]",
+   "Cor [#]",
+   "Aln [#]",
+   "Que [#]",
+   "Til [#]",
+   "Ulm [#]",
+   "Sal [#]",
+   "Sal.h-T [#]",
+   "cf. Sal pol [#]",
+   "Pop [#]",
+   "Ros-T [#]",
+   "cf. Cor.mas [#]",
+   "Sor.a [#]",
+   "Pic [#]",
+   "Abi [#]",
+   "Jun [#]",
+   "cf. Zel [#]",
+   "Hip.r [#]",
+   "Eph.f-T [#]",
+   "Eph.cf.f [#]",
+   "Eph.d-T [#]",
+   "Eph cf. [#]",
+   "Hel [#]",
+   "Sel.s [#]",
+   "S. cf. denticulata [#]",
+   "Dry.o [#]",
+   "Sax.h-T [#]",
+   "Sax.g [#]",
+   "Sxi.h-T [#]",
+   "Ast-T [#]",
+   "Ant-T [#]",
+   "Cicoid [#]",
+   "Cir [#]",
+   "Tha [#]",
+   "Ane-T [#]",
+   "Hep-T [#]",
+   "Ran-T [#]",
+   "Ran.a-T [#]",
+   "Ran.v [#]",
+   "Ranae [#]",
+   "Flp [#]",
+   "Sed [#]",
+   "Pti [#]",
+   "Geu-T [#]",
+   "San [#]",
+   "Rosae [#]",
+   "Cphae [#]",
+   "Her-T [#]",
+   "Her sp. [#]",
+   "Apiae [#]",
+   "Alc [#]",
+   "Tri [#]",
+   "Fabae [#]",
+   "Braae [#]",
+   "Vac-T [#]",
+   "Eriae [#]",
+   "Gal-T [#]",
+   "Mel [#]",
+   "Drp.f-m [#]",
+   "Pol.sp [#]",
+   "Rhi-T [#]",
+   "Hyp [#]",
+   "Androeae [#]",
+   "Lna [#]",
+   "Ver-T [#]",
+   "Val [#]",
+   "Ger [#]",
+   "Gen [#]",
+   "C. hirsuta-type [#]",
+   "Scr [#]",
+   "S. grandifolia [#]",
+   "Epl [#]",
+   "Bot [#]",
+   "Poac [#]",
+   "Art [#]",
+   "Urt [#]",
+   "Cheae [#]",
+   "Rum.a.a [#]",
+   "Rum.a [#]",
+   "Pla.m/m [#]",
+   "Hum/Can [#]",
+   "trilete spores [#]",
+   "Pocae [#]",
+   "Car-T [#]",
+   "Cypae [#]",
+   "Sph [#]",
+   "Equ [#]",
+   "Spe.s [#]",
+   "Lyt [#]",
+   "cf. Scz [#]",
+   "Ped.b [#]",
+   "Ped.b.vb [#]",
+   "Pdi.i [#]",
+   "Coe [#]"
+  ],
+  "n_rows": 121,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Lauterbach, Stefan; Brauer, Achim; Andersen, Nils; Danielopol, Dan L; Dulski, Peter; Hüls, Matthias; Milecka, Krystyna; Namiotko, Tadeusz; Obremska, Milena; von Grafenstein, Ulrich; DecLakes participants (2011): Pollen record of composite sediment core Mo05 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758497, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Pin [#]",
+    "parameter": "Pinus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "Bet [#]",
+    "parameter": "Betula",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "Bet.n [#]",
+    "parameter": "Betula nana",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "Que [#]",
+    "parameter": "Quercus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "Abi [#]",
+    "parameter": "Abies",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "Jun [#]",
+    "parameter": "Juniperus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "Eph.f-T [#]",
+    "parameter": "Ephedra fragilis-type",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "Eph.cf.f [#]",
+    "parameter": "Ephedra cf. fragilis",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "Eph.d-T [#]",
+    "parameter": "Ephedra distachya-type",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 25,
+    "header": "Eph cf. [#]",
+    "parameter": "Ephedra cf.",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 59,
+    "header": "Eriae [#]",
+    "parameter": "Ericaceae",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 77,
+    "header": "Poac [#]",
+    "parameter": "Poaceae",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 78,
+    "header": "Art [#]",
+    "parameter": "Artemisia",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 80,
+    "header": "Cheae [#]",
+    "parameter": "Chenopodiaceae",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 85,
+    "header": "trilete spores [#]",
+    "parameter": "Spores, trilete",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "903772": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "d4b57b54ee4b1de714595d5750cac938e100d585e75bcf95678e82c52a1ad2ee",
+  "xml_sha256": "8f771696bf4be5adcd15c11bde45c1f3f65bbe7a44d6c6ef4abd9f5de18ef89d",
+  "event": {
+   "label": "Rhone_R9_Core",
+   "lat": 45.476205,
+   "lon": 4.781986,
+   "elevation": null,
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "PFBA [ng/g]",
+   "PFPeA [ng/g]",
+   "PFHxA [ng/g]",
+   "PFBS [ng/g]",
+   "PFHpA [ng/g]",
+   "PFOA [ng/g]",
+   "PFNA [ng/g]",
+   "PFDA [ng/g]",
+   "PFUnDA [ng/g]",
+   "PFDoDA [ng/g]",
+   "PFTrDA [ng/g]",
+   "PFTeDA [ng/g]",
+   "PFHxS [ng/g]",
+   "PFHpS [ng/g]",
+   "PFOS [ng/g]",
+   "PFDS [ng/g]",
+   "6:2 FTSA [ng/g]",
+   "FOSA [ng/g]",
+   "MeFOSA [ng/g]",
+   "EtFOSA [ng/g]",
+   "PFAS [ng/g]",
+   "TOC [g/g]"
+  ],
+  "n_rows": 40,
+  "age_column": 1,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Mourier, Brice; Labadie, Pierre; Desmet, Marc; Grosbois, Cécile; Raux, Julie; Debret, Maxime; Copard, Yoann; Pardon, Patrick; Budzinski, Hélène; Babut, Marc (2019): Spatial and temporal trends of per- and polyfluoroalkyl substances (PFASs) in a sediment core from the Rhône River [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.903772, ",
+  "columns": [
+   {
+    "column": 23,
+    "header": "TOC [g/g]",
+    "parameter": "Carbon, organic, total",
+    "unit": "g/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "966842": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "detritico_xrf"
+  ],
+  "tsv_sha256": "6be5094cea6629eee88f8dc19cb0350b8dd95d942e9ca4c1167bf91fc63e8315",
+  "xml_sha256": "4788863fe4c55555d454b2a1bd2a11ec5cc010051afa50f28dad3490683698b9",
+  "event": {
+   "label": "MVSEIS08_TG-2",
+   "lat": 34.97133,
+   "lon": -6.84117,
+   "elevation": "-530.0",
+   "campaign": "MVSEIS2008",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Zr/Al",
+   "ln(Zr/Al)",
+   "Fe/Al",
+   "Ca/Fe",
+   "Si/Ca"
+  ],
+  "n_rows": 212,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Element ratios from XRF-scan of sediment core MVSEIS08_TG-2 from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966842, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Zr/Al",
+    "parameter": "Zirconium/Aluminium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "corrientes",
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "ln(Zr/Al)",
+    "parameter": "ln-Zirconium/Aluminium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "corrientes",
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "Fe/Al",
+    "parameter": "Iron/Aluminium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Ca/Fe",
+    "parameter": "Calcium/Iron ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "Si/Ca",
+    "parameter": "Silicon/Calcium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "777487": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "537cff48884086e77ce560e1e77cd7147cf56726d4c5f9578b9c63967acbcf08",
+  "xml_sha256": "6a497767c37605e962c2e8bfabe53d165cb851f260ea17781d5f4357e4bd3a97",
+  "event": {
+   "label": "Lake_Rot",
+   "lat": 47.0709,
+   "lon": 8.3159,
+   "elevation": "419.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "Acc rate diatom [10**6 #/cm**2/a]",
+   "A. clevei [#]",
+   "A. grana [#]",
+   "A. lanceolata [#]",
+   "A. minutissima var. minutissima [#]",
+   "A. pediculus [#]",
+   "A. formosa [#]",
+   "A. ambigua [#]",
+   "A. granulata [#]",
+   "A. italica [#]",
+   "C. placentula var. euglypta [#]",
+   "C. atomus [#]",
+   "C. comensis [#]",
+   "C. comta [#] (including C. radiosa)",
+   "C. delicatula [#]",
+   "C. distinguenda [#]",
+   "C. dist var. unipunctata [#]",
+   "C. kutzingiana [#]",
+   "C. meneghiniana [#]",
+   "C. ocellata [#]",
+   "C. pseudostelligera [#]",
+   "C. affinis [#]",
+   "C. delicatula [#]",
+   "C. minutum [#]",
+   "C. microcephala [#]",
+   "C. prostrata [#]",
+   "C. silesiaca [#]",
+   "C. tumida [#]",
+   "D. tenuis [#]",
+   "D. ovalis [#]",
+   "F. arcus [#]",
+   "F. biceps [#]",
+   "F. capu var. capu [#]",
+   "F. construens f vaucheriae [#]",
+   "F. crotonensis [#]",
+   "F. delicatissima [#]",
+   "F. fasciculata [#]",
+   "F. pinnata [#]",
+   "F. tenera [#]",
+   "F. ulna [#]",
+   "F. ulna var. acus [#]",
+   "G. acuminatum [#]",
+   "G. angustatum [#]",
+   "G. clavatum [#]",
+   "G. parvulum [#]",
+   "H. amphioxys [#]",
+   "N. capitatoradiata [#]",
+   "N. cincta [#]",
+   "N. cryptocephala [#]",
+   "N. cryptotenella [#]",
+   "N. decussis [#]",
+   "N. gregaria [#]",
+   "N. helensis [#]",
+   "N. leptostriata [#]",
+   "N. menisculus [#]",
+   "N. pupula [#]",
+   "N. radiosa [#]",
+   "N. recens [#]",
+   "N. tripunctata [#]",
+   "N. trivialis [#]",
+   "N. acicularioides [#]",
+   "N. dissipata var. dissipata [#]",
+   "N. capitellata [#]",
+   "N. palea [#]",
+   "N. acicularoides [#]",
+   "P. microstauron [#]",
+   "P. radiosa [#]",
+   "S. alpinus [#]",
+   "S. hantzschii [#]",
+   "S. parvus [#]",
+   "T. fenestrata [#]"
+  ],
+  "n_rows": 17,
+  "age_column": 1,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Naeher, Sebastian; Smittenberg, Rienk H; Gilli, Adrian; Kirilova, Emiliya P; Lotter, André F; Schubert, Carsten J (2012): Diatom abundance in sediments of lake Rotsee, Switzerland [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.777487, ",
+  "columns": [
+   {
+    "column": 69,
+    "header": "S. alpinus [#]",
+    "parameter": "Stephanodiscus alpinus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910806": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "f7edf404c456b4d35c63de17388a4916269eb3f338a5377514af0da653ddd2de",
+  "xml_sha256": "5304e0b29a1e31b07aaae2ed607d08f28f436c9c56885ce77cce9868886057b2",
+  "event": {
+   "label": "HER_GC_UB06",
+   "lat": 36.239938,
+   "lon": -3.989214,
+   "elevation": "-946.0",
+   "campaign": "HERMESIONE",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "TOC [%]"
+  ],
+  "n_rows": 53,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): TOC content of sediment core HER_GC_UB06 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910806, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Element analyser, Thermo Finnigan flash EA 1112",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "867316": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "71e8598c60a47a9e17b9bee77cd16dfbd08a3b84f623dc604ebd685de4389c69",
+  "xml_sha256": "b7199c0600e1a42db2e0ee41f3d1b88ca015252b0bdebe1ba71c75bb89d25cdc",
+  "event": {
+   "label": "KIN2",
+   "lat": 32.717,
+   "lon": 35.5736,
+   "elevation": "-213.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Comm",
+   "Sample ID",
+   "Ace [#]",
+   "Aln [#]",
+   "Bet [#]",
+   "Cas [#]",
+   "Ced [#]",
+   "Cor [#]",
+   "Cot [#]",
+   "cf. Ele [#]",
+   "Eph.d-T [#]",
+   "Eph.f-T [#]",
+   "Frx [#]",
+   "Hip.r [#]",
+   "Ile [#]",
+   "Jug [#]",
+   "Jun [#]",
+   "Nit [#]",
+   "Ole.e [#]",
+   "Phi [#]",
+   "Pin [#]",
+   "Pst [#]",
+   "Plt.or [#]",
+   "cf.Pop [#]",
+   "Prn [#]",
+   "Q. ithaburensis-T [#]",
+   "Q. calliprinos-T [#]",
+   "Rhaae [#]",
+   "Rhus gr [#]",
+   "c. Rhus gr [#]",
+   "cf. Ribes [#]",
+   "Sal [#]",
+   "Sor gr [#]",
+   "Stp [#]",
+   "Tam [#]",
+   "Til [#]",
+   "Ulm [#]",
+   "Vts [#]",
+   "AP [#]",
+   "Adn.a-T [#]",
+   "Alc gr [#]",
+   "Ana-T [#]",
+   "Ane.c [#]",
+   "Apiae [#]",
+   "Art [#]",
+   "Aph [#]",
+   "Asg-T [#]",
+   "Bal-T [#]",
+   "Bituminaria [#]",
+   "Borae [#]",
+   "Braae [#]",
+   "Camae [#]",
+   "cf.Camae [#]",
+   "Cphae [#]",
+   "Cen.c-T [#]",
+   "Centaurea indet [#]",
+   "Cen.j-T [#]",
+   "Cen.m-T [#]",
+   "Cen.s-T [#]",
+   "Crl-T [#]",
+   "Cheae [#]",
+   "Cis-T [#]",
+   "Col gr [#]",
+   "Cnv.a-T [#]",
+   "Cus.e-T [#]",
+   "Cypae [#]",
+   "Dipae [#]",
+   "Eop [#]",
+   "Epl [#]",
+   "Eup [#]",
+   "cf.Eup [#]",
+   "Fabae [#]",
+   "Flp [#]",
+   "Geo-T [#]",
+   "Ger [#]",
+   "Hal [#]",
+   "Hed [#]",
+   "Hel-T [#]",
+   "Hel.f-T [#]",
+   "H. niger-T [#]",
+   "Hel.v-T [#]",
+   "Hum-T [#]",
+   "Hyp [#]",
+   "Ligae [#]",
+   "Lilae [#]",
+   "Lin [#]",
+   "Lyt [#]",
+   "Malvae [#]",
+   "Mtt [#]",
+   "Mel [#]",
+   "Men-T [#]",
+   "Onb [#]",
+   "Pap.h-T [#]",
+   "cf. Par.p [#]",
+   "Pim-T [#]",
+   "Pla [#]",
+   "Pluae [#]",
+   "Poac [#]",
+   "Polae [#]",
+   "Pol.i-T [#]",
+   "Pti-T [#]",
+   "Priae [#]",
+   "Ranae [#]",
+   "Ran.la-type [#]",
+   "Rosae [#]",
+   "Rubae [#]",
+   "Rum [#]",
+   "Sav.p-T [#]",
+   "Sar.s-T [#]",
+   "Sax.a-T [#]",
+   "Scoae [#]",
+   "cf.Scoae [#]",
+   "Solae [#]",
+   "Sym [#]",
+   "Tha [#]",
+   "Tri-T [#]",
+   "Tubae [#]",
+   "Tur.l [#]",
+   "Urt.p-T [#]",
+   "Urtae [#]",
+   "cf. Urtae [#]",
+   "NAP [#]",
+   "Pollen tot [#]",
+   "C. parnassifolia [#]",
+   "cf. C. parnassifolia [#]",
+   "Lem [#]",
+   "Myr.a-T [#]",
+   "Myo.s-T [#]",
+   "Pot [#]",
+   "Sgt-T [#]",
+   "Spa-T [#]",
+   "Typ.l-T [#]",
+   "Bot [#]",
+   "Dinofl [#]",
+   "Iso [#]",
+   "Pdi [#]",
+   "Pocae [#]",
+   "trilete spores [#]",
+   "Pollen broken [#]",
+   "Pollen corroded [#]",
+   "Pollen crumpled [#]",
+   "Varia [#]",
+   "Ind.ud.p [#]",
+   "Lyc [#]",
+   "Samp vol [cm**3]"
+  ],
+  "n_rows": 60,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": {
+   "doi": "10.1016/j.quascirev.2016.11.013",
+   "year": "2017",
+   "title": "Vegetation and climate during the Last Glacial high stand (ca. 28-22 ka BP) of the Sea of Galilee, northern Israel"
+  },
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Miebach, Andrea; Chen, Chunzhu; Schwab, Markus J; Stein, Mordechai; Litt, Thomas (2016): Pollen and non-pollen palynomorph counts of sediment core KIN2 from the Sea of Galilee, northern Israel [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.867316, ",
+  "columns": [
+   {
+    "column": 6,
+    "header": "Bet [#]",
+    "parameter": "Betula",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Ced [#]",
+    "parameter": "Cedrus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Eph.d-T [#]",
+    "parameter": "Ephedra distachya-type",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Eph.f-T [#]",
+    "parameter": "Ephedra fragilis-type",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "Jun [#]",
+    "parameter": "Juniperus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "Ole.e [#]",
+    "parameter": "Olea europaea",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "Pin [#]",
+    "parameter": "Pinus",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "Pst [#]",
+    "parameter": "Pistacia",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 27,
+    "header": "Q. ithaburensis-T [#]",
+    "parameter": "Quercus ithaburensis-type",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 28,
+    "header": "Q. calliprinos-T [#]",
+    "parameter": "Quercus calliprinos-type",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 40,
+    "header": "AP [#]",
+    "parameter": "Arboreal pollen",
+    "unit": "#",
+    "method": null,
+    "comment": "sum",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 46,
+    "header": "Art [#]",
+    "parameter": "Artemisia",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 62,
+    "header": "Cheae [#]",
+    "parameter": "Chenopodiaceae",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 99,
+    "header": "Poac [#]",
+    "parameter": "Poaceae",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 123,
+    "header": "NAP [#]",
+    "parameter": "Non arboreal pollen",
+    "unit": "#",
+    "method": null,
+    "comment": "sum",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 124,
+    "header": "Pollen tot [#]",
+    "parameter": "Pollen, total",
+    "unit": "#",
+    "method": null,
+    "comment": "sum",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 139,
+    "header": "trilete spores [#]",
+    "parameter": "Spores, trilete",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 140,
+    "header": "Pollen broken [#]",
+    "parameter": "Pollen, broken",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 141,
+    "header": "Pollen corroded [#]",
+    "parameter": "Pollen, corroded",
+    "unit": "#",
+    "method": null,
+    "comment": "corroded/degraded",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 142,
+    "header": "Pollen crumpled [#]",
+    "parameter": "Pollen, crumpled",
+    "unit": "#",
+    "method": null,
+    "comment": "crumpled/concealed",
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 144,
+    "header": "Ind.ud.p [#]",
+    "parameter": "Unknown pollen",
+    "unit": "#",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "crossref_sha256": "38b7eb9dfaa42a703c6bbca64badd5023b6e8cc2a9eb0ee6fc3850c521715a16"
+ },
+ "910807": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "47cc616db617fc504c7bed80064698721069ffc669f0b896fc5b12abfc8f502a",
+  "xml_sha256": "11e8bec1266490f9abb4a601f94f41bc5c6b1c6e3cabd66934c3f34fbd1b8532",
+  "event": {
+   "label": "MD95-2043",
+   "lat": 36.143333333333,
+   "lon": -2.6211666666667,
+   "elevation": "-1841.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "TOC [%]"
+  ],
+  "n_rows": 47,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): TOC content of sediment core MD95-2043 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910807, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Element analyser, Thermo Finnigan flash EA 1112",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872767": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "171a100c62fc65e591d07a217691e0196d23ebc6a0ebfb2ef5446dbe9b20d7be",
+  "xml_sha256": "e45d40b624ab70b884b46fbea6d159c7b9081bb0addaf2bce0ef37c214428e3d",
+  "event": {
+   "label": "161-976",
+   "lat": 36.205366666667,
+   "lon": -4.3126666666667,
+   "elevation": "-1108.0",
+   "campaign": "Leg161",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 256,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core 161-976 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872767",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910808": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "38034c32106546cd26713ea26ad71934407fa88777eecb9c64830f8094297d29",
+  "xml_sha256": "971f6b8097477b08aec1a19475285107756cea4ef2e585cafd5b868f9456eb9e",
+  "event": {
+   "label": "MD99-2343",
+   "lat": 40.497333333333,
+   "lon": 4.0281666666667,
+   "elevation": "-2391.0",
+   "campaign": "MD114",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "TOC [%]"
+  ],
+  "n_rows": 26,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): TOC content of sediment core MD99-2343 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910808, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Element analyser, Thermo Finnigan flash EA 1112",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872776": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "6be3313764edffba64632acf9c2731e77719e3f1d8ae91fed9cb1c76ac2edd6a",
+  "xml_sha256": "599b766e6c253dad8c5543fe9039c149e37c0e76ad5d53323d9001c329b06f7d",
+  "event": {
+   "label": "Abric_Romani",
+   "lat": 41.53,
+   "lon": 1.68,
+   "elevation": "350.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 98,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core Abric_Romani [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872776",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "914105": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "mo_otros",
+   "toc"
+  ],
+  "tsv_sha256": "c08016110d8763a13b8ba370a75174196712c58d1180b99a511e94526548226a",
+  "xml_sha256": "d44ca764156c0ee82c6bfcdc948cb235c15bb4e50ef3fedd64067152a90ea6e3",
+  "event": {
+   "label": "NTG16",
+   "lat": 47.6567,
+   "lon": 13.0467,
+   "elevation": "560.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Age min [ka]",
+   "Age max [ka]",
+   "TN [%]",
+   "TS [%]",
+   "TOC [%]",
+   "TIC [%]",
+   "TOC/TN"
+  ],
+  "n_rows": 527,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Mayr, Christoph; Stojakowits, Philipp; Lempe, Bernhard; Blaauw, Maarten; Diersche, Volker; Grohganz, Madleen; López Correa, Matthias; Ohlendorf, Christian; Reimer, Paula J; Zolitschka, Bernd (2020): Organic chemistry analyses of sediment profile NTG16 from the northern Alps (Nesseltalgraben, Germany) [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.914105, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "TN [%]",
+    "parameter": "Nitrogen, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mo_otros"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "TIC [%]",
+    "parameter": "Carbon, inorganic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "TOC/TN",
+    "parameter": "Carbon, organic, total/Nitrogen, total ratio",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mo_otros",
+     "mo_ratios",
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872777": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "c0b5f6f6a43a7217474cc68af2f4e845e77de043e93bfe49f94a040f0716b270",
+  "xml_sha256": "20c0668c76518b41682353a376a47888f2d86dfcd73cadf7fef23e97272a243d",
+  "event": {
+   "label": "Azzano_Decimo",
+   "lat": 45.8833,
+   "lon": 12.7165,
+   "elevation": "10.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 248,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core Azzano_Decimo [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872777",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "940835": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "296f656d4e09d5b41c4e3c9b8ae11d5e9c348164949508ad85558e5cd6978186",
+  "xml_sha256": "be8ab212e6cc18389634c0644266167fc7577e780ed6d67069886d7d63b6873c",
+  "event": {
+   "label": "GeoB13729-1",
+   "lat": 35.4345,
+   "lon": -2.5138333333333,
+   "elevation": "-442.0",
+   "campaign": "POS385",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "TC [%]",
+   "TOC [%]",
+   "TIC [%]",
+   "CaCO3 [%]"
+  ],
+  "n_rows": 43,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Wang, Haozhuang; Titschack, Jürgen; Wienberg, Claudia; Korpanty, Chelsea; Hebbeln, Dierk (2025): Interpolated matrix-sediment total carbon and total organic carbon measurements of sediment core GeoB13729-1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.940835, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "TIC [%]",
+    "parameter": "Carbon, inorganic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "CaCO3 [%]",
+    "parameter": "Calcium carbonate",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872778": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "2b24f040cd324171b26359c63aeff50222a8f42d418e517180a65e94353f287a",
+  "xml_sha256": "9d2dddaa9a617eed1bc504958142160189ad03654c4237515d12308e0ee03842",
+  "event": {
+   "label": "BANYOLES",
+   "lat": 42.133333,
+   "lon": 2.75,
+   "elevation": "173.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 110,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core BANYOLES [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872778",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "954411": {
+  "status": "proposed",
+  "families": [
+   "bromo_mo",
+   "cronologia",
+   "detritico_xrf",
+   "mo_otros",
+   "toc"
+  ],
+  "tsv_sha256": "221fd048f673c8b78c3bc4d1d9e0a5047c078f7957c85d5f4e31700bc2390d32",
+  "xml_sha256": "83f14c903386dc21104572a3007ce144e1392e1b37bf95be2538170c2efd998f",
+  "event": {
+   "label": "PEX19-01",
+   "lat": 40.343044,
+   "lon": -7.605371,
+   "elevation": "1677.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "Br/TOC",
+   "Cl/TOC",
+   "Fe/Ca",
+   "Ti/Ca",
+   "Nb/Ca"
+  ],
+  "n_rows": 170,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Moreno, João; Hernández, Armand; Raposeiro, Pedro Miguel (2023): Br/TOC, Cl/TOC, Fe/Ca, Ti/Ca, and Nb/Ca ratios of sediment core PEX19-01 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.954411, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "Br/TOC",
+    "parameter": "Bromine/total organic carbon ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "bromo_mo",
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "Cl/TOC",
+    "parameter": "Chlorine/Carbon, organic, total, ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "mo_otros",
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "Fe/Ca",
+    "parameter": "Iron/Calcium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "Ti/Ca",
+    "parameter": "Titanium/Calcium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872788": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "57ad31fbf31c5d6ce79741fdc23c436d8bf8226ce85bc3a5f4b5f167a73c0593",
+  "xml_sha256": "ed8d8c7868df7e60029b32b36a15c0158da3e15042d8d4e25176973c4c819c5e",
+  "event": {
+   "label": "FURAMOOS",
+   "lat": 47.98333,
+   "lon": 9.88333,
+   "elevation": "662.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 122,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core FURAMOOS [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872788",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "966998": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "mo_otros",
+   "mo_ratios",
+   "toc"
+  ],
+  "tsv_sha256": "6f84ff094a4a2108e8bdd6419a39ef90fc361df0227eb02d1929e9279bd8d38e",
+  "xml_sha256": "0e1c6f318ebb3d16d55bc60fe7f0721bd2b78fb80af051894a16534362241e83",
+  "event": {
+   "label": "Figino19-2",
+   "lat": 45.95802778,
+   "lon": 8.89430556,
+   "elevation": null,
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Sample comment",
+   "Depth corr [m]",
+   "Age model [ka]",
+   "Age [a AD/CE]",
+   "Age [ka BP]",
+   "DBD [g/cm**3]",
+   "δ15N DB [‰ air]",
+   "δ15N DB std dev [±]",
+   "TN [%]",
+   "TOC [%]",
+   "TIC [%]",
+   "TOC/TN",
+   "δ15N bulk [‰ air]",
+   "δ13C TOC [‰ PDB]",
+   "Acc rate TOC [mg/cm**2/a]",
+   "δ15N [‰ air]"
+  ],
+  "n_rows": 56,
+  "age_column": 4,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Studer, Anja S; Wörmer, Lars; Vogel, Hendrik; Dubois, Nathalie; Bartosiewicz, Maciej; Hinrichs, Kai-Uwe; Lepori, Fabio; Lehmann, Moritz F (2024): Diatom-bound nitrogen isotope analyses of sediment cores Figino19-2 from lake Lugano, Switzerland [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966998, ",
+  "columns": [
+   {
+    "column": 7,
+    "header": "δ15N DB [‰ air]",
+    "parameter": "δ15N, diatom-bound organic matter",
+    "unit": "‰ air",
+    "method": "Persulfate-denitrifier method according to Knapp et al. (2005)",
+    "comment": "Persulfate-denitrifier method according to Knapp et al. (2005, doi:10.1029/2004GB002320) via Gas Chromatography - Isotope Ratio Mass Spectrometry (GC-IRMS), Thermo Fisher Scientific, GasBench II (customized) - ConFlo IV - Delta V Plus",
+    "families": [
+     "mo_ratios"
+    ],
+    "error_column": 8,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "TN [%]",
+    "parameter": "Nitrogen, total",
+    "unit": "%",
+    "method": "Elemental Analysis - Isotope Ratio Mass Spectrometry (EA-IRMS), Thermo Fisher Scientific, EA IsoLink CN - ConFlo IV - Delta V Plus",
+    "comment": null,
+    "families": [
+     "mo_otros"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Elemental Analysis - Isotope Ratio Mass Spectrometry (EA-IRMS), Thermo Fisher Scientific, EA IsoLink CN - ConFlo IV - Delta V Plus",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "TIC [%]",
+    "parameter": "Carbon, inorganic, total",
+    "unit": "%",
+    "method": "Elemental Analysis - Isotope Ratio Mass Spectrometry (EA-IRMS), Thermo Fisher Scientific, EA IsoLink CN - ConFlo IV - Delta V Plus",
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "TOC/TN",
+    "parameter": "Carbon, organic, total/Nitrogen, total ratio",
+    "unit": "sin unidad",
+    "method": "Elemental Analysis - Isotope Ratio Mass Spectrometry (EA-IRMS), Thermo Fisher Scientific, EA IsoLink CN - ConFlo IV - Delta V Plus",
+    "comment": null,
+    "families": [
+     "mo_otros",
+     "mo_ratios",
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "δ15N bulk [‰ air]",
+    "parameter": "δ15N, bulk sediment",
+    "unit": "‰ air",
+    "method": "Elemental Analysis - Isotope Ratio Mass Spectrometry (EA-IRMS), Thermo Fisher Scientific, EA IsoLink CN - ConFlo IV - Delta V Plus",
+    "comment": null,
+    "families": [
+     "mo_ratios"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "δ13C TOC [‰ PDB]",
+    "parameter": "δ13C, total organic carbon",
+    "unit": "‰ PDB",
+    "method": "Elemental Analysis - Isotope Ratio Mass Spectrometry (EA-IRMS), Thermo Fisher Scientific, EA IsoLink CN - ConFlo IV - Delta V Plus",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "Acc rate TOC [mg/cm**2/a]",
+    "parameter": "Accumulation rate, total organic carbon per year",
+    "unit": "mg/cm**2/a",
+    "method": "Calculated",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "δ15N [‰ air]",
+    "parameter": "δ15N",
+    "unit": "‰ air",
+    "method": "Calculated",
+    "comment": "DB minus bulk",
+    "families": [
+     "mo_ratios"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872791": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "ada250280d88628c809f2f87549d25362bce4e52ebaa44c80eef6b0bd559f1d7",
+  "xml_sha256": "0dca5a502f83a221327145d97bb75a0bc281b777416a5562e453821a32b5c379",
+  "event": {
+   "label": "IOANNINA",
+   "lat": 39.7625,
+   "lon": 20.730556,
+   "elevation": "470.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 291,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core Ioannina [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872791",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "992690": {
+  "status": "proposed",
+  "families": [
+   "bromo_mo",
+   "color_grises",
+   "cronologia",
+   "detritico_xrf",
+   "mo_otros",
+   "toc"
+  ],
+  "tsv_sha256": "e076dcae32076527f56fa783d35c839b6e0445199b6e019c5a55b29038eacc1f",
+  "xml_sha256": "9b5c0bac656ad4c2ab2871c75f49e840af7e50d1c88ee44b0a93fd58ee4647f1",
+  "event": {
+   "label": "Laguna_Seca_LS-01",
+   "lat": 37.0979,
+   "lon": -2.9681,
+   "elevation": null,
+   "campaign": "Sierra_Nevada_2014",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "MAGS [10**-6 SI]",
+   "TOC [%]",
+   "TN [%]",
+   "Al [cps]",
+   "Si [cps]",
+   "K [cps]",
+   "Ti [cps]",
+   "Rb [cps]",
+   "Zr [cps]",
+   "Fe [cps]",
+   "S [cps]",
+   "Ca [cps]",
+   "Br [cps]",
+   "L*",
+   "a*",
+   "b*"
+  ],
+  "n_rows": 679,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "García-Alix, Antonio; Jiménez-Moreno, Gonzalo; Camuera, Jon; López-Avilés, Alejandro (2026): Latest Pleistocene and Holocene paleoenvironmental data of Laguna Seca alpine wetland (Sierra Nevada, southern Iberian Peninsula) over the last 15.8 kyr [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.992690",
+  "columns": [
+   {
+    "column": 3,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Element Analyzer (CHNS), Thermo Scientific, FLASH 2000",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "TN [%]",
+    "parameter": "Nitrogen, total",
+    "unit": "%",
+    "method": "Element Analyzer (CHNS), Thermo Scientific, FLASH 2000",
+    "comment": null,
+    "families": [
+     "mo_otros"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Al [cps]",
+    "parameter": "Aluminium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "Si [cps]",
+    "parameter": "Silicon",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "K [cps]",
+    "parameter": "Potassium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Ti [cps]",
+    "parameter": "Titanium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "Rb [cps]",
+    "parameter": "Rubidium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "Zr [cps]",
+    "parameter": "Zirconium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "Fe [cps]",
+    "parameter": "Iron",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "S [cps]",
+    "parameter": "Sulfur",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Ca [cps]",
+    "parameter": "Calcium",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "Br [cps]",
+    "parameter": "Bromine",
+    "unit": "cps",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "bromo_mo",
+     "xrf_escaner"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "L*",
+    "parameter": "Color, L*, lightness",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "color_grises"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "a*",
+    "parameter": "Color, a*",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "color_grises"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "b*",
+    "parameter": "Color, b*",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence core scanner (XRF), Avaatech",
+    "comment": null,
+    "families": [
+     "color_grises"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872797": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "ac56b1bf21deea5c0233da4fac61521034a1eb5e288e6d0d189d8fcff1b9bbfc",
+  "xml_sha256": "e02017b66909b91fd99b833a3eb6bd3b27ac837a9022a06a1ec29d76121dbe00",
+  "event": {
+   "label": "Lac_du_Bouchet",
+   "lat": 44.83,
+   "lon": 3.82,
+   "elevation": "1200.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 505,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core Lac_du_Bouchet [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872797",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "993109": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "detritico_xrf",
+   "mo_otros",
+   "polen",
+   "redox",
+   "toc"
+  ],
+  "tsv_sha256": "49410cb5eeaab54ceb13540a0a139bbc669840e778d1a78190f59b4f015a047f",
+  "xml_sha256": "c283df974227f0f3164043894f41d72053a872572ae613766cb2bacde92bb8ba",
+  "event": {
+   "label": "UBE22-COMP1",
+   "lat": 46.7344,
+   "lon": 7.565,
+   "elevation": "641.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Cal age min [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+   "Cal age max [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+   "Cal age median [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+   "Cal age mean [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+   "Depth sed [m]",
+   "Depth ref [m] (Radiocarbon depth)",
+   "Age [ka BP] (Radiocarbon age, mean, Age mo...)",
+   "Age std dev [±] (Age model, Bacon (Blaauw & Ch...)",
+   "Lab label",
+   "AP [%] (Relative abundance (calculated))",
+   "Tre.shr [%] (Relative abundance (calculated))",
+   "Betula [%] (Relative abundance (calculated))",
+   "Jun [%] (Relative abundance (calculated))",
+   "Pinus s/g Pinus [%] (Relative abundance (calculated))",
+   "Artemisia [%] (Relative abundance (calculated))",
+   "Poac [%] (Relative abundance (calculated))",
+   "Pollen tot [#] (Counted)",
+   "Moisture [%]",
+   "DBD [g/cm**3]",
+   "TOC [%] (% of weight, dry, Calculated)",
+   "TIC [%] (% of weight, dry, Calculated)",
+   "TN [%] (% of weight, dry, Calculated)",
+   "TS [%] (% of weight, dry, Calculated)",
+   "TOC/TN (Calculated)",
+   "AP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "RP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Mn redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Mn org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "MnCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Fe redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Fe org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "FeCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Fe res/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+   "Chloropigm a/sed [µg/g] (Measurement on wet sediment, ...)",
+   "BChl a/sed [µg/g] (Measurement on wet sediment, ...)",
+   "Chl a/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Phaeopho a/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Phaeophytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Green pigm/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Carotenoids/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Cantha/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Echin/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Asta/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Zea/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Oke/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Isor/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Allo/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Diadino/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Fuco/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Lut/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Diatox/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Sphe/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "BPhytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+   "Batch no [#] (Number of batch of pigment ex...)"
+  ],
+  "n_rows": 67,
+  "age_column": 6,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Schmidhauser, Noé Raymond Marie Marcel; Schouten, Stan Jonah; Zahajská, Petra; Lami, Andrea; van Leeuwen, Jacqueline F N; Tjallingii, Rik; Vogel, Hendrik; Grosjean, Martin (2026): Pigments, sequential extraction (P, Fe, Mn), pollen and CNS measurements from sediment core UBE22-COMP1 of lake Übeschi, Switzerland [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993109",
+  "columns": [
+   {
+    "column": 9,
+    "header": "AP [%] (Relative abundance (calculated))",
+    "parameter": "Arboreal pollen",
+    "unit": "%",
+    "method": "Relative abundance (calculated)",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "Betula [%] (Relative abundance (calculated))",
+    "parameter": "Betula",
+    "unit": "%",
+    "method": "Relative abundance (calculated)",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Jun [%] (Relative abundance (calculated))",
+    "parameter": "Juniperus",
+    "unit": "%",
+    "method": "Relative abundance (calculated)",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Pinus s/g Pinus [%] (Relative abundance (calculated))",
+    "parameter": "Pinus subgen. Pinus",
+    "unit": "%",
+    "method": "Relative abundance (calculated)",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "Artemisia [%] (Relative abundance (calculated))",
+    "parameter": "Artemisia",
+    "unit": "%",
+    "method": "Relative abundance (calculated)",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "Poac [%] (Relative abundance (calculated))",
+    "parameter": "Poaceae",
+    "unit": "%",
+    "method": "Relative abundance (calculated)",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "Pollen tot [#] (Counted)",
+    "parameter": "Pollen, total",
+    "unit": "#",
+    "method": "Counted",
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "TOC [%] (% of weight, dry, Calculated)",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Calculated",
+    "comment": "% of weight, dry",
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "TIC [%] (% of weight, dry, Calculated)",
+    "parameter": "Carbon, inorganic, total",
+    "unit": "%",
+    "method": "Calculated",
+    "comment": "% of weight, dry",
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "TN [%] (% of weight, dry, Calculated)",
+    "parameter": "Nitrogen, total",
+    "unit": "%",
+    "method": "Calculated",
+    "comment": "% of weight, dry",
+    "families": [
+     "mo_otros"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "TOC/TN (Calculated)",
+    "parameter": "Carbon, organic, total/Nitrogen, total ratio",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": null,
+    "families": [
+     "mo_otros",
+     "mo_ratios",
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 26,
+    "header": "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Manganese, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 27,
+    "header": "Mn redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Manganese,redox-sensitive, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 28,
+    "header": "Mn org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Manganese, organic-bound, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 29,
+    "header": "MnCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Manganese carbonate, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 31,
+    "header": "Fe redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Iron, redox-sensitive, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 32,
+    "header": "Fe org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Iron, organic-bound, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 33,
+    "header": "FeCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Iron carbonate, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 34,
+    "header": "Fe res/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+    "parameter": "Iron, residual, per unit sediment dry mass",
+    "unit": "µg/mg",
+    "method": "Inductively coupled plasma mass spectrometer (ICP-MS), Agilent, 8900",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "872798": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "polen"
+  ],
+  "tsv_sha256": "1c597763d6181570909bedd048613c1071c80ef44f1a1836fd9207fda45e53ea",
+  "xml_sha256": "b9ddb04328d20acf56ae041699d71f0ff22a8ed5c74f780f9f14f908a336fbd4",
+  "event": {
+   "label": "Lagaccione",
+   "lat": 42.57,
+   "lon": 11.8,
+   "elevation": "355.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Cal age min [ka BP]",
+   "Cal age max [ka BP]",
+   "Cal age [ka BP]",
+   "Accu model [a/cm]",
+   "Age model type",
+   "Sample ID",
+   "Pollen te forest [%]"
+  ],
+  "n_rows": 235,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+  "citation": "ACER project members; Sanchez Goñi, Maria Fernanda; Desprat, Stéphanie; Daniau, Anne-Laure; Allen, Judy R M; Anderson, R Scott; Behling, Hermann; Bonnefille, Raymonde; Cheddadi, Rachid; Combourieu-Nebout, Nathalie; Dupont, Lydie M; Fletcher, William J; González, Catalina; Grigg, Laurie D; Grimm, Eric C; Hayashi, Ryoma; Helmens, Karin F; Hessler, Ines; Heusser, Linda E; Hooghiemstra, Henry; Huntley, Brian; Igarashi, Yaeko; Irino, Tomohisa; Jacobs, Bonnie Fine; Jiménez-Moreno, Gonzalo; Kawai, Sayuri; Kumon, Fujio; Lawson, Ian T; Lebamba, Judicael; Ledru, Marie-Pierre; Lézine, Anne-Marie; Liew, Ping-Mei; Londeix, Laurent; López-Martinez, Constancia; Magri, Donatella; Maley, Jean; Margari, Vasiliki; Marret, Fabienne; Müller, Ulrich C; Naughton, Filipa; Novenko, Elena Y; Oba, Tadamichi; Roucoux, Katherine H; Takahara, Hikaru; Tzedakis, Polychronis C; Vincens, Annie; Whitlock, Cathy L; Willard, Debra A; Yamamoto, Masanobu (2017): CLAM age model and biomes of sediment core Lagaccione [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.872798",
+  "columns": [
+   {
+    "column": 8,
+    "header": "Pollen te forest [%]",
+    "parameter": "Pollen, temperate forest",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "polen"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
  }
 }
