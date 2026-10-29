@@ -68,7 +68,7 @@ jobs:
   pangaea-v5:
     # [v5] en el mensaje: propone N datasets nuevos (variable PROPOSE, por defecto 0), cura desde el
     # contrato, construye atlas-v5 sobre atlas-v4 y fija contrato/informes/release en la rama.
-    if: contains(github.event.head_commit.message, '[v5]') || (github.event_name == 'workflow_dispatch' && inputs.job == 'v5')
+    if: contains(github.event.head_commit.message, '[v5') || (github.event_name == 'workflow_dispatch' && inputs.job == 'v5')
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
