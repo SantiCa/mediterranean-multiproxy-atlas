@@ -175,7 +175,7 @@ jobs:
             let body = first;
             for (let i = 0; i < 5000; i++) {
               let r;
-              // Retry while a fresh workers.dev route still answers with Cloudflare's 404 page.
+              // Retry while a fresh workers.dev route still answers with the Cloudflare 404 page.
               for (let t = 0; t < 30; t++) {
                 r = await fetch(base + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
                 if (r.status !== 404) break;
