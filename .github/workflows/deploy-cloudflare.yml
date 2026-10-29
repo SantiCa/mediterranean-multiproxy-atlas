@@ -123,6 +123,17 @@ jobs:
         if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
         run: npx wrangler deploy --config dist/server/wrangler.json
 
+      # Owner password for the private area («Mis datos»), from the GitHub secret
+      # ATLAS_OWNER_PASSWORD. Never printed; skipped when the secret is absent.
+      - name: Owner password secret
+        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
+        env:
+          OWNER_PASSWORD: ${{ secrets.ATLAS_OWNER_PASSWORD }}
+        run: |
+          if [ -z "$OWNER_PASSWORD" ]; then echo "::notice title=Mis datos::Sin ATLAS_OWNER_PASSWORD; el área privada queda desactivada."; exit 0; fi
+          [ ${#OWNER_PASSWORD} -ge 12 ] || { echo "::warning title=Mis datos::ATLAS_OWNER_PASSWORD debe tener al menos 12 caracteres"; exit 0; }
+          printf %s "$OWNER_PASSWORD" | npx wrangler secret put OWNER_PASSWORD --name "$WORKER_NAME" > /dev/null && echo "::notice title=Mis datos::Contraseña del área privada actualizada."
+
       # Give the Worker a public workers.dev URL: register the account subdomain on
       # first use (SUBDOMAIN below) and enable workers.dev for this script.
       - name: Enable workers.dev URL

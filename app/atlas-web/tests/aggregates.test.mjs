@@ -1,0 +1,31 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { proxyCatalog as proxyGroups, sortGroups, inGroup, groupKey, filterGroups } from "../lib/proxies.mjs";
+const rec = (id) => ({ id, name: id, provider: "PANGAEA", realm: "marine", publication_year: 2010 });
+const ser = (id, r, proxy, cg, unit, label, n) => ({ id, record_id: r, proxy, compatibility_group: cg, unit, label, observation_count: n, rows: [] });
+const data = {
+  records: ["a", "b", "c"].map(rec),
+  series: [
+    ser("1", "a", "alkenone_SST", "sst_alk", "°C", "SST · alquenonas", 10),
+    ser("2", "b", "MgCa_SST", "sst_mgca", "°C", "SST · Mg/Ca", 5),
+    ser("3", "c", "Sea_surface_temperature_summer_C", "x", "°C", "Sea surface temperature, summer", 7),
+    ser("4", "c", "MAAT_GDGT", "y", "°C", "MAAT", 3),
+  ],
+};
+test("SST aggregation joins methods in °C, excludes air temperature", () => {
+  const g = proxyGroups(data);
+  const all = g.find((x) => x.id === "agg:sst_all");
+  assert.equal(all.members.length, 3);
+  assert.equal(all.records, 3);
+  assert.equal(all.count, 22);
+  assert.ok(!inGroup(data.series[3], all.key));
+  assert.ok(inGroup(data.series[0], groupKey(data.series[0])));
+  const annual = g.find((x) => x.id === "agg:sst_annual");
+  assert.equal(annual.members.length, 2);
+});
+test("sorting by records and values; aggregation can be hidden", () => {
+  const g = proxyGroups(data);
+  assert.equal(sortGroups(g, "values")[0].id, "agg:sst_all");
+  assert.ok(filterGroups(g, { aggregates: false }).every((x) => !x.aggregate));
+  assert.ok(filterGroups(g, { minRecords: 2 }).every((x) => x.records >= 2));
+});

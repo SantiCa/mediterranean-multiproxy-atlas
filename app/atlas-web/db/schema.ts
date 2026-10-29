@@ -103,3 +103,26 @@ export const inventoryReleases = sqliteTable("atlas_inventory_releases", {
   count: integer("entry_count").notNull(),
   importedAt: text("imported_at").notNull(),
 });
+// Owner-only private uploads (lib/private-data.mjs); never served by public endpoints.
+export const privateDatasets = sqliteTable("atlas_private_datasets", {
+  id: text("id").primaryKey(),
+  name: text("name").notNull(),
+  filename: text("filename"),
+  createdAt: text("created_at").notNull(),
+  record: text("record_json").notNull(),
+  series: text("series_json").notNull(),
+  warnings: text("warnings_json"),
+});
+export const privateSessions = sqliteTable("atlas_private_sessions", {
+  tokenHash: text("token_hash").primaryKey(),
+  createdAt: text("created_at").notNull(),
+  expiresAt: text("expires_at").notNull(),
+});
+export const privateFailures = sqliteTable(
+  "atlas_private_failures",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    at: text("at").notNull(),
+  },
+  (t) => [index("atlas_private_failures_at_idx").on(t.at)],
+);
