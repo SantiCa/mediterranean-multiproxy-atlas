@@ -1,22 +1,22 @@
 {
-  "version": "atlas-quantitative-2026-10-29-v5-cdedc8c83db",
+  "version": "atlas-quantitative-2026-10-29-v5-c4076cfec46",
   "parent_version": "atlas-quantitative-2026-10-29-v4-r2",
   "parent_sha256": "c3729bbc2a3fa7883e1609f0f930c701532739f41ef4174e8b18cfe563cc36c5",
   "parent_unchanged": true,
   "counts": {
     "records": 102,
-    "series": 781,
-    "values": 328903,
+    "series": 777,
+    "values": 237294,
     "new_records": 56,
-    "new_series": 629,
-    "new_values": 225369,
-    "missing_age_values": 98020
+    "new_series": 625,
+    "new_values": 133760,
+    "missing_age_values": 6419
   },
   "input_fragments": {
     "pangaea": {
       "records": 64,
-      "series": 631,
-      "values": 225405
+      "series": 627,
+      "values": 133796
     }
   },
   "family_counts": {
@@ -31,11 +31,11 @@
     "Isótopos radiogénicos": 6,
     "Paleopolvo": 1,
     "Mineralogía": 2,
-    "Foraminíferos": 169,
-    "Materia orgánica y biomarcadores": 43,
+    "Foraminíferos": 168,
+    "Materia orgánica y biomarcadores": 40,
     "Polen": 83
   },
-  "comparison_groups": 584,
+  "comparison_groups": 580,
   "numeric_age_extent_ka_bp": [
     -1.5,
     4700.0
@@ -106,10 +106,6 @@
     "pangaea5-253159:Color_X_sin_unidad",
     "pangaea5-253159:Color_Y_sin_unidad",
     "pangaea5-253159:Color_Z_sin_unidad",
-    "pangaea5-259375:Carbon_organic_total_",
-    "pangaea5-259375:Carbon_organic_pyrolyzable_mg_HC_g",
-    "pangaea5-259375:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g",
-    "pangaea5-259375:Hydrogen_index_mass_HC_per_unit_mass_total_organic_carbon_mg_g",
     "pangaea5-327443:Potassium_cps",
     "pangaea5-634051:Cibicidoides_pachyderma_18O_PDB",
     "pangaea5-634051:Cibicidoides_pachyderma_13C_PDB",
@@ -901,6 +897,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "porcentaje fuera de [0,100]; serie completa preservada sin recortar"
       },
@@ -945,6 +942,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "porcentaje fuera de [0,100]; serie completa preservada sin recortar"
       },
@@ -989,6 +987,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "ninguna fila con edad"
       },
@@ -1033,6 +1032,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "ninguna fila con edad"
       },
@@ -1077,6 +1077,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "ninguna fila con edad"
       },
@@ -1121,6 +1122,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "ninguna fila con edad"
       },
@@ -1165,6 +1167,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "ninguna fila con edad"
       },
@@ -1209,6 +1212,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1253,6 +1257,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1297,6 +1302,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1341,6 +1347,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1385,6 +1392,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1429,6 +1437,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1473,6 +1482,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1517,6 +1527,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1561,6 +1572,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       },
@@ -1607,6 +1619,7 @@
         "uncertainty_type": "not_supplied_for_selected_column",
         "value_uncertainty_source_column": null,
         "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
       }
@@ -1920,6 +1933,6 @@
       }
     ]
   },
-  "sha256": "fde86bfc5cfab64e614b6c15010929fe8c257e8478215b5f105f3c476bee9adf",
-  "bytes": 21695171
+  "sha256": "4604512df7eb0ace60f95dfebbea2476bb2c99b6a488e262aa40f90331eff54e",
+  "bytes": 16942343
 }

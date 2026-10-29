@@ -1,6 +1,6 @@
 # PANGAEA v5 — propuesta de lote
 
-Activos: 64 registros, 631 series, 225405 valores; cuarentena 17 series. Revisar y marcar `status` en `scripts/importers/pangaea_v5_sources.json`.
+Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar y marcar `status` en `scripts/importers/pangaea_v5_sources.json`.
 
 | Dataset | Evento | Lat, Lon | Estado | Familias | Series (cuar.) | Edad | Referencia |
 |---|---|---|---|---|---:|---|---|
@@ -71,7 +71,7 @@ Activos: 64 registros, 631 series, 225405 valores; cuarentena 17 series. Revisar
 | [259372](https://doi.pangaea.de/10.1594/PANGAEA.259372) | 161-976B | 36.205, -4.313 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | mo_otros, mo_ratios, oxigenacion_bent, toc | 0 (0) | — | — |
 | [259373](https://doi.pangaea.de/10.1594/PANGAEA.259373) | 161-976C | 36.205, -4.312 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | mo_otros, mo_ratios, oxigenacion_bent, toc | 0 (0) | — | — |
 | [259374](https://doi.pangaea.de/10.1594/PANGAEA.259374) | 161-977A | 36.032, -1.955 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | mo_otros, mo_ratios, oxigenacion_bent, toc | 0 (0) | — | — |
-| [259375](https://doi.pangaea.de/10.1594/PANGAEA.259375) | 161-978A | 36.231, -2.057 | proposed | mo_otros, mo_ratios, oxigenacion_bent, toc | 4 (0) | 2754.23–3591.25 ka | — |
+| [259375](https://doi.pangaea.de/10.1594/PANGAEA.259375) | 161-978A | 36.231, -2.057 | proposed | mo_otros, mo_ratios, oxigenacion_bent, toc | 0 (0) | — | — |
 | [259376](https://doi.pangaea.de/10.1594/PANGAEA.259376) | 161-979A | 35.724, -3.206 | rejected: sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento | mo_otros, mo_ratios, oxigenacion_bent, toc | 0 (0) | — | — |
 | [315423](https://doi.pangaea.de/10.1594/PANGAEA.315423) | 160-966F | 33.797, 32.702 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | foram_planct_censo | 0 (0) | — | — |
 | [315424](https://doi.pangaea.de/10.1594/PANGAEA.315424) | 160-967E | 34.068, 32.725 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | foram_planct_censo | 0 (0) | — | — |
