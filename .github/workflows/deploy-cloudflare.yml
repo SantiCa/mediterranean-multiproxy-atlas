@@ -9,7 +9,7 @@ on:
     paths: ['app/atlas-web/**', 'data/processed/atlas-v*.json', 'scripts/d1_release.py', '.github/workflows/deploy-cloudflare.yml']
   workflow_dispatch:
   # Daily, just after the D1 Free limits reset (00:00 UTC): resumes a release load
-  # that exceeded 100 000 rows written/day. Build and deploy are skipped on schedule.
+  # that exceeded 100 000 rows written/day (and applies pending migrations).
   schedule:
     - cron: '17 0 * * *'
 
@@ -111,13 +111,18 @@ jobs:
           EOF
           if ! npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json > migrate.log 2>&1; then
             cat migrate.log
-            echo "::error title=Migraciones D1::$(grep -iE 'error|✘' migrate.log | tail -3 | tr '\n' ' ' | cut -c1-400)"
-            exit 1
+            if grep -q "row write limit" migrate.log; then
+              # Daily Free limit: deploy anyway; migrations retry in the nightly run.
+              echo "::warning title=Migraciones D1::límite diario de escritura; se aplican en la ejecución nocturna"
+            else
+              echo "::error title=Migraciones D1::$(grep -iE 'error|✘' migrate.log | tail -3 | tr '\n' ' ' | cut -c1-400)"
+              exit 1
+            fi
           fi
           tail -5 migrate.log
 
       - name: Build
-        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
+        if: steps.gate.outputs.ok == 'true'
         env:
           CF_WORKER_NAME: ${{ env.WORKER_NAME }}
           CF_D1_DATABASE_NAME: ${{ env.DB_NAME }}
@@ -125,13 +130,13 @@ jobs:
         run: npx vinext build
 
       - name: Deploy Worker
-        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
+        if: steps.gate.outputs.ok == 'true'
         run: npx wrangler deploy --config dist/server/wrangler.json
 
       # Owner password for the private area («Mis datos»), from the GitHub secret
       # ATLAS_OWNER_PASSWORD. Never printed; skipped when the secret is absent.
       - name: Owner password secret
-        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
+        if: steps.gate.outputs.ok == 'true'
         env:
           OWNER_PASSWORD: ${{ secrets.ATLAS_OWNER_PASSWORD }}
         run: |
@@ -142,7 +147,7 @@ jobs:
       # Give the Worker a public workers.dev URL: register the account subdomain on
       # first use (SUBDOMAIN below) and enable workers.dev for this script.
       - name: Enable workers.dev URL
-        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
+        if: steps.gate.outputs.ok == 'true'
         id: deploy
         run: |
           T="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')"
