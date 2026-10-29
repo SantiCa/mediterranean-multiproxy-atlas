@@ -11,13 +11,13 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
-1. Comprobar en Actions que v5-c58d9be4128 termina de cargar y valida (si avisa «Carga D1 parcial», se completa sola con el cron diario).
-2. Seguir curado en `claude/curado`: más lotes `[v5 propose=40 agemodels]`; ampliar candidatos a modelo (hermanos sin `Depth sed` = 105 descartes: revisar si usan otra columna de profundidad equivalente, sin mezclar marcos); NOAA WDS y Neotoma con el mismo patrón; litología categórica.
-3. Pendiente decisión de Santiago: «añadir registros» que proponga PANGAEA DOI al contrato de curado; cuenta privada con datos propios (ver respuesta 29-10 en el chat).
+1. Comprobar en Actions que v5-c6c2207fa3e carga y valida (la carga nueva ~138.000 valores puede necesitar 2 días por el límite Free; la web sirve la última release completa mientras tanto).
+2. Santiago: crear secreto GitHub `ATLAS_OWNER_PASSWORD` (≥12 caracteres) y relanzar «Deploy web to Cloudflare» para activar «Mis datos».
+3. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`: el orden ya prioriza parámetros con más sondeos fechados; columnas con < 3 sondeos se difieren (reversible) salvo las de agrupaciones (SST, δ18O/δ13C, TOC, CaCO3). Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
-- 29-10 (19:02) (1)–(3) HECHOS en V23 (docs/handoffs/private-data-and-aggregates.md); (4) EN CURSO. Petición: (1) subir datos propios en cuenta privada con identificación, coherentes con la base; (2) búsqueda de proxies ordenable por nº de registros y nº de datos; (3) opción de agrupar en el mapa proxies que miden lo mismo (p. ej. SST); (4) seguir curando priorizando proxies con muchos registros (mapas espaciales), evitando proliferación de proxies distintos.
+- 29-10 (19:02) (1)–(3) HECHOS en V23; (4) V24: curado por cobertura (docs/handoffs/claude-curado.md). Petición: (1) subir datos propios en cuenta privada con identificación, coherentes con la base; (2) búsqueda de proxies ordenable por nº de registros y nº de datos; (3) opción de agrupar en el mapa proxies que miden lo mismo (p. ej. SST); (4) seguir curando priorizando proxies con muchos registros (mapas espaciales), evitando proliferación de proxies distintos.
 
 - 29-10 (18:06): publicar la versión actual; seguir curado en `claude/curado`; interpolar edades con el modelo de edad de otro archivo cuando sea posible. Preguntas: ¿«añadir registros» con un enlace lo cura? ¿coste de cuenta propia con datos privados coherentes con la base?
 - Priorizar completar los proxies existentes, especialmente temperatura, foraminíferos, oxigenación, detrítico y corrientes; no afirmar exhaustividad de toda la literatura sin cobertura verificable.
