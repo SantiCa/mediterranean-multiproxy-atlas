@@ -190,8 +190,14 @@ jobs:
             }
             throw new Error(path + " did not finish");
           }
-          await run("/api/bootstrap", { stage: "records", offset: 0 });
-          await run("/api/inventory", { offset: 0 });
+          try {
+            await run("/api/bootstrap", { stage: "records", offset: 0 });
+            await run("/api/inventory", { offset: 0 });
+          } catch (e) {
+            // Network errors (e.g. DNS not yet propagated) otherwise exit without a message.
+            console.log("::error title=Carga::" + String(e && (e.cause?.code || e.cause?.message || e.message) || e).slice(0, 300));
+            process.exit(1);
+          }
           '
 
       # Cell-by-cell check of every served observation against the versioned seed.
