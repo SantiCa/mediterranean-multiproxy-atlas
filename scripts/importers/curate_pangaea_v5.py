@@ -181,7 +181,11 @@ def propose(n):
     rank = {f: i for i, f in enumerate(PRIORITY)}
     pool = [q for q in cov['queue'] if q['has_age'] and not q['already_in_atlas'] and q['n_events'] == 1
             and any(f in rank for f in q['families'])]
-    pool.sort(key=lambda q: (min(rank.get(f, 99) for f in q['families']), q['doi']))
+    # Reparto por turnos entre bloques de prioridad para que cada lote cubra foraminíferos,
+    # oxigenación/MO, bioturbación, geoquímica inorgánica y el resto (petición 29-10-2026).
+    blocks = [PRIORITY[:7], PRIORITY[7:15], ['bioturbacion'], PRIORITY[16:20], PRIORITY[20:]]
+    queues = [sorted([q for q in pool if min(rank.get(f, 99) for f in q['families']) in [rank[f] for f in b]], key=lambda q: (min(rank.get(f, 99) for f in q['families']), q['doi'])) for b in blocks]
+    pool = [q for group in __import__('itertools').zip_longest(*queues) for q in group if q]
     added = 0
     for q in pool:
         if added >= n:
@@ -243,10 +247,10 @@ def curate():
         year = None
         if not paper.get('doi'):
             # Respaldo: cabecera nativa «In supplement to:» del TSV (relación declarada por PANGAEA).
-            m = re.search(r'In supplement to:\t([^\n]+)', head)
-            d = re.search(r'doi\.org/(10\.[^\s;,]+)', m.group(1)) if m else None
+            m = re.search(r'(?:In supplement to|Supplement to):\t([^\n]+)', head)
+            d = re.search(r'(?:doi\.org/|doi:\s*)(10\.[^\s;,]+)', m.group(1), re.I) if m else None
             if d:
-                paper = dict(doi=d.group(1).rstrip('.'), source='TSV header In supplement to')
+                paper = dict(doi=d.group(1).rstrip('.'), source='TSV header In supplement to', native_line=m.group(1)[:400])
         if paper.get('doi'):
             crp = RAW / f'crossref-{sha(paper["doi"].lower().encode())[:16]}.json'
             craw = get('https://api.crossref.org/works/' + quote(paper['doi'], safe=''), crp, e.get('crossref_sha256'), limit=3_000_000)
