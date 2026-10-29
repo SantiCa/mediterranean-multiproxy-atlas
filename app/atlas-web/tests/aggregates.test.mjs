@@ -29,3 +29,15 @@ test("sorting by records and values; aggregation can be hidden", () => {
   assert.ok(filterGroups(g, { aggregates: false }).every((x) => !x.aggregate));
   assert.ok(filterGroups(g, { minRecords: 2 }).every((x) => x.records >= 2));
 });
+test("same PANGAEA parameter and unit aggregate across methods", () => {
+  const d = {
+    records: ["a", "b"].map(rec),
+    series: [
+      { ...ser("p1", "a", "Foram_g", "F_PANGAEA_a", "#/g", "Foraminifera, benthic · a", 4), parameter_name_pangaea: "Foraminifera, benthic" },
+      { ...ser("p2", "b", "Foram_g", "F_PANGAEA_b", "#/g", "Foraminifera, benthic · b", 6), parameter_name_pangaea: "Foraminifera, benthic" },
+    ],
+  };
+  const p = proxyGroups(d).find((x) => x.id.includes("p:foraminifera"));
+  assert.equal(p.members.length, 2);
+  assert.ok(d.series.every((s) => inGroup(s, p.key)));
+});

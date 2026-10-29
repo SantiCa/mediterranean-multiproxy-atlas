@@ -155,9 +155,16 @@ export const AGGREGATES = [
 ];
 export const aggregateKey = (a) => JSON.stringify(["agg", a.id, a.unit]);
 export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["agg"');
+/* Same PANGAEA parameter (controlled vocabulary) and same unit, any method: the
+ * parameter defines the measured quantity; methods remain per series. */
+const paramName = (s) => s.parameter_name_pangaea || null;
+export const paramKey = (s) =>
+  paramName(s) ? JSON.stringify(["agg", "p:" + fold(paramName(s)), s.unit]) : null;
 export function aggregatesOf(s) {
-  const t = txt(s);
-  return AGGREGATES.filter((a) => a.test(s, t)).map(aggregateKey);
+  const t = txt(s),
+    out = AGGREGATES.filter((a) => a.test(s, t)).map(aggregateKey),
+    p = paramKey(s);
+  return p ? [...out, p] : out;
 }
 /** Series selected by a group key: one comparison group, or an explicit aggregation. */
 export const inGroup = (s, key) =>
@@ -188,6 +195,41 @@ export function aggregateGroups(groups, data) {
       min: Math.min(...members.map((g) => g.min)),
       max: Math.max(...members.map((g) => g.max)),
       search: fold(a.label + " agrupado " + members.map((g) => g.search).join(" ")),
+    });
+  }
+  const seen = new Set(out.map((g) => g.members.join("|"))),
+    byParam = new Map();
+  for (const g of groups)
+    for (const s of g.series) {
+      const k = paramKey(s);
+      if (!k) continue;
+      if (!byParam.has(k)) byParam.set(k, { name: paramName(s), unit: s.unit, family: g.family, members: new Map() });
+      byParam.get(k).members.set(g.key, g);
+    }
+  for (const [key, a] of byParam) {
+    const members = [...a.members.values()];
+    if (members.length < 2 || seen.has(members.map((g) => g.key).join("|"))) continue;
+    const series = members.flatMap((g) => g.series.filter((s) => paramKey(s) === key));
+    const records = new Set(series.map((s) => s.record_id)).size;
+    if (records < 2) continue;
+    out.push({
+      key,
+      id: "agg:" + key,
+      label: a.name + " · todos los métodos",
+      unit: a.unit,
+      family: a.family,
+      variable: a.name,
+      method: "Agrupado por parámetro PANGAEA: " + members.length + " grupos (" + [...new Set(members.map((g) => g.method))].slice(0, 4).join("; ") + (members.length > 4 ? "…" : "") + ")",
+      compatibility: null,
+      evidence: "aggregation",
+      aggregate: true,
+      members: members.map((g) => g.key),
+      series,
+      records,
+      count: series.reduce((n, s) => n + (s.observation_count ?? s.rows?.length ?? 0), 0),
+      min: Math.min(...members.map((g) => g.min)),
+      max: Math.max(...members.map((g) => g.max)),
+      search: fold(a.name + " agrupado " + members.map((g) => g.search).join(" ")),
     });
   }
   return out;
