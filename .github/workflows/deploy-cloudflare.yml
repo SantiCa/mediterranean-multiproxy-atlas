@@ -65,9 +65,16 @@ jobs:
         id: db
         run: |
           # Secrets pasted from a browser often carry a trailing newline/space.
-          CLOUDFLARE_API_TOKEN="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')"
-          CLOUDFLARE_ACCOUNT_ID="$(printf %s "$CLOUDFLARE_ACCOUNT_ID" | tr -d '[:space:]')"
+          # Drop whitespace, quotes/backticks and an accidental "Bearer" prefix.
+          CLOUDFLARE_API_TOKEN="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]"`'"'" | sed 's/^Bearer//')"
+          # Keep only the 32-hex account id, in case it was pasted with quotes/backticks.
+          raw_account="$CLOUDFLARE_ACCOUNT_ID"
+          CLOUDFLARE_ACCOUNT_ID="$(printf %s "$raw_account" | grep -Eio '[0-9a-f]{32}' | head -1 || true)"
+          echo "::notice title=Account ID::secreto de ${#raw_account} car.; id usado: ${CLOUDFLARE_ACCOUNT_ID:-NINGUNO}"
+          [ -n "$CLOUDFLARE_ACCOUNT_ID" ] || { echo "::error title=Account ID::CLOUDFLARE_ACCOUNT_ID no contiene un id de 32 caracteres hexadecimales."; exit 1; }
           export CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID
+          # Later wrangler steps reuse the cleaned (non-secret) account id.
+          echo "CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID" >> "$GITHUB_ENV"
           echo "::add-mask::$CLOUDFLARE_API_TOKEN"
           echo "Longitudes: token=${#CLOUDFLARE_API_TOKEN} account=${#CLOUDFLARE_ACCOUNT_ID}"
           api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/d1/database"
