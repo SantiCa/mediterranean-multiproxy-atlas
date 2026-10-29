@@ -239,10 +239,19 @@ def curate():
             raise ValueError(f'{i}: cabecera distinta del contrato')
         age = age_rule(header)
         ev, doi = e['event'], f'10.1594/PANGAEA.{i}'
-        paper = e.get('paper') or {}
+        paper = dict(e.get('paper') or {})
         year = None
-        if paper.get('doi') and e.get('crossref_sha256'):
-            cr = json.loads(get('https://api.crossref.org/works/' + quote(paper['doi'], safe=''), RAW / f'crossref-{sha(paper["doi"].lower().encode())[:16]}.json', e['crossref_sha256']))['message']
+        if not paper.get('doi'):
+            # Respaldo: cabecera nativa «In supplement to:» del TSV (relación declarada por PANGAEA).
+            m = re.search(r'In supplement to:\t([^\n]+)', head)
+            d = re.search(r'doi\.org/(10\.[^\s;,]+)', m.group(1)) if m else None
+            if d:
+                paper = dict(doi=d.group(1).rstrip('.'), source='TSV header In supplement to')
+        if paper.get('doi'):
+            crp = RAW / f'crossref-{sha(paper["doi"].lower().encode())[:16]}.json'
+            craw = get('https://api.crossref.org/works/' + quote(paper['doi'], safe=''), crp, e.get('crossref_sha256'), limit=3_000_000)
+            paper['crossref_sha256'] = sha(craw)
+            cr = json.loads(craw)['message']
             parts = (cr.get('published-print') or cr.get('published-online') or cr.get('issued') or {}).get('date-parts', [[None]])[0]
             year = parts[0]
             paper_title = (cr.get('title') or [None])[0]

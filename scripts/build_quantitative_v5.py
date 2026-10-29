@@ -52,7 +52,7 @@ def assemble():
     fingerprints=defaultdict(list)
     for s in base["series"]:
         fingerprints[(quantity(s),digest(vector(s)))].append(s["id"])
-    admissions=[];quarantine=[];excluded_records=[];input_counts={}
+    admissions=[];quarantine=[];excluded_records=[];input_counts={};linked={}
     for provider,fragment in zip(("pangaea",),fragments):
         input_counts[provider]={"records":len(fragment["records"]),"series":len(fragment["series"]),"values":sum(len(s["rows"]) for s in fragment["series"])}
         incoming={r["id"]:copy.deepcopy(r) for r in fragment["records"]}
@@ -65,16 +65,25 @@ def assemble():
             r["inventory_ids"]=r.get("inventory_ids",r.get("inventory_links",[]))
             if any(identifier not in known_inventory for identifier in r["inventory_ids"]):raise ValueError("Unresolved native inventory link: "+r["id"])
             if core_key(r) in oldcores:
+                parent=byrecord[oldcores[core_key(r)]]
+                # Vínculo v5: misma etiqueta de evento PANGAEA y coordenadas idénticas (±1e-4°) en ambos
+                # registros PANGAEA = mismo evento del repositorio (identidad declarada, no proximidad).
+                # Las series nuevas se cuelgan del registro padre sin modificarlo.
+                if r["provider"]=="PANGAEA" and parent.get("provider")=="PANGAEA" and abs(parent["latitude"]-r["latitude"])<1e-4 and abs(parent["longitude"]-r["longitude"])<1e-4:
+                    linked[r["id"]]=parent["id"];continue
                 excluded_records.append({"id":r["id"],"matches":oldcores[core_key(r)],"reason":"normalized_exact_core_already_in_parent; held_for_linkage_review"})
         held={r["id"] for r in excluded_records}
         candidates=[]
         for source in fragment["series"]:
             s=copy.deepcopy(source)
+            if s["record_id"] in linked:
+                s["linked_from_record"]=s["record_id"];s["record_id"]=linked[s["record_id"]]
+                s.setdefault("qc_notes",[]).append("Serie nueva enlazada a registro padre por evento PANGAEA idéntico (etiqueta+coordenadas)")
             if s["record_id"] in held:
                 quarantine.append({"id":s["id"],"reason":"parent_core_identity_requires_linkage_review"});continue
             if s["id"] in byseries:raise ValueError("Series ID reused: "+s["id"])
-            if s["record_id"] not in incoming:raise ValueError("Orphan incoming series")
-            r=incoming[s["record_id"]]
+            if s["record_id"] not in incoming and s["record_id"] not in linked.values():raise ValueError("Orphan incoming series")
+            r=incoming.get(s["record_id"]) or incoming[s["linked_from_record"]]
             rows=s["rows"]
             if not rows or len({row[2] for row in rows})!=len(rows):raise ValueError("Source-row IDs are not unique")
             if any(len(row)!=9 or not v3.finite(row[1]) or (row[0] is not None and not v3.finite(row[0])) for row in rows):raise ValueError("Invalid compact observation")
@@ -100,7 +109,7 @@ def assemble():
                 r['held_quantitative_inventory_ids']=[identifier for identifier in original_links if identifier not in r['inventory_ids']]
         # Enrichment operates only on the new fragment; parent metadata is frozen.
         supplied={s['id']:{k:copy.deepcopy(s[k]) for k in ('chronology_label','variable_label','search_aliases') if k in s} for s in candidates}
-        enriched=v3.enrich({"records":admitted_records,"series":candidates})
+        enriched=v3.enrich({"records":admitted_records+[copy.deepcopy(byrecord[x]) for x in set(linked.values())],"series":candidates})  # copias: el padre no se modifica
         for s in enriched["series"]:
             s.update(supplied[s['id']])
             byseries[s["id"]]=s;seed["series"].append(s);admissions.append(s["id"])
@@ -131,7 +140,7 @@ def assemble():
     seed.update(version=VERSION,parent_version=base["version"],append_series_ids=admissions)
     ages=[row[0] for s in seed["series"] for row in s["rows"] if row[0] is not None]
     counts={"records":len(seed["records"]),"series":len(seed["series"]),"values":sum(len(s["rows"]) for s in seed["series"]),"new_records":len(seed["records"])-len(base["records"]),"new_series":len(admissions),"new_values":sum(len(current[k]["rows"]) for k in admissions),"missing_age_values":sum(row[0] is None for s in seed["series"] for row in s["rows"])}
-    report={"version":VERSION,"parent_version":base["version"],"parent_sha256":hashlib.sha256(BASELINE.read_bytes()).hexdigest(),"parent_unchanged":True,"counts":counts,"input_fragments":input_counts,"family_counts":dict(Counter(s["family"] for s in seed["series"])),"comparison_groups":len({(s["proxy"],s["compatibility_group"],s["unit"]) for s in seed["series"]}),"numeric_age_extent_ka_bp":[min(ages),max(ages)],"admitted_series":admissions,"integration_quarantine":quarantine,"held_core_records":excluded_records,"partial_numeric_overlap_links":overlaps,"possible_record_overlap_links":duplicates,"source_audits":["reports/pangaea_v5_audit.json"],"limitations":["Bounded reviewed batch, not a complete numerical harvest","Published chronologies retained; no independent recalibration or age-depth interpolation","Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity","Legacy v3 quality restrictions and quarantines remain in force"]}
+    report={"version":VERSION,"parent_version":base["version"],"parent_sha256":hashlib.sha256(BASELINE.read_bytes()).hexdigest(),"parent_unchanged":True,"counts":counts,"input_fragments":input_counts,"family_counts":dict(Counter(s["family"] for s in seed["series"])),"comparison_groups":len({(s["proxy"],s["compatibility_group"],s["unit"]) for s in seed["series"]}),"numeric_age_extent_ka_bp":[min(ages),max(ages)],"admitted_series":admissions,"integration_quarantine":quarantine,"held_core_records":excluded_records,"linked_to_parent_records":linked,"partial_numeric_overlap_links":overlaps,"possible_record_overlap_links":duplicates,"source_audits":["reports/pangaea_v5_audit.json"],"limitations":["Bounded reviewed batch, not a complete numerical harvest","Published chronologies retained; no independent recalibration or age-depth interpolation","Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity","Legacy v3 quality restrictions and quarantines remain in force"]}
     report['scope']=inventory['scope']
     report['provider_quarantines']={provider:[{k:v for k,v in s.items() if k not in ('rows','source_header_original')} for s in fragment.get('quarantined_series',[])] for provider,fragment in zip(('pangaea',),fragments)}
     report['pending_source_candidates']={provider:fragment.get('pending',fragment.get('rejected_candidates',[])) for provider,fragment in zip(('pangaea',),fragments)}
