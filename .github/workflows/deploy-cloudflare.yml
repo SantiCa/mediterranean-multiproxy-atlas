@@ -109,7 +109,12 @@ jobs:
           cat > wrangler.migrations.json <<EOF
           {"name":"$WORKER_NAME","d1_databases":[{"binding":"DB","database_name":"$DB_NAME","database_id":"${{ steps.db.outputs.id }}","migrations_dir":"drizzle"}]}
           EOF
-          npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json
+          if ! npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json > migrate.log 2>&1; then
+            cat migrate.log
+            echo "::error title=Migraciones D1::$(grep -iE 'error|✘' migrate.log | tail -3 | tr '\n' ' ' | cut -c1-400)"
+            exit 1
+          fi
+          tail -5 migrate.log
 
       - name: Build
         if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'

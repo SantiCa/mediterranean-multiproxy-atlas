@@ -121,7 +121,7 @@ export const privateSessions = sqliteTable("atlas_private_sessions", {
 export const privateFailures = sqliteTable(
   "atlas_private_failures",
   {
-    id: integer("id").primaryKey({ autoIncrement: true }),
+    id: integer("id").primaryKey(),
     at: text("at").notNull(),
   },
   (t) => [index("atlas_private_failures_at_idx").on(t.at)],

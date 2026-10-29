@@ -33,11 +33,11 @@ test("same PANGAEA parameter and unit aggregate across methods", () => {
   const d = {
     records: ["a", "b"].map(rec),
     series: [
-      { ...ser("p1", "a", "TOC_pct", "TOC_PANGAEA_LECO", "%", "Carbon, organic, total · a", 4), parameter_name_pangaea: "Carbon, organic, total" },
-      { ...ser("p2", "b", "TOC_pct", "TOC_PANGAEA_Rock_Eval", "%", "Carbon, organic, total · b", 6), parameter_name_pangaea: "Carbon, organic, total" },
+      { ...ser("p1", "a", "Foram_g", "F_PANGAEA_a", "#/g", "Foraminifera, benthic · a", 4), parameter_name_pangaea: "Foraminifera, benthic" },
+      { ...ser("p2", "b", "Foram_g", "F_PANGAEA_b", "#/g", "Foraminifera, benthic · b", 6), parameter_name_pangaea: "Foraminifera, benthic" },
     ],
   };
-  const p = proxyGroups(d).find((x) => x.id.includes("p:carbon"));
+  const p = proxyGroups(d).find((x) => x.id.includes("p:foraminifera"));
   assert.equal(p.members.length, 2);
   assert.ok(d.series.every((s) => inGroup(s, p.key)));
 });
