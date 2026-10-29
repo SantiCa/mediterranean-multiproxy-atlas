@@ -36,7 +36,7 @@ FAMILIES = {
     'd18O_bent': ('δ18O foraminíferos bentónicos', lambda p: re.search(r'δ18O|delta 18O|d18O', p, re.I) and re.search(BENTHIC, p, re.I)),
     'd13C_planct': ('δ13C foraminíferos planctónicos', lambda p: re.search(r'δ13C|delta 13C|d13C', p, re.I) and re.search(PLANKTIC, p, re.I)),
     'd13C_bent': ('δ13C foraminíferos bentónicos', lambda p: re.search(r'δ13C|delta 13C|d13C', p, re.I) and re.search(BENTHIC, p, re.I)),
-    'mgca_foram': ('Mg/Ca y otras razones en foraminíferos', lambda p: re.search(r'(Mg|Sr|B|Mn|U|Ba|Cd)/Ca', p) and re.search(PLANKTIC + '|' + BENTHIC, p, re.I)),
+    'mgca_foram': ('Mg/Ca y otras razones en foraminíferos', lambda p: re.search(r'\b(Mg|Sr|B|Mn|U|Ba|Cd|Li)/Ca\b', p)),
     'oxigenacion_bent': ('Indicadores bentónicos de oxigenación (BFOI, O2)', lambda p: re.search(r'oxygen index|BFOI|Oxygen, dissolved|dysox|suboxic|low.oxygen', p, re.I)),
     'redox': ('Elementos redox (Mo, U, V, Re, Mn, Cd y razones)', lambda p: re.search(r'\b(Molybdenum|Uranium|Vanadium|Rhenium|Manganese|Cadmium)\b|\b(Mo|U|V|Re|Mn|Cd|Ni|Cu)/(Al|Ti|Th|U|Fe)\b|U/Th|Fe/Mn', p) and not re.search(r'/Ca\b', p)),
     'bario': ('Bario / productividad exportada (Ba, Ba/Al, Ba exceso)', lambda p: re.search(r'\bBarium\b|\bBa/(Al|Ti)\b|\bBa/Ti\b|Ba excess|Ba xs|Ba, biogenic|Ba EF', p)),
@@ -59,13 +59,15 @@ FAMILIES = {
     'mo_ratios': ('Relaciones de geoquímica orgánica: C/N, δ13Corg, δ15N, HI/OI', lambda p: re.search(r'\bC/N\b|C org/N|TOC/TN|Corg/Ntot|δ13C, organic|δ13C org|δ15N|delta 15N|Hydrogen index|Oxygen index, Rock|Rock-Eval', p, re.I)),
     'biomarcadores_indices': ('Índices de biomarcadores: BIT, MBT/CBT, CPI, ACL, Paq, Pr/Ph, TAR, LDI, %C37:4', lambda p: re.search(r'\bBIT\b|branched and isoprenoid|\bMBT|\bCBT\b|\bCPI\b|carbon preference|\bACL\b|average chain length|\bPaq\b|Pr/Ph|Pristane/Phytane|\bTAR\b|terrigenous/aquatic|\bLDI\b|long chain diol|C37:4|Diol index|GDGT', p, re.I)),
     'polen': ('Polen y esporas (taxones, AP/NAP)', lambda p: re.search(r'pollen|spore|\bAP/NAP\b|arboreal|Quercus|Pinus|Artemisia|Chenopodi|Amaranth|Ephedra|Poaceae|Olea\b|Cedrus|Abies|Betula|Juniperus|Ericaceae|Asteraceae|Cupressaceae|Pistacia', p, re.I)),
-    'isot_radiogenicos': ('Isótopos radiogénicos (εNd, Nd, Sr, Pb, Hf, Os)', lambda p: re.search(r'ε-?Nd|epsilon.?Nd|143Nd/144Nd|87Sr/86Sr|20[678]Pb/20[4-7]Pb|176Hf/177Hf|εHf|187Os/188Os|Nd isotop|Sr isotop|Pb isotop', p, re.I)),
+    'isot_radiogenicos': ('Isótopos radiogénicos (εNd, Nd, Sr, Pb, Hf, Os)', lambda p: re.search(r'ε.?Nd|epsilon.?Nd|ε.?Neodym|143\s?Nd|Neodymium.{0,12}143|87\s?Sr/|Strontium.{0,12}87|20[678]\s?Pb/|Lead.{0,12}20[678]|176\s?Hf|ε.?Hf|Hafnium.{0,12}176|187\s?Os|Osmium.{0,12}187|Nd isotop|Sr isotop|Pb isotop', p, re.I)),
     'tierras_raras_eu': ('Europio y tierras raras (Eu, Eu/Eu*, Ce anómalo, REE)', lambda p: re.search(r'\b(Europium|Cerium|Lanthanum|Neodymium|Samarium|Gadolinium|Ytterbium|Dysprosium)\b|Eu/Eu\*|Eu anomal|Ce/Ce\*|Ce anomal|\bREE\b|rare earth', p, re.I)),
     'corrientes': ('Corrientes: sortable silt, Zr/Rb, Zr/Al, 231Pa/230Th, κARM/κ, εNd', lambda p: re.search(r'sortable silt|\bSS ?(mean|%)|mean grain size.*(10|63)|Zr/Rb|Zr/Al|231Pa/230Th|Pa/Th|κARM|kARM|ARM/|ε-?Nd|epsilon.?Nd|143Nd/144Nd', p, re.I)),
     'bioturbacion': ('Bioturbación / icnología / laminación', lambda p: re.search(r'Bioturb|Ichno|Burrow|trace fossil|Zoophycos|Chondrites|Planolites|Thalassinoides|Skolithos|Mottl|Lamina', p, re.I)),
     # Litología: variable categórica (descripciones/facies), no numérica. Base de futuros mapas
     # litológicos por edad (petición 29-10-2026): requiere columna AGE o modelo de edad del sondeo.
     'litologia': ('Litología / facies / descripción sedimentaria (categórica)', lambda p: re.search(r'Lithology|Facies|Sediment type|Sedimentary structure|Color description|Colour description|Description\b|Composition|Sapropel|Organic.rich layer|Tephra|Turbidite', p, re.I)),
+    # Familia auxiliar: datasets de cronología del mismo evento (no es un proxy).
+    'cronologia': ('(aux) Cronología: AGE, 14C AMS, modelo de edad', lambda p: re.match(r'(AGE|Age)\b', p) or re.search(r'AMS 14C|radiocarbon|Age model|Calendar age|Age, dated|Age, \d', p, re.I)),
     'sst': ('Temperatura (SST/subsuperficial: UK′37, Mg/Ca, TEX86, MAT)', lambda p: re.search(r'Sea surface temperature|\bSST\b|U\[?K\]?.?37|UK.37|alkenone unsaturation|TEX86|Temperature, water', p, re.I)),
     'caco3': ('Carbonato (CaCO3)', lambda p: re.search(r'Calcium carbonate|CaCO3|Carbonate, total|Carbon, inorganic', p, re.I)),
     'detritico_xrf': ('Detrítico/elementos (Ti, Zr, K, Al, Rb, Fe y razones)', lambda p: re.search(r'\b(Titanium|Zirconium|Potassium|Aluminium|Aluminum|Rubidium|Iron)\b|\b(Ti|Zr|K|Rb|Fe)/(Al|Ca|Ti|Rb)\b', p)),
@@ -165,7 +167,13 @@ def main():
         for doi, m, err in pool.map(native, [d['doi'] for d in cands]):
             (failures.append(dict(doi=doi, error=err)) if err else meta.__setitem__(doi, m))
     done = atlas_dois()
-    fam = {k: dict(label=v[0], datasets=set(), events={}, events_age=set(), events_new_age=set()) for k, v in FAMILIES.items()}
+    fam = {k: dict(label=v[0], datasets=set(), events={}, events_age=set(), events_new_age=set(), events_age_other=set()) for k, v in FAMILIES.items()}
+    # Edad disponible en otro dataset del mismo evento: datable solo con el modelo publicado
+    # (depth→age del autor); no se interpola por defecto. Se informa aparte de «con edad».
+    def ek(ev):
+        return f"{ev['label']}@{ev['lat']:.3f},{ev['lon']:.3f}"
+    event_has_age = {ek(ev) for m in meta.values() if m['has_age'] for ev in m['events']}
+    pfreq = collections.Counter(p['name'] for m in meta.values() for p in m['params'])
     queue = []
     for d in cands:
         m = meta.get(d['doi'])
@@ -173,7 +181,7 @@ def main():
             continue
         hits = families_of([p['name'] for p in m['params']])
         for ev in m['events']:
-            key = f"{ev['label']}@{ev['lat']:.3f},{ev['lon']:.3f}"
+            key = ek(ev)
             for k in hits:
                 f = fam[k]
                 f['datasets'].add(d['doi'])
@@ -182,29 +190,32 @@ def main():
                     f['events_age'].add(key)
                     if d['doi'] not in done:
                         f['events_new_age'].add(key)
+                elif key in event_has_age:
+                    f['events_age_other'].add(key)
         if hits:
             queue.append(dict(doi=d['doi'], title=d['title'], families=sorted(hits), has_age=m['has_age'],
                               already_in_atlas=d['doi'] in done, n_events=len(m['events']),
                               events=[e['label'] for e in m['events']][:20],
                               matched_parameters={k: v[:12] for k, v in hits.items()}, xml_sha256=m['xml_sha256']))
     summary = [dict(family=k, label=f['label'], datasets=len(f['datasets']), events=len(f['events']),
-                    events_with_age=len(f['events_age']), events_with_age_not_in_atlas=len(f['events_new_age']))
+                    events_with_age=len(f['events_age']), events_with_age_not_in_atlas=len(f['events_new_age']),
+                    events_age_in_other_dataset=len(f['events_age_other']))
                for k, f in fam.items()]
     out = dict(created_at_utc=now(), bbox=[-10, 28, 42, 48], datacite_query=QUERY, datacite_total=total,
                datasets_in_bbox=len(datasets), candidates=len(cands), xml_retrieved=len(meta), xml_failures=failures,
-               subject_schemes=dict(schemes.most_common(20)), summary=summary, queue=queue,
+               subject_schemes=dict(schemes.most_common(20)), parameter_frequency=dict(pfreq.most_common(600)), summary=summary, queue=queue,
                limitations=['Prioriza; no ingiere ni valida datos', 'Evento ≠ sondeo físico independiente',
                             'Columna AGE ≠ cronología verificada', 'Clasificación por regex de nombres de parámetro, revisar antes de curar',
                             'Solo datasets con punto DataCite dentro de la caja y que pasan el prefiltro de subjects/título'])
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
-    rows = sorted(summary, key=lambda s: -s['events_with_age'])
+    rows = sorted(summary, key=lambda s: -(s['events_with_age'] + s['events_age_in_other_dataset']))
     md = ['# Cobertura de proxies en PANGAEA (priorización de curación)', '',
           f"Generado {out['created_at_utc'][:10]} por `scripts/discovery/proxy_coverage.py`. Caja [-10,28,42,48]. "
           f"{len(datasets)} datasets DataCite con punto en la caja; {len(cands)} candidatos; {len(meta)} XML nativos leídos; {len(failures)} fallos.",
           '', 'Eventos = etiqueta+coordenada distintas (no sondeos físicos independientes). «Con edad» = matriz con columna AGE (sin validar cronología).', '',
-          '| Familia | Datasets | Eventos | Eventos con edad | Con edad y no curados |', '|---|---:|---:|---:|---:|']
-    md += [f"| {s['label']} | {s['datasets']} | {s['events']} | {s['events_with_age']} | {s['events_with_age_not_in_atlas']} |" for s in rows]
+          '| Familia | Datasets | Eventos | Con edad | Con edad y no curados | Edad en otro dataset del evento |', '|---|---:|---:|---:|---:|---:|']
+    md += [f"| {s['label']} | {s['datasets']} | {s['events']} | {s['events_with_age']} | {s['events_with_age_not_in_atlas']} | {s['events_age_in_other_dataset']} |" for s in rows]
     md += ['', 'Cola completa por dataset en `reports/proxy_coverage_pangaea.json` (`queue`).', '']
     DOC.write_text('\n'.join(md), encoding='utf-8')
     print('\n'.join(md))
