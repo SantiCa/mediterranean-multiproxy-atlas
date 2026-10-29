@@ -6,8 +6,12 @@ name: Deploy web to Cloudflare
 on:
   push:
     branches: [main]
-    paths: ['app/atlas-web/**', '.github/workflows/deploy-cloudflare.yml']
+    paths: ['app/atlas-web/**', 'data/processed/atlas-v*.json', 'scripts/d1_release.py', '.github/workflows/deploy-cloudflare.yml']
   workflow_dispatch:
+  # Daily, just after the D1 Free limits reset (00:00 UTC): resumes a release load
+  # that exceeded 100 000 rows written/day. Build and deploy are skipped on schedule.
+  schedule:
+    - cron: '17 0 * * *'
 
 permissions:
   contents: read
@@ -108,7 +112,7 @@ jobs:
           npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json
 
       - name: Build
-        if: steps.gate.outputs.ok == 'true'
+        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
         env:
           CF_WORKER_NAME: ${{ env.WORKER_NAME }}
           CF_D1_DATABASE_NAME: ${{ env.DB_NAME }}
@@ -116,13 +120,13 @@ jobs:
         run: npx vinext build
 
       - name: Deploy Worker
-        if: steps.gate.outputs.ok == 'true'
+        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
         run: npx wrangler deploy --config dist/server/wrangler.json
 
       # Give the Worker a public workers.dev URL: register the account subdomain on
       # first use (SUBDOMAIN below) and enable workers.dev for this script.
       - name: Enable workers.dev URL
-        if: steps.gate.outputs.ok == 'true'
+        if: steps.gate.outputs.ok == 'true' && github.event_name != 'schedule'
         id: deploy
         run: |
           T="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')"
@@ -160,59 +164,77 @@ jobs:
           # A new workers.dev hostname can take several minutes to start routing.
           for i in $(seq 1 60); do curl -s -o /dev/null -w '%{http_code}' "$url/api/catalog" | grep -q 200 && break; sleep 10; done
 
-      # Idempotent, append-only import of the versioned seed and inventory through the
-      # app's own bounded endpoints. Re-running resumes; conflicts are not rewritten.
-      # On the Workers Free plan the daily D1 row-write limit can stop this first
-      # import; the next run (or the first visitor) continues it.
-      - name: Load seed and inventory
-        if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
-        env:
-          URL: ${{ steps.deploy.outputs.url }}
-        run: |
-          node --input-type=module -e '
-          const base = process.env.URL;
-          async function run(path, first) {
-            let body = first;
-            for (let i = 0; i < 5000; i++) {
-              let r;
-              // Retry while a fresh workers.dev route still answers with the Cloudflare 404 page.
-              for (let t = 0; t < 30; t++) {
-                r = await fetch(base + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-                if (r.status !== 404) break;
-                await new Promise(ok => setTimeout(ok, 10000));
-              }
-              const text = await r.text();
-              let p = {}; try { p = JSON.parse(text); } catch {}
-              if (!r.ok) { console.log("::error title=Carga " + path + "::HTTP " + r.status + " en " + JSON.stringify(body) + ": " + (p.error || text.replace(/\s+/g, " ").slice(0, 300))); process.exit(1); }
-              if (p.ready) { console.log(path, "ready"); return; }
-              body = p.stage ? { stage: p.stage, offset: p.next } : { offset: p.next };
-              if (i % 50 === 0) console.log(path, JSON.stringify(body), "/", p.total);
-            }
-            throw new Error(path + " did not finish");
-          }
-          try {
-            await run("/api/bootstrap", { stage: "records", offset: 0 });
-            await run("/api/inventory", { offset: 0 });
-          } catch (e) {
-            // Network errors (e.g. DNS not yet propagated) otherwise exit without a message.
-            console.log("::error title=Carga::" + String(e && (e.cause?.code || e.cause?.message || e.message) || e).slice(0, 300));
-            process.exit(1);
-          }
-          '
-
-      # Cell-by-cell check of every served observation against the versioned seed.
       - uses: actions/setup-python@v5
-        if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
+        if: steps.gate.outputs.ok == 'true'
         with:
           python-version: '3.12'
 
+      - name: Public URL
+        if: steps.gate.outputs.ok == 'true'
+        id: url
+        run: echo "url=${{ steps.deploy.outputs.url || format('https://{0}.{1}.workers.dev', env.WORKER_NAME, env.SUBDOMAIN) }}" >> "$GITHUB_OUTPUT"
+
+      # Releases are written to D1 from here (scripts/d1_release.py), not bundled in the
+      # Worker. Append-only and resumable: a run that hits the daily row-write limit
+      # stops with a warning; the web keeps serving the last complete release.
+      - name: Load releases into D1
+        if: steps.gate.outputs.ok == 'true'
+        run: |
+          S="--seed ../../data/processed/atlas-v3.json --seed ../../data/processed/atlas-v4.json --seed ../../data/processed/atlas-v5.json"
+          q() { npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --json --command "$1"; }
+          q "SELECT series_id,count(*) n FROM atlas_observations GROUP BY series_id" > counts.json
+          python ../../scripts/d1_release.py plan $S --counts counts.json --out-dir d1plan | tee plan.log
+          loaded=0; partial=""
+          for f in d1plan/*.sql; do
+            [ -e "$f" ] || break
+            if npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file "$f" -y > exec.log 2>&1; then
+              loaded=$((loaded+1))
+            else
+              partial="$f"; tail -5 exec.log; break
+            fi
+          done
+          q "SELECT series_id,count(*) n FROM atlas_observations GROUP BY series_id" > counts.json
+          q "SELECT id FROM atlas_releases" > releases.json
+          python ../../scripts/d1_release.py finalize $S --counts counts.json --releases releases.json --out final.sql | tee final.log
+          if [ -s final.sql ]; then npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file final.sql -y > final_exec.log 2>&1 || { tail -5 final_exec.log; echo "::warning title=Carga D1::no se pudo registrar la release (se reintenta mañana)"; }; fi
+          if [ -n "$partial" ]; then
+            echo "::warning title=Carga D1 parcial::$loaded lotes cargados; se detuvo en $partial (probable límite diario Free). Se reanuda en la ejecución diaria. $(cat final.log)"
+          else
+            echo "::notice title=Carga D1::$(cat plan.log) · $(cat final.log)"
+          fi
+
+      - name: Load inventory
+        if: steps.gate.outputs.ok == 'true'
+        env:
+          URL: ${{ steps.url.outputs.url }}
+        run: |
+          node --input-type=module -e '
+          const base = process.env.URL;
+          let body = { offset: 0 };
+          for (let i = 0; i < 5000; i++) {
+            let r;
+            // Retry while a fresh workers.dev route still answers with the Cloudflare 404 page.
+            for (let t = 0; t < 30; t++) {
+              r = await fetch(base + "/api/inventory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+              if (r.status !== 404) break;
+              await new Promise(ok => setTimeout(ok, 10000));
+            }
+            const text = await r.text();
+            let p = {}; try { p = JSON.parse(text); } catch {}
+            if (!r.ok) { console.log("::warning title=Inventario::HTTP " + r.status + ": " + (p.error || text.replace(/\s+/g, " ").slice(0, 300))); process.exit(0); }
+            if (p.ready) { console.log("inventory ready"); process.exit(0); }
+            body = { offset: p.next };
+          }
+          '
+
+      # Cell-by-cell check of every served observation against its versioned seed.
       - name: Validate deployed API against seed
-        if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
+        if: steps.gate.outputs.ok == 'true'
         working-directory: .
         env:
-          URL: ${{ steps.deploy.outputs.url }}
+          URL: ${{ steps.url.outputs.url }}
         run: |
-          if python scripts/validate_quantitative_api.py --url "$URL" --public-https > validate.log 2>&1; then
+          if python scripts/validate_quantitative_api.py --url "$URL" --public-https --seed data/processed/atlas-v3.json --seed data/processed/atlas-v4.json --seed data/processed/atlas-v5.json > validate.log 2>&1; then
             echo "::notice title=Validación::$(tail -1 validate.log)"
           else
             cat validate.log
