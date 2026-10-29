@@ -190,13 +190,13 @@ jobs:
             if npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file "$f" -y > exec.log 2>&1; then
               loaded=$((loaded+1))
             else
-              partial="$f"; tail -5 exec.log; break
+              partial="$f: $(grep -iE 'error|✘' exec.log | tail -2 | tr '\n' ' ' | cut -c1-300)"; tail -5 exec.log; break
             fi
           done
           q "SELECT series_id,count(*) n FROM atlas_observations GROUP BY series_id" > counts.json
           q "SELECT id FROM atlas_releases" > releases.json
           python ../../scripts/d1_release.py finalize $S --counts counts.json --releases releases.json --out final.sql | tee final.log
-          if [ -s final.sql ]; then npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file final.sql -y > final_exec.log 2>&1 || { tail -5 final_exec.log; echo "::warning title=Carga D1::no se pudo registrar la release (se reintenta mañana)"; }; fi
+          if [ -s final.sql ]; then npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file final.sql -y > final_exec.log 2>&1 || { tail -5 final_exec.log; echo "::warning title=Carga D1::no se pudo registrar la release (se reintenta mañana): $(grep -iE 'error|✘' final_exec.log | tail -2 | tr '\n' ' ' | cut -c1-300)"; }; fi
           if [ -n "$partial" ]; then
             echo "::warning title=Carga D1 parcial::$loaded lotes cargados; se detuvo en $partial (probable límite diario Free). Se reanuda en la ejecución diaria. $(cat final.log)"
           else

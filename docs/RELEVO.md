@@ -6,7 +6,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 - Fecha: 29-10-2026
 - Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
 - Estado: PUBLICAR-V5 hecho y fusionado en main (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
-- Hecho: validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
+- Hecho: V19 trocea metadatos <90 KB por sentencia (D1 rechazó el registro de release en V18; observaciones v4+v5 ya cargadas). Validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
