@@ -15,3 +15,7 @@ Copia válida: rama `relevo`. Actualizar con commit + push tras cada paso (ver �
 1. Localizar en `config/seed.json`, `docs/revision_tesis.md`, `docs/curation/v1_marine.md` y `scripts/prepare_seed.py` dónde aparece la profundidad de ODP 977A y en qué unidad se declara.
 2. Contrastar contra la fuente primaria (dataset PANGAEA y su metadato de columna; ODP Proceedings Leg 161) sin convertir unidades por inferencia.
 3. Escribir `docs/curation/odp977a_depth_audit.md` (resolución o conflicto documentado con citas) y handoff `docs/handoffs/cur-odp977a.md`.
+
+## Decisión pendiente (Santiago)
+
+Hosting propio en Cloudflare (Workers + D1 + R2) independiente de ChatGPT Sites, con despliegue por GitHub Actions al fusionar en `main`. Propuesta de Claude: híbrido D1 (catálogo/índices) + R2 (series curadas como archivos estáticos); no replicar todo PANGAEA (va contra «no cosecha ciega» y la revisión de licencias por recurso): datasets no curados como enlace o lectura bajo demanda con caché, marcados «sin curar». Falta: que Santiago elija orden (antes o después de CUR-ODP977A) y cree cuenta + API token.
