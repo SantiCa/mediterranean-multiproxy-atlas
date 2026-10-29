@@ -1,27 +1,32 @@
 # Estado breve del proyecto
 
-Actualizado: 28-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Usar git log para el commit efectivo.
+Actualizado: 29-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable v2
+## Ejecutable v3
 
 - URL: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado del propietario).
-- Inventario enlazado: 15.572 entradas de fuente, con 5.846 de sondeos/sitios/unidades y 9.726 referencias a datasets PANGAEA. 289 etiquetas de campaña. No equivalen a ubicaciones físicas independientes ya depuradas.
-- Fuentes: PaleoMED20 (1.524), NOAA IMLGS (2.723), Neotoma (1.153 unidades), NOAA WDS (355 sitios), PANGAEA XML (10 eventos) y WPA 2025.0 (81 entradas de la consulta); PANGAEA/DataCite 9.726 DOI separados de identidades de core. Consultas/versiones/límites en docs/DISCOVERY_V2.md.
-- Mapa/lista, búsquedas y filtros por campaña/fuente/archivo/tipo, agrupación por campaña y exportación CSV. Lista paginada en D1 y puntos compactos con agrupación de navegación.
-- Colección cuantitativa conserva 13 registros, 22 series y 14.751 valores. No se atribuyen miles de series numéricas al inventario de metadatos.
-- Ventanas temporales de ancho fijo, desplazamiento/recorrido y rango global, con separación de cobertura publicada frente a edades numéricas. Nube de varios/todos los sondeos compatibles, figura ampliada, zoom de intervalo, original/z, opacidad y CSV/SVG trazables.
-- Primera prospección de artículos/suplementos documentada en docs/curation/article_scout_2026-10-28.md; convertidos BioC y versión de autor GP03PC en área local. Candidatos pendientes de revisión, sin números inventados.
+- Colección cuantitativa: **29 registros / 89 series / 81.339 valores / 62 grupos de comparación**, ocho familias. Lote nuevo PANGAEA y NOAA de 16 registros/66.588 valores. Datos marinos, lacustres y espeleotemas.
+- Edades numéricas −0,0574 a 1.365 ka BP; cobertura de metadatos hasta 121.000 ka separada. 101 valores sin edad conservados.
+- Selector buscable por familia/variable/método/unidad, favoritos, cobertura; filtros conjuntos de fuente, archivo, base cronológica y años de artículo. Las calibraciones, especies y denominadores se separan.
+- Carga de metadatos sin observaciones; API lazy por grupo completo, límite explícito 150.000 valores/40 series. Ventana móvil, varios/todos compatibles, CSV/SVG completos. Nubes densas aligeradas solo en pantalla con aviso.
+- Inventario enlazado v2 conservado: 15.572 entradas de fuente, 5.846 de sondeos/sitios/unidades, 9.726 referencias PANGAEA, 289 etiquetas de campaña. No representan ubicaciones físicas independientes depuradas.
+- Cuarentena LDB04-I %terr (18 valores >100); ajustes orbitales, edades repetidas y licencias documentados. No se inventan datos ni modelos de edad.
+- Prospección de artículos sigue separada de la ingestión numérica revisada.
 
-## Archivos y verificación
+## Archivos mínimos
 
-Fuente web app/atlas-web; semillas data/processed/atlas-v1.json e inventory-v2.json; migraciones 0000–0003. 30 pruebas Python locales, 9 Node, TypeScript; informes en reports/atlas_v1_release.json y reports/inventory_v2_release.json. El informe v2 se actualiza con el despliegue/verificación efectivos. No inferir CI remota de comprobaciones locales.
+Leer **docs/QUANTITATIVE_V3.md** para web/ingestión actuales; docs/DISCOVERY_V2.md para inventario; docs/WEB_V1.md conserva el contrato histórico. Fuente web app/atlas-web; semilla actual data/processed/atlas-v3.json y su copia web data/seed.json. atlas-v1.json permanece como línea base. Migraciones 0000–0003 vigentes.
 
-## Pendientes científicos / tecnológicos
+Curadores scripts/importers/curate_pangaea_v3.py y curate_noaa_v3.py; ensamblador scripts/build_quantitative_v3.py. Informes reports/quantitative_v3_*.json. Originales ignorados. El API local compara las 81.339 observaciones contra la release; las pruebas de originales se omiten explícitamente sin caché. No afirmar CI remota a partir de pruebas locales.
 
-- Revisar identidad entre fuentes y correspondencias de campaña; corregir solo con evidencia/versiones. Resolver profundidad ODP 977 y datos GP03.
-- Importar una primera serie desde suplemento de artículo con doble curación, derechos y cronología comprobados.
-- Cronologías alternativas, taxonomías/denominadores, incertidumbre de edad y validación espacial del IDW.
-- Sincronización general con retiradas/correcciones/historial; consultas por viewport antes de escalar más allá del límite explícito de puntos.
-- Cosecha independiente SISAL/SeaDataNet/ISMAR y servicio WDB-Paleo verificable; evaluación editorial frente a antecedentes, licencia de código pendiente.
+## Siguientes entregables
 
-No cargar tesis/JSON completos para interfaz rutinaria. Usar AGENTS.md, docs/DISCOVERY_V2.md y el handoff pertinente. No se presenta una nueva reconstrucción paleoambiental validada.
+- Ampliar lotes con contratos de columnas/cronología/licencia y cola revisable; no cosecha ciega.
+- Resolver identidades y duplicación parcial entre datasets/cores; variantes de campañas, ODP977 y GP03.
+- Modelos de edad alternativos, incertidumbre, taxonomías y denominadores revisados. Conservar dependencia orbital y correlación entre archivos.
+- Importación de suplementos con doble curación; cuarentena Bourget y edades intervalares Cadagno pendientes.
+- Agregación por sitio y validación espacial de IDW; no contar cores coincidentes como vecinos independientes.
+- Motor de actualización con correcciones/retiradas/versiones y consultas por viewport; pasar a otro almacenamiento solo con necesidad demostrada.
+- SISAL/SeaDataNet/ISMAR independientes y WDB-Paleo verificable pendientes. Licencia de código por elegir.
+
+No cargar tesis ni JSON completos para tareas de interfaz. No se presenta una nueva reconstrucción paleoambiental validada.

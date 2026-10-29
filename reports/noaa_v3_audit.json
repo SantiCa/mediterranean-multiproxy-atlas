@@ -1,0 +1,424 @@
+{
+  "version": "noaa-quantitative-v3-2026-10-28",
+  "accessed_on": "2026-10-28",
+  "studies": [
+    {
+      "study_id": "32914",
+      "paper_doi": "10.1029/2017pa003298",
+      "paper_year": 2018,
+      "publication_year_native": 2018,
+      "records": 4,
+      "observations": 3306,
+      "missing_cells_excluded": 142
+    },
+    {
+      "study_id": "28070",
+      "paper_doi": "10.1016/j.quascirev.2019.106044",
+      "paper_year": 2020,
+      "publication_year_native": 2019,
+      "records": 1,
+      "observations": 22374,
+      "missing_cells_excluded": 385
+    },
+    {
+      "study_id": "13666",
+      "paper_doi": "10.1016/j.quascirev.2012.07.025",
+      "paper_year": 2012,
+      "publication_year_native": 2012,
+      "records": 2,
+      "observations": 3126,
+      "missing_cells_excluded": 0
+    }
+  ],
+  "counts": {
+    "records": 7,
+    "series": 52,
+    "observations": 28806
+  },
+  "source_files": [
+    {
+      "file": "jalali2018css00-07.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018css00-07.txt",
+      "sha256": "bc52cfc24ae63bfb874f72cfd17b31e31711feb13273afbaeb0aea0f48890c7c",
+      "bytes": 20303,
+      "study_id": "32914",
+      "site_id": "58840",
+      "table_id": "45539",
+      "original_header": [
+        "Depth",
+        "Age",
+        "Uk'37",
+        "SSTs",
+        "N-alkanes",
+        "ACL",
+        "Note"
+      ],
+      "source_rows": 216,
+      "age_column": "Age",
+      "original_age_definition": "age,,,calendar year before present,,paleoceanography; Climate Reconstructions,,,N,",
+      "age_factor_to_ka": 0.001,
+      "ignored_columns": [
+        "Depth",
+        "Note"
+      ],
+      "chronology_status": "published_calendar_multi_method",
+      "chronology_evidence": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017PA003298#section-3"
+    },
+    {
+      "file": "jalali2018inv12-15.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018inv12-15.txt",
+      "sha256": "1d62df366d9b6f27c152c8012a303a0d73ad8725bc64fdb8e758452584ec9c65",
+      "bytes": 26375,
+      "study_id": "32914",
+      "site_id": "58841",
+      "table_id": "45540",
+      "original_header": [
+        "Depth",
+        "Age",
+        "Uk'37",
+        "SSTs",
+        "N-alkanes",
+        "ACL",
+        "Note"
+      ],
+      "source_rows": 340,
+      "age_column": "Age",
+      "original_age_definition": "age,,,calendar year before present,,paleoceanography; Climate Reconstructions,,,N,",
+      "age_factor_to_ka": 0.001,
+      "ignored_columns": [
+        "Depth",
+        "Note"
+      ],
+      "chronology_status": "published_calendar_multi_method",
+      "chronology_evidence": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017PA003298#section-3"
+    },
+    {
+      "file": "jalali2018kesc9-14.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018kesc9-14.txt",
+      "sha256": "bf27fea2799516f71a94c6d13b2ca6a4a89ad29fd95223b07568af1ef417afaa",
+      "bytes": 18559,
+      "study_id": "32914",
+      "site_id": "58842",
+      "table_id": "45541",
+      "original_header": [
+        "Depth",
+        "Age",
+        "Uk'37",
+        "SSTs",
+        "N-alkanes",
+        "ACL",
+        "Note"
+      ],
+      "source_rows": 190,
+      "age_column": "Age",
+      "original_age_definition": "age,,,calendar year before present,,paleoceanography; Climate Reconstructions,,,N,",
+      "age_factor_to_ka": 0.001,
+      "ignored_columns": [
+        "Depth",
+        "Note"
+      ],
+      "chronology_status": "published_calendar_multi_method",
+      "chronology_evidence": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017PA003298#section-3"
+    },
+    {
+      "file": "jalali2018sw104-nd-14.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018sw104-nd-14.txt",
+      "sha256": "33af46bbce811edacb0cf8ff78cb694a0860f8fe24c9e8b5d3bb07601729f78e",
+      "bytes": 16325,
+      "study_id": "32914",
+      "site_id": "58843",
+      "table_id": "45542",
+      "original_header": [
+        "Depth",
+        "Age",
+        "Uk'37",
+        "SSTs",
+        "N-alkanes",
+        "ACL",
+        "Note"
+      ],
+      "source_rows": 116,
+      "age_column": "Age",
+      "original_age_definition": "age,,,calendar year before present,,paleoceanography; Climate Reconstructions,,,N,",
+      "age_factor_to_ka": 0.001,
+      "ignored_columns": [
+        "Depth",
+        "Note"
+      ],
+      "chronology_status": "published_calendar_multi_method",
+      "chronology_evidence": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017PA003298#section-3"
+    },
+    {
+      "file": "panagiotopoulos2019-geochem.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-geochem.txt",
+      "sha256": "83afc095e54a5853cd5207b9bc3b566bbd3238b63755b4e492f7d88215081081",
+      "bytes": 21739,
+      "study_id": "28070",
+      "site_id": "58190",
+      "table_id": "40700",
+      "original_header": [
+        "depth_m",
+        "age_ka",
+        "sed_rate",
+        "TIC%",
+        "TOC%",
+        "d13C",
+        "d18O",
+        "BSi%"
+      ],
+      "source_rows": 292,
+      "age_column": "age_ka",
+      "original_age_definition": "age,,,calendar kiloyear before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 1.0,
+      "ignored_columns": [
+        "depth_m"
+      ],
+      "chronology_status": "orbital_tuning",
+      "chronology_evidence": "https://nora.nerc.ac.uk/id/eprint/526047/1/Lake_Ohrid.pdf#page=4"
+    },
+    {
+      "file": "panagiotopoulos2019-pollen.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-pollen.txt",
+      "sha256": "d93370b406274adca5e21770c0859d9ba99b9d1ce0d4ad0bca56053503a7d9de",
+      "bytes": 32256,
+      "study_id": "28070",
+      "site_id": "58190",
+      "table_id": "40697",
+      "original_header": [
+        "age_ka",
+        "depth_m",
+        "Pollen_Sum",
+        "Pollen_Sum-pine",
+        "Relict%",
+        "Mesophilous%",
+        "Mesophilous%-pine",
+        "Mesophilous_Conc",
+        "Montane%",
+        "Montane%-pine",
+        "Montane_Conc",
+        "Pines%",
+        "Pines_Conc",
+        "AP%",
+        "AP%-pine",
+        "AP_Conc",
+        "NAP%",
+        "NAP%-pine",
+        "NAP_Conc",
+        "Poaceae%",
+        "Poaceae%-pine",
+        "Poaceae_Conc",
+        "Aquatics%",
+        "Aquatics%-pine",
+        "Aquatics_Conc",
+        "Charcoal_Conc",
+        "Pediastrum_Conc",
+        "Botryococcus_Conc",
+        "E-T400-min",
+        "E-T400-mean",
+        "E-T400-max",
+        "pred_biome0.5%_thresh"
+      ],
+      "source_rows": 103,
+      "age_column": "age_ka",
+      "original_age_definition": "age,,,calendar kiloyear before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 1.0,
+      "ignored_columns": [
+        "depth_m",
+        "Pollen_Sum",
+        "Pollen_Sum-pine",
+        "Mesophilous_Conc",
+        "Montane_Conc",
+        "Pines_Conc",
+        "AP_Conc",
+        "NAP_Conc",
+        "Poaceae_Conc",
+        "Aquatics_Conc",
+        "Pediastrum_Conc",
+        "Botryococcus_Conc",
+        "E-T400-min",
+        "E-T400-mean",
+        "E-T400-max",
+        "pred_biome0.5%_thresh"
+      ],
+      "chronology_status": "orbital_tuning",
+      "chronology_evidence": "https://nora.nerc.ac.uk/id/eprint/526047/1/Lake_Ohrid.pdf#page=4"
+    },
+    {
+      "file": "panagiotopoulos2019-biomarker.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-biomarker.txt",
+      "sha256": "0358fdeb6d059b462bb11ef306794b5417a4bf2b8fcf2f11b8e5c714fbbcca2c",
+      "bytes": 9155,
+      "study_id": "28070",
+      "site_id": "58190",
+      "table_id": "40698",
+      "original_header": [
+        "depth_m",
+        "age_ka",
+        "MAAT_Peterse",
+        "MAAT_Russell",
+        "MAAT_deJonge",
+        "BIT",
+        "Diol/Diol+Lolio"
+      ],
+      "source_rows": 55,
+      "age_column": "age_ka",
+      "original_age_definition": "age,,,calendar kiloyear before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 1.0,
+      "ignored_columns": [
+        "depth_m"
+      ],
+      "chronology_status": "orbital_tuning",
+      "chronology_evidence": "https://nora.nerc.ac.uk/id/eprint/526047/1/Lake_Ohrid.pdf#page=4"
+    },
+    {
+      "file": "panagiotopoulos2019-diatom.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-diatom.txt",
+      "sha256": "31d4293168ad6db842918ce5c2cecf9db2b548141e4f1ac7e59d9aca93732693",
+      "bytes": 10084,
+      "study_id": "28070",
+      "site_id": "58190",
+      "table_id": "40699",
+      "original_header": [
+        "depth_m",
+        "age_ka",
+        "diatom_sum",
+        "0-5m%",
+        "0-10m%",
+        "0-40m%",
+        "20-80m%",
+        "Eutrophic%"
+      ],
+      "source_rows": 68,
+      "age_column": "age_ka",
+      "original_age_definition": "age,,,calendar kiloyear before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 1.0,
+      "ignored_columns": [
+        "depth_m"
+      ],
+      "chronology_status": "orbital_tuning",
+      "chronology_evidence": "https://nora.nerc.ac.uk/id/eprint/526047/1/Lake_Ohrid.pdf#page=4"
+    },
+    {
+      "file": "panagiotopoulos2019-sand.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-sand.txt",
+      "sha256": "eff8a0449013d9714b659a7087938a992c807f5460a8c767d2db761d54f965c0",
+      "bytes": 7772,
+      "study_id": "28070",
+      "site_id": "58190",
+      "table_id": "40701",
+      "original_header": [
+        "depth_m",
+        "age_ka",
+        "Sand%"
+      ],
+      "source_rows": 74,
+      "age_column": "age_ka",
+      "original_age_definition": "age,,,calendar kiloyear before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 1.0,
+      "ignored_columns": [
+        "depth_m"
+      ],
+      "chronology_status": "orbital_tuning",
+      "chronology_evidence": "https://nora.nerc.ac.uk/id/eprint/526047/1/Lake_Ohrid.pdf#page=4"
+    },
+    {
+      "file": "panagiotopoulos2019-xrf.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-xrf.txt",
+      "sha256": "977fd900b84a2b9ebb6b55abcbf814c7303407a7052186593600f6a21967f7ad",
+      "bytes": 417516,
+      "study_id": "28070",
+      "site_id": "58190",
+      "table_id": "40702",
+      "original_header": [
+        "depth_m",
+        "age_ka",
+        "Ti/Ti+K"
+      ],
+      "source_rows": 18705,
+      "age_column": "age_ka",
+      "original_age_definition": "age,,,calendar kiloyear before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 1.0,
+      "ignored_columns": [
+        "depth_m"
+      ],
+      "chronology_status": "orbital_tuning",
+      "chronology_evidence": "https://nora.nerc.ac.uk/id/eprint/526047/1/Lake_Ohrid.pdf#page=4"
+    },
+    {
+      "file": "bourget2012ldb01-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/france/bourget2012ldb01-noaa.txt",
+      "sha256": "f44e4f9301f7c4ab1646602174a1798ebdad0a365ac152bf1901855f3c903cc3",
+      "bytes": 27081,
+      "study_id": "13666",
+      "site_id": "54311",
+      "table_id": "23341",
+      "original_header": [
+        "age_calBP",
+        "%terr"
+      ],
+      "source_rows": 1755,
+      "age_column": "age_calBP",
+      "original_age_definition": "age,,,calendar year before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 0.001,
+      "ignored_columns": [],
+      "chronology_status": "published_calibrated_radiocarbon",
+      "chronology_evidence": "NOAA file Chronology_Information / Chronology_Notes"
+    },
+    {
+      "file": "bourget2012ldb04-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/france/bourget2012ldb04-noaa.txt",
+      "sha256": "c71ac8880840ee670ac57ba42862de8b2c4f3ad32d183a701f4e7a466ae0b19e",
+      "bytes": 30477,
+      "study_id": "13666",
+      "site_id": "54312",
+      "table_id": "23340",
+      "original_header": [
+        "age_calBP",
+        "%terr",
+        "K/Ti"
+      ],
+      "source_rows": 1371,
+      "age_column": "age_calBP",
+      "original_age_definition": "age,,,calendar year before present,,paleolimnology,,,N,",
+      "age_factor_to_ka": 0.001,
+      "ignored_columns": [],
+      "chronology_status": "published_calibrated_radiocarbon",
+      "chronology_evidence": "NOAA file Chronology_Information / Chronology_Notes"
+    }
+  ],
+  "duplicate_review": {
+    "exact_source_hashes_against_v1": "none",
+    "exact_dataset_DOIs_against_v1": "none",
+    "physical_core_fusion": "none inferred; exact NOAA source site IDs retained",
+    "cross_provider_review": "Required by integrating assembler before counting spatial replicates"
+  },
+  "quarantined_series": [
+    {
+      "id": "noaa-13666-54312:23340:terr",
+      "source_column": "%terr",
+      "raw_sha256": "c71ac8880840ee670ac57ba42862de8b2c4f3ad32d183a701f4e7a466ae0b19e",
+      "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/france/bourget2012ldb04-noaa.txt",
+      "out_of_range_percent_cells": 18,
+      "review_status": "quarantined_percentage_outside_0_100"
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "study_id": "12909",
+      "name": "Lake Cadagno",
+      "reason": "Source supplies age_top_calBP and age_bot_calBP intervals. Downloaded but not ingested: compact point representation requires explicit interval/midpoint support, no implicit midpoint."
+    },
+    {
+      "study_id": "28070",
+      "columns": "Pollen concentration columns, E-T400 biodiversity indices, predicted biome",
+      "reason": "Outside first reviewed mapping or nonnumeric class; originals preserved and not fabricated as observations"
+    }
+  ],
+  "limitations": [
+    "Record-specific NOAA license fields are null; NOAA policy basis documented, no invented CC0.",
+    "No age model refit, 14C recalibration, chronological interpolation, smoothing or climate calibration computed.",
+    "One core can contain reconstructions with multiple calibrations. They remain separate groups, not independent observations.",
+    "Ohrid source has tuned ages and must not be used as independent evidence of orbital synchrony.",
+    "Per-sample uncertainty remains unknown. Published method precision is not substituted for each sample's uncertainty."
+  ]
+}

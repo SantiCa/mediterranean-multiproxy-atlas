@@ -844,8 +844,10 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
               <span>etiquetas de campaña</span>
             </div>
             <p className="field-note">
-              La colección cuantitativa conserva sus 13 registros revisados y
-              14.751 valores. Puedes abrirla en «Proxies y series».
+              La colección cuantitativa contiene{" "}
+              {fmt(summary.quantitative?.records || 0)} registros y{" "}
+              {fmt(summary.quantitative?.observations || 0)} valores. Puedes
+              abrirla en «Proxies y series».
             </p>
           </>
         )}

@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState, useRef, useEffect } from "react";
 import { Download, Expand, X } from "lucide-react";
+import { displayRows, extent } from "../lib/plot.mjs";
 const COLORS = [
   "#267783",
   "#c75e36",
@@ -30,7 +31,8 @@ export default function SeriesComparison({ items, active, f, release }: any) {
     [values, setValues] = useState("raw"),
     [opacity, setOpacity] = useState(0.6),
     [expanded, setExpanded] = useState(false),
-    [error, setError] = useState("");
+    [error, setError] = useState(""),
+    [siteSearch, setSiteSearch] = useState("");
   const svg = useRef<SVGSVGElement>(null);
   const available = items.filter(
     (i: any) =>
@@ -113,10 +115,26 @@ export default function SeriesComparison({ items, active, f, release }: any) {
   );
   const points = series.flatMap((i: any) => i.plotRows),
     unit = values === "raw" ? active.series.unit : "z";
-  let xmin = zoom ? f.min : Math.min(...points.map((p: any) => p.age)),
-    xmax = zoom ? f.max : Math.max(...points.map((p: any) => p.age));
-  let ymin = Math.min(...points.map((p: any) => p.value)),
-    ymax = Math.max(...points.map((p: any) => p.value));
+  const ageExtent = extent(points.map((p: any) => p.age)),
+    valueExtent = extent(points.map((p: any) => p.value));
+  let xmin = zoom ? f.min : ageExtent[0],
+    xmax = zoom ? f.max : ageExtent[1],
+    ymin = valueExtent[0],
+    ymax = valueExtent[1];
+  const shownSeries = series.map((i: any) => ({
+    ...i,
+    shown: displayRows(
+      i.plotRows,
+      Math.max(
+        4,
+        Math.floor((10000 * i.plotRows.length) / Math.max(1, points.length)),
+      ),
+    ),
+  }));
+  const shownCount = shownSeries.reduce(
+    (n: number, i: any) => n + i.shown.length,
+    0,
+  );
   const pad = (ymax - ymin || 1) * 0.08;
   ymin -= pad;
   ymax += pad;
@@ -129,12 +147,33 @@ export default function SeriesComparison({ items, active, f, release }: any) {
   const x = (v: number) => l + ((v - xmin) / (xmax - xmin || 1)) * (W - l - r),
     y = (v: number) => t + ((ymax - v) / (ymax - ymin || 1)) * (H - t - b);
   const exportSvg = () => {
-    if (svg.current)
-      save(
-        "medatlas-series-comparison.svg",
-        new XMLSerializer().serializeToString(svg.current),
-        "image/svg+xml",
-      );
+    if (!svg.current) return;
+    const copy = svg.current.cloneNode(true) as SVGSVGElement,
+      ns = "http://www.w3.org/2000/svg";
+    // Rebuild the point groups from full data, not the visual-only subset.
+    for (const i of series) {
+      const group = Array.from(
+        copy.querySelectorAll<SVGGElement>("[data-series-id]"),
+      ).find((g) => g.getAttribute("data-series-id") === i.series.id);
+      if (!group) continue;
+      group.replaceChildren();
+      const nodes = document.createDocumentFragment();
+      for (const p of i.plotRows) {
+        const c = document.createElementNS(ns, "circle");
+        c.setAttribute("cx", String(x(p.age)));
+        c.setAttribute("cy", String(y(p.value)));
+        c.setAttribute("r", points.length > 2000 ? "1.6" : "2.7");
+        c.setAttribute("opacity", String(opacity));
+        nodes.append(c);
+      }
+      group.appendChild(nodes);
+    }
+    copy.setAttribute("data-export-points", String(points.length));
+    save(
+      "medatlas-series-comparison.svg",
+      new XMLSerializer().serializeToString(copy),
+      "image/svg+xml",
+    );
   };
   function exportCsv() {
     const headers = [
@@ -159,6 +198,11 @@ export default function SeriesComparison({ items, active, f, release }: any) {
       "dataset_doi",
       "paper_doi",
       "sha256",
+      "source_url",
+      "compatibility_group",
+      "age_scale",
+      "uncertainty_lower",
+      "uncertainty_upper",
     ];
     const rows = series.flatMap((i: any) =>
       i.plotRows.map((p: any) => {
@@ -184,7 +228,14 @@ export default function SeriesComparison({ items, active, f, release }: any) {
           i.reference.sd,
           i.record.dataset_doi,
           i.record.paper_doi,
-          i.record.raw_sha256,
+          i.series.raw_sha256 || i.record.raw_sha256,
+          i.series.source_url || i.record.source_url,
+          i.series.compatibility_group,
+          i.series.age_scale ||
+            i.record.time_scale ||
+            i.series.age_transformation,
+          i.series.uncertainty_bounds?.find((b: any) => b[0] === row[2])?.[1],
+          i.series.uncertainty_bounds?.find((b: any) => b[0] === row[2])?.[2],
         ];
       }),
     );
@@ -243,23 +294,35 @@ export default function SeriesComparison({ items, active, f, release }: any) {
         </option>
       </select>
       {mode === "custom" && (
-        <div className="compare-checkboxes">
-          {available.map((i: any) => (
-            <label key={i.record.id}>
-              <input
-                type="checkbox"
-                checked={chosen.includes(i.record.id)}
-                onChange={(e) =>
-                  setChosen((c) =>
-                    e.target.checked
-                      ? [...c, i.record.id]
-                      : c.filter((x) => x !== i.record.id),
-                  )
-                }
-              />
-              {i.record.name}
-            </label>
-          ))}
+        <div>
+          <input
+            aria-label="Buscar sondeo en la comparación"
+            placeholder="Buscar sondeo…"
+            value={siteSearch}
+            onChange={(e) => setSiteSearch(e.target.value)}
+          />
+          <div className="compare-checkboxes">
+            {available
+              .filter((i: any) =>
+                i.record.name.toLowerCase().includes(siteSearch.toLowerCase()),
+              )
+              .map((i: any) => (
+                <label key={i.record.id}>
+                  <input
+                    type="checkbox"
+                    checked={chosen.includes(i.record.id)}
+                    onChange={(e) =>
+                      setChosen((c) =>
+                        e.target.checked
+                          ? [...c, i.record.id]
+                          : c.filter((x) => x !== i.record.id),
+                      )
+                    }
+                  />
+                  {i.record.name}
+                </label>
+              ))}
+          </div>
         </div>
       )}
       <div className="compare-controls">
@@ -321,7 +384,7 @@ export default function SeriesComparison({ items, active, f, release }: any) {
             id: i.record.id,
             dataset: i.record.dataset_doi,
             paper: i.record.paper_doi,
-            sha256: i.record.raw_sha256,
+            sha256: i.series.raw_sha256 || i.record.raw_sha256,
             reference: i.reference,
           })),
           missing_ages: "excluded",
@@ -345,9 +408,13 @@ export default function SeriesComparison({ items, active, f, release }: any) {
             opacity=".4"
           />
         )}
-        {series.map((i: any) => (
-          <g key={i.record.id} fill={colorFor(i.record.id)}>
-            {i.plotRows.map((p: any, j: number) => (
+        {shownSeries.map((i: any) => (
+          <g
+            data-series-id={i.series.id}
+            key={i.series.id}
+            fill={colorFor(i.record.id)}
+          >
+            {i.shown.map((p: any, j: number) => (
               <circle
                 key={j}
                 cx={x(p.age)}
@@ -414,6 +481,14 @@ export default function SeriesComparison({ items, active, f, release }: any) {
           </div>
         ))}
       </div>
+      {shownCount < points.length && (
+        <p className="chart-note">
+          Vista aligerada: {shownCount.toLocaleString("es-ES")} de{" "}
+          {points.length.toLocaleString("es-ES")} puntos, conservando extremos
+          por bloques. Los cálculos y las exportaciones CSV/SVG conservan todos
+          los puntos seleccionados.
+        </p>
+      )}
       <p className="chart-note">
         {points.length.toLocaleString("es-ES")} puntos; {selected.length}{" "}
         sondeos. Sin líneas entre muestras ni relleno de hiatos. Edades

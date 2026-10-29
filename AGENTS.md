@@ -24,7 +24,7 @@ Plataforma científica extensible a cualquier región, con piloto mediterráneo 
 ## Código, datos y comentarios
 
 - Python >=3.10. El núcleo actual usa biblioteca estándar. Añadir dependencias solo cuando resuelvan una necesidad concreta, con documentación de instalación.
-- Web v2 en `app/atlas-web/`; leer `docs/DISCOVERY_V2.md` y `docs/WEB_V1.md` antes de modificar normalización, mapas o D1. La semilla se genera desde Python; no editar sus valores ni mezclar métodos/proxies. Ejecutar también `node --test app/atlas-web/tests/science.test.mjs app/atlas-web/tests/timeline.test.mjs` para cambios científicos web.
+- Web v3 en `app/atlas-web/`; leer `docs/QUANTITATIVE_V3.md`, `docs/DISCOVERY_V2.md` y `docs/WEB_V1.md` antes de modificar normalización, mapas o D1. La semilla se genera desde Python; no editar sus valores ni mezclar métodos/proxies. Ejecutar también `node --test app/atlas-web/tests/science.test.mjs app/atlas-web/tests/timeline.test.mjs app/atlas-web/tests/proxies.test.mjs` para cambios científicos web.
 - Adaptadores en `src/medatlas/connectors/`; modelos iniciales en `src/medatlas/models.py`; extracción piloto en `scripts/prepare_seed.py`; filtros piloto en `src/seed_query.py`.
 - Mantener respuestas nativas y trazabilidad antes de normalizar. En HTTP, conservar límites/timeout, atender errores de esquema y evitar descargas masivas en pruebas automáticas.
 - `preserve_raw` guarda bytes por hash y manifiestos por fuente. Si hay bloqueo de escritor, esperar/reintentar; no borrar un lock ajeno. La licencia se revisa por recurso antes de redistribuirlo.

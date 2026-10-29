@@ -2,12 +2,15 @@
 export function timeExtent(data, metadataMax = null) {
   let min = Infinity,
     max = -Infinity;
-  for (const s of data?.series || [])
+  for (const s of data?.series || []) {
+    if (Number.isFinite(s.age_min_ka_bp)) min = Math.min(min, s.age_min_ka_bp);
+    if (Number.isFinite(s.age_max_ka_bp)) max = Math.max(max, s.age_max_ka_bp);
     for (const r of s.rows || [])
       if (typeof r[0] === "number" && Number.isFinite(r[0])) {
         min = Math.min(min, r[0]);
         max = Math.max(max, r[0]);
       }
+  }
   if (!Number.isFinite(min)) return { min: 0, max: 1, numericMax: null };
   return {
     min,

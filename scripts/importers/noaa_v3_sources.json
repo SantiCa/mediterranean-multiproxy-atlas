@@ -1,0 +1,131 @@
+{
+  "accessed_on": "2026-10-28",
+  "studies": [
+    {
+      "study_id": "32914",
+      "metadata_url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=32914",
+      "metadata_sha256": "5f8c3e2108611dc70ab50e6be000029ddbfd89278357855bfae793ab1ccac1b6",
+      "crossref_file": "crossref-2017PA003298.json",
+      "crossref_url": "https://api.crossref.org/works/10.1029/2017PA003298",
+      "crossref_sha256": "5597053fb49f8d52ee22490fbc30f75129f186d3368f7ce3772b05e09a77fdd1",
+      "files": [
+        {
+          "site_id": "58840",
+          "table_id": "45539",
+          "filename": "jalali2018css00-07.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018css00-07.txt",
+          "sha256": "bc52cfc24ae63bfb874f72cfd17b31e31711feb13273afbaeb0aea0f48890c7c",
+          "bytes": 20303
+        },
+        {
+          "site_id": "58841",
+          "table_id": "45540",
+          "filename": "jalali2018inv12-15.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018inv12-15.txt",
+          "sha256": "1d62df366d9b6f27c152c8012a303a0d73ad8725bc64fdb8e758452584ec9c65",
+          "bytes": 26375
+        },
+        {
+          "site_id": "58842",
+          "table_id": "45541",
+          "filename": "jalali2018kesc9-14.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018kesc9-14.txt",
+          "sha256": "bf27fea2799516f71a94c6d13b2ca6a4a89ad29fd95223b07568af1ef417afaa",
+          "bytes": 18559
+        },
+        {
+          "site_id": "58843",
+          "table_id": "45542",
+          "filename": "jalali2018sw104-nd-14.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/jalali2018/jalali2018sw104-nd-14.txt",
+          "sha256": "33af46bbce811edacb0cf8ff78cb694a0860f8fe24c9e8b5d3bb07601729f78e",
+          "bytes": 16325
+        }
+      ]
+    },
+    {
+      "study_id": "28070",
+      "metadata_url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=28070",
+      "metadata_sha256": "c0e8d14f69634ab43c08c8a71e6eb71a8977360c301ed06f81be0b024a37749c",
+      "crossref_file": "crossref-j.quascirev.2019.106044.json",
+      "crossref_url": "https://api.crossref.org/works/10.1016/j.quascirev.2019.106044",
+      "crossref_sha256": "351c84d21df496c5c28c28183745525194788f5566b9aa35ed047114f1e21300",
+      "files": [
+        {
+          "site_id": "58190",
+          "table_id": "40700",
+          "filename": "panagiotopoulos2019-geochem.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-geochem.txt",
+          "sha256": "83afc095e54a5853cd5207b9bc3b566bbd3238b63755b4e492f7d88215081081",
+          "bytes": 21739
+        },
+        {
+          "site_id": "58190",
+          "table_id": "40697",
+          "filename": "panagiotopoulos2019-pollen.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-pollen.txt",
+          "sha256": "d93370b406274adca5e21770c0859d9ba99b9d1ce0d4ad0bca56053503a7d9de",
+          "bytes": 32256
+        },
+        {
+          "site_id": "58190",
+          "table_id": "40698",
+          "filename": "panagiotopoulos2019-biomarker.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-biomarker.txt",
+          "sha256": "0358fdeb6d059b462bb11ef306794b5417a4bf2b8fcf2f11b8e5c714fbbcca2c",
+          "bytes": 9155
+        },
+        {
+          "site_id": "58190",
+          "table_id": "40699",
+          "filename": "panagiotopoulos2019-diatom.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-diatom.txt",
+          "sha256": "31d4293168ad6db842918ce5c2cecf9db2b548141e4f1ac7e59d9aca93732693",
+          "bytes": 10084
+        },
+        {
+          "site_id": "58190",
+          "table_id": "40701",
+          "filename": "panagiotopoulos2019-sand.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-sand.txt",
+          "sha256": "eff8a0449013d9714b659a7087938a992c807f5460a8c767d2db761d54f965c0",
+          "bytes": 7772
+        },
+        {
+          "site_id": "58190",
+          "table_id": "40702",
+          "filename": "panagiotopoulos2019-xrf.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/southern_europe/panagiotopoulos2019/panagiotopoulos2019-xrf.txt",
+          "sha256": "977fd900b84a2b9ebb6b55abcbf814c7303407a7052186593600f6a21967f7ad",
+          "bytes": 417516
+        }
+      ]
+    },
+    {
+      "study_id": "13666",
+      "metadata_url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=13666",
+      "metadata_sha256": "d0e915854291949fb7f3a5eae33b0a1f16919d5e6fc475828438d56b42d46f4e",
+      "crossref_file": "crossref-j.quascirev.2012.07.025.json",
+      "crossref_url": "https://api.crossref.org/works/10.1016/j.quascirev.2012.07.025",
+      "crossref_sha256": "e3408bfefb9cb17fe434b4122144f21465608a3716de66edcfa11f03b6713a29",
+      "files": [
+        {
+          "site_id": "54311",
+          "table_id": "23341",
+          "filename": "bourget2012ldb01-noaa.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/france/bourget2012ldb01-noaa.txt",
+          "sha256": "f44e4f9301f7c4ab1646602174a1798ebdad0a365ac152bf1901855f3c903cc3",
+          "bytes": 27081
+        },
+        {
+          "site_id": "54312",
+          "table_id": "23340",
+          "filename": "bourget2012ldb04-noaa.txt",
+          "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/france/bourget2012ldb04-noaa.txt",
+          "sha256": "c71ac8880840ee670ac57ba42862de8b2c4f3ad32d183a701f4e7a466ae0b19e",
+          "bytes": 30477
+        }
+      ]
+    }
+  ]
+}

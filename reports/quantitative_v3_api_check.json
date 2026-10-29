@@ -1,0 +1,12 @@
+{
+  "version": "atlas-quantitative-2026-10-29-v3-r1",
+  "bootstrap_requests": 341,
+  "records": 29,
+  "series": 89,
+  "values_compared_cell_by_cell": 81339,
+  "groups": 62,
+  "largest_group_values": 36459,
+  "metadata_has_no_observations": true,
+  "combined_filter_checked": true,
+  "exact_inventory_link_checked": true
+}

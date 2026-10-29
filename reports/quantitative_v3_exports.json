@@ -1,0 +1,20 @@
+{
+  "CSV": [
+    {
+      "file": "medatlas-series-comparison (2).csv",
+      "values": 820,
+      "all_ages_values_hashes_match_seed": true
+    },
+    {
+      "file": "medatlas-series-comparison (3).csv",
+      "values": 36459,
+      "all_ages_values_hashes_match_seed": true
+    }
+  ],
+  "SVG": {
+    "points": 36459,
+    "valid_xml": true,
+    "displayed_browser_points": 10000,
+    "export_contains_full_selection": true
+  }
+}

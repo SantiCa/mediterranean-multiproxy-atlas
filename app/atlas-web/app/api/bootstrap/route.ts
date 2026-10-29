@@ -1,34 +1,145 @@
-import { env } from 'cloudflare:workers';
-import seed from '../../../data/seed.json';
-export const dynamic='force-dynamic';
-
-// The only seed writes are idempotent inserts. Schema changes are migration-owned.
-export async function POST(request:Request){
-  if(request.headers.get('origin') && request.headers.get('origin')!==new URL(request.url).origin)
-    return Response.json({error:'Origen no permitido'},{status:403});
-  const db=env.DB;if(!db)return Response.json({error:'Base de datos no disponible'},{status:503});
-  const ready=await db.prepare('SELECT id FROM atlas_releases WHERE id=?').bind(seed.version).first();
-  if(ready)return Response.json({ready:true});
-  let body:any;try{body=await request.json();}catch{return Response.json({error:'JSON inválido'},{status:400});}
-  if(!body||typeof body!=='object'||Array.isArray(body))return Response.json({error:'Objeto JSON requerido'},{status:400});
-  const {offset=0}=body;
-  const all=seed.series.flatMap(s=>s.rows.map(row=>({s:s.id,row})));
-  if(!Number.isInteger(offset)||offset<0||offset>all.length)return Response.json({error:'Offset inválido'},{status:400});
-  if(offset===0){
-    // Keep each request under 50 SQL statements and each statement under 100 binds.
-    const statements=[];
-    for(let i=0;i<seed.records.length;i+=10){const batch=seed.records.slice(i,i+10);statements.push(db.prepare(`INSERT INTO atlas_records(id,name,realm,latitude,longitude,metadata_json) VALUES ${batch.map(()=>'(?,?,?,?,?,?)').join(',')} ON CONFLICT(id) DO UPDATE SET metadata_json=excluded.metadata_json`).bind(...batch.flatMap(r=>[r.id,r.name,r.realm,r.latitude,r.longitude,JSON.stringify(r)])));}
-    for(let i=0;i<seed.series.length;i+=10){const batch=seed.series.slice(i,i+10);statements.push(db.prepare(`INSERT INTO atlas_series(id,record_id,proxy,label,unit,metadata_json) VALUES ${batch.map(()=>'(?,?,?,?,?,?)').join(',')} ON CONFLICT(id) DO UPDATE SET metadata_json=excluded.metadata_json`).bind(...batch.flatMap(s=>{const {rows,...meta}=s;return[s.id,s.record_id,s.proxy,s.label,s.unit,JSON.stringify(meta)];})));}
-    await db.batch(statements);
+import { env } from "cloudflare:workers";
+import snapshot from "../../../data/seed.json";
+export const dynamic = "force-dynamic";
+const seed: any = snapshot;
+/** Reviewed append-only release, bounded stages, migration-owned schema.
+ * The assembler rejects changes to prior observation IDs/ages/values. */
+export async function POST(request: Request) {
+  if (
+    request.headers.get("origin") &&
+    request.headers.get("origin") !== new URL(request.url).origin
+  )
+    return Response.json({ error: "Origen no permitido" }, { status: 403 });
+  const db = env.DB;
+  if (!db)
+    return Response.json(
+      { error: "Base de datos no disponible" },
+      { status: 503 },
+    );
+  if (
+    await db
+      .prepare("SELECT id FROM atlas_releases WHERE id=?")
+      .bind(seed.version)
+      .first()
+  )
+    return Response.json({ ready: true });
+  let body: any;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ error: "JSON inválido" }, { status: 400 });
   }
-  const slice=all.slice(offset,offset+320);const queries=[];
-  for(let i=0;i<slice.length;i+=8){const batch=slice.slice(i,i+8);const args=batch.flatMap(({s,row})=>[`${s}:${row[2]}`,s,...row]);
-    // Revision r2 fills newly added nullable provenance fields without changing values or ages.
-    queries.push(db.prepare(`INSERT INTO atlas_observations(id,series_id,age_ka_bp,value,source_row,source_line,original_age,original_value,age_uncertainty_ka,value_uncertainty,depth_original) VALUES ${batch.map(()=>'(?,?,?,?,?,?,?,?,?,?,?)').join(',')} ON CONFLICT(id) DO UPDATE SET original_age=excluded.original_age,original_value=excluded.original_value,age_uncertainty_ka=excluded.age_uncertainty_ka,value_uncertainty=excluded.value_uncertainty,depth_original=excluded.depth_original`).bind(...args));}
-  if(queries.length)await db.batch(queries);
-  const next=offset+slice.length;
-  if(next>=all.length){const count=await db.prepare(`SELECT count(*) as n FROM atlas_observations WHERE series_id IN (${seed.series.map(()=>'?').join(',')})`).bind(...seed.series.map(s=>s.id)).first<{n:number}>();
-    if(count?.n!==all.length)return Response.json({error:'Importación incompleta: recuento no coincide'},{status:500});
-    await db.prepare('INSERT OR IGNORE INTO atlas_releases VALUES(?,?,?)').bind(seed.version,all.length,new Date().toISOString()).run();}
-  return Response.json({ready:next>=all.length,next,total:all.length});
+  if (!body || typeof body !== "object" || Array.isArray(body))
+    return Response.json({ error: "Objeto JSON requerido" }, { status: 400 });
+  const stages = ["records", "series", "observations"],
+    stage = body.stage || "records",
+    offset = body.offset ?? 0;
+  if (!stages.includes(stage) || !Number.isInteger(offset) || offset < 0)
+    return Response.json({ error: "Cursor inválido" }, { status: 400 });
+  let table: string,
+    columns: string,
+    all: any[],
+    encode: (r: any) => any[],
+    conflict: string;
+  if (stage === "records") {
+    table = "atlas_records";
+    columns = "id,name,realm,latitude,longitude,metadata_json";
+    all = seed.records;
+    encode = (r) => [
+      r.id,
+      r.name,
+      r.realm,
+      r.latitude,
+      r.longitude,
+      JSON.stringify(r),
+    ];
+    conflict =
+      "ON CONFLICT(id) DO UPDATE SET metadata_json=excluded.metadata_json";
+  } else if (stage === "series") {
+    table = "atlas_series";
+    columns = "id,record_id,proxy,label,unit,metadata_json";
+    all = seed.series;
+    encode = (s) => {
+      const { rows, ...meta } = s;
+      return [
+        s.id,
+        s.record_id,
+        s.proxy,
+        s.label,
+        s.unit,
+        JSON.stringify(meta),
+      ];
+    };
+    conflict =
+      "ON CONFLICT(id) DO UPDATE SET metadata_json=excluded.metadata_json";
+  } else {
+    table = "atlas_observations";
+    columns =
+      "id,series_id,age_ka_bp,value,source_row,source_line,original_age,original_value,age_uncertainty_ka,value_uncertainty,depth_original";
+    all = seed.series.flatMap((s: any) =>
+      s.rows.map((row: any) => ({ id: s.id, row })),
+    );
+    encode = (o) => [o.id + ":" + o.row[2], o.id, ...o.row];
+    conflict = "ON CONFLICT(id) DO NOTHING";
+  }
+  if (offset > all.length)
+    return Response.json({ error: "Cursor fuera de rango" }, { status: 400 });
+  const slice = all.slice(offset, offset + 240),
+    queries = [];
+  for (let i = 0; i < slice.length; i += 8) {
+    const batch = slice.slice(i, i + 8),
+      args = batch.flatMap(encode),
+      width = encode(batch[0]).length,
+      marks = batch
+        .map(() => "(" + Array(width).fill("?").join(",") + ")")
+        .join(",");
+    queries.push(
+      db
+        .prepare(
+          "INSERT INTO " +
+            table +
+            "(" +
+            columns +
+            ") VALUES " +
+            marks +
+            " " +
+            conflict,
+        )
+        .bind(...args),
+    );
+  }
+  if (queries.length) await db.batch(queries);
+  let next = offset + slice.length,
+    nextStage = stage;
+  if (next >= all.length) {
+    nextStage = stages[stages.indexOf(stage) + 1];
+    next = 0;
+  }
+  if (!nextStage) {
+    const counts = await db
+      .prepare(
+        "SELECT series_id,count(*) n FROM atlas_observations GROUP BY series_id",
+      )
+      .all();
+    const byId = new Map(counts.results.map((r: any) => [r.series_id, r.n]));
+    if (seed.series.some((s: any) => byId.get(s.id) !== s.rows.length))
+      return Response.json(
+        { error: "Importación incompleta: recuento por serie no coincide" },
+        { status: 500 },
+      );
+    await db
+      .prepare("INSERT OR IGNORE INTO atlas_releases VALUES(?,?,?)")
+      .bind(
+        seed.version,
+        seed.series.reduce((n: number, s: any) => n + s.rows.length, 0),
+        new Date().toISOString(),
+      )
+      .run();
+  }
+  return Response.json({
+    ready: !nextStage,
+    next,
+    stage: nextStage,
+    total: all.length,
+  });
 }

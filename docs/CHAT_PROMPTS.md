@@ -5,7 +5,7 @@ especialidad; las reglas y el estado están en el repositorio. En un chat sin ac
 a archivos, adjuntar `AGENTS.md`, `PROJECT_STATE.md` y los archivos mínimos indicados;
 el agente debe entregar un parche y señalar qué no pudo ejecutar.
 
-Antes de trabajar en la web, leer docs/DISCOVERY_V2.md y docs/WEB_V1.md; SRC-01/DB-01/API-01 del estado histórico ya tienen implementación v1. Usar el backlog actualizado.
+Antes de trabajar en la web, leer docs/QUANTITATIVE_V3.md, docs/DISCOVERY_V2.md y docs/WEB_V1.md; SRC-01/DB-01/API-01 del estado histórico ya tienen implementación v1. Usar el backlog actualizado.
 
 Orden recomendado: coordinador asigna contratos → arquitectura y conectores →
 curación científica → interfaz. El manuscrito puede avanzar en paralelo con la

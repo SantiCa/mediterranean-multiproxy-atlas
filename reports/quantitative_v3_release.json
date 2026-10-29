@@ -1,0 +1,80 @@
+{
+  "version": "atlas-quantitative-2026-10-29-v3-r1",
+  "baseline_version": "atlas-v1-2026-10-28-r2",
+  "baseline_unchanged": true,
+  "counts": {
+    "records": 29,
+    "series": 89,
+    "values": 81339,
+    "new_records": 16,
+    "new_series": 67,
+    "new_values": 66588,
+    "missing_age_values": 101
+  },
+  "numeric_age_extent_ka_bp": [
+    -0.0574,
+    1365.0
+  ],
+  "family_counts": {
+    "Temperatura": 21,
+    "Geoquímica elemental": 8,
+    "Sedimentología": 6,
+    "Biomarcadores": 19,
+    "Micropaleontología": 8,
+    "Isótopos estables": 12,
+    "Palinología": 14,
+    "Paleoincendios": 1
+  },
+  "comparison_groups": 62,
+  "exact_vector_quarantine": [],
+  "possible_overlap_links": [
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link_not_merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link_not_merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link_not_merged"
+    },
+    {
+      "basis": "position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link_not_merged"
+    }
+  ],
+  "source_audits": [
+    "reports/noaa_v3_audit.json",
+    "docs/curation/pangaea_v3.md"
+  ],
+  "quarantined_series": [
+    {
+      "id": "noaa-13666-54312:23340:terr",
+      "n": 1371,
+      "reason": "quarantined_percentage_outside_0_100",
+      "out_of_range_percent_cells": 18
+    }
+  ],
+  "sha256": "abff26358b45699c97b06cd5c9ec092c7aa5ee491063fb42c31b95236d8d6361",
+  "bytes": 5328986
+}

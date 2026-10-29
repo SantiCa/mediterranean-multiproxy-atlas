@@ -4,9 +4,9 @@
 
 The model is designed for marine and continental archives. The proposed relational architecture uses versioned geography independently of records; region storage and migrations remain to be implemented. The first interactive web pilot is implemented with a D1/SQLite database; Mediterranean synthesis and full scientific validation remain future work.
 
-## Interactive v2
+## Interactive v3
 
-[Open the atlas](https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site) (owner-private). Linked catalogue with 5,846 core/site entries, 9,726 PANGAEA dataset references and 289 declared campaign labels. Quantitative marine/continental collection: 13 records and 14,751 values. Campaign grouping, moving time windows, multiple-core point clouds, CSV and editable SVG. [Current implementation and coverage](docs/DISCOVERY_V2.md); [v1 scientific contracts](docs/WEB_V1.md). Web source: `app/atlas-web/`; reproducible SQLite: `python scripts/build_atlas_v1.py --from-seed --sqlite data/processed/atlas-v1-local.sqlite`.
+[Open the atlas](https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site) (owner-private). Linked catalogue with 5,846 core/site entries, 9,726 PANGAEA dataset references and 289 declared campaign labels. Quantitative collection: 29 records, 89 series and 81,339 values, in 62 conservative comparison groups. Searchable proxy families, method/unit facets, favorites, chronology/source/publication filters and lazy observation loading. Campaign grouping, moving time windows, multiple-core point clouds, CSV and editable SVG. [Current quantitative implementation](docs/QUANTITATIVE_V3.md); [inventory coverage](docs/DISCOVERY_V2.md); [v1 scientific contracts](docs/WEB_V1.md). Web source: `app/atlas-web/`; current numerical release: `data/processed/atlas-v3.json`; immutable baseline: `atlas-v1.json`.
 
 ## Project documents
 

@@ -1,0 +1,27 @@
+{
+  "id": "appgdep_6ae2f93b0a008191a0c1ef300a0f6142",
+  "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "title": "Mediterranean Multiproxy Atlas",
+  "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_bad6b893dd5c8191bb85fb144f7757de",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6ae21e92359c819185d57ecd9bed0133",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-10-29T07:44:12.831942+00:00",
+  "site_source_commit": "7d2f86920502cf3aa9a677eefd2c494547834973",
+  "audience": "owner_private",
+  "checks": {
+    "python_tests": 41,
+    "node_tests": 14,
+    "typescript": "passed",
+    "production_api": "All 81,339 observations in 62 groups compared cell by cell; exact inventory links and combined filters checked",
+    "production_receipt": "reports/quantitative_v3_production_check.json",
+    "local_browser": "Desktop/mobile proxy facets, persistent favorite, 4-core NOAA SST point cloud, dense Mondsee plot, full CSV and SVG exports checked",
+    "browser_online_limit": "In-app browser needs visitor sign-in; native publication and supported Sites service access verified production without weakening access",
+    "exports": "820 NOAA SST rows and 36,459 Mondsee rows match seed ages/values/hashes; SVG has all 36,459 points"
+  }
+}

@@ -156,6 +156,11 @@ export async function GET(request: Request) {
       counts: seed.counts,
     });
   if (view === "summary") {
+    const quantitative = await db
+      .prepare(
+        "SELECT (SELECT count(*) FROM atlas_records) records,(SELECT count(*) FROM atlas_series) series,(SELECT count(*) FROM atlas_observations) observations",
+      )
+      .first();
     const providers = await db
       .prepare(
         "SELECT provider,count(*) count FROM atlas_inventory GROUP BY provider ORDER BY provider",
@@ -170,6 +175,7 @@ export async function GET(request: Request) {
       version: seed.version,
       scope: seed.scope,
       counts: seed.counts,
+      quantitative,
       coverage: seed.coverage,
       time_extent: seed.time_extent,
       limitations: seed.limitations,
@@ -186,9 +192,21 @@ export async function GET(request: Request) {
       .prepare("SELECT metadata_json FROM atlas_inventory WHERE id=?")
       .bind(u.searchParams.get("id") || "")
       .first<{ metadata_json: string }>();
-    return row
-      ? Response.json(JSON.parse(row.metadata_json))
-      : Response.json({ error: "No encontrado" }, { status: 404 });
+    if (!row) return Response.json({ error: "No encontrado" }, { status: 404 });
+    const record = JSON.parse(row.metadata_json);
+    const curated = await db
+      .prepare("SELECT id,metadata_json FROM atlas_records")
+      .all();
+    const linked = curated.results
+      .filter((r: any) =>
+        (JSON.parse(r.metadata_json).inventory_ids || []).includes(record.id),
+      )
+      .map((r: any) => r.id);
+    return Response.json({
+      ...record,
+      curated_record_ids: linked,
+      curated_record_id: linked[0] || record.curated_record_id,
+    });
   }
   const { where, args } = filters(u);
   const n = await db

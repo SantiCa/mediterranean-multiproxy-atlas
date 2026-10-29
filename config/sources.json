@@ -37,6 +37,14 @@
         "records": 10,
         "curation": "docs/curation/",
         "release": "atlas-v1-2026-10-28-r2"
+      },
+      "numeric_v3": {
+        "release": "atlas-quantitative-2026-10-29-v3-r1",
+        "records": 19,
+        "series": 31,
+        "values": 40663,
+        "curation": "docs/QUANTITATIVE_V3.md",
+        "scope": "bounded reviewed batch, not exhaustive numerical harvest"
       }
     },
     {
@@ -68,6 +76,14 @@
         "records": 3,
         "curation": "docs/curation/",
         "release": "atlas-v1-2026-10-28-r2"
+      },
+      "numeric_v3": {
+        "release": "atlas-quantitative-2026-10-29-v3-r1",
+        "records": 10,
+        "series": 58,
+        "values": 40676,
+        "curation": "docs/QUANTITATIVE_V3.md",
+        "scope": "bounded reviewed batch, not exhaustive numerical harvest"
       }
     },
     {

@@ -24,4 +24,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test app/atlas-web/tests/science.test.mjs app/atlas-web/tests/timeline.test.mjs
+      - run: node --test app/atlas-web/tests/science.test.mjs app/atlas-web/tests/timeline.test.mjs app/atlas-web/tests/proxies.test.mjs

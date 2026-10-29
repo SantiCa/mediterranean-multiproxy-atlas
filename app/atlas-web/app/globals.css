@@ -2171,3 +2171,25 @@ td a {
 .cluster-label:before {
   display: none;
 }
+
+/* Searchable proxy catalogue: metadata facets remain independent of active data. */
+.proxy-open{display:flex;align-items:center;gap:8px;width:100%;padding:11px 10px;border:1px solid #b9cecb;border-radius:7px;background:#edf5f3;color:#235a61;text-align:left;margin:10px 0}
+.proxy-selected{border-left:3px solid #4e8284;padding:3px 0 3px 10px;display:grid;gap:5px;font-size:12px}
+.proxy-selected small{color:#6e8183}.proxy-selected>b{font-size:14px;color:#294954}.proxy-selected>span{font-size:11px;color:#667d80}
+.proxy-selected details{font-size:11px}.proxy-selected details p{line-height:1.5}
+.proxy-coverage{font-size:11px;text-align:left;color:#34747b;padding:5px 0;background:none;border:0;text-decoration:underline}
+.proxy-dialog{width:min(1120px,96vw);max-height:92vh;overflow:auto;background:#fafcfb;border-radius:14px;box-shadow:0 24px 90px #17384840;padding:25px;position:relative}
+.proxy-dialog header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.proxy-dialog h2{font-size:27px;margin:7px 0}.proxy-dialog header p{font-size:13px;color:#6d8082;margin:0 0 15px}
+.proxy-search{display:flex;align-items:center;gap:10px;border:1px solid #b9cdca;border-radius:8px;padding:0 12px;background:white}.proxy-search input{width:100%;padding:13px 0;border:0;background:none;outline:none}
+.proxy-facets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}.proxy-facets label{font-size:11px;font-weight:600;color:#527176}.proxy-facets select{display:block;width:100%;max-width:100%;margin-top:6px;padding:9px;border:1px solid #cfddda;border-radius:6px;background:white}
+.proxy-options{display:flex;align-items:center;flex-wrap:wrap;gap:20px;font-size:12px}.proxy-options label{display:flex;gap:6px;align-items:center}.proxy-options input{width:14px;height:14px}.proxy-options button{margin-left:auto;color:#41777b;background:none;border:0;text-decoration:underline}
+.proxy-results{font-size:12px;color:#6c7f83;line-height:1.5;margin:16px 0}
+.proxy-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.proxy-cards article{background:white;border:1px solid #d9e4e0;border-radius:9px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.proxy-cards article.selected{border:2px solid #548a87;padding:13px;background:#f1f7f4}.proxy-card-top{display:flex;justify-content:space-between;align-items:center;width:100%}.proxy-card-top small{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#6b8684}.proxy-card-top .icon{color:#7e8947}
+.proxy-cards h3{font-size:16px;margin:6px 0 9px;line-height:1.3}.proxy-cards b{font-size:13px;color:#34747b}.proxy-cards p{font-size:11px;line-height:1.5;color:#6c7f83}
+.proxy-method{max-height:65px;overflow:auto;overflow-wrap:anywhere}.proxy-metrics{font-size:11px;color:#527176;margin-top:auto;padding-top:8px}.proxy-select{background:#edf5f2;border:1px solid #bcd1ca;border-radius:5px;color:#295e65;padding:8px 10px;width:100%;text-align:center;font-size:12px}
+.proxy-dialog footer{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-top:20px;gap:15px}.proxy-dialog footer button{border:1px solid #c3d4cf;padding:7px 12px;border-radius:5px;background:white}.proxy-dialog button:disabled{opacity:.4}
+.publication-range{display:flex;gap:9px}.publication-range label{width:50%;font-size:11px;color:#6c7f83}.publication-range input{display:block;width:100%;padding:8px 5px;border:1px solid #d4dfdc;border-radius:5px;margin-top:6px}
+.series-status{position:fixed;z-index:650;top:86px;left:50%;transform:translateX(-50%);max-width:min(90vw,600px);background:#fff8df;color:#68562d;border:1px solid #ddcda1;border-radius:7px;padding:9px 16px;font-size:12px;box-shadow:0 4px 12px #17384820}
+@media(max-width:750px){.proxy-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.proxy-facets{grid-template-columns:repeat(2,minmax(0,1fr))}.proxy-dialog{padding:16px}.proxy-dialog h2{font-size:22px}}
+@media(max-width:450px){.proxy-cards{grid-template-columns:1fr}.proxy-dialog{max-height:95vh}.proxy-options{gap:10px}}

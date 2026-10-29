@@ -32,12 +32,14 @@ import DiscoveryExplorer from "../components/DiscoveryExplorer";
 import TimeWindow from "../components/TimeWindow";
 import SeriesComparison from "../components/SeriesComparison";
 import { timeExtent } from "../lib/timeline.mjs";
+import ProxyPicker from "../components/ProxyPicker";
+import { groupKey, proxyGroups } from "../lib/proxies.mjs";
 
 const fmt = (x: any, n = 2) =>
   typeof x === "number" && Number.isFinite(x)
     ? x.toLocaleString("es-ES", { maximumFractionDigits: n })
     : "—";
-const doiUrl = (doi: string) => "https://doi.org/" + doi;
+const doiUrl = (doi: string) => (doi ? "https://doi.org/" + doi : undefined);
 const BASES: any = {
   ocean: {
     label: "Batimetría",
@@ -95,6 +97,9 @@ export default function Atlas() {
     [selected, setSelected] = useState("pangaea-438816"),
     [filtersOpen, setFiltersOpen] = useState(false);
   const [inventoryInfo, setInventoryInfo] = useState<any>(null);
+  const [catalog, setCatalog] = useState<any>(null),
+    [seriesLoading, setSeriesLoading] = useState(false),
+    [seriesError, setSeriesError] = useState("");
   const [f, setF] = useState<any>({
     proxy: "alkenone_SST",
     min: 6,
@@ -106,6 +111,10 @@ export default function Atlas() {
     stat: "median",
     realm: "all",
     yearMin: 0,
+    yearMax: 0,
+    provider: "all",
+    chronology: "all",
+    group: "",
   });
   const [base, setBase] = useState("ocean"),
     [surface, setSurface] = useState(false),
@@ -165,28 +174,31 @@ export default function Atlas() {
       let d: any = await r.json();
       if (!r.ok) throw new Error(d.error || "No se pudo leer el catálogo");
       if (d.needsBootstrap) {
-        let offset = 0;
-        for (let i = 0; i < 100; i++) {
+        let offset = 0,
+          stage = "records";
+        for (let i = 0; i < 2000; i++) {
           setLoading(
             `Preparando la base científica · ${fmt(offset, 0)} valores`,
           );
           r = await fetch("/api/bootstrap", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ offset }),
+            body: JSON.stringify({ offset, stage }),
           });
           const p: any = await r.json();
           if (!r.ok) throw new Error(p.error);
           if (p.ready) break;
           offset = p.next;
-          if (i === 99) throw new Error("La importación no finalizó");
+          stage = p.stage;
+          if (i === 1999) throw new Error("La importación no finalizó");
         }
         r = await fetch("/api/catalog");
         d = await r.json();
         if (!r.ok || !d.series)
           throw new Error(d.error || "Catálogo incompleto");
       }
-      setData(d);
+      setCatalog(d);
+      setData({ ...d, series: [] });
       setLoading("");
     } catch (e: any) {
       setError(e.message || "Error de conexión");
@@ -267,20 +279,57 @@ export default function Atlas() {
       setTimeout(() => mapRef.current?.invalidateSize(), 100);
   }, [tab, filtersOpen]);
   const proxies = useMemo(
-    () =>
-      data
-        ? ([
-            ...new Map(
-              data.series.map((s: any) => [
-                s.proxy,
-                { id: s.proxy, label: s.label, unit: s.unit },
-              ]),
-            ).values(),
-          ] as any[])
-        : [],
-    [data],
+    () => (catalog ? proxyGroups(catalog) : []),
+    [catalog],
   );
-  const proxy = proxies.find((p) => p.id === f.proxy);
+  const proxy =
+    proxies.find((p: any) => p.key === f.group) ||
+    proxies.find((p: any) => p.id === f.proxy);
+  useEffect(() => {
+    if (catalog && !f.group) {
+      const first = proxies.find((p: any) => p.id === f.proxy) || proxies[0];
+      if (first)
+        setF((p: any) => ({ ...p, proxy: first.id, group: first.key }));
+    }
+  }, [catalog, f.group, proxies]);
+  useEffect(() => {
+    if (!catalog || !f.group) return;
+    const controller = new AbortController();
+    setSeriesLoading(true);
+    setSeriesError("");
+    setData({ ...catalog, series: [] });
+    const params = new URLSearchParams({
+      group: f.group,
+      provider: f.provider,
+      realm: f.realm,
+      yearMin: String(f.yearMin),
+      yearMax: String(f.yearMax),
+      chronology: f.chronology,
+    });
+    fetch("/api/observations?" + params, { signal: controller.signal })
+      .then(async (response) => {
+        const result: any = await response.json();
+        if (!response.ok)
+          throw new Error(result.error || "No se pudieron cargar las series");
+        if (!controller.signal.aborted)
+          setData({ ...catalog, series: result.series });
+      })
+      .catch((e) => {
+        if (e.name !== "AbortError") setSeriesError(e.message);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setSeriesLoading(false);
+      });
+    return () => controller.abort();
+  }, [
+    catalog,
+    f.group,
+    f.provider,
+    f.realm,
+    f.yearMin,
+    f.yearMax,
+    f.chronology,
+  ]);
   const summary = useMemo(() => {
     if (!data) return { items: [], error: "" };
     try {
@@ -305,11 +354,14 @@ export default function Atlas() {
     [items, surface, radius, mask],
   );
   const totalValues =
-      data?.series.reduce((n: number, s: any) => n + s.rows.length, 0) || 0,
+      catalog?.series.reduce(
+        (n: number, s: any) => n + (s.observation_count || 0),
+        0,
+      ) || 0,
     nFiltered = valid.reduce((n, s) => n + s.n, 0);
   const domainTime = useMemo(
-    () => timeExtent(data, inventoryInfo?.time_extent?.metadata_max),
-    [data, inventoryInfo],
+    () => timeExtent(catalog, inventoryInfo?.time_extent?.metadata_max),
+    [catalog, inventoryInfo],
   );
   function change(k: string, v: any) {
     setF((p: any) => ({ ...p, [k]: v }));
@@ -405,6 +457,10 @@ export default function Atlas() {
       "publication_year",
       "license",
       "sha256",
+      "source_url",
+      "age_scale",
+      "uncertainty_lower",
+      "uncertainty_upper",
     ];
     const rows = items.flatMap((i) =>
       i.target.map((r: any) => [
@@ -439,7 +495,13 @@ export default function Atlas() {
         i.record.paper_doi,
         i.record.publication_year,
         i.record.license,
-        i.record.raw_sha256,
+        i.series.raw_sha256 || i.record.raw_sha256,
+        i.series.source_url || i.record.source_url,
+        i.series.age_scale ||
+          i.record.time_scale ||
+          i.series.age_transformation,
+        i.series.uncertainty_bounds?.find((b: any) => b[0] === r[2])?.[1],
+        i.series.uncertainty_bounds?.find((b: any) => b[0] === r[2])?.[2],
       ]),
     );
     download(
@@ -593,7 +655,7 @@ export default function Atlas() {
         </nav>
         <div className="header-end">
           <span className="pilot">
-            <i /> ATLAS v2
+            <i /> ATLAS v3
           </span>
           <button className="add-source" onClick={openSources}>
             <Plus size={15} /> Añadir fuente
@@ -604,12 +666,16 @@ export default function Atlas() {
         <DiscoveryExplorer
           onSummary={setInventoryInfo}
           onOpenSeries={(id: string) => {
-            const item = data.series.find((s: any) => s.record_id === id);
+            const item = catalog.series.find((s: any) => s.record_id === id);
             if (item) {
               setSelected(id);
               setF((p: any) => ({
                 ...p,
                 proxy: item.proxy,
+                group: groupKey(item),
+                provider: "all",
+                chronology: "all",
+                yearMax: 0,
                 realm: "all",
                 yearMin: 0,
               }));
@@ -643,26 +709,16 @@ export default function Atlas() {
               <X size={16} />
             </button>
           </div>
-          <section>
-            <label className="overline" htmlFor="proxy">
-              01 / PROXY
-            </label>
-            <select
-              id="proxy"
-              value={f.proxy}
-              onChange={(e) => change("proxy", e.target.value)}
-            >
-              {proxies.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.label}
-                </option>
-              ))}
-            </select>
-            <p className="field-note">
-              Se comparan series de la misma variable y método. Unidad:{" "}
-              <b>{proxy?.unit}</b>.
-            </p>
-          </section>
+          <ProxyPicker
+            catalog={catalog}
+            selectedKey={f.group}
+            f={f}
+            setF={setF}
+            onSelect={(g: any) => {
+              setF((p: any) => ({ ...p, proxy: g.id, group: g.key }));
+              setFiltersOpen(false);
+            }}
+          />
           <section>
             <label className="overline" htmlFor="realm">
               02 / ARCHIVO
@@ -681,8 +737,8 @@ export default function Atlas() {
                 Marino
               </button>
               <button
-                className={f.realm === "speleothem" ? "on" : ""}
-                onClick={() => change("realm", "speleothem")}
+                className={f.realm === "continental" ? "on" : ""}
+                onClick={() => change("realm", "continental")}
               >
                 Continental
               </button>
@@ -790,28 +846,124 @@ export default function Atlas() {
             )}
           </section>
           <section>
-            <label className="overline" htmlFor="year">
-              05 / AÑO DEL ARTÍCULO
+            <label className="overline" htmlFor="provider">
+              05 / FUENTE Y CRONOLOGÍA
             </label>
             <select
-              id="year"
-              value={f.yearMin}
-              onChange={(e) => change("yearMin", Number(e.target.value))}
+              id="provider"
+              aria-label="Fuente cuantitativa"
+              value={f.provider}
+              onChange={(e) => change("provider", e.target.value)}
             >
-              <option value="0">Todos los años</option>
-              <option value="2000">Desde 2000</option>
-              <option value="2010">Desde 2010</option>
-              <option value="2020">Desde 2020</option>
+              <option value="all">Todas las fuentes</option>
+              {[...new Set(catalog.records.map((r: any) => r.provider))]
+                .sort()
+                .map((v: any) => (
+                  <option key={v}>{v}</option>
+                ))}
             </select>
+            <label className="field-note" htmlFor="chronology">
+              Base de edad publicada
+            </label>
+            <select
+              id="chronology"
+              aria-label="Base de edad publicada"
+              value={f.chronology}
+              onChange={(e) => change("chronology", e.target.value)}
+            >
+              <option value="all">Todas las cronologías admitidas</option>
+              {[...new Set(catalog.series.map((s: any) => s.chronology_status))]
+                .filter(Boolean)
+                .sort()
+                .map((v: any) => (
+                  <option key={v} value={v}>
+                    {catalog.series.find((s: any) => s.chronology_status === v)
+                      ?.chronology_label ||
+                      (v === "published_calendar_multi_method"
+                        ? "Calendario publicado · controles mixtos"
+                        : v === "published_calendar"
+                          ? "Calendario publicado"
+                          : v === "published_CE"
+                            ? "Años CE → BP"
+                            : v === "published_varve_BP"
+                              ? "Edad varvada BP"
+                              : v === "published_BP"
+                                ? "Edad BP archivada"
+                                : v === "legacy_archived"
+                                  ? "Piloto · edad archivada"
+                                  : v)}
+                  </option>
+                ))}
+            </select>
+            <p className="field-note">
+              La base de edad está revisada en la tabla; no se han recalibrado
+              ni validado independientemente los modelos.
+            </p>
+          </section>
+          <section>
+            <label className="overline">06 / AÑO DEL ARTÍCULO</label>
+            <div className="publication-range">
+              <label>
+                Desde
+                <input
+                  aria-label="Artículo desde el año"
+                  type="number"
+                  min="1800"
+                  max="2100"
+                  placeholder="Cualquiera"
+                  value={f.yearMin || ""}
+                  onChange={(e) => change("yearMin", Number(e.target.value))}
+                />
+              </label>
+              <label>
+                Hasta
+                <input
+                  aria-label="Artículo hasta el año"
+                  type="number"
+                  min="1800"
+                  max="2100"
+                  placeholder="Cualquiera"
+                  value={f.yearMax || ""}
+                  onChange={(e) => change("yearMax", Number(e.target.value))}
+                />
+              </label>
+            </div>
+            <p className="field-note">
+              Años de publicación, separados de las edades de las muestras. Si
+              no hay año conocido, se excluye al fijar un límite.
+            </p>
+            <button
+              className="proxy-coverage"
+              onClick={() =>
+                setF((p: any) => ({
+                  ...p,
+                  provider: "all",
+                  realm: "all",
+                  chronology: "all",
+                  yearMin: 0,
+                  yearMax: 0,
+                }))
+              }
+            >
+              Restablecer filtros de registros
+            </button>
           </section>
           <div className="sidebar-footer">
             <Database size={16} />
             <span>
               <b>{fmt(totalValues, 0)} valores trazables</b>
-              <small>PANGAEA + NOAA · {data.records.length} registros</small>
+              <small>PANGAEA + NOAA · {catalog.records.length} registros</small>
             </span>
           </div>
         </aside>
+        {(seriesLoading || seriesError) && (
+          <div
+            className="series-status"
+            role={seriesError ? "alert" : "status"}
+          >
+            {seriesError || "Cargando series seleccionadas…"}
+          </div>
+        )}
         <main
           className="main-area"
           style={tab === "map" ? {} : { display: "none" }}
@@ -1033,7 +1185,8 @@ export default function Atlas() {
                   <div>
                     <dt>Tipo de evidencia</dt>
                     <dd>
-                      {active.series.proxy.includes("SST")
+                      {active.series.evidence_type ===
+                      "published_reconstruction"
                         ? "Reconstrucción publicada"
                         : "Valor publicado"}
                     </dd>
@@ -1041,7 +1194,11 @@ export default function Atlas() {
                 </dl>
                 <div className="source-links">
                   <a
-                    href={doiUrl(active.record.dataset_doi)}
+                    href={
+                      active.series.source_url ||
+                      active.record.source_url ||
+                      doiUrl(active.record.dataset_doi)
+                    }
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -1053,7 +1210,10 @@ export default function Atlas() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BookOpen size={15} /> Artículo científico{" "}
+                    <BookOpen size={15} />{" "}
+                    {active.record.paper_doi
+                      ? "Artículo científico"
+                      : "Artículo original no resuelto"}{" "}
                     <ExternalLink size={12} />
                   </a>
                 </div>
@@ -1063,7 +1223,9 @@ export default function Atlas() {
                   </summary>
                   <p>{active.series.method}</p>
                   <p>
-                    {active.record.age_scale_status ||
+                    {active.series.age_scale ||
+                      active.series.age_transformation ||
+                      active.record.age_scale_status ||
                       active.record.time_scale ||
                       "Cronología archivada; sin armonización local"}
                   </p>
@@ -1073,7 +1235,10 @@ export default function Atlas() {
                     ),
                   )}
                   <p>Licencia: {active.record.license}</p>
-                  <p className="hash">SHA-256: {active.record.raw_sha256}</p>
+                  <p className="hash">
+                    SHA-256:{" "}
+                    {active.series.raw_sha256 || active.record.raw_sha256}
+                  </p>
                 </details>
                 <button className="export-data" onClick={exportCSV}>
                   <Download size={16} /> Exportar selección CSV
@@ -1091,16 +1256,16 @@ export default function Atlas() {
             <div className="eyebrow">BASE DE DATOS / COLECCIÓN CURADA</div>
             <h1>Registros con historia y procedencia</h1>
             <p>
-              13 registros reales. Las relaciones con artículos y repositorios
-              están verificadas; la cronología y la interpretación tienen
-              límites específicos por fuente.
+              {catalog.records.length} registros con valores. Las relaciones con
+              artículos y repositorios están verificadas; la cronología y la
+              interpretación tienen límites específicos por fuente.
             </p>
             <div className="catalog-summary">
               <span>
                 <b>{data.records.length}</b> registros
               </span>
               <span>
-                <b>{data.series.length}</b> series
+                <b>{catalog.series.length}</b> series
               </span>
               <span>
                 <b>{fmt(totalValues, 0)}</b> valores
@@ -1119,7 +1284,7 @@ export default function Atlas() {
                 </thead>
                 <tbody>
                   {data.records.map((r: any) => {
-                    const ss = data.series.filter(
+                    const ss = catalog.series.filter(
                       (s: any) => s.record_id === r.id,
                     );
                     return (
@@ -1138,7 +1303,8 @@ export default function Atlas() {
                           <small>
                             {fmt(
                               ss.reduce(
-                                (n: number, s: any) => n + s.rows.length,
+                                (n: number, s: any) =>
+                                  n + (s.observation_count || 0),
                                 0,
                               ),
                               0,
@@ -1148,7 +1314,7 @@ export default function Atlas() {
                         </td>
                         <td>
                           <a
-                            href={doiUrl(r.dataset_doi)}
+                            href={r.source_url || doiUrl(r.dataset_doi)}
                             target="_blank"
                             rel="noreferrer"
                           >
@@ -1161,7 +1327,9 @@ export default function Atlas() {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              Artículo {r.publication_year}
+                              {r.paper_doi
+                                ? "Artículo " + r.publication_year
+                                : "Artículo original no resuelto"}
                             </a>
                           </small>
                         </td>
@@ -1169,7 +1337,16 @@ export default function Atlas() {
                           <button
                             onClick={() => {
                               setSelected(r.id);
-                              setF({ ...f, proxy: ss[0].proxy, realm: "all" });
+                              setF({
+                                ...f,
+                                proxy: ss[0].proxy,
+                                group: groupKey(ss[0]),
+                                realm: "all",
+                                provider: "all",
+                                chronology: "all",
+                                yearMin: 0,
+                                yearMax: 0,
+                              });
                               setTab("map");
                             }}
                           >
@@ -1211,10 +1388,10 @@ export default function Atlas() {
                   <article>
                     <b>01 · Seleccionar</b>
                     <p>
-                      Una variable, unidad y método compatibles. SST de
-                      alquenonas utiliza Müller et al. (1998); Mg/Ca permanece
-                      separado. δ¹⁸O y δ¹³C son variables distintas, sin
-                      conversión a precipitación.
+                      Una variable, unidad y método compatibles. Las
+                      calibraciones de SST se mantienen en grupos separados;
+                      Mg/Ca también conserva método y especie. δ¹⁸O y δ¹³C son
+                      variables distintas, sin conversión a precipitación.
                     </p>
                   </article>
                   <article>
