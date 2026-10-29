@@ -10,7 +10,7 @@ on:
         default: all
   push:
     branches: [claude/curado]
-    paths: [scripts/discovery/proxy_coverage.py, scripts/importers/**, .github/workflows/curation.yml]
+    paths: [scripts/discovery/proxy_coverage.py, scripts/importers/**, scripts/build_quantitative_v5.py, .github/workflows/curation.yml]
 permissions:
   contents: write
 concurrency:
