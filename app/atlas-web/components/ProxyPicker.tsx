@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Search, X, Star, SlidersHorizontal } from "lucide-react";
-import { proxyGroups, filterGroups } from "../lib/proxies.mjs";
+import { proxyCatalog as proxyGroups, filterGroups, sortGroups } from "../lib/proxies.mjs";
 const number = (n: number) =>
   n.toLocaleString("es-ES", { maximumFractionDigits: 3 });
 export default function ProxyPicker({
@@ -21,6 +21,9 @@ export default function ProxyPicker({
       unit: "all",
       overlap: false,
       favoritesOnly: false,
+      sort: "records",
+      aggregates: true,
+      minRecords: 0,
     }),
     [favorites, setFavorites] = useState<string[]>([]),
     [page, setPage] = useState(0);
@@ -39,12 +42,15 @@ export default function ProxyPicker({
   const all = useMemo(() => proxyGroups(catalog), [catalog]);
   const selected = all.find((g: any) => g.key === selectedKey);
   const scoped = groups.find((g: any) => g.key === selectedKey);
-  const matches = filterGroups(groups, {
-    ...q,
-    favorites,
-    min: f.min,
-    max: f.max,
-  });
+  const matches = sortGroups(
+    filterGroups(groups, {
+      ...q,
+      favorites,
+      min: f.min,
+      max: f.max,
+    }),
+    q.sort,
+  );
   const familyOptions = [...new Set(groups.map((g: any) => g.family))].sort();
   const variableOptions = [
     ...new Set(
@@ -130,6 +136,9 @@ export default function ProxyPicker({
       unit: "all",
       overlap: false,
       favoritesOnly: false,
+      sort: "records",
+      aggregates: true,
+      minRecords: 0,
     });
   return (
     <section className="proxy-picker">
@@ -145,13 +154,22 @@ export default function ProxyPicker({
             {selected.unit} · {scoped?.records || 0} registros ·{" "}
             {number(scoped?.count || 0)} valores con los filtros activos
           </span>
-          <details>
+          <details open={!!selected.aggregate}>
             <summary>Método y compatibilidad</summary>
             <p>{selected.method}</p>
-            <p>
-              Solo se combinan series de este grupo. Compartir unidad no
-              demuestra equivalencia.
-            </p>
+            {selected.aggregate ? (
+              <p className="aggregate-note">
+                Agrupación de {selected.members.length} grupos que miden la
+                misma variable en {selected.unit}. Métodos, calibraciones y
+                estaciones son distintos y no se armonizan: cada punto conserva
+                el suyo. Para comparar anomalías usa «z por sondeo».
+              </p>
+            ) : (
+              <p>
+                Solo se combinan series de este grupo. Compartir unidad no
+                demuestra equivalencia.
+              </p>
+            )}
           </details>
           {Number.isFinite(selected.min) && (
             <button
@@ -171,7 +189,7 @@ export default function ProxyPicker({
         </div>
       )}
       <p className="field-note">
-        Familia → variable → método → unidad. Busca también por sondeo, especie,
+        Familia → variable → método → unidad. Ordena por nº de sondeos o de datos y agrupa métodos que miden lo mismo (p. ej. SST) para mapas más completos. Busca también por sondeo, especie,
         calibración o δ18O / d18O. Los favoritos se guardan en este navegador.
       </p>
       {open &&
@@ -288,6 +306,38 @@ export default function ProxyPicker({
               </div>
               <div className="proxy-options">
                 <label>
+                  Ordenar por{" "}
+                  <select
+                    aria-label="Ordenar proxies"
+                    value={q.sort}
+                    onChange={(e) => setQ({ ...q, sort: e.target.value })}
+                  >
+                    <option value="records">Nº de registros (sondeos)</option>
+                    <option value="values">Nº de datos</option>
+                    <option value="name">Nombre</option>
+                  </select>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={q.aggregates}
+                    onChange={(e) =>
+                      setQ({ ...q, aggregates: e.target.checked })
+                    }
+                  />{" "}
+                  Agrupar proxies que miden lo mismo
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={q.minRecords > 1}
+                    onChange={(e) =>
+                      setQ({ ...q, minRecords: e.target.checked ? 2 : 0 })
+                    }
+                  />{" "}
+                  Solo con ≥2 registros (mapas)
+                </label>
+                <label>
                   <input
                     type="checkbox"
                     checked={q.favoritesOnly}
@@ -317,10 +367,16 @@ export default function ProxyPicker({
                 {matches.slice(page * 18, page * 18 + 18).map((g: any) => (
                   <article
                     key={g.key}
-                    className={g.key === selectedKey ? "selected" : ""}
+                    className={
+                      (g.key === selectedKey ? "selected " : "") +
+                      (g.aggregate ? "aggregate" : "")
+                    }
                   >
                     <div className="proxy-card-top">
-                      <small>{g.family}</small>
+                      <small>
+                        {g.aggregate ? "AGRUPADO · " : ""}
+                        {g.family}
+                      </small>
                       <button
                         className="icon"
                         aria-label={

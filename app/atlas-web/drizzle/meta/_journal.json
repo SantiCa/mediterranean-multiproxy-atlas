@@ -29,6 +29,13 @@
       "when": 1793224205275,
       "tag": "0003_bizarre_mastermind",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1793300000000,
+      "tag": "0004_private_data",
+      "breakpoints": true
     }
   ]
 }

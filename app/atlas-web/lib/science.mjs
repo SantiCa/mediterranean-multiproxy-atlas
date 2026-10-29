@@ -1,4 +1,4 @@
-import { groupKey, seriesMatches } from "./proxies.mjs";
+import { groupKey, seriesMatches, inGroup, isAggregateKey } from "./proxies.mjs";
 export const finite = (x) => typeof x === "number" && Number.isFinite(x);
 export const mean = (a) => a.reduce((s, v) => s + v, 0) / a.length;
 export function median(a) {
@@ -15,13 +15,14 @@ export function summarize(data, f) {
   )
     throw new Error("El intervalo de edad o de referencia no es válido.");
   const records = new Map(data.records.map((r) => [r.id, r]));
-  const candidates = data.series.filter(
-    (s) => s.proxy === f.proxy && (!f.group || groupKey(s) === f.group),
+  const agg = isAggregateKey(f.group);
+  const candidates = data.series.filter((s) =>
+    agg ? inGroup(s, f.group) : s.proxy === f.proxy && (!f.group || groupKey(s) === f.group),
   );
-  if (new Set(candidates.map(groupKey)).size > 1)
+  // An explicit aggregation may mix comparison groups; otherwise only one group.
+  if (!agg && new Set(candidates.map(groupKey)).size > 1)
     throw new Error("Selecciona un único grupo de variable, método y unidad.");
-  return data.series
-    .filter((s) => s.proxy === f.proxy && (!f.group || groupKey(s) === f.group))
+  return candidates
     .map((s) => {
       const record = records.get(s.record_id),
         finiteRows = s.rows.filter((r) => finite(r[0]) && finite(r[1]));
