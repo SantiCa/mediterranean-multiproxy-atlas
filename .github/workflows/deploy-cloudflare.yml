@@ -111,9 +111,9 @@ jobs:
           EOF
           if ! npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json > migrate.log 2>&1; then
             cat migrate.log
-            if grep -q "row write limit" migrate.log; then
+            if grep -qE "row (write|read) limit" migrate.log; then
               # Daily Free limit: deploy anyway; migrations retry in the nightly run.
-              echo "::warning title=Migraciones D1::límite diario de escritura; se aplican en la ejecución nocturna"
+              echo "::warning title=Migraciones D1::límite diario D1; se aplican en la ejecución nocturna"
             else
               echo "::error title=Migraciones D1::$(grep -iE 'error|✘' migrate.log | tail -3 | tr '\n' ' ' | cut -c1-400)"
               exit 1
@@ -200,11 +200,15 @@ jobs:
       # stops with a warning; the web keeps serving the last complete release.
       - name: Load releases into D1
         if: steps.gate.outputs.ok == 'true'
+        id: load
         run: |
           S="--seed ../../data/processed/atlas-v3.json --seed ../../data/processed/atlas-v4.json --seed ../../data/processed/atlas-v5.json"
           q() { npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --json --command "$1"; }
-          q "SELECT series_id,count(*) n FROM atlas_observations GROUP BY series_id" > counts.json
-          python ../../scripts/d1_release.py plan $S --counts counts.json --out-dir d1plan | tee plan.log
+          x() { npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --json --file "$1" -y; }
+          q "SELECT id FROM atlas_releases" > releases.json 2> q.err || { echo "::warning title=Carga D1::D1 no responde (probable límite diario); se reintenta en la ejecución nocturna"; echo "full=false" >> "$GITHUB_OUTPUT"; exit 0; }
+          python ../../scripts/d1_release.py count-sql $S --releases releases.json --out counts.sql
+          x counts.sql > counts.json
+          python ../../scripts/d1_release.py plan $S --counts counts.json --releases releases.json --out-dir d1plan | tee plan.log
           loaded=0; partial=""
           for f in d1plan/*.sql; do
             [ -e "$f" ] || break
@@ -214,9 +218,9 @@ jobs:
               partial="$f: $(grep -iE 'error|✘' exec.log | tail -2 | tr '\n' ' ' | cut -c1-300)"; tail -5 exec.log; break
             fi
           done
-          q "SELECT series_id,count(*) n FROM atlas_observations GROUP BY series_id" > counts.json
-          q "SELECT id FROM atlas_releases" > releases.json
+          x counts.sql > counts.json
           python ../../scripts/d1_release.py finalize $S --counts counts.json --releases releases.json --out final.sql | tee final.log
+          grep -q "complete_now=none" final.log && echo "full=false" >> "$GITHUB_OUTPUT" || echo "full=true" >> "$GITHUB_OUTPUT"
           if [ -s final.sql ]; then npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file final.sql -y > final_exec.log 2>&1 || { tail -5 final_exec.log; echo "::warning title=Carga D1::no se pudo registrar la release (se reintenta mañana): $(grep -iE 'error|✘' final_exec.log | tail -2 | tr '\n' ' ' | cut -c1-300)"; }; fi
           if [ -n "$partial" ]; then
             echo "::warning title=Carga D1 parcial::$loaded lotes cargados; se detuvo en $partial (probable límite diario Free). Se reanuda en la ejecución diaria. $(cat final.log)"
@@ -255,7 +259,10 @@ jobs:
         env:
           URL: ${{ steps.url.outputs.url }}
         run: |
-          if python scripts/validate_quantitative_api.py --url "$URL" --public-https --seed data/processed/atlas-v3.json --seed data/processed/atlas-v4.json --seed data/processed/atlas-v5.json > validate.log 2>&1; then
+          # Full cell-by-cell check (reads every observation) only when a release was just
+          # completed or on manual runs; otherwise a light metadata check (D1 read budget).
+          LIGHT=""; [ "${{ steps.load.outputs.full }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || LIGHT="--light"
+          if python scripts/validate_quantitative_api.py --url "$URL" --public-https $LIGHT --seed data/processed/atlas-v3.json --seed data/processed/atlas-v4.json --seed data/processed/atlas-v5.json > validate.log 2>&1; then
             echo "::notice title=Validación::$(tail -1 validate.log)"
           else
             cat validate.log

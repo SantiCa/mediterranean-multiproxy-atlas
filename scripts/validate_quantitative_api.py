@@ -19,7 +19,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def group_key(s):return json.dumps([s['proxy'],s['compatibility_group'],s['unit']],ensure_ascii=False,separators=(',',':'))
 def main():
     p=argparse.ArgumentParser();p.add_argument('--url',default='http://127.0.0.1:5173');p.add_argument('--site-service-access',action='store_true');p.add_argument('--public-https',action='store_true',help='Self-hosted public Cloudflare URL (no credentials sent)')
-    p.add_argument('--seed',type=Path,action='append',help='Release seed(s), oldest first; default atlas-v3.json');p.add_argument('--report-prefix',default='quantitative');a=p.parse_args()
+    p.add_argument('--seed',type=Path,action='append',help='Release seed(s), oldest first; default atlas-v3.json');p.add_argument('--report-prefix',default='quantitative');p.add_argument('--light',action='store_true',help='metadata only (no observation reads)');a=p.parse_args()
     if not re.fullmatch(r'[a-z0-9_]+',a.report_prefix):raise ValueError('Invalid report prefix')
     # Cloudflare's browser-integrity check rejects the default Python-urllib agent (403).
     headers={'Content-Type':'application/json','User-Agent':'medatlas-validator/1.0 (+https://github.com/SantiCa/mediterranean-multiproxy-atlas)'}
@@ -52,6 +52,9 @@ def main():
     assert len(catalog['records'])==len(seed['records'])
     assert len(catalog['series'])==len(seed['series'])
     assert all(not s['rows'] for s in catalog['series']), 'Metadata must not preload observations'
+    if a.light:
+        print('OK '+served+' (ligera): '+str(len(catalog['records']))+' registros, '+str(len(catalog['series']))+' series'+('' if served==latest else ' — '+latest+' en carga'))
+        return
     expected={s['id']:s for s in seed['series']}
     groups={group_key(s) for s in seed['series']}
     checked=0;series_count=0;max_payload_group=0
