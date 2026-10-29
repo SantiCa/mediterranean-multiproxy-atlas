@@ -1,0 +1,54 @@
+# Curación con acceso a proveedores (PANGAEA/DataCite/NOAA/Crossref).
+# El entorno de Claude no alcanza esos dominios; este flujo los consulta en un runner de GitHub,
+# fija los resultados en la rama y guarda los originales como artefacto (data/interim sigue ignorado).
+name: Curation (network)
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'coverage | reproduce-v4 | all'
+        default: all
+  push:
+    branches: [claude/curado]
+    paths: [scripts/discovery/proxy_coverage.py, scripts/importers/**, .github/workflows/curation.yml]
+permissions:
+  contents: write
+concurrency:
+  group: curation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  coverage:
+    if: github.event_name == 'push' || inputs.job != 'reproduce-v4'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with: {python-version: '3.12'}
+      - run: python scripts/discovery/proxy_coverage.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: proxy-coverage-originals, path: data/interim/proxy_coverage, retention-days: 30}
+      - name: Commit report
+        run: |
+          git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
+          git add reports/proxy_coverage_pangaea.json docs/curation/proxy_coverage_pangaea.md
+          git diff --cached --quiet || { git commit -m "Coverage: PANGAEA proxy coverage report (CI)"; git pull --rebase origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }
+  reproduce-v4:
+    if: github.event_name == 'push' || inputs.job != 'coverage'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with: {python-version: '3.12'}
+      - run: python -m pip install -e .
+      - run: python scripts/importers/curate_pangaea_v4.py --download
+      - run: python scripts/importers/curate_noaa_v4.py --fetch
+      - run: python scripts/build_quantitative_v4.py
+      - name: Release matches committed atlas-v4.json
+        run: git diff --stat --exit-code data/processed/atlas-v4.json
+      - run: python -m unittest discover -s tests -v
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: quantitative-v4-originals, path: data/interim/quantitative_v4, retention-days: 30}
