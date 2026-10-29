@@ -276,9 +276,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 5,
@@ -293,9 +292,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    }
   ]
  },
@@ -379,9 +377,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 5,
@@ -396,9 +393,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    }
   ]
  },
@@ -766,7 +762,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -783,7 +779,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -864,7 +860,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -881,7 +877,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -898,7 +894,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -997,7 +993,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    }
   ]
@@ -1210,9 +1206,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 5,
@@ -1260,7 +1255,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -1292,9 +1287,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 14,
@@ -1309,9 +1303,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    }
   ]
  },
@@ -1805,9 +1798,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 9,
@@ -2005,7 +1997,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -2722,7 +2714,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -2755,7 +2747,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3038,7 +3030,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3103,7 +3095,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3152,7 +3144,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    }
   ]
@@ -3468,7 +3460,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3485,7 +3477,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3502,7 +3494,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3535,7 +3527,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -3552,7 +3544,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    }
   ]
@@ -4038,7 +4030,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -4055,7 +4047,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -4072,7 +4064,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -4089,7 +4081,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -4106,7 +4098,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -4409,7 +4401,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -4545,7 +4537,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -5602,9 +5594,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 3,
@@ -5619,9 +5610,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 4,
@@ -5684,9 +5674,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 8,
@@ -5872,9 +5861,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 3,
@@ -5889,9 +5877,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 4,
@@ -5954,9 +5941,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 8,
@@ -6311,9 +6297,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 3,
@@ -6328,9 +6313,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 4,
@@ -6489,9 +6473,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    }
   ]
  },
@@ -6551,9 +6534,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 3,
@@ -6568,9 +6550,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 4,
@@ -6761,9 +6742,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    }
   ]
  },
@@ -7028,9 +7008,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 8,
@@ -8041,9 +8020,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    }
   ]
  },
@@ -8184,9 +8162,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 4,
@@ -8201,9 +8178,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    }
   ]
  },
@@ -8348,9 +8324,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 12,
@@ -8365,9 +8340,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 13,
@@ -8382,9 +8356,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 14,
@@ -8415,9 +8388,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 16,
@@ -8432,9 +8404,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 17,
@@ -8449,9 +8420,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 18,
@@ -8498,9 +8468,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    }
   ]
  },
@@ -8546,9 +8515,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    }
   ]
  },
@@ -10408,7 +10376,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "approved",
-    "map_events": 4
+    "map_events": 5
    }
   ]
  },
@@ -11091,7 +11059,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11108,7 +11076,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11125,7 +11093,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11142,7 +11110,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11175,7 +11143,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11192,7 +11160,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11209,7 +11177,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11226,7 +11194,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11243,7 +11211,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11260,7 +11228,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11277,7 +11245,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11294,7 +11262,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11311,7 +11279,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -11427,7 +11395,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "approved",
-    "map_events": 4
+    "map_events": 5
    },
    {
     "column": 5,
@@ -12709,7 +12677,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    }
   ]
@@ -13344,7 +13312,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -13361,7 +13329,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -13378,7 +13346,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -13395,7 +13363,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    }
   ],
@@ -13960,9 +13928,8 @@
     "error_column": null,
     "scanner_or_counts": true,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 3,
@@ -14213,9 +14180,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 15,
@@ -14416,7 +14382,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -14518,7 +14484,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -14535,7 +14501,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "approved",
-    "map_events": 4
+    "map_events": 5
    },
    {
     "column": 14,
@@ -16964,7 +16930,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -17960,7 +17926,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -19034,7 +19000,7 @@
     "scanner_or_counts": false,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -20893,7 +20859,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -20910,7 +20876,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -20959,7 +20925,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -20992,7 +20958,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -21025,7 +20991,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 0,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -21915,7 +21881,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -21996,7 +21962,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    }
   ],
@@ -22568,7 +22534,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -23015,7 +22981,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 2,
+    "map_events": 1,
     "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -24524,7 +24490,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "approved",
-    "map_events": 4
+    "map_events": 5
    },
    {
     "column": 2,
@@ -27787,9 +27753,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 4,
@@ -27820,9 +27785,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    }
   ],
   "age_model": null,
@@ -27900,9 +27864,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 4,
@@ -27933,9 +27896,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    }
   ],
   "age_model": null,
@@ -28311,9 +28273,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 8,
@@ -28328,9 +28289,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    },
    {
     "column": 12,
@@ -28345,9 +28305,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 1,
-    "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 1
    }
   ],
   "age_model": {
@@ -28587,9 +28546,8 @@
     "error_column": null,
     "scanner_or_counts": false,
     "aligned_with_xml": true,
-    "status": "deferred_low_coverage",
-    "map_events": 2,
-    "deferred_reason": "parámetro en 2 sondeos (< 3); se cura cuando haya más registros"
+    "status": "approved",
+    "map_events": 2
    },
    {
     "column": 6,
@@ -28640,7 +28598,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -28674,7 +28632,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "deferred_low_coverage",
-    "map_events": 1,
+    "map_events": 0,
     "deferred_reason": "parámetro en 1 sondeos (< 3); se cura cuando haya más registros"
    },
    {
@@ -28725,7 +28683,7 @@
     "scanner_or_counts": true,
     "aligned_with_xml": true,
     "status": "approved",
-    "map_events": 4
+    "map_events": 5
    },
    {
     "column": 15,

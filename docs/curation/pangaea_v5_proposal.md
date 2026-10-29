@@ -1,6 +1,6 @@
 # PANGAEA v5 — propuesta de lote
 
-Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar y marcar `status` en `scripts/importers/pangaea_v5_sources.json`.
+Activos: 64 registros, 665 series, 138328 valores; cuarentena 17 series. Revisar y marcar `status` en `scripts/importers/pangaea_v5_sources.json`.
 
 | Dataset | Evento | Lat, Lon | Estado | Familias | Series (cuar.) | Edad | Referencia |
 |---|---|---|---|---|---:|---|---|
@@ -8,13 +8,13 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [60828](https://doi.pangaea.de/10.1594/PANGAEA.60828) | MD95-2041 | 37.833, -9.511 | proposed | toc | 1 (0) | 14.79–28.81 ka | — |
 | [66714](https://doi.pangaea.de/10.1594/PANGAEA.66714) | MD95-2040 | 40.582, -9.861 | proposed | foram_bent_censo, foram_planct_censo | 27 (0) | 2.01–203.63 ka | — |
 | [66811](https://doi.pangaea.de/10.1594/PANGAEA.66811) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct, foram_planct_censo, sst | 4 (0) | 0.00–184.00 ka | — |
-| [82051](https://doi.pangaea.de/10.1594/PANGAEA.82051) | MD95-2040 | 40.582, -9.861 | proposed | d13C_bent | 0 (0) | — | — |
+| [82051](https://doi.pangaea.de/10.1594/PANGAEA.82051) | MD95-2040 | 40.582, -9.861 | proposed | d13C_bent | 1 (0) | 0.00–61.98 ka | — |
 | [82053](https://doi.pangaea.de/10.1594/PANGAEA.82053) | MD95-2040 | 40.582, -9.861 | proposed | foram_bent_censo | 0 (0) | — | — |
 | [82055](https://doi.pangaea.de/10.1594/PANGAEA.82055) | MD95-2040 | 40.582, -9.861 | proposed | foram_planct_censo | 1 (0) | 0.00–140.79 ka | — |
 | [82056](https://doi.pangaea.de/10.1594/PANGAEA.82056) | MD95-2040 | 40.582, -9.861 | proposed | toc | 1 (0) | -0.09–43.17 ka | — |
 | [82057](https://doi.pangaea.de/10.1594/PANGAEA.82057) | MD95-2040 | 40.582, -9.861 | proposed | foram_bent_censo | 0 (0) | — | — |
 | [82361](https://doi.pangaea.de/10.1594/PANGAEA.82361) | MD95-2040 | 40.582, -9.861 | proposed | d18O_planct | 1 (0) | 0.00–141.04 ka | — |
-| [89473](https://doi.pangaea.de/10.1594/PANGAEA.89473) | M44/1_KL71 | 40.842, 27.763 | proposed | d18O_planct, foram_planct_censo, sst, toc | 6 (0) | 0.09–14.09 ka | — |
+| [89473](https://doi.pangaea.de/10.1594/PANGAEA.89473) | M44/1_KL71 | 40.842, 27.763 | proposed | d18O_planct, foram_planct_censo, sst, toc | 7 (0) | 0.00–14.09 ka | — |
 | [227716](https://doi.pangaea.de/10.1594/PANGAEA.227716) | GeoB7604-2 | 42.937, 30.032 | proposed | detritico_xrf, xrf_escaner, xrf_razones | 3 (0) | 7.91–18.24 ka | — |
 | [251643](https://doi.pangaea.de/10.1594/PANGAEA.251643) | 107-654A | 40.579, 10.697 | proposed | caco3, toc | 2 (0) | 737.37–4556.39 ka | — |
 | [252162](https://doi.pangaea.de/10.1594/PANGAEA.252162) | 160-963A | 37.032, 13.182 | rejected: sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento | caco3, mo_otros, toc | 0 (0) | — | — |
@@ -89,18 +89,18 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [704428](https://doi.pangaea.de/10.1594/PANGAEA.704428) | 160-969D | 33.839, 24.883 | proposed | caco3, granulometria, toc | 3 (0) | 937.86–969.29 ka | 10.1016/S0031-0182(02)00606-5 |
 | [711649](https://doi.pangaea.de/10.1594/PANGAEA.711649) | MD95-2043 | 36.143, -2.621 | proposed | biomarcadores_indices, polen | 15 (0) | 1.28–48.11 ka | 10.1016/j.yqres.2008.07.002 |
 | [728549](https://doi.pangaea.de/10.1594/PANGAEA.728549) | PRGL1-4 | 42.690, 3.838 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | polen | 0 (0) | — | — |
-| [733069](https://doi.pangaea.de/10.1594/PANGAEA.733069) | MD95-2041 | 37.833, -9.511 | proposed | d13C_planct, d18O_planct | 9 (0) | 14.50–28.86 ka | — |
-| [733070](https://doi.pangaea.de/10.1594/PANGAEA.733070) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 9 (0) | 14.87–31.35 ka | — |
-| [733076](https://doi.pangaea.de/10.1594/PANGAEA.733076) | MD95-2040 | 40.582, -9.861 | proposed | foram_planct_censo, sst | 1 (0) | 13.04–31.07 ka | — |
-| [733077](https://doi.pangaea.de/10.1594/PANGAEA.733077) | MD95-2041 | 37.833, -9.511 | proposed | foram_planct_censo, sst | 1 (0) | 13.82–30.71 ka | — |
+| [733069](https://doi.pangaea.de/10.1594/PANGAEA.733069) | MD95-2041 | 37.833, -9.511 | proposed | d13C_planct, d18O_planct | 12 (0) | 14.50–28.86 ka | — |
+| [733070](https://doi.pangaea.de/10.1594/PANGAEA.733070) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 12 (0) | 14.87–31.35 ka | — |
+| [733076](https://doi.pangaea.de/10.1594/PANGAEA.733076) | MD95-2040 | 40.582, -9.861 | proposed | foram_planct_censo, sst | 3 (0) | 13.04–31.07 ka | — |
+| [733077](https://doi.pangaea.de/10.1594/PANGAEA.733077) | MD95-2041 | 37.833, -9.511 | proposed | foram_planct_censo, sst | 3 (0) | 13.82–30.71 ka | — |
 | [733096](https://doi.pangaea.de/10.1594/PANGAEA.733096) | MD99-2339 | 35.886, -7.528 | proposed | d13C_planct, d18O_planct | 10 (0) | 32.98–42.92 ka | — |
-| [733108](https://doi.pangaea.de/10.1594/PANGAEA.733108) | MD95-2041 | 37.833, -9.511 | proposed | d13C_planct, d18O_planct | 9 (0) | 57.89–71.37 ka | — |
-| [733110](https://doi.pangaea.de/10.1594/PANGAEA.733110) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 11 (0) | 56.73–76.27 ka | — |
+| [733108](https://doi.pangaea.de/10.1594/PANGAEA.733108) | MD95-2041 | 37.833, -9.511 | proposed | d13C_planct, d18O_planct | 12 (0) | 57.89–71.37 ka | — |
+| [733110](https://doi.pangaea.de/10.1594/PANGAEA.733110) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 14 (0) | 56.73–76.27 ka | — |
 | [737129](https://doi.pangaea.de/10.1594/PANGAEA.737129) | MD95-2041 | 37.833, -9.511 | proposed | d13C_planct, d18O_planct | 2 (0) | 2.29–96.72 ka | — |
 | [737130](https://doi.pangaea.de/10.1594/PANGAEA.737130) | MD95-2041 | 37.833, -9.511 | proposed | foram_bent_censo, foram_planct_censo | 26 (0) | 2.11–96.72 ka | — |
-| [737135](https://doi.pangaea.de/10.1594/PANGAEA.737135) | MD95-2040 | 40.582, -9.861 | proposed | d13C_bent, d18O_bent | 1 (0) | 0.18–360.18 ka | — |
+| [737135](https://doi.pangaea.de/10.1594/PANGAEA.737135) | MD95-2040 | 40.582, -9.861 | proposed | d13C_bent, d18O_bent | 2 (0) | 0.18–360.18 ka | — |
 | [737413](https://doi.pangaea.de/10.1594/PANGAEA.737413) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 2 (0) | 0.18–360.18 ka | — |
-| [737419](https://doi.pangaea.de/10.1594/PANGAEA.737419) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 7 (0) | 125.14–188.59 ka | — |
+| [737419](https://doi.pangaea.de/10.1594/PANGAEA.737419) | MD95-2040 | 40.582, -9.861 | proposed | d13C_planct, d18O_planct | 8 (0) | 125.14–188.59 ka | — |
 | [738133](https://doi.pangaea.de/10.1594/PANGAEA.738133) | MD95-2040 | 40.582, -9.861 | proposed | d18O_planct, foram_planct_censo | 2 (0) | 0.00–50.69 ka | — |
 | [738136](https://doi.pangaea.de/10.1594/PANGAEA.738136) | MD95-2041 | 37.833, -9.511 | proposed | d18O_planct, foram_planct_censo | 2 (0) | 0.00–50.73 ka | — |
 | [738905](https://doi.pangaea.de/10.1594/PANGAEA.738905) | — | 0.000, 0.000 | rejected: descarga/parseo: HTTP Error 401: Unauthorized | polen | 0 (0) | — | — |
@@ -120,7 +120,7 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [780234](https://doi.pangaea.de/10.1594/PANGAEA.780234) | 160-969D | 33.839, 24.883 | proposed | bario, detritico_xrf, redox, toc, xrf_razones | 8 (0) | 1444.00–1884.00 ka | — |
 | [780235](https://doi.pangaea.de/10.1594/PANGAEA.780235) | 160-969D | 33.839, 24.883 | proposed | detritico_xrf, xrf_razones | 0 (0) | — | — |
 | [789292](https://doi.pangaea.de/10.1594/PANGAEA.789292) | 161-975B | 38.896, 4.510 | rejected: sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento | color_grises | 0 (0) | — | — |
-| [810294](https://doi.pangaea.de/10.1594/PANGAEA.810294) | MD95-2002 | 47.452, -8.534 | proposed | d18O_planct, foram_planct_censo, granulometria, sst | 3 (0) | 10.29–35.94 ka | — |
+| [810294](https://doi.pangaea.de/10.1594/PANGAEA.810294) | MD95-2002 | 47.452, -8.534 | proposed | d18O_planct, foram_planct_censo, granulometria, sst | 6 (0) | 10.29–35.94 ka | — |
 | [810295](https://doi.pangaea.de/10.1594/PANGAEA.810295) | MD95-2002 | 47.452, -8.534 | proposed | bioturbacion | 0 (0) | — | — |
 | [815999](https://doi.pangaea.de/10.1594/PANGAEA.815999) | 160-963 | 37.034, 13.180 | proposed | bario, detritico_xrf, foram_planct_censo, mgca_foram, redox, xrf_razones | 0 (0) | — | — |
 | [829005](https://doi.pangaea.de/10.1594/PANGAEA.829005) | 339-U1386A | 36.828, -7.756 | rejected: sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento | color_grises | 0 (0) | — | — |
@@ -155,7 +155,7 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [910794](https://doi.pangaea.de/10.1594/PANGAEA.910794) | HER_GC_UB06 | 36.240, -3.989 | proposed | foram_bent_censo, oxigenacion_bent | 7 (0) | 0.24–23.21 ka | — |
 | [910795](https://doi.pangaea.de/10.1594/PANGAEA.910795) | MD95-2043 | 36.143, -2.621 | proposed | foram_bent_censo, oxigenacion_bent | 4 (0) | 1.01–23.88 ka | — |
 | [910796](https://doi.pangaea.de/10.1594/PANGAEA.910796) | MD99-2343 | 40.497, 4.028 | proposed | foram_bent_censo, oxigenacion_bent | 4 (0) | 0.31–23.90 ka | — |
-| [910798](https://doi.pangaea.de/10.1594/PANGAEA.910798) | HER_GC_UB06 | 36.240, -3.989 | proposed | d13C_bent, d18O_bent | 2 (0) | 1.55–23.37 ka | — |
+| [910798](https://doi.pangaea.de/10.1594/PANGAEA.910798) | HER_GC_UB06 | 36.240, -3.989 | proposed | d13C_bent, d18O_bent | 4 (0) | 0.59–23.37 ka | — |
 | [910799](https://doi.pangaea.de/10.1594/PANGAEA.910799) | MD95-2043 | 36.143, -2.621 | proposed | d13C_bent | 1 (0) | 12.75–23.71 ka | — |
 | [910800](https://doi.pangaea.de/10.1594/PANGAEA.910800) | MD99-2343 | 40.497, 4.028 | proposed | d13C_bent | 1 (0) | 10.79–23.90 ka | — |
 | [910802](https://doi.pangaea.de/10.1594/PANGAEA.910802) | HER_GC_UB06 | 36.240, -3.989 | proposed | d13C_planct, d18O_planct | 2 (0) | 0.24–23.21 ka | — |
@@ -175,7 +175,7 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [940835](https://doi.pangaea.de/10.1594/PANGAEA.940835) | GeoB13729-1 | 35.434, -2.514 | proposed | caco3, toc | 3 (0) | 9.01–12.11 ka | — |
 | [940875](https://doi.pangaea.de/10.1594/PANGAEA.940875) | GeoB13731-1 | 35.413, -2.554 | proposed | toc | 1 (0) | 0.18–22.53 ka | — |
 | [940877](https://doi.pangaea.de/10.1594/PANGAEA.940877) | GeoB13731-1 | 35.413, -2.554 | proposed | caco3, toc | 3 (0) | 0.12–23.02 ka | — |
-| [941003](https://doi.pangaea.de/10.1594/PANGAEA.941003) | GeoB13731-1 | 35.413, -2.554 | proposed | caco3, toc | 3 (0) | 0.12–23.02 ka | — |
+| [941003](https://doi.pangaea.de/10.1594/PANGAEA.941003) | GeoB13731-1 | 35.413, -2.554 | proposed | caco3, toc | 6 (0) | 0.12–23.02 ka | — |
 | [944303](https://doi.pangaea.de/10.1594/PANGAEA.944303) | NDT-6-2016 | 38.007, 11.796 | proposed | d18O_planct | 1 (0) | 2.00–15.03 ka | — |
 | [944304](https://doi.pangaea.de/10.1594/PANGAEA.944304) | NDT-6-2016 | 38.007, 11.796 | proposed | d18O_planct | 1 (0) | 2.00–15.03 ka | — |
 | [944305](https://doi.pangaea.de/10.1594/PANGAEA.944305) | NDT-6-2016 | 38.007, 11.796 | proposed | foram_planct_censo | 13 (0) | -0.14–14.73 ka | — |
@@ -183,7 +183,7 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [949638](https://doi.pangaea.de/10.1594/PANGAEA.949638) | 160-966B | 33.796, 32.701 | proposed | foram_bent_censo, granulometria | 8 (0) | 530.00–4700.00 ka | — |
 | [949639](https://doi.pangaea.de/10.1594/PANGAEA.949639) | 160-967A | 34.068, 32.725 | proposed | foram_bent_censo, granulometria | 6 (0) | 160.00–4500.00 ka | — |
 | [949641](https://doi.pangaea.de/10.1594/PANGAEA.949641) | 161-976C | 36.205, -4.312 | proposed | foram_bent_censo, granulometria | 6 (0) | 550.00–1300.00 ka | — |
-| [954411](https://doi.pangaea.de/10.1594/PANGAEA.954411) | PEX19-01 | 40.343, -7.605 | proposed | bromo_mo, detritico_xrf, mo_otros, toc, xrf_razones | 1 (0) | -0.07–13.54 ka | — |
+| [954411](https://doi.pangaea.de/10.1594/PANGAEA.954411) | PEX19-01 | 40.343, -7.605 | proposed | bromo_mo, detritico_xrf, mo_otros, toc, xrf_razones | 2 (0) | -0.07–13.54 ka | — |
 | [955014](https://doi.pangaea.de/10.1594/PANGAEA.955014) | MedSeA-S7-c2 | 37.708, 12.406 | proposed | oligoelementos | 0 (0) | — | — |
 | [955015](https://doi.pangaea.de/10.1594/PANGAEA.955015) | MedSeA-S7-c2 | 37.708, 12.406 | proposed | foram_planct_censo, sst | 2 (0) | -0.06–0.02 ka | — |
 | [960095](https://doi.pangaea.de/10.1594/PANGAEA.960095) | NDT-6-2016 | 38.007, 11.796 | proposed | corrientes, isot_radiogenicos, tierras_raras_eu | 0 (0) | — | — |
@@ -194,7 +194,7 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [966840](https://doi.pangaea.de/10.1594/PANGAEA.966840) | MVSEIS08_TG-2 | 34.971, -6.841 | proposed | foram_planct_censo | 2 (0) | 2.70–14.31 ka | — |
 | [966842](https://doi.pangaea.de/10.1594/PANGAEA.966842) | MVSEIS08_TG-2 | 34.971, -6.841 | proposed | corrientes, detritico_xrf, xrf_razones | 1 (0) | 2.70–14.31 ka | — |
 | [966996](https://doi.pangaea.de/10.1594/PANGAEA.966996) | Figino19-2 | 45.958, 8.894 | proposed | detritico_xrf, oligoelementos | 1 (0) | -0.07–0.05 ka | — |
-| [966998](https://doi.pangaea.de/10.1594/PANGAEA.966998) | Figino19-2 | 45.958, 8.894 | proposed | caco3, mo_otros, mo_ratios, toc | 5 (1) | -0.07–0.05 ka | — |
+| [966998](https://doi.pangaea.de/10.1594/PANGAEA.966998) | Figino19-2 | 45.958, 8.894 | proposed | caco3, mo_otros, mo_ratios, toc | 6 (1) | -0.07–0.05 ka | — |
 | [971862](https://doi.pangaea.de/10.1594/PANGAEA.971862) | GeoB18116-2 | 35.311, -2.582 | rejected: sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento | caco3, toc | 0 (0) | — | — |
 | [986421](https://doi.pangaea.de/10.1594/PANGAEA.986421) | THOM_2023 | 43.850, 5.753 | proposed | caco3, color_grises, detritico_xrf, oligoelementos, redox | 20 (0) | 4.24–7.47 ka | — |
 | [986422](https://doi.pangaea.de/10.1594/PANGAEA.986422) | JONQ_2021 | 43.577, 6.216 | proposed | caco3, color_grises, detritico_xrf, oligoelementos, redox | 18 (2) | 4.35–6.42 ka | — |
@@ -202,7 +202,7 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [986424](https://doi.pangaea.de/10.1594/PANGAEA.986424) | MIR-1_2023 | 43.755, 5.547 | proposed | caco3, color_grises, detritico_xrf, oligoelementos, redox | 20 (0) | 0.08–12.64 ka | — |
 | [986425](https://doi.pangaea.de/10.1594/PANGAEA.986425) | MIR-5_2023 | 43.790, 5.541 | proposed | caco3, color_grises, detritico_xrf, oligoelementos, redox | 21 (1) | 4.54–10.96 ka | — |
 | [986426](https://doi.pangaea.de/10.1594/PANGAEA.986426) | MIR-8_2023 | 43.791, 5.540 | proposed | caco3, color_grises, detritico_xrf, oligoelementos, redox | 20 (2) | 10.96–10.96 ka | — |
-| [987449](https://doi.pangaea.de/10.1594/PANGAEA.987449) | 339-U1387C | 36.805, -7.719 | proposed | d13C_bent, d18O_bent, granulometria | 5 (0) | 1457.77–1945.84 ka | — |
+| [987449](https://doi.pangaea.de/10.1594/PANGAEA.987449) | 339-U1387C | 36.805, -7.719 | proposed | d13C_bent, d18O_bent, granulometria | 12 (0) | 1457.77–1945.84 ka | — |
 | [988002](https://doi.pangaea.de/10.1594/PANGAEA.988002) | MedSeA-S3-c1 | 36.075, -4.110 | proposed | foram_planct_censo | 15 (0) | -0.04–1.57 ka | — |
 | [988003](https://doi.pangaea.de/10.1594/PANGAEA.988003) | MedSeA-S7-c4 | 37.708, 12.406 | proposed | foram_planct_censo | 12 (0) | -0.06–0.14 ka | — |
 | [991018](https://doi.pangaea.de/10.1594/PANGAEA.991018) | OTE-2019_KC-13 | 38.243, 25.104 | proposed | corrientes, isot_radiogenicos, tierras_raras_eu | 1 (0) | 0.56–41.07 ka | — |
@@ -210,4 +210,4 @@ Activos: 64 registros, 627 series, 133796 valores; cuarentena 17 series. Revisar
 | [992690](https://doi.pangaea.de/10.1594/PANGAEA.992690) | Laguna_Seca_LS-01 | 37.098, -2.968 | proposed | bromo_mo, color_grises, detritico_xrf, mo_otros, toc, xrf_escaner | 13 (0) | -0.07–15.76 ka | — |
 | [993109](https://doi.pangaea.de/10.1594/PANGAEA.993109) | UBE22-COMP1 | 46.734, 7.565 | proposed | caco3, detritico_xrf, mo_otros, mo_ratios, polen, redox, toc | 10 (10) | 10003.00–16000.00 ka | — |
 | [993400](https://doi.pangaea.de/10.1594/PANGAEA.993400) | OUM_MAG_23 | 30.642, -5.092 | rejected: sin columna de edad admitida ni modelo de edad válido del mismo evento | corrientes, detritico_xrf, isot_radiogenicos, oligoelementos, tierras_raras_eu | 0 (0) | — | — |
-| [993913](https://doi.pangaea.de/10.1594/PANGAEA.993913) | PEX19-01 | 40.343, -7.605 | proposed | bario, bromo_mo, detritico_xrf, mo_otros, mo_ratios, oligoelementos, redox, tierras_raras_eu, toc, xrf_escaner | 20 (0) | -0.07–1.95 ka | — |
+| [993913](https://doi.pangaea.de/10.1594/PANGAEA.993913) | PEX19-01 | 40.343, -7.605 | proposed | bario, bromo_mo, detritico_xrf, mo_otros, mo_ratios, oligoelementos, redox, tierras_raras_eu, toc, xrf_escaner | 21 (0) | -0.07–1.95 ka | — |
