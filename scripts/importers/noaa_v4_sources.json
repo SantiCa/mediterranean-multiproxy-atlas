@@ -1,0 +1,720 @@
+{
+  "version": "noaa-v4-2026-10-29",
+  "metadata_snapshot_date": "2026-10-28",
+  "data_retrieval_date": "2026-10-29",
+  "resources": [
+    {
+      "filename": "kaite2021sr.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/europe/spain/kaite2021sr.txt",
+      "sha256": "9f46fbd6a5366fac0ba130688202f7d302f44e6028a064a0e6ed2122c1425017",
+      "bytes": 10452
+    },
+    {
+      "filename": "trio2009-trace-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/europe/hungary/trio2009-trace-noaa.txt",
+      "sha256": "e345b619dc027e22fe36a96bfe79d50babad2ab6d767e90d02e350a2680123d1",
+      "bytes": 48831
+    },
+    {
+      "filename": "trio2009-dd-fluidinc-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/europe/hungary/trio2009-dd-fluidinc-noaa.txt",
+      "sha256": "1e82e4440e9650998c95b52aa3592d867ff97c42410ffe235fad8ba9afd423f7",
+      "bytes": 9827
+    },
+    {
+      "filename": "trio2009-d18o-hires-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/europe/hungary/trio2009-d18o-hires-noaa.txt",
+      "sha256": "5e5a21846b51e02ab732d9ff1d9b036c7381b0ef0771bbbc22c14f2c188805a1",
+      "bytes": 12644
+    },
+    {
+      "filename": "trio2009-d18o-lowres-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/europe/hungary/trio2009-d18o-lowres-noaa.txt",
+      "sha256": "22b989c12bf978c558bcccf3edf1ced9535c789e50e71c51552ff24f6e825ef6",
+      "bytes": 11225
+    },
+    {
+      "filename": "ifoulki2017iso.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/africa/ifoulki2017iso.txt",
+      "sha256": "f4e0743ffe52b3ab8b51430060fdd41623f8ccc653cbaaa76e298d4f5e55258f",
+      "bytes": 25225
+    },
+    {
+      "filename": "ifoulki2017elem.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/africa/ifoulki2017elem.txt",
+      "sha256": "aeb7b4e0a352588ea1f10399f0ddd836436c9046c548f7a84e44a667e2c8efcf",
+      "bytes": 210338
+    },
+    {
+      "filename": "pla2004-pyrenee.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/spain/pla2004-pyrenee.txt",
+      "sha256": "a807eec9288417a1490b8bf24cf4d02710570cc1b90fd9c0904562e1ade735f3",
+      "bytes": 8474
+    },
+    {
+      "filename": "silvaplana2008b-noaa.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/switzerland/silvaplana2008b-noaa.txt",
+      "sha256": "97dfc4d0b9b1e0f3322c5bab4a085a95f43ce0bcc8db292f1d7573cd7b31b6a2",
+      "bytes": 17326
+    },
+    {
+      "filename": "bio-silica.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/bio-silica.txt",
+      "sha256": "ba7cd34b3836c107881f1b459e04f4fa29d9b775d94a2ed68b708dd59a21b164",
+      "bytes": 9254
+    },
+    {
+      "filename": "loi.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/loi.txt",
+      "sha256": "4fdbc816cfcbf479b88c108cfec50eeb7dfdbaaa25838e20983f945a76ef41e8",
+      "bytes": 6943
+    },
+    {
+      "filename": "dry-density.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/dry-density.txt",
+      "sha256": "e0f4d6b13c74a2a307acc2f79b19050336072c0c5b5775404a8c8ab04207a5fa",
+      "bytes": 17203
+    },
+    {
+      "filename": "mag-sus.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/mag-sus.txt",
+      "sha256": "0f06b906470daf89d681806f32fbe5584e769c592d15f380a3251f54c140814d",
+      "bytes": 48554
+    },
+    {
+      "filename": "readme_allen1999.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/readme_allen1999.txt",
+      "sha256": "788e612da2f01d62526a334dec27325a0ddafc840f0e102f0704989dbd0512d3",
+      "bytes": 2875
+    },
+    {
+      "filename": "33716.json",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=33716",
+      "sha256": "3995520f9a773b5fa4da624563d8fd2a98569fce701a13ee24d1f445fb9eddf6",
+      "bytes": 8217
+    },
+    {
+      "filename": "crossref-33716.json",
+      "url": "https://api.crossref.org/works/10.1126%2Fsciadv.abe6102",
+      "sha256": "70a3035cc068524af304b325bd80866237402ee2caccf4e1bbeab582d66b0b9d",
+      "bytes": 13922
+    },
+    {
+      "filename": "11817.json",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=11817",
+      "sha256": "e5113e214da88d9fc2b6e56009dd25af4a079f9c4bd4e3dfc969726d523b3249",
+      "bytes": 22739
+    },
+    {
+      "filename": "crossref-11817.json",
+      "url": "https://api.crossref.org/works/10.1002%2Frcm.3943",
+      "sha256": "fdc05af03d36fec7b2b44a1cd40d11b7fb35bf9e7a2a02311199972e5822f502",
+      "bytes": 9703
+    },
+    {
+      "filename": "23970.json",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=23970",
+      "sha256": "09c6b54175cc20087d58bf5bd6f74c6ae1ca24aa7133ba22b191a6a98233c264",
+      "bytes": 10814
+    },
+    {
+      "filename": "crossref-23970.json",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.epsl.2017.07.045",
+      "sha256": "805d4aad00d84561d749d8335692f98ca7eb6985f95728da5b3292473870d5a2",
+      "bytes": 25873
+    },
+    {
+      "filename": "22582.json",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=22582",
+      "sha256": "36da44b4e0c6ce4e50587d7395b7bd6021c2ce837119036533666d22cf7532b0",
+      "bytes": 9990
+    },
+    {
+      "filename": "crossref-22582.json",
+      "url": "https://api.crossref.org/works/10.1007%2Fs00382-004-0482-1",
+      "sha256": "2f1c57a535e2e7965f0e14c33693049f3d07934e2a01aea7bed8025ad0fe45a3",
+      "bytes": 29531
+    },
+    {
+      "filename": "13017.json",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=13017",
+      "sha256": "76fe0c070733388049b8f19056d92b61969ea9a4224004fc39ecc840ed023b45",
+      "bytes": 7554
+    },
+    {
+      "filename": "crossref-13017.json",
+      "url": "https://api.crossref.org/works/10.1029%2F2008GL034121",
+      "sha256": "ac8d42a9959dba4668ae103922472ba08e225a57e56f93227f61b56532b07696",
+      "bytes": 7290
+    },
+    {
+      "filename": "5463.json",
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=5463",
+      "sha256": "b9a306d4f492e31d40edd9f90eb9ed8aff4af8b852b936458be29af58e777ce9",
+      "bytes": 15204
+    },
+    {
+      "filename": "crossref-5463.json",
+      "url": "https://api.crossref.org/works/10.1038%2F23432",
+      "sha256": "96293c22c636e711ba887cccbc395e1255e2cecf7f625883da43c154aaefc680",
+      "bytes": 15322
+    },
+    {
+      "filename": "kaite2021-primary-bioc.json",
+      "url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC11559594/unicode",
+      "sha256": "517a6c2fe43f8f641427b92a206a23ede8432efa7403474521a9ab76112f90c3",
+      "bytes": 90318
+    }
+  ],
+  "sites": [
+    {
+      "study_id": 33716,
+      "site_id": 52399,
+      "name": "Kaite Cave Buda-100",
+      "core": "Buda-100",
+      "realm": "speleothem",
+      "physical_core_key": "NOAA:33716:Buda-100",
+      "latitude": 43.03333333333333,
+      "longitude": -3.65,
+      "coordinate_basis": "Cruz2021 primary article, 43 degrees 2 minutes N / 3 degrees 39 minutes W; decimal conversion",
+      "chronology_status": "published_uranium_thorium",
+      "chronology_label": "U-Th publicado",
+      "age_model": "Published 230Th ages and speleothem stratigraphy; archived sample ages retained; no model fitted locally",
+      "notes": [
+        "NOAA JSON point 43.04,-3.6597 differs from file header 43.33,-3.66; primary article coordinates govern. All original coordinates retained.",
+        "Dust flux is a published mass-balance reconstruction, not a direct measurement."
+      ]
+    },
+    {
+      "study_id": 11817,
+      "site_id": 52281,
+      "name": "Trio Cave TRIO1",
+      "core": "TRIO1",
+      "realm": "speleothem",
+      "physical_core_key": "NOAA:11817:TRIO1",
+      "chronology_status": "published_uranium_thorium",
+      "chronology_label": "U-Th publicado · modelo lineal archivado",
+      "age_model": "NOAA March2025 release added age column from published U-Th linear age model; use supplied age_calBP, never recompute age from depth",
+      "notes": [
+        "Low-resolution isotope table and VPDB/VSMOW alternate representation excluded to avoid duplicate observations.",
+        "Negative concentrations/derived ratios remain in quarantine as complete series, not trimmed."
+      ]
+    },
+    {
+      "study_id": 23970,
+      "site_id": 57635,
+      "name": "Ifoulki Cave IFK1",
+      "core": "IFK1",
+      "realm": "speleothem",
+      "physical_core_key": "NOAA:23970:IFK1",
+      "chronology_status": "published_uranium_thorium",
+      "chronology_label": "U-Th publicado",
+      "age_model": "Published CE sample ages; 23 U-Th controls/errors are preserved in source comments, not assigned as per-sample uncertainties",
+      "notes": [
+        "Files declare UTF8 but contain Windows1252 author-name bytes; explicit cp1252 decode, ASCII numeric cells untouched.",
+        "Isotope body age_AD and definition age_CE are retained as an explicit alias; both denote Common Era."
+      ]
+    },
+    {
+      "study_id": 22582,
+      "site_id": 57376,
+      "name": "Lake Redon Pla2004",
+      "core": null,
+      "realm": "lake",
+      "physical_core_key": "NOAA:22582:57376:source_collection",
+      "chronology_status": "published_calendar_as_archived",
+      "chronology_label": "Calendario publicado · modelo no reauditado",
+      "age_model": "Archived calendar BP column; algebraically contrasted with native CE column. No chronology recalibration.",
+      "notes": [
+        "NOAA title spells Radon; site and original paper identify Redon.",
+        "PAGES2k text/LiPD are republications of this record, not independent series.",
+        "Temperature anomaly, winter/spring, not absolute temperature; original error estimate type not specified."
+      ]
+    },
+    {
+      "study_id": 13017,
+      "site_id": 19885,
+      "name": "Lake Silvaplana Trachsel2008b",
+      "core": null,
+      "realm": "lake",
+      "physical_core_key": "NOAA:13017:19885:Trachsel2008b",
+      "chronology_status": "published_varve_BP",
+      "chronology_label": "Cronología varvada publicada · CE a BP",
+      "age_model": "Annually laminated lake sediments, published CE chronology; age_ka=(1950-CE)/1000; varve-count uncertainty not propagated",
+      "notes": [
+        "Only native standardized XRD indices; negative values are legitimate normalized indices. No conversion to precipitation or temperature performed."
+      ]
+    },
+    {
+      "study_id": 5463,
+      "site_id": 8909,
+      "name": "Lago Grande di Monticchio B-D-J-L composite",
+      "core": "B-D-J-L composite",
+      "realm": "lake",
+      "physical_core_key": "NOAA:5463:8909:B_D_J_L_composite",
+      "chronology_status": "published_lamination_BP",
+      "chronology_label": "Laminación/tefras · edad BP publicada",
+      "age_model": "Archived lamination-year BP chronology, sedimentation-rate based and corroborated by tephra ages; no independent calendar validation or interpolation",
+      "notes": [
+        "Composite of cores B,D,J,L, not four independent spatial replicas.",
+        "Corrected normative biogenic Si is a source-derived value; 73 zeros replace negative normative estimates in the native corrected column; not locally clipped.",
+        "Density unit and susceptibility convention unresolved, not imported."
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "study_id": 33716,
+      "filename": "kaite2021sr.txt",
+      "age_column": "age_calBP",
+      "age_transform": "BP_years",
+      "depth_column": "depth_cm",
+      "specs": [
+        {
+          "column": "87Sr/86Sr",
+          "proxy": "speleothem_87Sr_86Sr",
+          "label": "87Sr/86Sr · Kaite Buda-100",
+          "unit": "cociente",
+          "family": "Isótopos radiogénicos",
+          "variable_id": "strontium_isotope_ratio",
+          "method_id": "TIMS_Kaite_Cruz2021",
+          "evidence_type": "measurement"
+        },
+        {
+          "column": "dustflux",
+          "proxy": "dust_flux_Saharan_Kaite",
+          "label": "Flujo de polvo sahariano · Kaite",
+          "unit": "g/m²/año",
+          "family": "Paleopolvo",
+          "variable_id": "dust_deposition_flux",
+          "method_id": "Sr_mass_balance_Kaite_Cruz2021",
+          "evidence_type": "published_reconstruction"
+        }
+      ],
+      "encoding": "utf-8-sig"
+    },
+    {
+      "study_id": 11817,
+      "filename": "trio2009-trace-noaa.txt",
+      "age_column": "age_calBP",
+      "age_transform": "BP_years",
+      "depth_column": "depth_mm",
+      "specs": [
+        {
+          "column": "MgO",
+          "proxy": "TRIO1_MgO",
+          "label": "MgO · carbonato TRIO1",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_MgO",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Al2O3",
+          "proxy": "TRIO1_Al2O3",
+          "label": "Al₂O₃ · carbonato TRIO1",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Al2O3",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "SiO2",
+          "proxy": "TRIO1_SiO2",
+          "label": "SiO₂ · carbonato TRIO1",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_SiO2",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "FeO",
+          "proxy": "TRIO1_FeO",
+          "label": "FeO · carbonato TRIO1",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_FeO",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Sr",
+          "proxy": "TRIO1_Sr",
+          "label": "Sr · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Sr",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Y",
+          "proxy": "TRIO1_Y",
+          "label": "Y · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Y",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "La",
+          "proxy": "TRIO1_La",
+          "label": "La · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_La",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Ce",
+          "proxy": "TRIO1_Ce",
+          "label": "Ce · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Ce",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Pr",
+          "proxy": "TRIO1_Pr",
+          "label": "Pr · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Pr",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Nd",
+          "proxy": "TRIO1_Nd",
+          "label": "Nd · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Nd",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "Th",
+          "proxy": "TRIO1_Th",
+          "label": "Th · carbonato TRIO1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_Th",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "P2O5",
+          "proxy": "TRIO1_P2O5",
+          "label": "P₂O₅ · carbonato TRIO1",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_P2O5",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "La/Ce",
+          "proxy": "TRIO1_La_Ce",
+          "label": "La/Ce · carbonato TRIO1",
+          "unit": "cociente",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_La/Ce",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": false
+        },
+        {
+          "column": "La/Th",
+          "proxy": "TRIO1_La_Th",
+          "label": "La/Th · carbonato TRIO1",
+          "unit": "cociente",
+          "family": "Geoquímica elemental",
+          "variable_id": "trace_La/Th",
+          "method_id": "LA_ICPMS_TRIO1_Siklosy2009",
+          "evidence_type": "measurement",
+          "quarantine_if_negative": true,
+          "force_quarantine": true
+        }
+      ],
+      "encoding": "utf-8-sig"
+    },
+    {
+      "study_id": 11817,
+      "filename": "trio2009-dd-fluidinc-noaa.txt",
+      "age_column": "age_calBP",
+      "age_transform": "BP_years",
+      "depth_column": "depth_mm",
+      "specs": [
+        {
+          "column": "dD_vsmow",
+          "proxy": "fluid_inclusion_dD",
+          "label": "δD · agua de inclusiones TRIO1",
+          "unit": "‰ VSMOW",
+          "family": "Isótopos estables",
+          "variable_id": "fluid_inclusion_d2H",
+          "method_id": "IRMS_fluid_inclusion_TRIO1_Siklosy2009",
+          "evidence_type": "measurement"
+        }
+      ],
+      "encoding": "utf-8-sig"
+    },
+    {
+      "study_id": 11817,
+      "filename": "trio2009-d18o-hires-noaa.txt",
+      "age_column": "age_calBP",
+      "age_transform": "BP_years",
+      "depth_column": "depth_mm",
+      "specs": [
+        {
+          "column": "d13C_vpdb",
+          "proxy": "speleothem_d13C",
+          "label": "δ13C · TRIO1 · alta resolución",
+          "unit": "‰ VPDB",
+          "family": "Isótopos estables",
+          "variable_id": "speleothem_d13C",
+          "method_id": "IRMS_carbonate_TRIO1_Siklosy2009",
+          "evidence_type": "measurement"
+        },
+        {
+          "column": "d18O_vpdb",
+          "proxy": "speleothem_d18O",
+          "label": "δ18O · TRIO1 · alta resolución",
+          "unit": "‰ VPDB",
+          "family": "Isótopos estables",
+          "variable_id": "speleothem_d18O",
+          "method_id": "IRMS_carbonate_TRIO1_Siklosy2009",
+          "evidence_type": "measurement"
+        }
+      ],
+      "encoding": "utf-8-sig"
+    },
+    {
+      "study_id": 23970,
+      "filename": "ifoulki2017iso.txt",
+      "age_column": "age_AD",
+      "age_transform": "CE",
+      "depth_column": "depth_mm",
+      "specs": [
+        {
+          "column": "d13CcarbVPDB",
+          "proxy": "speleothem_d13C",
+          "label": "δ13C · Ifoulki IFK1",
+          "unit": "‰ VPDB",
+          "family": "Isótopos estables",
+          "variable_id": "speleothem_d13C",
+          "method_id": "IRMS_carbonate_IFK1_AitBrahim2017",
+          "evidence_type": "measurement"
+        },
+        {
+          "column": "d18OcarbVPDB",
+          "proxy": "speleothem_d18O",
+          "label": "δ18O · Ifoulki IFK1",
+          "unit": "‰ VPDB",
+          "family": "Isótopos estables",
+          "variable_id": "speleothem_d18O",
+          "method_id": "IRMS_carbonate_IFK1_AitBrahim2017",
+          "evidence_type": "measurement"
+        }
+      ],
+      "encoding": "cp1252",
+      "age_definition_alias": "age_CE"
+    },
+    {
+      "study_id": 23970,
+      "filename": "ifoulki2017elem.txt",
+      "age_column": "age_CE",
+      "age_transform": "CE",
+      "depth_column": "Depth_mm",
+      "specs": [
+        {
+          "column": "Mg25",
+          "proxy": "carbonate_Mg_ppm_IFK1",
+          "label": "Mg · carbonato Ifoulki IFK1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "magnesium_mass_concentration",
+          "method_id": "LA_ICPMS_IFK1_AitBrahim2017",
+          "evidence_type": "measurement"
+        },
+        {
+          "column": "Sr88",
+          "proxy": "carbonate_Sr_ppm_IFK1",
+          "label": "Sr · carbonato Ifoulki IFK1",
+          "unit": "ppm",
+          "family": "Geoquímica elemental",
+          "variable_id": "strontium_mass_concentration",
+          "method_id": "LA_ICPMS_IFK1_AitBrahim2017",
+          "evidence_type": "measurement"
+        }
+      ],
+      "encoding": "cp1252"
+    },
+    {
+      "study_id": 22582,
+      "filename": "pla2004-pyrenee.txt",
+      "age_column": "age_calyrBP",
+      "age_transform": "BP_years",
+      "depth_column": null,
+      "specs": [
+        {
+          "column": "temp_chrys_anom",
+          "proxy": "winter_spring_temperature_anomaly_chrysophyte",
+          "label": "Anomalía T invierno/primavera · quistes",
+          "unit": "°C",
+          "family": "Temperatura",
+          "variable_id": "winter_spring_temperature_anomaly",
+          "method_id": "chrysophyte_modern_analogue_Redon_Pla2004",
+          "evidence_type": "published_reconstruction",
+          "uncertainty_column": "temp_chrys_anom_err"
+        }
+      ],
+      "encoding": "cp1252",
+      "consistency_ce_column": "year_CE"
+    },
+    {
+      "study_id": 13017,
+      "filename": "silvaplana2008b-noaa.txt",
+      "age_column": "Year",
+      "age_transform": "CE",
+      "depth_column": null,
+      "specs": [
+        {
+          "column": "Qz/Am",
+          "proxy": "XRD_Qz_Am_normalized",
+          "label": "Qz/Am · XRD normalizado",
+          "unit": "índice normalizado",
+          "family": "Mineralogía",
+          "variable_id": "quartz_amphibole_normalized",
+          "method_id": "XRD_Silvaplana_Trachsel2008b",
+          "evidence_type": "published_derived_measurement"
+        },
+        {
+          "column": "Mi/Pl",
+          "proxy": "XRD_Mi_Pl_normalized",
+          "label": "Mi/Pl · XRD normalizado",
+          "unit": "índice normalizado",
+          "family": "Mineralogía",
+          "variable_id": "mica_plagioclase_normalized",
+          "method_id": "XRD_Silvaplana_Trachsel2008b",
+          "evidence_type": "published_derived_measurement"
+        }
+      ],
+      "encoding": "utf-8-sig"
+    },
+    {
+      "study_id": 5463,
+      "filename": "bio-silica.txt",
+      "age_column": "Sample Age (lamination years BP)",
+      "age_transform": "BP_years",
+      "depth_column": null,
+      "specs": [
+        {
+          "column": "normative biogenic Si (wt %)",
+          "proxy": "normative_biogenic_silica_raw",
+          "label": "Si biogénica normativa · sin corregir",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "normative_biogenic_silica_raw",
+          "method_id": "normative_Si_Monticchio_Allen1999",
+          "evidence_type": "published_derived_measurement",
+          "quarantine_if_negative": true
+        },
+        {
+          "column": "normative biogenic Si (corrected) (wt %)",
+          "proxy": "normative_biogenic_silica_corrected",
+          "label": "Si biogénica normativa · corregida publicada",
+          "unit": "% en masa",
+          "family": "Geoquímica elemental",
+          "variable_id": "normative_biogenic_silica_corrected",
+          "method_id": "normative_Si_Monticchio_Allen1999",
+          "evidence_type": "published_derived_measurement"
+        }
+      ],
+      "encoding": "utf-8-sig",
+      "legacy_header_line": 3,
+      "optional_trailing_columns": [
+        "Comments"
+      ]
+    },
+    {
+      "study_id": 5463,
+      "filename": "loi.txt",
+      "age_column": "Age (lamination years BP)",
+      "age_transform": "BP_years",
+      "depth_column": null,
+      "specs": [
+        {
+          "column": "LOI (wt %)",
+          "proxy": "loss_on_ignition_Monticchio",
+          "label": "Pérdida por ignición · Monticchio",
+          "unit": "% en masa",
+          "family": "Sedimentología",
+          "variable_id": "loss_on_ignition",
+          "method_id": "LOI_Monticchio_Allen1999",
+          "evidence_type": "measurement"
+        }
+      ],
+      "encoding": "utf-8-sig",
+      "legacy_header_line": 3
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "filename": "trio2009-d18o-lowres-noaa.txt",
+      "reason": "Same TRIO1 isotope sequence at lower sampling resolution; excluded to avoid possible overlapping measurements"
+    },
+    {
+      "filename": "trio2009-d18o-hires-noaa.txt",
+      "columns": [
+        "d18O_vsmow"
+      ],
+      "reason": "Alternate isotope-scale representation of selected VPDB oxygen series, not independent observations"
+    },
+    {
+      "study_id": 22582,
+      "resource": "PAGES2k text and LiPD",
+      "reason": "Republication of Pla2004 data; not ingested again"
+    },
+    {
+      "filename": "dry-density.txt",
+      "reason": "Native unit kg m-3 10-3 unresolved; no guessed conversion"
+    },
+    {
+      "filename": "mag-sus.txt",
+      "reason": "Susceptibility convention not explicit; running-average column is derived, not an independent observed sequence"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { env } from "cloudflare:workers";
 import snapshot from "../../../data/seed.json";
+import { importSeries, observationBatch } from "../../../lib/import-plan.mjs";
 export const dynamic = "force-dynamic";
 const seed: any = snapshot;
 /** Reviewed append-only release, bounded stages, migration-owned schema.
@@ -36,11 +37,18 @@ export async function POST(request: Request) {
     offset = body.offset ?? 0;
   if (!stages.includes(stage) || !Number.isInteger(offset) || offset < 0)
     return Response.json({ error: "Cursor inválido" }, { status: 400 });
+  const parentPresent = seed.parent_version
+    ? !!(await db
+        .prepare("SELECT id FROM atlas_releases WHERE id=?")
+        .bind(seed.parent_version)
+        .first())
+    : false;
   let table: string,
     columns: string,
     all: any[],
     encode: (r: any) => any[],
-    conflict: string;
+    conflict: string,
+    observationTotal = 0;
   if (stage === "records") {
     table = "atlas_records";
     columns = "id,name,realm,latitude,longitude,metadata_json";
@@ -76,15 +84,25 @@ export async function POST(request: Request) {
     table = "atlas_observations";
     columns =
       "id,series_id,age_ka_bp,value,source_row,source_line,original_age,original_value,age_uncertainty_ka,value_uncertainty,depth_original";
-    all = seed.series.flatMap((s: any) =>
-      s.rows.map((row: any) => ({ id: s.id, row })),
-    );
+    let batch: any;
+    try {
+      batch = observationBatch(importSeries(seed, parentPresent), offset, 240);
+    } catch {
+      return Response.json(
+        { error: "Cursor o manifiesto de observaciones inválido" },
+        { status: 400 },
+      );
+    }
+    all = batch.rows;
+    observationTotal = batch.total;
     encode = (o) => [o.id + ":" + o.row[2], o.id, ...o.row];
     conflict = "ON CONFLICT(id) DO NOTHING";
   }
-  if (offset > all.length)
+  const total = stage === "observations" ? observationTotal : all.length;
+  if (offset > total)
     return Response.json({ error: "Cursor fuera de rango" }, { status: 400 });
-  const slice = all.slice(offset, offset + 240),
+  const slice =
+      stage === "observations" ? all : all.slice(offset, offset + 240),
     queries = [];
   for (let i = 0; i < slice.length; i += 8) {
     const batch = slice.slice(i, i + 8),
@@ -111,7 +129,7 @@ export async function POST(request: Request) {
   if (queries.length) await db.batch(queries);
   let next = offset + slice.length,
     nextStage = stage;
-  if (next >= all.length) {
+  if (next >= total) {
     nextStage = stages[stages.indexOf(stage) + 1];
     next = 0;
   }
@@ -140,6 +158,7 @@ export async function POST(request: Request) {
     ready: !nextStage,
     next,
     stage: nextStage,
-    total: all.length,
+    total,
+    mode: parentPresent ? "incremental" : "full",
   });
 }

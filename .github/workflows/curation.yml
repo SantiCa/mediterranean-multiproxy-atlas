@@ -1,0 +1,98 @@
+# Curación con acceso a proveedores (PANGAEA/DataCite/NOAA/Crossref).
+# El entorno de Claude no alcanza esos dominios; este flujo los consulta en un runner de GitHub,
+# fija los resultados en la rama y guarda los originales como artefacto (data/interim sigue ignorado).
+name: Curation (network)
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'coverage | reproduce-v4 | all'
+        default: all
+  push:
+    branches: [claude/curado]
+    paths: [scripts/discovery/proxy_coverage.py, scripts/importers/**, .github/workflows/curation.yml]
+permissions:
+  contents: write
+concurrency:
+  group: curation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  coverage:
+    # Push: solo si el mensaje del commit lo pide ([coverage] / [v4]) para no repetir descargas.
+    if: contains(github.event.head_commit.message, '[coverage]') || (github.event_name == 'workflow_dispatch' && inputs.job != 'reproduce-v4')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with: {python-version: '3.12'}
+      - name: Coverage
+        shell: bash
+        run: |
+          set -o pipefail; python scripts/discovery/proxy_coverage.py 2>&1 | tee cov.log && c=0 || c=$?
+          tail -n 30 cov.log | tr '\n' '|' | sed "s/^/::warning title=coverage exit $c::/"; echo; exit $c
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: proxy-coverage-originals, path: data/interim/proxy_coverage, retention-days: 30}
+      - name: Commit report
+        run: |
+          git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
+          git add reports/proxy_coverage_pangaea.json docs/curation/proxy_coverage_pangaea.md
+          git diff --cached --quiet || { git commit -m "Coverage: PANGAEA proxy coverage report (CI)"; git pull --rebase -X theirs origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }
+  reproduce-v4:
+    if: contains(github.event.head_commit.message, '[v4]') || (github.event_name == 'workflow_dispatch' && inputs.job != 'coverage')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with: {python-version: '3.12'}
+      - run: python -m pip install -e .
+      # Los logs de Actions no son legibles desde el entorno de Claude: el final de cada paso
+      # se publica como anotación (::warning::), que sí se lee por la API de check-runs.
+      - name: Curate and test
+        shell: bash
+        env: {MEDATLAS_REFRESH_METADATA: '1'}
+        run: |
+          mkdir -p ci-logs; set -o pipefail
+          step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
+          step pangaea python scripts/importers/curate_pangaea_v4.py --download
+          step noaa python scripts/importers/curate_noaa_v4.py --fetch --refresh-metadata
+          step build python scripts/build_quantitative_v4.py
+          step diff git diff --stat --exit-code data/processed/atlas-v4.json
+          step reports git diff --stat reports/ && step refresh cat reports/noaa_v4_metadata_refresh.json
+          step tests python -m unittest discover -s tests
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: quantitative-v4-originals, path: "data/interim/quantitative_v4\nci-logs", retention-days: 30}
+  pangaea-v5:
+    # [v5] en el mensaje: propone N datasets nuevos (variable PROPOSE, por defecto 0), cura desde el
+    # contrato, construye atlas-v5 sobre atlas-v4 y fija contrato/informes/release en la rama.
+    if: contains(github.event.head_commit.message, '[v5') || (github.event_name == 'workflow_dispatch' && inputs.job == 'v5')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with: {python-version: '3.12'}
+      - run: python -m pip install -e .
+      - uses: actions/cache@v4
+        with:
+          path: data/interim/quantitative_v5
+          key: pangaea-v5-${{ github.run_id }}
+          restore-keys: pangaea-v5-
+      - name: Propose, curate and build v5
+        shell: bash
+        env: {MSG: '${{ github.event.head_commit.message }}'}
+        run: |
+          mkdir -p ci-logs
+          N=$(printf '%s' "$MSG" | grep -oP '\[v5 propose=\K[0-9]+' || echo 0)
+          step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
+          step curate python scripts/importers/curate_pangaea_v5.py --propose $N
+          step build python scripts/build_quantitative_v5.py
+      - name: Commit v5 contract, reports and release
+        if: always()
+        run: |
+          git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
+          git add scripts/importers/pangaea_v5_sources.json reports/pangaea_v5_audit.json reports/quantitative_v5_release.json docs/curation/pangaea_v5_proposal.md data/processed/atlas-v5.json 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "v5: PANGAEA contract batch (CI)"; git pull --rebase -X theirs origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }
