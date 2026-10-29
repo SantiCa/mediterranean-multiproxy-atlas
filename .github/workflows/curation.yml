@@ -52,6 +52,7 @@ jobs:
       # se publica como anotación (::warning::), que sí se lee por la API de check-runs.
       - name: Curate and test
         shell: bash
+        env: {MEDATLAS_REFRESH_METADATA: '1'}
         run: |
           mkdir -p ci-logs; set -o pipefail
           step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
@@ -64,3 +65,34 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: quantitative-v4-originals, path: "data/interim/quantitative_v4\nci-logs", retention-days: 30}
+  pangaea-v5:
+    # [v5] en el mensaje: propone N datasets nuevos (variable PROPOSE, por defecto 0), cura desde el
+    # contrato, construye atlas-v5 sobre atlas-v4 y fija contrato/informes/release en la rama.
+    if: contains(github.event.head_commit.message, '[v5]') || (github.event_name == 'workflow_dispatch' && inputs.job == 'v5')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with: {python-version: '3.12'}
+      - run: python -m pip install -e .
+      - uses: actions/cache@v4
+        with:
+          path: data/interim/quantitative_v5
+          key: pangaea-v5-${{ github.run_id }}
+          restore-keys: pangaea-v5-
+      - name: Propose, curate and build v5
+        shell: bash
+        env: {MSG: '${{ github.event.head_commit.message }}'}
+        run: |
+          mkdir -p ci-logs
+          N=$(printf '%s' "$MSG" | grep -oP '\[v5 propose=\K[0-9]+' || echo 0)
+          step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
+          step curate python scripts/importers/curate_pangaea_v5.py --propose $N
+          step build python scripts/build_quantitative_v5.py
+      - name: Commit v5 contract, reports and release
+        if: always()
+        run: |
+          git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
+          git add scripts/importers/pangaea_v5_sources.json reports/pangaea_v5_audit.json reports/quantitative_v5_release.json docs/curation/pangaea_v5_proposal.md data/processed/atlas-v5.json 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "v5: PANGAEA contract batch (CI)"; git pull --rebase -X theirs origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }

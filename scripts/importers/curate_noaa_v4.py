@@ -25,7 +25,7 @@ def sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
 REFRESHED=[]  # metadatos JSON aceptados con --refresh-metadata: [{filename, contract_sha256, new_sha256}]
-REFRESH_METADATA=False
+REFRESH_METADATA=__import__('os').environ.get('MEDATLAS_REFRESH_METADATA')=='1'  # también para tests en CI
 
 def native(resource,fetch=False):
     """Read immutable cached bytes, optionally fetching only an absent resource.
