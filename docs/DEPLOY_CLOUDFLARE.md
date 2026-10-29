@@ -5,7 +5,7 @@ Alojamiento independiente de ChatGPT Sites. La web (`app/atlas-web`) ya es un Cl
 ## Cómo funciona
 
 - Cada fusión en `main` que toque `app/atlas-web/` despliega sola. También se puede lanzar a mano: pestaña **Actions → Deploy web to Cloudflare → Run workflow**. Ningún agente despliega a mano.
-- El flujo crea (la primera vez) o reutiliza la base D1 `medatlas`, aplica las migraciones versionadas `app/atlas-web/drizzle/*.sql`, compila con `CF_WORKER_NAME`/`CF_D1_DATABASE_*` (sin ellas el build es idéntico al de Sites) y despliega el Worker `medatlas`.
+- El flujo crea (la primera vez) o reutiliza la base D1 `medatlas`, aplica las migraciones versionadas `app/atlas-web/drizzle/*.sql`, compila con `CF_WORKER_NAME`/`CF_D1_DATABASE_*` (sin ellas el build es idéntico al de Sites) y despliega el Worker `med` en **https://med.proxyatlas.workers.dev** (subdominio de cuenta `proxyatlas`, registrado o renombrado por el flujo).
 - Después carga semilla e inventario mediante los endpoints idempotentes `/api/bootstrap` y `/api/inventory`. Repetir la ejecución reanuda sin reescribir.
 - Sin los secretos, el flujo termina con un aviso y no falla.
 

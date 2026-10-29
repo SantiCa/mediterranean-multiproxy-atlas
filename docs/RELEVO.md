@@ -27,6 +27,6 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Hosting y preservación
 
-HOST-CF V2 deClaude (f0cffe1, merge main92637a4) está listo y espera cuenta/token/secretos del usuario. No repetirlo ni retirar Sites. Si Santiago confirma secretos, comprobar Actions, URL remota y visibilidad; mientras tanto avanzar ciencia. El despliegue Sites sigue siendo exclusivo deCodex.
+HOST-CF operativo (Claude, 29-10): Cloudflare propio, despliegue automático por `.github/workflows/deploy-cloudflare.yml` al fusionar en `main` (cambios en `app/atlas-web/`). URL elegida por Santiago: **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas` con v3 cargada: 29 registros/81.339 valores). La URL anterior medatlas.santic1290.workers.dev deja de servir al renombrar el subdominio; el Worker `medatlas` sobrante puede borrarse en el panel. Pendiente: que la validación post-despliegue (V11) pase; Roll del token (se expuso en chat); decidir visibilidad (pública). Sites sigue activo; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.
 
 El borradorv4 previo está preservado en la rama remota indicada, no integrado ni desplegado:17registros/63series/22.195valores nuevos; revisión local completa de103.534observaciones. Los cambios no subidos de esa sesión ya están conservados allí. No confundir borrador con el estado activo.
