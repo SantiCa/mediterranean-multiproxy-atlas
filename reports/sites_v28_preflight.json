@@ -22,5 +22,23 @@
   "owner_password_configured": false,
   "private_data_status": "disabled_pending_owner_password",
   "audience": "preserved_existing_owner_only_custom",
-  "deployment": "pending"
+  "deployment": "succeeded",
+  "site_source_commit": "743a94ba4509999d409ce07a07519fe90e9abebe",
+  "typescript_no_emit": "passed",
+  "production_build": "passed",
+  "local_browser_qa": [
+    "5846 source entries and inventory map",
+    "proxy map and MD95-2043 temporal plot",
+    "Mis datos configured=false"
+  ],
+  "archive_sha256": "93b5fd43b41f4933b8f03a0858a222bc660f0f4e2eda7f61e839b6c89fee66a7",
+  "committed_source_files_compared": 158,
+  "committed_source_differences": [],
+  "snapshot_in_archive": 608,
+  "migration_0004_in_archive": true,
+  "production_browser_qa": [
+    "5846 source entries and inventory map",
+    "proxy map and MD95-2043 time series visible",
+    "Mis datos not configured message visible"
+  ]
 }
