@@ -135,7 +135,15 @@ jobs:
           # Register or rename the account subdomain to SUBDOMAIN. Renaming changes the
           # URL of every Worker in the account. If the name is taken, keep the current one.
           if [ "$sub" != "$SUBDOMAIN" ]; then
-            new="$(call -X PUT "$api/subdomain" -d "{\"subdomain\":\"$SUBDOMAIN\"}" | field subdomain)"
+            put() { call -X PUT "$api/subdomain" -d "{\"subdomain\":\"$1\"}" | field subdomain; }
+            new="$(put "$SUBDOMAIN")"
+            # Cloudflare refuses a rename (10036); delete the account subdomain and
+            # register the new one, restoring the previous name if that fails.
+            case "$new" in *10036*)
+              call -X DELETE "$api/subdomain" >/dev/null || true
+              new="$(put "$SUBDOMAIN")"
+              case "$new" in ERR:*|"") [ -n "$sub" ] && put "$sub" >/dev/null;; esac ;;
+            esac
             case "$new" in
               ERR:*|"") echo "::warning title=workers.dev::No se pudo usar '$SUBDOMAIN' ($new); se mantiene '${sub:-ninguno}'.";;
               *) sub="$new";;
@@ -149,7 +157,8 @@ jobs:
           echo "::notice title=Atlas desplegado::$url"
           echo "### Atlas desplegado: $url" >> "$GITHUB_STEP_SUMMARY"
           # A newly enabled subdomain can take a minute to resolve.
-          for i in $(seq 1 30); do curl -s -o /dev/null -w '%{http_code}' "$url/api/catalog" | grep -q 200 && break; sleep 10; done
+          # A new workers.dev hostname can take several minutes to start routing.
+          for i in $(seq 1 60); do curl -s -o /dev/null -w '%{http_code}' "$url/api/catalog" | grep -q 200 && break; sleep 10; done
 
       # Idempotent, append-only import of the versioned seed and inventory through the
       # app's own bounded endpoints. Re-running resumes; conflicts are not rewritten.
@@ -165,7 +174,13 @@ jobs:
           async function run(path, first) {
             let body = first;
             for (let i = 0; i < 5000; i++) {
-              const r = await fetch(base + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+              let r;
+              // Retry while a fresh workers.dev route still answers with Cloudflare's 404 page.
+              for (let t = 0; t < 30; t++) {
+                r = await fetch(base + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+                if (r.status !== 404) break;
+                await new Promise(ok => setTimeout(ok, 10000));
+              }
               const text = await r.text();
               let p = {}; try { p = JSON.parse(text); } catch {}
               if (!r.ok) { console.log("::error title=Carga " + path + "::HTTP " + r.status + " en " + JSON.stringify(body) + ": " + (p.error || text.replace(/\s+/g, " ").slice(0, 300))); process.exit(1); }
