@@ -245,6 +245,7 @@ def slug(s):
     return re.sub(r'[^A-Za-z0-9]+', '_', s).strip('_')[:60]
 
 
+AGGREGATED = re.compile(r'sea surface temp|δ18O|δ13C|18O|13C|carbon, organic, total|calcium carbonate|CaCO3', re.I)
 MIN_EVENTS = 3  # petición 29-10-2026 (19:02): priorizar proxies con muchos registros (mapas)
 
 
@@ -272,6 +273,13 @@ def coverage_gate(spec, cover):
     multiplicar proxies de un solo registro."""
     n = cover.get(spec['parameter'], 0)
     spec['map_events'] = n
+    # Parámetros que entran en una agrupación del mapa (SST, δ18O/δ13C, TOC, CaCO3) suman
+    # sondeos aunque su nombre exacto sea raro: no se difieren.
+    if AGGREGATED.search(spec['parameter'] or ''):
+        if spec.get('status') == 'deferred_low_coverage':
+            spec['status'] = 'approved'
+            spec.pop('deferred_reason', None)
+        return spec
     if spec.get('status') == 'approved' and n < MIN_EVENTS:
         spec.update(status='deferred_low_coverage', deferred_reason=f'parámetro en {n} sondeos (< {MIN_EVENTS}); se cura cuando haya más registros')
     return spec
