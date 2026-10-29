@@ -60,11 +60,25 @@ def series_row(s):
     return [s["id"], s["record_id"], s["proxy"], s["label"], s["unit"], compact(meta)]
 
 
-def insert(table, columns, rows, conflict, width=50):
-    out = []
-    for i in range(0, len(rows), width):
-        values = ",".join("(" + ",".join(sql(v) for v in row) + ")" for row in rows[i:i + width])
-        out.append("INSERT INTO " + table + "(" + columns + ") VALUES " + values + " " + conflict + ";")
+def insert(table, columns, rows, conflict, width=50, max_bytes=90_000):
+    """Multi-row INSERTs below D1's 100 KB statement limit (series metadata ~3-20 KB)."""
+    out, group, size = [], [], 0
+    head = "INSERT INTO " + table + "(" + columns + ") VALUES "
+
+    def emit():
+        if group:
+            out.append(head + ",".join(group) + " " + conflict + ";")
+
+    for row in rows:
+        value = "(" + ",".join(sql(v) for v in row) + ")"
+        if len(value.encode()) + len(head) > max_bytes:
+            raise ValueError("Row too large for one D1 statement")
+        if group and (len(group) >= width or size + len(value.encode()) > max_bytes - len(head)):
+            emit()
+            group, size = [], 0
+        group.append(value)
+        size += len(value.encode()) + 1
+    emit()
     return out
 
 
