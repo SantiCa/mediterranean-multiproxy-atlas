@@ -172,3 +172,14 @@ jobs:
           await run("/api/bootstrap", { stage: "records", offset: 0 });
           await run("/api/inventory", { offset: 0 });
           '
+
+      # Cell-by-cell check of every served observation against the versioned seed.
+      - name: Validate deployed API against seed
+        if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
+        working-directory: .
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          out="$(python scripts/validate_quantitative_api.py --url "$URL" | tail -1)"
+          echo "$out"
+          echo "::notice title=Validación::$out"
