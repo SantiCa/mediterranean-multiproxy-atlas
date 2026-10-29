@@ -140,8 +140,8 @@ def assemble():
             value=key(r)
             if value:grouped[value].append(r["id"])
         duplicates.extend({"basis":label,"records":ids,"status":"review_link; not merged"} for ids in grouped.values() if len(ids)>1)
-    digest=hashlib.sha256(json.dumps([seed["records"],seed["series"]],ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()).hexdigest()[:10]
-    VERSION=VERSION_PREFIX+("r1" if digest==FIRST_SHA else "c"+digest)
+    content_digest=hashlib.sha256(json.dumps([seed["records"],seed["series"]],ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()).hexdigest()[:10]
+    VERSION=VERSION_PREFIX+("r1" if content_digest==FIRST_SHA else "c"+content_digest)
     seed.update(version=VERSION,parent_version=base["version"],append_series_ids=admissions)
     ages=[row[0] for s in seed["series"] for row in s["rows"] if row[0] is not None]
     counts={"records":len(seed["records"]),"series":len(seed["series"]),"values":sum(len(s["rows"]) for s in seed["series"]),"new_records":len(seed["records"])-len(base["records"]),"new_series":len(admissions),"new_values":sum(len(current[k]["rows"]) for k in admissions),"missing_age_values":sum(row[0] is None for s in seed["series"] for row in s["rows"])}
