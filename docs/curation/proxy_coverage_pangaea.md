@@ -1,11 +1,12 @@
 # Cobertura de proxies en PANGAEA (priorización de curación)
 
-Generado 2026-10-29 por `scripts/discovery/proxy_coverage.py`. Caja [-10,28,42,48]. 3331 datasets DataCite con punto en la caja; 1179 candidatos; 1179 XML nativos leídos; 0 fallos.
+Generado 2026-10-29 por `scripts/discovery/proxy_coverage.py`. Caja [-10,28,42,48]. 3331 datasets DataCite con punto en la caja; 1568 candidatos; 1568 XML nativos leídos; 0 fallos.
 
 Eventos = etiqueta+coordenada distintas (no sondeos físicos independientes). «Con edad» = matriz con columna AGE (sin validar cronología).
 
 | Familia | Datasets | Eventos | Eventos con edad | Con edad y no curados |
 |---|---:|---:|---:|---:|
+| Polen y esporas (taxones, AP/NAP) | 157 | 142 | 39 | 39 |
 | Detrítico/elementos (Ti, Zr, K, Al, Rb, Fe y razones) | 354 | 310 | 37 | 37 |
 | Elementos redox (Mo, U, V, Re, Mn, Cd y razones) | 261 | 231 | 33 | 33 |
 | Temperatura (SST/subsuperficial: UK′37, Mg/Ca, TEX86, MAT) | 101 | 95 | 23 | 23 |
@@ -18,11 +19,17 @@ Eventos = etiqueta+coordenada distintas (no sondeos físicos independientes). «
 | Foraminíferos bentónicos — censos/abundancias/diversidad | 75 | 56 | 13 | 13 |
 | Bario / productividad exportada (Ba, Ba/Al, Ba exceso) | 144 | 141 | 12 | 12 |
 | δ18O foraminíferos bentónicos | 17 | 15 | 10 | 10 |
+| Índices de biomarcadores: BIT, MBT/CBT, CPI, ACL, Paq, Pr/Ph, TAR, LDI, %C37:4 | 13 | 13 | 10 | 10 |
 | Nanofósiles calcáreos | 70 | 60 | 9 | 8 |
 | δ13C foraminíferos planctónicos | 21 | 14 | 8 | 8 |
 | δ13C foraminíferos bentónicos | 16 | 12 | 8 | 8 |
+| Litología / facies / descripción sedimentaria (categórica) | 145 | 136 | 6 | 6 |
 | Indicadores bentónicos de oxigenación (BFOI, O2) | 30 | 30 | 3 | 3 |
+| Europio y tierras raras (Eu, Eu/Eu*, Ce anómalo, REE) | 54 | 50 | 3 | 3 |
+| Corrientes: sortable silt, Zr/Rb, Zr/Al, 231Pa/230Th, κARM/κ, εNd | 2 | 3 | 3 | 3 |
+| Relaciones de geoquímica orgánica: C/N, δ13Corg, δ15N, HI/OI | 53 | 52 | 2 | 2 |
 | Bioturbación / icnología / laminación | 5 | 5 | 1 | 1 |
 | Mg/Ca y otras razones en foraminíferos | 0 | 0 | 0 | 0 |
+| Isótopos radiogénicos (εNd, Nd, Sr, Pb, Hf, Os) | 0 | 0 | 0 | 0 |
 
 Cola completa por dataset en `reports/proxy_coverage_pangaea.json` (`queue`).
