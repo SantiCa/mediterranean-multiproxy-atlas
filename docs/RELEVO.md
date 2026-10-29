@@ -1,34 +1,27 @@
 # Relevo — puntero vivo
 
-Copia válida: rama `relevo`. Actualizar con commit + push tras cada paso (ver «Relevo» en AGENTS.md).
+Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
-- Último agente: ChatGPT/Codex
+- Último agente: Claude
 - Fecha: 29-10-2026
-- Tarea actual: CUR-ODP977A — auditar el conflicto de profundidad m/cmbsf de ODP 977A. Santiago autoriza continuar el 29-10-2026. HOST-CF queda pendiente de sus credenciales; no rehacer el código de Claude.
-- Cola priorizada por Santiago: CUR-ODP977A → completar cobertura de temperatura → foraminíferos → oxigenación geoquímica y otros indicadores → aporte detrítico → corrientes. GP03 y la tabla de revisión/exclusiones permanecen pendientes; no se eliminan.
-- Estado: CUR-ODP977A, unidad resuelta por fuente primaria: cmbsf=corrected meters below seafloor en el artículo de 2020; no hay conversión por100. Ficha preliminar guardada; pendiente archivar PDF/páginas y cierre con pruebas. HOST-CF V2 sigue esperando cuenta/secretos.
-- Hecho: `vite.config.ts` acepta `CF_WORKER_NAME`/`CF_D1_DATABASE_NAME`/`CF_D1_DATABASE_ID` (sin ellas, build igual a Sites); `.github/workflows/deploy-cloudflare.yml` (crea/reutiliza D1, migra, compila, despliega, carga semilla+inventario; se salta sin secretos); guía `docs/DEPLOY_CLOUDFLARE.md`. Verificado en local: dry-run 2,26 MB gzip, migraciones 0000–0003, carga completa y `validate_quantitative_api.py` 81.339/81.339 valores.
-- Pendiente: (a) Santiago: cuenta, token, secretos, «Run workflow»; (b) validar URL remota con `scripts/validate_quantitative_api.py --url <URL>`; (c) decidir visibilidad (pública por defecto, o Cloudflare Access); (d) actualizar README/PROJECT_STATE con la nueva URL y retirar dependencia de Sites cuando Santiago lo confirme.
-- Pruebas: 14 Node correctas; Python sin cambios (33, 6 omitidas).
+- Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
+- Estado: PUBLICAR-V5 hecho y fusionado en main (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
+- Hecho: V19 trocea metadatos <90 KB por sentencia (D1 rechazó el registro de release en V18; observaciones v4+v5 ya cargadas). Validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
+- Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. Completar el archivo de evidencia primaria de CUR-ODP977A (PDF aceptado Bari, informe ODP Leg161 y PANGAEA); guardar hashes/localizadores. La cabecera m y el artículo coinciden; no corregir las profundidades numéricas. Ver docs/curation/odp977a_depth_audit.md.
-2. Guardar la evidencia y la resolución o incertidumbre en docs/curation/odp977a_depth_audit.md y docs/handoffs/cur-odp977a.md. Tras cada paso válido, actualizar este archivo y hacer commit+push a relevo.
-3. Al cerrar con pruebas, merge --no-ff a main. Continuar con un inventario reproducible de cobertura de temperatura, priorizando completar grupos existentes en vez de añadir familias nuevas.
+1. Revisar en Actions el despliegue de V18 (aviso «Carga D1 parcial» es normal los primeros días; la web sirve v3 hasta completar v5).
+2. Volver a `claude/curado`: modelos de edad en otro dataset del mismo evento PANGAEA → asignar edad por interpolación lineal en profundidad dentro del rango del modelo (sin extrapolar), marcando la edad como interpolada y citando el dataset del modelo. Autorizado por Santiago (29-10-2026).
 
-## Solicitudes registradas de Santiago (29-10-2026)
+## Solicitudes del usuario registradas, pendientes de implementar
 
-- Completar los registros disponibles de cada proxy del Mediterráneo y áreas adyacentes: primero temperatura, luego foraminíferos, oxigenación, aporte detrítico y corrientes. Medir cobertura por fuentes/consultas/versiones explícitas; no afirmar exhaustividad de toda la literatura sin evidencia.
-- Temperatura: separar métodos/calibraciones, estación y variable ambiental; permitir agrupación solo con equivalencia científica justificada. No tratar igual unidad como igual señal.
-- Inconsistencias: señalarlas en la aplicación y permitir decisión del usuario sobre uso/exclusión, conservando originales y advertencias.
-- Tabla tras seleccionar proxy/mapa: mostrar archivo original y valores usados; permitir excluir una muestra o todo el sondeo, con trazabilidad de la selección. No implementada todavía.
-- Existe un borrador local v4 de la sesión anterior: 17 registros nuevos, 63 series/22.195 valores; revisión local y scripts todavía sin integrar/publicar. Mantenerlo separado de la auditoría y preservar sus archivos antes de cualquier limpieza. No presentarlo como estado online ni rehacerlo sin comprobar su disponibilidad.
+- 29-10 (18:06): publicar la versión actual; seguir curado en `claude/curado`; interpolar edades con el modelo de edad de otro archivo cuando sea posible. Preguntas: ¿«añadir registros» con un enlace lo cura? ¿coste de cuenta propia con datos privados coherentes con la base?
+- Priorizar completar los proxies existentes, especialmente temperatura, foraminíferos, oxigenación, detrítico y corrientes; no afirmar exhaustividad de toda la literatura sin cobertura verificable.
+- Inconsistencias visibles en la aplicación; que el usuario pueda decidir sobre uso/exclusión conservando advertencias y originales.
+- Tabla al elegir proxy/mapa con todos los valores del archivo original y cuáles se usan; excluir muestras individuales o todo un sondeo, con trazabilidad.
+- La resolución ODP977A debe aparecer en esa futura interfaz QC; no como conversión de profundidad.
 
-## HOST-CF pendiente, sin repetir lo hecho
+## Hosting y preservación
 
-Claude dejó workflow y configuración V2 en f0cffe1, fusionados a main en 92637a4. Esperar cuenta/token/secretos de Santiago; después comprobar Actions/URL remota y visibilidad. Sites sigue privado y activo. Las nuevas prioridades científicas pueden avanzar mientras tanto; no cambiar audiencia ni retirar Sites sin la decisión correspondiente.
-
-## Nota de esta rama de archivo
-
-Esta copia conserva el borrador v4 previo; no es el puntero vivo ni inicio de una tarea paralela. Consultar origin/relevo y docs/handoffs/quantitative-v4-draft.md antes de trabajar.
+HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sigue activo; su despliegue es exclusivo de Codex (con la semilla fuera del bundle, Sites seguirá sirviendo su última release cargada). Un solo agente a la vez en `relevo`.

@@ -24,4 +24,12 @@ TSV original: `data/raw/pangaea/921230.tsv`, SHA-256 `b8739412ed7d26be05ca0d9d4c
 - Las edades publicadas permanecen disponibles para exploración por edad. El apartado3.2 describe correlación de SST con U1313; esa dependencia impide usar después su sincronía como prueba independiente.
 - Las semillas históricas versionadas no se reescriben. La resolución deberá aparecer como anotación de curación en la siguiente release/interfaz, conservando el aviso original como historial; no se ha cambiado todavía la aplicación.
 
-Estado de evidencia: fuentes primarias web y TSV local contrastados; pendiente archivar y localizar páginas del PDF aceptado y del informe ODP antes del cierre definitivo.
+## Cierre y reproducción
+
+La definición se verifica en el apartado3.1 del editor y en la tabla1 indexada del manuscrito aceptado. La descarga directa del manuscrito institucional respondió HTTP403; no se eludió el bloqueo ni se afirma haber leído ese PDF localmente. El informe ODP completo y el preliminar sí quedaron archivados por hash. El contexto de profundidad de agua aparece en las páginasPDF1,2,5,10,14 y32 del capítulo. La limitación de acceso al manuscrito no convierte en ambigua la definición explícita del editor.
+
+El TSV actual descargado el29-10-2026 es idéntico byte a byte al conservado. Hashes, URLs, fechas y localizadores: data/provenance/odp977a_audit_retrievals.json y reports/odp977a_depth_audit.json. Originales en data/raw/odp977a_audit/, ignorado. La resolución versionada está en config/curation_assertions.json; es una anotación, no una reescritura de semilla ni una nueva escala.
+
+Reproducción: python scripts/audit_odp977a_depth.py, offline con caché; añadir --fetch para recuperar los recursos explícitos ausentes. La extracciónPDF usa pypdf (observado6.21.4), dependencia opcional de investigación. Las pruebas comprueban que no se requiere conversión y que las181profundidades de ambas series v3 siguen exactamente iguales a las celdas nativas.
+
+**CUR-ODP977A cerrada:** unidad resuelta; transformación del marco corregido a mbsf no implementada ni inferida; aplicación sin cambio numérico. La anotación deberá incorporarse a la próxima interfaz de control de calidad.

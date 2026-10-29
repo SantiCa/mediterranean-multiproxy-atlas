@@ -5,7 +5,7 @@ Alojamiento independiente de ChatGPT Sites. La web (`app/atlas-web`) ya es un Cl
 ## Cómo funciona
 
 - Cada fusión en `main` que toque `app/atlas-web/` despliega sola. También se puede lanzar a mano: pestaña **Actions → Deploy web to Cloudflare → Run workflow**. Ningún agente despliega a mano.
-- El flujo crea (la primera vez) o reutiliza la base D1 `medatlas`, aplica las migraciones versionadas `app/atlas-web/drizzle/*.sql`, compila con `CF_WORKER_NAME`/`CF_D1_DATABASE_*` (sin ellas el build es idéntico al de Sites) y despliega el Worker `medatlas`.
+- El flujo crea (la primera vez) o reutiliza la base D1 `medatlas`, aplica las migraciones versionadas `app/atlas-web/drizzle/*.sql`, compila con `CF_WORKER_NAME`/`CF_D1_DATABASE_*` (sin ellas el build es idéntico al de Sites) y despliega el Worker `med` en **https://med.proxyatlas.workers.dev** (subdominio de cuenta `proxyatlas`, registrado o renombrado por el flujo).
 - Después carga semilla e inventario mediante los endpoints idempotentes `/api/bootstrap` y `/api/inventory`. Repetir la ejecución reanuda sin reescribir.
 - Sin los secretos, el flujo termina con un aviso y no falla.
 
@@ -30,3 +30,7 @@ Alojamiento independiente de ChatGPT Sites. La web (`app/atlas-web`) ya es un Cl
 ## Verificación local realizada (29-10-2026)
 
 Build con variables propias, `wrangler deploy --dry-run` correcto, migraciones 0000–0003 sobre D1 local, carga completa con el mismo script del flujo y `validate_quantitative_api.py`: 29 registros, 89 series, 81.339 valores comparados celda a celda, 62 grupos. Despliegue remoto no verificado aún (faltan secretos).
+
+## Carga de releases (V18, 29-10-2026)
+
+La semilla ya no va en el Worker (v5 supera los 3 MB gzip del plan Free). El Worker solo empaqueta `app/atlas-web/data/release.json` (manifiesto: versiones, IDs de series y registros) y sirve la **última release completa** en D1. El flujo escribe D1 con `scripts/d1_release.py` (`plan` → lotes SQL de 5.000 valores, `finalize` → metadatos y fila de release solo con recuentos completos). Si se alcanza el límite diario (100.000 filas escritas), avisa y se reanuda con la ejecución diaria (cron 00:17 UTC). Nueva release: añadir su `--seed` en el flujo y regenerar el manifiesto con `python scripts/d1_release.py manifest --seed … --out app/atlas-web/data/release.json`.

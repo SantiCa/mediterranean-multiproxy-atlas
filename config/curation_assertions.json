@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "assertions": [
+    {
+      "id": "CUR-ODP977A-depth-unit-2026-10-29",
+      "dataset_doi": "10.1594/PANGAEA.921230",
+      "field": "Depth corr [m]",
+      "native_comment": "[cmbsf]",
+      "status": "resolved",
+      "interpretation": "corrected meters below seafloor",
+      "unit": "m",
+      "numeric_transform": "none",
+      "allowed_use": "retain archived sample ages/values; preserve native depth strings",
+      "depth_join_policy": "no automatic join to shipboard mbsf/mcd without correspondence",
+      "source": {
+        "doi": "10.1016/j.quascirev.2020.106520",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0277379120304820",
+        "locator": "Section 3.1 and Table 1",
+        "review_mode": "primary publisher indexed section text; accepted manuscript PDF returns HTTP 403",
+        "verified_date": "2026-10-29",
+        "review_agent": "ChatGPT/Codex"
+      },
+      "historical_flag": "depth_header_m_vs_metadata_comment_cmbsf_conflict",
+      "prior_values_changed": false
+    }
+  ]
+}
