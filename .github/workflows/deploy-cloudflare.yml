@@ -1,0 +1,123 @@
+name: Deploy web to Cloudflare
+# Self-hosted deployment independent of ChatGPT Sites (docs/DEPLOY_CLOUDFLARE.md).
+# Runs on every push to main that touches the web, or by hand from the Actions tab.
+# Needs repository secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID; without
+# them the job stops early with a notice instead of failing.
+on:
+  push:
+    branches: [main]
+    paths: ['app/atlas-web/**', '.github/workflows/deploy-cloudflare.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-cloudflare
+  cancel-in-progress: false
+
+env:
+  WORKER_NAME: medatlas
+  DB_NAME: medatlas
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app/atlas-web
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Check secrets
+        id: gate
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::Cloudflare secrets not configured; skipping deploy."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.ok == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.ok == 'true'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/atlas-web/package-lock.json
+
+      - name: Install
+        if: steps.gate.outputs.ok == 'true'
+        run: npm ci --no-audit --no-fund
+
+      - name: Scientific contract tests
+        if: steps.gate.outputs.ok == 'true'
+        run: node --test tests/science.test.mjs tests/timeline.test.mjs tests/proxies.test.mjs
+
+      # Create the D1 database on first run; reuse it afterwards (looked up by name).
+      - name: Resolve D1 database
+        if: steps.gate.outputs.ok == 'true'
+        id: db
+        run: |
+          find_id() { npx wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const m=JSON.parse(s).find(d=>d.name===process.argv[1]);process.stdout.write(m?m.uuid:"")})' "$DB_NAME"; }
+          id="$(find_id)"
+          if [ -z "$id" ]; then npx wrangler d1 create "$DB_NAME"; id="$(find_id)"; fi
+          test -n "$id"
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+
+      # Schema is owned by the versioned drizzle/*.sql migrations; never DDL from requests.
+      - name: Apply D1 migrations
+        if: steps.gate.outputs.ok == 'true'
+        run: |
+          cat > wrangler.migrations.json <<EOF
+          {"name":"$WORKER_NAME","d1_databases":[{"binding":"DB","database_name":"$DB_NAME","database_id":"${{ steps.db.outputs.id }}","migrations_dir":"drizzle"}]}
+          EOF
+          npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json
+
+      - name: Build
+        if: steps.gate.outputs.ok == 'true'
+        env:
+          CF_WORKER_NAME: ${{ env.WORKER_NAME }}
+          CF_D1_DATABASE_NAME: ${{ env.DB_NAME }}
+          CF_D1_DATABASE_ID: ${{ steps.db.outputs.id }}
+        run: npx vinext build
+
+      - name: Deploy Worker
+        if: steps.gate.outputs.ok == 'true'
+        id: deploy
+        run: |
+          npx wrangler deploy --config dist/server/wrangler.json | tee deploy.log
+          url="$(grep -Eo 'https://[a-zA-Z0-9.-]+\.workers\.dev' deploy.log | head -1)"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "### Atlas desplegado: $url" >> "$GITHUB_STEP_SUMMARY"
+
+      # Idempotent, append-only import of the versioned seed and inventory through the
+      # app's own bounded endpoints. Re-running resumes; conflicts are not rewritten.
+      # On the Workers Free plan the daily D1 row-write limit can stop this first
+      # import; the next run (or the first visitor) continues it.
+      - name: Load seed and inventory
+        if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          node --input-type=module -e '
+          const base = process.env.URL;
+          async function run(path, first) {
+            let body = first;
+            for (let i = 0; i < 5000; i++) {
+              const r = await fetch(base + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+              const p = await r.json().catch(() => ({}));
+              if (!r.ok) throw new Error(path + " " + r.status + " " + (p.error || ""));
+              if (p.ready) { console.log(path, "ready"); return; }
+              body = p.stage ? { stage: p.stage, offset: p.next } : { offset: p.next };
+              if (i % 50 === 0) console.log(path, JSON.stringify(body), "/", p.total);
+            }
+            throw new Error(path + " did not finish");
+          }
+          await run("/api/bootstrap", { stage: "records", offset: 0 });
+          await run("/api/inventory", { offset: 0 });
+          '
