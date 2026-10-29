@@ -160,8 +160,9 @@ jobs:
             let body = first;
             for (let i = 0; i < 5000; i++) {
               const r = await fetch(base + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-              const p = await r.json().catch(() => ({}));
-              if (!r.ok) throw new Error(path + " " + r.status + " " + (p.error || ""));
+              const text = await r.text();
+              let p = {}; try { p = JSON.parse(text); } catch {}
+              if (!r.ok) { console.log("::error title=Carga " + path + "::HTTP " + r.status + " en " + JSON.stringify(body) + ": " + (p.error || text.replace(/\s+/g, " ").slice(0, 300))); process.exit(1); }
               if (p.ready) { console.log(path, "ready"); return; }
               body = p.stage ? { stage: p.stage, offset: p.next } : { offset: p.next };
               if (i % 50 === 0) console.log(path, JSON.stringify(body), "/", p.total);
