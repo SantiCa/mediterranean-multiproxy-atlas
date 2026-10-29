@@ -34,7 +34,7 @@ import TimeWindow from "../components/TimeWindow";
 import SeriesComparison from "../components/SeriesComparison";
 import { timeExtent } from "../lib/timeline.mjs";
 import ProxyPicker from "../components/ProxyPicker";
-import { groupKey, proxyCatalog as proxyGroups, isAggregateKey, inGroup } from "../lib/proxies.mjs";
+import { groupKey, proxyCatalog as proxyGroups, isAggregateKey, inGroup, seriesMatches } from "../lib/proxies.mjs";
 import PrivateData from "../components/PrivateData";
 import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
 import { scientificNumber } from "../lib/format.mjs";
@@ -229,7 +229,16 @@ export default function Atlas() {
       setData({ ...d, series: [] });
       setLoading("");
     } catch (e: any) {
-      setError(e.message || "Error de conexión");
+      // D1 unavailable (e.g. daily Free limit): static copy of the newest seed.
+      try {
+        const s = await fetch("/snapshot/catalog.json");
+        if (!s.ok) throw new Error();
+        const d: any = await s.json();
+        setCatalog(d);
+        setData({ ...d, series: [] });
+      } catch {
+        setError(e.message || "Error de conexión");
+      }
       setLoading("");
     }
   }
@@ -337,8 +346,21 @@ export default function Atlas() {
     const keys = isAggregateKey(f.group)
       ? proxies.find((p: any) => p.key === f.group)?.members || []
       : [f.group];
+    const records = new Map((catalog.records || []).map((r: any) => [r.id, r]));
+    const fs = { ...base, yearMin: Number(base.yearMin) || 0, yearMax: Number(base.yearMax) || 0 };
+    const fromSnapshot = (group: string) => {
+      const file = catalog.snapshot.groups[group];
+      if (!file) return Promise.resolve([]);
+      return fetch("/snapshot/obs/" + file, { signal: controller.signal }).then(async (response) => {
+        if (!response.ok) throw new Error("No se pudieron cargar las series");
+        const result: any = await response.json();
+        return result.series.filter(
+          (s: any) => records.has(s.record_id) && seriesMatches(s, records.get(s.record_id), fs),
+        );
+      });
+    };
     const one = (group: string) =>
-      fetch("/api/observations?" + new URLSearchParams({ group, ...base }), {
+      catalog.snapshot ? fromSnapshot(group) : fetch("/api/observations?" + new URLSearchParams({ group, ...base }), {
         signal: controller.signal,
       }).then(async (response) => {
         const result: any = await response.json();
@@ -676,6 +698,11 @@ export default function Atlas() {
     );
   return (
     <div className="atlas-app">
+      {catalog?.snapshot && (
+        <div role="status" style={{ padding: "6px 12px", background: "#fff4d6", color: "#5b4500", fontSize: 13, textAlign: "center" }}>
+          Base de datos no disponible temporalmente (límite diario). Mostrando copia estática de la versión {catalog.release.id}; los datos privados no están disponibles.
+        </div>
+      )}
       <header className="topbar">
         <a className="brand" href="/" aria-label="Inicio del atlas">
           <span className="brand-mark">

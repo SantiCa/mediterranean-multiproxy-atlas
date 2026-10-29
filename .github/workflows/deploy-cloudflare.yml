@@ -127,7 +127,11 @@ jobs:
           CF_WORKER_NAME: ${{ env.WORKER_NAME }}
           CF_D1_DATABASE_NAME: ${{ env.DB_NAME }}
           CF_D1_DATABASE_ID: ${{ steps.db.outputs.id }}
-        run: npx vinext build
+        # Static fallback (public/snapshot) from the newest seed, used by the client
+        # when D1 is unavailable (daily Free limit). Served as assets, not in the Worker.
+        run: |
+          node scripts/snapshot.mjs "$(ls ../../data/processed/atlas-v*.json | sort -V | tail -1)" public/snapshot
+          npx vinext build
 
       - name: Deploy Worker
         if: steps.gate.outputs.ok == 'true'
