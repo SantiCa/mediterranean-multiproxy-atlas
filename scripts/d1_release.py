@@ -83,14 +83,39 @@ def insert(table, columns, rows, conflict, width=50, max_bytes=90_000):
 
 
 def wrangler_rows(path):
+    """Rows of a `wrangler d1 execute --json` output (all result sets of a --file run)."""
+    if not path or not Path(path).exists():
+        return []
     data = json.loads(Path(path).read_text(encoding="utf8"))
-    if isinstance(data, list):
-        data = data[0]
-    return data.get("results", [])
+    sets = data if isinstance(data, list) else [data]
+    return [r for d in sets for r in d.get("results", [])]
 
 
-def counts_of(path):
-    return {r["series_id"]: int(r["n"]) for r in wrangler_rows(path)}
+def registered(path):
+    return {r["id"] for r in wrangler_rows(path)}
+
+
+def complete_ids(seeds, done):
+    """Series of releases already registered in D1 are complete by construction."""
+    return {s["id"]: len(s["rows"]) for seed in seeds if seed["version"] in done for s in seed["series"]}
+
+
+def cmd_count_sql(a):
+    """Count queries only for series not covered by a registered release, through the
+    (series_id, age) index: a full GROUP BY over all observations would spend the
+    Free plan's 5 M rows read/day."""
+    seeds = load_seeds(a.seed)
+    known = complete_ids(seeds, registered(a.releases))
+    ids = sorted({s["id"] for s in ordered_series(seeds)} - set(known))
+    stmts = ["SELECT series_id,count(*) n FROM atlas_observations WHERE series_id IN (" + ",".join(sql(i) for i in ids[k:k + 200]) + ") GROUP BY series_id;" for k in range(0, len(ids), 200)]
+    Path(a.out).write_text("\n".join(stmts or ["SELECT 1 WHERE 0;"]) + "\n", encoding="utf8")
+    print("count_queries=%d pending_series=%d" % (len(stmts), len(ids)))
+
+
+def counts_of(path, seeds=None, releases=None):
+    out = complete_ids(seeds, registered(releases)) if seeds and releases else {}
+    out.update({r["series_id"]: int(r["n"]) for r in wrangler_rows(path) if "series_id" in r})
+    return out
 
 
 def ordered_series(seeds):
@@ -132,7 +157,7 @@ def cmd_manifest(a):
 
 def cmd_plan(a):
     seeds = load_seeds(a.seed)
-    counts = counts_of(a.counts) if a.counts else {}
+    counts = counts_of(a.counts, seeds, a.releases)
     records = {r["id"]: r for seed in seeds for r in seed["records"]}
     out = Path(a.out_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -167,8 +192,8 @@ def cmd_plan(a):
 
 def cmd_finalize(a):
     seeds = load_seeds(a.seed)
-    counts = counts_of(a.counts)
-    present = {r["id"] for r in wrangler_rows(a.releases)}
+    counts = counts_of(a.counts, seeds, a.releases)
+    present = registered(a.releases)
     stmts, done = [], []
     for seed in seeds:
         if seed["version"] in present:
@@ -193,10 +218,11 @@ def main():
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
     m = sub.add_parser("manifest"); m.add_argument("--seed", action="append", required=True); m.add_argument("--out", required=True); m.add_argument("--keep", action="append", help="older manifest whose releases stay servable")
-    q = sub.add_parser("plan"); q.add_argument("--seed", action="append", required=True); q.add_argument("--counts"); q.add_argument("--out-dir", required=True); q.add_argument("--max-obs", type=int, default=5000)
+    c = sub.add_parser("count-sql"); c.add_argument("--seed", action="append", required=True); c.add_argument("--releases"); c.add_argument("--out", required=True)
+    q = sub.add_parser("plan"); q.add_argument("--seed", action="append", required=True); q.add_argument("--counts"); q.add_argument("--releases"); q.add_argument("--out-dir", required=True); q.add_argument("--max-obs", type=int, default=5000)
     f = sub.add_parser("finalize"); f.add_argument("--seed", action="append", required=True); f.add_argument("--counts", required=True); f.add_argument("--releases", required=True); f.add_argument("--out", required=True)
     a = p.parse_args()
-    {"manifest": cmd_manifest, "plan": cmd_plan, "finalize": cmd_finalize}[a.cmd](a)
+    {"manifest": cmd_manifest, "count-sql": cmd_count_sql, "plan": cmd_plan, "finalize": cmd_finalize}[a.cmd](a)
 
 
 if __name__ == "__main__":
