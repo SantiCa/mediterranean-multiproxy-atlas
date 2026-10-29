@@ -42,6 +42,15 @@ FAMILIES = {
     'bario': ('Bario / productividad exportada (Ba, Ba/Al, Ba exceso)', lambda p: re.search(r'\bBarium\b|\bBa/(Al|Ti)\b|Ba excess|Ba xs|Ba, biogenic', p)),
     'toc': ('Carbono orgánico (TOC/Corg)', lambda p: re.search(r'Carbon, organic|organic carbon|\bTOC\b|C org\b|Corg', p, re.I)),
     'mo_otros': ('Materia orgánica: N total, C/N, δ13Corg, Rock-Eval, biomarcadores totales', lambda p: re.search(r'Nitrogen, total|\bC/N\b|C org/N|δ13C, organic|δ13C org|Hydrogen index|Oxygen index, Rock|Rock-Eval|Kerogen|Alkenones, total|n-Alkanes, total|Chlorin|Porphyrin', p, re.I)),
+    # Petición 29-10-2026 (17:24): relaciones de geoquímica orgánica, polen, isótopos radiogénicos,
+    # europio/REE y proxies de corrientes. Las familias se solapan a propósito (p. ej. εNd es
+    # radiogénico y también trazador de masas de agua); el recuento es por familia, no excluyente.
+    'mo_ratios': ('Relaciones de geoquímica orgánica: C/N, δ13Corg, δ15N, HI/OI', lambda p: re.search(r'\bC/N\b|C org/N|TOC/TN|Corg/Ntot|δ13C, organic|δ13C org|δ15N|delta 15N|Hydrogen index|Oxygen index, Rock|Rock-Eval', p, re.I)),
+    'biomarcadores_indices': ('Índices de biomarcadores: BIT, MBT/CBT, CPI, ACL, Paq, Pr/Ph, TAR, LDI, %C37:4', lambda p: re.search(r'\bBIT\b|branched and isoprenoid|\bMBT|\bCBT\b|\bCPI\b|carbon preference|\bACL\b|average chain length|\bPaq\b|Pr/Ph|Pristane/Phytane|\bTAR\b|terrigenous/aquatic|\bLDI\b|long chain diol|C37:4|Diol index|GDGT', p, re.I)),
+    'polen': ('Polen y esporas (taxones, AP/NAP)', lambda p: re.search(r'pollen|spore|\bAP/NAP\b|arboreal|Quercus|Pinus|Artemisia|Chenopodi|Amaranth|Ephedra|Poaceae|Olea\b|Cedrus|Abies|Betula|Juniperus|Ericaceae|Asteraceae|Cupressaceae|Pistacia', p, re.I)),
+    'isot_radiogenicos': ('Isótopos radiogénicos (εNd, Nd, Sr, Pb, Hf, Os)', lambda p: re.search(r'ε-?Nd|epsilon.?Nd|143Nd/144Nd|87Sr/86Sr|20[678]Pb/20[4-7]Pb|176Hf/177Hf|εHf|187Os/188Os|Nd isotop|Sr isotop|Pb isotop', p, re.I)),
+    'tierras_raras_eu': ('Europio y tierras raras (Eu, Eu/Eu*, Ce anómalo, REE)', lambda p: re.search(r'\b(Europium|Cerium|Lanthanum|Neodymium|Samarium|Gadolinium|Ytterbium|Dysprosium)\b|Eu/Eu\*|Eu anomal|Ce/Ce\*|Ce anomal|\bREE\b|rare earth', p, re.I)),
+    'corrientes': ('Corrientes: sortable silt, Zr/Rb, Zr/Al, 231Pa/230Th, κARM/κ, εNd', lambda p: re.search(r'sortable silt|\bSS ?(mean|%)|mean grain size.*(10|63)|Zr/Rb|Zr/Al|231Pa/230Th|Pa/Th|κARM|kARM|ARM/|ε-?Nd|epsilon.?Nd|143Nd/144Nd', p, re.I)),
     'bioturbacion': ('Bioturbación / icnología / laminación', lambda p: re.search(r'Bioturb|Ichno|Burrow|trace fossil|Zoophycos|Chondrites|Planolites|Thalassinoides|Skolithos|Mottl|Lamina', p, re.I)),
     # Litología: variable categórica (descripciones/facies), no numérica. Base de futuros mapas
     # litológicos por edad (petición 29-10-2026): requiere columna AGE o modelo de edad del sondeo.
