@@ -94,6 +94,15 @@ export default function PrivateData({ catalog, datasets, onDatasets }: any) {
     ageColumn: model ? -1 : ageCol,
     ageUnit,
     ageModel: model ? { pairs: model.pairs, unit: modelUnit, source: model.name } : null,
+    groupMeta: Object.fromEntries(
+      Object.values(targets)
+        .filter((t: any) => t?.type === "group" && t.key)
+        .map((t: any) => {
+          const g: any = groups.find((x: any) => x.key === t.key);
+          const { rows, ...m } = g?.series[0] || {};
+          return [t.key, m];
+        }),
+    ),
     columns: Object.entries(targets)
       .filter(([, t]: any) => t && t.type && (t.type === "new" || t.key))
       .map(([i, t]: any) => ({ index: Number(i), target: t })),

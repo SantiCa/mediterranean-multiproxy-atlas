@@ -41,23 +41,26 @@ export async function POST(request: Request) {
     return json({ error: "JSON inválido" }, 400);
   }
   input.id = crypto.randomUUID().replace(/-/g, "").slice(0, 12);
-  // Existing comparison groups are resolved from the public catalogue, so the
-  // uploaded series inherit its proxy, method and unit exactly.
+  // Existing comparison groups: the client sends the metadata of one public series
+  // of the group (from the static catalogue). The server only accepts it when it is
+  // consistent with the group key, so proxy, method and unit are inherited exactly.
   const groups = new Map();
+  const meta = input.groupMeta && typeof input.groupMeta === "object" ? input.groupMeta : {};
   for (const c of input.columns || []) {
     if (c?.target?.type !== "group" || groups.has(c.target.key)) continue;
-    let k: any;
-    try {
-      k = JSON.parse(c.target.key);
-    } catch {}
-    if (!Array.isArray(k) || k.length !== 3) return json({ error: "Grupo inválido" }, 400);
-    const m = await db
-      .prepare(
-        "SELECT metadata_json FROM atlas_series WHERE proxy=? AND unit=? AND coalesce(json_extract(metadata_json,'$.compatibility_group'),id)=? LIMIT 1",
-      )
-      .bind(String(k[0]), String(k[2]), String(k[1]))
-      .first<any>();
-    if (m) groups.set(c.target.key, JSON.parse(m.metadata_json));
+    const m = meta[c.target.key];
+    const ok =
+      m && typeof m === "object" &&
+      ["proxy", "unit"].every((k) => typeof m[k] === "string") &&
+      JSON.stringify([m.proxy, m.compatibility_group || m.id, m.unit]) === c.target.key &&
+      !String(m.proxy).startsWith("private_");
+    if (!ok) return json({ error: "Grupo de comparación no válido" }, 400);
+    groups.set(c.target.key, {
+      proxy: m.proxy, compatibility_group: m.compatibility_group || m.id, unit: m.unit,
+      family: String(m.family || ""), variable_label: String(m.variable_label || m.label || "").slice(0, 200),
+      label: String(m.label || "").slice(0, 300), method: String(m.method || "").slice(0, 300),
+      evidence_type: String(m.evidence_type || "published_value").slice(0, 60),
+    });
   }
   let built: any;
   try {

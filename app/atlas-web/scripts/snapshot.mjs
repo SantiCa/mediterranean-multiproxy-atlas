@@ -1,12 +1,12 @@
-// Static fallback served from Workers assets when D1 is unavailable (e.g. Free daily
-// limit reached). Built from the newest versioned seed, never from D1, so values are
-// the seed itself. Usage: node scripts/snapshot.mjs <seed.json> <outDir>
+// Public data of the atlas as static Workers assets (no database reads): catalogue,
+// one observation file per comparison group and the site inventory. Built from the
+// newest versioned seed. Usage: node scripts/snapshot.mjs <seed.json> <outDir> [inventory.json]
 import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { groupKey } from "../lib/proxies.mjs";
 
-const [seedPath, out] = process.argv.slice(2);
+const [seedPath, out, inventoryPath] = process.argv.slice(2);
 if (!seedPath || !out) throw new Error("uso: snapshot.mjs <seed.json> <outDir>");
 const seed = JSON.parse(readFileSync(seedPath, "utf8"));
 rmSync(out, { recursive: true, force: true });
@@ -46,4 +46,6 @@ writeFileSync(
     snapshot: { groups: files },
   }),
 );
+// Site inventory (tab «Sondeos»), queried in the browser by lib/inventory-local.mjs.
+if (inventoryPath) writeFileSync(join(out, "inventory.json"), readFileSync(inventoryPath));
 console.log(`snapshot ${seed.version}: ${series.length} series, ${groups.size} grupos, ${total} valores`);

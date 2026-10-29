@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from "react";
+import { inventoryFetch } from "../lib/inventory-local.mjs";
 import {
   Search,
   Layers,
@@ -103,7 +104,7 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
     let active = true;
     async function load() {
       try {
-        let r = await fetch("/api/inventory");
+        let r = await inventoryFetch("/api/inventory");
         let d: any = await r.json();
         if (!r.ok) throw new Error(d.error);
         if (d.needsBootstrap) {
@@ -111,7 +112,7 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
           for (let i = 0; i < 1000; i++) {
             if (!active) return;
             setProgress(`Indexando metadatos · ${fmt(n)} filas preparadas`);
-            r = await fetch("/api/inventory", {
+            r = await inventoryFetch("/api/inventory", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ offset: n }),
@@ -122,7 +123,7 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
             n = p.next;
             if (i === 999) throw new Error("Importación incompleta");
           }
-          r = await fetch("/api/inventory");
+          r = await inventoryFetch("/api/inventory");
           d = await r.json();
         }
         if (!active) return;
@@ -161,7 +162,7 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
     setLoading(true);
     Promise.all(
       ["map", "list", "groups"].map(async (v) => {
-        const r = await fetch(
+        const r = await inventoryFetch(
           `/api/inventory?${params}&view=${v}&offset=${offset}`,
           { signal: controller.signal },
         );
@@ -190,7 +191,7 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
     if (!selected) return;
     setDetail(null);
     const controller = new AbortController();
-    fetch("/api/inventory?view=detail&id=" + encodeURIComponent(selected), {
+    inventoryFetch("/api/inventory?view=detail&id=" + encodeURIComponent(selected), {
       signal: controller.signal,
     })
       .then((r) => r.json())
@@ -328,7 +329,7 @@ export default function DiscoveryExplorer({ onOpenSeries, onSummary }: any) {
   async function exportInventory() {
     setPreparingCsv(true);
     try {
-      const response = await fetch("/api/inventory?" + params + "&view=export");
+      const response = await inventoryFetch("/api/inventory?" + params + "&view=export");
       if (!response.ok) {
         const err: any = await response.json();
         throw new Error(err.error || "No se pudo exportar");

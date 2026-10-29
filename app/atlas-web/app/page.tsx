@@ -197,50 +197,18 @@ export default function Atlas() {
   }, [modal]);
   async function load() {
     setError("");
+    // Public data are static files built from the versioned seed at deploy time
+    // (no database reads, no daily limits). D1 only holds private data and the DOI queue.
     try {
-      let r = await fetch("/api/catalog");
-      let d: any = await r.json();
-      if (!r.ok) throw new Error(d.error || "No se pudo leer el catálogo");
-      if (d.needsBootstrap) {
-        let offset = 0,
-          stage = "records";
-        for (let i = 0; i < 2000; i++) {
-          setLoading(
-            `Preparando la base científica · ${fmt(offset, 0)} valores`,
-          );
-          r = await fetch("/api/bootstrap", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ offset, stage }),
-          });
-          const p: any = await r.json();
-          if (!r.ok) throw new Error(p.error);
-          if (p.ready) break;
-          offset = p.next;
-          stage = p.stage;
-          if (i === 1999) throw new Error("La importación no finalizó");
-        }
-        r = await fetch("/api/catalog");
-        d = await r.json();
-        if (!r.ok || !d.series)
-          throw new Error(d.error || "Catálogo incompleto");
-      }
+      const r = await fetch("/snapshot/catalog.json");
+      if (!r.ok) throw new Error("No se pudo leer el catálogo");
+      const d: any = await r.json();
       setCatalog(d);
       setData({ ...d, series: [] });
-      setLoading("");
     } catch (e: any) {
-      // D1 unavailable (e.g. daily Free limit): static copy of the newest seed.
-      try {
-        const s = await fetch("/snapshot/catalog.json");
-        if (!s.ok) throw new Error();
-        const d: any = await s.json();
-        setCatalog(d);
-        setData({ ...d, series: [] });
-      } catch {
-        setError(e.message || "Error de conexión");
-      }
-      setLoading("");
+      setError(e.message || "Error de conexión");
     }
+    setLoading("");
   }
   useEffect(() => {
     load();
@@ -359,15 +327,7 @@ export default function Atlas() {
         );
       });
     };
-    const one = (group: string) =>
-      catalog.snapshot ? fromSnapshot(group) : fetch("/api/observations?" + new URLSearchParams({ group, ...base }), {
-        signal: controller.signal,
-      }).then(async (response) => {
-        const result: any = await response.json();
-        if (!response.ok)
-          throw new Error(result.error || "No se pudieron cargar las series");
-        return result.series;
-      });
+    const one = fromSnapshot;
     (async () => {
       const out: any[] = [];
       for (let i = 0; i < keys.length; i += 6)
@@ -698,11 +658,6 @@ export default function Atlas() {
     );
   return (
     <div className="atlas-app">
-      {catalog?.snapshot && (
-        <div role="status" style={{ padding: "6px 12px", background: "#fff4d6", color: "#5b4500", fontSize: 13, textAlign: "center" }}>
-          Base de datos no disponible temporalmente (límite diario). Mostrando copia estática de la versión {catalog.release.id}; los datos privados no están disponibles.
-        </div>
-      )}
       <header className="topbar">
         <a className="brand" href="/" aria-label="Inicio del atlas">
           <span className="brand-mark">
