@@ -5,14 +5,15 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 - Último agente: Claude
 - Fecha: 29-10-2026
 - Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
-- Estado: PUBLICAR-V5 hecho y fusionado en main (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
+- Estado: web sirve v5 validada celda a celda (V20: API dentro del límite de CPU Free). V22: lote con modelos de edad del mismo evento (+91 series interpolated_from_age_model) fusionado; release v5-c58d9be4128 se carga en D1 (puede tardar un día). Antes: PUBLICAR-V5 hecho (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
 - Hecho: V19 trocea metadatos <90 KB por sentencia (D1 rechazó el registro de release en V18; observaciones v4+v5 ya cargadas). Validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. Revisar en Actions el despliegue de V18 (aviso «Carga D1 parcial» es normal los primeros días; la web sirve v3 hasta completar v5).
-2. Volver a `claude/curado`: modelos de edad en otro dataset del mismo evento PANGAEA → asignar edad por interpolación lineal en profundidad dentro del rango del modelo (sin extrapolar), marcando la edad como interpolada y citando el dataset del modelo. Autorizado por Santiago (29-10-2026).
+1. Comprobar en Actions que v5-c58d9be4128 termina de cargar y valida (si avisa «Carga D1 parcial», se completa sola con el cron diario).
+2. Seguir curado en `claude/curado`: más lotes `[v5 propose=40 agemodels]`; ampliar candidatos a modelo (hermanos sin `Depth sed` = 105 descartes: revisar si usan otra columna de profundidad equivalente, sin mezclar marcos); NOAA WDS y Neotoma con el mismo patrón; litología categórica.
+3. Pendiente decisión de Santiago: «añadir registros» que proponga PANGAEA DOI al contrato de curado; cuenta privada con datos propios (ver respuesta 29-10 en el chat).
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
