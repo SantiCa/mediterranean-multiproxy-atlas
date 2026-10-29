@@ -201,13 +201,21 @@ jobs:
           '
 
       # Cell-by-cell check of every served observation against the versioned seed.
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
+        with:
+          python-version: '3.12'
+
       - name: Validate deployed API against seed
         if: steps.gate.outputs.ok == 'true' && steps.deploy.outputs.url != ''
         working-directory: .
         env:
           URL: ${{ steps.deploy.outputs.url }}
         run: |
-          set -o pipefail
-          python scripts/validate_quantitative_api.py --url "$URL" --public-https | tee validate.log
-          out="$(tail -1 validate.log)"
-          echo "::notice title=Validación::$out"
+          if python scripts/validate_quantitative_api.py --url "$URL" --public-https > validate.log 2>&1; then
+            echo "::notice title=Validación::$(tail -1 validate.log)"
+          else
+            cat validate.log
+            echo "::error title=Validación::$(tail -3 validate.log | tr '\n' ' ' | cut -c1-400)"
+            exit 1
+          fi
