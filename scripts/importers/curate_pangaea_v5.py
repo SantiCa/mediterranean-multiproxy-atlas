@@ -519,6 +519,9 @@ def curate():
             sid = f'pangaea5-{i}:{proxy}'
             if any(x['id'] == sid for x in series + quarantined):
                 sid += f'_col{k}'  # cabeceras nativas repetidas: identidad por posición
+            # D1 es append-only por id: si cambia el contenido de una serie (edades de un modelo,
+            # muestras fuera de rango) debe cambiar su id, o la release nueva nunca cuadraría.
+            sid += '~' + sha(json.dumps(out, separators=(',', ':')).encode())[:8]
             s = dict(id=sid, record_id=rid, proxy=proxy, variable_id=proxy, label=label, unit=c['unit'],
                      family=FAMILY_LABEL[BROAD.get(fam0, 'geo')], method=c['method'] or 'no declarado en metadatos PANGAEA', compatibility_group=group,
                      evidence_type='as_archived_parameter', taxon=None, source_column=c['header'], source_column_index=k,
