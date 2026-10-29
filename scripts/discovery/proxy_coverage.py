@@ -38,13 +38,24 @@ FAMILIES = {
     'd13C_bent': ('δ13C foraminíferos bentónicos', lambda p: re.search(r'δ13C|delta 13C|d13C', p, re.I) and re.search(BENTHIC, p, re.I)),
     'mgca_foram': ('Mg/Ca y otras razones en foraminíferos', lambda p: re.search(r'(Mg|Sr|B|Mn|U|Ba|Cd)/Ca', p) and re.search(PLANKTIC + '|' + BENTHIC, p, re.I)),
     'oxigenacion_bent': ('Indicadores bentónicos de oxigenación (BFOI, O2)', lambda p: re.search(r'oxygen index|BFOI|Oxygen, dissolved|dysox|suboxic|low.oxygen', p, re.I)),
-    'redox': ('Elementos redox (Mo, U, V, Re, Mn, Cd y razones)', lambda p: re.search(r'\b(Molybdenum|Uranium|Vanadium|Rhenium|Manganese|Cadmium)\b|\b(Mo|U|V|Re|Mn|Cd)/(Al|Ti|Th|U|Fe)\b|U/Th|Fe/Mn', p) and not re.search(r'/Ca\b', p)),
-    'bario': ('Bario / productividad exportada (Ba, Ba/Al, Ba exceso)', lambda p: re.search(r'\bBarium\b|\bBa/(Al|Ti)\b|Ba excess|Ba xs|Ba, biogenic', p)),
+    'redox': ('Elementos redox (Mo, U, V, Re, Mn, Cd y razones)', lambda p: re.search(r'\b(Molybdenum|Uranium|Vanadium|Rhenium|Manganese|Cadmium)\b|\b(Mo|U|V|Re|Mn|Cd|Ni|Cu)/(Al|Ti|Th|U|Fe)\b|U/Th|Fe/Mn', p) and not re.search(r'/Ca\b', p)),
+    'bario': ('Bario / productividad exportada (Ba, Ba/Al, Ba exceso)', lambda p: re.search(r'\bBarium\b|\bBa/(Al|Ti)\b|\bBa/Ti\b|Ba excess|Ba xs|Ba, biogenic|Ba EF', p)),
     'toc': ('Carbono orgánico (TOC/Corg)', lambda p: re.search(r'Carbon, organic|organic carbon|\bTOC\b|C org\b|Corg', p, re.I)),
     'mo_otros': ('Materia orgánica: N total, C/N, δ13Corg, Rock-Eval, biomarcadores totales', lambda p: re.search(r'Nitrogen, total|\bC/N\b|C org/N|δ13C, organic|δ13C org|Hydrogen index|Oxygen index, Rock|Rock-Eval|Kerogen|Alkenones, total|n-Alkanes, total|Chlorin|Porphyrin', p, re.I)),
     # Petición 29-10-2026 (17:24): relaciones de geoquímica orgánica, polen, isótopos radiogénicos,
     # europio/REE y proxies de corrientes. Las familias se solapan a propósito (p. ej. εNd es
     # radiogénico y también trazador de masas de agua); el recuento es por familia, no excluyente.
+    # Petición 29-10-2026 (17:29): geoquímica inorgánica con prioridad, tomando como referencia la
+    # tesis de Santiago (XRF core scanner + ICP; razones Ti/Ca, Br/Ti, Fe/Al, K/Al, Zr/Al, Ba/Ti,
+    # Ba/Al, Sr/Ca, Mn/Ti, Rb/K, Zr/Rb, Si/Al; factores de enriquecimiento frente a PAAS
+    # MoEF/UEF/VEF/BaEF; Ba exceso; Th/U; escala de grises). Las razones de escáner XRF (cps) no
+    # son concentraciones y no se agrupan con ICP/XRF cuantitativo al curar.
+    'xrf_razones': ('Geoquímica inorgánica: razones elementales (Ti/Ca, Br/Ti, Fe/Al, K/Al, Zr/Al, Ba/Ti, Sr/Ca, Mn/Ti, Rb/K, Si/Al…)', lambda p: re.search(r'\b(Ti|Br|Fe|K|Zr|Ba|Sr|Mn|Rb|Si|Ca|Al|Cl|S|P|Ni|Cu|Zn|Cr)/(Ca|Ti|Al|Fe|K|Rb|Cl|Sr)\b', p) and not re.search(PLANKTIC + '|' + BENTHIC, p, re.I)),
+    'xrf_escaner': ('Geoquímica inorgánica: XRF core scanner (cuentas/área de pico por elemento)', lambda p: re.search(r'XRF|counts|\bcps\b|area|intensity', p, re.I) and re.search(r'\b(Ti|Br|Fe|K|Zr|Ba|Sr|Mn|Rb|Si|Ca|Al|Cl|S|P|Titanium|Bromine|Iron|Potassium|Zirconium|Barium|Strontium|Manganese|Rubidium|Silicon|Calcium|Aluminium|Sulfur|Sulphur)\b', p)),
+    'factores_enriquecimiento': ('Factores de enriquecimiento y fracciones autigénicas (EF vs PAAS/UCC, Ba exceso, U autigénico)', lambda p: re.search(r'\bEF\b|enrichment factor|_EF|EF_|\bxs\b|excess|authigenic|PAAS|UCC-normalized|shale-normalized', p, re.I)),
+    'oligoelementos': ('Elementos traza ICP/XRF cuantitativo (Ni, Cu, Zn, Cr, Co, Th, Sc, Li y similares)', lambda p: re.search(r'\b(Nickel|Copper|Zinc|Chromium|Cobalt|Thorium|Scandium|Lithium|Arsenic|Lead|Selenium|Antimony)\b|\bTh/U\b', p)),
+    'bromo_mo': ('Bromo como indicador de materia orgánica marina (Br, Br/Ti, Br/Cl)', lambda p: re.search(r'\bBromine\b|\bBr\b|Br/(Ti|Cl|Al)', p)),
+    'color_grises': ('Color y escala de grises (L*, a*, b*, reflectancia, greyscale)', lambda p: re.search(r'grey ?scale|gray ?scale|Lightness|\bL\*|\ba\*|\bb\*|reflectance|Colou?r, ', p, re.I)),
     'mo_ratios': ('Relaciones de geoquímica orgánica: C/N, δ13Corg, δ15N, HI/OI', lambda p: re.search(r'\bC/N\b|C org/N|TOC/TN|Corg/Ntot|δ13C, organic|δ13C org|δ15N|delta 15N|Hydrogen index|Oxygen index, Rock|Rock-Eval', p, re.I)),
     'biomarcadores_indices': ('Índices de biomarcadores: BIT, MBT/CBT, CPI, ACL, Paq, Pr/Ph, TAR, LDI, %C37:4', lambda p: re.search(r'\bBIT\b|branched and isoprenoid|\bMBT|\bCBT\b|\bCPI\b|carbon preference|\bACL\b|average chain length|\bPaq\b|Pr/Ph|Pristane/Phytane|\bTAR\b|terrigenous/aquatic|\bLDI\b|long chain diol|C37:4|Diol index|GDGT', p, re.I)),
     'polen': ('Polen y esporas (taxones, AP/NAP)', lambda p: re.search(r'pollen|spore|\bAP/NAP\b|arboreal|Quercus|Pinus|Artemisia|Chenopodi|Amaranth|Ephedra|Poaceae|Olea\b|Cedrus|Abies|Betula|Juniperus|Ericaceae|Asteraceae|Cupressaceae|Pistacia', p, re.I)),
@@ -54,7 +65,7 @@ FAMILIES = {
     'bioturbacion': ('Bioturbación / icnología / laminación', lambda p: re.search(r'Bioturb|Ichno|Burrow|trace fossil|Zoophycos|Chondrites|Planolites|Thalassinoides|Skolithos|Mottl|Lamina', p, re.I)),
     # Litología: variable categórica (descripciones/facies), no numérica. Base de futuros mapas
     # litológicos por edad (petición 29-10-2026): requiere columna AGE o modelo de edad del sondeo.
-    'litologia': ('Litología / facies / descripción sedimentaria (categórica)', lambda p: re.search(r'Lithology|Facies|Sediment type|Sedimentary structure|Color description|Colour description|Description\b|Composition', p, re.I)),
+    'litologia': ('Litología / facies / descripción sedimentaria (categórica)', lambda p: re.search(r'Lithology|Facies|Sediment type|Sedimentary structure|Color description|Colour description|Description\b|Composition|Sapropel|Organic.rich layer|Tephra|Turbidite', p, re.I)),
     'sst': ('Temperatura (SST/subsuperficial: UK′37, Mg/Ca, TEX86, MAT)', lambda p: re.search(r'Sea surface temperature|\bSST\b|U\[?K\]?.?37|UK.37|alkenone unsaturation|TEX86|Temperature, water', p, re.I)),
     'caco3': ('Carbonato (CaCO3)', lambda p: re.search(r'Calcium carbonate|CaCO3|Carbonate, total|Carbon, inorganic', p, re.I)),
     'detritico_xrf': ('Detrítico/elementos (Ti, Zr, K, Al, Rb, Fe y razones)', lambda p: re.search(r'\b(Titanium|Zirconium|Potassium|Aluminium|Aluminum|Rubidium|Iron)\b|\b(Ti|Zr|K|Rb|Fe)/(Al|Ca|Ti|Rb)\b', p)),
