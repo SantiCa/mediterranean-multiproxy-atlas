@@ -1,0 +1,32 @@
+[
+  {
+    "path": "data/raw/odp977a_audit/a0415be9680b0b1a5d9f2359338f46a749fc81f5745db99cfc876a8a1dd03afc.pdf",
+    "source": "odp977a_audit",
+    "request_url": "https://www-odp.tamu.edu/publications/161_IR/VOLUME/CHAPTERS/ir161_07.pdf",
+    "resolved_url": "https://www-odp.tamu.edu/publications/161_IR/VOLUME/CHAPTERS/ir161_07.pdf",
+    "accessed_at_utc": "2026-10-29T14:24:41.930894+00:00",
+    "content_type": "application/pdf",
+    "sha256": "a0415be9680b0b1a5d9f2359338f46a749fc81f5745db99cfc876a8a1dd03afc",
+    "bytes": 10217103
+  },
+  {
+    "path": "data/raw/odp977a_audit/636fd6c79c8907772ca70691221b7cea67a17debb2d6210c6a05f7e3c1ded456.html",
+    "source": "odp977a_audit",
+    "request_url": "https://www-odp.tamu.edu/publications/prelim/161_Prelim/OP977.HTML",
+    "resolved_url": "https://www-odp.tamu.edu/publications/prelim/161_Prelim/OP977.HTML",
+    "accessed_at_utc": "2026-10-29T14:24:42.543663+00:00",
+    "content_type": "text/html",
+    "sha256": "636fd6c79c8907772ca70691221b7cea67a17debb2d6210c6a05f7e3c1ded456",
+    "bytes": 5847
+  },
+  {
+    "path": "data/raw/odp977a_audit/b8739412ed7d26be05ca0d9d4c9bab807dab4bf2c8edb33d755071037c3d2dd5.tsv",
+    "source": "odp977a_audit",
+    "request_url": "https://doi.pangaea.de/10.1594/PANGAEA.921230?format=textfile",
+    "resolved_url": "https://doi.pangaea.de/10.1594/PANGAEA.921230?format=textfile",
+    "accessed_at_utc": "2026-10-29T14:24:42.813388+00:00",
+    "content_type": "text/tab-separated-values; charset=UTF-8",
+    "sha256": "b8739412ed7d26be05ca0d9d4c9bab807dab4bf2c8edb33d755071037c3d2dd5",
+    "bytes": 40168
+  }
+]

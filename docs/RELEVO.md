@@ -1,30 +1,32 @@
 # Relevo — puntero vivo
 
-Copia válida: rama `relevo`. Actualizar con commit + push tras cada paso (ver «Relevo» en AGENTS.md).
+Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
 - Último agente: ChatGPT/Codex
 - Fecha: 29-10-2026
-- Tarea actual: CUR-ODP977A — auditar el conflicto de profundidad m/cmbsf de ODP 977A. Santiago autoriza continuar el 29-10-2026. HOST-CF queda pendiente de sus credenciales; no rehacer el código de Claude.
-- Cola priorizada por Santiago: CUR-ODP977A → completar cobertura de temperatura → foraminíferos → oxigenación geoquímica y otros indicadores → aporte detrítico → corrientes. GP03 y la tabla de revisión/exclusiones permanecen pendientes; no se eliminan.
-- Estado: CUR-ODP977A, unidad resuelta por fuente primaria: cmbsf=corrected meters below seafloor en el artículo de 2020; no hay conversión por100. Ficha preliminar guardada; pendiente archivar PDF/páginas y cierre con pruebas. HOST-CF V2 sigue esperando cuenta/secretos.
-- Hecho: `vite.config.ts` acepta `CF_WORKER_NAME`/`CF_D1_DATABASE_NAME`/`CF_D1_DATABASE_ID` (sin ellas, build igual a Sites); `.github/workflows/deploy-cloudflare.yml` (crea/reutiliza D1, migra, compila, despliega, carga semilla+inventario; se salta sin secretos); guía `docs/DEPLOY_CLOUDFLARE.md`. Verificado en local: dry-run 2,26 MB gzip, migraciones 0000–0003, carga completa y `validate_quantitative_api.py` 81.339/81.339 valores.
-- Pendiente: (a) Santiago: cuenta, token, secretos, «Run workflow»; (b) validar URL remota con `scripts/validate_quantitative_api.py --url <URL>`; (c) decidir visibilidad (pública por defecto, o Cloudflare Access); (d) actualizar README/PROJECT_STATE con la nueva URL y retirar dependencia de Sites cuando Santiago lo confirme.
-- Pruebas: 14 Node correctas; Python sin cambios (33, 6 omitidas).
+- Tarea actual: PROXY-COVERAGE-TEMP — completar cobertura cuantitativa de temperatura del Mediterráneo y áreas adyacentes, por fuentes/consultas/versiones verificadas.
+- Estado: CUR-ODP977A cerrada y preparada para merge --no-ff a main con pruebas correctas; cobertura de temperatura aún sin empezar.
+- Hecho: auditoría en docs/curation/odp977a_depth_audit.md; cmbsf significa metros corregidos bajo el fondo en el artículo primario. No convertir por100. Anotación en config/curation_assertions.json, recibos y script audit_odp977a_depth.py, handoff docs/handoffs/cur-odp977a.md. Raw/semillas/valores sin cambios.
+- Pruebas: 43 Python locales (originales disponibles),14Node correctas. No equivale a CI remota. La descarga del manuscrito aceptado da403; la definición se verifica en el texto publicado del editor. ODP y TSV sí archivados porhash.
+- Cola: temperatura → foraminíferos → oxigenación geoquímica y otros indicadores → aporte detrítico → corrientes. GP03 permanece pendiente.
 
 ## Siguiente acción
 
-1. Completar el archivo de evidencia primaria de CUR-ODP977A (PDF aceptado Bari, informe ODP Leg161 y PANGAEA); guardar hashes/localizadores. La cabecera m y el artículo coinciden; no corregir las profundidades numéricas. Ver docs/curation/odp977a_depth_audit.md.
-2. Guardar la evidencia y la resolución o incertidumbre en docs/curation/odp977a_depth_audit.md y docs/handoffs/cur-odp977a.md. Tras cada paso válido, actualizar este archivo y hacer commit+push a relevo.
-3. Al cerrar con pruebas, merge --no-ff a main. Continuar con un inventario reproducible de cobertura de temperatura, priorizando completar grupos existentes en vez de añadir familias nuevas.
+1. Construir un inventario reproducible de cobertura de temperatura usando las fuentes ya enlazadas: PANGAEA/DataCite y NOAA, caja [-10,28,42,48], sin edades ni proxies inventados. Contar candidatos, descargados, aptos, duplicados, ambiguos y pendientes.
+2. Separar target (SST/aire/agua subsuperficial), estación, método/calibración, unidad y cronología. Buscar primero registros ausentes de grupos existentes; permitir agrupación solo con equivalencia documentada. Misma unidad no basta.
+3. Revisar el bundle PANGAEA921235 de ODP977A: ya hay cocolitos, faltan sus SST/isótopos; no crear un segundo sondeo para otro dataset del mismo core. Conservar dependencia del modelo de edadSST.
+4. Antes de incorporar datos, revisar el borrador v4 guardado en origin/codex/draft-quantitative-v4 (8239b28), docs/handoffs/quantitative-v4-draft.md; reutilizar lo verificado. No fusionar ciegamente su seed ni sobreescribir vite.config.ts deClaude. El estado online sigue siendo v3:29registros/81.339valores.
+5. Tras cada paso válido, actualizar este archivo y commit+push a relevo. Al cerrar tarea, pruebas, handoff y merge --no-ff a main.
 
-## Solicitudes registradas de Santiago (29-10-2026)
+## Solicitudes del usuario registradas, pendientes de implementar
 
-- Completar los registros disponibles de cada proxy del Mediterráneo y áreas adyacentes: primero temperatura, luego foraminíferos, oxigenación, aporte detrítico y corrientes. Medir cobertura por fuentes/consultas/versiones explícitas; no afirmar exhaustividad de toda la literatura sin evidencia.
-- Temperatura: separar métodos/calibraciones, estación y variable ambiental; permitir agrupación solo con equivalencia científica justificada. No tratar igual unidad como igual señal.
-- Inconsistencias: señalarlas en la aplicación y permitir decisión del usuario sobre uso/exclusión, conservando originales y advertencias.
-- Tabla tras seleccionar proxy/mapa: mostrar archivo original y valores usados; permitir excluir una muestra o todo el sondeo, con trazabilidad de la selección. No implementada todavía.
-- Existe un borrador local v4 de la sesión anterior: 17 registros nuevos, 63 series/22.195 valores; revisión local y scripts todavía sin integrar/publicar. Mantenerlo separado de la auditoría y preservar sus archivos antes de cualquier limpieza. No presentarlo como estado online ni rehacerlo sin comprobar su disponibilidad.
+- Priorizar completar los proxies existentes, especialmente temperatura, foraminíferos, oxigenación, detrítico y corrientes; no afirmar exhaustividad de toda la literatura sin cobertura verificable.
+- Inconsistencias visibles en la aplicación; que el usuario pueda decidir sobre uso/exclusión conservando advertencias y originales.
+- Tabla al elegir proxy/mapa con todos los valores del archivo original y cuáles se usan; excluir muestras individuales o todo un sondeo, con trazabilidad.
+- La resoluciónODP977A debe aparecer en esa futura interfazQC; no como conversión de profundidad.
 
-## HOST-CF pendiente, sin repetir lo hecho
+## Hosting y preservación
 
-Claude dejó workflow y configuración V2 en f0cffe1, fusionados a main en 92637a4. Esperar cuenta/token/secretos de Santiago; después comprobar Actions/URL remota y visibilidad. Sites sigue privado y activo. Las nuevas prioridades científicas pueden avanzar mientras tanto; no cambiar audiencia ni retirar Sites sin la decisión correspondiente.
+HOST-CF V2 deClaude (f0cffe1, merge main92637a4) está listo y espera cuenta/token/secretos del usuario. No repetirlo ni retirar Sites. Si Santiago confirma secretos, comprobar Actions, URL remota y visibilidad; mientras tanto avanzar ciencia. El despliegue Sites sigue siendo exclusivo deCodex.
+
+El borradorv4 previo está preservado en la rama remota indicada, no integrado ni desplegado:17registros/63series/22.195valores nuevos; revisión local completa de103.534observaciones. Los cambios no subidos de esa sesión ya están conservados allí. No confundir borrador con el estado activo.
