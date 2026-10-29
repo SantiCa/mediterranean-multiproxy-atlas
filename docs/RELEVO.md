@@ -5,13 +5,13 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 - Último agente: Claude
 - Fecha: 29-10-2026
 - Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
-- Estado: fusión `claude/curado` → `relevo` en curso. atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
-- Hecho: validador fusionado (User-Agent + varias semillas, admite carga parcial).
+- Estado: PUBLICAR-V5 hecho y fusionado en main (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
+- Hecho: validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. Implementar carga de releases en D1 fuera del Worker: `data/release.json` (manifiesto pequeño: versiones, series y registros), catálogo/observaciones sirven la última release completa; script Python que genera SQL por lotes; paso del flujo y cron diario. Pruebas, fusionar a main (despliega solo).
+1. Revisar en Actions el despliegue de V18 (aviso «Carga D1 parcial» es normal los primeros días; la web sirve v3 hasta completar v5).
 2. Volver a `claude/curado`: modelos de edad en otro dataset del mismo evento PANGAEA → asignar edad por interpolación lineal en profundidad dentro del rango del modelo (sin extrapolar), marcando la edad como interpolada y citando el dataset del modelo. Autorizado por Santiago (29-10-2026).
 
 ## Solicitudes del usuario registradas, pendientes de implementar
