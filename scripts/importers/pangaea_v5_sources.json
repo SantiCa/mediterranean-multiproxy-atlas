@@ -1,0 +1,4050 @@
+{
+ "66811": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "af5be3cc0dbff1fe3f9d6ff0616348af93d02bed8b62443c0a1460d8ea51db7b",
+  "xml_sha256": "c3c9496b3e4ed42d277b9aa8b881868b5ff70d356e569be85ba5dd2e7b97e550",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB] (Isotope ratio mass spectrometry)",
+   "G. bulloides δ13C [‰ PDB] (Isotope ratio mass spectrometry)",
+   "N. pachyderma s [%] (Counting >150 µm fraction)",
+   "Qz [%] (Counting >150 µm fraction)",
+   "Carb detr [%] (detrital, Counting >150 µm fr...)",
+   "Volcanic [%] (Counting >150 µm fraction)",
+   "Foram [%] (Counting >150 µm fraction)",
+   "IRD [%] (Counting >150 µm fraction)",
+   "Terr mine [#/g] (Counting >150 µm fraction)",
+   "SST sum [°C] (Modern analog technique (MAT)...)",
+   "Foram plankt arctic [%] (Counting >150 µm fraction)",
+   "Foram plankt subpolar [%] (sub-polar, Counting >150 µm f...)",
+   "Foram plankt subtropical [%] (Temperate/cold subtropical, C...)",
+   "Foram plankt subtropical [%] (warm subtropical, Counting >1...)",
+   "Foram plankt tropical [%] (Counting >150 µm fraction)"
+  ],
+  "n_rows": 716,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "de Abreu, Lucia; Shackleton, Nicholas J; Schönfeld, Joachim; Hall, Michael A; Chapman, Mark R (2003): Planktonic foraminifera, stable isotope record and temperature reconstruction of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.66811, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB] (Isotope ratio mass spectrometry)",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. bulloides δ13C [‰ PDB] (Isotope ratio mass spectrometry)",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "N. pachyderma s [%] (Counting >150 µm fraction)",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "SST sum [°C] (Modern analog technique (MAT)...)",
+    "parameter": "Sea surface temperature, summer",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Foram plankt arctic [%] (Counting >150 µm fraction)",
+    "parameter": "Foraminifera, planktic, arctic",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Foram plankt subpolar [%] (sub-polar, Counting >150 µm f...)",
+    "parameter": "Foraminifera, planktic, subpolar",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": "sub-polar",
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "Foram plankt subtropical [%] (Temperate/cold subtropical, C...)",
+    "parameter": "Foraminifera, planktic, subtropical",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": "Temperate/cold subtropical",
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "Foram plankt subtropical [%] (warm subtropical, Counting >1...)",
+    "parameter": "Foraminifera, planktic, subtropical",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": "warm subtropical",
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "Foram plankt tropical [%] (Counting >150 µm fraction)",
+    "parameter": "Foraminifera, planktic, tropical",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733076": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "5ccb1002ecb4dbfd39c4fbcd693d8ea51bfa50ef120d6c8c0403a3ff935123a2",
+  "xml_sha256": "6bbe2d5fd46021ca77139c266dbec64803024569f189afe8103aa9e80fc94b8d",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Foram plankt deep-dw [%]",
+   "N. pachyderma s [%]",
+   "SST (1-3) [°C]",
+   "SST (7-9) [°C]",
+   "PP exp [g/m**2/a]"
+  ],
+  "n_rows": 195,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia; Schönfeld, Joachim; Erlenkeuser, Helmut; Abrantes, Fatima F (2009): (Fig. 8g-h, 11) Abundance of planktonic foraminifera and estimation of sea surface temperature and export production of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733076, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Foram plankt deep-dw [%]",
+    "parameter": "Foraminifera, planktic deep-dwelling species",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "SST (1-3) [°C]",
+    "parameter": "Sea surface temperature, January-March",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "SST (7-9) [°C]",
+    "parameter": "Sea surface temperature, July-September",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733077": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "44eb2c22847df31e87c332ce393c81d4fcbdeab22b66836a86cdfaf17cc38a43",
+  "xml_sha256": "d7598d73d50b01b28ad278752e0a14aaae71d3c0346a4ac0dc7ca2621ebdb4cd",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Foram plankt deep-dw [%]",
+   "N. pachyderma s [%]",
+   "SST (1-3) [°C]",
+   "SST (7-9) [°C]",
+   "PP exp [g/m**2/a]"
+  ],
+  "n_rows": 114,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia; Schönfeld, Joachim; Erlenkeuser, Helmut; Abrantes, Fatima F (2009): (Fig. 9g-h, 11) Abundance of planktonic foraminifera and estimation of sea surface temperature and export production of sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733077, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Foram plankt deep-dw [%]",
+    "parameter": "Foraminifera, planktic deep-dwelling species",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "SST (1-3) [°C]",
+    "parameter": "Sea surface temperature, January-March",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "SST (7-9) [°C]",
+    "parameter": "Sea surface temperature, July-September",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "737130": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "6ee7152e9ec5e3d93a31fd7114a9e689b9786acd644056a5c72d614c34f64bbf",
+  "xml_sha256": "0af0b0557e746bdaa55aac331ae5f69f0335611762ca83f02cfae34fae59b594",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "O. universa [%]",
+   "G. bulloides [%]",
+   "G. falconensis [%]",
+   "G. rubescens [%]",
+   "G. calida [%]",
+   "B. digitata [%]",
+   "G. ruber w [%]",
+   "G. ruber p [%]",
+   "G. sacculifer [%]",
+   "G. trilobus [%]",
+   "G. tenellus [%]",
+   "G. conglobatus [%]",
+   "N. pachyderma s [%]",
+   "N. pachyderma d [%]",
+   "N. dutertrei [%]",
+   "P/D int [%]",
+   "G. scitula [%]",
+   "G. inflata [%]",
+   "G. hirsuta s [%]",
+   "G. hirsuta d [%]",
+   "G. truncatulinoides s [%]",
+   "G. truncatulinoides d [%]",
+   "G. menardii [%]",
+   "G. aequilateralis [%]",
+   "H. parapelagica [%]",
+   "T. humilis [%]",
+   "T. cristata [%]",
+   "T. quinqueloba [%]",
+   "G. glutinata [%]",
+   "G. uvula [%]",
+   "G. iota [%]",
+   "P. obliquiloculata [%]",
+   "Foram plankt oth [%]"
+  ],
+  "n_rows": 450,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Distribution of planktonic foraminifera in sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.737130, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "O. universa [%]",
+    "parameter": "Orbulina universa",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. bulloides [%]",
+    "parameter": "Globigerina bulloides",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "G. falconensis [%]",
+    "parameter": "Globigerina falconensis",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. rubescens [%]",
+    "parameter": "Globigerina rubescens",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. calida [%]",
+    "parameter": "Globigerina calida",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "B. digitata [%]",
+    "parameter": "Beella digitata",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. ruber w [%]",
+    "parameter": "Globigerinoides ruber white",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. ruber p [%]",
+    "parameter": "Globigerinoides ruber pink",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. sacculifer [%]",
+    "parameter": "Globigerinoides sacculifer",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. trilobus [%]",
+    "parameter": "Globigerinoides trilobus",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "G. tenellus [%]",
+    "parameter": "Globigerinoides tenellus",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "G. conglobatus [%]",
+    "parameter": "Globigerinoides conglobatus",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "N. pachyderma d [%]",
+    "parameter": "Neogloboquadrina pachyderma dextral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "N. dutertrei [%]",
+    "parameter": "Neogloboquadrina dutertrei",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "P/D int [%]",
+    "parameter": "Neogloboquadrina pachyderma dextral and dutertrei intergrade",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "G. scitula [%]",
+    "parameter": "Globorotalia scitula",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "G. inflata [%]",
+    "parameter": "Globorotalia inflata",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "G. hirsuta s [%]",
+    "parameter": "Globorotalia hirsuta sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "G. hirsuta d [%]",
+    "parameter": "Globorotalia hirsuta dextral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "G. truncatulinoides s [%]",
+    "parameter": "Globorotalia truncatulinoides sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "G. truncatulinoides d [%]",
+    "parameter": "Globorotalia truncatulinoides dextral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "G. menardii [%]",
+    "parameter": "Globorotalia menardii",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 25,
+    "header": "G. aequilateralis [%]",
+    "parameter": "Globigerinella aequilateralis",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 26,
+    "header": "H. parapelagica [%]",
+    "parameter": "Hastigerina parapelagica",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 27,
+    "header": "T. humilis [%]",
+    "parameter": "Turborotalita humilis",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 28,
+    "header": "T. cristata [%]",
+    "parameter": "Turborotalita cristata",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 29,
+    "header": "T. quinqueloba [%]",
+    "parameter": "Turborotalita quinqueloba",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 30,
+    "header": "G. glutinata [%]",
+    "parameter": "Globigerinita glutinata",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 31,
+    "header": "G. uvula [%]",
+    "parameter": "Globigerinita uvula",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 32,
+    "header": "G. iota [%]",
+    "parameter": "Globigerinita iota",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 33,
+    "header": "P. obliquiloculata [%]",
+    "parameter": "Pulleniatina obliquiloculata",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo",
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 34,
+    "header": "Foram plankt oth [%]",
+    "parameter": "Foraminifera, planktic, other",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "738133": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "e23b486a0691fe8b0ec76ddbe3b88e092cffc411974a2aa186429a2a0c1011c7",
+  "xml_sha256": "063ee25819039822e7c6364333dbc9bc9b82afef956bf11b4508b2e19673f3e4",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "N. pachyderma s [%]",
+   "IRD [#/g]",
+   "IRD [%]"
+  ],
+  "n_rows": 365,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Eynaud, Frédérique; de Abreu, Lucia; Voelker, Antje H L; Schönfeld, Joachim; Salgueiro, Emilia; Turon, Jean-Louis; Penaud, Aurélie; Toucanne, Samuel; Naughton, Filipa; Sanchez Goñi, Maria Fernanda; Malaizé, Bruno; Cacho, Isabel (2009): (Appendix 4) Stable oxygen isotope record of Globigerina bulloides and abundances of Neogloboquadrina pachyderma and ice-rafted debris in sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.738133, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": "of total planktic foraminifera assemblage",
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "738136": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "74458b9a411d394de2eb915fd9ee891f995f984c66720bd9ee58f612cfa335ac",
+  "xml_sha256": "4837d22460fd2ac5d84927cc1bc32609c2ffb3b2ef8acf158984092282be18b1",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "N. pachyderma s [%]"
+  ],
+  "n_rows": 274,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Eynaud, Frédérique; de Abreu, Lucia; Voelker, Antje H L; Schönfeld, Joachim; Salgueiro, Emilia; Turon, Jean-Louis; Penaud, Aurélie; Toucanne, Samuel; Naughton, Filipa; Sanchez Goñi, Maria Fernanda; Malaizé, Bruno; Cacho, Isabel (2009): (Appendix 6) Stable oxygen isotope record of Globigerina bulloides and abundance of Neogloboquadrina pachyderma in sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.738136, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": "of total planktic foraminifera assemblage",
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "810294": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "foram_planct_censo",
+   "granulometria",
+   "sst"
+  ],
+  "tsv_sha256": "16006f8b9e12a628b6b8b0e5ec0179a769ee10ae02e80eac3f42c27d71ce96e3",
+  "xml_sha256": "8d7aec5f4313e7eaae5a9facdf52e15ca7cc9495a27cf4d9f4dfd288b0ec56a8",
+  "event": {
+   "label": "MD95-2002",
+   "lat": 47.452,
+   "lon": -8.5338333333333,
+   "elevation": "-2174.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   ">150 µm [%] (weight)",
+   "Lithic [#/g] (Counting >150 µm fraction)",
+   "SST (8) [°C] (mean, warmer month; derived f...)",
+   "G. bulloides δ18O [‰ PDB]",
+   "N. pachyderma s δ18O [‰ PDB]",
+   "SSS (planktonic foraminifera/d18O ...)",
+   "δ18O anomaly [‰]",
+   "N. pachyderma s [%]",
+   "Dinofl c pre-Quaternary/Quaternary",
+   "Pediastrum [#/cm**3] (freshwater algae)",
+   "SST (2) [°C] (mean, coldest month; derived ...)",
+   "SSS (2) (derived from dinocyst assembl...)",
+   "SST (8) [°C] (mean, warmer month; derived f...)",
+   "SSS (8) (derived from dinocyst assembl...)",
+   "SIC d [months/a]"
+  ],
+  "n_rows": 186,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Eynaud, Frédérique; Malaizé, Bruno; Zaragosi, Sebastien; de Vernal, Anne; Scourse, James D; Pujol, Claude; Cortijo, Elsa; Grousset, Francis E; Penaud, Aurélie; Toucanne, Samuel; Turon, Jean-Louis; Auffret, Gérard A (2012): Paleotemperatures and paleosalinities (10-35 ka BP) from sediment core MD95-2002, Celtic Margin [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.810294, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": ">150 µm [%] (weight)",
+    "parameter": "Size fraction > 0.150 mm",
+    "unit": "%",
+    "method": null,
+    "comment": "weight",
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "SST (8) [°C] (mean, warmer month; derived f...)",
+    "parameter": "Sea surface temperature, August",
+    "unit": "°C",
+    "method": "Transfer function (Imbrie & Kipp, 1971, in Turekian, Yale Univ Press)",
+    "comment": "mean, warmer month; derived from planktonic foraminifera assemblages",
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "N. pachyderma s δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "SSS (planktonic foraminifera/d18O ...)",
+    "parameter": "Sea surface salinity",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": "planktonic foraminifera/d18O [psu]",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "SST (2) [°C] (mean, coldest month; derived ...)",
+    "parameter": "Sea surface temperature, February",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT)",
+    "comment": "mean, coldest month; derived from dinocyst assemblages",
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "SST (8) [°C] (mean, warmer month; derived f...)",
+    "parameter": "Sea surface temperature, August",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT)",
+    "comment": "mean, warmer month; derived from dinocyst assemblages",
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "815999": {
+  "status": "proposed",
+  "families": [
+   "bario",
+   "cronologia",
+   "detritico_xrf",
+   "foram_planct_censo",
+   "redox"
+  ],
+  "tsv_sha256": "95df401798ceae6dae0775cd47796cc24aa375dc57e2fee53d2e4803a8f8b078",
+  "xml_sha256": "e7e64db1b01e8bdc9f5da27027313ad7d49a2e688ddd76bca0e6b5d12527f8bf",
+  "event": {
+   "label": "160-963",
+   "lat": 37.034,
+   "lon": 13.179816666667,
+   "elevation": "-469.8",
+   "campaign": "Leg160",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Depth top [m]",
+   "Depth bot [m]",
+   "Age [ka BP]",
+   "Age min [ka]",
+   "Age max [ka]",
+   "Interval No",
+   "G. ruber Fe/Ca [mmol/mol]",
+   "G. ruber Al/Ca [mmol/mol]",
+   "G. ruber Sr/Ca [mmol/mol]",
+   "G. ruber Ba/Ca [µmol/mol]",
+   "G. ruber Mn/Ca [mmol/mol]"
+  ],
+  "n_rows": 16,
+  "age_column": 3,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Sprovieri, Mario; Di Stefano, Enrico; Incarbona, Alessandro; Salvagio Manta, Daniela; Pelosi, Nicola; Ribera d'Alcala, Maurizio; Sprovieri, Rodolfo (2012): (Table 1) Trace metal/Ca ratios measured on Globigerinoides ruber shells of selected intervals at ODP Site 160-963 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.815999, ",
+  "columns": [
+   {
+    "column": 7,
+    "header": "G. ruber Fe/Ca [mmol/mol]",
+    "parameter": "Globigerinoides ruber, Iron/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": "Inductively coupled plasma - mass spectrometry (ICP-MS)",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "foram_planct_censo",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. ruber Al/Ca [mmol/mol]",
+    "parameter": "Globigerinoides ruber, Aluminium/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": "Inductively coupled plasma - mass spectrometry (ICP-MS)",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "foram_planct_censo",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. ruber Sr/Ca [mmol/mol]",
+    "parameter": "Globigerinoides ruber, Strontium/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": "Inductively coupled plasma - mass spectrometry (ICP-MS)",
+    "comment": null,
+    "families": [
+     "foram_planct_censo",
+     "mgca_foram",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. ruber Ba/Ca [µmol/mol]",
+    "parameter": "Globigerinoides ruber, Barium/Calcium ratio",
+    "unit": "µmol/mol",
+    "method": "Inductively coupled plasma - mass spectrometry (ICP-MS)",
+    "comment": null,
+    "families": [
+     "bario",
+     "foram_planct_censo",
+     "mgca_foram",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. ruber Mn/Ca [mmol/mol]",
+    "parameter": "Globigerinoides ruber, Manganese/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": "Inductively coupled plasma - mass spectrometry (ICP-MS)",
+    "comment": null,
+    "families": [
+     "foram_planct_censo",
+     "mgca_foram",
+     "redox",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "82055": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "5720f311839985992b758364af1e515ad972104a39b1c93290129f0b640af078",
+  "xml_sha256": "a55304ca33e76e580b077bdba53555708f12e52bd9ee56877d32e88b00dd2788",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "N. pachyderma s [%]"
+  ],
+  "n_rows": 526,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schönfeld, Joachim; Zahn, Rainer; de Abreu, Lucia (2003): (Fig. 2) Abundance of Neogloboquadrina pachyderma sinistral in sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.82055, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "857149": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "d2ae066feaaa024b71a38ec2f9377e0aaa3c1d0f07a8c821ed7f16a900b93f8b",
+  "xml_sha256": "c7cf1d786cfd3bacd7b914811f11503d18d954286493eeb6e65eba969d0e1fa8",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "N. pachyderma s [%]",
+   "SST sum [°C]",
+   "PP exp [g/m**2/a]"
+  ],
+  "n_rows": 276,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Salgueiro, Emilia; Naughton, Filipa; Voelker, Antje H L; de Abreu, Lucia; Alberto, Ana; Rossignol, Pascale E; Duprat, Josette M; Magalhães, Vitor H; Vaqueiro, Sandra; Turon, Jean-Louis; Abrantes, Fatima F (2014): Summer sea surface temperature and export production sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.857149, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "SST sum [°C]",
+    "parameter": "Sea surface temperature, summer",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28, non-distance-weighted",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "857150": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "96fee6ed124ab7040c5be8296c57e270ab5b55d3e26b4cd0e045f1e33cfe1b28",
+  "xml_sha256": "7b9f26c2b2a173d7ae8a12f928de6cddec3bedb777f49041225a1f4a87ffe556",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "N. pachyderma s [%]",
+   "SST sum [°C]",
+   "PP exp [g/m**2/a]"
+  ],
+  "n_rows": 147,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Salgueiro, Emilia; Naughton, Filipa; Voelker, Antje H L; de Abreu, Lucia; Alberto, Ana; Rossignol, Pascale E; Duprat, Josette M; Magalhães, Vitor H; Vaqueiro, Sandra; Turon, Jean-Louis; Abrantes, Fatima F (2014): Summer sea surface temperature and export production sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.857150, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "SST sum [°C]",
+    "parameter": "Sea surface temperature, summer",
+    "unit": "°C",
+    "method": "Modern analog technique (MAT), SIMMAX28, non-distance-weighted",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "89473": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "foram_planct_censo",
+   "sst",
+   "toc"
+  ],
+  "tsv_sha256": "b149209bd470e5d669851af18f4d41b918edf83f8b75a68c394d9119fa1db685",
+  "xml_sha256": "771b209a1bbaebb481822d15df68e089aaa253d310a7b9c3ec7e74d33cd0de8b",
+  "event": {
+   "label": "M44/1_KL71",
+   "lat": 40.8418,
+   "lon": 27.7632,
+   "elevation": "-566.0",
+   "campaign": "M44/1",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. ruber [%]",
+   "T. quinqueloba [%]",
+   "N. incompta [%]",
+   "G. bulloides [%]",
+   "TOC [%]",
+   "T. quinqueloba δ18O [‰ PDB]",
+   "Alkenone/sed [µg/g]",
+   "UK37",
+   "SST (1-12) [°C] (T deg C=(Uk37-0.044)/0.033 (M...)",
+   "delta S (compared to modern (c=0.25))",
+   "delta S (compared to modern (c=0.45))"
+  ],
+  "n_rows": 187,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Sperling, Michael R; Schmiedl, Gerhard; Hemleben, Christoph; Emeis, Kay-Christian; Erlenkeuser, Helmut; Grootes, Pieter Meiert (2003): Planktic foraminifera and paleoclimate temperature and salinity calculations from sediment core M44/1 GeoTü KL71 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.89473, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. ruber [%]",
+    "parameter": "Globigerinoides ruber",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "T. quinqueloba [%]",
+    "parameter": "Turborotalita quinqueloba",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "N. incompta [%]",
+    "parameter": "Neogloboquadrina incompta",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. bulloides [%]",
+    "parameter": "Globigerina bulloides",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "T. quinqueloba δ18O [‰ PDB]",
+    "parameter": "Turborotalita quinqueloba, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "UK37",
+    "parameter": "Alkenone, unsaturation index UK37",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "SST (1-12) [°C] (T deg C=(Uk37-0.044)/0.033 (M...)",
+    "parameter": "Sea surface temperature, annual mean",
+    "unit": "°C",
+    "method": null,
+    "comment": "T deg C=(Uk37-0.044)/0.033 (Müller et al., 1998)",
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "901746": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "fe26430cbd339f4c95fdccc7f530d662477d18fc41ca65b11be659988b5c5a48",
+  "xml_sha256": "706a821254880ba303f6f0393cde6929386d737992ab44da8fe4a577d1adc962",
+  "event": {
+   "label": "MD95-2043",
+   "lat": 36.143333333333,
+   "lon": -2.6211666666667,
+   "elevation": "-1841.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides Mg/Ca [mmol/mol]",
+   "SST [°C]"
+  ],
+  "n_rows": 221,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Català, Albert; Cacho, Isabel; Frigola, Jaime; Pena, Leopoldo D; Lirer, Fabrizio (2019): Sea surface temperature (SST) and Mg/Ca analysis of G. bulloides from sediment core MD95-2043 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.901746, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides Mg/Ca [mmol/mol]",
+    "parameter": "Globigerina bulloides, Magnesium/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo",
+     "mgca_foram"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "SST [°C]",
+    "parameter": "Sea surface temperature",
+    "unit": "°C",
+    "method": null,
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "944305": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "0f752d234a69caee04185508b59e0ae1a949aaf9a4976e13394d868f9692bdd7",
+  "xml_sha256": "2b1b599a68a499bcfb5e207fa875f7d89ba64d61fec71315905a313281bc01c6",
+  "event": {
+   "label": "NDT-6-2016",
+   "lat": 38.007389,
+   "lon": 11.795789,
+   "elevation": "-1066.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "G. bulloides [%]",
+   "Globoturborotalita spp. [%]",
+   "G. siphonifera [%]",
+   "G. glutinata [%]",
+   "G. elongatus [%]",
+   "G. ruber w [%]",
+   "G. ruber p [%]",
+   "G. sacculifer [%]",
+   "G. inflata [%]",
+   "G. scitula d [%]",
+   "G. scitula s [%]",
+   "G. truncatulinoides s [%]",
+   "G. truncatulinoides d [%]",
+   "N. incompta d [%]",
+   "N. pachyderma s [%]",
+   "N. dutertrei [%]",
+   "O. universa [%]",
+   "T. quinqueloba [%]",
+   "Tenuitella spp. [%]",
+   "Foram indet [%]"
+  ],
+  "n_rows": 70,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Trias-Navarro, Sergio; de la Fuente, Maria; Pena, Leopoldo D; Frigola, Jaime; Caruso, Antonio; Lirer, Fabrizio; Cacho, Isabel (2022): Planktic foraminifera distribution from sediment core NDT-6-2016 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.944305, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "G. bulloides [%]",
+    "parameter": "Globigerina bulloides",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "Globoturborotalita spp. [%]",
+    "parameter": "Globoturborotalita spp.",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. siphonifera [%]",
+    "parameter": "Globigerinella siphonifera",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "G. glutinata [%]",
+    "parameter": "Globigerinita glutinata",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. elongatus [%]",
+    "parameter": "Globigerinoides elongatus",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. ruber w [%]",
+    "parameter": "Globigerinoides ruber white",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. ruber p [%]",
+    "parameter": "Globigerinoides ruber pink",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. sacculifer [%]",
+    "parameter": "Globigerinoides sacculifer",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. inflata [%]",
+    "parameter": "Globorotalia inflata",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. scitula d [%]",
+    "parameter": "Globorotalia scitula dextral",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. scitula s [%]",
+    "parameter": "Globorotalia scitula sinistral",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "G. truncatulinoides s [%]",
+    "parameter": "Globorotalia truncatulinoides sinistral",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "G. truncatulinoides d [%]",
+    "parameter": "Globorotalia truncatulinoides dextral",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "N. incompta d [%]",
+    "parameter": "Neogloboquadrina incompta dextral",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "N. dutertrei [%]",
+    "parameter": "Neogloboquadrina dutertrei",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "O. universa [%]",
+    "parameter": "Orbulina universa",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "955015": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo",
+   "sst"
+  ],
+  "tsv_sha256": "9c864d1049ab7c36e64438ce58f18b143373f40a4acce4dd1f8f2c3c5062094a",
+  "xml_sha256": "8034b6028c338a54038c6facfc5709fb49b92b564c73978bb5b3c54eda17c312",
+  "event": {
+   "label": "MedSeA-S7-c2",
+   "lat": 37.708,
+   "lon": 12.40553,
+   "elevation": "-281.09",
+   "campaign": "MedSeA2013/1",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "Age [ka BP]",
+   "Acc rate plankt for [#/cm**2/ka]",
+   "C37:3Me [ng/g]",
+   "C37:2Me [ng/g]",
+   "UK'37",
+   "SST (1-12) [°C]"
+  ],
+  "n_rows": 47,
+  "age_column": 1,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pallacks, Sven; Ziveri, Patrizia; Schiebel, Ralf; Vonhof, Hubert B; Rae, James W B; Littley, Eloise; García-Orellana, Jordi; Langer, Gerald; Grelaud, Michaël; Martrat, Belén (2023): Biomarker and SST reconstruction of sediment core MedSeA-S7-c2 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.955015, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "Acc rate plankt for [#/cm**2/ka]",
+    "parameter": "Accumulation rate, planktic foraminifera by number",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": "total planktic foraminiferal test accumulation rate in >150µm fraction",
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "UK'37",
+    "parameter": "Alkenone, unsaturation index UK'37",
+    "unit": "sin unidad",
+    "method": null,
+    "comment": "proxy indicator of sea surface temperature",
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "SST (1-12) [°C]",
+    "parameter": "Sea surface temperature, annual mean",
+    "unit": "°C",
+    "method": "SST, from UK'37 (Conte et al., 2006)",
+    "comment": "SST estimation by using the calibration of Conte et al. (2006) including integrated production temperature SST = (-0.957+54.293*(Uk'37)-52.894*(Uk'37)^2+28.321*(Uk'37)^3), coretop global, 1-30ºC, n=567, R2=0.97; error ±1.1°C (SST in °C)",
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "966840": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "97528a8b069dee1146fea3286c1a35fab6a802610cf46dcd331efa83af7552a2",
+  "xml_sha256": "5aa28dfe55b2181ce07bd7ae783bb7edbe97df64e60b22b69040815187a938e1",
+  "event": {
+   "label": "MVSEIS08_TG-2",
+   "lat": 34.97133,
+   "lon": -6.84117,
+   "elevation": "-530.0",
+   "campaign": "MVSEIS2008",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "N. pachyderma s [%]",
+   "G. scitula [%]",
+   "Foram plankt subtropical [%]",
+   "Foram plankt transitional [%]",
+   "Foram plankt subpolar [%]",
+   "Foram plankt polar [%]"
+  ],
+  "n_rows": 27,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Climate associations of planktic foraminifera of sediment core MVSEIS08_TG-2 from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966840, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "N. pachyderma s [%]",
+    "parameter": "Neogloboquadrina pachyderma sinistral",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. scitula [%]",
+    "parameter": "Globorotalia scitula",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "Foram plankt subtropical [%]",
+    "parameter": "Foraminifera, planktic, subtropical",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Foram plankt transitional [%]",
+    "parameter": "Foraminifera, planktic, transitional",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "Foram plankt subpolar [%]",
+    "parameter": "Foraminifera, planktic, subpolar",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "Foram plankt polar [%]",
+    "parameter": "Foraminifera, planktic, polar",
+    "unit": "%",
+    "method": "Counting >150 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "988002": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "6f506241dc6f5641913740a7223a245fd41ec068a3786fbf225b744a20be5d77",
+  "xml_sha256": "96e33db09487db033c5750201cbc1eda640bbb28a84d40cde2ac76e8ab0fb579",
+  "event": {
+   "label": "MedSeA-S3-c1",
+   "lat": 36.0746,
+   "lon": -4.1104,
+   "elevation": "-1136.73",
+   "campaign": "MedSeA2013/1",
+   "device": null
+  },
+  "header": [
+   "Event",
+   "Latitude",
+   "Longitude",
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "Age [ka BP]",
+   "G. ruber [%]",
+   "G. bulloides [%]",
+   "G. inflata [%]",
+   "G. truncatulinoides [%]",
+   "O. universa [%]",
+   "G. ruber p [%]",
+   "Globigerinella spp. [%]",
+   "T. sacculifer [%]",
+   "G. glutinata [%]",
+   "G. falconensis [%]",
+   "N. incompta [%]",
+   "N. dutertrei [%]",
+   "N. pachyderma [%]",
+   "G. vivans [%]",
+   "G. uvula [%]",
+   "G. tenella [%]",
+   "B. digitata [%]",
+   "Tenuitella spp. [%]",
+   "T. quinqueloba [%]",
+   "G. hirsuta [%]",
+   "G. scitula [%]",
+   "Foram indet [%]",
+   "Total counts [#]",
+   "Split"
+  ],
+  "n_rows": 33,
+  "age_column": 4,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Lucas, Arturo; Pallacks, Sven; Incarbona, Alessandro; Mortyn, P Graham; Ziveri, Patrizia (2026): Relative abundance of planktonic foraminiferal species in sediment core MedSeA-S3 retrieved from the Alboran Sea during the MedSeA Cruise 2013 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.988002",
+  "columns": [
+   {
+    "column": 6,
+    "header": "G. ruber [%]",
+    "parameter": "Globigerinoides ruber",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. bulloides [%]",
+    "parameter": "Globigerina bulloides",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. inflata [%]",
+    "parameter": "Globorotalia inflata",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. truncatulinoides [%]",
+    "parameter": "Globorotalia truncatulinoides",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "O. universa [%]",
+    "parameter": "Orbulina universa",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. ruber p [%]",
+    "parameter": "Globigerinoides ruber pink",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Globigerinella spp. [%]",
+    "parameter": "Globigerinella spp.",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "T. sacculifer [%]",
+    "parameter": "Trilobatus sacculifer",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "G. glutinata [%]",
+    "parameter": "Globigerinita glutinata",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "G. falconensis [%]",
+    "parameter": "Globigerina falconensis",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "N. incompta [%]",
+    "parameter": "Neogloboquadrina incompta",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "N. dutertrei [%]",
+    "parameter": "Neogloboquadrina dutertrei",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "N. pachyderma [%]",
+    "parameter": "Neogloboquadrina pachyderma",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "G. uvula [%]",
+    "parameter": "Globigerinita uvula",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "G. tenella [%]",
+    "parameter": "Globoturborotalita tenella",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "B. digitata [%]",
+    "parameter": "Beella digitata",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "T. quinqueloba [%]",
+    "parameter": "Turborotalita quinqueloba",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 25,
+    "header": "G. hirsuta [%]",
+    "parameter": "Globorotalia hirsuta",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 26,
+    "header": "G. scitula [%]",
+    "parameter": "Globorotalia scitula",
+    "unit": "%",
+    "method": "Counting, stereo microscope",
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "988003": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_planct_censo"
+  ],
+  "tsv_sha256": "7eb1017eaa2c702153ed3453576d894e983281c6df7d5d4a94a71d6224054012",
+  "xml_sha256": "a2a75d03b619ff051841f2a8b4cc38ec0d566380334a2e3511f5697d172dd667",
+  "event": {
+   "label": "MedSeA-S7-c4",
+   "lat": 37.708,
+   "lon": 12.40553,
+   "elevation": null,
+   "campaign": "MedSeA2013/1",
+   "device": null
+  },
+  "header": [
+   "Event",
+   "Latitude",
+   "Longitude",
+   "Depth sed [m]",
+   "Age [a AD/CE]",
+   "Age [ka BP]",
+   "G. ruber [%]",
+   "G. bulloides [%]",
+   "G. inflata [%]",
+   "G. truncatulinoides [%]",
+   "O. universa [%]",
+   "G. ruber p [%]",
+   "Globigerinella spp. [%]",
+   "T. sacculifer [%]",
+   "G. glutinata [%]",
+   "N. pachyderma [%]",
+   "N. incompta [%]",
+   "N. dutertrei [%]",
+   "T. quinqueloba [%]",
+   "Tenuitella spp. [%]",
+   "G. tenella [%]",
+   "G. falconensis [%]",
+   "B. pumilio [%]",
+   "G. uvula [%]",
+   "D. anfracta [%]",
+   "Foram indet [%]",
+   "Total counts [#]",
+   "Split"
+  ],
+  "n_rows": 47,
+  "age_column": 4,
+  "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Lucas, Arturo; Pallacks, Sven; Incarbona, Alessandro; Mortyn, P Graham; Ziveri, Patrizia (2026): Relative abundance of planktonic foraminiferal species in sediment core MedSeA-S7 retrieved from the Strait of Sicily during the MedSeA Cruise 2013 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.988003",
+  "columns": [
+   {
+    "column": 6,
+    "header": "G. ruber [%]",
+    "parameter": "Globigerinoides ruber",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. bulloides [%]",
+    "parameter": "Globigerina bulloides",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. inflata [%]",
+    "parameter": "Globorotalia inflata",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. truncatulinoides [%]",
+    "parameter": "Globorotalia truncatulinoides",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "O. universa [%]",
+    "parameter": "Orbulina universa",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. ruber p [%]",
+    "parameter": "Globigerinoides ruber pink",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Globigerinella spp. [%]",
+    "parameter": "Globigerinella spp.",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "T. sacculifer [%]",
+    "parameter": "Trilobatus sacculifer",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "G. glutinata [%]",
+    "parameter": "Globigerinita glutinata",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "N. pachyderma [%]",
+    "parameter": "Neogloboquadrina pachyderma",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "N. incompta [%]",
+    "parameter": "Neogloboquadrina incompta",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "N. dutertrei [%]",
+    "parameter": "Neogloboquadrina dutertrei",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "T. quinqueloba [%]",
+    "parameter": "Turborotalita quinqueloba",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "G. tenella [%]",
+    "parameter": "Globoturborotalita tenella",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "G. falconensis [%]",
+    "parameter": "Globigerina falconensis",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "G. uvula [%]",
+    "parameter": "Globigerinita uvula",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "D. anfracta [%]",
+    "parameter": "Dentigloborotalia anfracta",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_planct_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "54940": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo"
+  ],
+  "tsv_sha256": "6e0f5b7fce586396891b6a6a2db31ebd091f0ecbd68e2cf3bd10e8cfc2b87082",
+  "xml_sha256": "58feac861fce417641708db8e3b018dba4161d6a9de227e4a12ea86392e0e297",
+  "event": {
+   "label": "M25/4-KL13",
+   "lat": 37.5535,
+   "lon": 17.824,
+   "elevation": "-2533.0",
+   "campaign": "M25/4",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Foram benth [#/g]",
+   "A. clavata [%]",
+   "A. tubulosa [%]",
+   "B. elongata [%]",
+   "B. pseudopunctata [%]",
+   "B. variabilis [%]",
+   "B. striata mexicana [%]",
+   "C. laevigata [%]",
+   "C. ovoidea [%]",
+   "C. cf. robertsonianu [%]",
+   "C. floridanus [%]",
+   "C. involvens [%]",
+   "D. communis [%] (Dentalina communis sensu lato)",
+   "E. bradyi [%] (Eggerella bradyi/Karreriella ...)",
+   "E. rugosa [%]",
+   "E. pusillus [%]",
+   "F. cucullata [%]",
+   "F. longirostris [%]",
+   "F. neptunii [%]",
+   "F. radiata [%]",
+   "F. acuta [%]",
+   "F. mexicana [%]",
+   "G. translucens [%]",
+   "Glandulina spp. [%]",
+   "G. affinis [%]",
+   "G. subglobosa [%]",
+   "G. neosoldanii [%]",
+   "G. orbicularis [%]",
+   "L. inflexa [%]",
+   "Lagena spp. [%]",
+   "Lenticulina spp. [%]",
+   "M. barleeanus [%]",
+   "M. subrotunda [%]",
+   "Miliolinella sp. [%] (Miliolinella sp.1)",
+   "Miliolinella sp. [%] (Miliolinella sp.2)",
+   "Miliolinella spp. [%]",
+   "N. turgida [%]",
+   "O. umbonatus [%]",
+   "P. lateralis [%]",
+   "P. staphyllearia [%]",
+   "P. corrugata [%]",
+   "P. fusca [%]",
+   "P. laevigata [%]",
+   "P. oblonga [%]",
+   "P. salisburyi [%] (Pullenia cf. salisburyi)",
+   "P. lucernula [%]",
+   "P. murrhina [%]",
+   "P. oblonga [%]",
+   "Pyrgo spp. [%]",
+   "P. sphaera [%]",
+   "Pyrulina spp. [%]",
+   "Q. seminulum [%] (Quinqueloculina cf. seminula)",
+   "Q. padana [%]",
+   "Q. pygmaea [%]",
+   "Quinqueloculina spp. [%]",
+   "Q. viennensis [%]",
+   "R. charoides [%]",
+   "R. translucens [%]",
+   "S. tenuis [%]",
+   "S. aspera [%]",
+   "S. tenuiseptata [%]",
+   "S. acutimargo [%]",
+   "S. concava [%]",
+   "T. frigida [%]",
+   "T. tricarinata [%]",
+   "V. bradyana [%]",
+   "Foram benth indet [%] (all other benthic foram species)"
+  ],
+  "n_rows": 94,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schmiedl, Gerhard; Hemleben, Christoph; Keller, Jörg; Segl, Monika (1998): Benthic foraminifera of sediment core M25/4-KL13 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.54940, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Foram benth [#/g]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "#/g",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "B. pseudopunctata [%]",
+    "parameter": "Bolivina pseudopunctata",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "B. variabilis [%]",
+    "parameter": "Brizalina variabilis",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "C. laevigata [%]",
+    "parameter": "Cassidulina laevigata",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "C. ovoidea [%]",
+    "parameter": "Chilostomella ovoidea",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "C. cf. robertsonianu [%]",
+    "parameter": "Cibicidoides cf. robertsonianus",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "C. floridanus [%]",
+    "parameter": "Cibicidoides floridanus",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "E. rugosa [%]",
+    "parameter": "Epistominella rugosa",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 26,
+    "header": "G. affinis [%]",
+    "parameter": "Globobulimina affinis",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 27,
+    "header": "G. subglobosa [%]",
+    "parameter": "Globocassidulina subglobosa",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 28,
+    "header": "G. neosoldanii [%]",
+    "parameter": "Gyroidina neosoldanii",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 29,
+    "header": "G. orbicularis [%]",
+    "parameter": "Gyroidina orbicularis",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 32,
+    "header": "Lenticulina spp. [%]",
+    "parameter": "Lenticulina spp.",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 33,
+    "header": "M. barleeanus [%]",
+    "parameter": "Melonis barleeanus",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 38,
+    "header": "N. turgida [%]",
+    "parameter": "Nonionella turgida",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 39,
+    "header": "O. umbonatus [%]",
+    "parameter": "Oridorsalis umbonatus",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 46,
+    "header": "P. salisburyi [%] (Pullenia cf. salisburyi)",
+    "parameter": "Pullenia salisburyi",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": "Pullenia cf. salisburyi",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 68,
+    "header": "Foram benth indet [%] (all other benthic foram species)",
+    "parameter": "Foraminifera, benthic indeterminata",
+    "unit": "%",
+    "method": "Counting >125 µm fraction",
+    "comment": "all other benthic foram species",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "634051": {
+  "status": "rejected",
+  "families": [
+   "cronologia",
+   "d13C_bent",
+   "d18O_bent",
+   "foram_bent_censo"
+  ],
+  "tsv_sha256": "5e9da331414ec7a65ad7bb9c97a6041dc9494c07e26c264d6911b902e4a246b3",
+  "xml_sha256": "778b4bb39fd0891510fa6104ec1bcfb261a6dc6a7822cb6a924d7f9fd658e052",
+  "event": {
+   "label": "MD95-2043",
+   "lat": 36.143333333333,
+   "lon": -2.6211666666667,
+   "elevation": "-1841.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age model [ka]",
+   "C. pachyderma δ18O [‰ PDB]",
+   "C. pachyderma δ13C [‰ PDB]",
+   "C. pachyderma Mg/Ca [mmol/mol]",
+   "DWT [°C]"
+  ],
+  "n_rows": 218,
+  "age_column": null,
+  "age_transformation": null,
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Cacho, Isabel (2007): Stable Isotopes, Mg/Ca ratio and Deep-Water Temperature reconstruction on benthic foraminifera of sediment core MD95-2043 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.634051",
+  "columns": [
+   {
+    "column": 2,
+    "header": "C. pachyderma δ18O [‰ PDB]",
+    "parameter": "Cibicidoides pachyderma, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "C. pachyderma δ13C [‰ PDB]",
+    "parameter": "Cibicidoides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "C. pachyderma Mg/Ca [mmol/mol]",
+    "parameter": "Cibicidoides pachyderma, Magnesium/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": "see reference(s)",
+    "comment": null,
+    "families": [
+     "foram_bent_censo",
+     "mgca_foram"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE)"
+ },
+ "82053": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo"
+  ],
+  "tsv_sha256": "7391dd0400613c0fee5907ab8e6d1a726da8aba6cf30431d3d64beb77e20e85c",
+  "xml_sha256": "fce74716576fe08b300f48174b9d9f2d7b631b849981cb9f94ef6e56f3cabb21",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. affinis [%]"
+  ],
+  "n_rows": 122,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schönfeld, Joachim; Zahn, Rainer; de Abreu, Lucia (2003): (Fig. 2) Abundance of Globobulimina affinis in sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.82053, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. affinis [%]",
+    "parameter": "Globobulimina affinis",
+    "unit": "%",
+    "method": "Counting >250 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "82057": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo"
+  ],
+  "tsv_sha256": "1072c84b27dc2bf4ec68a9be121fb9bd855bcb93651f0a43d12172ee3a16e34f",
+  "xml_sha256": "403d9c43c03f5151f65c830a77558b88c73240c8e44d0696ee429eb63875155d",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "U. pygmaea [%]"
+  ],
+  "n_rows": 122,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schönfeld, Joachim; Zahn, Rainer; de Abreu, Lucia (2003): (Fig. 2) Abundance of Uvigerina pygmaea in sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.82057, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "U. pygmaea [%]",
+    "parameter": "Uvigerina pygmaea",
+    "unit": "%",
+    "method": "Counting >250 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910794": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "oxigenacion_bent"
+  ],
+  "tsv_sha256": "8479cc3473b8a9478b0be6fa6caea535981cdf9b49c550042d6a34d65422e20f",
+  "xml_sha256": "3c9d9c2c8035a394ed4d9d9a8fbbc471aa9593563910cc4d0846cf71b834671e",
+  "event": {
+   "label": "HER_GC_UB06",
+   "lat": 36.239938,
+   "lon": -3.989214,
+   "elevation": "-946.0",
+   "campaign": "HERMESIONE",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "Foram benth [#/g]",
+   "Foram benth [%]",
+   "A. weddellensis [%]",
+   "C. pachyderma [%]",
+   "B. dilatata [%]",
+   "B. spathulata [%]",
+   "B. subspinescens [%]",
+   "B. marginata [%]",
+   "C. laevigata [%]",
+   "C. obtusa [%]",
+   "M. affinis [%]",
+   "N. iridea [%]",
+   "N. turgidus [%]",
+   "U. mediterranea [%]",
+   "U. peregrina [%]",
+   "Foram benth epifauna [%]",
+   "Foram benth infauna [%]",
+   "Foram benth deep infauna [%]",
+   "OI",
+   "HO [%]",
+   "LO [%]",
+   "Gyroidina spp. [%]"
+  ],
+  "n_rows": 44,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Dominant benthic foraminifera and microhabitats in sediment core HER_GC_UB06 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910794, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "Foram benth [#/g]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "per dry sediment",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "Foram benth [%]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": "total",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "C. pachyderma [%]",
+    "parameter": "Cibicidoides pachyderma",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "B. dilatata [%]",
+    "parameter": "Bolivina dilatata",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "B. spathulata [%]",
+    "parameter": "Bolivina spathulata",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "B. subspinescens [%]",
+    "parameter": "Brizalina subspinescens",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "B. marginata [%]",
+    "parameter": "Bulimina marginata",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "C. laevigata [%]",
+    "parameter": "Cassidulina laevigata",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "C. obtusa [%]",
+    "parameter": "Cassidulina obtusa",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "M. affinis [%]",
+    "parameter": "Melonis affinis",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "N. iridea [%]",
+    "parameter": "Nonionella iridea",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "N. turgidus [%]",
+    "parameter": "Nonionoides turgidus",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "U. mediterranea [%]",
+    "parameter": "Uvigerina mediterranea",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "U. peregrina [%]",
+    "parameter": "Uvigerina peregrina",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "Foram benth epifauna [%]",
+    "parameter": "Foraminifera, benthic, epifaunal",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "Foram benth infauna [%]",
+    "parameter": "Foraminifera, benthic, infaunal",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "Foram benth deep infauna [%]",
+    "parameter": "Foraminifera, benthic, deep infaunal",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "OI",
+    "parameter": "Benthic Foraminifer Oxygen Index (Schmiedl)",
+    "unit": "sin unidad",
+    "method": "Calculated",
+    "comment": null,
+    "families": [
+     "foram_bent_censo",
+     "oxigenacion_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "LO [%]",
+    "parameter": "Low oxygen indicators",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "oxigenacion_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "Gyroidina spp. [%]",
+    "parameter": "Gyroidina spp.",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910795": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "oxigenacion_bent"
+  ],
+  "tsv_sha256": "0100e703773ab036cd7c9396c039617d009809d7c770138bbe3e0b2cedf46216",
+  "xml_sha256": "4551b1abd63e39a335c5e0ad42f34d50ee05a88e03e743256065f3bbe461fc61",
+  "event": {
+   "label": "MD95-2043",
+   "lat": 36.143333333333,
+   "lon": -2.6211666666667,
+   "elevation": "-1841.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "Foram benth [#/g]",
+   "Foram benth [%]",
+   "HO [%]",
+   "LO [%]",
+   "Gyroidina spp. [%]"
+  ],
+  "n_rows": 93,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Number of benthic foraminifera and microhabitats in sediment core MD95-2043 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910795, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "Foram benth [#/g]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "per dry sediment",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "Foram benth [%]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": "total",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "LO [%]",
+    "parameter": "Low oxygen indicators",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "oxigenacion_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Gyroidina spp. [%]",
+    "parameter": "Gyroidina spp.",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910796": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "oxigenacion_bent"
+  ],
+  "tsv_sha256": "1b2099d44c8c1e1c2436725eb29cb6cab64054c1b71952801990060e13821e6a",
+  "xml_sha256": "20a00ea2d1a3f9a0a35dd7e741c1dcb5a4a09598aff30c195543f8527dbebdac",
+  "event": {
+   "label": "MD99-2343",
+   "lat": 40.497333333333,
+   "lon": 4.0281666666667,
+   "elevation": "-2391.0",
+   "campaign": "MD114",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "Foram benth [#/g]",
+   "Foram benth [%]",
+   "HO [%]",
+   "LO [%]",
+   "Gyroidina spp. [%]"
+  ],
+  "n_rows": 80,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Number of benthic foraminifera and microhabitats in sediment core MD99-2343 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910796, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "Foram benth [#/g]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "per dry sediment",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "Foram benth [%]",
+    "parameter": "Foraminifera, benthic",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": "total",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "LO [%]",
+    "parameter": "Low oxygen indicators",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "oxigenacion_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "Gyroidina spp. [%]",
+    "parameter": "Gyroidina spp.",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ }
+}

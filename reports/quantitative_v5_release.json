@@ -1,0 +1,413 @@
+{
+  "version": "atlas-quantitative-2026-10-29-v5-r1",
+  "parent_version": "atlas-quantitative-2026-10-29-v4-r2",
+  "parent_sha256": "c3729bbc2a3fa7883e1609f0f930c701532739f41ef4174e8b18cfe563cc36c5",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 58,
+    "series": 336,
+    "values": 136771,
+    "new_records": 12,
+    "new_series": 184,
+    "new_values": 33237,
+    "missing_age_values": 114
+  },
+  "input_fragments": {
+    "pangaea": {
+      "records": 14,
+      "series": 194,
+      "values": 34367
+    }
+  },
+  "family_counts": {
+    "Temperatura": 36,
+    "Geoquímica elemental": 39,
+    "Sedimentología": 12,
+    "Biomarcadores": 20,
+    "Micropaleontología": 8,
+    "Isótopos estables": 40,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 4,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 158,
+    "Materia orgánica y biomarcadores": 1
+  },
+  "comparison_groups": 281,
+  "numeric_age_extent_ka_bp": [
+    -0.14,
+    1365.0
+  ],
+  "admitted_series": [
+    "pangaea5-54940:Foraminifera_benthic_g",
+    "pangaea5-54940:Bolivina_pseudopunctata_",
+    "pangaea5-54940:Brizalina_variabilis_",
+    "pangaea5-54940:Cassidulina_laevigata_",
+    "pangaea5-54940:Chilostomella_ovoidea_",
+    "pangaea5-54940:Cibicidoides_cf_robertsonianus_",
+    "pangaea5-54940:Cibicidoides_floridanus_",
+    "pangaea5-54940:Epistominella_rugosa_",
+    "pangaea5-54940:Globobulimina_affinis_",
+    "pangaea5-54940:Globocassidulina_subglobosa_",
+    "pangaea5-54940:Gyroidina_neosoldanii_",
+    "pangaea5-54940:Gyroidina_orbicularis_",
+    "pangaea5-54940:Lenticulina_spp_",
+    "pangaea5-54940:Melonis_barleeanus_",
+    "pangaea5-54940:Nonionella_turgida_",
+    "pangaea5-54940:Oridorsalis_umbonatus_",
+    "pangaea5-54940:Pullenia_salisburyi_",
+    "pangaea5-54940:Foraminifera_benthic_indeterminata_",
+    "pangaea5-66811:Globigerina_bulloides_18O_PDB",
+    "pangaea5-66811:Globigerina_bulloides_13C_PDB",
+    "pangaea5-66811:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-66811:Sea_surface_temperature_summer_C",
+    "pangaea5-66811:Foraminifera_planktic_arctic_",
+    "pangaea5-66811:Foraminifera_planktic_subpolar_",
+    "pangaea5-66811:Foraminifera_planktic_subtropical_",
+    "pangaea5-66811:Foraminifera_planktic_subtropical__col15",
+    "pangaea5-66811:Foraminifera_planktic_tropical_",
+    "pangaea5-82053:Globobulimina_affinis_",
+    "pangaea5-82055:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-82057:Uvigerina_pygmaea_",
+    "pangaea5-89473:Globigerinoides_ruber_",
+    "pangaea5-89473:Turborotalita_quinqueloba_",
+    "pangaea5-89473:Neogloboquadrina_incompta_",
+    "pangaea5-89473:Globigerina_bulloides_",
+    "pangaea5-89473:Carbon_organic_total_",
+    "pangaea5-89473:Turborotalita_quinqueloba_18O_PDB",
+    "pangaea5-89473:Alkenone_unsaturation_index_UK37_sin_unidad",
+    "pangaea5-89473:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-733076:Foraminifera_planktic_deep_dwelling_species_",
+    "pangaea5-733076:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-733076:Sea_surface_temperature_January_March_C",
+    "pangaea5-733076:Sea_surface_temperature_July_September_C",
+    "pangaea5-733077:Foraminifera_planktic_deep_dwelling_species_",
+    "pangaea5-733077:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-733077:Sea_surface_temperature_January_March_C",
+    "pangaea5-733077:Sea_surface_temperature_July_September_C",
+    "pangaea5-737130:Orbulina_universa_",
+    "pangaea5-737130:Globigerina_bulloides_",
+    "pangaea5-737130:Globigerina_falconensis_",
+    "pangaea5-737130:Globigerina_rubescens_",
+    "pangaea5-737130:Globigerina_calida_",
+    "pangaea5-737130:Beella_digitata_",
+    "pangaea5-737130:Globigerinoides_ruber_white_",
+    "pangaea5-737130:Globigerinoides_ruber_pink_",
+    "pangaea5-737130:Globigerinoides_sacculifer_",
+    "pangaea5-737130:Globigerinoides_trilobus_",
+    "pangaea5-737130:Globigerinoides_tenellus_",
+    "pangaea5-737130:Globigerinoides_conglobatus_",
+    "pangaea5-737130:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-737130:Neogloboquadrina_pachyderma_dextral_",
+    "pangaea5-737130:Neogloboquadrina_dutertrei_",
+    "pangaea5-737130:Neogloboquadrina_pachyderma_dextral_and_dutertrei_intergrade_",
+    "pangaea5-737130:Globorotalia_scitula_",
+    "pangaea5-737130:Globorotalia_inflata_",
+    "pangaea5-737130:Globorotalia_hirsuta_sinistral_",
+    "pangaea5-737130:Globorotalia_hirsuta_dextral_",
+    "pangaea5-737130:Globorotalia_truncatulinoides_sinistral_",
+    "pangaea5-737130:Globorotalia_truncatulinoides_dextral_",
+    "pangaea5-737130:Globorotalia_menardii_",
+    "pangaea5-737130:Globigerinella_aequilateralis_",
+    "pangaea5-737130:Hastigerina_parapelagica_",
+    "pangaea5-737130:Turborotalita_humilis_",
+    "pangaea5-737130:Turborotalita_cristata_",
+    "pangaea5-737130:Turborotalita_quinqueloba_",
+    "pangaea5-737130:Globigerinita_glutinata_",
+    "pangaea5-737130:Globigerinita_uvula_",
+    "pangaea5-737130:Globigerinita_iota_",
+    "pangaea5-737130:Pulleniatina_obliquiloculata_",
+    "pangaea5-737130:Foraminifera_planktic_other_",
+    "pangaea5-738133:Globigerina_bulloides_18O_PDB",
+    "pangaea5-738133:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-738136:Globigerina_bulloides_18O_PDB",
+    "pangaea5-738136:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-810294:Size_fraction_0_150_mm_",
+    "pangaea5-810294:Sea_surface_temperature_August_C",
+    "pangaea5-810294:Globigerina_bulloides_18O_PDB",
+    "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
+    "pangaea5-810294:Sea_surface_salinity_sin_unidad",
+    "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-810294:Sea_surface_temperature_February_C",
+    "pangaea5-810294:Sea_surface_temperature_August_C_col14",
+    "pangaea5-815999:Globigerinoides_ruber_Iron_Calcium_ratio_mmol_mol",
+    "pangaea5-815999:Globigerinoides_ruber_Aluminium_Calcium_ratio_mmol_mol",
+    "pangaea5-815999:Globigerinoides_ruber_Strontium_Calcium_ratio_mmol_mol",
+    "pangaea5-815999:Globigerinoides_ruber_Barium_Calcium_ratio_mol_mol",
+    "pangaea5-815999:Globigerinoides_ruber_Manganese_Calcium_ratio_mmol_mol",
+    "pangaea5-857149:Globigerina_bulloides_18O_PDB",
+    "pangaea5-857149:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-857149:Sea_surface_temperature_summer_C",
+    "pangaea5-857150:Globigerina_bulloides_18O_PDB",
+    "pangaea5-857150:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-857150:Sea_surface_temperature_summer_C",
+    "pangaea5-910794:Foraminifera_benthic_g",
+    "pangaea5-910794:Foraminifera_benthic_",
+    "pangaea5-910794:Cibicidoides_pachyderma_",
+    "pangaea5-910794:Bolivina_dilatata_",
+    "pangaea5-910794:Bolivina_spathulata_",
+    "pangaea5-910794:Brizalina_subspinescens_",
+    "pangaea5-910794:Bulimina_marginata_",
+    "pangaea5-910794:Cassidulina_laevigata_",
+    "pangaea5-910794:Cassidulina_obtusa_",
+    "pangaea5-910794:Melonis_affinis_",
+    "pangaea5-910794:Nonionella_iridea_",
+    "pangaea5-910794:Nonionoides_turgidus_",
+    "pangaea5-910794:Uvigerina_mediterranea_",
+    "pangaea5-910794:Uvigerina_peregrina_",
+    "pangaea5-910794:Foraminifera_benthic_epifaunal_",
+    "pangaea5-910794:Foraminifera_benthic_infaunal_",
+    "pangaea5-910794:Foraminifera_benthic_deep_infaunal_",
+    "pangaea5-910794:Benthic_Foraminifer_Oxygen_Index_Schmiedl_sin_unidad",
+    "pangaea5-910794:Low_oxygen_indicators_",
+    "pangaea5-910794:Gyroidina_spp_",
+    "pangaea5-944305:Globigerina_bulloides_",
+    "pangaea5-944305:Globoturborotalita_spp_",
+    "pangaea5-944305:Globigerinella_siphonifera_",
+    "pangaea5-944305:Globigerinita_glutinata_",
+    "pangaea5-944305:Globigerinoides_elongatus_",
+    "pangaea5-944305:Globigerinoides_ruber_white_",
+    "pangaea5-944305:Globigerinoides_ruber_pink_",
+    "pangaea5-944305:Globigerinoides_sacculifer_",
+    "pangaea5-944305:Globorotalia_inflata_",
+    "pangaea5-944305:Globorotalia_scitula_dextral_",
+    "pangaea5-944305:Globorotalia_scitula_sinistral_",
+    "pangaea5-944305:Globorotalia_truncatulinoides_sinistral_",
+    "pangaea5-944305:Globorotalia_truncatulinoides_dextral_",
+    "pangaea5-944305:Neogloboquadrina_incompta_dextral_",
+    "pangaea5-944305:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-944305:Neogloboquadrina_dutertrei_",
+    "pangaea5-944305:Orbulina_universa_",
+    "pangaea5-955015:Accumulation_rate_planktic_foraminifera_by_number_cm_2_ka",
+    "pangaea5-955015:Alkenone_unsaturation_index_UK_37_sin_unidad",
+    "pangaea5-955015:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-966840:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-966840:Globorotalia_scitula_",
+    "pangaea5-966840:Foraminifera_planktic_subtropical_",
+    "pangaea5-966840:Foraminifera_planktic_transitional_",
+    "pangaea5-966840:Foraminifera_planktic_subpolar_",
+    "pangaea5-966840:Foraminifera_planktic_polar_",
+    "pangaea5-988002:Globigerinoides_ruber_",
+    "pangaea5-988002:Globigerina_bulloides_",
+    "pangaea5-988002:Globorotalia_inflata_",
+    "pangaea5-988002:Globorotalia_truncatulinoides_",
+    "pangaea5-988002:Orbulina_universa_",
+    "pangaea5-988002:Globigerinoides_ruber_pink_",
+    "pangaea5-988002:Globigerinella_spp_",
+    "pangaea5-988002:Trilobatus_sacculifer_",
+    "pangaea5-988002:Globigerinita_glutinata_",
+    "pangaea5-988002:Globigerina_falconensis_",
+    "pangaea5-988002:Neogloboquadrina_incompta_",
+    "pangaea5-988002:Neogloboquadrina_dutertrei_",
+    "pangaea5-988002:Neogloboquadrina_pachyderma_",
+    "pangaea5-988002:Globigerinita_uvula_",
+    "pangaea5-988002:Globoturborotalita_tenella_",
+    "pangaea5-988002:Beella_digitata_",
+    "pangaea5-988002:Turborotalita_quinqueloba_",
+    "pangaea5-988002:Globorotalia_hirsuta_",
+    "pangaea5-988002:Globorotalia_scitula_",
+    "pangaea5-988003:Globigerinoides_ruber_",
+    "pangaea5-988003:Globigerina_bulloides_",
+    "pangaea5-988003:Globorotalia_inflata_",
+    "pangaea5-988003:Globorotalia_truncatulinoides_",
+    "pangaea5-988003:Orbulina_universa_",
+    "pangaea5-988003:Globigerinoides_ruber_pink_",
+    "pangaea5-988003:Globigerinella_spp_",
+    "pangaea5-988003:Trilobatus_sacculifer_",
+    "pangaea5-988003:Globigerinita_glutinata_",
+    "pangaea5-988003:Neogloboquadrina_pachyderma_",
+    "pangaea5-988003:Neogloboquadrina_incompta_",
+    "pangaea5-988003:Neogloboquadrina_dutertrei_",
+    "pangaea5-988003:Turborotalita_quinqueloba_",
+    "pangaea5-988003:Globoturborotalita_tenella_",
+    "pangaea5-988003:Globigerina_falconensis_",
+    "pangaea5-988003:Globigerinita_uvula_",
+    "pangaea5-988003:Dentigloborotalia_anfracta_"
+  ],
+  "integration_quarantine": [
+    {
+      "id": "pangaea5-901746:Globigerina_bulloides_Magnesium_Calcium_ratio_mmol_mol",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-901746:Sea_surface_temperature_C",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910795:Foraminifera_benthic_g",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910795:Foraminifera_benthic_",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910795:Low_oxygen_indicators_",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910795:Gyroidina_spp_",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910796:Foraminifera_benthic_g",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910796:Foraminifera_benthic_",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910796:Low_oxygen_indicators_",
+      "reason": "parent_core_identity_requires_linkage_review"
+    },
+    {
+      "id": "pangaea5-910796:Gyroidina_spp_",
+      "reason": "parent_core_identity_requires_linkage_review"
+    }
+  ],
+  "held_core_records": [
+    {
+      "id": "pangaea5-md95_2043",
+      "matches": "pangaea-438816",
+      "reason": "normalized_exact_core_already_in_parent; held_for_linkage_review"
+    },
+    {
+      "id": "pangaea5-md99_2343",
+      "matches": "pangaea-759535",
+      "reason": "normalized_exact_core_already_in_parent; held_for_linkage_review"
+    }
+  ],
+  "partial_numeric_overlap_links": [
+    {
+      "series": [
+        "pangaea5-66811:Globigerina_bulloides_18O_PDB",
+        "pangaea5-738133:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 347,
+      "fraction_of_smaller_unique_set": 0.9971264367816092,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-66811:Globigerina_bulloides_18O_PDB",
+        "pangaea5-857149:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 224,
+      "fraction_of_smaller_unique_set": 0.8265682656826568,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-66811:Neogloboquadrina_pachyderma_sinistral_",
+        "pangaea5-82055:Neogloboquadrina_pachyderma_sinistral_"
+      ],
+      "exact_shared_pairs": 292,
+      "fraction_of_smaller_unique_set": 0.5551330798479087,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-66811:Neogloboquadrina_pachyderma_sinistral_",
+        "pangaea5-857149:Neogloboquadrina_pachyderma_sinistral_"
+      ],
+      "exact_shared_pairs": 215,
+      "fraction_of_smaller_unique_set": 0.8113207547169812,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-737130:Neogloboquadrina_pachyderma_sinistral_",
+        "pangaea5-857150:Neogloboquadrina_pachyderma_sinistral_"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8707482993197279,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-738133:Globigerina_bulloides_18O_PDB",
+        "pangaea5-857149:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 213,
+      "fraction_of_smaller_unique_set": 0.7859778597785978,
+      "status": "review_link; not merged"
+    }
+  ],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "reports/pangaea_v5_audit.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration or age-depth interpolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "pangaea": []
+  },
+  "pending_source_candidates": {
+    "pangaea": [
+      {
+        "dataset": "634051",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE)"
+      }
+    ]
+  },
+  "sha256": "655f39192896a590662194d757258baf0514325b460d920ad65592c97ccd8d92",
+  "bytes": 9450541
+}
