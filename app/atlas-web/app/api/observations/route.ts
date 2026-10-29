@@ -35,22 +35,43 @@ export async function GET(request: Request) {
     yearMax: Number(p.get("yearMax")) || 0,
     chronology: p.get("chronology") || "all",
   };
-  const [ss, rr] = await Promise.all([
-    db.prepare("SELECT metadata_json FROM atlas_series").all(),
-    db.prepare("SELECT id,metadata_json FROM atlas_records").all(),
-  ]);
+  let key: any[];
+  try {
+    key = JSON.parse(group);
+  } catch {
+    key = [];
+  }
+  if (!Array.isArray(key) || key.length !== 3)
+    return Response.json({ error: "Grupo inválido" }, { status: 400 });
+  // Filter in SQL so the Worker parses only the selected series (Free CPU limit).
+  const ss = await db
+    .prepare(
+      "SELECT metadata_json FROM atlas_series WHERE proxy=? AND unit=? AND coalesce(json_extract(metadata_json,'$.compatibility_group'),id)=?",
+    )
+    .bind(String(key[0]), String(key[2]), String(key[1]))
+    .raw();
+  const candidates = (ss as any[][])
+    .map((r) => JSON.parse(r[0]))
+    .filter((s: any) => served.seriesIds.has(s.id) && groupKey(s) === group);
+  const ids = [...new Set(candidates.map((s: any) => s.record_id))];
+  const rr = ids.length
+    ? await db
+        .prepare(
+          "SELECT id,metadata_json FROM atlas_records WHERE id IN (" +
+            ids.map(() => "?").join(",") +
+            ")",
+        )
+        .bind(...ids)
+        .raw()
+    : [];
   const records = new Map(
-    rr.results.map((r: any) => [r.id, JSON.parse(r.metadata_json)]),
+    (rr as any[][]).map((r) => [r[0], JSON.parse(r[1])]),
   );
-  const selected = ss.results
-    .map((r: any) => JSON.parse(r.metadata_json))
-    .filter(
-      (s: any) =>
-        groupKey(s) === group &&
-        served.seriesIds.has(s.id) &&
-        records.has(s.record_id) &&
-        seriesMatches(s, records.get(s.record_id), f),
-    );
+  const selected = candidates.filter(
+    (s: any) =>
+      records.has(s.record_id) &&
+      seriesMatches(s, records.get(s.record_id), f),
+  );
   const n = selected.reduce(
     (v: number, s: any) => v + (s.observation_count || 0),
     0,
@@ -67,28 +88,15 @@ export async function GET(request: Request) {
   for (let start = 0; start < selected.length; start += 6) {
     const batch = await Promise.all(
       selected.slice(start, start + 6).map(async (s: any) => {
-        const result = await db
+        const rows = await db
           .prepare(
             "SELECT age_ka_bp,value,source_row,source_line,original_age,original_value,age_uncertainty_ka,value_uncertainty,depth_original FROM atlas_observations WHERE series_id=? ORDER BY age_ka_bp,source_row",
           )
           .bind(s.id)
-          .all();
-        if (result.results.length !== s.observation_count)
+          .raw();
+        if (rows.length !== s.observation_count)
           throw new Error("Recuento de serie no coincide con la versión");
-        return {
-          ...s,
-          rows: result.results.map((o: any) => [
-            o.age_ka_bp,
-            o.value,
-            o.source_row,
-            o.source_line,
-            o.original_age,
-            o.original_value,
-            o.age_uncertainty_ka,
-            o.value_uncertainty,
-            o.depth_original,
-          ]),
-        };
+        return { ...s, rows };
       }),
     );
     series.push(...batch);
