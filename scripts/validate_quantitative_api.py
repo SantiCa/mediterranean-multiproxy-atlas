@@ -12,7 +12,8 @@ from urllib.parse import urlencode,urlsplit
 ROOT=Path(__file__).resolve().parents[1]
 def main():
     p=argparse.ArgumentParser();p.add_argument('--url',default='http://127.0.0.1:5173');p.add_argument('--site-service-access',action='store_true');p.add_argument('--public-https',action='store_true',help='Self-hosted public Cloudflare URL (no credentials sent)');a=p.parse_args()
-    headers={'Content-Type':'application/json'}
+    # Cloudflare's browser-integrity check rejects the default Python-urllib agent (403).
+    headers={'Content-Type':'application/json','User-Agent':'medatlas-validator/1.0 (+https://github.com/SantiCa/mediterranean-multiproxy-atlas)'}
     if a.site_service_access:
         if a.url!='https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site':raise ValueError('Unexpected Site destination')
         headers['OAI-Sites-Authorization']='Bearer '+getpass.getpass('Sites service token (hidden): ')
