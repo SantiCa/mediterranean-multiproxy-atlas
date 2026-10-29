@@ -64,11 +64,22 @@ jobs:
         if: steps.gate.outputs.ok == 'true'
         id: db
         run: |
+          # Secrets pasted from a browser often carry a trailing newline/space.
+          CLOUDFLARE_API_TOKEN="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')"
+          CLOUDFLARE_ACCOUNT_ID="$(printf %s "$CLOUDFLARE_ACCOUNT_ID" | tr -d '[:space:]')"
+          export CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID
+          echo "::add-mask::$CLOUDFLARE_API_TOKEN"
+          echo "Longitudes: token=${#CLOUDFLARE_API_TOKEN} account=${#CLOUDFLARE_ACCOUNT_ID}"
           api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/d1/database"
           call() { curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" "$@"; }
           fail() { echo "::error title=Cloudflare D1::$1"; exit 1; }
           pick() { node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{let j;try{j=JSON.parse(s)}catch{console.log("ERR:respuesta no JSON");return}if(!j.success){console.log("ERR:"+JSON.stringify(j.errors));return}const r=j.result;const m=Array.isArray(r)?r.find(d=>d.name===process.argv[1]):r;console.log(m?m.uuid:"")})' "$DB_NAME"; }
-          out="$(call "$api?name=$DB_NAME" | pick)"
+          raw="$(call -w '\nHTTP %{http_code}' "$api?name=$DB_NAME" || true)"
+          code="$(printf '%s' "$raw" | tail -1)"
+          body="$(printf '%s' "$raw" | sed '$d')"
+          echo "$code"
+          out="$(printf '%s' "$body" | pick)"
+          case "$out" in ERR:*) echo "::error title=Cloudflare respuesta::$code ${body:0:300}" ;; esac
           case "$out" in ERR:*) fail "No se puede listar D1 ($out). Revisa que el token tenga Account > D1 > Edit y que CLOUDFLARE_ACCOUNT_ID sea el de esa cuenta." ;; esac
           if [ -z "$out" ]; then
             out="$(call -X POST "$api" -d "{\"name\":\"$DB_NAME\"}" | pick)"
