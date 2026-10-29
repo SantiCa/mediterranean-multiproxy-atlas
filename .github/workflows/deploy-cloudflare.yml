@@ -17,9 +17,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  WORKER_NAME: medatlas
+  # Public URL: https://$WORKER_NAME.$SUBDOMAIN.workers.dev (med.proxyatlas, chosen by Santiago).
+  # DB_NAME stays medatlas so the loaded data is reused.
+  WORKER_NAME: med
   DB_NAME: medatlas
-  SUBDOMAIN: santica
+  SUBDOMAIN: proxyatlas
 
 jobs:
   deploy:
@@ -129,12 +131,16 @@ jobs:
           call() { curl -sS -H "Authorization: Bearer $T" -H "Content-Type: application/json" "$@"; }
           field() { node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);if(!j.success){console.log("ERR:"+JSON.stringify(j.errors));return}console.log((j.result&&j.result[process.argv[1]])??"")}catch{console.log("ERR:no JSON")}})' "$1"; }
           sub="$(call "$api/subdomain" | field subdomain)"
-          case "$sub" in ERR:*|"")
-            for name in "$SUBDOMAIN" "$SUBDOMAIN-atlas" "$SUBDOMAIN-$(date +%y%m)"; do
-              sub="$(call -X PUT "$api/subdomain" -d "{\"subdomain\":\"$name\"}" | field subdomain)"
-              case "$sub" in ERR:*|"") echo "Subdominio $name no disponible: $sub"; sub="";; *) break;; esac
-            done ;;
-          esac
+          case "$sub" in ERR:*) sub="";; esac
+          # Register or rename the account subdomain to SUBDOMAIN. Renaming changes the
+          # URL of every Worker in the account. If the name is taken, keep the current one.
+          if [ "$sub" != "$SUBDOMAIN" ]; then
+            new="$(call -X PUT "$api/subdomain" -d "{\"subdomain\":\"$SUBDOMAIN\"}" | field subdomain)"
+            case "$new" in
+              ERR:*|"") echo "::warning title=workers.dev::No se pudo usar '$SUBDOMAIN' ($new); se mantiene '${sub:-ninguno}'.";;
+              *) sub="$new";;
+            esac
+          fi
           [ -n "$sub" ] || { echo "::error title=workers.dev::No se pudo registrar el subdominio de la cuenta."; exit 1; }
           r="$(call -X POST "$api/scripts/$WORKER_NAME/subdomain" -d '{"enabled":true,"previews_enabled":false}' | field enabled)"
           case "$r" in ERR:*) echo "::error title=workers.dev::No se pudo activar ($r)"; exit 1;; esac
