@@ -19,6 +19,7 @@ concurrency:
 env:
   WORKER_NAME: medatlas
   DB_NAME: medatlas
+  SUBDOMAIN: santica
 
 jobs:
   deploy:
@@ -114,12 +115,35 @@ jobs:
 
       - name: Deploy Worker
         if: steps.gate.outputs.ok == 'true'
+        run: npx wrangler deploy --config dist/server/wrangler.json
+
+      # Give the Worker a public workers.dev URL: register the account subdomain on
+      # first use (SUBDOMAIN below) and enable workers.dev for this script.
+      - name: Enable workers.dev URL
+        if: steps.gate.outputs.ok == 'true'
         id: deploy
         run: |
-          npx wrangler deploy --config dist/server/wrangler.json | tee deploy.log
-          url="$(grep -Eo 'https://[a-zA-Z0-9.-]+\.workers\.dev' deploy.log | head -1)"
+          T="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')"
+          echo "::add-mask::$T"
+          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers"
+          call() { curl -sS -H "Authorization: Bearer $T" -H "Content-Type: application/json" "$@"; }
+          field() { node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);if(!j.success){console.log("ERR:"+JSON.stringify(j.errors));return}console.log((j.result&&j.result[process.argv[1]])??"")}catch{console.log("ERR:no JSON")}})' "$1"; }
+          sub="$(call "$api/subdomain" | field subdomain)"
+          case "$sub" in ERR:*|"")
+            for name in "$SUBDOMAIN" "$SUBDOMAIN-atlas" "$SUBDOMAIN-$(date +%y%m)"; do
+              sub="$(call -X PUT "$api/subdomain" -d "{\"subdomain\":\"$name\"}" | field subdomain)"
+              case "$sub" in ERR:*|"") echo "Subdominio $name no disponible: $sub"; sub="";; *) break;; esac
+            done ;;
+          esac
+          [ -n "$sub" ] || { echo "::error title=workers.dev::No se pudo registrar el subdominio de la cuenta."; exit 1; }
+          r="$(call -X POST "$api/scripts/$WORKER_NAME/subdomain" -d '{"enabled":true,"previews_enabled":false}' | field enabled)"
+          case "$r" in ERR:*) echo "::error title=workers.dev::No se pudo activar ($r)"; exit 1;; esac
+          url="https://$WORKER_NAME.$sub.workers.dev"
           echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "::notice title=Atlas desplegado::$url"
           echo "### Atlas desplegado: $url" >> "$GITHUB_STEP_SUMMARY"
+          # A newly enabled subdomain can take a minute to resolve.
+          for i in $(seq 1 30); do curl -s -o /dev/null -w '%{http_code}' "$url/api/catalog" | grep -q 200 && break; sleep 10; done
 
       # Idempotent, append-only import of the versioned seed and inventory through the
       # app's own bounded endpoints. Re-running resumes; conflicts are not rewritten.
