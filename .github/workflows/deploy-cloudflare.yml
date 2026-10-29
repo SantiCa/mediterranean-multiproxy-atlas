@@ -64,11 +64,18 @@ jobs:
         if: steps.gate.outputs.ok == 'true'
         id: db
         run: |
-          find_id() { npx wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const m=JSON.parse(s).find(d=>d.name===process.argv[1]);process.stdout.write(m?m.uuid:"")})' "$DB_NAME"; }
-          id="$(find_id)"
-          if [ -z "$id" ]; then npx wrangler d1 create "$DB_NAME"; id="$(find_id)"; fi
-          test -n "$id"
-          echo "id=$id" >> "$GITHUB_OUTPUT"
+          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/d1/database"
+          call() { curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" "$@"; }
+          fail() { echo "::error title=Cloudflare D1::$1"; exit 1; }
+          pick() { node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{let j;try{j=JSON.parse(s)}catch{console.log("ERR:respuesta no JSON");return}if(!j.success){console.log("ERR:"+JSON.stringify(j.errors));return}const r=j.result;const m=Array.isArray(r)?r.find(d=>d.name===process.argv[1]):r;console.log(m?m.uuid:"")})' "$DB_NAME"; }
+          out="$(call "$api?name=$DB_NAME" | pick)"
+          case "$out" in ERR:*) fail "No se puede listar D1 ($out). Revisa que el token tenga Account > D1 > Edit y que CLOUDFLARE_ACCOUNT_ID sea el de esa cuenta." ;; esac
+          if [ -z "$out" ]; then
+            out="$(call -X POST "$api" -d "{\"name\":\"$DB_NAME\"}" | pick)"
+            case "$out" in ERR:*) fail "No se puede crear D1 ($out)." ;; esac
+          fi
+          test -n "$out" || fail "No se obtuvo el id de la base D1."
+          echo "id=$out" >> "$GITHUB_OUTPUT"
 
       # Schema is owned by the versioned drizzle/*.sql migrations; never DDL from requests.
       - name: Apply D1 migrations
