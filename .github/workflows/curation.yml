@@ -88,11 +88,13 @@ jobs:
           mkdir -p ci-logs
           N=$(printf '%s' "$MSG" | grep -oP '\[v5 propose=\K[0-9]+' || echo 0)
           step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
-          step curate python scripts/importers/curate_pangaea_v5.py --propose $N
+          AM=$(printf '%s' "$MSG" | grep -qP '\[v5[^\]]*agemodels' && echo --age-models || true)
+          step curate python scripts/importers/curate_pangaea_v5.py --propose $N $AM
           step build python scripts/build_quantitative_v5.py
+          step manifest python scripts/d1_release.py manifest --seed data/processed/atlas-v3.json --seed data/processed/atlas-v4.json --seed data/processed/atlas-v5.json --out app/atlas-web/data/release.json
       - name: Commit v5 contract, reports and release
         if: always()
         run: |
           git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
-          git add scripts/importers/pangaea_v5_sources.json reports/pangaea_v5_audit.json reports/quantitative_v5_release.json docs/curation/pangaea_v5_proposal.md data/processed/atlas-v5.json 2>/dev/null || true
+          git add scripts/importers/pangaea_v5_sources.json reports/pangaea_v5_audit.json reports/quantitative_v5_release.json docs/curation/pangaea_v5_proposal.md data/processed/atlas-v5.json app/atlas-web/data/release.json 2>/dev/null || true
           git diff --cached --quiet || { git commit -m "v5: PANGAEA contract batch (CI)"; git pull --rebase -X theirs origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }

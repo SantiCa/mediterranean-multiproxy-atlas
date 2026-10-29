@@ -16,7 +16,10 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION="atlas-quantitative-2026-10-29-v5-r1"
+# Content-addressed suffix: D1 is append-only and keyed by release id, so any change of
+# the v5 content must produce a new id (r1 kept for the first published content).
+VERSION_PREFIX="atlas-quantitative-2026-10-29-v5-"
+FIRST_SHA="3dfde3f8d3"
 BASELINE=ROOT/"data/processed/atlas-v4.json"
 spec=importlib.util.spec_from_file_location("v3_enrichment",ROOT/"scripts/build_quantitative_v3.py")
 v3=importlib.util.module_from_spec(spec)
@@ -137,10 +140,12 @@ def assemble():
             value=key(r)
             if value:grouped[value].append(r["id"])
         duplicates.extend({"basis":label,"records":ids,"status":"review_link; not merged"} for ids in grouped.values() if len(ids)>1)
+    digest=hashlib.sha256(json.dumps([seed["records"],seed["series"]],ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()).hexdigest()[:10]
+    VERSION=VERSION_PREFIX+("r1" if digest==FIRST_SHA else "c"+digest)
     seed.update(version=VERSION,parent_version=base["version"],append_series_ids=admissions)
     ages=[row[0] for s in seed["series"] for row in s["rows"] if row[0] is not None]
     counts={"records":len(seed["records"]),"series":len(seed["series"]),"values":sum(len(s["rows"]) for s in seed["series"]),"new_records":len(seed["records"])-len(base["records"]),"new_series":len(admissions),"new_values":sum(len(current[k]["rows"]) for k in admissions),"missing_age_values":sum(row[0] is None for s in seed["series"] for row in s["rows"])}
-    report={"version":VERSION,"parent_version":base["version"],"parent_sha256":hashlib.sha256(BASELINE.read_bytes()).hexdigest(),"parent_unchanged":True,"counts":counts,"input_fragments":input_counts,"family_counts":dict(Counter(s["family"] for s in seed["series"])),"comparison_groups":len({(s["proxy"],s["compatibility_group"],s["unit"]) for s in seed["series"]}),"numeric_age_extent_ka_bp":[min(ages),max(ages)],"admitted_series":admissions,"integration_quarantine":quarantine,"held_core_records":excluded_records,"linked_to_parent_records":linked,"partial_numeric_overlap_links":overlaps,"possible_record_overlap_links":duplicates,"source_audits":["reports/pangaea_v5_audit.json"],"limitations":["Bounded reviewed batch, not a complete numerical harvest","Published chronologies retained; no independent recalibration or age-depth interpolation","Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity","Legacy v3 quality restrictions and quarantines remain in force"]}
+    report={"version":VERSION,"parent_version":base["version"],"parent_sha256":hashlib.sha256(BASELINE.read_bytes()).hexdigest(),"parent_unchanged":True,"counts":counts,"input_fragments":input_counts,"family_counts":dict(Counter(s["family"] for s in seed["series"])),"comparison_groups":len({(s["proxy"],s["compatibility_group"],s["unit"]) for s in seed["series"]}),"numeric_age_extent_ka_bp":[min(ages),max(ages)],"admitted_series":admissions,"integration_quarantine":quarantine,"held_core_records":excluded_records,"linked_to_parent_records":linked,"partial_numeric_overlap_links":overlaps,"possible_record_overlap_links":duplicates,"source_audits":["reports/pangaea_v5_audit.json"],"limitations":["Bounded reviewed batch, not a complete numerical harvest","Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation","Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity","Legacy v3 quality restrictions and quarantines remain in force"]}
     report['scope']=inventory['scope']
     report['provider_quarantines']={provider:[{k:v for k,v in s.items() if k not in ('rows','source_header_original')} for s in fragment.get('quarantined_series',[])] for provider,fragment in zip(('pangaea',),fragments)}
     report['pending_source_candidates']={provider:fragment.get('pending',fragment.get('rejected_candidates',[])) for provider,fragment in zip(('pangaea',),fragments)}

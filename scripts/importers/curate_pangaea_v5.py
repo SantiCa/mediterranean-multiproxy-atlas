@@ -7,9 +7,13 @@ Fases (ver docs/curation/pangaea_v5.md):
                 Las entradas existentes del contrato (y sus decisiones de revisión) no se tocan.
   (sin flags)   Curación offline desde el contrato: fragmento compatible con build v4/v5.
 
-Reglas científicas (AGENTS.md): sin interpolar edad-profundidad, sin recalibrar 14C, sin
-convertir proxies. Edad aceptada solo si la columna nativa es «Age [ka BP]», «Age [a BP]»
+Reglas científicas (AGENTS.md): sin recalibrar 14C ni convertir proxies. Edad aceptada solo si la columna nativa es «Age [ka BP]», «Age [a BP]»
 (÷1000, cambio de unidad) o «Age [a AD/CE]» ((1950−CE)/1000, cambio de referencia).
+Sin columna de edad propia (autorización de Santiago, 29-10-2026): si otro dataset PANGAEA del
+mismo evento (etiqueta y coordenadas idénticas) publica Depth sed + edad admitida, la edad se
+interpola linealmente en profundidad entre sus puntos, sin extrapolar (fuera de rango: edad nula),
+y la serie queda marcada `interpolated_from_age_model` con el DOI del modelo.
+  --age-models  reevalúa entradas del contrato rechazadas por falta de edad.
 Grupo de comparación = parámetro PANGAEA + método + unidad (vocabulario controlado del
 repositorio); XRF de escáner/cuentas y razones de escáner quedan restringidas al dataset.
 """
@@ -149,6 +153,94 @@ def age_rule(header):
     return None
 
 
+AGE_MODEL_RULE = 'linear interpolation in sediment depth between published tie points of the same event; no extrapolation'
+
+
+def depth_column(header):
+    return next((k for k, h in enumerate(header) if h.startswith('Depth sed')), None)
+
+
+def same_event(a, b):
+    return bool(a and b) and a['label'] == b['label'] and abs(a['lat'] - b['lat']) < 1e-4 and abs(a['lon'] - b['lon']) < 1e-4
+
+
+def model_points(header, rows):
+    """(profundidad, edad ka BP) de un dataset con edad propia; error si no sirve como modelo."""
+    d, age = depth_column(header), age_rule(header)
+    if d is None or not age:
+        raise ValueError('sin Depth sed o sin edad admitida')
+    if re.search(r'radiocarbon|14C', header[age[0]], re.I):
+        raise ValueError('edad radiocarbono, no calendario')
+    pts = {}
+    for _, _, cells in rows:
+        z, a = number(cells[d]), number(cells[age[0]])
+        if z is None or a is None:
+            continue
+        a = age[2](a)
+        if z in pts and abs(pts[z] - a) > 1e-9:
+            raise ValueError(f'edades distintas a la misma profundidad {z:g}')
+        pts[z] = a
+    pts = sorted(pts.items())
+    if len(pts) < 2:
+        raise ValueError('menos de 2 puntos edad-profundidad')
+    if any(b[1] < a[1] for a, b in zip(pts, pts[1:])):
+        raise ValueError('edad no monótona con la profundidad (inversiones o hiatos no resolubles por interpolación)')
+    return header[d], age, pts
+
+
+def interpolate(pts, z):
+    """Edad lineal entre los dos puntos que rodean z; None fuera del rango del modelo."""
+    if z is None or z < pts[0][0] or z > pts[-1][0]:
+        return None
+    lo, hi = 0, len(pts) - 1
+    while hi - lo > 1:
+        mid = (lo + hi) // 2
+        lo, hi = (mid, hi) if pts[mid][0] <= z else (lo, mid)
+    (z0, a0), (z1, a1) = pts[lo], pts[hi]
+    return a0 if z1 == z0 else a0 + (a1 - a0) * (z - z0) / (z1 - z0)
+
+
+def find_age_model(i, header, event, siblings):
+    """Primer dataset hermano válido como modelo de edad; registra los descartados y su motivo."""
+    d = depth_column(header)
+    if d is None:
+        return None, [dict(reason='el dataset no tiene Depth sed: no se puede asignar edad por profundidad')]
+    tried = []
+    for q in siblings:
+        j = q['doi'].rsplit('.', 1)[-1]
+        if j == i:
+            continue
+        try:
+            tsv = get(f'https://doi.pangaea.de/10.1594/PANGAEA.{j}?format=textfile', RAW / f'{j}.tsv')
+            xml = get(f'https://doi.pangaea.de/10.1594/PANGAEA.{j}', RAW / f'{j}.xml', accept='application/vnd.pangaea.metadata+xml')
+            head, mh, mrows = parse_tsv(tsv)
+            _, events, _, lic, lic_uri = xml_meta(xml)
+            if len(events) != 1 or not same_event(events[0], event):
+                raise ValueError('evento distinto (etiqueta o coordenadas)')
+            mdepth, age, pts = model_points(mh, mrows)
+            if mdepth != header[d]:
+                raise ValueError(f'profundidad en otra unidad o marco ({mdepth} vs {header[d]})')
+        except Exception as e:
+            tried.append(dict(dataset=j, reason=str(e)[:200]))
+            continue
+        return dict(dataset=j, dataset_doi=f'10.1594/PANGAEA.{j}', tsv_sha256=sha(tsv), xml_sha256=sha(xml), header=mh,
+                    depth_column=depth_column(mh), age_column=age[0], age_column_original=mh[age[0]], age_transformation=age[1],
+                    tie_points=len(pts), depth_range=[pts[0][0], pts[-1][0]], age_range_ka=[pts[0][1], pts[-1][1]],
+                    license=lic, license_url=lic_uri, citation=(re.search(r'Citation:\t(.+)', head) or [None, None])[1],
+                    rule=AGE_MODEL_RULE), tried
+    return None, tried or [dict(reason='ningún dataset hermano con edad en el informe de cobertura')]
+
+
+def siblings_by_event(cov):
+    out = {}
+    for q in cov['queue']:
+        if q['has_age'] and q['n_events'] == 1:
+            out.setdefault(q['events'][0], []).append(q)
+    for v in out.values():  # primero los de cronología explícita / modelo de edad
+        v.sort(key=lambda q: ('cronologia' not in q['families'], not re.search(r'age model|chronolog|age-depth', q['title'], re.I), q['doi']))
+    return out
+
+
 def slug(s):
     return re.sub(r'[^A-Za-z0-9]+', '_', s).strip('_')[:60]
 
@@ -179,7 +271,8 @@ def propose(n):
     cov = json.loads(COVERAGE.read_text(encoding='utf-8'))
     contract = json.loads(CONTRACT_PATH.read_text(encoding='utf-8')) if CONTRACT_PATH.exists() else {}
     rank = {f: i for i, f in enumerate(PRIORITY)}
-    pool = [q for q in cov['queue'] if q['has_age'] and not q['already_in_atlas'] and q['n_events'] == 1
+    sib = siblings_by_event(cov)
+    pool = [q for q in cov['queue'] if (q['has_age'] or q['events'][0] in sib) and not q['already_in_atlas'] and q['n_events'] == 1
             and any(f in rank for f in q['families'])]
     # Reparto por turnos entre bloques de prioridad para que cada lote cubra foraminíferos,
     # oxigenación/MO, bioturbación, geoquímica inorgánica y el resto (petición 29-10-2026).
@@ -202,10 +295,13 @@ def propose(n):
             contract[i] = dict(status='rejected', reason=f'descarga/parseo: {e}'[:300], families=q['families'])
             continue
         age = age_rule(header)
+        model, tried = (None, []) if age or not events else find_age_model(i, header, events[0], sib.get(q['events'][0], []))
         entry = dict(status='proposed', families=q['families'], tsv_sha256=sha(tsv), xml_sha256=sha(xml), event=events[0] if events else None,
                      header=header, n_rows=len(rows), age_column=age[0] if age else None, age_transformation=age[1] if age else None,
                      paper=paper, license=lic, license_url=lic_uri, citation=(re.search(r'Citation:\t(.+)', head) or [None, None])[1],
                      columns=column_specs(header, cols))
+        if model or tried:
+            entry.update(age_model=model, age_model_rejected=tried)
         if paper and paper.get('doi'):
             try:
                 cr = get('https://api.crossref.org/works/' + quote(paper['doi'], safe=''), RAW / f'crossref-{sha(paper["doi"].lower().encode())[:16]}.json', limit=3_000_000)
@@ -213,8 +309,8 @@ def propose(n):
             except Exception as e:
                 entry['crossref_error'] = str(e)[:200]
         reasons = []
-        if not age:
-            reasons.append('sin columna de edad admitida (ka BP, a BP o a AD/CE)')
+        if not age and not model:
+            reasons.append('sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento')
         if not entry['event']:
             reasons.append('sin evento georreferenciado')
         if not entry['columns']:
@@ -229,6 +325,29 @@ def propose(n):
     print(f'Propuestos {added}; contrato con {len(contract)} entradas')
 
 
+def age_models():
+    """Reevalúa entradas rechazadas solo por falta de edad buscando un modelo del mismo evento."""
+    cov = json.loads(COVERAGE.read_text(encoding='utf-8'))
+    contract = json.loads(CONTRACT_PATH.read_text(encoding='utf-8'))
+    sib, fixed = siblings_by_event(cov), 0
+    for i, e in contract.items():
+        if e.get('status') != 'rejected' or not str(e.get('reason', '')).startswith('sin columna de edad') or not e.get('event'):
+            continue
+        if any(r for r in e['reason'].split('; ') if not r.startswith('sin columna de edad')):
+            continue
+        tsv = get(f'https://doi.pangaea.de/10.1594/PANGAEA.{i}?format=textfile', RAW / f'{i}.tsv', e['tsv_sha256'])
+        _, header, _ = parse_tsv(tsv)
+        model, tried = find_age_model(i, header, e['event'], sib.get(e['event']['label'], []))
+        e.update(age_model=model, age_model_rejected=tried)
+        if model:
+            e.update(status='proposed', reason=None)
+            fixed += 1
+        else:
+            e['reason'] = 'sin columna de edad admitida ni modelo de edad válido del mismo evento'
+    CONTRACT_PATH.write_text(json.dumps(contract, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    print(f'Modelos de edad asignados: {fixed}')
+
+
 def curate():
     contract = json.loads(CONTRACT_PATH.read_text(encoding='utf-8'))
     inventory = {r['id'] for r in json.loads((ROOT / 'data/processed/inventory-v2.json').read_text(encoding='utf-8'))['records']}
@@ -241,7 +360,15 @@ def curate():
         head, header, rows = parse_tsv(tsv)
         if header != e['header']:
             raise ValueError(f'{i}: cabecera distinta del contrato')
-        age = age_rule(header)
+        age, model, pts = age_rule(header), e.get('age_model'), None
+        if not age and model:
+            mtsv = get(f'https://doi.pangaea.de/10.1594/PANGAEA.{model["dataset"]}?format=textfile', RAW / f'{model["dataset"]}.tsv', model['tsv_sha256'])
+            _, mh, mrows = parse_tsv(mtsv)
+            if mh != model['header']:
+                raise ValueError(f'{i}: cabecera del modelo de edad distinta del contrato')
+            _, _, pts = model_points(mh, mrows)
+        elif not age:
+            continue
         ev, doi = e['event'], f'10.1594/PANGAEA.{i}'
         paper = dict(e.get('paper') or {})
         year = None
@@ -281,7 +408,23 @@ def curate():
                                       paper_title=paper_title, citation=e['citation']))
         if 'datacite:' + doi.lower() in inventory:
             r['inventory_ids'] = sorted(set(r['inventory_ids'] + ['datacite:' + doi.lower()]))
-        depth_col = next((k for k, h in enumerate(header) if h.startswith('Depth sed')), None)
+        depth_col = depth_column(header)
+        if pts:
+            # Edad asignada, no archivada: se distingue en la cronología y en cada serie.
+            chron = dict(chronology_status='interpolated_from_age_model',
+                         chronology_label='Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)',
+                         age_column_original=None, age_column_index=None, age_unit_original=model['age_column_original'] + ' (dataset ' + model['dataset_doi'] + ')',
+                         age_scale=model['age_transformation'], age_model=model['rule'] + '; model ' + model['dataset_doi'],
+                         age_transformation=model['age_transformation'] + '; then ' + model['rule'],
+                         age_model_dataset_doi=model['dataset_doi'], age_model_raw_sha256=model['tsv_sha256'], age_model_citation=model['citation'],
+                         age_model_tie_points=model['tie_points'], age_model_depth_range_m=model['depth_range'])
+            r['chronology_status'] = 'mixed' if r['chronology_status'] not in ('interpolated_from_age_model', 'mixed') and r.get('_has_archived') else 'interpolated_from_age_model'
+            r['qc_notes'] = sorted(set(r['qc_notes'] + ['Algunas series con edad interpolada desde un modelo de edad publicado del mismo evento']))
+        else:
+            chron = dict(chronology_status='published_BP', chronology_label='Edad publicada en el dataset · escala no armonizada',
+                         age_column_original=header[age[0]], age_column_index=age[0], age_unit_original=header[age[0]],
+                         age_scale=e['age_transformation'], age_model=e['age_transformation'], age_transformation=e['age_transformation'])
+            r['_has_archived'] = True
         for c in e['columns']:
             if c['status'] != 'approved':
                 continue
@@ -292,8 +435,12 @@ def curate():
                     missing += not cells[k].strip()
                     rejected += bool(cells[k].strip())
                     continue
-                a = number(cells[age[0]])
-                out.append([age[2](a) if a is not None else None, v, src_row, line, cells[age[0]], cells[k], None,
+                if pts:
+                    a_ka, a_txt = interpolate(pts, number(cells[depth_col])), None
+                else:
+                    a = number(cells[age[0]])
+                    a_ka, a_txt = (age[2](a) if a is not None else None), cells[age[0]]
+                out.append([a_ka, v, src_row, line, a_txt, cells[k], None,
                             number(cells[c['error_column']]) if c['error_column'] is not None else None,
                             cells[depth_col] if depth_col is not None else None])
             if len(out) < 3:
@@ -313,10 +460,7 @@ def curate():
                      evidence_type='as_archived_parameter', taxon=None, source_column=c['header'], source_column_index=k,
                      source_header_original=header, source_url=f'https://doi.pangaea.de/{doi}?format=textfile', dataset_doi=doi,
                      paper_doi=paper.get('doi'), publication_year=year, citation=e['citation'], license=e['license'], license_url=e['license_url'],
-                     raw_sha256=e['tsv_sha256'], xml_sha256=e['xml_sha256'], source_event=ev['label'], age_column_original=header[age[0]],
-                     age_column_index=age[0], age_unit_original=header[age[0]], age_scale=e['age_transformation'], chronology_status='published_BP',
-                     chronology_label='Edad publicada en el dataset · escala no armonizada', age_model=e['age_transformation'],
-                     age_transformation=e['age_transformation'], original_unit=c['unit'], parameter_name_pangaea=c['parameter'],
+                     raw_sha256=e['tsv_sha256'], xml_sha256=e['xml_sha256'], source_event=ev['label'], **chron, original_unit=c['unit'], parameter_name_pangaea=c['parameter'],
                      parameter_comment=c['comment'], proxy_families=c['families'],
                      uncertainty_type='native column adjacent (±/std dev), type as labelled' if c['error_column'] is not None else 'not_supplied_for_selected_column',
                      value_uncertainty_source_column=header[c['error_column']] if c['error_column'] is not None else None,
@@ -329,7 +473,7 @@ def curate():
                 reason = 'porcentaje fuera de [0,100]; serie completa preservada sin recortar'
             elif not ages:
                 reason = 'ninguna fila con edad'
-            elif re.search(r'radiocarbon|14C', header[age[0]], re.I):
+            elif not pts and re.search(r'radiocarbon|14C', header[age[0]], re.I):
                 # La columna «Age [ka BP]» describe una edad radiocarbono: no es calendario y no se recalibra.
                 reason = 'columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario'
             elif max(ages) > 2600 and not re.match(r'^\d{1,3}-\w', ev['label']):
@@ -343,11 +487,15 @@ def curate():
                 series.append(s)
             audits.append(dict(id=s['id'], status=s['review_status'], values=len(out), missing=missing, rejected_cells=rejected,
                                value_min=min(vals), value_max=max(vals), age_min=min(ages) if ages else None, age_max=max(ages) if ages else None,
-                               missing_age=sum(x[0] is None for x in out), negative_ages=sum(a < 0 for a in ages), group=group))
-    result = dict(fragment_version='pangaea-v5-2026-10-29-r1', records=list(records.values()), series=series, quarantined_series=quarantined, audit=audits,
+                               missing_age=sum(x[0] is None for x in out), negative_ages=sum(a < 0 for a in ages), group=group,
+                               age_model=model['dataset_doi'] if pts else None))
+    for r in records.values():
+        r.pop('_has_archived', None)
+    result = dict(fragment_version='pangaea-v5-2026-10-29-r2', records=list(records.values()), series=series, quarantined_series=quarantined, audit=audits,
                   pending=[dict(dataset=i, reason=e.get('reason')) for i, e in contract.items() if e['status'] == 'rejected'],
                   transformations=['Edades: ka BP identidad; a BP/1000; (1950−CE)/1000. Valores sin transformar',
-                                   'Sin promedios, suavizado, interpolación edad-profundidad ni nuevas calibraciones'])
+                                   'Sin columna de edad: interpolación lineal en profundidad desde el modelo publicado del mismo evento, sin extrapolar (series interpolated_from_age_model)',
+                                   'Sin promedios, suavizado ni nuevas calibraciones'])
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     counts = dict(records=len(records), series=len(series), values=sum(len(s['rows']) for s in series), quarantined_series=len(quarantined),
@@ -378,7 +526,10 @@ def write_proposal(contract, audits, counts):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--propose', type=int, default=0, help='Añadir N datasets nuevos al contrato (requiere red)')
+    ap.add_argument('--age-models', action='store_true', help='Reevaluar rechazados sin edad con el modelo del mismo evento (requiere red)')
     a = ap.parse_args()
+    if a.age_models:
+        age_models()
     if a.propose:
         propose(a.propose)
     curate()
