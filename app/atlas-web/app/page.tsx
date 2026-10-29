@@ -34,10 +34,14 @@ import SeriesComparison from "../components/SeriesComparison";
 import { timeExtent } from "../lib/timeline.mjs";
 import ProxyPicker from "../components/ProxyPicker";
 import { groupKey, proxyGroups } from "../lib/proxies.mjs";
+import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
+import { scientificNumber } from "../lib/format.mjs";
 
-const fmt = (x: any, n = 2) =>
+const fmt = (x: any, n?: number) =>
   typeof x === "number" && Number.isFinite(x)
-    ? x.toLocaleString("es-ES", { maximumFractionDigits: n })
+    ? n === undefined
+      ? scientificNumber(x)
+      : x.toLocaleString("es-ES", { maximumFractionDigits: n })
     : "—";
 const doiUrl = (doi: string) => (doi ? "https://doi.org/" + doi : undefined);
 const BASES: any = {
@@ -461,6 +465,11 @@ export default function Atlas() {
       "age_scale",
       "uncertainty_lower",
       "uncertainty_upper",
+      "license_url",
+      "citation",
+      "value_uncertainty_type",
+      "age_probability_levels",
+      "age_probability_bounds",
     ];
     const rows = items.flatMap((i) =>
       i.target.map((r: any) => [
@@ -491,10 +500,10 @@ export default function Atlas() {
         r[6],
         r[7],
         r[8],
-        i.record.dataset_doi,
-        i.record.paper_doi,
-        i.record.publication_year,
-        i.record.license,
+        seriesSource(i.series, i.record).dataset_doi,
+        seriesSource(i.series, i.record).paper_doi,
+        seriesSource(i.series, i.record).publication_year,
+        seriesSource(i.series, i.record).license,
         i.series.raw_sha256 || i.record.raw_sha256,
         i.series.source_url || i.record.source_url,
         i.series.age_scale ||
@@ -502,6 +511,11 @@ export default function Atlas() {
           i.series.age_transformation,
         i.series.uncertainty_bounds?.find((b: any) => b[0] === r[2])?.[1],
         i.series.uncertainty_bounds?.find((b: any) => b[0] === r[2])?.[2],
+        seriesSource(i.series, i.record).license_url,
+        seriesSource(i.series, i.record).citation,
+        rowUncertainty(i.series, r).value_uncertainty_type,
+        JSON.stringify(rowUncertainty(i.series, r).age_probability_levels),
+        JSON.stringify(rowUncertainty(i.series, r).age_probability_bounds),
       ]),
     );
     download(
@@ -567,10 +581,13 @@ export default function Atlas() {
         return `<circle cx="${p[0]}" cy="${p[1]}" r="8" fill="${color(i.value, ...domain, f.mode === "z")}" stroke="white" stroke-width="2"/><text x="${p[0] + 12}" y="${p[1] - 8}" font-size="12">${xml(i.record.name)} ${xml(fmt(i.value))}</text>`;
       })
       .join("");
-    const cites = valid.map((i) => i.record.dataset_doi).join("; ");
+    const cites = valid
+      .map((i) => seriesSource(i.series, i.record).dataset_doi)
+      .filter(Boolean)
+      .join("; ");
     download(
       "medatlas-map.svg",
-      `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840"><metadata>${xml(JSON.stringify({ filters: f, radius, surface, domain, projection: "equirectangular", bounds: { west, east, south, north }, version: data.release.id, dois: cites }))}</metadata><defs><linearGradient id="scale"><stop stop-color="${color(domain[0], ...domain, f.mode === "z")}"/><stop offset="50%" stop-color="${color((domain[0] + domain[1]) / 2, ...domain, f.mode === "z")}"/><stop offset="100%" stop-color="${color(domain[1], ...domain, f.mode === "z")}"/></linearGradient><clipPath id="map"><rect width="1200" height="720"/></clipPath></defs><rect width="1200" height="840" fill="#f7faf9"/><g clip-path="url(#map)" font-family="Arial">${shapes}${cells}${dots}</g><g font-family="Arial" fill="#183944"><rect x="950" y="740" width="220" height="8" fill="url(#scale)"/><text x="950" y="765" font-size="11">${fmt(domain[0])}</text><text x="1170" y="765" text-anchor="end" font-size="11">${fmt(domain[1])}</text><text x="24" y="750" font-size="20">${xml(proxy?.label)} · ${f.min}–${f.max} ka BP · ${f.mode === "z" ? "z por sondeo" : "valores originales"}</text><text x="24" y="775" font-size="12">${xml(f.mode === "z" ? `Referencia ${f.refMin}–${f.refMax} ka BP; media y σ por serie; mínimo 5 valores` : "Mediana/media por sitio, sin conversión entre métodos")}</text><text x="24" y="795" font-size="10">${xml(cites)}</text><text x="24" y="815" font-size="10">Proyección equirectangular; costa Natural Earth (dominio público). ${surface ? "IDW exploratorio, no reconstrucción validada." : "Puntos observados agregados."} Edades archivadas; BP antes de 1950.</text></g></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840"><metadata>${xml(JSON.stringify({ filters: f, radius, surface, domain, projection: "equirectangular", bounds: { west, east, south, north }, version: data.release.id, sources: valid.map((i) => seriesSource(i.series, i.record)), dois: cites }))}</metadata><defs><linearGradient id="scale"><stop stop-color="${color(domain[0], ...domain, f.mode === "z")}"/><stop offset="50%" stop-color="${color((domain[0] + domain[1]) / 2, ...domain, f.mode === "z")}"/><stop offset="100%" stop-color="${color(domain[1], ...domain, f.mode === "z")}"/></linearGradient><clipPath id="map"><rect width="1200" height="720"/></clipPath></defs><rect width="1200" height="840" fill="#f7faf9"/><g clip-path="url(#map)" font-family="Arial">${shapes}${cells}${dots}</g><g font-family="Arial" fill="#183944"><rect x="950" y="740" width="220" height="8" fill="url(#scale)"/><text x="950" y="765" font-size="11">${fmt(domain[0])}</text><text x="1170" y="765" text-anchor="end" font-size="11">${fmt(domain[1])}</text><text x="24" y="750" font-size="20">${xml(proxy?.label)} · ${f.min}–${f.max} ka BP · ${f.mode === "z" ? "z por sondeo" : "valores originales"}</text><text x="24" y="775" font-size="12">${xml(f.mode === "z" ? `Referencia ${f.refMin}–${f.refMax} ka BP; media y σ por serie; mínimo 5 valores` : "Mediana/media por sitio, sin conversión entre métodos")}</text><text x="24" y="795" font-size="10">${xml(cites)}</text><text x="24" y="815" font-size="10">Proyección equirectangular; costa Natural Earth (dominio público). ${surface ? "IDW exploratorio, no reconstrucción validada." : "Puntos observados agregados."} Edades archivadas; BP antes de 1950.</text></g></svg>`,
       "image/svg+xml",
     );
   }
@@ -655,7 +672,8 @@ export default function Atlas() {
         </nav>
         <div className="header-end">
           <span className="pilot">
-            <i /> ATLAS v3
+            <i /> ATLAS · datos v
+            {data.release.id.match(/-v([0-9]+)-/)?.[1] || "3"}
           </span>
           <button className="add-source" onClick={openSources}>
             <Plus size={15} /> Añadir fuente
@@ -1180,7 +1198,10 @@ export default function Atlas() {
                   </div>
                   <div>
                     <dt>Artículo</dt>
-                    <dd>{active.record.publication_year}</dd>
+                    <dd>
+                      {seriesSource(active.series, active.record)
+                        .publication_year ?? "No resuelto"}
+                    </dd>
                   </div>
                   <div>
                     <dt>Tipo de evidencia</dt>
@@ -1206,12 +1227,14 @@ export default function Atlas() {
                     <ExternalLink size={12} />
                   </a>
                   <a
-                    href={doiUrl(active.record.paper_doi)}
+                    href={doiUrl(
+                      seriesSource(active.series, active.record).paper_doi,
+                    )}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <BookOpen size={15} />{" "}
-                    {active.record.paper_doi
+                    {seriesSource(active.series, active.record).paper_doi
                       ? "Artículo científico"
                       : "Artículo original no resuelto"}{" "}
                     <ExternalLink size={12} />
@@ -1234,7 +1257,10 @@ export default function Atlas() {
                       <p key={i}>{n}</p>
                     ),
                   )}
-                  <p>Licencia: {active.record.license}</p>
+                  <p>
+                    Licencia:{" "}
+                    {seriesSource(active.series, active.record).license}
+                  </p>
                   <p className="hash">
                     SHA-256:{" "}
                     {active.series.raw_sha256 || active.record.raw_sha256}

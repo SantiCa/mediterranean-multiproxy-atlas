@@ -1,5 +1,6 @@
 import { env } from "cloudflare:workers";
-import seed from "../../../data/seed.json";
+import manifest from "../../../data/release.json";
+import { pickRelease } from "../../../lib/release.mjs";
 import { groupKey, seriesMatches } from "../../../lib/proxies.mjs";
 export const dynamic = "force-dynamic";
 const LIMIT = 150000;
@@ -19,12 +20,13 @@ export async function GET(request: Request) {
       { error: "Selecciona variable, método y unidad" },
       { status: 400 },
     );
-  if (
-    !(await db
-      .prepare("SELECT id FROM atlas_releases WHERE id=?")
-      .bind(seed.version)
-      .first())
-  )
+  const served = pickRelease(
+    manifest,
+    (await db.prepare("SELECT id FROM atlas_releases").all()).results.map(
+      (r: any) => r.id,
+    ),
+  );
+  if (!served)
     return Response.json({ error: "Importación pendiente" }, { status: 409 });
   const f = {
     provider: p.get("provider") || "all",
@@ -45,6 +47,7 @@ export async function GET(request: Request) {
     .filter(
       (s: any) =>
         groupKey(s) === group &&
+        served.seriesIds.has(s.id) &&
         records.has(s.record_id) &&
         seriesMatches(s, records.get(s.record_id), f),
     );
@@ -91,7 +94,7 @@ export async function GET(request: Request) {
     series.push(...batch);
   }
   return Response.json(
-    { version: seed.version, group, count: n, series },
+    { version: served.version, group, count: n, series },
     { headers: { "Cache-Control": "private, max-age=60" } },
   );
 }

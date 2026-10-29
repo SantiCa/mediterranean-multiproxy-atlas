@@ -2,6 +2,8 @@
 import { useMemo, useState, useRef, useEffect } from "react";
 import { Download, Expand, X } from "lucide-react";
 import { displayRows, extent } from "../lib/plot.mjs";
+import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
+import { scientificNumber } from "../lib/format.mjs";
 const COLORS = [
   "#267783",
   "#c75e36",
@@ -12,8 +14,7 @@ const COLORS = [
   "#a64d76",
   "#65743d",
 ];
-const num = (v: number) =>
-  v.toLocaleString("es-ES", { maximumFractionDigits: 3 });
+const num = scientificNumber;
 const hash = (s: string) =>
   Array.from(s).reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 0);
 function save(name: string, content: string, type: string) {
@@ -203,10 +204,18 @@ export default function SeriesComparison({ items, active, f, release }: any) {
       "age_scale",
       "uncertainty_lower",
       "uncertainty_upper",
+      "license",
+      "license_url",
+      "citation",
+      "publication_year",
+      "value_uncertainty_type",
+      "age_probability_levels",
+      "age_probability_bounds",
     ];
     const rows = series.flatMap((i: any) =>
       i.plotRows.map((p: any) => {
-        const row = p.source;
+        const row = p.source,
+          origin = seriesSource(i.series, i.record);
         return [
           i.record.name,
           i.series.proxy,
@@ -226,8 +235,8 @@ export default function SeriesComparison({ items, active, f, release }: any) {
           i.reference.n,
           i.reference.mean,
           i.reference.sd,
-          i.record.dataset_doi,
-          i.record.paper_doi,
+          origin.dataset_doi,
+          origin.paper_doi,
           i.series.raw_sha256 || i.record.raw_sha256,
           i.series.source_url || i.record.source_url,
           i.series.compatibility_group,
@@ -236,6 +245,13 @@ export default function SeriesComparison({ items, active, f, release }: any) {
             i.series.age_transformation,
           i.series.uncertainty_bounds?.find((b: any) => b[0] === row[2])?.[1],
           i.series.uncertainty_bounds?.find((b: any) => b[0] === row[2])?.[2],
+          origin.license,
+          origin.license_url,
+          origin.citation,
+          origin.publication_year,
+          rowUncertainty(i.series, row).value_uncertainty_type,
+          JSON.stringify(rowUncertainty(i.series, row).age_probability_levels),
+          JSON.stringify(rowUncertainty(i.series, row).age_probability_bounds),
         ];
       }),
     );
@@ -382,8 +398,9 @@ export default function SeriesComparison({ items, active, f, release }: any) {
           population_sd: true,
           records: selected.map((i: any) => ({
             id: i.record.id,
-            dataset: i.record.dataset_doi,
-            paper: i.record.paper_doi,
+            dataset: seriesSource(i.series, i.record).dataset_doi,
+            paper: seriesSource(i.series, i.record).paper_doi,
+            ...seriesSource(i.series, i.record),
             sha256: i.series.raw_sha256 || i.record.raw_sha256,
             reference: i.reference,
           })),

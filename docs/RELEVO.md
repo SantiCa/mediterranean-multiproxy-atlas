@@ -2,31 +2,26 @@
 
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
-- Último agente: ChatGPT/Codex
+- Último agente: Claude
 - Fecha: 29-10-2026
-- Tarea actual: PROXY-COVERAGE-TEMP — completar cobertura cuantitativa de temperatura del Mediterráneo y áreas adyacentes, por fuentes/consultas/versiones verificadas.
-- Estado: CUR-ODP977A cerrada y preparada para merge --no-ff a main con pruebas correctas; cobertura de temperatura aún sin empezar.
-- Hecho: auditoría en docs/curation/odp977a_depth_audit.md; cmbsf significa metros corregidos bajo el fondo en el artículo primario. No convertir por100. Anotación en config/curation_assertions.json, recibos y script audit_odp977a_depth.py, handoff docs/handoffs/cur-odp977a.md. Raw/semillas/valores sin cambios.
-- Pruebas: 43 Python locales (originales disponibles),14Node correctas. No equivale a CI remota. La descarga del manuscrito aceptado da403; la definición se verifica en el texto publicado del editor. ODP y TSV sí archivados porhash.
-- Cola: temperatura → foraminíferos → oxigenación geoquímica y otros indicadores → aporte detrítico → corrientes. GP03 permanece pendiente.
+- Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
+- Estado: PUBLICAR-V5 hecho y fusionado en main (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
+- Hecho: validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
+- Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. Construir un inventario reproducible de cobertura de temperatura usando las fuentes ya enlazadas: PANGAEA/DataCite y NOAA, caja [-10,28,42,48], sin edades ni proxies inventados. Contar candidatos, descargados, aptos, duplicados, ambiguos y pendientes.
-2. Separar target (SST/aire/agua subsuperficial), estación, método/calibración, unidad y cronología. Buscar primero registros ausentes de grupos existentes; permitir agrupación solo con equivalencia documentada. Misma unidad no basta.
-3. Revisar el bundle PANGAEA921235 de ODP977A: ya hay cocolitos, faltan sus SST/isótopos; no crear un segundo sondeo para otro dataset del mismo core. Conservar dependencia del modelo de edadSST.
-4. Antes de incorporar datos, revisar el borrador v4 guardado en origin/codex/draft-quantitative-v4 (8239b28), docs/handoffs/quantitative-v4-draft.md; reutilizar lo verificado. No fusionar ciegamente su seed ni sobreescribir vite.config.ts deClaude. El estado online sigue siendo v3:29registros/81.339valores.
-5. Tras cada paso válido, actualizar este archivo y commit+push a relevo. Al cerrar tarea, pruebas, handoff y merge --no-ff a main.
+1. Revisar en Actions el despliegue de V18 (aviso «Carga D1 parcial» es normal los primeros días; la web sirve v3 hasta completar v5).
+2. Volver a `claude/curado`: modelos de edad en otro dataset del mismo evento PANGAEA → asignar edad por interpolación lineal en profundidad dentro del rango del modelo (sin extrapolar), marcando la edad como interpolada y citando el dataset del modelo. Autorizado por Santiago (29-10-2026).
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
+- 29-10 (18:06): publicar la versión actual; seguir curado en `claude/curado`; interpolar edades con el modelo de edad de otro archivo cuando sea posible. Preguntas: ¿«añadir registros» con un enlace lo cura? ¿coste de cuenta propia con datos privados coherentes con la base?
 - Priorizar completar los proxies existentes, especialmente temperatura, foraminíferos, oxigenación, detrítico y corrientes; no afirmar exhaustividad de toda la literatura sin cobertura verificable.
 - Inconsistencias visibles en la aplicación; que el usuario pueda decidir sobre uso/exclusión conservando advertencias y originales.
 - Tabla al elegir proxy/mapa con todos los valores del archivo original y cuáles se usan; excluir muestras individuales o todo un sondeo, con trazabilidad.
-- La resoluciónODP977A debe aparecer en esa futura interfazQC; no como conversión de profundidad.
+- La resolución ODP977A debe aparecer en esa futura interfaz QC; no como conversión de profundidad.
 
 ## Hosting y preservación
 
-HOST-CF operativo (Claude, 29-10): Cloudflare propio, despliegue automático por `.github/workflows/deploy-cloudflare.yml` al fusionar en `main` (cambios en `app/atlas-web/`). URL elegida por Santiago: **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas` con v3 cargada: 29 registros/81.339 valores). La URL anterior medatlas.santic1290.workers.dev deja de servir al renombrar el subdominio; el Worker `medatlas` sobrante puede borrarse en el panel. Pendiente: que la validación post-despliegue (V11) pase; Roll del token (se expuso en chat); decidir visibilidad (pública). Sites sigue activo; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.
-
-El borradorv4 previo está preservado en la rama remota indicada, no integrado ni desplegado:17registros/63series/22.195valores nuevos; revisión local completa de103.534observaciones. Los cambios no subidos de esa sesión ya están conservados allí. No confundir borrador con el estado activo.
+HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sigue activo; su despliegue es exclusivo de Codex (con la semilla fuera del bundle, Sites seguirá sirviendo su última release cargada). Un solo agente a la vez en `relevo`.

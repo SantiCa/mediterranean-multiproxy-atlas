@@ -1,0 +1,2310 @@
+{
+  "fragment_version": "pangaea-v4-2026-10-29-r1",
+  "baseline_version": "atlas-quantitative-2026-10-29-v3-r1",
+  "audit": [
+    {
+      "id": "pangaea-69822:G_ruber_white_d18O_PDB",
+      "record_id": "pangaea-69822",
+      "dataset_doi": "10.1594/PANGAEA.69822",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 26,
+      "value_min": -0.6,
+      "value_max": 3.11,
+      "age_min": 145.3,
+      "age_max": 183.3,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 1,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "G. ruber w δ18O [‰ PDB]",
+      "raw_sha256": "8ad47dcc411a1dd6961e89daaa6919e8fcaba999e57e3c8cd5f72421453dbf0e"
+    },
+    {
+      "id": "pangaea-69823:G_ruber_white_d18O_PDB",
+      "record_id": "pangaea-69823",
+      "dataset_doi": "10.1594/PANGAEA.69823",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": -1.76,
+      "value_max": 2.92,
+      "age_min": 0.21,
+      "age_max": 193.07,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "G. ruber w δ18O [‰ PDB]",
+      "raw_sha256": "c464d2eac44caf90a30ccd92c352b1f915a3927d116fc1c8eaadc8e27a5b5667"
+    },
+    {
+      "id": "pangaea-69824:G_ruber_white_d18O_PDB",
+      "record_id": "pangaea-69824",
+      "dataset_doi": "10.1594/PANGAEA.69824",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 144,
+      "value_min": -1.2,
+      "value_max": 3.47,
+      "age_min": 0.21,
+      "age_max": 142.28,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "G. ruber w δ18O [‰ PDB]",
+      "raw_sha256": "e9447641c18b540cda7fd2050df57667ae8a0d528c4470d5aa551dc978e9f245"
+    },
+    {
+      "id": "pangaea-69825:G_ruber_white_d18O_PDB",
+      "record_id": "pangaea-69825",
+      "dataset_doi": "10.1594/PANGAEA.69825",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 120,
+      "value_min": -1.35,
+      "value_max": 3.34,
+      "age_min": 0.21,
+      "age_max": 193.07,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "G. ruber w δ18O [‰ PDB]",
+      "raw_sha256": "3440e9d9ac5ac0d7a40e303b2e3c188e72590bd7df2c46652caff350b34c25a1"
+    },
+    {
+      "id": "pangaea-667328:Candona_d18O_PDB",
+      "record_id": "pangaea-667328",
+      "dataset_doi": "10.1594/PANGAEA.667328",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 248,
+      "value_min": -6.788,
+      "value_max": 0.679,
+      "age_min": 8.2744,
+      "age_max": 26.5142,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "Candona spp. δ18O [‰ PDB]",
+      "raw_sha256": "a255ade85e50d73c8a2210459212de82a0adacba578b4e2f23c904e590daa4b4"
+    },
+    {
+      "id": "pangaea-667403:TOC",
+      "record_id": "pangaea-667328",
+      "dataset_doi": "10.1594/PANGAEA.667403",
+      "status": "quarantined_percentage_outside_0_100",
+      "values": 135,
+      "value_min": -1.71,
+      "value_max": 22.3,
+      "age_min": 0.9734,
+      "age_max": 25.2367,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "TOC [%]",
+      "raw_sha256": "de4ed40f3ce459c40ab014370c76622ca2701d9639407e841ee9cf968e1d5b58"
+    },
+    {
+      "id": "pangaea-878051:LOI_550C_4h",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878051",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 236,
+      "value_min": 2.9,
+      "value_max": 14.4,
+      "age_min": -0.057,
+      "age_max": 11.228,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 6,
+      "source_column_index": 3,
+      "source_column": "LOI [%] (LOI 550°C/4h = MO%)",
+      "raw_sha256": "aef0b039a3e1b9a87a73d221afc1376c74d7373df9abb046c59b530b5964d37d"
+    },
+    {
+      "id": "pangaea-878051:LOI_950C_2h",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878051",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 236,
+      "value_min": 2.2,
+      "value_max": 25.9,
+      "age_min": -0.057,
+      "age_max": 11.228,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 6,
+      "source_column_index": 4,
+      "source_column": "LOI [%] (LOI 950°C/2h = CaCO3%)",
+      "raw_sha256": "aef0b039a3e1b9a87a73d221afc1376c74d7373df9abb046c59b530b5964d37d"
+    },
+    {
+      "id": "pangaea-878051:LOI_residual",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878051",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 236,
+      "value_min": 66.8,
+      "value_max": 93.4,
+      "age_min": -0.057,
+      "age_max": 11.228,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 6,
+      "source_column_index": 5,
+      "source_column": "Residual [%] (LOI Residue)",
+      "raw_sha256": "aef0b039a3e1b9a87a73d221afc1376c74d7373df9abb046c59b530b5964d37d"
+    },
+    {
+      "id": "pangaea-878053:XRF_MgO",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.0,
+      "value_max": 2.95,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 71,
+      "negative_age_values": 1,
+      "source_column_index": 2,
+      "source_column": "MgO [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Al2O3",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 2.67,
+      "value_max": 16.96,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 4,
+      "source_column": "Al2O3 [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_SiO2",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 12.05,
+      "value_max": 40.22,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 6,
+      "source_column": "SiO2 [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_P2O5",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.0,
+      "value_max": 0.53,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 2,
+      "negative_age_values": 1,
+      "source_column_index": 8,
+      "source_column": "P2O5 [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_TS",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.08,
+      "value_max": 2.84,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 10,
+      "source_column": "TS [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_K2O",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.92,
+      "value_max": 3.17,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 12,
+      "source_column": "K2O [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_CaO",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.54,
+      "value_max": 30.96,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 14,
+      "source_column": "CaO [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_TiO2",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.36,
+      "value_max": 0.96,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 16,
+      "source_column": "TiO2 [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_MnO",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.04,
+      "value_max": 0.5,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 18,
+      "source_column": "MnO [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Fe2O3",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 2.6,
+      "value_max": 7.44,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 20,
+      "source_column": "Fe2O3 [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Ni",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.0,
+      "value_max": 0.01,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 24,
+      "negative_age_values": 1,
+      "source_column_index": 22,
+      "source_column": "Ni [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Cu",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.0,
+      "value_max": 0.01,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 22,
+      "negative_age_values": 1,
+      "source_column_index": 24,
+      "source_column": "Cu [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Zn",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.01,
+      "value_max": 0.02,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 26,
+      "source_column": "Zn [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Rb",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.01,
+      "value_max": 0.03,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 28,
+      "source_column": "Rb [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Sr",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.03,
+      "value_max": 0.06,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 30,
+      "source_column": "Sr [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-878053:XRF_Zr",
+      "record_id": "pangaea-878051",
+      "dataset_doi": "10.1594/PANGAEA.878053",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 75,
+      "value_min": 0.01,
+      "value_max": 0.03,
+      "age_min": -0.03,
+      "age_max": 11.221,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 1,
+      "source_column_index": 32,
+      "source_column": "Zr [%]",
+      "raw_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473"
+    },
+    {
+      "id": "pangaea-940127:C30_fatty_acid_dD",
+      "record_id": "pangaea-940127",
+      "dataset_doi": "10.1594/PANGAEA.940127",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 179,
+      "value_min": -168.5,
+      "value_max": -98.5,
+      "age_min": 0.149,
+      "age_max": 160.528,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 7,
+      "source_column": "C30 Alk Acid δD [‰ SMOW] (vs. VSMOW)",
+      "raw_sha256": "17fcf8ef7b7ec9f258800decc59d1525dc41a9fd462e9e15e00d11590d66e8ca"
+    },
+    {
+      "id": "pangaea-940127:C30_fatty_acid_d13C",
+      "record_id": "pangaea-940127",
+      "dataset_doi": "10.1594/PANGAEA.940127",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 125,
+      "value_min": -30.6,
+      "value_max": -25.34,
+      "age_min": 0.149,
+      "age_max": 160.528,
+      "values_missing_age": 0,
+      "missing_value_cells": 54,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 9,
+      "source_column": "C30 Alk Acid δ13C [‰ PDB] (vs. VPDB)",
+      "raw_sha256": "17fcf8ef7b7ec9f258800decc59d1525dc41a9fd462e9e15e00d11590d66e8ca"
+    },
+    {
+      "id": "pangaea-944656:TOC",
+      "record_id": "pangaea-944656",
+      "dataset_doi": "10.1594/PANGAEA.944656",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 142,
+      "value_min": 0.114,
+      "value_max": 1.722,
+      "age_min": 0.076,
+      "age_max": 9.786,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 3,
+      "source_column": "TOC [%]",
+      "raw_sha256": "a737bc472d8c37c98abb78a598c682c04a473d5242501971e596e454741f4d8d"
+    },
+    {
+      "id": "pangaea-944660:Sr_detrital",
+      "record_id": "pangaea-944656",
+      "dataset_doi": "10.1594/PANGAEA.944660",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 27,
+      "value_min": 110.3,
+      "value_max": 186.8,
+      "age_min": 0.1,
+      "age_max": 9.6,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 4,
+      "source_column": "Sr [mg/kg]",
+      "raw_sha256": "9624d0fc9be5fbdfd0d16b6aa850195764f6be8cd67f76732d8a08f2394226ab"
+    },
+    {
+      "id": "pangaea-944660:Sr87_Sr86_detrital",
+      "record_id": "pangaea-944656",
+      "dataset_doi": "10.1594/PANGAEA.944660",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 27,
+      "value_min": 0.714622,
+      "value_max": 0.719847,
+      "age_min": 0.1,
+      "age_max": 9.6,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 5,
+      "source_column": "87Sr/86Sr",
+      "raw_sha256": "9624d0fc9be5fbdfd0d16b6aa850195764f6be8cd67f76732d8a08f2394226ab"
+    },
+    {
+      "id": "pangaea-944660:Nd143_Nd144_detrital",
+      "record_id": "pangaea-944656",
+      "dataset_doi": "10.1594/PANGAEA.944660",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 27,
+      "value_min": 0.511989,
+      "value_max": 0.512092,
+      "age_min": 0.1,
+      "age_max": 9.6,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 6,
+      "source_column": "143Nd/144Nd",
+      "raw_sha256": "9624d0fc9be5fbdfd0d16b6aa850195764f6be8cd67f76732d8a08f2394226ab"
+    },
+    {
+      "id": "pangaea-944660:epsilon_Nd_detrital",
+      "record_id": "pangaea-944656",
+      "dataset_doi": "10.1594/PANGAEA.944660",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 27,
+      "value_min": -12.1,
+      "value_max": -10.6,
+      "age_min": 0.1,
+      "age_max": 9.6,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 7,
+      "source_column": "ε-Nd(0)",
+      "raw_sha256": "9624d0fc9be5fbdfd0d16b6aa850195764f6be8cd67f76732d8a08f2394226ab"
+    },
+    {
+      "id": "pangaea-954457:TOC",
+      "record_id": "pangaea-954457",
+      "dataset_doi": "10.1594/PANGAEA.954457",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 197,
+      "value_min": 0.9,
+      "value_max": 27.0,
+      "age_min": -0.069,
+      "age_max": 14.288,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 2,
+      "source_column_index": 1,
+      "source_column": "TOC [%]",
+      "raw_sha256": "18a582fcf03c8aafb3d7a4786c2abe241a68d3d3890a95a12bcef3729825e4ec"
+    },
+    {
+      "id": "pangaea-961488:nC31_dD_ice_corrected",
+      "record_id": "pangaea-961488",
+      "dataset_doi": "10.1594/PANGAEA.961488",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 114,
+      "value_min": -171.69,
+      "value_max": -107.49,
+      "age_min": 0.154,
+      "age_max": 26.142,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "C31 δD [‰ SMOW] (dDwax n-C31 alkane [VSMOW] (i...)",
+      "raw_sha256": "186f075f73187d43b381cf1f6cbac1d466e7f9869372766698f06d6e7ba22fa7"
+    },
+    {
+      "id": "pangaea-961488:nC31_dD_vegetation_ice_corrected",
+      "record_id": "pangaea-961488",
+      "dataset_doi": "10.1594/PANGAEA.961488",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 114,
+      "value_min": -59.52,
+      "value_max": 16.33,
+      "age_min": 0.154,
+      "age_max": 26.142,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 4,
+      "source_column": "C31 δD [‰ SMOW] (dDp-vc-ic n-C31 alkane [VSMOW...)",
+      "raw_sha256": "186f075f73187d43b381cf1f6cbac1d466e7f9869372766698f06d6e7ba22fa7"
+    },
+    {
+      "id": "pangaea-961488:C4_plant_contribution",
+      "record_id": "pangaea-961488",
+      "dataset_doi": "10.1594/PANGAEA.961488",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 114,
+      "value_min": 32.0,
+      "value_max": 63.0,
+      "age_min": 0.154,
+      "age_max": 26.142,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 6,
+      "source_column": "C4 plant contrib [%] (%C4 calculated from n-C31 alk...)",
+      "raw_sha256": "186f075f73187d43b381cf1f6cbac1d466e7f9869372766698f06d6e7ba22fa7"
+    },
+    {
+      "id": "pangaea-962012:TOC",
+      "record_id": "pangaea-962012",
+      "dataset_doi": "10.1594/PANGAEA.962012",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 221,
+      "value_min": 0.5,
+      "value_max": 28.9,
+      "age_min": 0.005,
+      "age_max": 15.596,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 1,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 1,
+      "source_column": "TOC [%]",
+      "raw_sha256": "9ca8f2f377c2523f666a6fcc4ad08cfa1a3e632ba22ceef1938d5d56e1e31abe"
+    },
+    {
+      "id": "pangaea-962012:CaCO3",
+      "record_id": "pangaea-962012",
+      "dataset_doi": "10.1594/PANGAEA.962012",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 221,
+      "value_min": 0.0,
+      "value_max": 63.8,
+      "age_min": 0.005,
+      "age_max": 15.596,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 1,
+      "repeated_age_value_pairs": 1,
+      "zeros": 25,
+      "negative_age_values": 0,
+      "source_column_index": 2,
+      "source_column": "CaCO3 [%]",
+      "raw_sha256": "9ca8f2f377c2523f666a6fcc4ad08cfa1a3e632ba22ceef1938d5d56e1e31abe"
+    },
+    {
+      "id": "pangaea-962033:nC27_dD",
+      "record_id": "pangaea-962012",
+      "dataset_doi": "10.1594/PANGAEA.962033",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 62,
+      "value_min": -223.7,
+      "value_max": -170.1,
+      "age_min": 0.378,
+      "age_max": 14.597,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 1,
+      "source_column": "C27 δD [‰ SMOW]",
+      "raw_sha256": "a14c9461ab05017e700fb361b5a87299003cb3d5e0e639a8bab626a9f6c133bf"
+    },
+    {
+      "id": "pangaea-962033:nC29_dD",
+      "record_id": "pangaea-962012",
+      "dataset_doi": "10.1594/PANGAEA.962033",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 62,
+      "value_min": -222.5,
+      "value_max": -176.1,
+      "age_min": 0.378,
+      "age_max": 14.597,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 3,
+      "source_column": "C29 δD [‰ SMOW]",
+      "raw_sha256": "a14c9461ab05017e700fb361b5a87299003cb3d5e0e639a8bab626a9f6c133bf"
+    },
+    {
+      "id": "pangaea-962033:nC31_dD",
+      "record_id": "pangaea-962012",
+      "dataset_doi": "10.1594/PANGAEA.962033",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 62,
+      "value_min": -220.7,
+      "value_max": -166.9,
+      "age_min": 0.378,
+      "age_max": 14.597,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 5,
+      "source_column": "C31 δD [‰ SMOW]",
+      "raw_sha256": "a14c9461ab05017e700fb361b5a87299003cb3d5e0e639a8bab626a9f6c133bf"
+    },
+    {
+      "id": "pangaea-962034:fucose_d18O",
+      "record_id": "pangaea-962012",
+      "dataset_doi": "10.1594/PANGAEA.962034",
+      "status": "native_cells_units_point_chronology_and_bibliography_checked",
+      "values": 29,
+      "value_min": 22.8,
+      "value_max": 37.8,
+      "age_min": 10.466,
+      "age_max": 14.597,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 0,
+      "source_column_index": 1,
+      "source_column": "δ18O fuc [‰ SMOW]",
+      "raw_sha256": "71c9361f8f19d12cc2e71e221e22f3e34bf2fdd37e0bee8ce54e60898e5b53a0"
+    },
+    {
+      "id": "pangaea-995820:leaf_wax_dD_NMF",
+      "record_id": "pangaea-954457",
+      "dataset_doi": "10.1594/PANGAEA.995820",
+      "status": "quarantined_mixed_age_units_in_native_column",
+      "values": 132,
+      "value_min": -181.2336603,
+      "value_max": -165.3763891,
+      "age_min": -0.069,
+      "age_max": 11150.0,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 4,
+      "source_column_index": 1,
+      "source_column": "δD wax [‰ SMOW]",
+      "raw_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5"
+    },
+    {
+      "id": "pangaea-995820:precipitation_dD_leafwax",
+      "record_id": "pangaea-954457",
+      "dataset_doi": "10.1594/PANGAEA.995820",
+      "status": "quarantined_mixed_age_units_in_native_column",
+      "values": 132,
+      "value_min": -59.96975923,
+      "value_max": -41.76393699,
+      "age_min": -0.069,
+      "age_max": 11150.0,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 4,
+      "source_column_index": 2,
+      "source_column": "δD precip reconst [‰ SMOW]",
+      "raw_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5"
+    },
+    {
+      "id": "pangaea-995820:precipitation_dD_anomaly",
+      "record_id": "pangaea-954457",
+      "dataset_doi": "10.1594/PANGAEA.995820",
+      "status": "quarantined_mixed_age_units_in_native_column",
+      "values": 132,
+      "value_min": -3.969759231,
+      "value_max": 14.23606301,
+      "age_min": -0.069,
+      "age_max": 11150.0,
+      "values_missing_age": 0,
+      "missing_value_cells": 0,
+      "rejected_cells": [],
+      "repeated_age_values": 0,
+      "repeated_age_value_pairs": 0,
+      "zeros": 0,
+      "negative_age_values": 4,
+      "source_column_index": 5,
+      "source_column": "ΔδD wax [‰ SMOW]",
+      "raw_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5"
+    }
+  ],
+  "pending": [
+    {
+      "dataset": 944656,
+      "columns": "elemental block after second depth column",
+      "reason": "second native Depth sed conflicts with point age-depth block; no unsupported age assignment"
+    },
+    {
+      "dataset": 995820,
+      "reason": "All three series quarantined: mixed fractional ka and integer-like year magnitudes in a column labelled ka BP. No age repair inferred"
+    },
+    {
+      "dataset": 944662,
+      "reason": "SL114BC Sr/Nd table lacks point ages; no depth-age interpolation"
+    },
+    {
+      "dataset": 878052,
+      "reason": "grain-size table lacks ages; no join/interpolation to another table"
+    },
+    {
+      "dataset": 115685,
+      "reason": "foraminiferal assemblage table lacks ages"
+    },
+    {
+      "datasets": [
+        951489,
+        971569,
+        971806,
+        971862,
+        208119
+      ],
+      "reason": "downloaded depth-only tables not admitted to time-mapped collection"
+    },
+    {
+      "dataset": 995820,
+      "columns": [
+        "native reconstructed min",
+        "native reconstructed max"
+      ],
+      "reason": "epsilon sensitivity parameters numerically reversed relative to labels; preserved separately, not standardized confidence limits"
+    }
+  ],
+  "transformations": [
+    "Source point ages in ka BP and numerical values preserved unchanged",
+    "Source PDB kept distinct from VPDB; VSMOW label only when explicit in native parameter comment",
+    "Native SD/SE/2-sigma types retained without rescaling",
+    "No averaging, smoothing, age interpolation or new climate calibration"
+  ],
+  "quarantined_series": [
+    {
+      "id": "pangaea-667403:TOC",
+      "record_id": "pangaea-667328",
+      "proxy": "TOC",
+      "variable_id": "TOC",
+      "label": "TOC · GeoB7608-1",
+      "unit": "%",
+      "family": "Geoquímica elemental",
+      "method": "Bahr2008: TC minus TIC; element analyser CHN as archived",
+      "compatibility_group": "TOC_w:2008_667403",
+      "evidence_type": "measurement",
+      "taxon": null,
+      "source_column": "TOC [%]",
+      "source_column_index": 2,
+      "source_header_original": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "TOC [%]"
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.667403?format=textfile",
+      "dataset_doi": "10.1594/PANGAEA.667403",
+      "paper_doi": "10.1029/2007GC001683",
+      "publication_year": 2008,
+      "citation": "Bahr, André (2007): Age and total organic carbon of sediment core GeoB7608-1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.667403, ",
+      "authors": [
+        {
+          "given": "André",
+          "family": "Bahr"
+        },
+        {
+          "given": "Frank",
+          "family": "Lamy"
+        },
+        {
+          "given": "Helge W.",
+          "family": "Arz"
+        },
+        {
+          "given": "Candace",
+          "family": "Major"
+        },
+        {
+          "given": "Olga",
+          "family": "Kwiecien"
+        },
+        {
+          "given": "Gerold",
+          "family": "Wefer"
+        }
+      ],
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "raw_sha256": "de4ed40f3ce459c40ab014370c76622ca2701d9639407e841ee9cf968e1d5b58",
+      "xml_sha256": "fbe7a32b2fac6fd5ad652062bd656cfb41bc734a3069ce32c221dca09295a23e",
+      "crossref_sha256": "0f64fd272a5e1b72a8274ca95ca5a5791bdae3564be32158de31528e35031db1",
+      "source_event": "GeoB7608-1",
+      "age_column_original": "Age [ka BP]",
+      "age_column_index": 1,
+      "age_unit_original": "ka BP",
+      "age_scale": "Published Age [ka BP] retained; independent chronology/calibration review not performed",
+      "chronology_status": "published_BP",
+      "chronology_label": "BP publicado · escala no armonizada",
+      "age_model": "Published Age [ka BP] retained; independent chronology/calibration review not performed",
+      "age_transformation": "identity: source point age in ka BP",
+      "original_unit": "TOC [%]",
+      "uncertainty_type": "not_supplied_for_selected_column",
+      "value_uncertainty_source_column": null,
+      "depth_frame": "native sediment depth m; no cross-table remapping",
+      "value_uncertainty_source_column_index": null,
+      "review_status": "quarantined_percentage_outside_0_100",
+      "out_of_range_percent_cells": 1,
+      "quarantine_reason": "Native percentage includes values outside [0,100]; whole series preserved without clipping or deletion"
+    },
+    {
+      "id": "pangaea-995820:leaf_wax_dD_NMF",
+      "record_id": "pangaea-954457",
+      "proxy": "leaf_wax_dD_NMF",
+      "variable_id": "leaf_wax_dD_NMF",
+      "label": "δ2H · cera foliar NMF",
+      "unit": "‰ VSMOW",
+      "family": "Isótopos estables",
+      "method": "GC-IRMS and terrestrial NMF endmember, FernandezPerez2026",
+      "compatibility_group": "leaf_wax_dD_NMF_w:2026_995820",
+      "evidence_type": "published_transformation",
+      "taxon": "terrestrial leaf wax n-alkanes",
+      "source_column": "δD wax [‰ SMOW]",
+      "source_column_index": 1,
+      "source_header_original": [
+        "Age [ka BP]",
+        "δD wax [‰ SMOW]",
+        "δD precip reconst [‰ SMOW]",
+        "δD precip reconst min [‰ SMOW]",
+        "δD precip reconst max [‰ SMOW]",
+        "ΔδD wax [‰ SMOW]"
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.995820?format=textfile",
+      "dataset_doi": "10.1594/PANGAEA.995820",
+      "paper_doi": "10.1029/2026PA005517",
+      "publication_year": 2026,
+      "citation": "Fernández-Pérez, Uxía; Santos, Ricardo N; Rodrigues, Teresa; Schefuß, Enno; Bao, Roberto; Raposeiro, Pedro Miguel; Sáez, Alberto; Giralt, Santiago; Martín-Puertas, Celia; Francus, Pierre; Trigo, Ricardo M; Ramos, Alexandre M; Hernández, Armand (2026): Holocene hydrogen isotope composition of precipitation (δ²H) reconstructed from sedimentary leaf wax n-alkanes in Lake Peixão, Serra da Estrela, Portugal [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.995820",
+      "authors": [
+        {
+          "given": "U.",
+          "family": "Fernández‐Pérez"
+        },
+        {
+          "given": "R. N.",
+          "family": "Santos"
+        },
+        {
+          "given": "T.",
+          "family": "Rodrigues"
+        },
+        {
+          "given": "E.",
+          "family": "Schefuß"
+        },
+        {
+          "given": "R.",
+          "family": "Bao"
+        },
+        {
+          "given": "P. M.",
+          "family": "Raposeiro"
+        },
+        {
+          "given": "A.",
+          "family": "Sáez"
+        },
+        {
+          "given": "S.",
+          "family": "Giralt"
+        },
+        {
+          "given": "C.",
+          "family": "Martín‐Puertas"
+        },
+        {
+          "given": "P.",
+          "family": "Francus"
+        },
+        {
+          "given": "R. M.",
+          "family": "Trigo"
+        },
+        {
+          "given": "A. M.",
+          "family": "Ramos"
+        },
+        {
+          "given": "A.",
+          "family": "Hernández"
+        }
+      ],
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "raw_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5",
+      "xml_sha256": "6de7c7919f02fae01750bb4fef4978f1d66b7bc0e58f89adcd0ec29275b3093a",
+      "crossref_sha256": "014c87ce0ba10651f560e71bec9646b06687acaa802a81dbdcc87d334ee353d5",
+      "source_event": "PEX19-01",
+      "age_column_original": "Age [ka BP]",
+      "age_column_index": 0,
+      "age_unit_original": "ka BP",
+      "age_scale": "Hernandez2023 age model as archived; calibrated ka BP, reference 1950 CE",
+      "chronology_status": "quarantined_mixed_units",
+      "chronology_label": "Calendario publicado",
+      "age_model": "Hernandez2023 age model as archived; calibrated ka BP, reference 1950 CE",
+      "age_transformation": "identity: source point age in ka BP",
+      "original_unit": "δD wax [‰ SMOW]",
+      "uncertainty_type": "not_supplied_for_selected_column",
+      "value_uncertainty_source_column": null,
+      "depth_frame": "native sediment depth m; no cross-table remapping",
+      "value_uncertainty_source_column_index": null,
+      "standard_reference_evidence": "Native parameter COMMENT explicitly states VSMOW or V-SMOW; header shorthand SMOW preserved in original column; numerical identity",
+      "review_status": "quarantined_mixed_age_units_in_native_column",
+      "quarantine_reason": "Age [ka BP] column changes from fractional ka (-0.069 to 0.970) to integer-like 1003..11150 while source describes Holocene ~11100 years; no conditional division by 1000 inferred"
+    },
+    {
+      "id": "pangaea-995820:precipitation_dD_leafwax",
+      "record_id": "pangaea-954457",
+      "proxy": "precipitation_dD_leafwax",
+      "variable_id": "precipitation_dD_leafwax",
+      "label": "δ2H · precipitación reconstruida",
+      "unit": "‰ VSMOW",
+      "family": "Isótopos estables",
+      "method": "Published precipitation dD, epsilon_app -129 per mil, FernandezPerez2026",
+      "compatibility_group": "precipitation_dD_leafwax_w:2026_995820",
+      "evidence_type": "published_reconstruction",
+      "taxon": null,
+      "source_column": "δD precip reconst [‰ SMOW]",
+      "source_column_index": 2,
+      "source_header_original": [
+        "Age [ka BP]",
+        "δD wax [‰ SMOW]",
+        "δD precip reconst [‰ SMOW]",
+        "δD precip reconst min [‰ SMOW]",
+        "δD precip reconst max [‰ SMOW]",
+        "ΔδD wax [‰ SMOW]"
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.995820?format=textfile",
+      "dataset_doi": "10.1594/PANGAEA.995820",
+      "paper_doi": "10.1029/2026PA005517",
+      "publication_year": 2026,
+      "citation": "Fernández-Pérez, Uxía; Santos, Ricardo N; Rodrigues, Teresa; Schefuß, Enno; Bao, Roberto; Raposeiro, Pedro Miguel; Sáez, Alberto; Giralt, Santiago; Martín-Puertas, Celia; Francus, Pierre; Trigo, Ricardo M; Ramos, Alexandre M; Hernández, Armand (2026): Holocene hydrogen isotope composition of precipitation (δ²H) reconstructed from sedimentary leaf wax n-alkanes in Lake Peixão, Serra da Estrela, Portugal [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.995820",
+      "authors": [
+        {
+          "given": "U.",
+          "family": "Fernández‐Pérez"
+        },
+        {
+          "given": "R. N.",
+          "family": "Santos"
+        },
+        {
+          "given": "T.",
+          "family": "Rodrigues"
+        },
+        {
+          "given": "E.",
+          "family": "Schefuß"
+        },
+        {
+          "given": "R.",
+          "family": "Bao"
+        },
+        {
+          "given": "P. M.",
+          "family": "Raposeiro"
+        },
+        {
+          "given": "A.",
+          "family": "Sáez"
+        },
+        {
+          "given": "S.",
+          "family": "Giralt"
+        },
+        {
+          "given": "C.",
+          "family": "Martín‐Puertas"
+        },
+        {
+          "given": "P.",
+          "family": "Francus"
+        },
+        {
+          "given": "R. M.",
+          "family": "Trigo"
+        },
+        {
+          "given": "A. M.",
+          "family": "Ramos"
+        },
+        {
+          "given": "A.",
+          "family": "Hernández"
+        }
+      ],
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "raw_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5",
+      "xml_sha256": "6de7c7919f02fae01750bb4fef4978f1d66b7bc0e58f89adcd0ec29275b3093a",
+      "crossref_sha256": "014c87ce0ba10651f560e71bec9646b06687acaa802a81dbdcc87d334ee353d5",
+      "source_event": "PEX19-01",
+      "age_column_original": "Age [ka BP]",
+      "age_column_index": 0,
+      "age_unit_original": "ka BP",
+      "age_scale": "Hernandez2023 age model as archived; calibrated ka BP, reference 1950 CE",
+      "chronology_status": "quarantined_mixed_units",
+      "chronology_label": "Calendario publicado",
+      "age_model": "Hernandez2023 age model as archived; calibrated ka BP, reference 1950 CE",
+      "age_transformation": "identity: source point age in ka BP",
+      "original_unit": "δD precip reconst [‰ SMOW]",
+      "uncertainty_type": "not_supplied_for_selected_column",
+      "value_uncertainty_source_column": null,
+      "depth_frame": "native sediment depth m; no cross-table remapping",
+      "value_uncertainty_source_column_index": null,
+      "standard_reference_evidence": "Native parameter COMMENT explicitly states VSMOW or V-SMOW; header shorthand SMOW preserved in original column; numerical identity",
+      "native_epsilon_sensitivity_parameters": [
+        {
+          "source_row": 1,
+          "epsilon_minus12_parameter": "-42.97119204",
+          "epsilon_plus12_parameter": "-68.98330007",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 2,
+          "epsilon_minus12_parameter": "-42.97119204",
+          "epsilon_plus12_parameter": "-68.98330007",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 3,
+          "epsilon_minus12_parameter": "-42.98056825",
+          "epsilon_plus12_parameter": "-68.99242143",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 4,
+          "epsilon_minus12_parameter": "-44.29591936",
+          "epsilon_plus12_parameter": "-70.27202121",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 5,
+          "epsilon_minus12_parameter": "-44.22944024",
+          "epsilon_plus12_parameter": "-70.20734900",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 6,
+          "epsilon_minus12_parameter": "-43.79896980",
+          "epsilon_plus12_parameter": "-69.78857878",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 7,
+          "epsilon_minus12_parameter": "-44.08925695",
+          "epsilon_plus12_parameter": "-70.07097590",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 8,
+          "epsilon_minus12_parameter": "-44.78429097",
+          "epsilon_plus12_parameter": "-70.74711885",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 9,
+          "epsilon_minus12_parameter": "-44.15784193",
+          "epsilon_plus12_parameter": "-70.13769674",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 10,
+          "epsilon_minus12_parameter": "-44.20045495",
+          "epsilon_plus12_parameter": "-70.17915154",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 11,
+          "epsilon_minus12_parameter": "-42.28111552",
+          "epsilon_plus12_parameter": "-68.31197987",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 12,
+          "epsilon_minus12_parameter": "-39.55959400",
+          "epsilon_plus12_parameter": "-65.66442950",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 13,
+          "epsilon_minus12_parameter": "-36.19890885",
+          "epsilon_plus12_parameter": "-62.39508799",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 14,
+          "epsilon_minus12_parameter": "-34.31128189",
+          "epsilon_plus12_parameter": "-60.55876686",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 15,
+          "epsilon_minus12_parameter": "-32.44890650",
+          "epsilon_plus12_parameter": "-58.74701097",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 16,
+          "epsilon_minus12_parameter": "-31.09084293",
+          "epsilon_plus12_parameter": "-57.42585966",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 17,
+          "epsilon_minus12_parameter": "-30.36339195",
+          "epsilon_plus12_parameter": "-56.71818084",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 18,
+          "epsilon_minus12_parameter": "-29.37672986",
+          "epsilon_plus12_parameter": "-55.75833630",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 19,
+          "epsilon_minus12_parameter": "-29.95944266",
+          "epsilon_plus12_parameter": "-56.32521092",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 20,
+          "epsilon_minus12_parameter": "-32.18871215",
+          "epsilon_plus12_parameter": "-58.49388871",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 21,
+          "epsilon_minus12_parameter": "-32.31725625",
+          "epsilon_plus12_parameter": "-58.61893898",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 22,
+          "epsilon_minus12_parameter": "-32.45911521",
+          "epsilon_plus12_parameter": "-58.75694220",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 23,
+          "epsilon_minus12_parameter": "-32.14554383",
+          "epsilon_plus12_parameter": "-58.45189372",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 24,
+          "epsilon_minus12_parameter": "-32.48576903",
+          "epsilon_plus12_parameter": "-58.78287157",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 25,
+          "epsilon_minus12_parameter": "-33.24307812",
+          "epsilon_plus12_parameter": "-59.51959695",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 26,
+          "epsilon_minus12_parameter": "-33.99774647",
+          "epsilon_plus12_parameter": "-60.25375336",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 27,
+          "epsilon_minus12_parameter": "-34.30930565",
+          "epsilon_plus12_parameter": "-60.55684434",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 28,
+          "epsilon_minus12_parameter": "-35.34413096",
+          "epsilon_plus12_parameter": "-61.56354303",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 29,
+          "epsilon_minus12_parameter": "-34.08021621",
+          "epsilon_plus12_parameter": "-60.33398157",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 30,
+          "epsilon_minus12_parameter": "-33.49978292",
+          "epsilon_plus12_parameter": "-59.76932449",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 31,
+          "epsilon_minus12_parameter": "-32.77691627",
+          "epsilon_plus12_parameter": "-59.06610540",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 32,
+          "epsilon_minus12_parameter": "-31.54338280",
+          "epsilon_plus12_parameter": "-57.86609947",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 33,
+          "epsilon_minus12_parameter": "-32.24016846",
+          "epsilon_plus12_parameter": "-58.54394644",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 34,
+          "epsilon_minus12_parameter": "-33.21601670",
+          "epsilon_plus12_parameter": "-59.49327106",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 35,
+          "epsilon_minus12_parameter": "-34.07411052",
+          "epsilon_plus12_parameter": "-60.32804183",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 36,
+          "epsilon_minus12_parameter": "-34.71201896",
+          "epsilon_plus12_parameter": "-60.94861188",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 37,
+          "epsilon_minus12_parameter": "-34.65165940",
+          "epsilon_plus12_parameter": "-60.88989289",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 38,
+          "epsilon_minus12_parameter": "-35.16061922",
+          "epsilon_plus12_parameter": "-61.38501915",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 39,
+          "epsilon_minus12_parameter": "-36.10102944",
+          "epsilon_plus12_parameter": "-62.29986896",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 40,
+          "epsilon_minus12_parameter": "-36.25639508",
+          "epsilon_plus12_parameter": "-62.45101175",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 41,
+          "epsilon_minus12_parameter": "-34.49574561",
+          "epsilon_plus12_parameter": "-60.73821685",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 42,
+          "epsilon_minus12_parameter": "-36.49362887",
+          "epsilon_plus12_parameter": "-62.68179751",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 43,
+          "epsilon_minus12_parameter": "-36.66238639",
+          "epsilon_plus12_parameter": "-62.84596819",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 44,
+          "epsilon_minus12_parameter": "-36.22256523",
+          "epsilon_plus12_parameter": "-62.41810140",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 45,
+          "epsilon_minus12_parameter": "-36.79971017",
+          "epsilon_plus12_parameter": "-62.97955950",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 46,
+          "epsilon_minus12_parameter": "-37.71255018",
+          "epsilon_plus12_parameter": "-63.86758845",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 47,
+          "epsilon_minus12_parameter": "-36.77520355",
+          "epsilon_plus12_parameter": "-62.95571897",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 48,
+          "epsilon_minus12_parameter": "-37.79548599",
+          "epsilon_plus12_parameter": "-63.94827006",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 49,
+          "epsilon_minus12_parameter": "-37.79548599",
+          "epsilon_plus12_parameter": "-63.94827006",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 50,
+          "epsilon_minus12_parameter": "-39.29491071",
+          "epsilon_plus12_parameter": "-65.40694032",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 51,
+          "epsilon_minus12_parameter": "-41.62946272",
+          "epsilon_plus12_parameter": "-67.67803904",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 52,
+          "epsilon_minus12_parameter": "-41.30157103",
+          "epsilon_plus12_parameter": "-67.35905948",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 53,
+          "epsilon_minus12_parameter": "-41.83760342",
+          "epsilon_plus12_parameter": "-67.88052247",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 54,
+          "epsilon_minus12_parameter": "-41.93951691",
+          "epsilon_plus12_parameter": "-67.97966594",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 55,
+          "epsilon_minus12_parameter": "-41.39456578",
+          "epsilon_plus12_parameter": "-67.44952661",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 56,
+          "epsilon_minus12_parameter": "-41.43062495",
+          "epsilon_plus12_parameter": "-67.48460569",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 57,
+          "epsilon_minus12_parameter": "-41.82304359",
+          "epsilon_plus12_parameter": "-67.86635837",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 58,
+          "epsilon_minus12_parameter": "-42.73590310",
+          "epsilon_plus12_parameter": "-68.75440630",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 59,
+          "epsilon_minus12_parameter": "-43.03218270",
+          "epsilon_plus12_parameter": "-69.04263300",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 60,
+          "epsilon_minus12_parameter": "-43.93572372",
+          "epsilon_plus12_parameter": "-69.92161572",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 61,
+          "epsilon_minus12_parameter": "-44.78596124",
+          "epsilon_plus12_parameter": "-70.74874372",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 62,
+          "epsilon_minus12_parameter": "-44.78596124",
+          "epsilon_plus12_parameter": "-70.74874372",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 63,
+          "epsilon_minus12_parameter": "-45.27755618",
+          "epsilon_plus12_parameter": "-71.22697707",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 64,
+          "epsilon_minus12_parameter": "-45.63020564",
+          "epsilon_plus12_parameter": "-71.57004150",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 65,
+          "epsilon_minus12_parameter": "-46.14170531",
+          "epsilon_plus12_parameter": "-72.06763857",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 66,
+          "epsilon_minus12_parameter": "-46.83778846",
+          "epsilon_plus12_parameter": "-72.74480214",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 67,
+          "epsilon_minus12_parameter": "-46.01876173",
+          "epsilon_plus12_parameter": "-71.94803661",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 68,
+          "epsilon_minus12_parameter": "-46.26619090",
+          "epsilon_plus12_parameter": "-72.18874064",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 69,
+          "epsilon_minus12_parameter": "-46.69304358",
+          "epsilon_plus12_parameter": "-72.60399143",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 70,
+          "epsilon_minus12_parameter": "-46.09044939",
+          "epsilon_plus12_parameter": "-72.01777580",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 71,
+          "epsilon_minus12_parameter": "-46.09369999",
+          "epsilon_plus12_parameter": "-72.02093804",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 72,
+          "epsilon_minus12_parameter": "-46.48123394",
+          "epsilon_plus12_parameter": "-72.39793879",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 73,
+          "epsilon_minus12_parameter": "-45.43585737",
+          "epsilon_plus12_parameter": "-71.38097562",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 74,
+          "epsilon_minus12_parameter": "-44.50621180",
+          "epsilon_plus12_parameter": "-70.47659789",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 75,
+          "epsilon_minus12_parameter": "-42.97741111",
+          "epsilon_plus12_parameter": "-68.98935011",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 76,
+          "epsilon_minus12_parameter": "-41.37611283",
+          "epsilon_plus12_parameter": "-67.43157523",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 77,
+          "epsilon_minus12_parameter": "-39.72915610",
+          "epsilon_plus12_parameter": "-65.82938289",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 78,
+          "epsilon_minus12_parameter": "-38.93103783",
+          "epsilon_plus12_parameter": "-65.05295752",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 79,
+          "epsilon_minus12_parameter": "-38.59653837",
+          "epsilon_plus12_parameter": "-64.72754979",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 80,
+          "epsilon_minus12_parameter": "-39.46758890",
+          "epsilon_plus12_parameter": "-65.57492510",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 81,
+          "epsilon_minus12_parameter": "-38.07818259",
+          "epsilon_plus12_parameter": "-64.22328295",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 82,
+          "epsilon_minus12_parameter": "-37.37853542",
+          "epsilon_plus12_parameter": "-63.54265224",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 83,
+          "epsilon_minus12_parameter": "-36.37619146",
+          "epsilon_plus12_parameter": "-62.56755206",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 84,
+          "epsilon_minus12_parameter": "-34.95152941",
+          "epsilon_plus12_parameter": "-61.18161242",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 85,
+          "epsilon_minus12_parameter": "-32.42805070",
+          "epsilon_plus12_parameter": "-58.72672203",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 86,
+          "epsilon_minus12_parameter": "-32.85300779",
+          "epsilon_plus12_parameter": "-59.14012876",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 87,
+          "epsilon_minus12_parameter": "-33.21654683",
+          "epsilon_plus12_parameter": "-59.49378678",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 88,
+          "epsilon_minus12_parameter": "-34.61667144",
+          "epsilon_plus12_parameter": "-60.85585590",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 89,
+          "epsilon_minus12_parameter": "-34.61667144",
+          "epsilon_plus12_parameter": "-60.85585590",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 90,
+          "epsilon_minus12_parameter": "-37.55621393",
+          "epsilon_plus12_parameter": "-63.71550144",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 91,
+          "epsilon_minus12_parameter": "-36.33356853",
+          "epsilon_plus12_parameter": "-62.52608762",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 92,
+          "epsilon_minus12_parameter": "-36.82577507",
+          "epsilon_plus12_parameter": "-63.00491595",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 93,
+          "epsilon_minus12_parameter": "-35.63749324",
+          "epsilon_plus12_parameter": "-61.84893170",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 94,
+          "epsilon_minus12_parameter": "-35.19975789",
+          "epsilon_plus12_parameter": "-61.42309403",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 95,
+          "epsilon_minus12_parameter": "-33.67210680",
+          "epsilon_plus12_parameter": "-59.93696460",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 96,
+          "epsilon_minus12_parameter": "-33.66447280",
+          "epsilon_plus12_parameter": "-59.92953809",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 97,
+          "epsilon_minus12_parameter": "-33.66447280",
+          "epsilon_plus12_parameter": "-59.92953809",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 98,
+          "epsilon_minus12_parameter": "-33.24545965",
+          "epsilon_plus12_parameter": "-59.52191375",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 99,
+          "epsilon_minus12_parameter": "-32.03699237",
+          "epsilon_plus12_parameter": "-58.34629269",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 100,
+          "epsilon_minus12_parameter": "-30.72381626",
+          "epsilon_plus12_parameter": "-57.06880880",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 101,
+          "epsilon_minus12_parameter": "-29.87650224",
+          "epsilon_plus12_parameter": "-56.24452483",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 102,
+          "epsilon_minus12_parameter": "-29.78184495",
+          "epsilon_plus12_parameter": "-56.15244033",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 103,
+          "epsilon_minus12_parameter": "-29.28820486",
+          "epsilon_plus12_parameter": "-55.67221741",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 104,
+          "epsilon_minus12_parameter": "-28.37763576",
+          "epsilon_plus12_parameter": "-54.78639765",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 105,
+          "epsilon_minus12_parameter": "-28.69378979",
+          "epsilon_plus12_parameter": "-55.09395859",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 106,
+          "epsilon_minus12_parameter": "-28.50977299",
+          "epsilon_plus12_parameter": "-54.91494338",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 107,
+          "epsilon_minus12_parameter": "-30.27853482",
+          "epsilon_plus12_parameter": "-56.63563013",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 108,
+          "epsilon_minus12_parameter": "-31.40820065",
+          "epsilon_plus12_parameter": "-57.73459157",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 109,
+          "epsilon_minus12_parameter": "-33.40746541",
+          "epsilon_plus12_parameter": "-59.67951618",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 110,
+          "epsilon_minus12_parameter": "-34.56181160",
+          "epsilon_plus12_parameter": "-60.80248716",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 111,
+          "epsilon_minus12_parameter": "-33.46644075",
+          "epsilon_plus12_parameter": "-59.73688857",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 112,
+          "epsilon_minus12_parameter": "-34.44683357",
+          "epsilon_plus12_parameter": "-60.69063425",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 113,
+          "epsilon_minus12_parameter": "-34.33004539",
+          "epsilon_plus12_parameter": "-60.57702037",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 114,
+          "epsilon_minus12_parameter": "-34.91121742",
+          "epsilon_plus12_parameter": "-61.14239610",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 115,
+          "epsilon_minus12_parameter": "-34.80858193",
+          "epsilon_plus12_parameter": "-61.04255026",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 116,
+          "epsilon_minus12_parameter": "-36.35133317",
+          "epsilon_plus12_parameter": "-62.54336941",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 117,
+          "epsilon_minus12_parameter": "-34.00929841",
+          "epsilon_plus12_parameter": "-60.26499132",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 118,
+          "epsilon_minus12_parameter": "-34.00929841",
+          "epsilon_plus12_parameter": "-60.26499132",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 119,
+          "epsilon_minus12_parameter": "-33.20081254",
+          "epsilon_plus12_parameter": "-59.47848015",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 120,
+          "epsilon_minus12_parameter": "-35.75351933",
+          "epsilon_plus12_parameter": "-61.96180420",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 121,
+          "epsilon_minus12_parameter": "-35.75351933",
+          "epsilon_plus12_parameter": "-61.96180420",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 122,
+          "epsilon_minus12_parameter": "-38.37935541",
+          "epsilon_plus12_parameter": "-64.51626987",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 123,
+          "epsilon_minus12_parameter": "-38.99977027",
+          "epsilon_plus12_parameter": "-65.11982182",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 124,
+          "epsilon_minus12_parameter": "-40.58993506",
+          "epsilon_plus12_parameter": "-66.66676582",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 125,
+          "epsilon_minus12_parameter": "-39.36326016",
+          "epsilon_plus12_parameter": "-65.47343202",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 126,
+          "epsilon_minus12_parameter": "-39.36326016",
+          "epsilon_plus12_parameter": "-65.47343202",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 127,
+          "epsilon_minus12_parameter": "-39.30365200",
+          "epsilon_plus12_parameter": "-65.41544401",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 128,
+          "epsilon_minus12_parameter": "-37.74628913",
+          "epsilon_plus12_parameter": "-63.90041037",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 129,
+          "epsilon_minus12_parameter": "-37.74628913",
+          "epsilon_plus12_parameter": "-63.90041037",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 130,
+          "epsilon_minus12_parameter": "-37.13278275",
+          "epsilon_plus12_parameter": "-63.30357914",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 131,
+          "epsilon_minus12_parameter": "-37.13278275",
+          "epsilon_plus12_parameter": "-63.30357914",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        },
+        {
+          "source_row": 132,
+          "epsilon_minus12_parameter": "-37.13278275",
+          "epsilon_plus12_parameter": "-63.30357914",
+          "note": "Native min/max names are numerically reversed; not reordered or exported as standardized uncertainty"
+        }
+      ],
+      "review_status": "quarantined_mixed_age_units_in_native_column",
+      "quarantine_reason": "Age [ka BP] column changes from fractional ka (-0.069 to 0.970) to integer-like 1003..11150 while source describes Holocene ~11100 years; no conditional division by 1000 inferred"
+    },
+    {
+      "id": "pangaea-995820:precipitation_dD_anomaly",
+      "record_id": "pangaea-954457",
+      "proxy": "precipitation_dD_anomaly",
+      "variable_id": "precipitation_dD_anomaly",
+      "label": "Anomalía δ2H · precipitación",
+      "unit": "‰ VSMOW",
+      "family": "Isótopos estables",
+      "method": "Published deviation from OIPC MAP -56 per mil, FernandezPerez2026",
+      "compatibility_group": "precipitation_dD_anomaly_w:2026_995820",
+      "evidence_type": "published_transformation",
+      "taxon": null,
+      "source_column": "ΔδD wax [‰ SMOW]",
+      "source_column_index": 5,
+      "source_header_original": [
+        "Age [ka BP]",
+        "δD wax [‰ SMOW]",
+        "δD precip reconst [‰ SMOW]",
+        "δD precip reconst min [‰ SMOW]",
+        "δD precip reconst max [‰ SMOW]",
+        "ΔδD wax [‰ SMOW]"
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.995820?format=textfile",
+      "dataset_doi": "10.1594/PANGAEA.995820",
+      "paper_doi": "10.1029/2026PA005517",
+      "publication_year": 2026,
+      "citation": "Fernández-Pérez, Uxía; Santos, Ricardo N; Rodrigues, Teresa; Schefuß, Enno; Bao, Roberto; Raposeiro, Pedro Miguel; Sáez, Alberto; Giralt, Santiago; Martín-Puertas, Celia; Francus, Pierre; Trigo, Ricardo M; Ramos, Alexandre M; Hernández, Armand (2026): Holocene hydrogen isotope composition of precipitation (δ²H) reconstructed from sedimentary leaf wax n-alkanes in Lake Peixão, Serra da Estrela, Portugal [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.995820",
+      "authors": [
+        {
+          "given": "U.",
+          "family": "Fernández‐Pérez"
+        },
+        {
+          "given": "R. N.",
+          "family": "Santos"
+        },
+        {
+          "given": "T.",
+          "family": "Rodrigues"
+        },
+        {
+          "given": "E.",
+          "family": "Schefuß"
+        },
+        {
+          "given": "R.",
+          "family": "Bao"
+        },
+        {
+          "given": "P. M.",
+          "family": "Raposeiro"
+        },
+        {
+          "given": "A.",
+          "family": "Sáez"
+        },
+        {
+          "given": "S.",
+          "family": "Giralt"
+        },
+        {
+          "given": "C.",
+          "family": "Martín‐Puertas"
+        },
+        {
+          "given": "P.",
+          "family": "Francus"
+        },
+        {
+          "given": "R. M.",
+          "family": "Trigo"
+        },
+        {
+          "given": "A. M.",
+          "family": "Ramos"
+        },
+        {
+          "given": "A.",
+          "family": "Hernández"
+        }
+      ],
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "raw_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5",
+      "xml_sha256": "6de7c7919f02fae01750bb4fef4978f1d66b7bc0e58f89adcd0ec29275b3093a",
+      "crossref_sha256": "014c87ce0ba10651f560e71bec9646b06687acaa802a81dbdcc87d334ee353d5",
+      "source_event": "PEX19-01",
+      "age_column_original": "Age [ka BP]",
+      "age_column_index": 0,
+      "age_unit_original": "ka BP",
+      "age_scale": "Hernandez2023 age model as archived; calibrated ka BP, reference 1950 CE",
+      "chronology_status": "quarantined_mixed_units",
+      "chronology_label": "Calendario publicado",
+      "age_model": "Hernandez2023 age model as archived; calibrated ka BP, reference 1950 CE",
+      "age_transformation": "identity: source point age in ka BP",
+      "original_unit": "ΔδD wax [‰ SMOW]",
+      "uncertainty_type": "not_supplied_for_selected_column",
+      "value_uncertainty_source_column": null,
+      "depth_frame": "native sediment depth m; no cross-table remapping",
+      "value_uncertainty_source_column_index": null,
+      "standard_reference_evidence": "Native parameter COMMENT explicitly states VSMOW or V-SMOW; header shorthand SMOW preserved in original column; numerical identity",
+      "review_status": "quarantined_mixed_age_units_in_native_column",
+      "quarantine_reason": "Age [ka BP] column changes from fractional ka (-0.069 to 0.970) to integer-like 1003..11150 while source describes Holocene ~11100 years; no conditional division by 1000 inferred"
+    }
+  ],
+  "counts": {
+    "records": 11,
+    "reviewed_datasets": 17,
+    "active_datasets": 15,
+    "series": 41,
+    "values": 4271,
+    "quarantined_series": 4,
+    "quarantined_values": 531
+  },
+  "active_age_extent_ka_bp": [
+    -0.069,
+    193.07
+  ],
+  "records": [
+    {
+      "id": "pangaea-69822",
+      "event": "M40/4_KL51",
+      "latitude": 34.8083,
+      "longitude": 27.2877,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.69822"
+      ]
+    },
+    {
+      "id": "pangaea-69823",
+      "event": "M44/3_KL83",
+      "latitude": 32.6087,
+      "longitude": 34.1389,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.69823"
+      ]
+    },
+    {
+      "id": "pangaea-69824",
+      "event": "M40/4_SL67",
+      "latitude": 34.814167,
+      "longitude": 27.296,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.69824"
+      ]
+    },
+    {
+      "id": "pangaea-69825",
+      "event": "M40/4_SL71",
+      "latitude": 34.81116,
+      "longitude": 23.19416,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.69825"
+      ]
+    },
+    {
+      "id": "pangaea-667328",
+      "event": "GeoB7608-1",
+      "latitude": 43.486667,
+      "longitude": 30.196667,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.667328",
+        "10.1594/PANGAEA.667403"
+      ]
+    },
+    {
+      "id": "pangaea-878051",
+      "event": "Verney_Mastercore",
+      "latitude": 45.68666,
+      "longitude": 6.88166,
+      "realm": "lake",
+      "datasets": [
+        "10.1594/PANGAEA.878051",
+        "10.1594/PANGAEA.878053"
+      ]
+    },
+    {
+      "id": "pangaea-940127",
+      "event": "DSDDP_5017-1-A",
+      "latitude": 31.50805,
+      "longitude": 35.471,
+      "realm": "lake",
+      "datasets": [
+        "10.1594/PANGAEA.940127"
+      ]
+    },
+    {
+      "id": "pangaea-944656",
+      "event": "CP10BC",
+      "latitude": 34.545,
+      "longitude": 16.566667,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.944656",
+        "10.1594/PANGAEA.944660"
+      ]
+    },
+    {
+      "id": "pangaea-954457",
+      "event": "PEX19-01",
+      "latitude": 40.343044,
+      "longitude": -7.605371,
+      "realm": "lake",
+      "datasets": [
+        "10.1594/PANGAEA.954457",
+        "10.1594/PANGAEA.995820"
+      ]
+    },
+    {
+      "id": "pangaea-961488",
+      "event": "GeoB7702-3",
+      "latitude": 31.651667,
+      "longitude": 34.066667,
+      "realm": "marine",
+      "datasets": [
+        "10.1594/PANGAEA.961488"
+      ]
+    },
+    {
+      "id": "pangaea-962012",
+      "event": "Bichlersee_BS_14",
+      "latitude": 47.676007,
+      "longitude": 12.122035,
+      "realm": "lake",
+      "datasets": [
+        "10.1594/PANGAEA.962012",
+        "10.1594/PANGAEA.962033",
+        "10.1594/PANGAEA.962034"
+      ]
+    }
+  ]
+}
