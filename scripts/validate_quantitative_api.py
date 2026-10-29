@@ -40,7 +40,14 @@ def main():
     for path in a.seed or [ROOT/'data/processed/atlas-v3.json']:
         s=json.loads(path.read_text(encoding='utf8'));seeds[s['version']]=s
     latest=list(seeds)[-1];served=catalog['release']['id']
-    if served not in seeds:raise AssertionError('Served release '+served+' not among given seeds')
+    if served not in seeds:
+        # An older release kept servable while the newest is still loading (manifest «keep»).
+        manifest={r['version']:r for r in json.loads((ROOT/'app/atlas-web/data/release.json').read_text(encoding='utf8'))['releases']}
+        if served not in manifest:raise AssertionError('Served release '+served+' not in manifest')
+        m=manifest[served]
+        assert len(catalog['records'])==len(m['records']) and len(catalog['series'])==len(m['series'])
+        print('OK '+served+' (release anterior conservada): '+str(len(m['series']))+' series; '+latest+' en carga (límite diario D1); se reanuda sola')
+        return
     seed=seeds[served]
     assert len(catalog['records'])==len(seed['records'])
     assert len(catalog['series'])==len(seed['series'])

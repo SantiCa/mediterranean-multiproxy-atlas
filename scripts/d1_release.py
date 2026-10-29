@@ -106,15 +106,27 @@ def ordered_series(seeds):
 
 
 def cmd_manifest(a):
+    """Manifest of the release chain. Releases already listed in the existing manifest
+    but no longer among the seeds are kept (before the newest), so the Worker can keep
+    serving a loaded older release while a newer one is still being written to D1."""
     seeds = load_seeds(a.seed)
-    manifest = {"releases": [{
+    new = [{
         "version": s["version"],
         "parent_version": s.get("parent_version"),
         "observation_count": sum(len(x["rows"]) for x in s["series"]),
         "records": sorted(r["id"] for r in s["records"]),
         "series": sorted(x["id"] for x in s["series"]),
-    } for s in seeds]}
-    Path(a.out).write_text(compact(manifest) + "\n", encoding="utf8")
+    } for s in seeds]
+    names = {r["version"] for r in new}
+    old = []
+    out = Path(a.out)
+    for extra in ([out] if out.exists() else []) + [Path(x) for x in (a.keep or [])]:
+        for r in json.loads(extra.read_text(encoding="utf8"))["releases"]:
+            if r["version"] not in names and r.get("parent_version") in names:
+                old.append(r)
+                names.add(r["version"])
+    manifest = {"releases": new[:-1] + old + new[-1:]}
+    out.write_text(compact(manifest) + "\n", encoding="utf8")
     print(a.out, [r["version"] for r in manifest["releases"]])
 
 
@@ -180,7 +192,7 @@ def cmd_finalize(a):
 def main():
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
-    m = sub.add_parser("manifest"); m.add_argument("--seed", action="append", required=True); m.add_argument("--out", required=True)
+    m = sub.add_parser("manifest"); m.add_argument("--seed", action="append", required=True); m.add_argument("--out", required=True); m.add_argument("--keep", action="append", help="older manifest whose releases stay servable")
     q = sub.add_parser("plan"); q.add_argument("--seed", action="append", required=True); q.add_argument("--counts"); q.add_argument("--out-dir", required=True); q.add_argument("--max-obs", type=int, default=5000)
     f = sub.add_parser("finalize"); f.add_argument("--seed", action="append", required=True); f.add_argument("--counts", required=True); f.add_argument("--releases", required=True); f.add_argument("--out", required=True)
     a = p.parse_args()
