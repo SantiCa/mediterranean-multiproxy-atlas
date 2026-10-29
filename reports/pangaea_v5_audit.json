@@ -4538,7 +4538,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-810294:Sea_surface_temperature_August_C~7974cf0d",
+   "id": "pangaea5-810294:Sea_surface_temperature_August_C_col14~7974cf0d",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 91,
    "missing": 95,
@@ -4793,7 +4793,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861972:Sea_surface_temperature_annual_mean_C~254cb4fa",
+   "id": "pangaea5-861972:Sea_surface_temperature_annual_mean_C_col10~254cb4fa",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 23,
    "missing": 0,
@@ -4853,7 +4853,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-861973:Sea_surface_temperature_annual_mean_C~d03ef75d",
+   "id": "pangaea5-861973:Sea_surface_temperature_annual_mean_C_col9~d03ef75d",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 25,
    "missing": 0,
@@ -6593,7 +6593,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_g~b671584e",
+   "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_g_col46~b671584e",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 24,
    "missing": 1,
@@ -6728,7 +6728,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-949639:Foraminifera_benthic_extinction_group_g~81985e84",
+   "id": "pangaea5-949639:Foraminifera_benthic_extinction_group_g_col45~81985e84",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 12,
    "missing": 0,
@@ -6953,7 +6953,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Globigerina_bulloides_13C_PDB~40e83d65",
+   "id": "pangaea5-966663:Globigerina_bulloides_13C_PDB_col5~40e83d65",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -6983,7 +6983,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Globigerina_bulloides_18O_PDB~ae18fd13",
+   "id": "pangaea5-966663:Globigerina_bulloides_18O_PDB_col7~ae18fd13",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -7013,7 +7013,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB~8710e0f6",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB_col9~8710e0f6",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -7043,7 +7043,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB~06d17ef4",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col11~06d17ef4",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 8,
    "missing": 26,
@@ -7058,7 +7058,7 @@
    "age_model": null
   },
   {
-   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB~400bb1ca",
+   "id": "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col12~400bb1ca",
    "status": "contract_v5_auto_rules; manual review pending",
    "values": 34,
    "missing": 0,
