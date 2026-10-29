@@ -245,6 +245,46 @@ def slug(s):
     return re.sub(r'[^A-Za-z0-9]+', '_', s).strip('_')[:60]
 
 
+AGGREGATED = re.compile(r'sea surface temp|δ18O|δ13C|18O|13C|carbon, organic, total|calcium carbonate|CaCO3', re.I)
+MIN_EVENTS = 3  # petición 29-10-2026 (19:02): priorizar proxies con muchos registros (mapas)
+
+
+def map_coverage(cov):
+    """Parámetro PANGAEA → nº de eventos distintos con edad (propia o de un dataset hermano)
+    en el informe de cobertura, más los registros del atlas que ya lo tienen."""
+    sib = siblings_by_event(cov)
+    ev = {}
+    for q in cov['queue']:
+        if q['n_events'] != 1 or not (q['has_age'] or q['events'][0] in sib):
+            continue
+        for ps in q['matched_parameters'].values():
+            for p in ps:
+                ev.setdefault(p, set()).add(q['events'][0])
+    atlas = ROOT / 'data/processed/atlas-v5.json'
+    if atlas.exists():
+        for x in json.loads(atlas.read_text(encoding='utf-8'))['series']:
+            if x.get('parameter_name_pangaea') and x.get('source_event'):
+                ev.setdefault(x['parameter_name_pangaea'], set()).add(x['source_event'])
+    return {p: len(v) for p, v in ev.items()}
+
+
+def coverage_gate(spec, cover):
+    """Columnas de parámetros con pocos sondeos quedan diferidas (reversibles), para no
+    multiplicar proxies de un solo registro."""
+    n = cover.get(spec['parameter'], 0)
+    spec['map_events'] = n
+    # Parámetros que entran en una agrupación del mapa (SST, δ18O/δ13C, TOC, CaCO3) suman
+    # sondeos aunque su nombre exacto sea raro: no se difieren.
+    if AGGREGATED.search(spec['parameter'] or ''):
+        if spec.get('status') == 'deferred_low_coverage':
+            spec['status'] = 'approved'
+            spec.pop('deferred_reason', None)
+        return spec
+    if spec.get('status') == 'approved' and n < MIN_EVENTS:
+        spec.update(status='deferred_low_coverage', deferred_reason=f'parámetro en {n} sondeos (< {MIN_EVENTS}); se cura cuando haya más registros')
+    return spec
+
+
 def column_specs(header, cols):
     """Columnas de valor propuestas, alineadas por posición con el XML (verificando shortName)."""
     aligned = len(cols) == len(header) and all(not c['short'] or h.startswith(c['short']) for h, c in zip(header, cols))
@@ -272,13 +312,17 @@ def propose(n):
     contract = json.loads(CONTRACT_PATH.read_text(encoding='utf-8')) if CONTRACT_PATH.exists() else {}
     rank = {f: i for i, f in enumerate(PRIORITY)}
     sib = siblings_by_event(cov)
+    cover = map_coverage(cov)
     pool = [q for q in cov['queue'] if (q['has_age'] or q['events'][0] in sib) and not q['already_in_atlas'] and q['n_events'] == 1
             and any(f in rank for f in q['families'])]
     # Reparto por turnos entre bloques de prioridad para que cada lote cubra foraminíferos,
     # oxigenación/MO, bioturbación, geoquímica inorgánica y el resto (petición 29-10-2026).
-    blocks = [PRIORITY[:7], PRIORITY[7:15], ['bioturbacion'], PRIORITY[16:20], PRIORITY[20:]]
-    queues = [sorted([q for q in pool if min(rank.get(f, 99) for f in q['families']) in [rank[f] for f in b]], key=lambda q: (min(rank.get(f, 99) for f in q['families']), q['doi'])) for b in blocks]
-    pool = [q for group in __import__('itertools').zip_longest(*queues) for q in group if q]
+    # Orden (29-10, 19:02): primero los datasets cuyos parámetros están en más sondeos con edad
+    # (mapas espaciales); a igualdad, prioridad científica de familia.
+    def score(q):
+        ps = [p for f, v in q['matched_parameters'].items() if f in rank for p in v]
+        return -max([cover.get(p, 0) for p in ps] or [0]), min(rank.get(f, 99) for f in q['families']), q['doi']
+    pool = sorted(pool, key=score)
     added = 0
     for q in pool:
         if added >= n:
@@ -299,7 +343,7 @@ def propose(n):
         entry = dict(status='proposed', families=q['families'], tsv_sha256=sha(tsv), xml_sha256=sha(xml), event=events[0] if events else None,
                      header=header, n_rows=len(rows), age_column=age[0] if age else None, age_transformation=age[1] if age else None,
                      paper=paper, license=lic, license_url=lic_uri, citation=(re.search(r'Citation:\t(.+)', head) or [None, None])[1],
-                     columns=column_specs(header, cols))
+                     columns=[coverage_gate(c, cover) for c in column_specs(header, cols)])
         if model or tried:
             entry.update(age_model=model, age_model_rejected=tried)
         if paper and paper.get('doi'):
@@ -323,6 +367,21 @@ def propose(n):
         added += 1
     CONTRACT_PATH.write_text(json.dumps(contract, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     print(f'Propuestos {added}; contrato con {len(contract)} entradas')
+
+
+def prune():
+    """Aplica el umbral de cobertura a columnas ya aprobadas del contrato (reversible)."""
+    cov = json.loads(COVERAGE.read_text(encoding='utf-8'))
+    cover = map_coverage(cov)
+    contract = json.loads(CONTRACT_PATH.read_text(encoding='utf-8'))
+    n = 0
+    for e in contract.values():
+        for c in e.get('columns') or []:
+            before = c.get('status')
+            coverage_gate(c, cover)
+            n += before != c['status']
+    CONTRACT_PATH.write_text(json.dumps(contract, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    print(f'Columnas diferidas por baja cobertura: {n}')
 
 
 def age_models():
@@ -428,7 +487,7 @@ def curate():
         for c in e['columns']:
             if c['status'] != 'approved':
                 continue
-            k, out, missing, rejected = c['column'], [], 0, 0
+            k, out, missing, rejected, outside = c['column'], [], 0, 0, 0
             for src_row, line, cells in rows:
                 v = number(cells[k])
                 if v is None:
@@ -437,6 +496,11 @@ def curate():
                     continue
                 if pts:
                     a_ka, a_txt = interpolate(pts, number(cells[depth_col])), None
+                    if a_ka is None:
+                        # Fuera del rango del modelo (o sin profundidad): no se extrapola y la
+                        # muestra no entra en el atlas; queda contada y en el original (hash).
+                        outside += 1
+                        continue
                 else:
                     a = number(cells[age[0]])
                     a_ka, a_txt = (age[2](a) if a is not None else None), cells[age[0]]
@@ -465,6 +529,7 @@ def curate():
                      uncertainty_type='native column adjacent (±/std dev), type as labelled' if c['error_column'] is not None else 'not_supplied_for_selected_column',
                      value_uncertainty_source_column=header[c['error_column']] if c['error_column'] is not None else None,
                      depth_frame='native sediment depth m; no cross-table remapping', rows=out,
+                     rows_outside_age_model=outside if pts else None,
                      review_status='contract_v5_auto_rules; manual review ' + ('done' if c['status'] == 'approved' and e['status'] == 'approved' else 'pending'))
             vals = [x[1] for x in out]
             ages = [x[0] for x in out if x[0] is not None]
@@ -527,7 +592,10 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--propose', type=int, default=0, help='Añadir N datasets nuevos al contrato (requiere red)')
     ap.add_argument('--age-models', action='store_true', help='Reevaluar rechazados sin edad con el modelo del mismo evento (requiere red)')
+    ap.add_argument('--prune', action='store_true', help='Diferir columnas de parámetros con < MIN_EVENTS sondeos')
     a = ap.parse_args()
+    if a.prune:
+        prune()
     if a.age_models:
         age_models()
     if a.propose:

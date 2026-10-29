@@ -15,7 +15,7 @@ CREATE TABLE `atlas_private_sessions` (
 );
 --> statement-breakpoint
 CREATE TABLE `atlas_private_failures` (
-	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`id` integer PRIMARY KEY NOT NULL,
 	`at` text NOT NULL
 );
 --> statement-breakpoint
