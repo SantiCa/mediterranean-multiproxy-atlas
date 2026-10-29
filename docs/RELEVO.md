@@ -28,3 +28,7 @@ Copia válida: rama `relevo`. Actualizar con commit + push tras cada paso (ver �
 ## HOST-CF pendiente, sin repetir lo hecho
 
 Claude dejó workflow y configuración V2 en f0cffe1, fusionados a main en 92637a4. Esperar cuenta/token/secretos de Santiago; después comprobar Actions/URL remota y visibilidad. Sites sigue privado y activo. Las nuevas prioridades científicas pueden avanzar mientras tanto; no cambiar audiencia ni retirar Sites sin la decisión correspondiente.
+
+## Nota de esta rama de archivo
+
+Esta copia conserva el borrador v4 previo; no es el puntero vivo ni inicio de una tarea paralela. Consultar origin/relevo y docs/handoffs/quantitative-v4-draft.md antes de trabajar.

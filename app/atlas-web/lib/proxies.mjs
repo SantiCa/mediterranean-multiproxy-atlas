@@ -23,8 +23,12 @@ export function recordMatches(r, f) {
   );
 }
 export function seriesMatches(s, r, f) {
+  const sourceRecord =
+    s.publication_year !== undefined
+      ? { ...r, publication_year: s.publication_year }
+      : r;
   return (
-    recordMatches(r, f) &&
+    recordMatches(sourceRecord, f) &&
     (!f.chronology ||
       f.chronology === "all" ||
       s.chronology_status === f.chronology)

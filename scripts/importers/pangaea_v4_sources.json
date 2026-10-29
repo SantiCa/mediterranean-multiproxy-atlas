@@ -1,0 +1,109 @@
+{
+  "944656": {
+    "tsv_sha256": "a737bc472d8c37c98abb78a598c682c04a473d5242501971e596e454741f4d8d",
+    "xml_sha256": "99112e52bc6b453a192c94a0529b206fde6753725e2b6fd8d0b553c2eb95ce74",
+    "paper_doi": "10.1016/j.quascirev.2016.09.029",
+    "paper_year": 2016
+  },
+  "944660": {
+    "tsv_sha256": "9624d0fc9be5fbdfd0d16b6aa850195764f6be8cd67f76732d8a08f2394226ab",
+    "xml_sha256": "2a71d09cf43328265178bfb898aa0f8c25ae6a5af37ec78a8fc70134c2349ee6",
+    "paper_doi": "10.1016/j.quascirev.2016.09.029",
+    "paper_year": 2016
+  },
+  "667403": {
+    "tsv_sha256": "de4ed40f3ce459c40ab014370c76622ca2701d9639407e841ee9cf968e1d5b58",
+    "xml_sha256": "fbe7a32b2fac6fd5ad652062bd656cfb41bc734a3069ce32c221dca09295a23e",
+    "paper_doi": "10.1029/2007GC001683",
+    "paper_year": 2008
+  },
+  "962012": {
+    "tsv_sha256": "9ca8f2f377c2523f666a6fcc4ad08cfa1a3e632ba22ceef1938d5d56e1e31abe",
+    "xml_sha256": "f88c1134d404f532dc04e22a6779bcd54a9545b6af1738a9703d298829ff9508",
+    "paper_doi": "10.1038/s41598-023-45754-4",
+    "paper_year": 2023
+  },
+  "962033": {
+    "tsv_sha256": "a14c9461ab05017e700fb361b5a87299003cb3d5e0e639a8bab626a9f6c133bf",
+    "xml_sha256": "fc570b545011b39107ef28e7d5f86d1f72af1ea07e13d25b4a45a77147928376",
+    "paper_doi": "10.1038/s41598-023-45754-4",
+    "paper_year": 2023
+  },
+  "962034": {
+    "tsv_sha256": "71c9361f8f19d12cc2e71e221e22f3e34bf2fdd37e0bee8ce54e60898e5b53a0",
+    "xml_sha256": "106d9bc6c5386dba856e79f7570748a03856a34443baa95afdbf525f438db788",
+    "paper_doi": "10.1038/s41598-023-45754-4",
+    "paper_year": 2023
+  },
+  "995820": {
+    "tsv_sha256": "c283ea8f2914d17486f63d8155cc308a5c9a084baac840354e7db3726222ecc5",
+    "xml_sha256": "6de7c7919f02fae01750bb4fef4978f1d66b7bc0e58f89adcd0ec29275b3093a",
+    "paper_doi": "10.1029/2026PA005517",
+    "paper_year": 2026
+  },
+  "940127": {
+    "tsv_sha256": "17fcf8ef7b7ec9f258800decc59d1525dc41a9fd462e9e15e00d11590d66e8ca",
+    "xml_sha256": "ea7af7fb54a44890ec90fa6a1aa160372ab58ebf8f36adad6da158b5a58d9dc8",
+    "paper_doi": "10.1016/j.quascirev.2022.107613",
+    "paper_year": 2022
+  },
+  "961488": {
+    "tsv_sha256": "186f075f73187d43b381cf1f6cbac1d466e7f9869372766698f06d6e7ba22fa7",
+    "xml_sha256": "cb93c07d0c235e59c13746671e7881182e4e73cb794c5aa1117aa863caf607ff",
+    "paper_doi": "10.5194/cp-20-523-2024",
+    "paper_year": 2024
+  },
+  "878051": {
+    "tsv_sha256": "aef0b039a3e1b9a87a73d221afc1376c74d7373df9abb046c59b530b5964d37d",
+    "xml_sha256": "986bd8d6e3739e7278212cfdd36bb49c149b69dbbb80fda0a28e68241cdf859d",
+    "paper_doi": "10.1016/j.geoderma.2017.07.005",
+    "paper_year": 2017
+  },
+  "878053": {
+    "tsv_sha256": "ad67b76b860b751add00acb9619dd210ce19a9398452a020cab5529ee068f473",
+    "xml_sha256": "6cb232260759a65f7be563ef638c5ed3bba8a48d8243647215a34be3076a4ad4",
+    "paper_doi": "10.1016/j.geoderma.2017.07.005",
+    "paper_year": 2017
+  },
+  "69822": {
+    "tsv_sha256": "8ad47dcc411a1dd6961e89daaa6919e8fcaba999e57e3c8cd5f72421453dbf0e",
+    "xml_sha256": "9a09cb5f91feaf0fc10437ed42e7ded4b997b08532c9c36408140d44062e0eb1",
+    "paper_doi": "10.1016/S0031-0182(02)00711-3",
+    "paper_year": 2003
+  },
+  "69823": {
+    "tsv_sha256": "c464d2eac44caf90a30ccd92c352b1f915a3927d116fc1c8eaadc8e27a5b5667",
+    "xml_sha256": "49340f7ba8730ec7823fcd96c1c62ed234a3238f2bdec91a2460f8756af77cd8",
+    "paper_doi": "10.1016/S0031-0182(02)00711-3",
+    "paper_year": 2003
+  },
+  "69824": {
+    "tsv_sha256": "e9447641c18b540cda7fd2050df57667ae8a0d528c4470d5aa551dc978e9f245",
+    "xml_sha256": "e3c322dae1a4bc34d20b8729b19a59b8f035c5d099351a844f2bb40dc3a041b5",
+    "paper_doi": "10.1016/S0031-0182(02)00711-3",
+    "paper_year": 2003
+  },
+  "69825": {
+    "tsv_sha256": "3440e9d9ac5ac0d7a40e303b2e3c188e72590bd7df2c46652caff350b34c25a1",
+    "xml_sha256": "5abaac2118123b309164d18300f8840ab0aff367053f14d1f4079866726a3153",
+    "paper_doi": "10.1016/S0031-0182(02)00711-3",
+    "paper_year": 2003
+  },
+  "667328": {
+    "tsv_sha256": "a255ade85e50d73c8a2210459212de82a0adacba578b4e2f23c904e590daa4b4",
+    "xml_sha256": "76a18475215c0c3d925ac147d978932383ea72219b3c4617083aebe4cf03dbd9",
+    "paper_doi": "10.1029/2007GC001683",
+    "paper_year": 2008
+  },
+  "954457": {
+    "tsv_sha256": "18a582fcf03c8aafb3d7a4786c2abe241a68d3d3890a95a12bcef3729825e4ec",
+    "xml_sha256": "f66169acf925f4d8d8c75787c9335a51b95e979f72ddde47c2e6d9b94755dabd",
+    "paper_doi": "10.1002/esp.5536",
+    "paper_year": 2023
+  },
+  "_supporting_xml": {
+    "962035": "e8615c2b81173786d28ec5f458adf14159259c74df6ad2cd1820b3194d7ca9e0",
+    "878058": "fc215fa9177082abda1457fc078bdfbd3e64efb036ac65def2f27607b2121798",
+    "944666": "33e538bce7f02fb4a03532aef2f7d6f34490d2a1364d7872b101268bf9ab170b"
+  }
+}
