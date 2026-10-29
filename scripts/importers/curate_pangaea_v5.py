@@ -329,6 +329,13 @@ def curate():
                 reason = 'porcentaje fuera de [0,100]; serie completa preservada sin recortar'
             elif not ages:
                 reason = 'ninguna fila con edad'
+            elif re.search(r'radiocarbon|14C', header[age[0]], re.I):
+                # La columna «Age [ka BP]» describe una edad radiocarbono: no es calendario y no se recalibra.
+                reason = 'columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario'
+            elif max(ages) > 2600 and not re.match(r'^\d{1,3}-\w', ev['label']):
+                # Fuera de sitios DSDP/ODP/IODP, >2,6 Ma en testigos de gravedad/pistón/lagos es sospecha de
+                # unidades mezcladas (años etiquetados como ka). Se preserva y se revisa a mano.
+                reason = f'edad máxima {max(ages):g} ka BP implausible para el tipo de sondeo; posible unidad mezclada'
             if reason:
                 s.update(review_status='quarantined', quarantine_reason=reason)
                 quarantined.append(s)
