@@ -4,18 +4,15 @@ Copia válida: rama `relevo`. Actualizar con commit + push tras cada paso (ver �
 
 - Último agente: Claude
 - Fecha: 29-10-2026
-- Tarea actual: CUR-ODP977A — ficha de auditoría del conflicto de profundidad m/cmbsf de ODP 977A (prompt 5 de `docs/CHAT_PROMPTS.md`); después GP03 con el mismo formato.
-- Estado: aceptada por Santiago, sin empezar.
-- Hecho: —
-- Pendiente: todo.
-- Pruebas: 33 Python (6 omitidas sin originales) y 14 Node correctas en clon limpio, base 32e1752.
+- Tarea actual: HOST-CF — alojar la web en una cuenta Cloudflare propia (Workers + D1, R2 más adelante) con despliegue por GitHub Actions al fusionar en `main`, sin depender de ChatGPT Sites. Sites sigue activo hasta verificar la nueva web (81.339 valores idénticos).
+- Cola: CUR-ODP977A (auditoría profundidad ODP 977A) → GP03.
+- Estado: en curso (Claude).
+- Hecho: decisión de Santiago (29-10, 15:07).
+- Pendiente: config de build independiente de `.openai/hosting.json`; workflow de despliegue; guía para que Santiago cree cuenta/API token/secrets; carga inicial D1 y verificación.
+- Pruebas: 33 Python (6 omitidas sin originales) y 14 Node correctas, base 32e1752.
 
 ## Siguiente acción
 
-1. Localizar en `config/seed.json`, `docs/revision_tesis.md`, `docs/curation/v1_marine.md` y `scripts/prepare_seed.py` dónde aparece la profundidad de ODP 977A y en qué unidad se declara.
-2. Contrastar contra la fuente primaria (dataset PANGAEA y su metadato de columna; ODP Proceedings Leg 161) sin convertir unidades por inferencia.
-3. Escribir `docs/curation/odp977a_depth_audit.md` (resolución o conflicto documentado con citas) y handoff `docs/handoffs/cur-odp977a.md`.
-
-## Decisión pendiente (Santiago)
-
-Hosting propio en Cloudflare (Workers + D1 + R2) independiente de ChatGPT Sites, con despliegue por GitHub Actions al fusionar en `main`. Propuesta de Claude: híbrido D1 (catálogo/índices) + R2 (series curadas como archivos estáticos); no replicar todo PANGAEA (va contra «no cosecha ciega» y la revisión de licencias por recurso): datasets no curados como enlace o lectura bajo demanda con caché, marcados «sin curar». Falta: que Santiago elija orden (antes o después de CUR-ODP977A) y cree cuenta + API token.
+1. `npm ci` y `vinext build` en `app/atlas-web` fuera del perfil managed-linux; medir tamaño del Worker (límite plan Free ~3 MB comprimido) porque `data/seed.json` e `inventory.json` se importan en el bundle.
+2. Hacer que `vite.config.ts` lea `CF_D1_DATABASE_ID`/`CF_WORKER_NAME` del entorno (manteniendo compatibilidad con Sites).
+3. `.github/workflows/deploy-cloudflare.yml`: build, `wrangler d1 migrations apply --remote`, `wrangler deploy`, bucle POST `/api/bootstrap` hasta `ready`.
