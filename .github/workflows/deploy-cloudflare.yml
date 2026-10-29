@@ -108,8 +108,8 @@ jobs:
           if ! npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json > migrate.log 2>&1; then
             cat migrate.log
             if grep -qE "row (write|read) limit" migrate.log; then
-              # Daily Free limit: deploy anyway; migrations retry in the nightly run.
-              echo "::warning title=Migraciones D1::límite diario D1; se aplican en la ejecución nocturna"
+              # Daily Free limit: deploy anyway (public data are static); migrations retry on the next deploy.
+              echo "::warning title=Migraciones D1::límite diario D1; se aplican en el siguiente despliegue (afecta solo a Mis datos)"
             else
               echo "::error title=Migraciones D1::$(grep -iE 'error|✘' migrate.log | tail -3 | tr '\n' ' ' | cut -c1-400)"
               exit 1
