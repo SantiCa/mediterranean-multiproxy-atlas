@@ -2,18 +2,18 @@
 
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
-- Último agente: Claude
+- Último agente: ChatGPT/Codex
 - Fecha: 29-10-2026
-- Tarea actual: PUBLICAR-V5 + CURADO — (1) publicar en la web la versión curada actual (atlas-v5, rama `claude/curado`, fusionada aquí); (2) seguir el curado en `claude/curado`, empezando por asignar edad a datasets PANGAEA cuya edad está en otro dataset del mismo evento.
-- Estado: web sirve v5 validada celda a celda (V20: API dentro del límite de CPU Free). V22: lote con modelos de edad del mismo evento (+91 series interpolated_from_age_model) fusionado; release v5-c58d9be4128 se carga en D1 (puede tardar un día). Antes: PUBLICAR-V5 hecho (V18); el despliegue carga v4+v5 en D1 en varios días (límite Free). atlas-v5 (95 registros/709 series/212.880 valores) no cabe en el Worker Free (semilla 3,4 MB gzip > 3 MB): la semilla sale del bundle y la carga en D1 la hace el flujo de despliegue por SQL, por lotes, reanudable a diario (límite 100.000 filas escritas/día). La web sirve la última release completa (v3 hasta terminar la carga).
-- Hecho: V27 respaldo estático (`public/snapshot/`, generado en el build) cuando D1 no responde. V26 reduce lecturas D1 (recuentos solo de series pendientes por índice; validación completa solo al completar una release). V19 trocea metadatos <90 KB por sentencia (D1 rechazó el registro de release en V18; observaciones v4+v5 ya cargadas). Validador fusionado; semilla fuera del Worker; `scripts/d1_release.py`; cron diario; handoff docs/handoffs/publicar-v5.md.
+- Tarea actual: SITES-V28 cerrada; siguiente propuesta: seguir CURADO en claude/curado conservando su cola.
+- Estado: Site ChatGPT privado actualizado desde main dfdb419 (V28.1), con datos públicos estáticos. Release v5-c25cc8a2394: 102 registros, 815 series, 606 grupos y 241.826 valores. Ya no depende de completar cargas públicas D1. Mis datos desactivado: falta OWNER_PASSWORD; migración 0004 incluida en el paquete y despliegue gestionado por Sites.
+- Hecho: snapshot.mjs + check-snapshot.mjs antes de compilar; 24 Node, tsc y build correctos. 608 archivos remotos idénticos por SHA256 al snapshot comprobado celda a celda; las cuatro API retiradas devuelven404. QA visual de inventario, mapa, serie temporal y Mis datos en producción. Handoff docs/handoffs/sites-v28.md; recibos reports/sites_v28_*.json. Fuente Sites743a94ba4509999d409ce07a07519fe90e9abebe; despliegue succeeded appgdep_6ae3c6fb23d08191a63ccb7ba6658dd6.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. V28: datos públicos estáticos (docs/handoffs/datos-estaticos.md). Comprobar en Actions el despliegue (paso «Check public snapshot»).
-2. Santiago: crear secreto GitHub `ATLAS_OWNER_PASSWORD` (≥12 caracteres) y relanzar «Deploy web to Cloudflare» para activar «Mis datos» (la migración 0004 se aplica en ese despliegue si D1 tiene cupo).
-3. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`; al fusionar en main se publica directamente. Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`.
+1. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`; al fusionar en main se publica en Cloudflare. Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`. Consultar su handoff y log antes de repetir fuentes; el checkpoint antiguo de temperatura no está integrado.
+2. Si Santiago decide activar Mis datos: GitHub usa ATLAS_OWNER_PASSWORD y el Worker recibe OWNER_PASSWORD; el Site ChatGPT necesita su propio secreto OWNER_PASSWORD. No copiar ni inventar contraseñas. La ausencia del secreto no impide usar datos públicos.
+3. Futuros despliegues Sites: usar ../sites/medatlas-v28, conservar identidad/audiencia y generar/comprobar snapshot desde la semilla más reciente antes del build. scripts/validate_static_site.py verifica los archivos publicados; ya no usar validate_quantitative_api.py contra las API eliminadas. No repetir el despliegue V28 ya confirmado.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
@@ -31,4 +31,6 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Hosting y preservación
 
-HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sigue activo; su despliegue es exclusivo de Codex (con la semilla fuera del bundle, Sites seguirá sirviendo su última release cargada). Un solo agente a la vez en `relevo`.
+Sites V28 verificado: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado del propietario). El checkout nuevo conserva intacto ../sites/medatlas-v1 y sus borradores. Las credenciales efímeras no se guardan en Git ni informes. El despliegue Sites continúa siendo exclusivo de Codex.
+
+HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sirve ahora la instantánea estática V28 verificada; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.

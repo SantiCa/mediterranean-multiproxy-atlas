@@ -2,7 +2,16 @@
 
 Actualizado: 29-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable v3
+## Ejecutable V28.1 (actual)
+
+- Site ChatGPT privado actualizado desde main dfdb419: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site.
+- Datos públicos desde /snapshot/catalog.json, /snapshot/obs/*.json e /snapshot/inventory.json; las cuatro API públicas anteriores se han retirado. D1 se conserva para el área privada y la cola DOI.
+- Release v5-c25cc8a2394 (atlas-v5.json): **102 registros / 815 series / 241.826 valores / 606 grupos**. Son recuentos de la colección, no sondeos físicos independientes ni cobertura completa de literatura.
+- snapshot.mjs y check-snapshot.mjs correctos antes del build. Producción: 608 archivos idénticos a la instantánea comprobada celda a celda; 24 Node, tsc, build y QA visual correctos. Recibos reports/sites_v28_*.json; handoff docs/handoffs/sites-v28.md.
+- Mis datos desactivado en Sites porque falta OWNER_PASSWORD. Migración0004 incluida en el despliegue; Sites gestiona las migraciones. Las credenciales GitHub/Cloudflare no se transfieren automáticamente al Site.
+- Para continuar ciencia consultar docs/RELEVO.md y docs/handoffs/claude-curado.md. Para despliegues estáticos consultar docs/handoffs/datos-estaticos.md. Los apartados siguientes conservan la referencia histórica v3 y sus límites.
+
+## Referencia histórica v3
 
 - URL: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado del propietario).
 - Colección cuantitativa: **29 registros / 89 series / 81.339 valores / 62 grupos de comparación**, ocho familias. Lote nuevo PANGAEA y NOAA de 16 registros/66.588 valores. Datos marinos, lacustres y espeleotemas.
