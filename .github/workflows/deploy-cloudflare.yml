@@ -6,12 +6,8 @@ name: Deploy web to Cloudflare
 on:
   push:
     branches: [main]
-    paths: ['app/atlas-web/**', 'data/processed/atlas-v*.json', 'scripts/d1_release.py', '.github/workflows/deploy-cloudflare.yml']
+    paths: ['app/atlas-web/**', 'data/processed/atlas-v*.json', '.github/workflows/deploy-cloudflare.yml']
   workflow_dispatch:
-  # Daily, just after the D1 Free limits reset (00:00 UTC): resumes a release load
-  # that exceeded 100 000 rows written/day (and applies pending migrations).
-  schedule:
-    - cron: '17 0 * * *'
 
 permissions:
   contents: read
@@ -127,10 +123,13 @@ jobs:
           CF_WORKER_NAME: ${{ env.WORKER_NAME }}
           CF_D1_DATABASE_NAME: ${{ env.DB_NAME }}
           CF_D1_DATABASE_ID: ${{ steps.db.outputs.id }}
-        # Static fallback (public/snapshot) from the newest seed, used by the client
-        # when D1 is unavailable (daily Free limit). Served as assets, not in the Worker.
+        # Public data as static assets (public/snapshot) from the newest seed, checked
+        # cell by cell before deploying. D1 keeps only private data and the DOI queue.
         run: |
-          node scripts/snapshot.mjs "$(ls ../../data/processed/atlas-v*.json | sort -V | tail -1)" public/snapshot
+          SEED="$(ls ../../data/processed/atlas-v*.json | sort -V | tail -1)"
+          node scripts/snapshot.mjs "$SEED" public/snapshot data/inventory.json
+          node scripts/check-snapshot.mjs "$SEED" public/snapshot | tee check.log
+          echo "::notice title=Instantánea::$(tail -1 check.log)"
           npx vinext build
 
       - name: Deploy Worker
@@ -187,89 +186,17 @@ jobs:
           echo "### Atlas desplegado: $url" >> "$GITHUB_STEP_SUMMARY"
           # A newly enabled subdomain can take a minute to resolve.
           # A new workers.dev hostname can take several minutes to start routing.
-          for i in $(seq 1 60); do curl -s -o /dev/null -w '%{http_code}' "$url/api/catalog" | grep -q 200 && break; sleep 10; done
+          for i in $(seq 1 60); do curl -s -o /dev/null -w '%{http_code}' "$url/snapshot/catalog.json" | grep -q 200 && break; sleep 10; done
 
-      - uses: actions/setup-python@v5
+      - name: Check public snapshot
         if: steps.gate.outputs.ok == 'true'
-        with:
-          python-version: '3.12'
-
-      - name: Public URL
-        if: steps.gate.outputs.ok == 'true'
-        id: url
-        run: echo "url=${{ steps.deploy.outputs.url || format('https://{0}.{1}.workers.dev', env.WORKER_NAME, env.SUBDOMAIN) }}" >> "$GITHUB_OUTPUT"
-
-      # Releases are written to D1 from here (scripts/d1_release.py), not bundled in the
-      # Worker. Append-only and resumable: a run that hits the daily row-write limit
-      # stops with a warning; the web keeps serving the last complete release.
-      - name: Load releases into D1
-        if: steps.gate.outputs.ok == 'true'
-        id: load
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
         run: |
-          S="--seed ../../data/processed/atlas-v3.json --seed ../../data/processed/atlas-v4.json --seed ../../data/processed/atlas-v5.json"
-          q() { npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --json --command "$1"; }
-          x() { npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --json --file "$1" -y; }
-          q "SELECT id FROM atlas_releases" > releases.json 2> q.err || { echo "::warning title=Carga D1::D1 no responde (probable límite diario); se reintenta en la ejecución nocturna"; echo "full=false" >> "$GITHUB_OUTPUT"; exit 0; }
-          python ../../scripts/d1_release.py count-sql $S --releases releases.json --out counts.sql
-          x counts.sql > counts.json
-          python ../../scripts/d1_release.py plan $S --counts counts.json --releases releases.json --out-dir d1plan | tee plan.log
-          loaded=0; partial=""
-          for f in d1plan/*.sql; do
-            [ -e "$f" ] || break
-            if npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file "$f" -y > exec.log 2>&1; then
-              loaded=$((loaded+1))
-            else
-              partial="$f: $(grep -iE 'error|✘' exec.log | tail -2 | tr '\n' ' ' | cut -c1-300)"; tail -5 exec.log; break
-            fi
+          want="$(node -e 'const fs=require("fs");console.log(JSON.parse(fs.readFileSync("public/snapshot/catalog.json")).release.id)')"
+          for i in $(seq 1 30); do
+            got="$(curl -s -A 'medatlas-check' "$URL/snapshot/catalog.json" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).release.id)}catch{console.log("")}})')"
+            [ "$got" = "$want" ] && break; sleep 10
           done
-          x counts.sql > counts.json
-          python ../../scripts/d1_release.py finalize $S --counts counts.json --releases releases.json --out final.sql | tee final.log
-          grep -q "complete_now=none" final.log && echo "full=false" >> "$GITHUB_OUTPUT" || echo "full=true" >> "$GITHUB_OUTPUT"
-          if [ -s final.sql ]; then npx wrangler d1 execute "$DB_NAME" --remote --config wrangler.migrations.json --file final.sql -y > final_exec.log 2>&1 || { tail -5 final_exec.log; echo "::warning title=Carga D1::no se pudo registrar la release (se reintenta mañana): $(grep -iE 'error|✘' final_exec.log | tail -2 | tr '\n' ' ' | cut -c1-300)"; }; fi
-          if [ -n "$partial" ]; then
-            echo "::warning title=Carga D1 parcial::$loaded lotes cargados; se detuvo en $partial (probable límite diario Free). Se reanuda en la ejecución diaria. $(cat final.log)"
-          else
-            echo "::notice title=Carga D1::$(cat plan.log) · $(cat final.log)"
-          fi
-
-      - name: Load inventory
-        if: steps.gate.outputs.ok == 'true'
-        env:
-          URL: ${{ steps.url.outputs.url }}
-        run: |
-          node --input-type=module -e '
-          const base = process.env.URL;
-          let body = { offset: 0 };
-          for (let i = 0; i < 5000; i++) {
-            let r;
-            // Retry while a fresh workers.dev route still answers with the Cloudflare 404 page.
-            for (let t = 0; t < 30; t++) {
-              r = await fetch(base + "/api/inventory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-              if (r.status !== 404) break;
-              await new Promise(ok => setTimeout(ok, 10000));
-            }
-            const text = await r.text();
-            let p = {}; try { p = JSON.parse(text); } catch {}
-            if (!r.ok) { console.log("::warning title=Inventario::HTTP " + r.status + ": " + (p.error || text.replace(/\s+/g, " ").slice(0, 300))); process.exit(0); }
-            if (p.ready) { console.log("inventory ready"); process.exit(0); }
-            body = { offset: p.next };
-          }
-          '
-
-      # Cell-by-cell check of every served observation against its versioned seed.
-      - name: Validate deployed API against seed
-        if: steps.gate.outputs.ok == 'true'
-        working-directory: .
-        env:
-          URL: ${{ steps.url.outputs.url }}
-        run: |
-          # Full cell-by-cell check (reads every observation) only when a release was just
-          # completed or on manual runs; otherwise a light metadata check (D1 read budget).
-          LIGHT=""; [ "${{ steps.load.outputs.full }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || LIGHT="--light"
-          if python scripts/validate_quantitative_api.py --url "$URL" --public-https $LIGHT --seed data/processed/atlas-v3.json --seed data/processed/atlas-v4.json --seed data/processed/atlas-v5.json > validate.log 2>&1; then
-            echo "::notice title=Validación::$(tail -1 validate.log)"
-          else
-            cat validate.log
-            echo "::error title=Validación::$(tail -3 validate.log | tr '\n' ' ' | cut -c1-400)"
-            exit 1
-          fi
+          [ "$got" = "$want" ] || { echo "::error title=Web::la URL pública no sirve $want (sirve '${got:-nada}')"; exit 1; }
+          echo "::notice title=Web publicada::$URL sirve $want"

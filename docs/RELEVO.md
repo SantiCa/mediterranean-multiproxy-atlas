@@ -11,11 +11,13 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
-1. Límite diario D1 agotado el 29-10 (19:30): la ejecución nocturna (00:17 UTC) aplica la migración 0004 (Mis datos), despliega y continúa la carga de la v5 nueva (V27: se reutilizan los ids de series ya cargadas; solo ~28.000 valores nuevos, una noche). Mientras tanto la web sirve v5-c58d9be4128 (conservada en el manifiesto). Comprobar en Actions.
-2. Santiago: crear secreto GitHub `ATLAS_OWNER_PASSWORD` (≥12 caracteres) y relanzar «Deploy web to Cloudflare» para activar «Mis datos».
-3. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`: el orden ya prioriza parámetros con más sondeos fechados; columnas con < 3 sondeos se difieren (reversible) salvo las de agrupaciones (SST, δ18O/δ13C, TOC, CaCO3). Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`.
+1. V28: datos públicos estáticos (docs/handoffs/datos-estaticos.md). Comprobar en Actions el despliegue (paso «Check public snapshot»).
+2. Santiago: crear secreto GitHub `ATLAS_OWNER_PASSWORD` (≥12 caracteres) y relanzar «Deploy web to Cloudflare» para activar «Mis datos» (la migración 0004 se aplica en ese despliegue si D1 tiene cupo).
+3. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`; al fusionar en main se publica directamente. Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
+
+- 29-10 (22:47) HECHO V28: datos públicos desde archivos estáticos; D1 solo para Mis datos y DOI.
 
 - 29-10 (22:02) HECHO (V27, docs/handoffs/respaldo-estatico.md): la web cae cuando se agota el límite diario de D1 (API 5xx, «Conectando con el catálogo…»). Respaldo: instantánea estática de la última semilla (catálogo + observaciones por grupo) en `public/snapshot/`, generada en el build; el cliente la usa si la API falla, con aviso.
 
