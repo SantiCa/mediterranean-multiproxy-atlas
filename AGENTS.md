@@ -1,5 +1,16 @@
 # Mediterranean Multiproxy Atlas — guía para agentes
 
+## Relevo entre agentes (Claude ↔ ChatGPT/Codex) — leer primero
+
+Santiago alterna Claude y ChatGPT sobre el mismo trabajo según le queden créditos, y no recuerda IDs, ramas ni tareas. El estado vive en el repo, nunca en el chat.
+
+1. Si dice «sigue», «continúa» o no concreta tarea: `git fetch`; cambia a la rama `relevo` (si no existe, créala desde `main`); lee `docs/RELEVO.md` y continúa desde «Siguiente acción» sin pedirle nada más. No rehagas lo hecho; comprueba con `git log` de `relevo`.
+2. `docs/RELEVO.md` en la rama `relevo` es el único puntero vivo (tarea, estado, hecho, pendiente, siguiente acción exacta, pruebas, último agente y fecha). Tras **cada paso que funcione**, actualízalo y haz commit + push a `relevo` en el mismo commit: la sesión puede cortarse sin aviso y lo no subido se pierde.
+3. Si Santiago pide algo nuevo, anótalo en `RELEVO.md` (con push) antes de empezar. Si no hay tarea, propón la siguiente del backlog de `docs/PROJECT_STATE.md` en una frase y empieza cuando la acepte.
+4. Al terminar una tarea: pruebas pertinentes, handoff en `docs/handoffs/<tarea>.md`, fusiona `relevo` en `main` (`--no-ff`, sin reescribir historia) si las pruebas pasan, y deja en `RELEVO.md` la siguiente acción propuesta.
+5. El despliegue en ChatGPT Sites lo hace solo ChatGPT/Codex. Claude no toca `.openai/hosting.json`.
+6. No trabajar en paralelo los dos sobre `relevo`: el relevo es secuencial. Para tareas paralelas explícitas usar ramas propias como se indica abajo.
+
 ## Inicio de cada tarea
 
 1. Lee este archivo y `docs/PROJECT_STATE.md`; consulta después solo los archivos de tu especialidad indicados en `docs/CHAT_PROMPTS.md`.
