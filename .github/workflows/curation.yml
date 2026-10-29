@@ -89,7 +89,8 @@ jobs:
           N=$(printf '%s' "$MSG" | grep -oP '\[v5 propose=\K[0-9]+' || echo 0)
           step(){ n=$1; shift; "$@" > ci-logs/$n.log 2>&1 && c=0 || c=$?; tail -n 25 ci-logs/$n.log | tr '\n' '|' | sed "s/^/::warning title=$n exit $c::/"; echo; return $c; }
           AM=$(printf '%s' "$MSG" | grep -qP '\[v5[^\]]*agemodels' && echo --age-models || true)
-          step curate python scripts/importers/curate_pangaea_v5.py --propose $N $AM
+          PR=$(printf '%s' "$MSG" | grep -qP '\[v5[^\]]*prune' && echo --prune || true)
+          step curate python scripts/importers/curate_pangaea_v5.py --propose $N $AM $PR
           step build python scripts/build_quantitative_v5.py
           step manifest python scripts/d1_release.py manifest --seed data/processed/atlas-v3.json --seed data/processed/atlas-v4.json --seed data/processed/atlas-v5.json --out app/atlas-web/data/release.json
       - name: Commit v5 contract, reports and release
