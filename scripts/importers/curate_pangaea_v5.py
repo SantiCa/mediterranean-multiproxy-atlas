@@ -479,7 +479,7 @@ def curate():
         for c in e['columns']:
             if c['status'] != 'approved':
                 continue
-            k, out, missing, rejected = c['column'], [], 0, 0
+            k, out, missing, rejected, outside = c['column'], [], 0, 0, 0
             for src_row, line, cells in rows:
                 v = number(cells[k])
                 if v is None:
@@ -488,6 +488,11 @@ def curate():
                     continue
                 if pts:
                     a_ka, a_txt = interpolate(pts, number(cells[depth_col])), None
+                    if a_ka is None:
+                        # Fuera del rango del modelo (o sin profundidad): no se extrapola y la
+                        # muestra no entra en el atlas; queda contada y en el original (hash).
+                        outside += 1
+                        continue
                 else:
                     a = number(cells[age[0]])
                     a_ka, a_txt = (age[2](a) if a is not None else None), cells[age[0]]
@@ -516,6 +521,7 @@ def curate():
                      uncertainty_type='native column adjacent (±/std dev), type as labelled' if c['error_column'] is not None else 'not_supplied_for_selected_column',
                      value_uncertainty_source_column=header[c['error_column']] if c['error_column'] is not None else None,
                      depth_frame='native sediment depth m; no cross-table remapping', rows=out,
+                     rows_outside_age_model=outside if pts else None,
                      review_status='contract_v5_auto_rules; manual review ' + ('done' if c['status'] == 'approved' and e['status'] == 'approved' else 'pending'))
             vals = [x[1] for x in out]
             ages = [x[0] for x in out if x[0] is not None]
