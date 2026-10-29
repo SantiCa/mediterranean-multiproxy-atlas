@@ -4046,5 +4046,4838 @@
     "status": "approved"
    }
   ]
+ },
+ "932720": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "redox"
+  ],
+  "tsv_sha256": "e278956d904ce2c792b82c63a1f881c683f01f975e2e9d2ef38f90772a1e5f7e",
+  "xml_sha256": "2ea4b9b1e14c883793f8fb16fd3114510bfaa9176c3a168cfe9ff571dfdb9820",
+  "event": {
+   "label": "GeoB9064-1",
+   "lat": 35.415166666667,
+   "lon": -6.8451666666667,
+   "elevation": "-702.0",
+   "campaign": "SO175",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Mg/Ca [mmol/mol]",
+   "BWT [°C]",
+   "BWT e [±]",
+   "δ18O H2O [‰ SMOW]",
+   "δ18O H2O std dev [±]",
+   "Mn/Ca [µmol/mol]",
+   "Acc rate benth forams [#/cm**2/ka]"
+  ],
+  "n_rows": 32,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Portilho-Ramos, Rodrigo Costa; Titschack, Jürgen; Wienberg, Claudia; Siccha, Michael; Yokoyama, Yusuke; Hebbeln, Dierk (2021): Benthic foraminiferal data of sediment core GeoB9064-1, Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.932720, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Mg/Ca [mmol/mol]",
+    "parameter": "Magnesium/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mgca_foram"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "Mn/Ca [µmol/mol]",
+    "parameter": "Manganese/Calcium ratio",
+    "unit": "µmol/mol",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mgca_foram",
+     "redox",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Acc rate benth forams [#/cm**2/ka]",
+    "parameter": "Accumulation rate, benthic foraminifera by number",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "932737": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo"
+  ],
+  "tsv_sha256": "53ce82cabcd07f39527e29552a59da2a8e8b6c2b39b05d1caee2f4504f99ad29",
+  "xml_sha256": "a3f1eb4227c8deb16005095c50c9db5d9dbda587d932676cd75dc388ff98342f",
+  "event": {
+   "label": "GeoB18131-1",
+   "lat": 35.468216666667,
+   "lon": -3.1550166666667,
+   "elevation": "-457.0",
+   "campaign": "MSM36",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Acc rate benth forams [#/cm**2/ka]"
+  ],
+  "n_rows": 34,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Portilho-Ramos, Rodrigo Costa; Titschack, Jürgen; Wienberg, Claudia; Siccha, Michael; Yokoyama, Yusuke; Hebbeln, Dierk (2021): Benthic foraminifera accumulation rate of sediment core GeoB1813-1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.932737, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Acc rate benth forams [#/cm**2/ka]",
+    "parameter": "Accumulation rate, benthic foraminifera by number",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "932746": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "redox"
+  ],
+  "tsv_sha256": "ef379b275437b26ef76702ca3b4714ae8b95b5358cb20a43483d98ef66e7c074",
+  "xml_sha256": "2335c16261e37e6769d78c43a46676189b197ec84a269a755d5e6d5262427b47",
+  "event": {
+   "label": "GeoB13731-1",
+   "lat": 35.413333333333,
+   "lon": -2.5536666666667,
+   "elevation": "-362.0",
+   "campaign": "POS385",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Mg/Ca [mmol/mol]",
+   "BWT [°C]",
+   "BWT e [±]",
+   "δ18O H2O [‰ SMOW]",
+   "δ18O H2O std dev [±]",
+   "Mn/Ca [µmol/mol]",
+   "Acc rate benth forams [#/cm**2/ka]"
+  ],
+  "n_rows": 45,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Portilho-Ramos, Rodrigo Costa; Titschack, Jürgen; Wienberg, Claudia; Siccha, Michael; Yokoyama, Yusuke; Hebbeln, Dierk (2021): Benthic foraminiferal data of sediment core GeoB13731-1, East Melilla [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.932746, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Mg/Ca [mmol/mol]",
+    "parameter": "Magnesium/Calcium ratio",
+    "unit": "mmol/mol",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mgca_foram"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "Mn/Ca [µmol/mol]",
+    "parameter": "Manganese/Calcium ratio",
+    "unit": "µmol/mol",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mgca_foram",
+     "redox",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "Acc rate benth forams [#/cm**2/ka]",
+    "parameter": "Accumulation rate, benthic foraminifera by number",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "949594": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "granulometria"
+  ],
+  "tsv_sha256": "faed9e268d06eb91f4afac73277eed1aeabb31ede6d51cc44f4f62c8b7ddd11b",
+  "xml_sha256": "d8cad6a28edcdcb584a04dbbdfd7f07fd591b8a4413bfdc151cbfaab03f50cd9",
+  "event": {
+   "label": "107-654A",
+   "lat": 40.5793,
+   "lon": 10.6967,
+   "elevation": "-2208.0",
+   "campaign": "Leg107",
+   "device": null
+  },
+  "header": [
+   "Sample label (DSDP/ODP/IODP sample designation)",
+   "Depth sed [m]",
+   "Age [ka BP] (from Grazzini et al. 1990)",
+   "Age [Ma] (from Grazzini et al. 1990)",
+   "C. deceptorium [#/g] (Extinction Group, Counting >6...)",
+   "C. stimulea [#/g] (Extinction Group, Counting >6...)",
+   "L. asperula [#/g] (Extinction Group, Counting >6...)",
+   "L. calomorpha [#/g] (Extinction Group, Counting >6...)",
+   "S. conicum [#/g] (Extinction Group, Counting >6...)",
+   "S. ovicula [#/g] (Extinction Group, Counting >6...)",
+   "G. ambigua [#/g] (Extinction Group, Counting >6...)",
+   "G. glandigena [#/g] (Extinction Group, Counting >6...)",
+   "G. lutzei [#/g] (Extinction Group, Counting >6...)",
+   "G. trincherasensis [#/g] (Extinction Group, Counting >6...)",
+   "O. jedlitschkai [#/g] (Extinction Group, Counting >6...)",
+   "O. laevis [#/g] (Extinction Group, Counting >6...)",
+   "O. perversa [#/g] (Extinction Group, Counting >6...)",
+   "N. longiscata [#/g] (Extinction Group, Counting >6...)",
+   "S. tetragona [#/g] (Extinction Group, Counting >6...)",
+   "S. tosta [#/g] (Extinction Group, Counting >6...)",
+   "M. compressa [#/g] (Extinction Group, Counting >6...)",
+   "M. dumontana [#/g] (Extinction Group, Counting >6...)",
+   "M. spatulata [#/g] (Extinction Group, Counting >6...)",
+   "A. multicostata [#/g] (Extinction Group, Counting >6...)",
+   "E. labiata [#/g] (Extinction Group, Counting >6...)",
+   "E. pleurostomelloides [#/g] (Extinction Group, Counting >6...)",
+   "E. subtuberosa [#/g] (Extinction Group, Counting >6...)",
+   "E. ellipsoides [#/g] (Extinction Group, Counting >6...)",
+   "O. pleurostomella [#/g] (Extinction Group, Counting >6...)",
+   "O. russitanoi [#/g] (Extinction Group, Counting >6...)",
+   "O. thomasae [#/g] (Extinction Group, Counting >6...)",
+   "P. acuminata [#/g] (Extinction Group, Counting >6...)",
+   "P. alternans [#/g] (Extinction Group, Counting >6...)",
+   "S. lepidula [#/g] (Extinction Group, Counting >6...)",
+   "S. fistuca [#/g] (Extinction Group, Counting >6...)",
+   "S. advena [#/g] (Extinction Group, Counting >6...)",
+   "S. hyugaensis [#/g] (Extinction Group, Counting >6...)",
+   "S. matanzana [#/g] (Extinction Group, Counting >6...)",
+   "S. modesta [#/g] (Extinction Group, Counting >6...)",
+   "U. retrorsa [#/g] (Extinction Group, Counting >6...)",
+   "V. pennatula [#/g] (Extinction Group, Counting >6...)",
+   "A. hispida [#/g] (Survivor Group, Counting >63 ...)",
+   "Astacolus sp. [#/g] (Survivor Group, Counting >63 ...)",
+   "D. filiformis [#/g] (Survivor Group, Counting >63 ...)",
+   "D. intorta [#/g] (Survivor Group, Counting >63 ...)",
+   "D. laminulifera [#/g] (Survivor Group, Counting >63 ...)",
+   "D. mutabilis [#/g] (Survivor Group, Counting >63 ...)",
+   "Dentalina spp. [#/g] (Survivor Group, Counting >63 ...)",
+   "G. ovula [#/g] (Survivor Group, Counting >63 ...)",
+   "G. ittai [#/g] (Survivor Group, Counting >63 ...)",
+   "G. orectus [#/g] (Survivor Group, Counting >63 ...)",
+   "L. inflexa [#/g] (Survivor Group, Counting >63 ...)",
+   "L. neugeboreni [#/g] (Survivor Group, Counting >63 ...)",
+   "L. soluta [#/g] (Survivor Group, Counting >63 ...)",
+   "L. subemaciata [#/g] (Survivor Group, Counting >63 ...)",
+   "Laevidentalina spp. [#/g] (Survivor Group, Counting >63 ...)",
+   "Marginulina spp. [#/g] (Survivor Group, Counting >63 ...)",
+   "Nodosaria spp. [#/g] (questionable, Survivor Group,...)",
+   "Pseudonodosaria spp. [#/g] (Survivor Group, Counting >63 ...)",
+   "Vaginulina sp. [#/g] (sp. B of SK, Survivor Group, ...)",
+   "V. sublegumen [#/g] (Survivor Group, Counting >63 ...)",
+   "Vaginulinopsis spp. [#/g] (Survivor Group, Counting >63 ...)",
+   "K. bradyi [#/g] (Die Back Group, Counting >63 ...)",
+   "N. hispida [#/g] (Die Back Group, Counting >63 ...)",
+   "Abditodentrix spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Acostina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "B. nodosaria [#/g] (B. ? nodosaria, Other elongat...)",
+   "Bolivina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "B. quadrilatera [#/g] (Other elongate taxa, raw coun...)",
+   "B. marginata [#/g] (s.l., Other elongate taxa, ra...)",
+   "B. elongata [#/g] (Other elongate taxa, raw coun...)",
+   "Chilostomella spp. [#/g] (Other elongate taxa, raw coun...)",
+   "C. bradyi [#/g] (Other elongate taxa, raw coun...)",
+   "Dimorphina spp. [#/g] (questionable, Other elongate ...)",
+   "E. bradyi [#/g] (Other elongate taxa, raw coun...)",
+   "F. complanata [#/g] (Other elongate taxa, raw coun...)",
+   "F. schreibersiana [#/g] (Other elongate taxa, raw coun...)",
+   "F. texturata [#/g] (Other elongate taxa, raw coun...)",
+   "Gaudryina [#/g] (Other elongate taxa, raw coun...)",
+   "Globobulimina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Karreriella spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Martinottiella spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Liebusella spp. [#/g] (Other elongate taxa, raw coun...)",
+   "N. proboscidea [#/g] (Other elongate taxa, raw coun...)",
+   "Pyramidulina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Rectuvigerina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Robertina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Ruakituria spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Rutherfordoides spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Textularia spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Trifarina spp. [#/g] (Other elongate taxa, raw coun...)",
+   "Uvigerina spp. [#/g] (costate forms, Other elongate...)",
+   "Ostrac valves/sed [#/g]",
+   "LSR [cm/ka]",
+   "Sed dm [g]",
+   ">63 µm [g]",
+   "Foram benth ext [#/g]",
+   "Spec No [#] (extinction group)",
+   "Foram benth survivor [#/g]",
+   "Spec No [#] (survivor group)",
+   "Acc rate benth foram ext [#/cm**2/ka]"
+  ],
+  "n_rows": 16,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Hayward, Bruce William; Kawagata, Shungo; Sabaa, Ashwaq T; Grenfell, Hugh R; Van Kerckhoven, Liesbeth; Johnson, Katherine; Thomas, Ellen (2022): High-resolution census data of Extinction Group species in the Late Pliocene-Pleistocene of ODP Hole 107-654A, Mediterranean Sea [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.949594, ",
+  "columns": [
+   {
+    "column": 63,
+    "header": "N. hispida [#/g] (Die Back Group, Counting >63 ...)",
+    "parameter": "Neouvigerina hispida",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Die Back Group",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 67,
+    "header": "Bolivina spp. [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Bolivina spp.",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 68,
+    "header": "B. quadrilatera [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Bolivinita quadrilatera",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 69,
+    "header": "B. marginata [#/g] (s.l., Other elongate taxa, ra...)",
+    "parameter": "Bulimina marginata",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "s.l., Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 70,
+    "header": "B. elongata [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Bulimina elongata",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 71,
+    "header": "Chilostomella spp. [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Chilostomella spp.",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 79,
+    "header": "Globobulimina spp. [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Globobulimina spp.",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 83,
+    "header": "N. proboscidea [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Neouvigerina proboscidea",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 85,
+    "header": "Rectuvigerina spp. [#/g] (Other elongate taxa, raw coun...)",
+    "parameter": "Rectuvigerina spp.",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 91,
+    "header": "Uvigerina spp. [#/g] (costate forms, Other elongate...)",
+    "parameter": "Uvigerina spp.",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "costate forms, Other elongate taxa, raw counts",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 95,
+    "header": ">63 µm [g]",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 96,
+    "header": "Foram benth ext [#/g]",
+    "parameter": "Foraminifera, benthic extinction group",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 98,
+    "header": "Foram benth survivor [#/g]",
+    "parameter": "Foraminifera, benthic survivor group",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 100,
+    "header": "Acc rate benth foram ext [#/cm**2/ka]",
+    "parameter": "Accumulation rate, benthic foraminifera extinction group by number",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "949638": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "granulometria"
+  ],
+  "tsv_sha256": "49f03fe5e790ba5acde289416a3d287c9ce4c792ee246ae8685b5d31287366db",
+  "xml_sha256": "17dbdbaff988e63bb276a703ac88c7941329f37514fdd7cecea6871c6ce877fe",
+  "event": {
+   "label": "160-966B",
+   "lat": 33.7961,
+   "lon": 32.7014,
+   "elevation": "-927.0",
+   "campaign": "Leg160",
+   "device": null
+  },
+  "header": [
+   "Sample label (DSDP/ODP/IODP sample designation)",
+   "Depth comp [mcd]",
+   "Age [ka BP] (from Emeis et al., 2000)",
+   "Age [Ma] (from Emeis et al., 2000)",
+   "MIS",
+   "Sed dm [g]",
+   ">63 µm [g]",
+   "C. deceptorium [#/g] (Extinction group, Counting >6...)",
+   "C. stimulea [#/g] (Extinction group, Counting >6...)",
+   "L. asperula [#/g] (Extinction group, Counting >6...)",
+   "L. calomorpha [#/g] (Extinction group, Counting >6...)",
+   "S. conicum [#/g] (Extinction group, Counting >6...)",
+   "S. ovicula [#/g] (Extinction group, Counting >6...)",
+   "G. ambigua [#/g] (Extinction group, Counting >6...)",
+   "G. glandigena [#/g] (Extinction group, Counting >6...)",
+   "G. lutzei [#/g] (Extinction group, Counting >6...)",
+   "G. trincherasensis [#/g] (Extinction group, Counting >6...)",
+   "O. jedlitschkai [#/g] (Extinction group, Counting >6...)",
+   "O. laevis [#/g] (Extinction group, Counting >6...)",
+   "O. perversa [#/g] (Extinction group, Counting >6...)",
+   "N. longiscata [#/g] (Extinction group, Counting >6...)",
+   "M. compressa [#/g] (Extinction group, Counting >6...)",
+   "M. dumontana [#/g] (Extinction group, Counting >6...)",
+   "M. spatulata [#/g] (Extinction group, Counting >6...)",
+   "S. tetragona [#/g] (Extinction group, Counting >6...)",
+   "S. tosta [#/g] (Extinction group, Counting >6...)",
+   "A. multicostata [#/g] (Extinction group, Counting >6...)",
+   "E. labiata [#/g] (Extinction group, Counting >6...)",
+   "E. pleurostomelloides [#/g] (Extinction group, Counting >6...)",
+   "E. subtuberosa [#/g] (Extinction group, Counting >6...)",
+   "E. ellipsoides [#/g] (Extinction group, Counting >6...)",
+   "O. pleurostomella [#/g] (Extinction group, Counting >6...)",
+   "O. russitanoi [#/g] (Extinction group, Counting >6...)",
+   "O. thomasae [#/g] (Extinction group, Counting >6...)",
+   "P. acuminata [#/g] (Extinction group, Counting >6...)",
+   "P. alternans [#/g] (Extinction group, Counting >6...)",
+   "S. lepidula [#/g] (Extinction group, Counting >6...)",
+   "S. fistuca [#/g] (Extinction group, Counting >6...)",
+   "S. advena [#/g] (Extinction group, Counting >6...)",
+   "S. cf. japonica [#/g] (Extinction group, Counting >6...)",
+   "S. hyugaensis [#/g] (Extinction group, Counting >6...)",
+   "S. modesta [#/g] (Extinction group, Counting >6...)",
+   "U. retrorsa [#/g] (Extinction group, Counting >6...)",
+   "V. pennatula [#/g] (Extinction group, Counting >6...)",
+   "LSR [cm/ka] (Counting >63 µm fraction)",
+   "Sed dm [g] (Counting >63 µm fraction)",
+   ">63 µm [g] (Counting >63 µm fraction)",
+   ">63 µm [%] (Counting >63 µm fraction)",
+   "Foram benth ext [#/g] (Counting >63 µm fraction)",
+   "Foram benth ext [#] (Counting >63 µm fraction)",
+   "Foram benth survivor [#/g] (Counting >63 µm fraction)",
+   "Foram benth survivor [#] (Counting >63 µm fraction)",
+   "Acc rate benth foram ext [#/cm**2/ka] (Counting >63 µm fraction)"
+  ],
+  "n_rows": 25,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Hayward, Bruce William; Kawagata, Shungo; Sabaa, Ashwaq T; Grenfell, Hugh R; Van Kerckhoven, Liesbeth; Johnson, Katherine; Thomas, Ellen (2022): High-resolution census data of Extinction Group species in the Late Pliocene-Pleistocene of ODP Hole 160-966B, Mediterranean Sea [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.949638, ",
+  "columns": [
+   {
+    "column": 6,
+    "header": ">63 µm [g]",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 46,
+    "header": ">63 µm [g] (Counting >63 µm fraction)",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 47,
+    "header": ">63 µm [%] (Counting >63 µm fraction)",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "%",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 48,
+    "header": "Foram benth ext [#/g] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic extinction group",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 49,
+    "header": "Foram benth ext [#] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic extinction group",
+    "unit": "#",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 50,
+    "header": "Foram benth survivor [#/g] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic survivor group",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 51,
+    "header": "Foram benth survivor [#] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic survivor group",
+    "unit": "#",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 52,
+    "header": "Acc rate benth foram ext [#/cm**2/ka] (Counting >63 µm fraction)",
+    "parameter": "Accumulation rate, benthic foraminifera extinction group by number",
+    "unit": "#/cm**2/ka",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "949639": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "granulometria"
+  ],
+  "tsv_sha256": "ae93545e34c7ce82ec753fb63ee3ca9b8da36a126d8bb8206756018cf64fff4e",
+  "xml_sha256": "3f165a417f5401ebccf283ba5c1546f3c0b8493a745d530d14be2741d9ca493e",
+  "event": {
+   "label": "160-967A",
+   "lat": 34.0683,
+   "lon": 32.7253,
+   "elevation": "-2553.0",
+   "campaign": "Leg160",
+   "device": null
+  },
+  "header": [
+   "Sample label (DSDP/ODP/IODP sample designation)",
+   "Depth comp [mcd]",
+   "Age [ka BP]",
+   "Age [Ma]",
+   "C. deceptorium [#/g] (Extinction group, Counting >6...)",
+   "C. stimulea [#/g] (Extinction group, Counting >6...)",
+   "L. asperula [#/g] (Extinction group, Counting >6...)",
+   "L. calomorpha [#/g] (Extinction group, Counting >6...)",
+   "S. conicum [#/g] (Extinction group, Counting >6...)",
+   "S. ovicula [#/g] (Extinction group, Counting >6...)",
+   "G. ambigua [#/g] (Extinction group, Counting >6...)",
+   "G. glandigena [#/g] (Extinction group, Counting >6...)",
+   "G. lutzei [#/g] (Extinction group, Counting >6...)",
+   "G. trincherasensis [#/g] (Extinction group, Counting >6...)",
+   "O. jedlitschkai [#/g] (Extinction group, Counting >6...)",
+   "O. laevis [#/g] (Extinction group, Counting >6...)",
+   "O. perversa [#/g] (Extinction group, Counting >6...)",
+   "N. longiscata [#/g] (Extinction group, Counting >6...)",
+   "M. compressa [#/g] (Extinction group, Counting >6...)",
+   "M. dumontana [#/g] (Extinction group, Counting >6...)",
+   "M. spatulata [#/g] (Extinction group, Counting >6...)",
+   "S. tetragona [#/g] (Extinction group, Counting >6...)",
+   "S. tosta [#/g] (Extinction group, Counting >6...)",
+   "A. multicostata [#/g] (Extinction group, Counting >6...)",
+   "E. labiata [#/g] (Extinction group, Counting >6...)",
+   "E. pleurostomelloides [#/g] (Extinction group, Counting >6...)",
+   "E. subtuberosa [#/g] (Extinction group, Counting >6...)",
+   "E. ellipsoides [#/g] (Extinction group, Counting >6...)",
+   "O. russitanoi [#/g] (Extinction group, Counting >6...)",
+   "O. thomasae [#/g] (Extinction group, Counting >6...)",
+   "O. pleurostomella [#/g] (Extinction group, Counting >6...)",
+   "P. acuminata [#/g] (Extinction group, Counting >6...)",
+   "P. alternans [#/g] (Extinction group, Counting >6...)",
+   "S. sagrinensis [#/g] (Extinction group, Counting >6...)",
+   "S. fistuca [#/g] (Extinction group, Counting >6...)",
+   "S. advena [#/g] (Extinction group, Counting >6...)",
+   "S. hyugaensis [#/g] (Extinction group, Counting >6...)",
+   "S. matanzana [#/g] (Extinction group, Counting >6...)",
+   "S. modesta [#/g] (Extinction group, Counting >6...)",
+   "U. retrorsa [#/g] (Extinction group, Counting >6...)",
+   "V. pennatula [#/g] (Extinction group, Counting >6...)",
+   "Foram benth ext [#/g] (Counting >63 µm fraction)",
+   "LSR [cm/ka] (Counting >63 µm fraction)",
+   "Sed dm [g] (Counting >63 µm fraction)",
+   ">63 µm [g] (Counting >63 µm fraction)",
+   "Foram benth ext [#/g] (Counting >63 µm fraction)",
+   "Spec No [#] (extinction group, Counting >6...)",
+   "Foram benth survivor [#/g] (Counting >63 µm fraction)",
+   "Spec No [#] (survivor group, Counting >63 ...)",
+   "Acc rate benth foram ext [#/cm**2/ka] (Counting >63 µm fraction)",
+   "Foram benth [#/g] (Hi-C Gp, Counting >63 µm frac...)",
+   "BFAR [#/cm**2/ka] (Hi-C Gp, Counting >63 µm frac...)"
+  ],
+  "n_rows": 12,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Hayward, Bruce William; Kawagata, Shungo; Sabaa, Ashwaq T; Grenfell, Hugh R; Van Kerckhoven, Liesbeth; Johnson, Katherine; Thomas, Ellen (2022): High-resolution census data of Extinction Group species in the Late Pliocene-Pleistocene of ODP Hole 160-967A, Mediterranean Sea [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.949639, ",
+  "columns": [
+   {
+    "column": 41,
+    "header": "Foram benth ext [#/g] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic extinction group",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 44,
+    "header": ">63 µm [g] (Counting >63 µm fraction)",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 45,
+    "header": "Foram benth ext [#/g] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic extinction group",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 47,
+    "header": "Foram benth survivor [#/g] (Counting >63 µm fraction)",
+    "parameter": "Foraminifera, benthic survivor group",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 49,
+    "header": "Acc rate benth foram ext [#/cm**2/ka] (Counting >63 µm fraction)",
+    "parameter": "Accumulation rate, benthic foraminifera extinction group by number",
+    "unit": "#/cm**2/ka",
+    "method": "Counting >63 µm fraction",
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 50,
+    "header": "Foram benth [#/g] (Hi-C Gp, Counting >63 µm frac...)",
+    "parameter": "Foraminifera, benthic",
+    "unit": "#/g",
+    "method": "Counting >63 µm fraction",
+    "comment": "Hi-C Gp",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 51,
+    "header": "BFAR [#/cm**2/ka] (Hi-C Gp, Counting >63 µm frac...)",
+    "parameter": "Accumulation rate, number of benthic foraminifera",
+    "unit": "#/cm**2/ka",
+    "method": "Counting >63 µm fraction",
+    "comment": "Hi-C Gp",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "949641": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "foram_bent_censo",
+   "granulometria"
+  ],
+  "tsv_sha256": "68f290c5c4a6c0893fe9c439c1043fe2f8ca63437d0f241533b35cb659cd9530",
+  "xml_sha256": "627b297d9df164e739550f995f81d7793e6a28bce6131041a05a6cf61b058db9",
+  "event": {
+   "label": "161-976C",
+   "lat": 36.2053,
+   "lon": -4.31221,
+   "elevation": "-1108.0",
+   "campaign": "Leg161",
+   "device": null
+  },
+  "header": [
+   "Sample label (DSDP/ODP/IODP sample designation)",
+   "Depth comp [mcd]",
+   "MIS",
+   "Age [ka BP]",
+   "Age [Ma]",
+   "C. deceptorium [#/g] (Extinction Group, Counting >6...)",
+   "C. stimulea [#/g] (Extinction Group, Counting >6...)",
+   "L. asperula [#/g] (Extinction Group, Counting >6...)",
+   "L. calomorpha [#/g] (Extinction Group, Counting >6...)",
+   "S. conicum [#/g] (Extinction Group, Counting >6...)",
+   "S. ovicula [#/g] (Extinction Group, Counting >6...)",
+   "G. ambigua [#/g] (Extinction Group, Counting >6...)",
+   "G. glandigena [#/g] (Extinction Group, Counting >6...)",
+   "G. lutzei [#/g] (Extinction Group, Counting >6...)",
+   "G. trincherasensis [#/g] (Extinction Group, Counting >6...)",
+   "O. jedlitschkai [#/g] (Extinction Group, Counting >6...)",
+   "O. laevis [#/g] (Extinction Group, Counting >6...)",
+   "O. perversa [#/g] (Extinction Group, Counting >6...)",
+   "N. longiscata [#/g] (Extinction Group, Counting >6...)",
+   "M. compressa [#/g] (Extinction Group, Counting >6...)",
+   "M. dumontana [#/g] (Extinction Group, Counting >6...)",
+   "M. spatulata [#/g] (Extinction Group, Counting >6...)",
+   "S. tetragona [#/g] (Extinction Group, Counting >6...)",
+   "S. tosta [#/g] (Extinction Group, Counting >6...)",
+   "A. multicostata [#/g] (Extinction Group, Counting >6...)",
+   "E. labiata [#/g] (Extinction Group, Counting >6...)",
+   "E. pleurostomelloides [#/g] (Counting >63 µm fraction)",
+   "E. subtuberosa [#/g] (Extinction Group, Counting >6...)",
+   "E. ellipsoides [#/g] (Extinction Group, Counting >6...)",
+   "O. pleurostomella [#/g] (Extinction Group, Counting >6...)",
+   "O. russitanoi [#/g] (Extinction Group, Counting >6...)",
+   "O. thomasae [#/g] (Extinction Group, Counting >6...)",
+   "P. acuminata [#/g] (Extinction Group, Counting >6...)",
+   "P. alternans [#/g] (Extinction Group, Counting >6...)",
+   "S. lepidula [#/g] (Extinction Group, Counting >6...)",
+   "S. fistuca [#/g] (Extinction Group, Counting >6...)",
+   "S. advena [#/g] (Extinction Group, Counting >6...)",
+   "S. hyugaensis [#/g] (Extinction Group, Counting >6...)",
+   "S. matanzana [#/g] (Extinction Group, Counting >6...)",
+   "S. modesta [#/g] (Extinction Group, Counting >6...)",
+   "U. retrorsa [#/g] (Extinction Group, Counting >6...)",
+   "V. pennatula [#/g] (Extinction Group, Counting >6...)",
+   "LSR [cm/ka]",
+   "Sed dm [g]",
+   ">63 µm [g]",
+   ">63 µm [%]",
+   "Comment",
+   "Spec No [#] (extinction group)",
+   "Foram benth ext [#/g]",
+   "Spec No [#] (survivor group)",
+   "Foram benth survivor [#/g]",
+   "Acc rate benth foram ext [#/cm**2/ka]",
+   "Foram benth [#/g] (Hi-C Gp)",
+   "BFAR [#/cm**2/ka] (Hi-C Gp)"
+  ],
+  "n_rows": 14,
+  "age_column": 3,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Hayward, Bruce William; Kawagata, Shungo; Sabaa, Ashwaq T; Grenfell, Hugh R; Van Kerckhoven, Liesbeth; Johnson, Katherine; Thomas, Ellen (2022): High-resolution census data of Extinction Group species in the Late Pliocene-Pleistocene of ODP Hole 161-976C, Mediterranean Sea [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.949641, ",
+  "columns": [
+   {
+    "column": 44,
+    "header": ">63 µm [g]",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 45,
+    "header": ">63 µm [%]",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 48,
+    "header": "Foram benth ext [#/g]",
+    "parameter": "Foraminifera, benthic extinction group",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 50,
+    "header": "Foram benth survivor [#/g]",
+    "parameter": "Foraminifera, benthic survivor group",
+    "unit": "#/g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 51,
+    "header": "Acc rate benth foram ext [#/cm**2/ka]",
+    "parameter": "Accumulation rate, benthic foraminifera extinction group by number",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": null,
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 52,
+    "header": "Foram benth [#/g] (Hi-C Gp)",
+    "parameter": "Foraminifera, benthic",
+    "unit": "#/g",
+    "method": null,
+    "comment": "Hi-C Gp",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 53,
+    "header": "BFAR [#/cm**2/ka] (Hi-C Gp)",
+    "parameter": "Accumulation rate, number of benthic foraminifera",
+    "unit": "#/cm**2/ka",
+    "method": null,
+    "comment": "Hi-C Gp",
+    "families": [
+     "foram_bent_censo"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733069": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "1a20aa4db7695e49beae6029e9fce4b3b3870501d9fb5105e1f6de2f0ba69779",
+  "xml_sha256": "004f493ef81418bb83af6c5a5abee7759b4ca8406d5c8b6eb5159708a8abec6b",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. ruber w δ18O [‰ PDB]",
+   "G. ruber w δ13C [‰ PDB]",
+   "N. pachyderma d δ18O [‰ PDB]",
+   "N. pachyderma d δ13C [‰ PDB]",
+   "N. pachyderma s δ18O [‰ PDB]",
+   "N. pachyderma s δ13C [‰ PDB]",
+   "G. inflata δ18O [‰ PDB]",
+   "G. inflata δ13C [‰ PDB]",
+   "G. scitula δ18O [‰ PDB]",
+   "G. scitula δ13C [‰ PDB]",
+   "G. truncatulinoides d δ18O [‰ PDB]",
+   "G. truncatulinoides d δ13C [‰ PDB]",
+   "G. truncatulinoides s δ18O [‰ PDB]",
+   "G. truncatulinoides s δ13C [‰ PDB]"
+  ],
+  "n_rows": 69,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia; Schönfeld, Joachim; Erlenkeuser, Helmut; Abrantes, Fatima F (2009): (Fig. 4) Planktonic foraminifer stable isotope records of sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733069, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. ruber w δ18O [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 11-18 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. ruber w δ13C [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 11-18 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "N. pachyderma d δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 22-27 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "N. pachyderma d δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 22-27 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "N. pachyderma s δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 20-25 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "N. pachyderma s δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 20-25 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. inflata δ18O [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 7-11 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. inflata δ13C [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 7-11 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. scitula δ18O [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 21-26 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. scitula δ13C [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 21-26 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "G. truncatulinoides d δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 2-12 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "G. truncatulinoides d δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 2-12 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "G. truncatulinoides s δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 12 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "G. truncatulinoides s δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 12 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733070": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "35d1965844d58a1f424fb905849abe2742c0a881fc1eab9b561974c519316b2a",
+  "xml_sha256": "167691511e821a0e15593a2300062ce7a84044c92f08a7917a2bb38b4b5f0245",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. ruber w δ18O [‰ PDB]",
+   "G. ruber w δ13C [‰ PDB]",
+   "N. pachyderma d δ18O [‰ PDB]",
+   "N. pachyderma d δ13C [‰ PDB]",
+   "N. pachyderma s δ18O [‰ PDB]",
+   "N. pachyderma s δ13C [‰ PDB]",
+   "G. scitula δ18O [‰ PDB]",
+   "G. scitula δ13C [‰ PDB]",
+   "G. inflata δ18O [‰ PDB]",
+   "G. inflata δ13C [‰ PDB]",
+   "G. truncatulinoides d δ18O [‰ PDB]",
+   "G. truncatulinoides d δ13C [‰ PDB]"
+  ],
+  "n_rows": 122,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia; Schönfeld, Joachim; Erlenkeuser, Helmut; Abrantes, Fatima F (2009): (Fig. 3) Planktonic foraminifer stable isotope records of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733070, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. ruber w δ18O [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 17-21 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. ruber w δ13C [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 17-21 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "N. pachyderma d δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 25-30 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "N. pachyderma d δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 25-30 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "N. pachyderma s δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 25-44 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "N. pachyderma s δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "150-250 µm, 25-44 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. scitula δ18O [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 or >150 µm, 20-30 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. scitula δ13C [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 or >150 µm, 20-30 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. inflata δ18O [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 8 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. inflata δ13C [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 8 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "G. truncatulinoides d δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 3-7 specimens",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "G. truncatulinoides d δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": ">250 µm, 3-7 specimens",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733096": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "858ecfef7062264d2057b3124f813aa76d0982bea309028ff8f1f673b85d8b4e",
+  "xml_sha256": "9d197121ea68904bb6d1851be96c2c3d6891c35bdcdc348fc11373a1c5198bf7",
+  "event": {
+   "label": "MD99-2339",
+   "lat": 35.8855,
+   "lon": -7.5278333333333,
+   "elevation": "-1177.0",
+   "campaign": "MD114",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. inflata δ18O [‰ PDB]",
+   "G. inflata δ13C [‰ PDB]",
+   "G. truncatulinoides d δ18O [‰ PDB]",
+   "G. truncatulinoides d δ13C [‰ PDB]",
+   "G. truncatulinoides s δ18O [‰ PDB]",
+   "G. truncatulinoides s δ13C [‰ PDB]",
+   "N. pachyderma d δ18O [‰ PDB]",
+   "N. pachyderma d δ13C [‰ PDB]",
+   "G. scitula δ18O [‰ PDB]",
+   "G. scitula δ13C [‰ PDB]"
+  ],
+  "n_rows": 215,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; Erlenkeuser, Helmut; Schönfeld, Joachim (2010): Stable oxygen and carbon isotope ratios of planktonic foraminifera from sediment core MD99-2339 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733096",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. inflata δ18O [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. inflata δ13C [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "G. truncatulinoides d δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. truncatulinoides d δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. truncatulinoides s δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. truncatulinoides s δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "N. pachyderma d δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "N. pachyderma d δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. scitula δ18O [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. scitula δ13C [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733108": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "f807c41798c5e6cab2b7af7e4b67c4dfd4c4c31095e6570aed76a1857f6a7f5a",
+  "xml_sha256": "22f496ea440d6a31bc49e0d1abcf70697cd7b85333afdc07c355b3e09cb58438",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. ruber w δ18O [‰ PDB]",
+   "G. ruber w δ13C [‰ PDB]",
+   "G. inflata δ18O [‰ PDB]",
+   "G. inflata δ13C [‰ PDB]",
+   "G. scitula δ18O [‰ PDB]",
+   "G. scitula δ13C [‰ PDB]",
+   "G. truncatulinoides s δ18O [‰ PDB]",
+   "G. truncatulinoides s δ13C [‰ PDB]",
+   "N. pachyderma d δ18O [‰ PDB]",
+   "N. pachyderma d δ13C [‰ PDB]",
+   "N. pachyderma s δ18O [‰ PDB]",
+   "N. pachyderma s δ13C [‰ PDB]"
+  ],
+  "n_rows": 85,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Stable carbon and oxygen isotope ratios of planktonic foraminifera in MIS4 of sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733108, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. ruber w δ18O [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. ruber w δ13C [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "G. inflata δ18O [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. inflata δ13C [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. scitula δ18O [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. scitula δ13C [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. truncatulinoides s δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. truncatulinoides s δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "N. pachyderma d δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "N. pachyderma d δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "N. pachyderma s δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "N. pachyderma s δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "733110": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "d54d5a40a438b86d38a59c36e1a396f4187692d40256081b803ae20488979b41",
+  "xml_sha256": "d3e8074f6f0c5b72265ed07d3883cce0d8d0bfeb04d9283b4cd9c719050e93d4",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. ruber w δ18O [‰ PDB]",
+   "G. ruber w δ13C [‰ PDB]",
+   "G. inflata δ18O [‰ PDB]",
+   "G. inflata δ13C [‰ PDB]",
+   "G. scitula δ18O [‰ PDB]",
+   "G. scitula δ13C [‰ PDB]",
+   "G. truncatulinoides d δ18O [‰ PDB]",
+   "G. truncatulinoides d δ13C [‰ PDB]",
+   "G. truncatulinoides s δ18O [‰ PDB]",
+   "G. truncatulinoides s δ13C [‰ PDB]",
+   "N. pachyderma d δ18O [‰ PDB]",
+   "N. pachyderma d δ13C [‰ PDB]",
+   "N. pachyderma s δ18O [‰ PDB]",
+   "N. pachyderma s δ13C [‰ PDB]"
+  ],
+  "n_rows": 59,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Stable carbon and oxygen isotope ratios of planktonic foraminifera in MIS4 of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.733110, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. ruber w δ18O [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. ruber w δ13C [‰ PDB]",
+    "parameter": "Globigerinoides ruber white, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "G. inflata δ18O [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. inflata δ13C [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. scitula δ18O [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. scitula δ13C [‰ PDB]",
+    "parameter": "Globorotalia scitula, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. truncatulinoides d δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. truncatulinoides d δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "G. truncatulinoides s δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "G. truncatulinoides s δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "N. pachyderma d δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "N. pachyderma d δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "N. pachyderma s δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "N. pachyderma s δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma sinistral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "737129": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "eb58510214540fb8f719d428b0cb04b5eaf175394093b0c2052297b6c2966e57",
+  "xml_sha256": "ce013cd8d413d3e0decae97ab6f9cb725cbf67e1339f0bad142c6d6699d86547",
+  "event": {
+   "label": "MD95-2041",
+   "lat": 37.833333333333,
+   "lon": -9.5108333333333,
+   "elevation": "-1123.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "G. bulloides δ13C [‰ PDB]"
+  ],
+  "n_rows": 446,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Stable oxygen and carbon isotope ratios of Globigerina bulloides of sediment core MD95-2041 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.737129, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. bulloides δ13C [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "737413": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "a8c81bdcdba43b88af21c6ba1c0194d2bebce8943c7081d880ced6b65f130a5d",
+  "xml_sha256": "4c87f54cd8f8c760005f2f103d9ba3307cb0a0cde2a46cb3bdff1f1cdc47d6d0",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "G. bulloides δ13C [‰ PDB]"
+  ],
+  "n_rows": 1149,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Stable oxygen and carbon isotope ratios of Globigerina bulloides of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.737413, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. bulloides δ13C [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "737419": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "ffa9fca6259e9e1cb4561ee1e4209cb4a19ccc975606a3e3568fdc19281ed982",
+  "xml_sha256": "acb5054aef757e0f22e125e5fa076d6d66f30923555a516283aa5d217043cb00",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "N. pachyderma d δ18O [‰ PDB]",
+   "N. pachyderma d δ13C [‰ PDB]",
+   "G. inflata δ18O [‰ PDB]",
+   "G. inflata δ13C [‰ PDB]",
+   "G. ruber δ18O [‰ PDB]",
+   "G. ruber δ13C [‰ PDB]",
+   "G. truncatulinoides d δ13C [‰ PDB]",
+   "G. truncatulinoides d δ18O [‰ PDB]",
+   "Δδ18O [‰]"
+  ],
+  "n_rows": 192,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Stable oxygen and carbon isotope ratios of planktonic foraminifera in MIS6 of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.737419, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "N. pachyderma d δ18O [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "N. pachyderma d δ13C [‰ PDB]",
+    "parameter": "Neogloboquadrina pachyderma dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "G. inflata δ18O [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. inflata δ13C [‰ PDB]",
+    "parameter": "Globorotalia inflata, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. ruber δ18O [‰ PDB]",
+    "parameter": "Globigerinoides ruber, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. ruber δ13C [‰ PDB]",
+    "parameter": "Globigerinoides ruber, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. truncatulinoides d δ13C [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "G. truncatulinoides d δ18O [‰ PDB]",
+    "parameter": "Globorotalia truncatulinoides dextral, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "82361": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "50130e7f3d251fac9bff31a5ac0c9a33b0fc95daace32c2e0050359d75f1c94e",
+  "xml_sha256": "98327834030271876e21496228ddd9e91987b23f17302b0ecb68f7c357c54c46",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]"
+  ],
+  "n_rows": 536,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schönfeld, Joachim; Zahn, Rainer; de Abreu, Lucia (2003): (Fig. 2) Stable oxygen isotope ratios of Globigerina bulloides from sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.82361, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer VG SIRA",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "861972": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_bent",
+   "d18O_planct",
+   "factores_enriquecimiento",
+   "oligoelementos",
+   "sst"
+  ],
+  "tsv_sha256": "7c3c5a8cf2c14a55dd0ae81e82469428174fc175293503c156725dde9bd3a5fe",
+  "xml_sha256": "d01fab510e4fec74f6c6d083e10c46e4b69dd908edd85fc611042177ba74e593",
+  "event": {
+   "label": "ANSIC-03_342",
+   "lat": 36.7,
+   "lon": 13.9167,
+   "elevation": "-858.0",
+   "campaign": "ANSIC-03",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Age std dev [±] (given in kilo year)",
+   "Age [a AD/CE]",
+   "Age std dev [±] (given in years)",
+   "210Pb [dpm/g] (Ion-exchange-chromatography)",
+   "210Pb xs [Bq/kg] (Ion-exchange-chromatography)",
+   "Uvigerina sp. δ18O [‰ PDB] (with respect to VPDB, Mass sp...)",
+   "G. ruber δ18O [‰ PDB] (with respect to VPDB, Mass sp...)",
+   "SST (1-12) [°C] (Calculated from Mg/Ca ratios)",
+   "SST (1-12) [°C] (Calculated from UK'37 (Müller...)",
+   "C26OH/(C26OH + C29)"
+  ],
+  "n_rows": 23,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Incarbona, Alessandro; Martrat, Belén; Mortyn, P Graham; Sprovieri, Mario; Ziveri, Patrizia; Gogou, Alexandra; Jordà, Gabriel; Xoplaki, Elena; Luterbacher, Jürg; Langone, Leonardo; Marino, Gianluca; Rodriguez-Sanz, Laura; Triantaphyllou, Maria; Di Stefano, Enrico; Grimalt, Joan O; Tranchida, Giorgio; Sprovieri, Rodolfo; Mazzola, Salvatore (2016): Stable isotopes, radionuclides, and calculated sea surface temperature of sediment core ANSIC-03_342 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.861972, ",
+  "columns": [
+   {
+    "column": 5,
+    "header": "210Pb [dpm/g] (Ion-exchange-chromatography)",
+    "parameter": "Lead-210",
+    "unit": "dpm/g",
+    "method": "Ion-exchange-chromatography",
+    "comment": null,
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "210Pb xs [Bq/kg] (Ion-exchange-chromatography)",
+    "parameter": "Lead-210 excess",
+    "unit": "Bq/kg",
+    "method": "Ion-exchange-chromatography",
+    "comment": null,
+    "families": [
+     "factores_enriquecimiento",
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "Uvigerina sp. δ18O [‰ PDB] (with respect to VPDB, Mass sp...)",
+    "parameter": "Uvigerina sp., δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometry (MS)",
+    "comment": "with respect to VPDB",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "G. ruber δ18O [‰ PDB] (with respect to VPDB, Mass sp...)",
+    "parameter": "Globigerinoides ruber, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometry (MS)",
+    "comment": "with respect to VPDB",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "SST (1-12) [°C] (Calculated from Mg/Ca ratios)",
+    "parameter": "Sea surface temperature, annual mean",
+    "unit": "°C",
+    "method": "Calculated from Mg/Ca ratios",
+    "comment": null,
+    "families": [
+     "mgca_foram",
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "SST (1-12) [°C] (Calculated from UK'37 (Müller...)",
+    "parameter": "Sea surface temperature, annual mean",
+    "unit": "°C",
+    "method": "Calculated from UK'37 (Müller et al, 1998)",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "861973": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct",
+   "factores_enriquecimiento",
+   "oligoelementos",
+   "sst"
+  ],
+  "tsv_sha256": "6a6c1412cc3b5ec53a81c5f762ecdc8d1406d8b683e13589a6a53a7b28ff5c52",
+  "xml_sha256": "2fcfbb46be273e3bbdc04259be351abf4a223d4fae847d965f619bca87d4eb1f",
+  "event": {
+   "label": "ANSIC-03_407",
+   "lat": 36.3833,
+   "lon": 14.45,
+   "elevation": "-345.0",
+   "campaign": "ANSIC-03",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Age std dev [±] (given in kilo year)",
+   "Age [a AD/CE]",
+   "Age std dev [±] (given in years)",
+   "210Pb [dpm/g] (Ion-exchange-chromatography)",
+   "210Pb xs [Bq/kg] (Ion-exchange-chromatography)",
+   "G. ruber δ18O [‰ PDB] (with respect to VPDB, Mass sp...)",
+   "SST (1-12) [°C] (Calculated from Mg/Ca ratios)",
+   "SST (1-12) [°C] (Calculated from UK'37 (Müller...)",
+   "C26OH/(C26OH + C29)"
+  ],
+  "n_rows": 25,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Incarbona, Alessandro; Martrat, Belén; Mortyn, P Graham; Sprovieri, Mario; Ziveri, Patrizia; Gogou, Alexandra; Jordà, Gabriel; Xoplaki, Elena; Luterbacher, Jürg; Langone, Leonardo; Marino, Gianluca; Rodriguez-Sanz, Laura; Triantaphyllou, Maria; Di Stefano, Enrico; Grimalt, Joan O; Tranchida, Giorgio; Sprovieri, Rodolfo; Mazzola, Salvatore (2016): Stable isotopes, radionuclides, and calculated sea surface temperature of sediment core ANSIC-03_407 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.861973, ",
+  "columns": [
+   {
+    "column": 5,
+    "header": "210Pb [dpm/g] (Ion-exchange-chromatography)",
+    "parameter": "Lead-210",
+    "unit": "dpm/g",
+    "method": "Ion-exchange-chromatography",
+    "comment": null,
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "210Pb xs [Bq/kg] (Ion-exchange-chromatography)",
+    "parameter": "Lead-210 excess",
+    "unit": "Bq/kg",
+    "method": "Ion-exchange-chromatography",
+    "comment": null,
+    "families": [
+     "factores_enriquecimiento",
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. ruber δ18O [‰ PDB] (with respect to VPDB, Mass sp...)",
+    "parameter": "Globigerinoides ruber, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometry (MS)",
+    "comment": "with respect to VPDB",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "SST (1-12) [°C] (Calculated from Mg/Ca ratios)",
+    "parameter": "Sea surface temperature, annual mean",
+    "unit": "°C",
+    "method": "Calculated from Mg/Ca ratios",
+    "comment": null,
+    "families": [
+     "mgca_foram",
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "SST (1-12) [°C] (Calculated from UK'37 (Müller...)",
+    "parameter": "Sea surface temperature, annual mean",
+    "unit": "°C",
+    "method": "Calculated from UK'37 (Müller et al, 1998)",
+    "comment": null,
+    "families": [
+     "sst"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "895657": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "50a00086371364fd0e661919e4c4194c7273d7fd14fd8d91b11fa8b932a01ff5",
+  "xml_sha256": "e2e4ecc71ca75229081e8c5247f9ea875ee9ccf66d1fadeac2c5019a7ac60da9",
+  "event": {
+   "label": "CEUTA10PC08",
+   "lat": 36.02277,
+   "lon": -4.8675,
+   "elevation": "-914.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]"
+  ],
+  "n_rows": 315,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Ausín, Blanca; Flores, José-Abel; Sierro, Francisco Javier; Bárcena, María Angeles; Hernández-Almeida, Iván; Francés, Guillermo; Gutiérrez-Arnillas, E; Martrat, Belén; Grimalt, Joan O; Cacho, Isabel (2018): Oxygen isotopic composition of sediment core CEUTA10PC08, last 25 kyr [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.895657, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "895658": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "6ae72558e3832bb6b4ad572d50977cb3e488af90a5cd23600fbda70a05b67736",
+  "xml_sha256": "e82cbb4c104d158a4c094f0184f23d27ac522392362282589ff40da5bc5d2da6",
+  "event": {
+   "label": "HER_GC_T1",
+   "lat": 36.370146,
+   "lon": -4.299015,
+   "elevation": "-659.0",
+   "campaign": "HERMESIONE",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]"
+  ],
+  "n_rows": 111,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Ausín, Blanca; Flores, José-Abel; Sierro, Francisco Javier; Bárcena, María Angeles; Hernández-Almeida, Iván; Francés, Guillermo; Gutiérrez-Arnillas, E; Martrat, Belén; Grimalt, Joan O; Cacho, Isabel (2018): Oxygen isotopic composition of sediment core HER_GC_T1, last 25 kyr [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.895658, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "895677": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "0b865906d7878e187a4021ce903d49cc2d33854a2d2db10b53b95f70c996074c",
+  "xml_sha256": "8343182728a19399138cb4883a0d27d9a72da8b8bf7d02755470748cd4c5652e",
+  "event": {
+   "label": "HER_GC_T1",
+   "lat": 36.370146,
+   "lon": -4.299015,
+   "elevation": "-659.0",
+   "campaign": "HERMESIONE",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]"
+  ],
+  "n_rows": 66,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Ausín, Blanca; Flores, José Abel; Sierro, Francisco Javier; Cacho, Isabel; Hernández-Almeida, Iván; Martrat, Belén; Grimalt, Joan O (2018): Oxygen isotopic composition of sediment core HER_GC_T1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.895677, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910802": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "bc77a9b2a6cc98b38507fa996a9f2644a08c355bccec4d24ec0b66f1f03661d3",
+  "xml_sha256": "2f96acb1143c289c3909e744de17973b137ae8ddeb4f9502378ec78aeae8e0e3",
+  "event": {
+   "label": "HER_GC_UB06",
+   "lat": 36.239938,
+   "lon": -3.989214,
+   "elevation": "-946.0",
+   "campaign": "HERMESIONE",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "G. bulloides δ13C [‰ PDB]"
+  ],
+  "n_rows": 67,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Stable carbon isotope ratio of Globigerina bulloides from sediment core HER_GC_UB06 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910802, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction >212 µm",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "G. bulloides δ13C [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction >212 µm",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "914401": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "6eba7d499dc186e1a61780ba194daa6a2e2f4f0df02c015722c355e2414feb33",
+  "xml_sha256": "ada1579a1dc68c0bb20334b345fec153a9cf736022848c101bca3840fe65eeb7",
+  "event": {
+   "label": "339-U1387",
+   "lat": 36.805,
+   "lon": -7.718,
+   "elevation": "-558.0",
+   "campaign": "Exp339",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Depth comp r [rmcd]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]"
+  ],
+  "n_rows": 435,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Bajo, Petra; Drysdale, Russell N; Woodhead, Jon D; Hellstrom, John C; Hodell, David A; Ferretti, Patrizia; Voelker, Antje H L; Zanchetta, Giovanni; Rodrigues, Teresa; Wolff, Eric William; Tyler, Jonathan James; Frisia, Silvia; Spötl, Christoph; Fallick, Anthony E (2020): Oxygen isotope of planktic foraminifera Globigerina bulloides from IODP Site 339-U1387 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.914401, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "vs. VPDB",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "944303": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "2a7d8aedcf322de7a961a2f8b0ea5a460b8ee5ec1b048aa259a6b25ee2e4824b",
+  "xml_sha256": "d4f7920d1d4da143f245d78173637e1d59132dcd724790756ed0a61da004cd97",
+  "event": {
+   "label": "NDT-6-2016",
+   "lat": 38.007389,
+   "lon": 11.795789,
+   "elevation": "-1066.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]"
+  ],
+  "n_rows": 99,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Trias-Navarro, Sergio; de la Fuente, Maria; Pena, Leopoldo D; Frigola, Jaime; Caruso, Antonio; Cacho, Isabel; Lirer, Fabrizio (2022): Stable oxygen isotopes of planktic foraminifera species Globigerina bulloides from sediment core NDT-6-2016 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.944303, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "VPDB",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "944304": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "c7609b4122f8b192c5b32f0c058567fba303f48bf1fa2ac7cc8335b333d58ae0",
+  "xml_sha256": "6222bf9d5791599779adf44f1a576fc9a6982c6d6e84de238b5aa975b74ca2b7",
+  "event": {
+   "label": "NDT-6-2016",
+   "lat": 38.007389,
+   "lon": 11.795789,
+   "elevation": "-1066.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. ruber δ18O [‰ PDB]"
+  ],
+  "n_rows": 40,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Trias-Navarro, Sergio; de la Fuente, Maria; Pena, Leopoldo D; Frigola, Jaime; Caruso, Antonio; Cacho, Isabel; Lirer, Fabrizio (2022): Stable oxygen isotopes of planktic foraminifera species Globigerinoides ruber from sediment core NDT-6-2016 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.944304, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. ruber δ18O [‰ PDB]",
+    "parameter": "Globigerinoides ruber, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "VPDB",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "966663": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent",
+   "d13C_planct",
+   "d18O_bent",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "0d5faf6bedb14a524b30e32509980d8628bea84ebeea4bfd40f26b884e000336",
+  "xml_sha256": "0f51458f68d100e7bdfb4841967fde8c2777431668f27dd6970a7ea0da9bf3b2",
+  "event": {
+   "label": "MVSEIS08_TG-2",
+   "lat": 34.97133,
+   "lon": -6.84117,
+   "elevation": "-530.0",
+   "campaign": "MVSEIS2008",
+   "device": null
+  },
+  "header": [
+   "Sect",
+   "Depth rel [m] (Depth in section)",
+   "Depth sed [m] (Depth in core)",
+   "Age [ka BP]",
+   "G. bulloides δ13C [‰ PDB] (corr)",
+   "G. bulloides δ13C [‰ PDB] (corr-duplicates)",
+   "G. bulloides δ18O [‰ PDB] (corr)",
+   "G. bulloides δ18O [‰ PDB] (corr-duplicates)",
+   "C. pachyderma δ13C [‰ PDB] (corr)",
+   "C. pachyderma δ13C [‰ PDB] (corr-duplicates)",
+   "C. pachyderma δ18O [‰ PDB] (corr)",
+   "C. pachyderma δ18O [‰ PDB] (corr-duplicates)",
+   "C. pachyderma δ18O [‰ PDB] (corr+0.64)"
+  ],
+  "n_rows": 34,
+  "age_column": 3,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Stable isotopes of planktonic and benthic foraminifera of sediment core MVSEIS08_TG-2 from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966663, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "G. bulloides δ13C [‰ PDB] (corr)",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "G. bulloides δ13C [‰ PDB] (corr-duplicates)",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr-duplicates",
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "G. bulloides δ18O [‰ PDB] (corr)",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "G. bulloides δ18O [‰ PDB] (corr-duplicates)",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr-duplicates",
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "C. pachyderma δ13C [‰ PDB] (corr)",
+    "parameter": "Cibicidoides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "C. pachyderma δ13C [‰ PDB] (corr-duplicates)",
+    "parameter": "Cibicidoides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr-duplicates",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "C. pachyderma δ18O [‰ PDB] (corr)",
+    "parameter": "Cibicidoides pachyderma, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "C. pachyderma δ18O [‰ PDB] (corr-duplicates)",
+    "parameter": "Cibicidoides pachyderma, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr-duplicates",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "C. pachyderma δ18O [‰ PDB] (corr+0.64)",
+    "parameter": "Cibicidoides pachyderma, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "corr+0.64",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "991019": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_planct",
+   "d18O_planct"
+  ],
+  "tsv_sha256": "58b174828555598c346f7c55e4b4b310343a611471e1684fbe4c3bd1b4e4f074",
+  "xml_sha256": "92e608f21bfed0fccbc1a9699c5a487cf925a16f98ee0a1fcaf6932199a75441",
+  "event": {
+   "label": "OTE-2019_KC-13",
+   "lat": 38.24335,
+   "lon": 25.10412,
+   "elevation": "-652.0",
+   "campaign": "OTE-2019",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "G. bulloides δ18O [‰ PDB]",
+   "G. bulloides δ13C [‰ PDB]"
+  ],
+  "n_rows": 88,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Evangelinos, Dimitris; Campderrós, Sara; Trias-Navarro, Sergio; Garcia Briña, Cristina; Paredes, Eduardo; Pena, Leopoldo D; Frigola, Jaime; Hasiotis, Thomas; Rousakis, Grigoris; Sakellariou, Dimitris; Cacho, Isabel (2026): Stable oxygen and carbon isotope data from sediment core KC-13, Central Aegean, Greece [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.991019, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "G. bulloides δ18O [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": null,
+    "families": [
+     "d18O_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "G. bulloides δ13C [‰ PDB]",
+    "parameter": "Globigerina bulloides, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": null,
+    "families": [
+     "d13C_planct"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "737135": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent",
+   "d18O_bent"
+  ],
+  "tsv_sha256": "ed1004c2c66e8edbdb7f70f9f60e0a17ffd415141405bf9e8b05e8bf4d3a7ce6",
+  "xml_sha256": "cd64311707db10316c64915b5eaaece95f484ad16c998e000fbd7cd7c8a0ec24",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Foram benth δ18O [‰ PDB]",
+   "C. wuellerstorfi δ13C [‰ PDB]"
+  ],
+  "n_rows": 844,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Voelker, Antje H L; de Abreu, Lucia (2011): Combined stable oxygen and carbon isotope ratios of benthic foraminifera of sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.737135, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Foram benth δ18O [‰ PDB]",
+    "parameter": "Foraminifera, benthic δ18O",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": "C. wuellerstorfi and Cibicidoides sp. are adjusted to U. peregrina level by adding 0.64 per mil.",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "C. wuellerstorfi δ13C [‰ PDB]",
+    "parameter": "Cibicidoides wuellerstorfi, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "863947": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_bent"
+  ],
+  "tsv_sha256": "06ac1cddfde6b433c458d4b0f830a48179770f021f2af4849f1516793fd1079b",
+  "xml_sha256": "853ec89c906f724b2db02c877584269af97cc2f1066916d68112da2c9242a822",
+  "event": {
+   "label": "161-978A",
+   "lat": 36.2311,
+   "lon": -2.05695,
+   "elevation": "-1929.0",
+   "campaign": "Leg161",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Foram benth δ18O [‰ PDB] (C. mundulus, C. wuellerstorfi)",
+   "BWT [°C] (C. mundulus, C. wuellerstorfi)",
+   "δ18O H2O [‰ SMOW]",
+   "δ18O H2O [‰ SMOW] (d18Ow+0.27 per mil SMOW)",
+   "δ18O H2O [‰ SMOW] (LR04 stack, ice volume)",
+   "δ18O H2O [‰ SMOW] (LR04 stack - 3.2 (Holocene Le...)",
+   "δ18O anomaly [‰] (inversed d18O ice effect anomaly)",
+   "δ18O H2O [‰ SMOW] (ice vol corrected, d18Obws)",
+   "δ18O H2O [‰ SMOW] (d18Obws + 1)",
+   "Δδ18O [‰] (Dd18Obws (anomaly), d18Obws, ...)",
+   "Δδ18O [‰] (Delta BWS (anomaly), differen...)",
+   "Δδ18O [‰] (difference of BWS vs. Today +...)",
+   "PalSal [‰]"
+  ],
+  "n_rows": 370,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Khélifi, Nabil; Sarnthein, Michael; Frank, Martin; Andersen, Nils; Garbe-Schönberg, Dieter (2014): Bottom water temperature, salinity and δ¹⁸O reconstruction based on benthic foraminifera stable oxygen isotopes of ODP Hole 161-978A [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.863947, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Foram benth δ18O [‰ PDB] (C. mundulus, C. wuellerstorfi)",
+    "parameter": "Foraminifera, benthic δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": "C. mundulus, C. wuellerstorfi",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910798": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent",
+   "d18O_bent"
+  ],
+  "tsv_sha256": "46c514b57161745698929595f04292e9d5d8be0487121f3a14461d0239a5b3ee",
+  "xml_sha256": "9a20bd4d5fdf32da821754183d63f2fd7fcf62405cd6582c7e6f92bea319f4cd",
+  "event": {
+   "label": "HER_GC_UB06",
+   "lat": 36.239938,
+   "lon": -3.989214,
+   "elevation": "-946.0",
+   "campaign": "HERMESIONE",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "C. pachyderma δ18O [‰ PDB]",
+   "C. pachyderma δ13C [‰ PDB]",
+   "U. peregrina δ18O [‰ PDB]",
+   "U. peregrina δ13C [‰ PDB]",
+   "Δδ13C [‰ PDB]"
+  ],
+  "n_rows": 90,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Stable isotope ratios of benthic foraminifera from sediment core HER_GC_UB06 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910798, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "C. pachyderma δ18O [‰ PDB]",
+    "parameter": "Cibicidoides pachyderma, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction > 212 µm",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 2,
+    "header": "C. pachyderma δ13C [‰ PDB]",
+    "parameter": "Cibicidoides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction > 212 µm",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 3,
+    "header": "U. peregrina δ18O [‰ PDB]",
+    "parameter": "Uvigerina peregrina, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction > 212 µm",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "U. peregrina δ13C [‰ PDB]",
+    "parameter": "Uvigerina peregrina, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction > 212 µm",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "932703": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d18O_bent"
+  ],
+  "tsv_sha256": "6cdc10fcdc4278fca8e51892f277ececae43115cde74fa0dcde79425fdf14b00",
+  "xml_sha256": "13cf6dda8559eaeeea2491556b7c22c63f6c2347f7dc0f05f35dec32eb0213f5",
+  "event": {
+   "label": "GeoB9064-1",
+   "lat": 35.415166666667,
+   "lon": -6.8451666666667,
+   "elevation": "-702.0",
+   "campaign": "SO175",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Uvigerina sp. δ18O [‰ PDB]"
+  ],
+  "n_rows": 21,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Portilho-Ramos, Rodrigo Costa; Titschack, Jürgen; Wienberg, Claudia; Siccha, Michael; Yokoyama, Yusuke; Hebbeln, Dierk (2021): Stable oxygen isotopes measured on Uvigerina sp. of sediment core GeoB9064-1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.932703, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "Uvigerina sp. δ18O [‰ PDB]",
+    "parameter": "Uvigerina sp., δ18O",
+    "unit": "‰ PDB",
+    "method": null,
+    "comment": "vs. VPDB",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "987449": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent",
+   "d18O_bent",
+   "granulometria"
+  ],
+  "tsv_sha256": "6c332557160a1c29b2d5111c4c526177b488d687b31d8485a4e630ac7fc325b3",
+  "xml_sha256": "34b6e7ec180342ecaec9b43b46f016e89606d21d2d0d59bde77b7bc03b2fd5f3",
+  "event": {
+   "label": "339-U1387C",
+   "lat": 36.805231666667,
+   "lon": -7.718795,
+   "elevation": "-558.4",
+   "campaign": "Exp339",
+   "device": null
+  },
+  "header": [
+   "Sample label (DSDP/ODP/IODP sample designation)",
+   "Depth sed [m] (Core depth below Sea Floor (C...)",
+   "Depth sed [m] (Core depth below Sea Floor (C...)",
+   "Depth comp [mcd] (for csf-B, top of sampled int...)",
+   "Depth adj mcd [amcd] (for csf-B, top of sampled int...)",
+   "Age [ka BP] (Age model according to Lisiec...)",
+   "Wet m [g]",
+   "Dry m [g]",
+   "Dry m [g] (washed sample)",
+   ">63 µm [g]",
+   ">63 µm [%] (wt. %)",
+   "P. ariminensis δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "C. pachyderma δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "Cibicides sp. δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "Uvigerina sp. δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "P. ariminensis δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "C. pachyderma δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "Cibicides sp. δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "Uvigerina sp. δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+   "Foram benth δ18O [‰ PDB] (vs. VPDB, combined = d18O Uvi...)",
+   "Foram benth δ13C [‰ PDB] (vs. VPDB, combined = d13C Cib...)"
+  ],
+  "n_rows": 557,
+  "age_column": 5,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Voelker, Antje H L; Alberto, Ana; Kuhnert, Henning (2025): Sample and sand fraction weights and benthic stable isotope data for the Early Pleistocene interval covered by Cores U1387C-8R to U1387C-19R of IODP Site 339-U1387, Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.987449, ",
+  "columns": [
+   {
+    "column": 9,
+    "header": ">63 µm [g]",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "g",
+    "method": null,
+    "comment": null,
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": ">63 µm [%] (wt. %)",
+    "parameter": "Size fraction > 0.063 mm, sand",
+    "unit": "%",
+    "method": null,
+    "comment": "wt. %",
+    "families": [
+     "granulometria"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "P. ariminensis δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Planulina ariminensis, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "C. pachyderma δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Cibicides pachyderma, δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Cibicides sp. δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Cibicides sp., δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "Uvigerina sp. δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Uvigerina sp., δ18O",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 15,
+    "header": "P. ariminensis δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Planulina ariminensis, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 16,
+    "header": "C. pachyderma δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Cibicides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "Cibicides sp. δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Cibicides sp., δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "Uvigerina sp. δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+    "parameter": "Uvigerina sp., δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+    "comment": "vs. VPDB",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "Foram benth δ18O [‰ PDB] (vs. VPDB, combined = d18O Uvi...)",
+    "parameter": "Foraminifera, benthic δ18O",
+    "unit": "‰ PDB",
+    "method": "adjusted",
+    "comment": "vs. VPDB, combined = d18O Uvigerina sp. adjusted by -0.64 per mil",
+    "families": [
+     "d18O_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 20,
+    "header": "Foram benth δ13C [‰ PDB] (vs. VPDB, combined = d13C Cib...)",
+    "parameter": "Foraminifera, benthic δ13C",
+    "unit": "‰ PDB",
+    "method": "adjusted",
+    "comment": "vs. VPDB, combined = d13C Cib. pachyderma adjusted by +0.3 per mil",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "82051": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent"
+  ],
+  "tsv_sha256": "97a057d9caeea3d9476f3f2e49b182d81dbd6f0c69082a0e80d24baf5bb07d4d",
+  "xml_sha256": "f4556b48bcc791a8793b078b95bbbff41fa59fd610c4c3fc67ca7eb9ebf85013",
+  "event": {
+   "label": "MD95-2040",
+   "lat": 40.581833333333,
+   "lon": -9.8611666666667,
+   "elevation": "-2465.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "C. wuellerstorfi δ13C [‰ PDB]"
+  ],
+  "n_rows": 112,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Schönfeld, Joachim; Zahn, Rainer; de Abreu, Lucia (2003): (Fig. 2) Stable carbon isotope ratios of C. wuellerstorfi from sediment core MD95-2040 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.82051, ",
+  "columns": [
+   {
+    "column": 2,
+    "header": "C. wuellerstorfi δ13C [‰ PDB]",
+    "parameter": "Cibicidoides wuellerstorfi, δ13C",
+    "unit": "‰ PDB",
+    "method": "Isotope ratio mass spectrometry",
+    "comment": null,
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910799": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent"
+  ],
+  "tsv_sha256": "97712446cf948c8cec68e82cdf6d7f952e36407284e333e0aed46796d588c7c5",
+  "xml_sha256": "208e55dd7f11046f507e9e9fe2576bc5f822a2ccb638c365db4e98424531828a",
+  "event": {
+   "label": "MD95-2043",
+   "lat": 36.143333333333,
+   "lon": -2.6211666666667,
+   "elevation": "-1841.0",
+   "campaign": "MD101__Campaign",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "C. pachyderma δ13C [‰ PDB]"
+  ],
+  "n_rows": 40,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Stable carbon isotope ratio of Cibicidoides pachyderma from sediment core MD95-2043 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910799, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "C. pachyderma δ13C [‰ PDB]",
+    "parameter": "Cibicidoides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction >212 µm",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "910800": {
+  "status": "proposed",
+  "families": [
+   "cronologia",
+   "d13C_bent"
+  ],
+  "tsv_sha256": "3566df3a5ae6bc4bd3ac14c1af7df7c034335bd893f0b4b2cf56bb1de283cedb",
+  "xml_sha256": "4b4c964290829e9cc7c77e7bf98fc12ea2c1fef06cf31cf745b453423b26e29f",
+  "event": {
+   "label": "MD99-2343",
+   "lat": 40.497333333333,
+   "lon": 4.0281666666667,
+   "elevation": "-2391.0",
+   "campaign": "MD114",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "C. pachyderma δ13C [‰ PDB]"
+  ],
+  "n_rows": 77,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "citation": "Pérez-Asensio, José N; Frigola, Jaime; Pena, Leopoldo D; Sierro, Francisco Javier; Reguera, Maria Isabel; Rodríguez-Tovar, Francisco Javier; Dorador, Javier; Asioli, Alessandra; Kuhlmann, Jannis; Huhn, Katrin; Cacho, Isabel (2020): Stable carbon isotope ratio of Cibicidoides pachyderma from sediment core MD99-2343 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.910800, ",
+  "columns": [
+   {
+    "column": 1,
+    "header": "C. pachyderma δ13C [‰ PDB]",
+    "parameter": "Cibicidoides pachyderma, δ13C",
+    "unit": "‰ PDB",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": "size fraction >212 µm",
+    "families": [
+     "d13C_bent"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "704428": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "granulometria",
+   "toc"
+  ],
+  "tsv_sha256": "7516b9681b4cd5b8ed7a2aab890cd665c90196af284e96aca42d8396df730e46",
+  "xml_sha256": "b4a7928904490ecb6b40c00a4d406d3422dc75885cedb098529b3c7b1e1694e0",
+  "event": {
+   "label": "160-969D",
+   "lat": 33.8386,
+   "lon": 24.8833,
+   "elevation": "-2192.0",
+   "campaign": "Leg160",
+   "device": null
+  },
+  "header": [
+   "Age [ka BP]",
+   "Depth sed [m]",
+   "Depth comp [mcd]",
+   "Sample label",
+   "CaCO3 [%]",
+   "TOC [%]",
+   "D50 [phi]",
+   "Std dev [±]"
+  ],
+  "n_rows": 37,
+  "age_column": 0,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": {
+   "doi": "10.1016/S0031-0182(02)00606-5",
+   "year": "2003",
+   "title": "Grain size evidence for variations in delivery of terrigenous sediments to a Middle Pleistocene interrupted sapropel from ODP Site 969, Mediterranean Ridge"
+  },
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Hassold, Noralynn J C; Rea, David K; Meyers, Philip A (2003): Grain-size distribution, and calcium carbonate and organic carbon concentrations in ODP Hole 160-969D in the eastern Mediterranean Sea (Table 1) [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.704428, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "CaCO3 [%]",
+    "parameter": "Calcium carbonate",
+    "unit": "%",
+    "method": "Carbonate bomb (Müller & Gastner, 1971)",
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Element analyser CHNS-O, Carlo Erba EA1108",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "D50 [phi]",
+    "parameter": "Median, grain size, D50",
+    "unit": "phi",
+    "method": "Coulter counter",
+    "comment": "phi50",
+    "families": [
+     "granulometria"
+    ],
+    "error_column": 7,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ],
+  "crossref_sha256": "752ea0826ccc8fac07b8b327cf637aa1ecc3562b049913efe42509dbe12e5477"
+ },
+ "758356": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "toc"
+  ],
+  "tsv_sha256": "05034e7f45542c9c1592b77333014ee6289be711622dbad57034845f4540d12b",
+  "xml_sha256": "b43f72522fabfceb51c3e3b5e067d5477c834159e389c2e11ac38b65ce780a5f",
+  "event": {
+   "label": "Mo05",
+   "lat": 47.8114,
+   "lon": 13.4025,
+   "elevation": "481.0",
+   "campaign": null,
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "Comment",
+   "TIC [%]",
+   "TOC [%]"
+  ],
+  "n_rows": 215,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Lauterbach, Stefan; Brauer, Achim; Andersen, Nils; Danielopol, Dan L; Dulski, Peter; Hüls, Matthias; Milecka, Krystyna; Namiotko, Tadeusz; Obremska, Milena; von Grafenstein, Ulrich; DecLakes participants (2011): (Figure 4) Organic and inorganic carbon cocentrations in composite sediment core Mo05 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758356, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "TIC [%]",
+    "parameter": "Carbon, inorganic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "758620": {
+  "status": "proposed",
+  "families": [
+   "bario",
+   "caco3",
+   "cronologia",
+   "detritico_xrf",
+   "mo_otros",
+   "mo_ratios",
+   "oligoelementos",
+   "redox",
+   "toc"
+  ],
+  "tsv_sha256": "cdd60f90826216da03ab0aa3e637549772f6f9c9dbf146584d695c16cef2ae1f",
+  "xml_sha256": "55da9c5c2dad0c06542ddf43fd71ac5292f0e5c21fae70b954f52ba98bb636f9",
+  "event": {
+   "label": "M51/3_569-3",
+   "lat": 33.453,
+   "lon": 32.5752,
+   "elevation": "-1294.0",
+   "campaign": "M51/3",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Age [ka BP]",
+   "TC [%]",
+   "TOC [%]",
+   "TN [%]",
+   "TIC [%]",
+   "CaCO3 [%]",
+   "δ15N [‰ air]",
+   "RI",
+   "DI",
+   "AA/HA",
+   "THAA [µmol/g]",
+   "P [%]",
+   "Al [%]",
+   "Si [%]",
+   "Ca [%]",
+   "Mg [%]",
+   "Fe [%]",
+   "Mn [%]",
+   "K [%]",
+   "Na [%]",
+   "Ti [%]",
+   "Cu [mg/kg]",
+   "Pb [mg/kg]",
+   "Zn [mg/kg]",
+   "Sr [mg/kg]",
+   "Rb [mg/kg]",
+   "Zr [mg/kg]",
+   "Ba [mg/kg]",
+   "TS [%]"
+  ],
+  "n_rows": 33,
+  "age_column": 1,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Möbius, Jürgen; Lahajnar, Niko; Emeis, Kay-Christian (2011): Chemical composition of Holocene sediment core M51/3_569-3 from the Eastern Mediterranean Sea [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.758620, ",
+  "columns": [
+   {
+    "column": 3,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": "Element analyser CNS, Carlo Erba NA1500",
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 4,
+    "header": "TN [%]",
+    "parameter": "Nitrogen, total",
+    "unit": "%",
+    "method": "Element analyser CNS, Carlo Erba NA1500",
+    "comment": null,
+    "families": [
+     "mo_otros"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "TIC [%]",
+    "parameter": "Carbon, inorganic, total",
+    "unit": "%",
+    "method": "Element analyser CNS, Carlo Erba NA1500",
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "CaCO3 [%]",
+    "parameter": "Calcium carbonate",
+    "unit": "%",
+    "method": "Element analyser CNS, Carlo Erba NA1500",
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "δ15N [‰ air]",
+    "parameter": "δ15N",
+    "unit": "‰ air",
+    "method": "Mass spectrometer, Finnigan, MAT 252",
+    "comment": null,
+    "families": [
+     "mo_ratios"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Al [%]",
+    "parameter": "Aluminium",
+    "unit": "%",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 17,
+    "header": "Fe [%]",
+    "parameter": "Iron",
+    "unit": "%",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 18,
+    "header": "Mn [%]",
+    "parameter": "Manganese",
+    "unit": "%",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 19,
+    "header": "K [%]",
+    "parameter": "Potassium",
+    "unit": "%",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 21,
+    "header": "Ti [%]",
+    "parameter": "Titanium",
+    "unit": "%",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 22,
+    "header": "Cu [mg/kg]",
+    "parameter": "Copper",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 23,
+    "header": "Pb [mg/kg]",
+    "parameter": "Lead",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 24,
+    "header": "Zn [mg/kg]",
+    "parameter": "Zinc",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "oligoelementos"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 26,
+    "header": "Rb [mg/kg]",
+    "parameter": "Rubidium",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 27,
+    "header": "Zr [mg/kg]",
+    "parameter": "Zirconium",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 28,
+    "header": "Ba [mg/kg]",
+    "parameter": "Barium",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence spectrometer (Panalytical MagixPRO)",
+    "comment": null,
+    "families": [
+     "bario"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "759784": {
+  "status": "proposed",
+  "families": [
+   "caco3",
+   "cronologia",
+   "mo_otros",
+   "toc"
+  ],
+  "tsv_sha256": "df722bf036a0d39bd64128f85cb90f1aa42956ec7acd9ed9e2a3c11f7572d941",
+  "xml_sha256": "9847527b066708a9a0e230ab51e67706b5e54861dcd38ebdb94c0c612ce56f1f",
+  "event": {
+   "label": "Lz1120",
+   "lat": 40.938,
+   "lon": 20.759,
+   "elevation": "693.0",
+   "campaign": "ohrid-exp",
+   "device": null
+  },
+  "header": [
+   "Depth sed [m]",
+   "Depth comp [mcd]",
+   "Age [ka BP]",
+   "Sec label",
+   "Water dm [%]",
+   "TOC [%]",
+   "TN [%]",
+   "TS [%]",
+   "SiO2 [%]",
+   "CaCO3 [%]"
+  ],
+  "n_rows": 538,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Wagner, Bernd; Lotter, André F; Nowaczyk, Norbert R; Reed, Jane M; Schwalb, Antje; Sulpizio, Roberto; Valsecchi, Verushka; Wessels, Martin; Zanchetta, Giovanni (2009): Bulk sedimentology on core Lz1120 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.759784, ",
+  "columns": [
+   {
+    "column": 5,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "TN [%]",
+    "parameter": "Nitrogen, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "mo_otros"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "CaCO3 [%]",
+    "parameter": "Calcium carbonate",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "caco3"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
+ },
+ "780234": {
+  "status": "proposed",
+  "families": [
+   "bario",
+   "cronologia",
+   "detritico_xrf",
+   "redox",
+   "toc"
+  ],
+  "tsv_sha256": "8ba8309c19873b516ca86046a3af72819b30a1e35d831e40ba863ed6925fc38a",
+  "xml_sha256": "80f36d10a19f3319c23d778db357f2c622848523af278a15cf7d716b44e69a78",
+  "event": {
+   "label": "160-969D",
+   "lat": 33.8386,
+   "lon": 24.8833,
+   "elevation": "-2192.0",
+   "campaign": "Leg160",
+   "device": null
+  },
+  "header": [
+   "Sample label",
+   "No",
+   "Age [ka BP]",
+   "Depth sed [m]",
+   "Al2O3 [%]",
+   "FeO [%]",
+   "MnO [%]",
+   "TOC [%]",
+   "V [mg/kg]",
+   "Mo [mg/kg]",
+   "Ba [mg/kg]",
+   "Re [µg/kg]",
+   "Re/Mo",
+   "Fe/Al",
+   "Mn/Al",
+   "δ98Mo [‰]"
+  ],
+  "n_rows": 39,
+  "age_column": 2,
+  "age_transformation": "identity: source point age in ka BP",
+  "paper": null,
+  "license": "Creative Commons Attribution 3.0 Unported",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "citation": "Scheiderich, Kathleen; Zerkle, Aubrey L; Helz, George R; Farquhar, James; Walker, Richard J (2010): (Table 3) Geochemistry ODP Hole 160-969D sediments [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.780234, ",
+  "columns": [
+   {
+    "column": 4,
+    "header": "Al2O3 [%]",
+    "parameter": "Aluminium oxide",
+    "unit": "%",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 5,
+    "header": "FeO [%]",
+    "parameter": "Iron oxide, FeO",
+    "unit": "%",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": "total",
+    "families": [
+     "detritico_xrf"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 6,
+    "header": "MnO [%]",
+    "parameter": "Manganese oxide",
+    "unit": "%",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 7,
+    "header": "TOC [%]",
+    "parameter": "Carbon, organic, total",
+    "unit": "%",
+    "method": null,
+    "comment": null,
+    "families": [
+     "toc"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 8,
+    "header": "V [mg/kg]",
+    "parameter": "Vanadium",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 9,
+    "header": "Mo [mg/kg]",
+    "parameter": "Molybdenum",
+    "unit": "mg/kg",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 10,
+    "header": "Ba [mg/kg]",
+    "parameter": "Barium",
+    "unit": "mg/kg",
+    "method": null,
+    "comment": null,
+    "families": [
+     "bario"
+    ],
+    "error_column": null,
+    "scanner_or_counts": false,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 11,
+    "header": "Re [µg/kg]",
+    "parameter": "Rhenium",
+    "unit": "µg/kg",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 12,
+    "header": "Re/Mo",
+    "parameter": "Rhenium/molybdenum ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "redox"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 13,
+    "header": "Fe/Al",
+    "parameter": "Iron/Aluminium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   },
+   {
+    "column": 14,
+    "header": "Mn/Al",
+    "parameter": "Manganese/Aluminium ratio",
+    "unit": "sin unidad",
+    "method": "X-ray fluorescence (XRF)",
+    "comment": null,
+    "families": [
+     "detritico_xrf",
+     "redox",
+     "xrf_razones"
+    ],
+    "error_column": null,
+    "scanner_or_counts": true,
+    "aligned_with_xml": true,
+    "status": "approved"
+   }
+  ]
  }
 }

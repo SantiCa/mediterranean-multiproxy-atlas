@@ -4,40 +4,40 @@
   "parent_sha256": "c3729bbc2a3fa7883e1609f0f930c701532739f41ef4174e8b18cfe563cc36c5",
   "parent_unchanged": true,
   "counts": {
-    "records": 58,
-    "series": 336,
-    "values": 136771,
-    "new_records": 12,
-    "new_series": 184,
-    "new_values": 33237,
-    "missing_age_values": 114
+    "records": 77,
+    "series": 548,
+    "values": 157219,
+    "new_records": 31,
+    "new_series": 396,
+    "new_values": 53685,
+    "missing_age_values": 145
   },
   "input_fragments": {
     "pangaea": {
-      "records": 14,
-      "series": 194,
-      "values": 34367
+      "records": 34,
+      "series": 398,
+      "values": 53721
     }
   },
   "family_counts": {
-    "Temperatura": 36,
-    "Geoquímica elemental": 39,
-    "Sedimentología": 12,
+    "Temperatura": 39,
+    "Geoquímica elemental": 70,
+    "Sedimentología": 26,
     "Biomarcadores": 20,
     "Micropaleontología": 8,
-    "Isótopos estables": 40,
+    "Isótopos estables": 156,
     "Palinología": 14,
     "Paleoincendios": 1,
     "Isótopos radiogénicos": 4,
     "Paleopolvo": 1,
     "Mineralogía": 2,
-    "Foraminíferos": 158,
-    "Materia orgánica y biomarcadores": 1
+    "Foraminíferos": 198,
+    "Materia orgánica y biomarcadores": 9
   },
-  "comparison_groups": 281,
+  "comparison_groups": 397,
   "numeric_age_extent_ka_bp": [
     -0.14,
-    1365.0
+    4700.0
   ],
   "admitted_series": [
     "pangaea5-54940:Foraminifera_benthic_g",
@@ -67,9 +67,11 @@
     "pangaea5-66811:Foraminifera_planktic_subtropical_",
     "pangaea5-66811:Foraminifera_planktic_subtropical__col15",
     "pangaea5-66811:Foraminifera_planktic_tropical_",
+    "pangaea5-82051:Cibicidoides_wuellerstorfi_13C_PDB",
     "pangaea5-82053:Globobulimina_affinis_",
     "pangaea5-82055:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-82057:Uvigerina_pygmaea_",
+    "pangaea5-82361:Globigerina_bulloides_18O_PDB",
     "pangaea5-89473:Globigerinoides_ruber_",
     "pangaea5-89473:Turborotalita_quinqueloba_",
     "pangaea5-89473:Neogloboquadrina_incompta_",
@@ -78,6 +80,33 @@
     "pangaea5-89473:Turborotalita_quinqueloba_18O_PDB",
     "pangaea5-89473:Alkenone_unsaturation_index_UK37_sin_unidad",
     "pangaea5-89473:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-704428:Calcium_carbonate_",
+    "pangaea5-704428:Carbon_organic_total_",
+    "pangaea5-704428:Median_grain_size_D50_phi",
+    "pangaea5-733069:Globigerinoides_ruber_white_18O_PDB",
+    "pangaea5-733069:Globigerinoides_ruber_white_13C_PDB",
+    "pangaea5-733069:Neogloboquadrina_pachyderma_dextral_18O_PDB",
+    "pangaea5-733069:Neogloboquadrina_pachyderma_dextral_13C_PDB",
+    "pangaea5-733069:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
+    "pangaea5-733069:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
+    "pangaea5-733069:Globorotalia_inflata_18O_PDB",
+    "pangaea5-733069:Globorotalia_inflata_13C_PDB",
+    "pangaea5-733069:Globorotalia_scitula_18O_PDB",
+    "pangaea5-733069:Globorotalia_scitula_13C_PDB",
+    "pangaea5-733069:Globorotalia_truncatulinoides_dextral_18O_PDB",
+    "pangaea5-733069:Globorotalia_truncatulinoides_dextral_13C_PDB",
+    "pangaea5-733070:Globigerinoides_ruber_white_18O_PDB",
+    "pangaea5-733070:Globigerinoides_ruber_white_13C_PDB",
+    "pangaea5-733070:Neogloboquadrina_pachyderma_dextral_18O_PDB",
+    "pangaea5-733070:Neogloboquadrina_pachyderma_dextral_13C_PDB",
+    "pangaea5-733070:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
+    "pangaea5-733070:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
+    "pangaea5-733070:Globorotalia_scitula_18O_PDB",
+    "pangaea5-733070:Globorotalia_scitula_13C_PDB",
+    "pangaea5-733070:Globorotalia_inflata_18O_PDB",
+    "pangaea5-733070:Globorotalia_inflata_13C_PDB",
+    "pangaea5-733070:Globorotalia_truncatulinoides_dextral_18O_PDB",
+    "pangaea5-733070:Globorotalia_truncatulinoides_dextral_13C_PDB",
     "pangaea5-733076:Foraminifera_planktic_deep_dwelling_species_",
     "pangaea5-733076:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-733076:Sea_surface_temperature_January_March_C",
@@ -86,6 +115,44 @@
     "pangaea5-733077:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-733077:Sea_surface_temperature_January_March_C",
     "pangaea5-733077:Sea_surface_temperature_July_September_C",
+    "pangaea5-733096:Globorotalia_inflata_18O_PDB",
+    "pangaea5-733096:Globorotalia_inflata_13C_PDB",
+    "pangaea5-733096:Globorotalia_truncatulinoides_dextral_18O_PDB",
+    "pangaea5-733096:Globorotalia_truncatulinoides_dextral_13C_PDB",
+    "pangaea5-733096:Globorotalia_truncatulinoides_sinistral_18O_PDB",
+    "pangaea5-733096:Globorotalia_truncatulinoides_sinistral_13C_PDB",
+    "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_18O_PDB",
+    "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_13C_PDB",
+    "pangaea5-733096:Globorotalia_scitula_18O_PDB",
+    "pangaea5-733096:Globorotalia_scitula_13C_PDB",
+    "pangaea5-733108:Globigerinoides_ruber_white_18O_PDB",
+    "pangaea5-733108:Globigerinoides_ruber_white_13C_PDB",
+    "pangaea5-733108:Globorotalia_inflata_18O_PDB",
+    "pangaea5-733108:Globorotalia_inflata_13C_PDB",
+    "pangaea5-733108:Globorotalia_scitula_18O_PDB",
+    "pangaea5-733108:Globorotalia_scitula_13C_PDB",
+    "pangaea5-733108:Globorotalia_truncatulinoides_sinistral_18O_PDB",
+    "pangaea5-733108:Globorotalia_truncatulinoides_sinistral_13C_PDB",
+    "pangaea5-733108:Neogloboquadrina_pachyderma_dextral_18O_PDB",
+    "pangaea5-733108:Neogloboquadrina_pachyderma_dextral_13C_PDB",
+    "pangaea5-733108:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
+    "pangaea5-733108:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
+    "pangaea5-733110:Globigerinoides_ruber_white_18O_PDB",
+    "pangaea5-733110:Globigerinoides_ruber_white_13C_PDB",
+    "pangaea5-733110:Globorotalia_inflata_18O_PDB",
+    "pangaea5-733110:Globorotalia_inflata_13C_PDB",
+    "pangaea5-733110:Globorotalia_scitula_18O_PDB",
+    "pangaea5-733110:Globorotalia_scitula_13C_PDB",
+    "pangaea5-733110:Globorotalia_truncatulinoides_dextral_18O_PDB",
+    "pangaea5-733110:Globorotalia_truncatulinoides_dextral_13C_PDB",
+    "pangaea5-733110:Globorotalia_truncatulinoides_sinistral_18O_PDB",
+    "pangaea5-733110:Globorotalia_truncatulinoides_sinistral_13C_PDB",
+    "pangaea5-733110:Neogloboquadrina_pachyderma_dextral_18O_PDB",
+    "pangaea5-733110:Neogloboquadrina_pachyderma_dextral_13C_PDB",
+    "pangaea5-733110:Neogloboquadrina_pachyderma_sinistral_18O_PDB",
+    "pangaea5-733110:Neogloboquadrina_pachyderma_sinistral_13C_PDB",
+    "pangaea5-737129:Globigerina_bulloides_18O_PDB",
+    "pangaea5-737129:Globigerina_bulloides_13C_PDB",
     "pangaea5-737130:Orbulina_universa_",
     "pangaea5-737130:Globigerina_bulloides_",
     "pangaea5-737130:Globigerina_falconensis_",
@@ -119,10 +186,54 @@
     "pangaea5-737130:Globigerinita_iota_",
     "pangaea5-737130:Pulleniatina_obliquiloculata_",
     "pangaea5-737130:Foraminifera_planktic_other_",
+    "pangaea5-737135:Foraminifera_benthic_18O_PDB",
+    "pangaea5-737135:Cibicidoides_wuellerstorfi_13C_PDB",
+    "pangaea5-737413:Globigerina_bulloides_18O_PDB",
+    "pangaea5-737413:Globigerina_bulloides_13C_PDB",
+    "pangaea5-737419:Neogloboquadrina_pachyderma_dextral_18O_PDB",
+    "pangaea5-737419:Neogloboquadrina_pachyderma_dextral_13C_PDB",
+    "pangaea5-737419:Globorotalia_inflata_18O_PDB",
+    "pangaea5-737419:Globorotalia_inflata_13C_PDB",
+    "pangaea5-737419:Globigerinoides_ruber_18O_PDB",
+    "pangaea5-737419:Globigerinoides_ruber_13C_PDB",
+    "pangaea5-737419:Globorotalia_truncatulinoides_dextral_13C_PDB",
+    "pangaea5-737419:Globorotalia_truncatulinoides_dextral_18O_PDB",
     "pangaea5-738133:Globigerina_bulloides_18O_PDB",
     "pangaea5-738133:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-738136:Globigerina_bulloides_18O_PDB",
     "pangaea5-738136:Neogloboquadrina_pachyderma_sinistral_",
+    "pangaea5-758356:Carbon_inorganic_total_",
+    "pangaea5-758356:Carbon_organic_total_",
+    "pangaea5-758620:Carbon_organic_total_",
+    "pangaea5-758620:Nitrogen_total_",
+    "pangaea5-758620:Carbon_inorganic_total_",
+    "pangaea5-758620:Calcium_carbonate_",
+    "pangaea5-758620:15N_air",
+    "pangaea5-758620:Aluminium_",
+    "pangaea5-758620:Iron_",
+    "pangaea5-758620:Manganese_",
+    "pangaea5-758620:Potassium_",
+    "pangaea5-758620:Titanium_",
+    "pangaea5-758620:Copper_mg_kg",
+    "pangaea5-758620:Lead_mg_kg",
+    "pangaea5-758620:Zinc_mg_kg",
+    "pangaea5-758620:Rubidium_mg_kg",
+    "pangaea5-758620:Zirconium_mg_kg",
+    "pangaea5-758620:Barium_mg_kg",
+    "pangaea5-759784:Carbon_organic_total_",
+    "pangaea5-759784:Nitrogen_total_",
+    "pangaea5-759784:Calcium_carbonate_",
+    "pangaea5-780234:Aluminium_oxide_",
+    "pangaea5-780234:Iron_oxide_FeO_",
+    "pangaea5-780234:Manganese_oxide_",
+    "pangaea5-780234:Carbon_organic_total_",
+    "pangaea5-780234:Vanadium_mg_kg",
+    "pangaea5-780234:Molybdenum_mg_kg",
+    "pangaea5-780234:Barium_mg_kg",
+    "pangaea5-780234:Rhenium_g_kg",
+    "pangaea5-780234:Rhenium_molybdenum_ratio_sin_unidad",
+    "pangaea5-780234:Iron_Aluminium_ratio_sin_unidad",
+    "pangaea5-780234:Manganese_Aluminium_ratio_sin_unidad",
     "pangaea5-810294:Size_fraction_0_150_mm_",
     "pangaea5-810294:Sea_surface_temperature_August_C",
     "pangaea5-810294:Globigerina_bulloides_18O_PDB",
@@ -142,6 +253,23 @@
     "pangaea5-857150:Globigerina_bulloides_18O_PDB",
     "pangaea5-857150:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-857150:Sea_surface_temperature_summer_C",
+    "pangaea5-861972:Lead_210_dpm_g",
+    "pangaea5-861972:Lead_210_excess_Bq_kg",
+    "pangaea5-861972:Uvigerina_sp_18O_PDB",
+    "pangaea5-861972:Globigerinoides_ruber_18O_PDB",
+    "pangaea5-861972:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-861972:Sea_surface_temperature_annual_mean_C_col10",
+    "pangaea5-861973:Lead_210_dpm_g",
+    "pangaea5-861973:Lead_210_excess_Bq_kg",
+    "pangaea5-861973:Globigerinoides_ruber_18O_PDB",
+    "pangaea5-861973:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-861973:Sea_surface_temperature_annual_mean_C_col9",
+    "pangaea5-863947:Foraminifera_benthic_18O_PDB",
+    "pangaea5-895657:Globigerina_bulloides_18O_PDB",
+    "pangaea5-895658:Globigerina_bulloides_18O_PDB",
+    "pangaea5-895677:Globigerina_bulloides_18O_PDB",
+    "pangaea5-901746:Globigerina_bulloides_Magnesium_Calcium_ratio_mmol_mol",
+    "pangaea5-901746:Sea_surface_temperature_C",
     "pangaea5-910794:Foraminifera_benthic_g",
     "pangaea5-910794:Foraminifera_benthic_",
     "pangaea5-910794:Cibicidoides_pachyderma_",
@@ -162,6 +290,33 @@
     "pangaea5-910794:Benthic_Foraminifer_Oxygen_Index_Schmiedl_sin_unidad",
     "pangaea5-910794:Low_oxygen_indicators_",
     "pangaea5-910794:Gyroidina_spp_",
+    "pangaea5-910795:Foraminifera_benthic_g",
+    "pangaea5-910795:Foraminifera_benthic_",
+    "pangaea5-910795:Low_oxygen_indicators_",
+    "pangaea5-910795:Gyroidina_spp_",
+    "pangaea5-910796:Foraminifera_benthic_g",
+    "pangaea5-910796:Foraminifera_benthic_",
+    "pangaea5-910796:Low_oxygen_indicators_",
+    "pangaea5-910796:Gyroidina_spp_",
+    "pangaea5-910798:Cibicidoides_pachyderma_18O_PDB",
+    "pangaea5-910798:Cibicidoides_pachyderma_13C_PDB",
+    "pangaea5-910798:Uvigerina_peregrina_18O_PDB",
+    "pangaea5-910798:Uvigerina_peregrina_13C_PDB",
+    "pangaea5-910799:Cibicidoides_pachyderma_13C_PDB",
+    "pangaea5-910800:Cibicidoides_pachyderma_13C_PDB",
+    "pangaea5-910802:Globigerina_bulloides_18O_PDB",
+    "pangaea5-910802:Globigerina_bulloides_13C_PDB",
+    "pangaea5-914401:Globigerina_bulloides_18O_PDB",
+    "pangaea5-932703:Uvigerina_sp_18O_PDB",
+    "pangaea5-932720:Magnesium_Calcium_ratio_mmol_mol",
+    "pangaea5-932720:Manganese_Calcium_ratio_mol_mol",
+    "pangaea5-932720:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
+    "pangaea5-932737:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
+    "pangaea5-932746:Magnesium_Calcium_ratio_mmol_mol",
+    "pangaea5-932746:Manganese_Calcium_ratio_mol_mol",
+    "pangaea5-932746:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
+    "pangaea5-944303:Globigerina_bulloides_18O_PDB",
+    "pangaea5-944304:Globigerinoides_ruber_18O_PDB",
     "pangaea5-944305:Globigerina_bulloides_",
     "pangaea5-944305:Globoturborotalita_spp_",
     "pangaea5-944305:Globigerinella_siphonifera_",
@@ -179,15 +334,70 @@
     "pangaea5-944305:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-944305:Neogloboquadrina_dutertrei_",
     "pangaea5-944305:Orbulina_universa_",
+    "pangaea5-949594:Neouvigerina_hispida_g",
+    "pangaea5-949594:Bolivina_spp_g",
+    "pangaea5-949594:Bolivinita_quadrilatera_g",
+    "pangaea5-949594:Bulimina_marginata_g",
+    "pangaea5-949594:Bulimina_elongata_g",
+    "pangaea5-949594:Chilostomella_spp_g",
+    "pangaea5-949594:Globobulimina_spp_g",
+    "pangaea5-949594:Neouvigerina_proboscidea_g",
+    "pangaea5-949594:Rectuvigerina_spp_g",
+    "pangaea5-949594:Uvigerina_spp_g",
+    "pangaea5-949594:Size_fraction_0_063_mm_sand_g",
+    "pangaea5-949594:Foraminifera_benthic_extinction_group_g",
+    "pangaea5-949594:Foraminifera_benthic_survivor_group_g",
+    "pangaea5-949594:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
+    "pangaea5-949638:Size_fraction_0_063_mm_sand_g",
+    "pangaea5-949638:Size_fraction_0_063_mm_sand_",
+    "pangaea5-949638:Foraminifera_benthic_extinction_group_g",
+    "pangaea5-949638:Foraminifera_benthic_extinction_group_",
+    "pangaea5-949638:Foraminifera_benthic_survivor_group_g",
+    "pangaea5-949638:Foraminifera_benthic_survivor_group_",
+    "pangaea5-949638:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
+    "pangaea5-949639:Foraminifera_benthic_extinction_group_g",
+    "pangaea5-949639:Size_fraction_0_063_mm_sand_g",
+    "pangaea5-949639:Foraminifera_benthic_survivor_group_g",
+    "pangaea5-949639:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
+    "pangaea5-949639:Foraminifera_benthic_g",
+    "pangaea5-949639:Accumulation_rate_number_of_benthic_foraminifera_cm_2_ka",
+    "pangaea5-949641:Size_fraction_0_063_mm_sand_g",
+    "pangaea5-949641:Size_fraction_0_063_mm_sand_",
+    "pangaea5-949641:Foraminifera_benthic_extinction_group_g",
+    "pangaea5-949641:Foraminifera_benthic_survivor_group_g",
+    "pangaea5-949641:Accumulation_rate_benthic_foraminifera_extinction_group_by_n_cm_2_ka",
+    "pangaea5-949641:Foraminifera_benthic_g",
+    "pangaea5-949641:Accumulation_rate_number_of_benthic_foraminifera_cm_2_ka",
     "pangaea5-955015:Accumulation_rate_planktic_foraminifera_by_number_cm_2_ka",
     "pangaea5-955015:Alkenone_unsaturation_index_UK_37_sin_unidad",
     "pangaea5-955015:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-966663:Globigerina_bulloides_13C_PDB",
+    "pangaea5-966663:Globigerina_bulloides_13C_PDB_col5",
+    "pangaea5-966663:Globigerina_bulloides_18O_PDB",
+    "pangaea5-966663:Globigerina_bulloides_18O_PDB_col7",
+    "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB",
+    "pangaea5-966663:Cibicidoides_pachyderma_13C_PDB_col9",
+    "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB",
+    "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col11",
+    "pangaea5-966663:Cibicidoides_pachyderma_18O_PDB_col12",
     "pangaea5-966840:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-966840:Globorotalia_scitula_",
     "pangaea5-966840:Foraminifera_planktic_subtropical_",
     "pangaea5-966840:Foraminifera_planktic_transitional_",
     "pangaea5-966840:Foraminifera_planktic_subpolar_",
     "pangaea5-966840:Foraminifera_planktic_polar_",
+    "pangaea5-987449:Size_fraction_0_063_mm_sand_g",
+    "pangaea5-987449:Size_fraction_0_063_mm_sand_",
+    "pangaea5-987449:Planulina_ariminensis_18O_PDB",
+    "pangaea5-987449:Cibicides_pachyderma_18O_PDB",
+    "pangaea5-987449:Cibicides_sp_18O_PDB",
+    "pangaea5-987449:Uvigerina_sp_18O_PDB",
+    "pangaea5-987449:Planulina_ariminensis_13C_PDB",
+    "pangaea5-987449:Cibicides_pachyderma_13C_PDB",
+    "pangaea5-987449:Cibicides_sp_13C_PDB",
+    "pangaea5-987449:Uvigerina_sp_13C_PDB",
+    "pangaea5-987449:Foraminifera_benthic_18O_PDB",
+    "pangaea5-987449:Foraminifera_benthic_13C_PDB",
     "pangaea5-988002:Globigerinoides_ruber_",
     "pangaea5-988002:Globigerina_bulloides_",
     "pangaea5-988002:Globorotalia_inflata_",
@@ -223,63 +433,42 @@
     "pangaea5-988003:Globoturborotalita_tenella_",
     "pangaea5-988003:Globigerina_falconensis_",
     "pangaea5-988003:Globigerinita_uvula_",
-    "pangaea5-988003:Dentigloborotalia_anfracta_"
+    "pangaea5-988003:Dentigloborotalia_anfracta_",
+    "pangaea5-991019:Globigerina_bulloides_18O_PDB",
+    "pangaea5-991019:Globigerina_bulloides_13C_PDB"
   ],
   "integration_quarantine": [
     {
-      "id": "pangaea5-901746:Globigerina_bulloides_Magnesium_Calcium_ratio_mmol_mol",
-      "reason": "parent_core_identity_requires_linkage_review"
+      "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_g_col46",
+      "matches": [
+        "pangaea5-949638:Size_fraction_0_063_mm_sand_g"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
     },
     {
-      "id": "pangaea5-901746:Sea_surface_temperature_C",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910795:Foraminifera_benthic_g",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910795:Foraminifera_benthic_",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910795:Low_oxygen_indicators_",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910795:Gyroidina_spp_",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910796:Foraminifera_benthic_g",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910796:Foraminifera_benthic_",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910796:Low_oxygen_indicators_",
-      "reason": "parent_core_identity_requires_linkage_review"
-    },
-    {
-      "id": "pangaea5-910796:Gyroidina_spp_",
-      "reason": "parent_core_identity_requires_linkage_review"
+      "id": "pangaea5-949639:Foraminifera_benthic_extinction_group_g_col45",
+      "matches": [
+        "pangaea5-949639:Foraminifera_benthic_extinction_group_g"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
     }
   ],
-  "held_core_records": [
-    {
-      "id": "pangaea5-md95_2043",
-      "matches": "pangaea-438816",
-      "reason": "normalized_exact_core_already_in_parent; held_for_linkage_review"
-    },
-    {
-      "id": "pangaea5-md99_2343",
-      "matches": "pangaea-759535",
-      "reason": "normalized_exact_core_already_in_parent; held_for_linkage_review"
-    }
-  ],
+  "held_core_records": [],
+  "linked_to_parent_records": {
+    "pangaea5-mo05": "pangaea-818921",
+    "pangaea5-md95_2043": "pangaea-438816",
+    "pangaea5-md99_2343": "pangaea-759535"
+  },
   "partial_numeric_overlap_links": [
+    {
+      "series": [
+        "pangaea5-66811:Globigerina_bulloides_18O_PDB",
+        "pangaea5-82361:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 299,
+      "fraction_of_smaller_unique_set": 0.5578358208955224,
+      "status": "review_link; not merged"
+    },
     {
       "series": [
         "pangaea5-66811:Globigerina_bulloides_18O_PDB",
@@ -318,6 +507,15 @@
     },
     {
       "series": [
+        "pangaea5-737129:Globigerina_bulloides_18O_PDB",
+        "pangaea5-857150:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 127,
+      "fraction_of_smaller_unique_set": 0.8698630136986302,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
         "pangaea5-737130:Neogloboquadrina_pachyderma_sinistral_",
         "pangaea5-857150:Neogloboquadrina_pachyderma_sinistral_"
       ],
@@ -327,11 +525,38 @@
     },
     {
       "series": [
+        "pangaea5-737413:Globigerina_bulloides_18O_PDB",
+        "pangaea5-738133:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 176,
+      "fraction_of_smaller_unique_set": 0.5057471264367817,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-737413:Globigerina_bulloides_18O_PDB",
+        "pangaea5-857149:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.5018450184501845,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
         "pangaea5-738133:Globigerina_bulloides_18O_PDB",
         "pangaea5-857149:Globigerina_bulloides_18O_PDB"
       ],
       "exact_shared_pairs": 213,
       "fraction_of_smaller_unique_set": 0.7859778597785978,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-895658:Globigerina_bulloides_18O_PDB",
+        "pangaea5-895677:Globigerina_bulloides_18O_PDB"
+      ],
+      "exact_shared_pairs": 63,
+      "fraction_of_smaller_unique_set": 0.9545454545454546,
       "status": "review_link; not merged"
     }
   ],
@@ -408,6 +633,6 @@
       }
     ]
   },
-  "sha256": "655f39192896a590662194d757258baf0514325b460d920ad65592c97ccd8d92",
-  "bytes": 9450541
+  "sha256": "2b70a146e0ca6f111e1c0572a8eef8989e94d6b2f7646da7cb3cdf03e928a9e4",
+  "bytes": 11349678
 }
