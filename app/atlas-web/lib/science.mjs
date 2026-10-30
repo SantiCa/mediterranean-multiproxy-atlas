@@ -146,14 +146,20 @@ export function landMask(geojson) {
     );
 }
 export function fieldGrid(items, radiusKm = 600, isLand = null) {
-  const a = items.filter((s) => finite(s.value)),
+  // Series at identical coordinates (one core with several methods, or two records of
+  // the same site) become one interpolation node with their median; the map points
+  // stay separate. Counting them twice would overweight that site.
+  const bySite = new Map();
+  for (const s of items.filter((x) => finite(x.value))) {
+    const k = s.record.longitude + "," + s.record.latitude;
+    if (!bySite.has(k)) bySite.set(k, []);
+    bySite.get(k).push(s);
+  }
+  const a = [...bySite.values()].map((list) =>
+      list.length === 1 ? list[0] : { ...list[0], value: median(list.map((x) => x.value)) },
+    ),
+    merged = [...bySite.values()].filter((l) => l.length > 1).length,
     coords = a.map((s) => [s.record.longitude, s.record.latitude]);
-  if (new Set(coords.map((c) => c.join(","))).size !== coords.length)
-    return {
-      cells: [],
-      reason:
-        "Superficie suspendida: registros con coordenadas coincidentes. Revisa su independencia; los puntos se conservan.",
-    };
   const hull = convexHull(coords);
   if (hull.length < 3)
     return {
@@ -209,8 +215,11 @@ export function fieldGrid(items, radiusKm = 600, isLand = null) {
   return {
     cells,
     hull,
+    merged,
     reason: cells.length
-      ? null
+      ? merged
+        ? `${merged} sitios con varias series en las mismas coordenadas: en la superficie cuentan una vez (mediana); los puntos se muestran por separado.`
+        : null
       : "Sin celdas con 3 vecinos dentro del radio. Se conservan los puntos observados.",
   };
 }

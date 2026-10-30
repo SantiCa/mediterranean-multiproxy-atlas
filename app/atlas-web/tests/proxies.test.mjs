@@ -23,7 +23,10 @@ test('dense display thinning preserves extrema and full source array',()=>{
  const rows=Array.from({length:36000},(_,i)=>({age:i,value:i===12345?90000:i===23456?-90000:i}));
  const shown=displayRows(rows,1000);assert.ok(shown.length<=1000);assert.equal(shown[0],rows[0]);assert.equal(shown.at(-1),rows.at(-1));assert.ok(shown.includes(rows[12345]));assert.ok(shown.includes(rows[23456]));assert.equal(rows.length,36000);assert.deepEqual(extent(rows.map(x=>x.value)),[-90000,90000]);
 });
-test('coincident records are not independent spatial neighbours',()=>{
- const items=[[0,0],[0,0],[1,0],[0,1]].map(c=>({record:{longitude:c[0],latitude:c[1],realm:'marine'},value:1}));
- assert.equal(fieldGrid(items,1000).cells.length,0);assert.match(fieldGrid(items,1000).reason,/coincidentes/);
+test('coincident records are not independent spatial neighbours: one node (median)',()=>{
+ const items=[[0,0,1],[0,0,3],[1,0,2],[0,1,2],[1,1,2]].map(c=>({record:{longitude:c[0],latitude:c[1],realm:'marine'},value:c[2]}));
+ const g=fieldGrid(items,1000);
+ assert.equal(g.merged,1);assert.match(g.reason,/mismas coordenadas/);
+ // only 4 distinct sites support each cell; the duplicated site counts once with median 2
+ assert.ok(g.cells.every(c=>c.neighbors<=4));assert.ok(g.cells.every(c=>Math.abs(c.value-2)<1e-9));
 });
