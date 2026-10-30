@@ -1,0 +1,12 @@
+{
+  "task": "CUR-COVERAGE-30",
+  "github_source_commit": "803fd451f4e0e5b1fbba59afec13a86f580ece16",
+  "site_project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "seed_sha256": "efb5058363910aaa1049b16e6d47b4f7bbc45de1e5cb2df9be24ff6676d4e95c",
+  "source_files": 159,
+  "snapshot_files": 964,
+  "largest_static_file": "public/snapshot/inventory.json",
+  "largest_static_bytes": 17392186,
+  "cell_by_cell_check": "passed",
+  "publication": "pending"
+}
