@@ -1,28 +1,28 @@
 {
-  "version": "atlas-quantitative-2026-10-29-v5-c25cc8a2394",
+  "version": "atlas-quantitative-2026-10-29-v5-c501be5f380",
   "parent_version": "atlas-quantitative-2026-10-29-v4-r2",
   "parent_sha256": "c3729bbc2a3fa7883e1609f0f930c701532739f41ef4174e8b18cfe563cc36c5",
   "parent_unchanged": true,
   "counts": {
-    "records": 102,
-    "series": 815,
-    "values": 241826,
-    "new_records": 56,
-    "new_series": 663,
-    "new_values": 138292,
-    "missing_age_values": 6424
+    "records": 128,
+    "series": 1086,
+    "values": 865593,
+    "new_records": 82,
+    "new_series": 934,
+    "new_values": 762059,
+    "missing_age_values": 6439
   },
   "input_fragments": {
     "pangaea": {
-      "records": 64,
-      "series": 665,
-      "values": 138328
+      "records": 90,
+      "series": 950,
+      "values": 765763
     }
   },
   "family_counts": {
     "Temperatura": 38,
-    "Geoquímica elemental": 186,
-    "Sedimentología": 87,
+    "Geoquímica elemental": 273,
+    "Sedimentología": 159,
     "Biomarcadores": 20,
     "Micropaleontología": 8,
     "Isótopos estables": 157,
@@ -31,11 +31,11 @@
     "Isótopos radiogénicos": 6,
     "Paleopolvo": 1,
     "Mineralogía": 2,
-    "Foraminíferos": 168,
-    "Materia orgánica y biomarcadores": 44,
-    "Polen": 83
+    "Foraminíferos": 170,
+    "Materia orgánica y biomarcadores": 57,
+    "Polen": 180
   },
-  "comparison_groups": 606,
+  "comparison_groups": 787,
   "numeric_age_extent_ka_bp": [
     -1.5,
     4700.0
@@ -87,15 +87,64 @@
     "pangaea5-89473:Carbon_organic_total_",
     "pangaea5-89473:Turborotalita_quinqueloba_18O_PDB",
     "pangaea5-89473:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-96878:Color_reflectance_at_400_nm_~2bf1a65b",
+    "pangaea5-96878:Color_reflectance_at_700_nm_~e1dfc283",
+    "pangaea5-96878:Color_L_lightness_sin_unidad~11b15ac6",
+    "pangaea5-96878:Color_a_sin_unidad~1d35f4eb",
+    "pangaea5-96878:Color_b_sin_unidad~867f981e",
+    "pangaea5-96879:Color_reflectance_at_400_nm_~0b9adcfd",
+    "pangaea5-96879:Color_reflectance_at_700_nm_~d1b08439",
+    "pangaea5-96879:Color_L_lightness_sin_unidad~bc58d5dd",
+    "pangaea5-96879:Color_a_sin_unidad~fd8a5a2e",
+    "pangaea5-96879:Color_b_sin_unidad~f51c618f",
+    "pangaea5-96885:Color_reflectance_at_400_nm_~55fdfa0f",
+    "pangaea5-96885:Color_reflectance_at_700_nm_~3db0ddba",
+    "pangaea5-96885:Color_L_lightness_sin_unidad~f6f24655",
+    "pangaea5-96885:Color_a_sin_unidad~8d564efe",
+    "pangaea5-96885:Color_b_sin_unidad~156c6ade",
+    "pangaea5-207848:Calcium_carbonate_~4bb4be9a",
     "pangaea5-227716:Calcium_cps~0003350c",
     "pangaea5-227716:Titanium_cps~ae8d3c28",
     "pangaea5-227716:Titanium_Calcium_ratio_sin_unidad~2bbabef1",
+    "pangaea5-227717:Calcium_cps~a3e495ab",
+    "pangaea5-227717:Titanium_cps~54a9d752",
+    "pangaea5-227717:Titanium_Calcium_ratio_sin_unidad~09fe41c6",
+    "pangaea5-227719:Calcium_cps~3d139275",
+    "pangaea5-227719:Titanium_cps~09ff2115",
+    "pangaea5-227719:Titanium_Calcium_ratio_sin_unidad~a5b6cc87",
+    "pangaea5-227720:Calcium_cps~91ace6e2",
+    "pangaea5-227720:Titanium_cps~a2114128",
+    "pangaea5-227720:Titanium_Calcium_ratio_sin_unidad~8a59db8a",
+    "pangaea5-227740:Calcium_cps~5faba3f8",
+    "pangaea5-227740:Titanium_cps~40eafd8c",
+    "pangaea5-227740:Manganese_cps~d28db857",
+    "pangaea5-227740:Titanium_Calcium_ratio_sin_unidad~3508083b",
     "pangaea5-251643:Calcium_carbonate_~9445911e",
     "pangaea5-251643:Carbon_organic_total_~409f6811",
+    "pangaea5-252167:Carbon_inorganic_total_~10e82835",
+    "pangaea5-252167:Calcium_carbonate_~4dce43c7",
+    "pangaea5-252167:Carbon_organic_total_~c2fe2daf",
+    "pangaea5-252167:Nitrogen_total_~cbc4ae89",
+    "pangaea5-252189:Carbon_inorganic_total_~198db65f",
+    "pangaea5-252189:Calcium_carbonate_~86e4850a",
+    "pangaea5-252189:Carbon_organic_total_~c1a21e91",
+    "pangaea5-252189:Nitrogen_total_~114ee684",
     "pangaea5-252193:Carbon_inorganic_total_~0a3ae61d",
     "pangaea5-252193:Calcium_carbonate_~f7f33e17",
     "pangaea5-252193:Carbon_organic_total_~9b868278",
     "pangaea5-252193:Nitrogen_total_~4026aa1c",
+    "pangaea5-253132:Color_L_lightness_sin_unidad~25494196",
+    "pangaea5-253132:Color_a_sin_unidad~0e2ab87c",
+    "pangaea5-253132:Color_b_sin_unidad~cc7caa36",
+    "pangaea5-253132:Color_X_sin_unidad~7ee0bd3a",
+    "pangaea5-253132:Color_Y_sin_unidad~9af875ec",
+    "pangaea5-253132:Color_Z_sin_unidad~a8d79786",
+    "pangaea5-253136:Color_L_lightness_sin_unidad~fd36bd48",
+    "pangaea5-253136:Color_a_sin_unidad~007ad9b5",
+    "pangaea5-253136:Color_b_sin_unidad~6df0b66e",
+    "pangaea5-253136:Color_X_sin_unidad~d63df1e3",
+    "pangaea5-253136:Color_Y_sin_unidad~58d5cf24",
+    "pangaea5-253136:Color_Z_sin_unidad~dedba0b2",
     "pangaea5-253146:Color_L_lightness_sin_unidad~ec108e66",
     "pangaea5-253146:Color_a_sin_unidad~05bee768",
     "pangaea5-253146:Color_b_sin_unidad~d7315932",
@@ -108,6 +157,25 @@
     "pangaea5-253159:Color_X_sin_unidad~d128995b",
     "pangaea5-253159:Color_Y_sin_unidad~781e6fe7",
     "pangaea5-253159:Color_Z_sin_unidad~c7198826",
+    "pangaea5-253161:Color_L_lightness_sin_unidad~e75d69e8",
+    "pangaea5-253161:Color_a_sin_unidad~830fd49a",
+    "pangaea5-253161:Color_b_sin_unidad~92230c64",
+    "pangaea5-253161:Color_X_sin_unidad~0020bbd0",
+    "pangaea5-253161:Color_Y_sin_unidad~929db640",
+    "pangaea5-253161:Color_Z_sin_unidad~854b213f",
+    "pangaea5-256008:Lithium_mol_l~f0ebc1be",
+    "pangaea5-256008:Potassium_mmol_l~ee56c435",
+    "pangaea5-256029:Lithium_mol_l~d76f25ae",
+    "pangaea5-256029:Manganese_mol_l~3661b6ef",
+    "pangaea5-256029:Potassium_mmol_l~99610f28",
+    "pangaea5-259364:Carbon_organic_total_~2c28ee1f",
+    "pangaea5-259364:Carbon_organic_pyrolyzable_mg_HC_g~3d7f0d94",
+    "pangaea5-259364:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g~27953cba",
+    "pangaea5-259364:Hydrogen_index_mass_HC_per_unit_mass_total_organic_carbon_mg_g~eaa523de",
+    "pangaea5-259373:Carbon_organic_total_~cf8bb7e2",
+    "pangaea5-259373:Carbon_organic_pyrolyzable_mg_HC_g~c0e6ebcf",
+    "pangaea5-259373:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g~fc7842ec",
+    "pangaea5-259373:Hydrogen_index_mass_HC_per_unit_mass_total_organic_carbon_mg_g~eed72910",
     "pangaea5-327443:Potassium_cps",
     "pangaea5-634051:Cibicidoides_pachyderma_18O_PDB~fc91ea04",
     "pangaea5-634051:Cibicidoides_pachyderma_13C_PDB~b8c284dc",
@@ -192,6 +260,10 @@
     "pangaea5-733096:Neogloboquadrina_pachyderma_dextral_13C_PDB",
     "pangaea5-733096:Globorotalia_scitula_18O_PDB",
     "pangaea5-733096:Globorotalia_scitula_13C_PDB",
+    "pangaea5-733101:Iron_cps~46c42d4c",
+    "pangaea5-733101:Calcium_cps~1f118df7",
+    "pangaea5-733101:Titanium_cps~73ebbf9f",
+    "pangaea5-733101:Titanium_Calcium_ratio_sin_unidad~c8f5e8f0",
     "pangaea5-733108:Globigerinoides_ruber_white_18O_PDB",
     "pangaea5-733108:Globigerinoides_ruber_white_13C_PDB",
     "pangaea5-733108:Globorotalia_inflata_18O_PDB",
@@ -326,6 +398,13 @@
     "pangaea5-759784:Carbon_organic_total_",
     "pangaea5-759784:Nitrogen_total_",
     "pangaea5-759784:Calcium_carbonate_",
+    "pangaea5-759802:Artemisia_~94f20e15",
+    "pangaea5-759802:Poaceae_~dbec56ea",
+    "pangaea5-759802:Pinus_~858061e5",
+    "pangaea5-759802:Abies_~28aee2a2",
+    "pangaea5-759802:Carpinus_~abebe634",
+    "pangaea5-759802:Olea_~90e90838",
+    "pangaea5-760965:Carbon_inorganic_total_~8c0de480",
     "pangaea5-777485:Carbon_organic_total_~2e8ce0bc",
     "pangaea5-777485:Carbon_inorganic_total_~63c7ba8b",
     "pangaea5-777485:Nitrogen_total_~28201403",
@@ -344,12 +423,67 @@
     "pangaea5-810294:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-810294:Sea_surface_temperature_February_C",
     "pangaea5-810294:Sea_surface_temperature_August_C_col14",
+    "pangaea5-829005:Color_L_lightness_sin_unidad~4dd7cab8",
+    "pangaea5-829005:Color_a_sin_unidad~e202385d",
+    "pangaea5-829005:Color_b_sin_unidad~3ccc3628",
+    "pangaea5-829005:Color_X_sin_unidad~0a11eb77",
+    "pangaea5-829005:Color_Y_sin_unidad~5211ab0f",
+    "pangaea5-829005:Color_Z_sin_unidad~010c1a4c",
     "pangaea5-829010:Color_L_lightness_sin_unidad~ba8d79b3",
     "pangaea5-829010:Color_a_sin_unidad~7077626f",
     "pangaea5-829010:Color_b_sin_unidad~dea7106c",
     "pangaea5-829010:Color_X_sin_unidad~5ecdc351",
     "pangaea5-829010:Color_Y_sin_unidad~5be91201",
     "pangaea5-829010:Color_Z_sin_unidad~7261bee4",
+    "pangaea5-829014:Color_L_lightness_sin_unidad~cfb4055c",
+    "pangaea5-829014:Color_a_sin_unidad~9fdea6b1",
+    "pangaea5-829014:Color_b_sin_unidad~f4e60207",
+    "pangaea5-829014:Color_X_sin_unidad~a4452b37",
+    "pangaea5-829014:Color_Y_sin_unidad~df2dd90f",
+    "pangaea5-829014:Color_Z_sin_unidad~f9b77c45",
+    "pangaea5-829015:Color_L_lightness_sin_unidad~b1221574",
+    "pangaea5-829015:Color_a_sin_unidad~6d0daa26",
+    "pangaea5-829015:Color_b_sin_unidad~cae55ee7",
+    "pangaea5-829015:Color_X_sin_unidad~8d8805c9",
+    "pangaea5-829015:Color_Y_sin_unidad~35336a0b",
+    "pangaea5-829015:Color_Z_sin_unidad~591f43cb",
+    "pangaea5-829016:Color_L_lightness_sin_unidad~3fe19e0c",
+    "pangaea5-829016:Color_a_sin_unidad~9fed94f4",
+    "pangaea5-829016:Color_b_sin_unidad~6d964bb3",
+    "pangaea5-829016:Color_X_sin_unidad~56cdb901",
+    "pangaea5-829016:Color_Y_sin_unidad~28ad2c43",
+    "pangaea5-829016:Color_Z_sin_unidad~b7d5eb84",
+    "pangaea5-829017:Color_L_lightness_sin_unidad~b9663a77",
+    "pangaea5-829017:Color_a_sin_unidad~5c8a1149",
+    "pangaea5-829017:Color_b_sin_unidad~e6ce0930",
+    "pangaea5-829017:Color_X_sin_unidad~2d46d612",
+    "pangaea5-829017:Color_Y_sin_unidad~a8cbe9e2",
+    "pangaea5-829017:Color_Z_sin_unidad~813ff010",
+    "pangaea5-835847:Artemisia_~643c4e9a",
+    "pangaea5-835847:Betula_~fadab3a3",
+    "pangaea5-835847:Cedrus_~4d7d25bc",
+    "pangaea5-835847:Ephedra_distachya_type_~21b038d0",
+    "pangaea5-835847:Ephedra_fragilis_type_~7a746a46",
+    "pangaea5-835847:Ericaceae_~47da8f8c",
+    "pangaea5-835847:Juniperus_~bf9e0ba7",
+    "pangaea5-835847:Olea_~ba3c0f26",
+    "pangaea5-835847:Pistacia_~0b1b9977",
+    "pangaea5-835847:Quercus_ilex_type_~59b7984b",
+    "pangaea5-835847:Quercus_robur_type_~6ff54d9e",
+    "pangaea5-835847:Spores_trilete_~171455c2",
+    "pangaea5-835847:Monolete_spore_s_~8a09f143",
+    "pangaea5-855219:Chlorine_cps~abf08abd",
+    "pangaea5-855219:Potassium_cps~083c5a42",
+    "pangaea5-855219:Calcium_cps~ee622223",
+    "pangaea5-855219:Titanium_cps~cb3da941",
+    "pangaea5-855219:Iron_cps~de30adaf",
+    "pangaea5-855219:Bromine_cps~a1ec5b67",
+    "pangaea5-855220:Chlorine_cps~61fbccac",
+    "pangaea5-855220:Potassium_cps~a2165a73",
+    "pangaea5-855220:Calcium_cps~ad2522ad",
+    "pangaea5-855220:Titanium_cps~50e04bb9",
+    "pangaea5-855220:Iron_cps~57f0d4b4",
+    "pangaea5-855220:Bromine_cps~f42883d0",
     "pangaea5-857149:Globigerina_bulloides_18O_PDB",
     "pangaea5-857149:Neogloboquadrina_pachyderma_sinistral_",
     "pangaea5-857149:Sea_surface_temperature_summer_C",
@@ -392,11 +526,79 @@
     "pangaea5-872791:Pollen_temperate_forest_",
     "pangaea5-872797:Pollen_temperate_forest_",
     "pangaea5-872798:Pollen_temperate_forest_",
+    "pangaea5-872799:Pollen_temperate_forest_~a8ee1787",
+    "pangaea5-872804:Pollen_temperate_forest_~458226fd",
+    "pangaea5-872808:Pollen_temperate_forest_~70e241db",
+    "pangaea5-872809:Pollen_temperate_forest_~bf7fe168",
+    "pangaea5-872812:Pollen_temperate_forest_~2eb2716c",
+    "pangaea5-872813:Pollen_temperate_forest_~5bd2e9b3",
+    "pangaea5-872815:Pollen_temperate_forest_~dd4a5f71",
+    "pangaea5-872900:Quercus_~33acbcfb",
+    "pangaea5-872900:Quercus__col89~b29bf9f6",
+    "pangaea5-872901:Abies_~bb622a41",
+    "pangaea5-872901:Artemisia_~5e98951a",
+    "pangaea5-872901:Betula_~b1c7de10",
+    "pangaea5-872901:Carpinus_betulus_~2dfb1d8c",
+    "pangaea5-872901:Cedrus_~bea340e9",
+    "pangaea5-872901:Cupressaceae_~c9774276",
+    "pangaea5-872901:Ephedra_distachya_type_~da6ab3c7",
+    "pangaea5-872901:Ephedra_fragilis_type_~df1962bd",
+    "pangaea5-872901:Ericaceae_~35ae5f3c",
+    "pangaea5-872901:Olea_~b2d2d881",
+    "pangaea5-872901:Pinus_~ff5fb062",
+    "pangaea5-872901:Pistacia_~ef13371d",
+    "pangaea5-872901:Poaceae_~ec03b111",
+    "pangaea5-872901:Quercus_~6e9cd0ac",
+    "pangaea5-872901:Quercus__col88~8111a92a",
     "pangaea5-882263:Carbon_organic_total_",
     "pangaea5-882263:Calcium_carbonate_",
+    "pangaea5-885938:Aluminium_cps~999b7472",
+    "pangaea5-885938:Potassium_cps~c858942c",
+    "pangaea5-885938:Calcium_cps~53de6ad5",
+    "pangaea5-885938:Titanium_cps~137a610d",
+    "pangaea5-885938:Vanadium_cps~bc1ad56e",
+    "pangaea5-885938:Chromium_cps~c4ab666f",
+    "pangaea5-885938:Manganese_cps~2ed650a6",
+    "pangaea5-885938:Iron_cps~b44a7401",
+    "pangaea5-885938:Cobalt_cps~2bf72d10",
+    "pangaea5-885938:Nickel_cps~cfae4089",
+    "pangaea5-885938:Copper_cps~99e03a63",
+    "pangaea5-885938:Zinc_cps~3fabc98f",
+    "pangaea5-885938:Arsenic_cps~1adeb568",
+    "pangaea5-885938:Rubidium_cps~360c441b",
+    "pangaea5-885938:Molybdenum_cps~69b00cc5",
+    "pangaea5-885938:Molybdenum_cps_col24~4c0390a7",
+    "pangaea5-894213:Abies_~4fdc5250",
+    "pangaea5-894213:Artemisia_~ab9b6dfc",
+    "pangaea5-894213:Betula_~9d66a930",
+    "pangaea5-894213:Carpinus_betulus_~470acd65",
+    "pangaea5-894213:Cedrus_~fba1aa90",
+    "pangaea5-894213:Chenopodiaceae_~90e00f20",
+    "pangaea5-894213:Ephedra_distachya_~b74f2552",
+    "pangaea5-894213:Ephedra_fragilis_~ca707d58",
+    "pangaea5-894213:Ericaceae_~3a9bca25",
+    "pangaea5-894213:Juniperus_~8c3db7d5",
+    "pangaea5-894213:Olea_~40317c66",
+    "pangaea5-894213:Pinus_~b9b857a5",
+    "pangaea5-894213:Pistacia_~b2a11d4f",
+    "pangaea5-894213:Spores_trilete_~83fc82c2",
+    "pangaea5-894213:Monolete_spore_s_~e333593e",
+    "pangaea5-894213:Poaceae_~43e9657c",
     "pangaea5-895657:Globigerina_bulloides_18O_PDB",
     "pangaea5-895658:Globigerina_bulloides_18O_PDB",
     "pangaea5-895677:Globigerina_bulloides_18O_PDB",
+    "pangaea5-896612:Aluminium_cps~6cda759f",
+    "pangaea5-896612:Potassium_cps~6ad7be77",
+    "pangaea5-896612:Calcium_cps~c8ef124e",
+    "pangaea5-896612:Titanium_cps~aa95207e",
+    "pangaea5-896612:Manganese_cps~41350720",
+    "pangaea5-896612:Iron_cps~30db815d",
+    "pangaea5-896612:Copper_cps~41768e8f",
+    "pangaea5-896612:Zinc_cps~177d136b",
+    "pangaea5-896612:Bromine_cps~48ff2869",
+    "pangaea5-896612:Rubidium_cps~7c4aed9f",
+    "pangaea5-896612:Zirconium_cps~c440ee67",
+    "pangaea5-896612:Lead_cps~673aee4d",
     "pangaea5-901746:Sea_surface_temperature_C",
     "pangaea5-903772:Carbon_organic_total_g_g",
     "pangaea5-910794:Foraminifera_benthic_g",
@@ -428,7 +630,28 @@
     "pangaea5-914105:Nitrogen_total_",
     "pangaea5-914105:Carbon_organic_total_",
     "pangaea5-914105:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad",
+    "pangaea5-914106:Potassium_~5e78ad88",
+    "pangaea5-914106:Titanium_~7207a8f1",
+    "pangaea5-914106:Manganese_~75ee2d87",
+    "pangaea5-914106:Iron_~10d7fb25",
+    "pangaea5-914106:Rubidium_~d9c3cd76",
+    "pangaea5-914106:Zirconium_~033b700a",
+    "pangaea5-914106:Zinc_~f721ab5d",
     "pangaea5-914401:Globigerina_bulloides_18O_PDB",
+    "pangaea5-929087:Abies_~22ec44e7",
+    "pangaea5-929087:Pinus_~27dfdced",
+    "pangaea5-929087:Betula_~bb9da8dd",
+    "pangaea5-929087:Carpinus_~a6aba954",
+    "pangaea5-929087:Quercus_~ce689fc9",
+    "pangaea5-929087:Cupressaceae_~5fe442a8",
+    "pangaea5-929087:Ericaceae_~47d9e043",
+    "pangaea5-929087:Juniperus_~47f291b6",
+    "pangaea5-929087:Asteraceae_~2d578a4a",
+    "pangaea5-929087:Artemisia_~5154bb1c",
+    "pangaea5-929087:Chenopodiaceae_~f75c30f4",
+    "pangaea5-929087:Poaceae_~5957dce4",
+    "pangaea5-929087:Arboreal_pollen_cm_3~1bdfe539",
+    "pangaea5-929087:Non_arboreal_pollen_~166e1ddc",
     "pangaea5-929110:Potassium_ng_g",
     "pangaea5-929110:Abies_",
     "pangaea5-929110:Pinus_",
@@ -437,6 +660,21 @@
     "pangaea5-929110:Quercus_",
     "pangaea5-929110:Artemisia_",
     "pangaea5-929110:Poaceae_",
+    "pangaea5-930103:Pinus_~c38d4a2c",
+    "pangaea5-930103:Abies_~18f24435",
+    "pangaea5-930103:Juniperus_~e67581ee",
+    "pangaea5-930103:Betula_~2b21c5d2",
+    "pangaea5-930103:Quercus_ilex_type_~d126e3e7",
+    "pangaea5-930103:Carpinus_betulus_~58d79e4b",
+    "pangaea5-930103:Pistacia_~23ce1a98",
+    "pangaea5-930103:Olea_~9a15911f",
+    "pangaea5-930103:Ephedra_distachya_~2d2f59f6",
+    "pangaea5-930103:Ephedra_fragilis_~ac243cab",
+    "pangaea5-930103:Artemisia_~f324e0a9",
+    "pangaea5-930103:Chenopodiaceae_~3d0267a3",
+    "pangaea5-930103:Asteraceae_~06103c9e",
+    "pangaea5-930103:Ericaceae_~c1488e9d",
+    "pangaea5-930103:Poaceae_~61f160e3",
     "pangaea5-932703:Uvigerina_sp_18O_PDB",
     "pangaea5-932720:Manganese_Calcium_ratio_mol_mol",
     "pangaea5-932720:Accumulation_rate_benthic_foraminifera_by_number_cm_2_ka",
@@ -500,6 +738,15 @@
     "pangaea5-954411:Titanium_Calcium_ratio_sin_unidad",
     "pangaea5-955015:Alkenone_unsaturation_index_UK_37_sin_unidad",
     "pangaea5-955015:Sea_surface_temperature_annual_mean_C",
+    "pangaea5-958680:Abies_~ef48997b",
+    "pangaea5-958680:Asteraceae_~a12b6dcb",
+    "pangaea5-958680:Betulaceae_~860f0821",
+    "pangaea5-958680:Cupressaceae_~efe9e805",
+    "pangaea5-958680:Quercus_~f9ae9f4d",
+    "pangaea5-958683:Asteraceae_~efa5f4a2",
+    "pangaea5-958683:Betulaceae_~2ab3f025",
+    "pangaea5-958683:Cupressaceae_~9abbdad3",
+    "pangaea5-958683:Pinus_~874e14e3",
     "pangaea5-966663:Globigerina_bulloides_13C_PDB",
     "pangaea5-966663:Globigerina_bulloides_13C_PDB_col5",
     "pangaea5-966663:Globigerina_bulloides_18O_PDB",
@@ -518,6 +765,29 @@
     "pangaea5-966998:Carbon_organic_total_Nitrogen_total_ratio_sin_unidad",
     "pangaea5-966998:13C_total_organic_carbon_PDB",
     "pangaea5-966998:15N_air",
+    "pangaea5-967180:Color_L_lightness_sin_unidad~34fca611",
+    "pangaea5-967180:Color_L_lightness_sin_unidad_col4~e9260e49",
+    "pangaea5-982346:Aluminium_cps~311d59d5",
+    "pangaea5-982346:Chlorine_cps~f2939912",
+    "pangaea5-982346:Potassium_cps~f04d0354",
+    "pangaea5-982346:Calcium_cps~33c67bb4",
+    "pangaea5-982346:Titanium_cps~3e7fed4f",
+    "pangaea5-982346:Vanadium_cps~69812ab2",
+    "pangaea5-982346:Chromium_cps~026219a3",
+    "pangaea5-982346:Manganese_cps~3d5c5031",
+    "pangaea5-982346:Iron_cps~c9192214",
+    "pangaea5-982346:Cobalt_cps~861e5590",
+    "pangaea5-982346:Nickel_cps~0500fab0",
+    "pangaea5-982346:Copper_cps~dc046ee9",
+    "pangaea5-982346:Zinc_cps~b09a1d4c",
+    "pangaea5-982346:Arsenic_cps~06ce89d0",
+    "pangaea5-982346:Bromine_cps~9d9cbb1a",
+    "pangaea5-982346:Rubidium_cps~6b3aeb4a",
+    "pangaea5-982346:Zirconium_cps~3f097820",
+    "pangaea5-982346:Molybdenum_cps~d17a52bb",
+    "pangaea5-982346:Lead_cps~e1a72be1",
+    "pangaea5-982346:Uranium_cps~3eef646b",
+    "pangaea5-982488:Iron_cps~5f7307b2",
     "pangaea5-986421:Calcium_carbonate_~d4b196c7",
     "pangaea5-986421:Color_L_lightness_~a865682b",
     "pangaea5-986421:Color_a_sin_unidad~1c8699c3",
@@ -683,6 +953,7 @@
     "pangaea5-992690:Color_L_lightness_sin_unidad",
     "pangaea5-992690:Color_a_sin_unidad",
     "pangaea5-992690:Color_b_sin_unidad",
+    "pangaea5-993441:Calcium_carbonate_~819afe0b",
     "pangaea5-993913:Nitrogen_total_~7e0a1737",
     "pangaea5-993913:Carbon_organic_total_~6bd1bea1",
     "pangaea5-993913:13C_total_organic_carbon_PDB~31823a77",
@@ -707,6 +978,104 @@
   ],
   "integration_quarantine": [
     {
+      "id": "pangaea5-872900:Abies_~6c8ac700",
+      "matches": [
+        "pangaea5-711649:Abies_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Artemisia_~cf3081e1",
+      "matches": [
+        "pangaea5-711649:Artemisia_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Betula_~f6aa809c",
+      "matches": [
+        "pangaea5-711649:Betula_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Carpinus_~a9ffc97c",
+      "matches": [
+        "pangaea5-711649:Carpinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Cedrus_~417198ec",
+      "matches": [
+        "pangaea5-711649:Cedrus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Chenopodiaceae_~f250d1f3",
+      "matches": [
+        "pangaea5-711649:Chenopodiaceae_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Cupressaceae_~37b08535",
+      "matches": [
+        "pangaea5-711649:Cupressaceae_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Ephedra_distachya_type_~6de6f8bb",
+      "matches": [
+        "pangaea5-711649:Ephedra_distachya_type_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Ephedra_fragilis_type_~a7452039",
+      "matches": [
+        "pangaea5-711649:Ephedra_fragilis_type_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Ericaceae_~023cb422",
+      "matches": [
+        "pangaea5-711649:Ericaceae_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Olea_~b691bb88",
+      "matches": [
+        "pangaea5-711649:Olea_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Pinus_~80e6ff7a",
+      "matches": [
+        "pangaea5-711649:Pinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Pistacia_~c5acc171",
+      "matches": [
+        "pangaea5-711649:Pistacia_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea5-872900:Poaceae_~9b699a42",
+      "matches": [
+        "pangaea5-711649:Poaceae_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
       "id": "pangaea5-949638:Size_fraction_0_063_mm_sand_g_col46~b671584e",
       "matches": [
         "pangaea5-949638:Size_fraction_0_063_mm_sand_g"
@@ -723,8 +1092,8 @@
   ],
   "held_core_records": [],
   "linked_to_parent_records": {
-    "pangaea5-md95_2043": "pangaea-438816",
     "pangaea5-geob7608_1": "pangaea-667328",
+    "pangaea5-md95_2043": "pangaea-438816",
     "pangaea5-mo05": "pangaea-818921",
     "pangaea5-md99_2343": "pangaea-759535",
     "pangaea5-pex19_01": "pangaea-954457"
@@ -773,6 +1142,15 @@
       ],
       "exact_shared_pairs": 215,
       "fraction_of_smaller_unique_set": 0.8113207547169812,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea5-252167:Carbon_organic_total_~c2fe2daf",
+        "pangaea5-259364:Carbon_organic_total_~2c28ee1f"
+      ],
+      "exact_shared_pairs": 71,
+      "fraction_of_smaller_unique_set": 1.0,
       "status": "review_link; not merged"
     },
     {
@@ -836,6 +1214,22 @@
       "records": [
         "pangaea-789686",
         "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
       ],
       "status": "review_link; not merged"
     },
@@ -1660,15 +2054,1002 @@
         "rows_outside_age_model": null,
         "review_status": "quarantined",
         "quarantine_reason": "columna de edad declarada como radiocarbono; sin recalibración ni equiparación a calendario"
+      },
+      {
+        "id": "pangaea5-993400:Strontium_87_Strontium_86_ratio_sin_unidad~da3e8f1e",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Strontium_87_Strontium_86_ratio_sin_unidad",
+        "variable_id": "Strontium_87_Strontium_86_ratio_sin_unidad",
+        "label": "Strontium-87/Strontium-86 ratio · OUM_MAG_23",
+        "unit": "sin unidad",
+        "family": "Isótopos radiogénicos",
+        "method": "Multi-collector ICP-MS (MC-ICP-MS), Ametek, Plasma 3",
+        "compatibility_group": "Strontium_87_Strontium_86_ratio_sin_unidad_PANGAEA_Multi_collector_ICP_MS_MC_ICP_MS_Ametek_Plasma_3",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "87Sr/86Sr (Multi-collector ICP-MS (MC-IC...)",
+        "source_column_index": 6,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993400?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993400",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "xml_sha256": "c2924ec4af46b0ff6c6fa9913fc0fe311eb4bb2353767dd9c2b15ad942ea4819",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "published_BP",
+        "chronology_label": "Edad publicada en el dataset · escala no armonizada",
+        "age_column_original": "Age [Ma] (Absolute age)",
+        "age_column_index": 3,
+        "age_unit_original": "Age [Ma] (Absolute age)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "original_unit": "sin unidad",
+        "parameter_name_pangaea": "Strontium-87/Strontium-86 ratio",
+        "parameter_comment": null,
+        "proxy_families": [
+          "isot_radiogenicos"
+        ],
+        "uncertainty_type": "native column adjacent (±/std dev), type as labelled",
+        "value_uncertainty_source_column": "87Sr/86Sr std dev [±] (1Sigma, Multi-collector ICP-M...)",
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993400:Strontium_87_Strontium_86_ratio_sin_unidad_col8~062f51a6",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Strontium_87_Strontium_86_ratio_sin_unidad",
+        "variable_id": "Strontium_87_Strontium_86_ratio_sin_unidad",
+        "label": "Strontium-87/Strontium-86 ratio · OUM_MAG_23",
+        "unit": "sin unidad",
+        "family": "Isótopos radiogénicos",
+        "method": "Calculated",
+        "compatibility_group": "Strontium_87_Strontium_86_ratio_sin_unidad_PANGAEA_Calculated",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "87Sr/86Sr (Initial isotopic composition ...)",
+        "source_column_index": 8,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993400?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993400",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "xml_sha256": "c2924ec4af46b0ff6c6fa9913fc0fe311eb4bb2353767dd9c2b15ad942ea4819",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "published_BP",
+        "chronology_label": "Edad publicada en el dataset · escala no armonizada",
+        "age_column_original": "Age [Ma] (Absolute age)",
+        "age_column_index": 3,
+        "age_unit_original": "Age [Ma] (Absolute age)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "original_unit": "sin unidad",
+        "parameter_name_pangaea": "Strontium-87/Strontium-86 ratio",
+        "parameter_comment": "Initial isotopic composition calculated at the time of magmatism.",
+        "proxy_families": [
+          "isot_radiogenicos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": null,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Titanium_dioxide_~dd1bc2af",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Titanium_dioxide_",
+        "variable_id": "Titanium_dioxide_",
+        "label": "Titanium dioxide · OUM_MAG_23",
+        "unit": "%",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma Optical Emission Spectroscopy, Thermo Fisher Inc., ICP-OES-iCAP7400",
+        "compatibility_group": "Titanium_dioxide__PANGAEA_Inductively_Coupled_Plasma_Optical_Emission_Spectroscopy_The",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "TiO2 [%] (Inductively Coupled Plasma Op...)",
+        "source_column_index": 4,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "%",
+        "parameter_name_pangaea": "Titanium dioxide",
+        "parameter_comment": null,
+        "proxy_families": [
+          "detritico_xrf"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Aluminium_oxide_~e1615197",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Aluminium_oxide_",
+        "variable_id": "Aluminium_oxide_",
+        "label": "Aluminium oxide · OUM_MAG_23",
+        "unit": "%",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma Optical Emission Spectroscopy, Thermo Fisher Inc., ICP-OES-iCAP7400",
+        "compatibility_group": "Aluminium_oxide__PANGAEA_Inductively_Coupled_Plasma_Optical_Emission_Spectroscopy_The",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Al2O3 [%] (Inductively Coupled Plasma Op...)",
+        "source_column_index": 6,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "%",
+        "parameter_name_pangaea": "Aluminium oxide",
+        "parameter_comment": null,
+        "proxy_families": [
+          "detritico_xrf"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Manganese_oxide_~016b352a",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Manganese_oxide_",
+        "variable_id": "Manganese_oxide_",
+        "label": "Manganese oxide · OUM_MAG_23",
+        "unit": "%",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma Optical Emission Spectroscopy, Thermo Fisher Inc., ICP-OES-iCAP7400",
+        "compatibility_group": "Manganese_oxide__PANGAEA_Inductively_Coupled_Plasma_Optical_Emission_Spectroscopy_The",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "MnO [%] (Inductively Coupled Plasma Op...)",
+        "source_column_index": 7,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "%",
+        "parameter_name_pangaea": "Manganese oxide",
+        "parameter_comment": null,
+        "proxy_families": [
+          "redox"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Potassium_oxide_~ad6ea993",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Potassium_oxide_",
+        "variable_id": "Potassium_oxide_",
+        "label": "Potassium oxide · OUM_MAG_23",
+        "unit": "%",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma Optical Emission Spectroscopy, Thermo Fisher Inc., ICP-OES-iCAP7400",
+        "compatibility_group": "Potassium_oxide__PANGAEA_Inductively_Coupled_Plasma_Optical_Emission_Spectroscopy_The",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "K2O [%] (Inductively Coupled Plasma Op...)",
+        "source_column_index": 11,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "%",
+        "parameter_name_pangaea": "Potassium oxide",
+        "parameter_comment": null,
+        "proxy_families": [
+          "detritico_xrf"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Rubidium_g_g~a27e226a",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Rubidium_g_g",
+        "variable_id": "Rubidium_g_g",
+        "label": "Rubidium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Rubidium_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Rb [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 16,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Rubidium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "detritico_xrf"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Barium_g_g~6c8865d4",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Barium_g_g",
+        "variable_id": "Barium_g_g",
+        "label": "Barium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma Optical Emission Spectroscopy, Thermo Fisher Inc., ICP-OES-iCAP7400",
+        "compatibility_group": "Barium_g_g_PANGAEA_Inductively_Coupled_Plasma_Optical_Emission_Spectroscopy_The",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Ba [µg/g] (Inductively Coupled Plasma Op...)",
+        "source_column_index": 17,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Barium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "bario"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Thorium_g_g~448e6487",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Thorium_g_g",
+        "variable_id": "Thorium_g_g",
+        "label": "Thorium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Thorium_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Th [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 19,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Thorium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Uranium_g_g~2d7de148",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Uranium_g_g",
+        "variable_id": "Uranium_g_g",
+        "label": "Uranium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Uranium_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "U [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 20,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Uranium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "redox"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Lead_g_g~8779505d",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Lead_g_g",
+        "variable_id": "Lead_g_g",
+        "label": "Lead · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Lead_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Pb [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 23,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Lead",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Zirconium_g_g~5448ef24",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Zirconium_g_g",
+        "variable_id": "Zirconium_g_g",
+        "label": "Zirconium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Zirconium_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Zr [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 24,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Zirconium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "detritico_xrf"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Chromium_g_g~22dafe7c",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Chromium_g_g",
+        "variable_id": "Chromium_g_g",
+        "label": "Chromium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Chromium_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Cr [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 28,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Chromium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Nickel_g_g~21105bf0",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Nickel_g_g",
+        "variable_id": "Nickel_g_g",
+        "label": "Nickel · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Nickel_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Ni [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 29,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Nickel",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Cobalt_g_g~7cd7faf2",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Cobalt_g_g",
+        "variable_id": "Cobalt_g_g",
+        "label": "Cobalt · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Cobalt_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Co [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 30,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Cobalt",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Vanadium_g_g~c0ef9c43",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Vanadium_g_g",
+        "variable_id": "Vanadium_g_g",
+        "label": "Vanadium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma Optical Emission Spectroscopy, Thermo Fisher Inc., ICP-OES-iCAP7400",
+        "compatibility_group": "Vanadium_g_g_PANGAEA_Inductively_Coupled_Plasma_Optical_Emission_Spectroscopy_The",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "V [µg/g] (Inductively Coupled Plasma Op...)",
+        "source_column_index": 31,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Vanadium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "redox"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Zinc_g_g~9579eaa5",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Zinc_g_g",
+        "variable_id": "Zinc_g_g",
+        "label": "Zinc · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Zinc_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Zn [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 33,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Zinc",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Copper_g_g~5b4fcbe9",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Copper_g_g",
+        "variable_id": "Copper_g_g",
+        "label": "Copper · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Copper_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Cu [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 34,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Copper",
+        "parameter_comment": null,
+        "proxy_families": [
+          "oligoelementos"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
+      },
+      {
+        "id": "pangaea5-993403:Neodymium_g_g~f8091c38",
+        "record_id": "pangaea5-oum_mag_23",
+        "proxy": "Neodymium_g_g",
+        "variable_id": "Neodymium_g_g",
+        "label": "Neodymium · OUM_MAG_23",
+        "unit": "µg/g",
+        "family": "Geoquímica elemental",
+        "method": "Inductively Coupled Plasma - Mass Spectrometry (ICP-MS), PerkinElmer Instruments, Optima 2000 DV",
+        "compatibility_group": "Neodymium_g_g_PANGAEA_Inductively_Coupled_Plasma_Mass_Spectrometry_ICP_MS_PerkinEl",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "source_column": "Nd [µg/g] (Inductively Coupled Plasma - ...)",
+        "source_column_index": 38,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993403?format=textfile",
+        "dataset_doi": "10.1594/PANGAEA.993403",
+        "paper_doi": null,
+        "publication_year": null,
+        "citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Whole-rock major and trace element concentrations of the Oumjrane Gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993403",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "raw_sha256": "1fe9025fb0f611584b1e8adb44150e0df37116755603a60d2958e99880c228ae",
+        "xml_sha256": "46301a41b7e3257648db3ca2f63dad2cc681bdda9d86dfaf6067adbf103b41b9",
+        "source_event": "OUM_MAG_23",
+        "chronology_status": "interpolated_from_age_model",
+        "chronology_label": "Edad interpolada en profundidad desde el modelo publicado del mismo evento (sin extrapolar)",
+        "age_column_original": null,
+        "age_column_index": null,
+        "age_unit_original": "Age [Ma] (Absolute age) (dataset 10.1594/PANGAEA.993400)",
+        "age_scale": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale)",
+        "age_model": "linear interpolation in sediment depth between published tie points of the same event; no extrapolation; model 10.1594/PANGAEA.993400",
+        "age_transformation": "unit: Ma x 1000 = ka (reference offset negligible at Ma scale); then linear interpolation in sediment depth between published tie points of the same event; no extrapolation",
+        "age_model_dataset_doi": "10.1594/PANGAEA.993400",
+        "age_model_raw_sha256": "8f96d58547859da02ebfee7e3043fb8921012eed63f31561f1301a2007ebebc1",
+        "age_model_citation": "Idbaroud, Mohamed; Bouabdellah, Mohammed; Levresse, Gilles; Boukirou, Wissale; Murphy, J Brendan; Melchiorre, Erik; Genna, Dominique; Yans, Johan; Mouguina, El Mostafa; El Guedou, Ahmed; Hoernle, Kaj (2026): Oxygen and radiogenic isotope compositions for whole-rock from the Oumjrane gabbronorite, Eastern Anti-Atlas, Morocco [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.993400",
+        "age_model_tie_points": 5,
+        "age_model_depth_range_m": [
+          15.0,
+          89.0
+        ],
+        "original_unit": "µg/g",
+        "parameter_name_pangaea": "Neodymium",
+        "parameter_comment": null,
+        "proxy_families": [
+          "tierras_raras_eu"
+        ],
+        "uncertainty_type": "not_supplied_for_selected_column",
+        "value_uncertainty_source_column": null,
+        "depth_frame": "native sediment depth m; no cross-table remapping",
+        "rows_outside_age_model": 0,
+        "review_status": "quarantined",
+        "quarantine_reason": "edad máxima 411700 ka BP implausible para el tipo de sondeo; posible unidad mezclada"
       }
     ]
   },
   "pending_source_candidates": {
     "pangaea": [
-      {
-        "dataset": "993400",
-        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
-      },
       {
         "dataset": "670332",
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
@@ -1702,10 +3083,6 @@
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
-        "dataset": "315425",
-        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
-      },
-      {
         "dataset": "259361",
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
@@ -1722,10 +3099,6 @@
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
-        "dataset": "256008",
-        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
-      },
-      {
         "dataset": "315427",
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
@@ -1739,10 +3112,6 @@
       },
       {
         "dataset": "315428",
-        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
-      },
-      {
-        "dataset": "259364",
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
@@ -1794,10 +3163,6 @@
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
-        "dataset": "259373",
-        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
-      },
-      {
         "dataset": "739132",
         "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
@@ -1811,166 +3176,246 @@
       },
       {
         "dataset": "259376",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252162",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252163",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252164",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252165",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252166",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
-      },
-      {
-        "dataset": "252167",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252168",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252169",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252180",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252183",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252186",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252188",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
-      },
-      {
-        "dataset": "252189",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252192",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "252194",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "937301",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "937305",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "971862",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253121",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253122",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253124",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253130",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253131",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
-      },
-      {
-        "dataset": "253132",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
-      },
-      {
-        "dataset": "253136",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253140",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253143",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253144",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253151",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253156",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253160",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
-      },
-      {
-        "dataset": "253161",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "253164",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "789292",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
-      },
-      {
-        "dataset": "829005",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "829006",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "829008",
-        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
       },
       {
         "dataset": "829009",
+        "reason": "sin columna de edad admitida ni modelo de edad válido del mismo evento"
+      },
+      {
+        "dataset": "974496",
         "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
       },
       {
-        "dataset": "829014",
+        "dataset": "256022",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "256023",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "256028",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "256030",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "987112",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "992476",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "992478",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "994156",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "256000",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "987196",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "739205",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "739480",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "739729",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "739760",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "885543",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "886655",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "886662",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "889557",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "889586",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "889638",
+        "reason": "descarga/parseo: HTTP Error 401: Unauthorized"
+      },
+      {
+        "dataset": "925927",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "256025",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "230706",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "954711",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "954722",
+        "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
+      },
+      {
+        "dataset": "271416",
         "reason": "sin columna de edad admitida (ka BP, a BP o a AD/CE) ni modelo de edad del mismo evento"
       }
     ]
   },
-  "sha256": "16e5afc9814beb0317617962da5e1ef44bf12bd858a4b7e0122821081bb7ac88",
-  "bytes": 17317345
+  "sha256": "87f4b3f940d22ef8baf7da0f3186e73122ed4cccedcfe5e079e986b4bd5489af",
+  "bytes": 56925219
 }

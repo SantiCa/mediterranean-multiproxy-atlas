@@ -141,8 +141,14 @@ def xml_meta(raw):
     return cols, events, paper, license_name, license_uri
 
 
+UNSPECIFIED_KA = 'as archived: ka, reference not declared (1950 vs 2000 differs by 0.05 ka)'
+
+
 def age_rule(header):
-    """Índice y transformación de la columna de edad admitida; None si no hay ninguna válida."""
+    """Índice y transformación de la columna de edad admitida; None si no hay ninguna válida.
+    Prioridad: edades con referencia BP/CE explícita; después Ma (×1000; la diferencia de
+    referencia es despreciable a esa escala) y, por último, «ka» sin referencia declarada,
+    que queda marcada como tal en la cronología (30-10-2026)."""
     for k, h in enumerate(header):
         if h.startswith('Age [ka BP]'):
             return k, 'identity: source point age in ka BP', lambda v: v
@@ -150,6 +156,12 @@ def age_rule(header):
             return k, 'unit: a BP / 1000 = ka BP', lambda v: v / 1000
         if h.startswith('Age [a AD/CE]'):
             return k, 'reference: (1950 - CE) / 1000 = ka BP', lambda v: (1950 - v) / 1000
+    for k, h in enumerate(header):
+        if h.startswith('Age [Ma]') and not re.search(r'radiocarbon|14C', h, re.I):
+            return k, 'unit: Ma x 1000 = ka (reference offset negligible at Ma scale)', lambda v: v * 1000
+    for k, h in enumerate(header):
+        if h.startswith('Age [ka]') and not re.search(r'radiocarbon|14C', h, re.I):
+            return k, UNSPECIFIED_KA, lambda v: v
     return None
 
 
@@ -164,9 +176,10 @@ def same_event(a, b):
     return bool(a and b) and a['label'] == b['label'] and abs(a['lat'] - b['lat']) < 1e-4 and abs(a['lon'] - b['lon']) < 1e-4
 
 
-def model_points(header, rows):
+def model_points(header, rows, depth_header=None):
     """(profundidad, edad ka BP) de un dataset con edad propia; error si no sirve como modelo."""
-    d, age = depth_column(header), age_rule(header)
+    d = header.index(depth_header) if depth_header in header else depth_column(header)
+    age = age_rule(header)
     if d is None or not age:
         raise ValueError('sin Depth sed o sin edad admitida')
     if re.search(r'radiocarbon|14C', header[age[0]], re.I):
@@ -202,9 +215,11 @@ def interpolate(pts, z):
 
 def find_age_model(i, header, event, siblings):
     """Primer dataset hermano válido como modelo de edad; registra los descartados y su motivo."""
-    d = depth_column(header)
-    if d is None:
-        return None, [dict(reason='el dataset no tiene Depth sed: no se puede asignar edad por profundidad')]
+    # Marcos de profundidad del dataset: compuesta (mcd) primero, luego sedimento; el modelo
+    # debe tener exactamente la misma columna (mismo marco y unidad).
+    depths = sorted([h for h in header if h.startswith('Depth')], key=lambda h: (not h.startswith('Depth comp'), not h.startswith('Depth sed'), h))
+    if not depths:
+        return None, [dict(reason='el dataset no tiene columna de profundidad: no se puede asignar edad por profundidad')]
     tried = []
     for q in siblings:
         j = q['doi'].rsplit('.', 1)[-1]
@@ -217,14 +232,15 @@ def find_age_model(i, header, event, siblings):
             _, events, _, lic, lic_uri = xml_meta(xml)
             if len(events) != 1 or not same_event(events[0], event):
                 raise ValueError('evento distinto (etiqueta o coordenadas)')
-            mdepth, age, pts = model_points(mh, mrows)
-            if mdepth != header[d]:
-                raise ValueError(f'profundidad en otra unidad o marco ({mdepth} vs {header[d]})')
+            common = [h for h in depths if h in mh]
+            if not common:
+                raise ValueError('sin columna de profundidad común (' + ', '.join(depths) + ')')
+            mdepth, age, pts = model_points(mh, mrows, common[0])
         except Exception as e:
             tried.append(dict(dataset=j, reason=str(e)[:200]))
             continue
         return dict(dataset=j, dataset_doi=f'10.1594/PANGAEA.{j}', tsv_sha256=sha(tsv), xml_sha256=sha(xml), header=mh,
-                    depth_column=depth_column(mh), age_column=age[0], age_column_original=mh[age[0]], age_transformation=age[1],
+                    depth_column=mh.index(mdepth), depth_header=mdepth, age_column=age[0], age_column_original=mh[age[0]], age_transformation=age[1],
                     tie_points=len(pts), depth_range=[pts[0][0], pts[-1][0]], age_range_ka=[pts[0][1], pts[-1][1]],
                     license=lic, license_url=lic_uri, citation=(re.search(r'Citation:\t(.+)', head) or [None, None])[1],
                     rule=AGE_MODEL_RULE), tried
@@ -397,6 +413,12 @@ def age_models():
             continue
         tsv = get(f'https://doi.pangaea.de/10.1594/PANGAEA.{i}?format=textfile', RAW / f'{i}.tsv', e['tsv_sha256'])
         _, header, _ = parse_tsv(tsv)
+        own = age_rule(header)
+        if own:
+            # Edad propia con las reglas ampliadas (Ma, ka sin referencia declarada).
+            e.update(status='proposed', reason=None, age_column=own[0], age_transformation=own[1], age_model=None)
+            fixed += 1
+            continue
         model, tried = find_age_model(i, header, e['event'], sib.get(e['event']['label'], []))
         e.update(age_model=model, age_model_rejected=tried)
         if model:
@@ -426,7 +448,7 @@ def curate():
             _, mh, mrows = parse_tsv(mtsv)
             if mh != model['header']:
                 raise ValueError(f'{i}: cabecera del modelo de edad distinta del contrato')
-            _, _, pts = model_points(mh, mrows)
+            _, _, pts = model_points(mh, mrows, model.get('depth_header'))
         elif not age:
             continue
         ev, doi = e['event'], f'10.1594/PANGAEA.{i}'
@@ -468,7 +490,7 @@ def curate():
                                       paper_title=paper_title, citation=e['citation']))
         if 'datacite:' + doi.lower() in inventory:
             r['inventory_ids'] = sorted(set(r['inventory_ids'] + ['datacite:' + doi.lower()]))
-        depth_col = depth_column(header)
+        depth_col = header.index(model['depth_header']) if pts and model.get('depth_header') in header else depth_column(header)
         if pts:
             # Edad asignada, no archivada: se distingue en la cronología y en cada serie.
             chron = dict(chronology_status='interpolated_from_age_model',
@@ -481,7 +503,9 @@ def curate():
             r['chronology_status'] = 'mixed' if r['chronology_status'] not in ('interpolated_from_age_model', 'mixed') and r.get('_has_archived') else 'interpolated_from_age_model'
             r['qc_notes'] = sorted(set(r['qc_notes'] + ['Algunas series con edad interpolada desde un modelo de edad publicado del mismo evento']))
         else:
-            chron = dict(chronology_status='published_BP', chronology_label='Edad publicada en el dataset · escala no armonizada',
+            unspecified = e['age_transformation'] == UNSPECIFIED_KA
+            chron = dict(chronology_status='published_ka_reference_unspecified' if unspecified else 'published_BP',
+                         chronology_label='Edad publicada en ka sin referencia declarada (±0,05 ka)' if unspecified else 'Edad publicada en el dataset · escala no armonizada',
                          age_column_original=header[age[0]], age_column_index=age[0], age_unit_original=header[age[0]],
                          age_scale=e['age_transformation'], age_model=e['age_transformation'], age_transformation=e['age_transformation'])
             r['_has_archived'] = True
