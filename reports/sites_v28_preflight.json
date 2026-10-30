@@ -1,0 +1,44 @@
+{
+  "task": "SITES-V28",
+  "date_local": "2026-10-29",
+  "github_main_commit": "dfdb4191452d305b9ec8209175321f6b52de3c04",
+  "site_project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "release": "atlas-quantitative-2026-10-29-v5-c25cc8a2394",
+  "seed_file": "data/processed/atlas-v5.json",
+  "seed_sha256": "16e5afc9814beb0317617962da5e1ef44bf12bd858a4b7e0122821081bb7ac88",
+  "records": 102,
+  "series": 815,
+  "observations": 241826,
+  "groups": 606,
+  "snapshot_files": 608,
+  "largest_asset": "public/snapshot/inventory.json",
+  "largest_asset_bytes": 17392186,
+  "cell_by_cell_check": "passed",
+  "node_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "source": "app/atlas-web exported byte-for-byte from main Git objects; obsolete tracked Site files removed",
+  "owner_password_configured": false,
+  "private_data_status": "disabled_pending_owner_password",
+  "audience": "preserved_existing_owner_only_custom",
+  "deployment": "succeeded",
+  "site_source_commit": "743a94ba4509999d409ce07a07519fe90e9abebe",
+  "typescript_no_emit": "passed",
+  "production_build": "passed",
+  "local_browser_qa": [
+    "5846 source entries and inventory map",
+    "proxy map and MD95-2043 temporal plot",
+    "Mis datos configured=false"
+  ],
+  "archive_sha256": "93b5fd43b41f4933b8f03a0858a222bc660f0f4e2eda7f61e839b6c89fee66a7",
+  "committed_source_files_compared": 158,
+  "committed_source_differences": [],
+  "snapshot_in_archive": 608,
+  "migration_0004_in_archive": true,
+  "production_browser_qa": [
+    "5846 source entries and inventory map",
+    "proxy map and MD95-2043 time series visible",
+    "Mis datos not configured message visible"
+  ]
+}
