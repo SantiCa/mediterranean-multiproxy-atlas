@@ -12,7 +12,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 ## Siguiente acción
 
 1. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`; al fusionar en main se publica en Cloudflare. Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`. Consultar su handoff y log antes de repetir fuentes; el checkpoint antiguo de temperatura no está integrado.
-2. Si Santiago decide activar Mis datos: GitHub usa ATLAS_OWNER_PASSWORD y el Worker recibe OWNER_PASSWORD; el Site ChatGPT necesita su propio secreto OWNER_PASSWORD. No copiar ni inventar contraseñas. La ausencia del secreto no impide usar datos públicos.
+2. (30-10 01:11 UTC: migración 0004 aplicada en Cloudflare con el despliegue V29; solo falta el secreto.) Si Santiago decide activar Mis datos: GitHub usa ATLAS_OWNER_PASSWORD y el Worker recibe OWNER_PASSWORD; el Site ChatGPT necesita su propio secreto OWNER_PASSWORD. No copiar ni inventar contraseñas. La ausencia del secreto no impide usar datos públicos.
 3. Futuros despliegues Sites: usar ../sites/medatlas-v28, conservar identidad/audiencia y generar/comprobar snapshot desde la semilla más reciente antes del build. scripts/validate_static_site.py verifica los archivos publicados; ya no usar validate_quantitative_api.py contra las API eliminadas. No repetir el despliegue V28 ya confirmado.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
