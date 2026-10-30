@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { proxyCatalog as proxyGroups, sortGroups, inGroup, groupKey, filterGroups } from "../lib/proxies.mjs";
+import { proxyCatalog as proxyGroups, sortGroups, inGroup, groupKey, filterGroups, paramKey, elementRatioAlias } from "../lib/proxies.mjs";
 const rec = (id) => ({ id, name: id, provider: "PANGAEA", realm: "marine", publication_year: 2010 });
 const ser = (id, r, proxy, cg, unit, label, n) => ({ id, record_id: r, proxy, compatibility_group: cg, unit, label, observation_count: n, rows: [] });
 const data = {
@@ -40,4 +40,17 @@ test("same PANGAEA parameter and unit aggregate across methods", () => {
   const p = proxyGroups(d).find((x) => x.id.includes("p:foraminifera"));
   assert.equal(p.members.length, 2);
   assert.ok(d.series.every((s) => inGroup(s, p.key)));
+});
+test("fractions, pollen sums and sample counts cannot be silently pooled", () => {
+  const grain = { parameter_name_pangaea:"Median, grain size, D50", unit:"µm" };
+  assert.notEqual(paramKey({...grain, comparison_context_key:"grain_fraction_total"}), paramKey({...grain, comparison_context_key:"grain_fraction_noncarbonate"}));
+  const pollen = { parameter_name_pangaea:"Arboreal pollen", unit:"%", family:"Polen" };
+  assert.notEqual(paramKey(pollen), paramKey({...pollen, source_column:"AP [%] (excl. Pines)"}));
+  assert.equal(paramKey({...pollen,unit:"#"}),null);
+  const ss = {parameter_name_pangaea:"Size fraction 0.063-0.010 mm, sortable silt",unit:"%"};
+  assert.notEqual(paramKey({...ss,parameter_comment:"pelagics"}),paramKey({...ss,parameter_comment:"contourites"}));
+});
+test("inorganic ratio search accepts symbols without changing logs", () => {
+  assert.equal(elementRatioAlias("Titanium/Calcium ratio"),"Ti/Ca ratio");
+  assert.equal(elementRatioAlias("ln-Zirconium/Aluminium ratio"),"ln-Zr/Al ratio");
 });

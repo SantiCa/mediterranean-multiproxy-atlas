@@ -1276,7 +1276,7 @@ export default function Atlas() {
                       active.record.time_scale ||
                       "Cronología archivada; sin armonización local"}
                   </p>
-                  {(active.record.qc_notes || []).map(
+                  {[...new Set([...(active.record.qc_notes || []), ...(active.series.qc_notes || [])])].map(
                     (n: string, i: number) => (
                       <p key={i}>{n}</p>
                     ),
