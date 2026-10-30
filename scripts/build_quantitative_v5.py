@@ -41,11 +41,12 @@ def quantity(series):
     """Only an identical declared variable and native unit can match here."""
     return (series.get("variable_id",series["proxy"]),series["unit"])
 
-def assemble():
+def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX):
     """Return immutable parent plus admitted new series and an inspectable audit."""
-    base=json.loads(BASELINE.read_text(encoding="utf8"))
+    base=json.loads(Path(baseline or BASELINE).read_text(encoding="utf8"))
     seed=copy.deepcopy(base)
-    fragments=[json.loads((ROOT/f"data/interim/quantitative_v5/{provider}_curated.json").read_text(encoding="utf8")) for provider in ("pangaea",)]
+    fragments=[json.loads(Path(path).read_text(encoding="utf8")) for path in (fragment_paths or [ROOT/"data/interim/quantitative_v5/pangaea_curated.json"])]
+    if len(fragments)!=1:raise ValueError("This admission gate expects one provider fragment")
     inventory=json.loads((ROOT/"data/processed/inventory-v2.json").read_text(encoding="utf8"))
     west,south,east,north=inventory['scope']['bbox']
     known_inventory={r["id"] for r in inventory["records"]}
@@ -141,7 +142,7 @@ def assemble():
             if value:grouped[value].append(r["id"])
         duplicates.extend({"basis":label,"records":ids,"status":"review_link; not merged"} for ids in grouped.values() if len(ids)>1)
     content_digest=hashlib.sha256(json.dumps([seed["records"],seed["series"]],ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()).hexdigest()[:10]
-    VERSION=VERSION_PREFIX+("r1" if content_digest==FIRST_SHA else "c"+content_digest)
+    VERSION=version_prefix+("r1" if content_digest==FIRST_SHA else "c"+content_digest)
     seed.update(version=VERSION,parent_version=base["version"],append_series_ids=admissions)
     ages=[row[0] for s in seed["series"] for row in s["rows"] if row[0] is not None]
     counts={"records":len(seed["records"]),"series":len(seed["series"]),"values":sum(len(s["rows"]) for s in seed["series"]),"new_records":len(seed["records"])-len(base["records"]),"new_series":len(admissions),"new_values":sum(len(current[k]["rows"]) for k in admissions),"missing_age_values":sum(row[0] is None for s in seed["series"] for row in s["rows"])}
