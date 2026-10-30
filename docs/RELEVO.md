@@ -2,14 +2,16 @@
 
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
-- Último agente: Claude
+- Último agente: ChatGPT/Codex
 - Fecha: 30-10-2026
-- Tarea actual: CURADO en claude/curado (Claude retoma 30-10 01:52). V29 publicado en Cloudflare: v5-c501be5f380 (128 registros, 1.086 series, 865.593 valores) y arreglo de superficie con sitios coincidentes. El Site de ChatGPT sigue en V28 (actualizarlo lo hace Codex). SITES-V28 cerrada por Codex.
+- Tarea actual: CUR-COVERAGE-30 — relevo Codex, ampliar en un lote amplio la cobertura de proxies existentes: ratios de elementos inorgánicos, corrientes, oxigenación profunda y vegetación/bosque continental. Base V29 v5-c501be5f380 (128 registros, 1.086 series, 865.593 valores); no repetir lotes de Claude. El Site ChatGPT sigue V28 hasta nuevo despliegue Codex.
 - Estado: Site ChatGPT privado actualizado desde main dfdb419 (V28.1), con datos públicos estáticos. Release v5-c25cc8a2394: 102 registros, 815 series, 606 grupos y 241.826 valores. Ya no depende de completar cargas públicas D1. Mis datos desactivado: falta OWNER_PASSWORD; migración 0004 incluida en el paquete y despliegue gestionado por Sites.
 - Hecho: snapshot.mjs + check-snapshot.mjs antes de compilar; 24 Node, tsc y build correctos. 608 archivos remotos idénticos por SHA256 al snapshot comprobado celda a celda; las cuatro API retiradas devuelven404. QA visual de inventario, mapa, serie temporal y Mis datos en producción. Handoff docs/handoffs/sites-v28.md; recibos reports/sites_v28_*.json. Fuente Sites743a94ba4509999d409ce07a07519fe90e9abebe; despliegue succeeded appgdep_6ae3c6fb23d08191a63ccb7ba6658dd6.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
+
+0. Petición registrada 30-10: priorizar nº de registros por proxy usado, no proliferar grupos de un sondeo. Revisar alias de ratios (el informe antiguo declara cero), parámetros y denominadores de polen, profundidad/hábitat de indicadores redox/corrientes, unidades y cronologías. Completar candidatos verificables de PANGAEA/NOAA/Neotoma en un lote; conservar incertidumbres/duplicados/inconsistencias y no inventar clases forestales o velocidades de corriente. Trabajar secuencialmente en relevo, con checkpoints y push; al terminar pruebas, handoff y merge --no-ff, actualizar Sites con snapshot verificado. Si se necesita otro chat, el contexto mínimo quedará en el handoff y este puntero.
 
 1. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`; al fusionar en main se publica en Cloudflare. Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`. Consultar su handoff y log antes de repetir fuentes; el checkpoint antiguo de temperatura no está integrado.
 2. (30-10 01:11 UTC: migración 0004 aplicada en Cloudflare con el despliegue V29; solo falta el secreto.) Si Santiago decide activar Mis datos: GitHub usa ATLAS_OWNER_PASSWORD y el Worker recibe OWNER_PASSWORD; el Site ChatGPT necesita su propio secreto OWNER_PASSWORD. No copiar ni inventar contraseñas. La ausencia del secreto no impide usar datos públicos.
