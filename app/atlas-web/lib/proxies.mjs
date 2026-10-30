@@ -246,7 +246,7 @@ export function aggregateGroups(groups, data) {
       unit: a.unit,
       family: a.family,
       variable: a.name,
-      method: "Agrupado por parámetro PANGAEA: " + members.length + " grupos (" + [...new Set(members.map((g) => g.method))].slice(0, 4).join("; ") + (members.length > 4 ? "…" : "") + ")",
+      method: "Agrupado por variable: " + members.length + " grupos (" + [...new Set(members.map((g) => g.method))].slice(0, 4).join("; ") + (members.length > 4 ? "…" : "") + ")",
       compatibility: null,
       evidence: "aggregation",
       aggregate: true,
