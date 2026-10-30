@@ -2,9 +2,9 @@
 
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
-- Último agente: ChatGPT/Codex
-- Fecha: 29-10-2026
-- Tarea actual: SITES-V28 cerrada; siguiente propuesta: seguir CURADO en claude/curado conservando su cola.
+- Último agente: Claude
+- Fecha: 30-10-2026
+- Tarea actual: CURADO en claude/curado (Claude retoma 30-10 01:52). V29 publicado en Cloudflare: v5-c501be5f380 (128 registros, 1.086 series, 865.593 valores) y arreglo de superficie con sitios coincidentes. El Site de ChatGPT sigue en V28 (actualizarlo lo hace Codex). SITES-V28 cerrada por Codex.
 - Estado: Site ChatGPT privado actualizado desde main dfdb419 (V28.1), con datos públicos estáticos. Release v5-c25cc8a2394: 102 registros, 815 series, 606 grupos y 241.826 valores. Ya no depende de completar cargas públicas D1. Mis datos desactivado: falta OWNER_PASSWORD; migración 0004 incluida en el paquete y despliegue gestionado por Sites.
 - Hecho: snapshot.mjs + check-snapshot.mjs antes de compilar; 24 Node, tsc y build correctos. 608 archivos remotos idénticos por SHA256 al snapshot comprobado celda a celda; las cuatro API retiradas devuelven404. QA visual de inventario, mapa, serie temporal y Mis datos en producción. Handoff docs/handoffs/sites-v28.md; recibos reports/sites_v28_*.json. Fuente Sites743a94ba4509999d409ce07a07519fe90e9abebe; despliegue succeeded appgdep_6ae3c6fb23d08191a63ccb7ba6658dd6.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
@@ -16,6 +16,8 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 3. Futuros despliegues Sites: usar ../sites/medatlas-v28, conservar identidad/audiencia y generar/comprobar snapshot desde la semilla más reciente antes del build. scripts/validate_static_site.py verifica los archivos publicados; ya no usar validate_quantitative_api.py contra las API eliminadas. No repetir el despliegue V28 ya confirmado.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
+
+- 30-10 (01:54) HECHO V29.1: en SST agrupada, «registros con coordenadas coincidentes» suspendía la superficie; ahora cuentan como un nodo (mediana) y se avisa.
 
 - 29-10 (22:47) HECHO V28: datos públicos desde archivos estáticos; D1 solo para Mis datos y DOI.
 

@@ -39,3 +39,18 @@ class AgeModelInterpolation(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class ExtendedAgeRules(unittest.TestCase):
+    def test_priority_and_new_units(self):
+        self.assertEqual(c.age_rule(['Age [ka]', 'Age [ka BP]'])[0], 1)  # explicit BP wins
+        k, rule, f = c.age_rule(['Depth sed [m]', 'Age [Ma]'])
+        self.assertEqual((k, f(1.5)), (1, 1500))
+        self.assertEqual(c.age_rule(['Age [ka]'])[1], c.UNSPECIFIED_KA)
+        self.assertIsNone(c.age_rule(['Age [ka] (14C)']))
+
+    def test_model_on_composite_depth(self):
+        h = ['Depth sed [m]', 'Depth comp [mcd]', 'Age [ka BP]']
+        d, _, pts = c.model_points(h, [(1, 1, ['1', '1.2', '10']), (2, 2, ['2', '2.5', '20'])], 'Depth comp [mcd]')
+        self.assertEqual(d, 'Depth comp [mcd]')
+        self.assertEqual(pts[0], (1.2, 10.0))
