@@ -88,7 +88,7 @@ export function proxyGroups(data, f = {}) {
         r.name,
         r.provider,
         s.search_aliases,
-        elementRatioAlias(s.parameter_name_pangaea),
+        elementRatioAlias(s.parameter_name_pangaea || s.comparison_parameter_name),
         /polen|pollen/i.test(s.family || "") ? "bosque vegetación árboles" : "",
       ]
         .flat()
@@ -164,7 +164,7 @@ export const aggregateKey = (a) => JSON.stringify(["agg", a.id, a.unit]);
 export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["agg"');
 /* Same PANGAEA parameter (controlled vocabulary) and same unit, any method: the
  * parameter defines the measured quantity; methods remain per series. */
-const paramName = (s) => s.parameter_name_pangaea || null;
+const paramName = (s) => s.parameter_name_pangaea || s.comparison_parameter_name || null;
 /** Identical parameter names can hide different fractions or pollen sums.
  * Native counts remain sample counts, not abundance percentages. */
 export function comparisonContext(s) {

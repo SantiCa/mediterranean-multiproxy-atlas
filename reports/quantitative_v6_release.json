@@ -1,15 +1,15 @@
 {
-  "version": "atlas-quantitative-2026-10-30-v6-c12503ee3d2",
+  "version": "atlas-quantitative-2026-10-30-v6-c8ff5c5a738",
   "parent_version": "atlas-quantitative-2026-10-29-v5-c501be5f380",
   "parent_sha256": "c3729bbc2a3fa7883e1609f0f930c701532739f41ef4174e8b18cfe563cc36c5",
   "parent_unchanged": true,
   "counts": {
-    "records": 137,
-    "series": 1299,
-    "values": 902530,
-    "new_records": 9,
-    "new_series": 213,
-    "new_values": 36937,
+    "records": 138,
+    "series": 1311,
+    "values": 903690,
+    "new_records": 10,
+    "new_series": 225,
+    "new_values": 38097,
     "missing_age_values": 6557
   },
   "input_fragments": {
@@ -17,12 +17,17 @@
       "records": 27,
       "series": 275,
       "values": 46465
+    },
+    "noaa": {
+      "records": 1,
+      "series": 12,
+      "values": 1160
     }
   },
   "family_counts": {
     "Temperatura": 38,
-    "Geoquímica elemental": 315,
-    "Sedimentología": 211,
+    "Geoquímica elemental": 317,
+    "Sedimentología": 214,
     "Biomarcadores": 20,
     "Micropaleontología": 8,
     "Isótopos estables": 157,
@@ -31,12 +36,12 @@
     "Isótopos radiogénicos": 6,
     "Paleopolvo": 1,
     "Mineralogía": 2,
-    "Foraminíferos": 170,
+    "Foraminíferos": 172,
     "Materia orgánica y biomarcadores": 57,
     "Polen": 295,
-    "Oxigenación bentónica": 4
+    "Oxigenación bentónica": 9
   },
-  "comparison_groups": 950,
+  "comparison_groups": 962,
   "numeric_age_extent_ka_bp": [
     -1.5,
     4700.0
@@ -254,7 +259,19 @@
     "pangaea6-991020:OTE_2019_KC_13:col5~1e8358728d",
     "pangaea6-991021:OTE_2019_KC_13:col2~c1b9b75e31",
     "pangaea6-991021:OTE_2019_KC_13:col3~e29b5ad5e0",
-    "pangaea6-991021:OTE_2019_KC_13:col4~71e71a9595"
+    "pangaea6-991021:OTE_2019_KC_13:col4~71e71a9595",
+    "noaa6-43639:58487:Oxy_Index~83779070f4",
+    "noaa6-43639:58487:Epifauna~1259e242a8",
+    "noaa6-43639:58487:Infauna~eeff194439",
+    "noaa6-43639:58487:Deep_infauna~e2815fdb50",
+    "noaa6-43639:58488:B_marginata~e116510cea",
+    "noaa6-43639:58488:B_spathulata~21a3a5885f",
+    "noaa6-43639:58489:Mn_Al~00717f1b3d",
+    "noaa6-43639:58489:Zr_Rb~6cd280b43d",
+    "noaa6-43639:58489:Ti_Ca~7e10a82df5",
+    "noaa6-43639:58490:SS~62f4b51c78",
+    "noaa6-43639:58490:SS_mean~d13f683fd3",
+    "noaa6-43639:58491:U_Mn~20710c319e"
   ],
   "integration_quarantine": [
     {
@@ -2331,7 +2348,8 @@
     }
   ],
   "source_audits": [
-    "reports/pangaea_v5_audit.json"
+    "reports/priority_v6_audit.json",
+    "reports/noaa_priority_v6_audit.json"
   ],
   "limitations": [
     "Bounded reviewed batch, not a complete numerical harvest",
@@ -2646,7 +2664,8 @@
         ],
         "quarantine_reason": "native percent label for sortable-silt mean conflicts with mean-size interpretation"
       }
-    ]
+    ],
+    "noaa": []
   },
   "pending_source_candidates": {
     "pangaea": [
@@ -3586,8 +3605,17 @@
         "status": "held",
         "reason": "no admitted native age column; model link still needs review"
       }
+    ],
+    "noaa": [
+      {
+        "study_id": "10418",
+        "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/dean2010/dean2010.txt",
+        "sha256": "1630a565ef14c57cf497a6a3917055fcb85f4693601e20de5141d76140e6d401",
+        "reason": "11 native core tables have sediment depth but no point age column; no ages assigned from narrative boundaries",
+        "publication_doi": "10.3133/ofr20101323"
+      }
     ]
   },
-  "sha256": "5a2193c82dcd5756d373f7e51e974030fec991a53ca5613c7c00cef34e23e426",
-  "bytes": 59726930
+  "sha256": "efb5058363910aaa1049b16e6d47b4f7bbc45de1e5cb2df9be24ff6676d4e95c",
+  "bytes": 59824966
 }

@@ -78,7 +78,9 @@ jobs:
       - run: python -m pip install -e .
       - uses: actions/cache@v4
         with:
-          path: data/interim/quantitative_v5
+          path: |
+            data/interim/quantitative_v5
+            data/interim/priority_v6
           key: pangaea-v5-${{ github.run_id }}
           restore-keys: pangaea-v5-
       - name: Propose, curate and build v5
@@ -92,9 +94,21 @@ jobs:
           PR=$(printf '%s' "$MSG" | grep -qP '\[v5[^\]]*prune' && echo --prune || true)
           step curate python scripts/importers/curate_pangaea_v5.py --propose $N $AM $PR
           step build python scripts/build_quantitative_v5.py
+          # v6 is an append-only coverage batch on the current v5. Rebase its
+          # reviewed column contracts on each new parent; stale builds fail.
+          if [ -f scripts/importers/priority_v6_sources.json ]; then
+            step priority-contract python scripts/importers/curate_priority_v6.py --prepare --fetch
+            step priority-data python scripts/importers/curate_priority_v6.py --fetch
+            step priority-noaa python scripts/importers/curate_noaa_priority_v6.py --fetch
+            step build-v6 python scripts/build_quantitative_v6.py
+            step coverage-v6 python scripts/summarize_priority_coverage.py
+          fi
       - name: Commit v5 contract, reports and release
         if: always()
         run: |
           git config user.name "curation-bot"; git config user.email "curation-bot@users.noreply.github.com"
           git add scripts/importers/pangaea_v5_sources.json reports/pangaea_v5_audit.json reports/quantitative_v5_release.json docs/curation/pangaea_v5_proposal.md data/processed/atlas-v5.json 2>/dev/null || true
+          if [ -f data/processed/atlas-v6.json ]; then
+            git add scripts/importers/priority_v6_sources.json reports/priority_v6_audit.json reports/noaa_priority_v6_audit.json reports/quantitative_v6_release.json reports/priority_v6_coverage.json data/processed/atlas-v6.json
+          fi
           git diff --cached --quiet || { git commit -m "v5: PANGAEA contract batch (CI)"; git pull --rebase -X theirs origin ${GITHUB_REF_NAME}; git push origin HEAD:${GITHUB_REF_NAME}; }

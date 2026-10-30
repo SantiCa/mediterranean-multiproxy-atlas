@@ -291,7 +291,8 @@ def curate(fetch=False):
                     status='quarantined' if reason else 'extracted', reason=reason))
                 record['qc_notes'] = sorted(set(record['qc_notes'] + notes))
     used = {s['record_id'] for s in series}
-    fragment = dict(records=[r for r in records.values() if r['id'] in used], series=series,
+    fragment = dict(parent_version=contract['parent_version'],parent_sha256=contract['parent_sha256'],
+                    records=[r for r in records.values() if r['id'] in used], series=series,
                     quarantined_series=quarantined, pending=[e for e in contract['datasets'] if e['status'] == 'held'])
     FRAGMENT.parent.mkdir(parents=True, exist_ok=True)
     FRAGMENT.write_text(json.dumps(fragment, ensure_ascii=False, separators=(',', ':')), encoding='utf8')

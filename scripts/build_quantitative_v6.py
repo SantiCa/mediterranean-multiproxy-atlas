@@ -7,11 +7,17 @@ import build_quantitative_v5 as admission
 ROOT = Path(__file__).resolve().parents[1]
 
 if __name__ == '__main__':
+    base=(ROOT/'data/processed/atlas-v5.json').read_bytes()
+    fragment=json.loads((ROOT/'data/interim/priority_v6/pangaea_curated.json').read_text(encoding='utf8'))
+    if fragment.get('parent_sha256')!=hashlib.sha256(base).hexdigest():
+        raise ValueError('Priority fragment has a stale v5 parent; prepare and curate it again')
     seed, report = admission.assemble(
         baseline=ROOT/'data/processed/atlas-v5.json',
-        fragment_paths=[ROOT/'data/interim/priority_v6/pangaea_curated.json'],
+        fragment_paths=[ROOT/'data/interim/priority_v6/pangaea_curated.json', ROOT/'data/interim/priority_v6/noaa_curated.json'],
+        provider_names=['pangaea','noaa'],
         version_prefix='atlas-quantitative-2026-10-30-v6-')
     raw = json.dumps(seed, ensure_ascii=False, separators=(',', ':')).encode()
+    report['source_audits']=['reports/priority_v6_audit.json','reports/noaa_priority_v6_audit.json']
     (ROOT/'data/processed/atlas-v6.json').write_bytes(raw)
     report.update(sha256=hashlib.sha256(raw).hexdigest(), bytes=len(raw))
     (ROOT/'reports/quantitative_v6_release.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf8')

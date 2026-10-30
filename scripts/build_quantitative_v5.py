@@ -41,12 +41,13 @@ def quantity(series):
     """Only an identical declared variable and native unit can match here."""
     return (series.get("variable_id",series["proxy"]),series["unit"])
 
-def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX):
+def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX, provider_names=None):
     """Return immutable parent plus admitted new series and an inspectable audit."""
     base=json.loads(Path(baseline or BASELINE).read_text(encoding="utf8"))
     seed=copy.deepcopy(base)
     fragments=[json.loads(Path(path).read_text(encoding="utf8")) for path in (fragment_paths or [ROOT/"data/interim/quantitative_v5/pangaea_curated.json"])]
-    if len(fragments)!=1:raise ValueError("This admission gate expects one provider fragment")
+    providers=provider_names or ['pangaea']
+    if len(fragments)!=len(providers):raise ValueError("One provider name is required per fragment")
     inventory=json.loads((ROOT/"data/processed/inventory-v2.json").read_text(encoding="utf8"))
     west,south,east,north=inventory['scope']['bbox']
     known_inventory={r["id"] for r in inventory["records"]}
@@ -57,7 +58,7 @@ def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX):
     for s in base["series"]:
         fingerprints[(quantity(s),digest(vector(s)))].append(s["id"])
     admissions=[];quarantine=[];excluded_records=[];input_counts={};linked={}
-    for provider,fragment in zip(("pangaea",),fragments):
+    for provider,fragment in zip(providers,fragments):
         input_counts[provider]={"records":len(fragment["records"]),"series":len(fragment["series"]),"values":sum(len(s["rows"]) for s in fragment["series"])}
         incoming={r["id"]:copy.deepcopy(r) for r in fragment["records"]}
         if len(incoming)!=len(fragment["records"]):raise ValueError("Repeated physical-record ID in fragment")
@@ -148,8 +149,8 @@ def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX):
     counts={"records":len(seed["records"]),"series":len(seed["series"]),"values":sum(len(s["rows"]) for s in seed["series"]),"new_records":len(seed["records"])-len(base["records"]),"new_series":len(admissions),"new_values":sum(len(current[k]["rows"]) for k in admissions),"missing_age_values":sum(row[0] is None for s in seed["series"] for row in s["rows"])}
     report={"version":VERSION,"parent_version":base["version"],"parent_sha256":hashlib.sha256(BASELINE.read_bytes()).hexdigest(),"parent_unchanged":True,"counts":counts,"input_fragments":input_counts,"family_counts":dict(Counter(s["family"] for s in seed["series"])),"comparison_groups":len({(s["proxy"],s["compatibility_group"],s["unit"]) for s in seed["series"]}),"numeric_age_extent_ka_bp":[min(ages),max(ages)],"admitted_series":admissions,"integration_quarantine":quarantine,"held_core_records":excluded_records,"linked_to_parent_records":linked,"partial_numeric_overlap_links":overlaps,"possible_record_overlap_links":duplicates,"source_audits":["reports/pangaea_v5_audit.json"],"limitations":["Bounded reviewed batch, not a complete numerical harvest","Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation","Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity","Legacy v3 quality restrictions and quarantines remain in force"]}
     report['scope']=inventory['scope']
-    report['provider_quarantines']={provider:[{k:v for k,v in s.items() if k not in ('rows','source_header_original')} for s in fragment.get('quarantined_series',[])] for provider,fragment in zip(('pangaea',),fragments)}
-    report['pending_source_candidates']={provider:fragment.get('pending',fragment.get('rejected_candidates',[])) for provider,fragment in zip(('pangaea',),fragments)}
+    report['provider_quarantines']={provider:[{k:v for k,v in s.items() if k not in ('rows','source_header_original')} for s in fragment.get('quarantined_series',[])] for provider,fragment in zip(providers,fragments)}
+    report['pending_source_candidates']={provider:fragment.get('pending',fragment.get('rejected_candidates',[])) for provider,fragment in zip(providers,fragments)}
     return seed,report
 
 if __name__=="__main__":
