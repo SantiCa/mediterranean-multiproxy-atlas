@@ -4,7 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 04-11-2026
-- Tarea actual: CUR-FOUR-COVERAGE en curso. Ampliar Ti/Ca, Fe/Al, sortable silt y polen forestal en nuevas ubicaciones. Lote anterior cerrado y fusionado en f9a9d0f.
+- Tarea actual: CUR-FOUR-COVERAGE: datos incorporados y probados. Falta validar el snapshot, publicar y cerrar el relevo. Lote anterior fusionado en f9a9d0f.
 - Lote anterior: CUR-COVERAGE-30 cerrado: lote PANGAEA+NOAA incorporado y publicado. Siguiente propuesta: ampliar cobertura comparable continental y ratios/corrientes por ubicación.
 - Estado: Site ChatGPT privado sirve v6-c8ff5c5a738 (138 registros,1.311 series,903.690 valores). Lote propio sobre V29:+10/+225/+38.097. Snapshot público estático; Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: contratos nativos por columna/evento, DOI/año/licencia, duplicados y unidades revisados; cada celda nueva contrastada, v5 inmutable. 71 pruebas Python/27 pruebas Node locales, tsc/build y snapshot completos correctos.964 archivos estáticos remotos idénticos. Handoff docs/handoffs/cur-coverage-30.md; balance reports/priority_v6_coverage.json.
@@ -12,7 +12,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
-0. CUR-FOUR-COVERAGE: cotejar sitios/columnas ya incluidos en v6, verificar nuevos candidatos nativos y publicar la ampliación reproducible con trazabilidad.
+0. CUR-FOUR-COVERAGE: atlas-v7-cb1b445291e, 151 registros, 1.349 series y 924.446 valores. Se verificaron 38 series nuevas celda a celda y pasaron 74 pruebas Python y 27 Node. Leer docs/handoffs/cur-four-coverage.md. Generar y validar snapshot, compilar y publicar el Site privado. Después fusionar en main y sincronizar relevo.
 
 1. CUR-COVERAGE-30 terminado y publicado en Sites. No repetir este lote ni sus82 fuentes: leer docs/handoffs/cur-coverage-30.md y docs/curation/priority_v6.md. Release v6-c8ff5c5a738:138 registros/1.311 series/903.690 valores. Incremento propio sobre V29:10 registros/225 series/38.097 valores. Datos v5 preservados íntegramente.
 2. Siguiente lote propuesto: ampliar porcentajes forestales con denominadores publicados (NOAA/Neotoma); completar Ti/Ca/Fe/Al/sortable silt a más ubicaciones y buscar modelos de edad explícitos para los11 cores de NOAA 10418. Integrar los alias conservadores en el ranking general: el antiguo informe PANGAEA con cero ratios NO demuestra ausencia de razones elementales. No reutilizar automáticamente casos 401/ND/radiocarbono ni convertir cuentas en porcentajes.

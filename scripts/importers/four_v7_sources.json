@@ -1,0 +1,1813 @@
+{
+  "parent_version": "atlas-quantitative-2026-10-30-v6-c8ff5c5a738",
+  "parent_sha256": "efb5058363910aaa1049b16e6d47b4f7bbc45de1e5cb2df9be24ff6676d4e95c",
+  "datasets": [
+    {
+      "id": "941705",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941705",
+      "sha": "0e087b911c3e77556d639274ef21942b5d314334f5988719da1ddbccbadb8c9b",
+      "xml_sha": "b96e6804841d1584f2d7d08c46294e3bda01fc88817cc374de3d47b29f7ec61f",
+      "title": "Geochemical ratios of ODP Hole 161-975B",
+      "status": "held",
+      "reason": "Separate ODP table lacks a Ti/Ca column. Use 941824."
+    },
+    {
+      "id": "941786",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941786",
+      "sha": "0840587d2bc2c6b9fed82d70298d2750c0954665e7ac4c033b09e6108b4c2d2f",
+      "xml_sha": "3d4d7143943ee37782a440893e6cf057a135b5641a9a74455e3186a27e845e30",
+      "title": "Geochemical ratios of sediment core TTR-12_292G",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca",
+        "Ba/Al",
+        "Mo/Al",
+        "Sr/Ca"
+      ],
+      "events": [
+        {
+          "label": "TTR-12_292G",
+          "lat": 35.8975,
+          "lon": -3.6055,
+          "elevation": "-1536.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 238,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "941790",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941790",
+      "sha": "35b02ba6cf7947fa680a59b0bb076b72fd0c831c040f2ca3c1bb69c095ea0caf",
+      "xml_sha": "717f48e4920450542df6e05a0711e7289fa25a0b9e236780ebcef4c8081ac535",
+      "title": "Geochemical ratios of sediment core TTR-12_293G",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca",
+        "Ba/Al",
+        "Mo/Al",
+        "Sr/Ca",
+        "TOC [%]",
+        "Zr/Al"
+      ],
+      "events": [
+        {
+          "label": "TTR-12_293G",
+          "lat": 36.17357,
+          "lon": -2.75467,
+          "elevation": "-1840.0",
+          "campaign": "TTR-12/3",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 267,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa.",
+            "TTR-12_293G y TTR-14_302G tienen posiciones publicadas que coinciden a cuatro decimales. Se conservan los dos eventos."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "941800",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941800",
+      "sha": "8dccc3465167ed4a64418391d57d0d7eedba10d8dcd324f04d0ca612cdcf326d",
+      "xml_sha": "38b27ab2ec68ccaf70a9651ddccea82e1a23e8e5b8e4c6313c4cb157ee2c7952",
+      "title": "Geochemical ratios of sediment core TTR-14_300G",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca",
+        "Ba/Al",
+        "Mo/Al",
+        "Sr/Ca",
+        "TOC [%]"
+      ],
+      "events": [
+        {
+          "label": "TTR-14_300G",
+          "lat": 36.35886667,
+          "lon": -1.79178333,
+          "elevation": "-1860.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 176,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "941806",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941806",
+      "sha": "e864404f604173261f7b847fc5885367106ef252061db32a0054e8ddffbd41bd",
+      "xml_sha": "ed421ee41054cf5897d41bb2f923454704206b9de8ee40525cee59dac26e0981",
+      "title": "Geochemical ratios of sediment core TTR-14_302G",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca",
+        "Ba/Al",
+        "Mo/Al",
+        "Sr/Ca"
+      ],
+      "events": [
+        {
+          "label": "TTR-14_302G",
+          "lat": 36.17356667,
+          "lon": -2.75466667,
+          "elevation": "-1989.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 238,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa.",
+            "TTR-12_293G y TTR-14_302G tienen posiciones publicadas que coinciden a cuatro decimales. Se conservan los dos eventos."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "941808",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941808",
+      "sha": "e2df499d098efacf95fd9de8e79971ae1e80040a7b13a3aa26d339a781fc4193",
+      "xml_sha": "61bd6d510415e16b46b124bad0e00b2717fdab8e6093e006352e3a40ea923d05",
+      "title": "Geochemical ratios of sediment core TTR-14_304G",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca"
+      ],
+      "events": [
+        {
+          "label": "TTR-14_304G",
+          "lat": 36.33121667,
+          "lon": -1.52718333,
+          "elevation": "-2383.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 195,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "941812",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941812",
+      "sha": "982e390a4a099a8909070f63218e55269dfd67d6484e52238df997d0eb4aeaf0",
+      "xml_sha": "46e070ddd6c256d8b130b43210bf9878dce3ac8b86989caa8356b78e5a07e3c9",
+      "title": "Geochemical ratios of sediment core TTR-17_434G",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca",
+        "Ba/Al",
+        "Mo/Al",
+        "Sr/Ca"
+      ],
+      "events": [
+        {
+          "label": "TTR-17_434G",
+          "lat": 36.20522,
+          "lon": -4.31225,
+          "elevation": "-1108.0",
+          "campaign": "TTR-17/1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 165,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "941824",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941824",
+      "sha": "6c0faf9dfd1cd2d5a87fdc8e58609e451fdacb533ab969006c3f2254357c16a6",
+      "xml_sha": "d4f25c109a066b5c7744fa09e517b1b98b46c8d1a26cf3a5821468d0f0584034",
+      "title": "Ti/Ca ratios of ODP Hole 161-975B",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Ca"
+      ],
+      "events": [
+        {
+          "label": "161-975B",
+          "lat": 38.8964,
+          "lon": 4.50993,
+          "elevation": "-2416.0",
+          "campaign": "Leg161",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 162,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Titanium/Calcium ratio",
+          "short": "Ti/Ca",
+          "unit": "sin unidad",
+          "method": "X-ray fluorescence core scanner (XRF)",
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Ca",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": [
+            "Razón Ti/Ca tal como se publica. El artículo distingue mediciones por escáner XRF y geoquímica cuantitativa."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.gloplacha.2021.103732",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              2
+            ]
+          ]
+        },
+        "title": "Paleocirculation and paleoclimate conditions in the western Mediterranean basins over the last deglaciation: New insights from sediment composition variations",
+        "sha256": "95f7dacc84067dbd1141481b60437330195e050a5206ba59d345cd7807842355"
+      }
+    },
+    {
+      "id": "991020",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.991020",
+      "sha": "09f5d369909d09e8d585178f160694950fe9d59788ccfba83b14652289a10f3e",
+      "xml_sha": "262a1d461ae2d2133b2041cb7ef5e12f1425397e29ca5ad094f3a9c41708c122",
+      "title": "X-Ray Fluoresce (XRF) core scanning data from sediment core KC-13, Central Aegean, Greece",
+      "status": "held",
+      "reason": "The log-Ti/Ca column is already in v6 (KC-13)."
+    },
+    {
+      "id": "963433",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.963433",
+      "sha": "ebb7f7c098cbeb478477144dc0f77ecf66c9150ddaf65eb4e309b3bdc2211484",
+      "xml_sha": "ff9700ef8a6d0670537120940bbb88e42febdb3b28bfb0a508c6f25b0a5d4a4a",
+      "title": "Normalized element ratios of sediment core LVL15-1 from Lake Vouliagmeni, Greece",
+      "status": "held",
+      "reason": "Normalized single-element signals, no per-sample age or published Ti/Ca."
+    },
+    {
+      "id": "963435",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.963435",
+      "sha": "b8f54869ee9a5a9d87c0bf26c447f5d88028f3b057f860b1267ade9cf00b87eb",
+      "xml_sha": "3abe4d88a09e6034518cdf323df6b2c5830cab96d140f7eb089286687b01b684",
+      "title": "Normalized element ratios of sediment core LVL15-4 from Lake Vouliagmeni, Greece",
+      "status": "held",
+      "reason": "Normalized single-element signals, no per-sample age or published Ti/Ca."
+    },
+    {
+      "id": "876039",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.876039",
+      "sha": "dd629fd8283ccb392b107bd8b6e719651390489cb31036df857d64bdc48e62c2",
+      "xml_sha": "c31692038fe038ec7feb11766055281d78b0228d06b00d70c55643fb5de4de77",
+      "title": "(Figure 12) Element ratios and silt/clay size fraction of core BL12-10 from the El Bibane Lagoon, Tunisia",
+      "status": "held",
+      "reason": "No sample ages in table. The BL12-10 model needs a verified tie-point source."
+    },
+    {
+      "id": "896928",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.896928",
+      "sha": "4ba607f726b7df99ee67c943a7167e1f2e8536c9581aa39459cc1b304dea8d18",
+      "xml_sha": "ccc7c0d8150c711b380fbe38b9646a6fa7e6b675fec06b1b58a8184adbc69a41",
+      "title": "Geochemistry and δ¹⁸O Globigerinoides ruber records of sediment core MP37PC",
+      "status": "held",
+      "reason": "Native field says Fe/A [%]. Confirm identity and unit with authors or an explicit correction before including MP37PC."
+    },
+    {
+      "id": "896929",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.896929",
+      "sha": "eb97c1d6e17cd759120993543dc4ed59e34762ae50c52272875842883788b699",
+      "xml_sha": "2b9a212268aeb83288bd1cf13c4fcb732e3e8a8ecaf6953b1e497951229036c7",
+      "title": "Geochemistry and δ¹⁸O Globigerinoides ruber records of sediment core MP39PC",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "G. ruber δ18O [‰ PDB]",
+        "TOC [%]",
+        "Ratio (Ba/Al[ppm/%])",
+        "Ratio (Fe/Al[%])",
+        "Ratio (Mn/Al[ppm/%])",
+        "Ratio (Mo/Al[ppm/%])",
+        "Ratio (S/Al[%])",
+        "Ratio (Ti/Al [ppm/%])",
+        "Ratio (V/Al[ppm/%])"
+      ],
+      "events": [
+        {
+          "label": "MP39PC",
+          "lat": 38.8198,
+          "lon": 19.1147,
+          "elevation": "-1359.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 140,
+      "age_column": 1,
+      "age_transformation": "identity: published calendar point age in ka BP",
+      "columns": [
+        {
+          "name": "Ratio",
+          "short": "Ratio",
+          "unit": "%",
+          "method": null,
+          "comment": "Fe/Al[%]",
+          "column": 5,
+          "header": "Ratio (Fe/Al[%])",
+          "family": "xrf_razones",
+          "comparison_context": "filippidi_Fe_Al_native_percent_label",
+          "qc_notes": [
+            "El encabezado nativo rotula Fe/Al como [%]. Se conservan escala y valores archivados en un grupo propio hasta confirmar su equivalencia con otras razones Fe/Al."
+          ],
+          "comparison_parameter_name": "Iron/Aluminium ratio",
+          "label": "Fe/Al · etiqueta original [%]"
+        }
+      ],
+      "paper": {
+        "doi": "10.1029/2018PA003459",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2019,
+        "dates": {
+          "published-print": [
+            [
+              2019,
+              3
+            ]
+          ],
+          "published-online": [
+            [
+              2019,
+              3,
+              28
+            ]
+          ],
+          "issued": [
+            [
+              2019,
+              3
+            ]
+          ],
+          "published": [
+            [
+              2019,
+              3
+            ]
+          ]
+        },
+        "title": "Eastern Mediterranean Deep Water Formation During Sapropel S1: A Reconstruction Using Geochemical Records Along a Bathymetric Transect in the Adriatic Outflow Region",
+        "sha256": "53fbd921010d4d9d48b29be6b391ca653de4957138278191ea0419c4a28bb54f"
+      },
+      "chronology_label": "Calendario publicado"
+    },
+    {
+      "id": "896930",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.896930",
+      "sha": "4a78aa7a747796fc922bb923f75a972b65cfdfa20ab11ed3bb0caebba82e7fbd",
+      "xml_sha": "178c9725462f2f530c8cc711f7fca4bfa50f39dc24c4f8a0543b68f3e7730238",
+      "title": "Geochemistry and δ¹⁸O Globigerinoides ruber records of sediment core MP50PC",
+      "status": "ready",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "G. ruber δ18O [‰ PDB]",
+        "Ratio (Ba/Al [ppm/%])",
+        "Ratio (Fe/Al [%])",
+        "Ratio (Mn/Al [ppm/%])",
+        "Ratio (Mo/Al [ppm/%])",
+        "Ratio (V/Al [ppm/%])",
+        "Ratio (Ti/Al [ppm/%])",
+        "Ratio (S/Al [%])",
+        "TOC [%]"
+      ],
+      "events": [
+        {
+          "label": "MP50PC",
+          "lat": 39.49308,
+          "lon": 18.5233,
+          "elevation": "-775.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 153,
+      "age_column": 1,
+      "age_transformation": "identity: published calendar point age in ka BP",
+      "columns": [
+        {
+          "name": "Ratio",
+          "short": "Ratio",
+          "unit": "%",
+          "method": null,
+          "comment": "Fe/Al [%]",
+          "column": 4,
+          "header": "Ratio (Fe/Al [%])",
+          "family": "xrf_razones",
+          "comparison_context": "filippidi_Fe_Al_native_percent_label",
+          "qc_notes": [
+            "El encabezado nativo rotula Fe/Al como [%]. Se conservan escala y valores archivados en un grupo propio hasta confirmar su equivalencia con otras razones Fe/Al."
+          ],
+          "comparison_parameter_name": "Iron/Aluminium ratio",
+          "label": "Fe/Al · etiqueta original [%]"
+        }
+      ],
+      "paper": {
+        "doi": "10.1029/2018PA003459",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2019,
+        "dates": {
+          "published-print": [
+            [
+              2019,
+              3
+            ]
+          ],
+          "published-online": [
+            [
+              2019,
+              3,
+              28
+            ]
+          ],
+          "issued": [
+            [
+              2019,
+              3
+            ]
+          ],
+          "published": [
+            [
+              2019,
+              3
+            ]
+          ]
+        },
+        "title": "Eastern Mediterranean Deep Water Formation During Sapropel S1: A Reconstruction Using Geochemical Records Along a Bathymetric Transect in the Adriatic Outflow Region",
+        "sha256": "53fbd921010d4d9d48b29be6b391ca653de4957138278191ea0419c4a28bb54f"
+      },
+      "chronology_label": "Calendario publicado"
+    },
+    {
+      "id": "971575",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.971575",
+      "sha": "c17f857c2a43c12086cc7d1cdf5ee388d062136f747ea6d274d9c73f1886b73c",
+      "xml_sha": "73ed16ca2f2a745c7538216e6c6ce84fd0efe173f2a10ed063daa057c931dc21",
+      "title": "Comprises cohesive fine particles of sediment core MD99-2337",
+      "status": "held",
+      "reason": "Sortable-silt mean with sediment depth only. No verified same-core depth-age contract."
+    },
+    {
+      "id": "971577",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.971577",
+      "sha": "5195d37bfe81a01f769fb0a047d9ea3a57903a43e6e39ab3dff9ca5c431db454",
+      "xml_sha": "74536322a4d35baf0cece379fd4db57557c8f05f110d482460d8b3fb03db8283",
+      "title": "Comprises cohesive fine particles of sediment core CADKS24",
+      "status": "held",
+      "reason": "Sortable-silt mean with sediment depth only. No verified same-core depth-age contract."
+    },
+    {
+      "id": "859195",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.859195",
+      "sha": "c65709b2ad49d60e347f7a8e77dd4b064ad170dcf49127a90f5d1e7b5e15dd8e",
+      "xml_sha": "40aca8e5e590cbf8df0371c6b1d3730ab61d302b4a980b1f7bc4e95b9cead9dd",
+      "title": "Grain size composition of IODP Hole 339-U1387C",
+      "status": "held",
+      "reason": "No native age or sortable-silt series in the target size fraction."
+    },
+    {
+      "id": "871498",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.871498",
+      "sha": "bf1bb22bdf329f1279b97b65b505b60ecfe2ed0b5d67d481bf688fb830220e89",
+      "xml_sha": "099dcbdc6499e7484f9d4e4b967812dfc8f03fb814c0679fd2b56f6096d08034",
+      "title": "Grain size distribution of IODP Site 339-U1389",
+      "status": "held",
+      "reason": "Native 63–150 µm sand fraction, not 10–63 µm sortable silt."
+    },
+    {
+      "id": "833980",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.833980",
+      "sha": "79b1c2407ef5b48b23e65c12f353cd0d70e70ce2ee1e269b5b4988222693203a",
+      "xml_sha": "f636c416532107542e671a5415ae73a58dd7bdd2df802179ec7629e5b857617b",
+      "title": "Grain size analysis of IODP Hole 339-U1387B",
+      "status": "held",
+      "reason": "Bulk <63 µm mean and no native age."
+    },
+    {
+      "id": "937299",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.937299",
+      "sha": "7098e58b58ec5e4eb6d8ae7aab7e1fd3df84bfcff584591a3600617426cd22ab",
+      "xml_sha": "68ff4f2de2612a467df7766ac7c3d4f6c597db2a6e50a5558959aadc928988e2",
+      "title": "Grain size analysis from IODP Core 339-U1389A-11H",
+      "status": "held",
+      "reason": "Native grain-size bins, no age."
+    },
+    {
+      "id": "937300",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.937300",
+      "sha": "226764b64c6ebad367d7282ee15c14c372f592504442ab1773e5a34432f5b3c9",
+      "xml_sha": "71f5354d95081d4b31de359b1094514217204b51a5145928e04d7a5ed4e9f813",
+      "title": "Carbonate free grain size analysis from IODP Core 339-U1389A-11H",
+      "status": "held",
+      "reason": "Native carbonate-free grain-size bins, no age."
+    },
+    {
+      "id": "885796",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.885796",
+      "sha": "d2796834450d212920aadebf79700a067f468257715aac3e9bea4d85ae8ae2ce",
+      "xml_sha": "9604faec5f20e9010556c3394fba8d6eb2d8f7163e2f620f1643b284e3451983",
+      "title": "Pollen record of sediment core Co1260 from Lake Dojran",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. New redistribution awaits rights review."
+    },
+    {
+      "id": "892362",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.892362",
+      "sha": "766e04e21db3e86d6fbb22246e044ea052591cd75c673015c5833d4ecda06cc0",
+      "xml_sha": "df3b582b5f1c1220ae97c731f0833315a387431ddd5ec1dc5d8d3b6fa269f5cd",
+      "title": "Pollen data of the last 500 ka BP at Lake Ohrid (south-eastern Europe)",
+      "status": "ready",
+      "header": [
+        "Age [ka BP]",
+        "AP [%] (AP)",
+        "Pinus [%] (Included in the pollen sum)",
+        "Abies [%]",
+        "Picea [%]",
+        "Juniperus-T [%] (Includes Cupressus, Juniperus...)",
+        "Hipp [%]",
+        "Alnus [%]",
+        "C. betulus [%]",
+        "Juglandaceae [%]",
+        "Que.r-T [%] (Includes deciduous oaks)",
+        "Q. ilex-T [%] (Includes the evergreen oaks m...)",
+        "Q. cerris-T [%] (Includes semi-deciduous oaks ...)",
+        "Tilia [%]",
+        "Ulmus/Zelkova [%]",
+        "Artemisia [%]",
+        "Asteroideae [%] (undiff.)",
+        "Chenopod [%]",
+        "Cichorioideae [%] (undiff.)",
+        "Cyperac [%]",
+        "Poac [%] (undiff.)",
+        "Montane [%]",
+        "Pollen meso [%]",
+        "Pollen mediterr [%]",
+        "Pollen riparian [%]",
+        "Pollen pioneer [%]",
+        "AP [%] (AP-(Pinus+Juniperus+Betula) [%])"
+      ],
+      "events": [
+        {
+          "label": "OHRID",
+          "lat": 40.9,
+          "lon": 20.633,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_rows": 308,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Arboreal pollen",
+          "short": "AP",
+          "unit": "%",
+          "method": null,
+          "comment": "AP",
+          "column": 1,
+          "header": "AP [%] (AP)",
+          "family": "polen",
+          "comparison_context": null,
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Pinus",
+          "short": "Pinus",
+          "unit": "%",
+          "method": null,
+          "comment": "Included in the pollen sum",
+          "column": 2,
+          "header": "Pinus [%] (Included in the pollen sum)",
+          "family": "polen",
+          "comparison_context": "ohrid_native_pollen_sum_includes_pinus",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Abies",
+          "short": "Abies",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "Abies [%]",
+          "family": "polen",
+          "comparison_context": "ohrid_native_pollen_sum_includes_pinus",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Picea",
+          "short": "Picea",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 4,
+          "header": "Picea [%]",
+          "family": "polen",
+          "comparison_context": "ohrid_native_pollen_sum_includes_pinus",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Quercus robur-type",
+          "short": "Que.r-T",
+          "unit": "%",
+          "method": null,
+          "comment": "Includes deciduous oaks",
+          "column": 10,
+          "header": "Que.r-T [%] (Includes deciduous oaks)",
+          "family": "polen",
+          "comparison_context": "ohrid_robur_type",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Quercus ilex-type",
+          "short": "Q. ilex-T",
+          "unit": "%",
+          "method": null,
+          "comment": "Includes the evergreen oaks minus Q. suber",
+          "column": 11,
+          "header": "Q. ilex-T [%] (Includes the evergreen oaks m...)",
+          "family": "polen",
+          "comparison_context": "ohrid_ilex_type_excludes_suber",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Pollen, mesophilous",
+          "short": "Pollen meso",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 22,
+          "header": "Pollen meso [%]",
+          "family": "polen",
+          "comparison_context": "ohrid_mesophilous_definition",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        },
+        {
+          "name": "Arboreal pollen",
+          "short": "AP",
+          "unit": "%",
+          "method": null,
+          "comment": "AP-(Pinus+Juniperus+Betula) [%]",
+          "column": 26,
+          "header": "AP [%] (AP-(Pinus+Juniperus+Betula) [%])",
+          "family": "polen",
+          "comparison_context": "pollen_sum_excludes_pinus_juniperus_betula",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Coordenadas nominales de este DOI. Existe otra serie y cronología del mismo archivo en PANGAEA.896847."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.5194/bg-13-1423-2016",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2016,
+        "dates": {
+          "published-online": [
+            [
+              2016,
+              3,
+              8
+            ]
+          ],
+          "issued": [
+            [
+              2016,
+              3,
+              8
+            ]
+          ],
+          "published": [
+            [
+              2016,
+              3,
+              8
+            ]
+          ]
+        },
+        "title": "Pollen-based paleoenvironmental and paleoclimatic change at Lake Ohrid (south-eastern Europe) during the past 500 ka",
+        "sha256": "eb98c016c65985441f390d2675e300e5d948ae08319795d07d2ff88a9fbd44ed"
+      },
+      "realm": "continental",
+      "archive_type": "lake",
+      "chronology_label": "Cronología publicada con ajuste orbital o correlación de proxies"
+    },
+    {
+      "id": "943593",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.943593",
+      "sha": "52696f7786d47dc4c1c581f27ce9ace7d82a9ffc488b460f3f3f3bbce23b3eb6",
+      "xml_sha": "6bd6e31205db11a2a109eb0d4e478414145e4800bcf048407f4a03a59392e513",
+      "title": "Pollen data from Tenaghi Philippon (Greece) spanning the past 500 kyrs",
+      "native_component_events": [
+        {
+          "label": "TP-2005",
+          "lat": 40.96667,
+          "lon": 24.22367,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "TP-2009",
+          "lat": 40.96097,
+          "lon": 24.26753,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "qc_notes": [
+        "Un registro compuesto de TP-2005 y TP-2009. Marcador en el componente TP-2005. La tabla no asigna sondeo por fila."
+      ],
+      "status": "ready",
+      "header": [
+        "Age [ka BP]",
+        "Depth comp [mcd]",
+        "AP [%]",
+        "NAP [%]",
+        "AP-Pinus [%]",
+        "Pollen te [%]",
+        "Pollen mediterr [%]",
+        "Pollen montane [%]",
+        "Pollen pioneer [%]",
+        "Shrubs [%]",
+        "Pollen steppic [%]",
+        "Herbs [%]",
+        "Helophyte [%]",
+        "Poaceae+Cyperaceae [%]",
+        "Pollen aquat [%]",
+        "Spores [%]",
+        "Algae [%]"
+      ],
+      "events": [
+        {
+          "label": "Tenaghi Philippon TP-2005/TP-2009 composite",
+          "lat": 40.96667,
+          "lon": 24.22367,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 2347,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Arboreal pollen",
+          "short": "AP",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "AP [%]",
+          "family": "polen",
+          "comparison_context": "tenaghi_terrestrial_excludes_poaceae_cyperaceae",
+          "qc_notes": [
+            "Un registro compuesto de TP-2005 y TP-2009. Marcador en el componente TP-2005. La tabla no asigna sondeo por fila.",
+            "La suma terrestre excluye Poaceae y Cyperaceae. Se conserva la definición publicada."
+          ]
+        },
+        {
+          "name": "Arboreal Pollen-Pinus",
+          "short": "AP-Pinus",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 4,
+          "header": "AP-Pinus [%]",
+          "family": "polen",
+          "comparison_context": "tenaghi_ap_minus_pinus_excludes_poaceae_cyperaceae",
+          "qc_notes": [
+            "Un registro compuesto de TP-2005 y TP-2009. Marcador en el componente TP-2005. La tabla no asigna sondeo por fila.",
+            "La suma terrestre excluye Poaceae y Cyperaceae. Se conserva la definición publicada."
+          ]
+        },
+        {
+          "name": "Pollen, temperate",
+          "short": "Pollen te",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 5,
+          "header": "Pollen te [%]",
+          "family": "polen",
+          "comparison_context": "tenaghi_temperate_taxa_definition",
+          "qc_notes": [
+            "Un registro compuesto de TP-2005 y TP-2009. Marcador en el componente TP-2005. La tabla no asigna sondeo por fila.",
+            "La suma terrestre excluye Poaceae y Cyperaceae. Se conserva la definición publicada."
+          ]
+        },
+        {
+          "name": "Pollen, mediterranean",
+          "short": "Pollen mediterr",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 6,
+          "header": "Pollen mediterr [%]",
+          "family": "polen",
+          "comparison_context": "tenaghi_mediterranean_taxa_definition",
+          "qc_notes": [
+            "Un registro compuesto de TP-2005 y TP-2009. Marcador en el componente TP-2005. La tabla no asigna sondeo por fila.",
+            "La suma terrestre excluye Poaceae y Cyperaceae. Se conserva la definición publicada."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1038/s41467-023-37388-x",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2023,
+        "dates": {
+          "published-online": [
+            [
+              2023,
+              3,
+              25
+            ]
+          ],
+          "issued": [
+            [
+              2023,
+              3,
+              25
+            ]
+          ],
+          "published": [
+            [
+              2023,
+              3,
+              25
+            ]
+          ]
+        },
+        "title": "Atmospheric CO2 forcing on Mediterranean biomes during the past 500 kyrs",
+        "sha256": "ba5be7327be13dd58fa5491611d00ae0150f4cb02d3d82037e005906aa48628d"
+      },
+      "realm": "continental",
+      "archive_type": "peat",
+      "chronology_label": "Cronología publicada con ajuste orbital o correlación de proxies"
+    },
+    {
+      "id": "858056",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.858056",
+      "sha": "430fbe7bbf38ada7289ceaa26b40422b356cf74bc8733a92a0c8716b1234babf",
+      "xml_sha": "b893771cfda75791171a5b58a5d43c133440fa4a885444be63d599484a843fe5",
+      "title": "Pollen and non-pollen palynomorph data from Lake Iznik, NW Turkey (last 31 ka cal BP)",
+      "status": "held",
+      "reason": "Native counts, not the already-used forest percentage proxies."
+    },
+    {
+      "id": "871228",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.871228",
+      "sha": "6e35074107d9f029f0fbead7b27ee3a0978434f917bb0aada237bac59a704c8a",
+      "xml_sha": "eb6ccf719c0fbdabb9781e671646ff8890fbb8b8ff9e973c472d07ec0c8fae14",
+      "title": "A new high-resolution pollen sequence at Lake Van, Turkey, during MIS 6-7",
+      "status": "held",
+      "reason": "Native forest taxa percentages, outside the current longitude limit (42.669° E)."
+    },
+    {
+      "id": "934305",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.934305",
+      "sha": "f8aa7d3a62efce3ff2100d2b1ca8b9c3340e7bd6d29cd0698a5933a3cb46a21e",
+      "xml_sha": "7a2cf9bac63e0e0bd2632d623224ef16cddcf016397febe057139839a52d083f",
+      "title": "Percentages of pollen data from late MIS 6 to MIS 1 from Füramoos, Southern Germany",
+      "status": "ready",
+      "header": [
+        "Event",
+        "Core",
+        "Sect",
+        "Depth sed [m]",
+        "Depth comp [mcd]",
+        "Age [ka BP]",
+        "AP [%]",
+        "NAP [%]",
+        "Pollen te [%]",
+        "Pollen bo [%]",
+        "Pollen pioneer [%]",
+        "Pollen steppe [%]",
+        "Grasses [%]",
+        "Lyc [%]",
+        "Abies [%]",
+        "Ace [%]",
+        "Alnus [%]",
+        "Apiaceae [%]",
+        "Arm [%]",
+        "Artemisia [%]",
+        "Asterac [%]",
+        "Betula [%]",
+        "Bot [%]",
+        "Brassicac [%]",
+        "Buxus [%]",
+        "C. angusticollis [%]",
+        "Campanulaceae [%]",
+        "Car [%]",
+        "Cphae [%]",
+        "Castanea [%]",
+        "Centaurea [%]",
+        "Cerealia [%]",
+        "Cerinthe [%]",
+        "Chenopod [%]",
+        "C. vulgare [%]",
+        "Corylus [%]",
+        "Cre-T [%]",
+        "Cyperac [%]",
+        "Drosera [%]",
+        "E. lobata [%]",
+        "E. distachya-T [%]",
+        "Eph.f-T [%]",
+        "Ericac [%]",
+        "Euphorbiaceae [%]",
+        "Fagus [%]",
+        "Flp [%]",
+        "F. alnus [%]",
+        "Frx [%]",
+        "Gentiana [%]",
+        "Ger [%]",
+        "Hedera [%]",
+        "Hel [%]",
+        "Hipp [%]",
+        "Ilex [%]",
+        "Juglans [%]",
+        "Jun [%]",
+        "Lar [%]",
+        "L. vulgare [%]",
+        "Limonium [%]",
+        "Linum-T [%]",
+        "Mtr-T [%]",
+        "M. trifoliata [%]",
+        "Mercurialis-T [%]",
+        "Microthyrium [%]",
+        "Spores monolete [%]",
+        "Mougeotia [%]",
+        "Myriophyllum [%]",
+        "Nup [%]",
+        "Nym [%]",
+        "Onagraceae [%]",
+        "O. stricta [%]",
+        "Ped [%]",
+        "Picea [%]",
+        "Pinguicola-T [%]",
+        "Pinus [%]",
+        "Plantaginaceae [%]",
+        "Poac [%]",
+        "Poe [%]",
+        "Polygonum-T [%]",
+        "Populus [%]",
+        "Pti [%]",
+        "Quercus [%]",
+        "R. acris-T [%]",
+        "R. arvensis-T [%]",
+        "Rosae [%]",
+        "Rubae [%]",
+        "R. acetosa [%]",
+        "Salix [%]",
+        "Sax [%]",
+        "Scabiosa [%]",
+        "Scilloideae [%]",
+        "Scrophularia [%]",
+        "Senecio-T [%]",
+        "Sparganium [%]",
+        "S. alpina [%]",
+        "Succisa [%]",
+        "Symphytum [%]",
+        "Tax [%]",
+        "Tha [%]",
+        "Tilia [%]",
+        "T. spaghni [%]",
+        "Trifolium-T [%]",
+        "trilete [%]",
+        "T. latifolia [%]",
+        "Ulmus [%]",
+        "Urt [%]",
+        "Utricularia [%]",
+        "Valeriana-T [%]",
+        "Varia [%]",
+        "V. album [%]",
+        "Zygnema-T [%]"
+      ],
+      "events": [
+        {
+          "label": "FU-2001",
+          "lat": 47.990556,
+          "lon": 9.886944,
+          "elevation": "660.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "FU-2017",
+          "lat": 47.990556,
+          "lon": 9.886944,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 530,
+      "age_column": 5,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Arboreal pollen",
+          "short": "AP",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 6,
+          "header": "AP [%]",
+          "family": "polen",
+          "comparison_context": null,
+          "qc_notes": []
+        },
+        {
+          "name": "Pollen, temperate",
+          "short": "Pollen te",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 8,
+          "header": "Pollen te [%]",
+          "family": "polen",
+          "comparison_context": "fueramoos_temperate_taxa_definition",
+          "qc_notes": []
+        },
+        {
+          "name": "Pollen, boreal",
+          "short": "Pollen bo",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 9,
+          "header": "Pollen bo [%]",
+          "family": "polen",
+          "comparison_context": "fueramoos_boreal_taxa_definition",
+          "qc_notes": []
+        },
+        {
+          "name": "Fagus",
+          "short": "Fagus",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 44,
+          "header": "Fagus [%]",
+          "family": "polen",
+          "comparison_context": null,
+          "qc_notes": []
+        },
+        {
+          "name": "Pinus",
+          "short": "Pinus",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 74,
+          "header": "Pinus [%]",
+          "family": "polen",
+          "comparison_context": null,
+          "qc_notes": []
+        },
+        {
+          "name": "Quercus",
+          "short": "Quercus",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 81,
+          "header": "Quercus [%]",
+          "family": "polen",
+          "comparison_context": null,
+          "qc_notes": []
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.quascirev.2022.107505",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-print": [
+            [
+              2022,
+              5
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              5
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              5
+            ]
+          ]
+        },
+        "title": "A near-continuous record of climate and ecosystem variability in Central Europe during the past 130 kyrs (Marine Isotope Stages 5–1) from Füramoos, southern Germany",
+        "sha256": "d2cd7602db0f9291f490ebdd6045d47d6b8d46ee1de1df1da6aecf3e35eb9140"
+      },
+      "realm": "continental",
+      "archive_type": "peat"
+    },
+    {
+      "id": "987196",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.987196",
+      "sha": "c1b93aa0f9e8140bb5bb06184f255ce350102d91e019d898e293cb3a6efc21d8",
+      "xml_sha": "2f097974cf54bb5f3c3749b1b82e1229c8419d6992b0d7f7e28f4dbf94f1b25b",
+      "title": "Pigments, sequential extraction (P, Mn and Fe), Ages, LOI from core SOP08-3C3 of Late Glacial Soppensee, Switzerland",
+      "status": "held",
+      "reason": "Latest native metadata links work in preparation. Adjacent site retained as candidate."
+    },
+    {
+      "id": "993109",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993109",
+      "sha": "49410cb5eeaab54ceb13540a0a139bbc669840e778d1a78190f59b4f015a047f",
+      "xml_sha": "c283df974227f0f3164043894f41d72053a872572ae613766cb2bacde92bb8ba",
+      "title": "Pigments, sequential extraction (P, Fe, Mn), pollen and CNS measurements from sediment core UBE22-COMP1 of lake Übeschi, Switzerland",
+      "status": "held",
+      "reason": "Work in preparation. Table has both modelled calendar and raw radiocarbon columns. Adjacent site retained as candidate."
+    },
+    {
+      "id": "872820",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872820",
+      "sha": "683cc78adf545ae60ed0d909bde836b3ff23c7869f95cdf3f2afed8d58c60621",
+      "xml_sha": "c840c6bf01d22d8275ac759ec92d39ba9001948fa62706db3792f161e28af2a1",
+      "title": "CLAM age model and biomes of sediment core Stracciacappa",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+    },
+    {
+      "id": "872823",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872823",
+      "sha": "3ecd8bb7ae58d4618e625da4157fcbafaa6e3786c2e1b128fabb35cd8ceda74d",
+      "xml_sha": "c8d655fb987e710c1c15e03bd9268c15105f781335a5ec07aec2740df7ef38d1",
+      "title": "CLAM age model and biomes of sediment core Valle_di_Castiglione",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+    },
+    {
+      "id": "872825",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872825",
+      "sha": "6bc5dc600e1d441e30c55e9bb2101e5d5a4b3ada95003b5c7351269b86a02c82",
+      "xml_sha": "af63b153007a1343861a6d8c9382d4f922beb3e058d2c99a8ed18f9b092cf9a2",
+      "title": "CLAM age model and biomes of sediment core XINIAS",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+    },
+    {
+      "id": "884740",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.884740",
+      "sha": "c8ce67ce84c948471637ef7d216c1130eac7a3d1d7e486119eaa2d7b0f226a3d",
+      "xml_sha": "ea9a191800fd6fe38f5cd42f63aa4212231d90b902f5b20199d4a5fd20fa085d",
+      "title": "Holocene pollen record from Lake Kinneret (Sea of Galilee), Israel",
+      "status": "held",
+      "reason": "Native counts, not the already-used forest percentage proxies."
+    },
+    {
+      "id": "874340",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.874340",
+      "sha": "d04254a9f83dc17eae3bc8272f42edb7e186382abeff8c5de90d956d02be6426",
+      "xml_sha": "0becdf1779dda0786e4838316c335b65b3c37821b6451a18dfa2b8f97bb394dd",
+      "title": "Pollen record of sediment core Ein Gedi (DSEn), Dead Sea",
+      "status": "held",
+      "reason": "Native counts, not the already-used forest percentage proxies."
+    },
+    {
+      "id": "713169",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.713169",
+      "sha": "090748ba3c0e2aab295fc5e5f9ffc58eb5554c456ca086d5c14e1b4b6b8f95ac",
+      "xml_sha": "673eeab65b5c9a7ab89daac2217ed7ecf6f44c9b735d8bd0fbd79a44665c8229",
+      "title": "Pollen record of sediment core Bokanjacko Blato 1",
+      "status": "held",
+      "reason": "Native counts, no sample ages."
+    },
+    {
+      "id": "713170",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.713170",
+      "sha": "88b9deeaf260a3476b7ed029ddf943ae85d9cd18bc55fe6b64cc06ba2f054454",
+      "xml_sha": "068c6cc6a39c5187d4f19440d7601985a19f1b86025268b91c6780485ed55eab",
+      "title": "Pollen record of sediment core Bokanjacko Blato 2",
+      "status": "held",
+      "reason": "Native counts, no sample ages."
+    },
+    {
+      "id": "896847",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.896847",
+      "sha": "0adee2961c978c80c68df8212ef5b62f0d51812aca4435d9cb988940c0200bb2",
+      "xml_sha": "e8c92f3e086303d01f7227b1dc3c7ab4f4e9ed4aced4727c579e8770f294cfb5",
+      "title": "Chronology, (bio-)geochemical, sedimentary, stable isotope, and pollen data of Lake Ohrid's DEEP site (ICDP5045-1) sequence (5045-1) between 447.12 m and the sediment surface",
+      "status": "ready",
+      "header": [
+        "Sample comment",
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "TIC [%]",
+        "TOC [%]",
+        "Qz peak area",
+        "δ13C cal [‰ PDB]",
+        "δ18O cal [‰ PDB]",
+        "Quercus deci [%]",
+        "AP-Pinus [%]"
+      ],
+      "events": [
+        {
+          "label": "ICDP5045-1",
+          "lat": 41.04917,
+          "lon": 20.715,
+          "elevation": "693.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_rows": 2794,
+      "age_column": 2,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Quercus, deciduous",
+          "short": "Quercus deci",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 8,
+          "header": "Quercus deci [%]",
+          "family": "polen",
+          "comparison_context": "ohrid_deep_published_deciduous_quercus",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Compilación con cronología propia, relacionada con PANGAEA.892362."
+          ]
+        },
+        {
+          "name": "Arboreal Pollen-Pinus",
+          "short": "AP-Pinus",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 9,
+          "header": "AP-Pinus [%]",
+          "family": "polen",
+          "comparison_context": "pollen_sum_excludes_pinus",
+          "qc_notes": [
+            "Lago Ohrid DEEP. Compilación con cronología propia, relacionada con PANGAEA.892362."
+          ]
+        }
+      ],
+      "paper": {
+        "doi": "10.1038/s41586-019-1529-0",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2019,
+        "dates": {
+          "published-print": [
+            [
+              2019,
+              9,
+              12
+            ]
+          ],
+          "published-online": [
+            [
+              2019,
+              9,
+              2
+            ]
+          ],
+          "issued": [
+            [
+              2019,
+              9,
+              2
+            ]
+          ],
+          "published": [
+            [
+              2019,
+              9,
+              2
+            ]
+          ]
+        },
+        "title": "Mediterranean winter rainfall in phase with African monsoons during the past 1.36 million years",
+        "sha256": "02d2eb6e9ea6930283e66f19f7586edde9ab772377d96deb240b0745ae9bacfe"
+      },
+      "realm": "continental",
+      "archive_type": "lake",
+      "chronology_label": "Cronología publicada con ajuste orbital o correlación de proxies"
+    },
+    {
+      "id": "693917",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.693917",
+      "sha": "4ac8d2c6f0cb8f792d44ba681ef909acabd19320bd5b4a419473c5af4e146114",
+      "xml_sha": "15d6200a96a1afd8d84ed1c536fc1fd4ffcf96e80fe238705d015c74a0f25c28",
+      "title": "(Appendix, Fig. 2) Total organic carbon and element/Aluminium ratios of ODP Hole 161-975B in the Alboran Basin, western Mediterranean Sea",
+      "status": "ready",
+      "header": [
+        "Age [ka BP]",
+        "Depth sed [m]",
+        "U/Al",
+        "Fe/Al",
+        "Mn/Al",
+        "TOC [%]",
+        "Cr/Al",
+        "Co/Al"
+      ],
+      "events": [
+        {
+          "label": "161-975B",
+          "lat": 38.8964,
+          "lon": 4.50993,
+          "elevation": "-2416.0",
+          "campaign": "Leg161",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_rows": 76,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Iron/Aluminium ratio",
+          "short": "Fe/Al",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "Fe/Al",
+          "family": "xrf_razones",
+          "comparison_context": null,
+          "qc_notes": []
+        }
+      ],
+      "paper": {
+        "doi": "10.1016/j.palaeo.2006.10.005",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2007,
+        "dates": {
+          "published-print": [
+            [
+              2007,
+              4
+            ]
+          ],
+          "issued": [
+            [
+              2007,
+              4
+            ]
+          ],
+          "published": [
+            [
+              2007,
+              4
+            ]
+          ]
+        },
+        "title": "Paleoenvironmental changes in the western Mediterranean since the last glacial maximum: High resolution multiproxy record from the Algero–Balearic basin",
+        "sha256": "730b28ca69975c0bbcec772ec8403a674b82e35c48d22a0084c91108731cd87a"
+      }
+    },
+    {
+      "id": "783369",
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.783369",
+      "sha": "1b7626609fb73bd0765577ff111905968825900d1938288e3eb04cfc412d45d7",
+      "xml_sha": "9ecece8ece77dde9f44917467c0dbf0e487f798bd62b6fb56293cab3f9d67c1f",
+      "title": "(Table S2) Ratios of major elements to Al concentrations in ODP Hole 161-974C",
+      "status": "held",
+      "reason": "Fe/Al by sediment depth. No verified same-core depth-age contract."
+    }
+  ],
+  "zenodo": {
+    "doi": "10.5281/zenodo.8163513",
+    "url": "https://zenodo.org/records/8163513",
+    "file_url": "https://zenodo.org/api/records/8163513/files/U1389%20data%20for%20server.xlsx/content",
+    "sha256": "7873cdf7ccd408de8b4a7498aa502a271f4be267b5b1a3ae71ddd0eff5082e69",
+    "md5": "md5:044bf1b5294bf98dbb19cae8f4797dd6",
+    "sheet": "Sortable silt  data with age",
+    "last_row": 1341,
+    "header": [
+      "mbsf",
+      "mcd",
+      "age",
+      "SS",
+      "SS%",
+      null
+    ],
+    "paper_doi": "10.1016/j.quascirev.2023.108260",
+    "publication_year": 2023,
+    "license": "Creative Commons Attribution 4.0 International",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "citation": "McCave, I. N. (2023). Grainsize data for IODP U1389A. Zenodo. doi:10.5281/zenodo.8163513.",
+    "unit_evidence": "McCave 2023, section 3.1 on published PDF p. 4, explicitly defines SS (µm) for 10–63 µm and SS% as 10–63 µm/<63 µm.",
+    "unit_evidence_sha256": "54044b97ccdf51515aca32e8cbae090b845c83b7513ba687fa3e0c5549a692d0",
+    "parent_record_id": "pangaea5-339_u1389a",
+    "record": {
+      "core": "339-U1389A",
+      "latitude": 36.425305,
+      "longitude": -7.2781783333333,
+      "water_depth_m": 644.7,
+      "campaign": "Exp339",
+      "id": "zenodo7-339-u1389a",
+      "name": "339-U1389A"
+    },
+    "chronology_note": "Edades publicadas con ajuste orbital basado en parte en el propio sortable silt. La hoja expresa edad en ka sin especificar el año cero. No se estima un nuevo modelo.",
+    "columns": [
+      {
+        "index": 3,
+        "proxy": "sortable_silt_mean_bulk_laser_um",
+        "label": "Sortable silt · tamaño medio (10–63 µm)",
+        "comparison_parameter_name": "Sortable-silt mean",
+        "unit": "µm",
+        "original_unit": "mm (worksheet note)",
+        "range": [
+          10,
+          63
+        ],
+        "note": "La hoja indica mm en una nota. El artículo, sección 3.1, especifica µm. Se corrige solo la etiqueta de unidad. Sedimento total medido por láser."
+      },
+      {
+        "index": 4,
+        "proxy": "sortable_silt_percent_bulk_laser",
+        "label": "Sortable silt · 10–63 µm / <63 µm",
+        "comparison_parameter_name": "Size fraction 0.063-0.010 mm, sortable silt",
+        "unit": "%",
+        "original_unit": "%",
+        "range": [
+          0,
+          100
+        ],
+        "note": "Porcentaje de 10–63 µm respecto a <63 µm en sedimento total, según artículo. Conserva el denominador publicado."
+      }
+    ]
+  },
+  "additional_holds": [
+    {
+      "doi": "10.17632/8h9cfjkdpg.2",
+      "reason": "U1386 and U1390 have mcd and sortable silt but no sample ages. U1386 candidate model 10.1594/PANGAEA.870577 needs verification of the exact splice and age basis."
+    },
+    {
+      "doi": "10.1594/PANGAEA.870577",
+      "reason": "Possible U1386 tie points, held pending documented linkage to Mendeley spreadsheet."
+    },
+    {
+      "doi": "10.25921/69tm-zg59",
+      "reason": "NOAA 5463 is a lake sediment archive and does not establish a native arboreal pollen percentage series."
+    },
+    {
+      "doi": "10.21233/ZEWE-M072",
+      "reason": "Neotoma Monticchio candidate. Verify native counts/denominator and age model before admitting a derived proportion."
+    }
+  ]
+}

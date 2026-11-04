@@ -32,9 +32,9 @@ FAMILIES = {'polen': 'Polen', 'corrientes': 'Sedimentología',
             'xrf_razones': 'Geoquímica elemental'}
 
 
-def resource(entry, extension, fetch=False):
+def resource(entry, extension, fetch=False, raw_dir=RAW):
     """Require pinned bytes; do not silently refresh changed provider snapshots."""
-    path = RAW / f"{entry['id']}.{extension}"
+    path = raw_dir / f"{entry['id']}.{extension}"
     if not path.exists() and not fetch:
         raise FileNotFoundError(f'Missing original {path}; restore with --fetch')
     url = entry['source_url'] + ('?format=textfile' if extension == 'tsv' else '')
@@ -73,7 +73,7 @@ def contexts(column, title=''):
     return None
 
 
-def paper_reference(head, supplied, fetch):
+def paper_reference(head, supplied, fetch, raw_dir=RAW):
     """Resolve an explicit native article relation without guessing a paper year.
 
     A unique Related-to DOI is retained as that relation, not asserted to be the
@@ -90,7 +90,7 @@ def paper_reference(head, supplied, fetch):
             doi = candidates[0]; relation = 'native_related_to' if match[0].startswith('Related to') else 'native_supplement_to'
     if not doi:
         return None
-    path = RAW / ('crossref-' + native.sha(doi.lower().encode())[:16] + '.json')
+    path = raw_dir / ('crossref-' + native.sha(doi.lower().encode())[:16] + '.json')
     if not path.exists() and not fetch:
         return dict(doi=doi, relation=relation, status='native_relation_unverified_with_crossref', year=None)
     raw = native.get('https://api.crossref.org/works/' + quote(doi, safe=''), path, limit=3_000_000)
@@ -168,20 +168,23 @@ def prepare(fetch=False):
     print('Priority contracts', dict(Counter(e['status'] for e in entries)))
 
 
-def curate(fetch=False):
+def curate(fetch=False, *, contract_path=CONTRACT, baseline=BASE, raw_dir=RAW,
+           fragment_path=FRAGMENT, audit_path=AUDIT, namespace='pangaea6', age_rule=native.age_rule):
     """Extract finite native cells, preserving row/line and explicit quality holds."""
-    contract = json.loads(CONTRACT.read_text(encoding='utf8'))
-    if native.sha(BASE.read_bytes()) != contract['parent_sha256']:
+    contract = json.loads(contract_path.read_text(encoding='utf8'))
+    if native.sha(baseline.read_bytes()) != contract['parent_sha256']:
         raise ValueError('Parent changed; review and regenerate priority contracts')
     records, series, quarantined, audit = {}, [], [], []
     for entry in contract['datasets']:
         if entry['status'] != 'ready':
             continue
-        raw = resource(entry, 'tsv', fetch); resource(entry, 'xml', fetch)
+        raw = resource(entry, 'tsv', fetch, raw_dir); resource(entry, 'xml', fetch, raw_dir)
         head, header, rows = native.parse_tsv(raw)
         if header != entry['header']:
             raise ValueError('Pinned source header differs from contract')
-        i = str(entry['id']); age = native.age_rule(header)
+        i = str(entry['id']); age = age_rule(header)
+        if not age or age[:2] != (entry['age_column'], entry['age_transformation']):
+            raise ValueError(f'Age rule differs from the reviewed contract: {i}')
         labels = {e['label']: e for e in entry['events']}
         if len(labels) != len(entry['events']):
             raise ValueError('Ambiguous event labels')
@@ -191,17 +194,19 @@ def curate(fetch=False):
         doi = '10.1594/PANGAEA.' + i
         paper = entry.get('paper') or {}
         if paper.get('sha256'):
-            cr = RAW / ('crossref-' + native.sha(paper['doi'].lower().encode())[:16] + '.json')
+            cr = raw_dir / ('crossref-' + native.sha(paper['doi'].lower().encode())[:16] + '.json')
+            if fetch and not cr.exists():
+                native.get('https://api.crossref.org/works/' + quote(paper['doi'], safe=''), cr, paper['sha256'], limit=3_000_000)
             if native.sha(cr.read_bytes()) != paper['sha256']:
                 raise ValueError('Pinned Crossref identity metadata changed')
         depth = native.depth_column(header)
         for label, event in labels.items():
-            rid = 'pangaea6-' + native.slug(label).lower()
+            rid = namespace + '-' + native.slug(label).lower()
             elevation = native.number(event.get('elevation') or '')
             record = records.setdefault(rid, dict(id=rid, name=label, core=label, source_event=label,
                 physical_core_key='PANGAEA:event:' + label, provider='PANGAEA',
-                realm='marine' if elevation is not None and elevation < 0 else 'unknown',
-                archive_type='sediment', latitude=event['lat'], longitude=event['lon'],
+                realm=entry.get('realm', 'marine' if elevation is not None and elevation < 0 else 'unknown'),
+                archive_type=entry.get('archive_type', 'sediment'), latitude=event['lat'], longitude=event['lon'],
                 elevation_m=elevation, water_depth_m=-elevation if elevation is not None and elevation < 0 else None,
                 source_url=entry['source_url'], dataset_doi=doi, publication_year=paper.get('year'), paper_doi=paper.get('doi'),
                 license=entry['license'], license_url=entry['license_url'], source_files=[],
@@ -210,6 +215,7 @@ def curate(fetch=False):
             record['source_files'].append(dict(dataset_doi=doi, url=entry['source_url'],
                 raw_sha256=entry['sha'], xml_sha256=entry['xml_sha'],
                 license=entry['license'], license_url=entry['license_url']))
+            record['qc_notes'] = sorted(set(record['qc_notes'] + entry.get('qc_notes', [])))
             for col in entry['columns']:
                 out, censored, missing = [], 0, 0
                 for row, line, cells in rows:
@@ -250,9 +256,10 @@ def curate(fetch=False):
                     notes.append('Native log ratio; logarithm base not independently verified, no exponentiation')
                 ages = [r[0] for r in out if r[0] is not None]
                 digest = native.sha(json.dumps(out, separators=(',', ':')).encode())[:10]
-                sid = f'pangaea6-{i}:{native.slug(label)}:col{col["column"]}~{digest}'
+                notes.extend(col.get('qc_notes', []))
+                sid = f'{namespace}-{i}:{native.slug(label)}:col{col["column"]}~{digest}'
                 s = dict(id=sid, record_id=rid, proxy=proxy, variable_id=proxy,
-                    label=col['name'] + (' · ' + col['comment'] if col.get('comment') else ''),
+                    label=col.get('label') or col['name'] + (' · ' + col['comment'] if col.get('comment') else ''),
                     unit=col['unit'], original_unit=col['unit'], family=FAMILIES[col['family']],
                     proxy_families=[col['family']], parameter_name_pangaea=col['name'],
                     parameter_comment=col.get('comment'), method=col['method'] or 'not declared in native metadata',
@@ -267,7 +274,7 @@ def curate(fetch=False):
                     license=entry['license'], license_url=entry['license_url'], paper_doi=paper.get('doi'), publication_year=paper.get('year'),
                     publication_relation=paper.get('relation'), paper_identity_sha256=paper.get('sha256'),
                     chronology_status='published_ka_reference_unspecified' if age[1] == native.UNSPECIFIED_KA else 'published_BP',
-                    chronology_label='Published native age; calendar harmonization not independently audited',
+                    chronology_label=entry.get('chronology_label', 'Published native age; calendar harmonization not independently audited'),
                     age_column_original=header[age[0]], age_column_index=age[0], age_unit_original=header[age[0]],
                     age_scale=age[1], age_model=age[1], age_transformation=age[1],
                     depth_frame=header[depth] if depth is not None else 'no depth column in source',
@@ -279,6 +286,9 @@ def curate(fetch=False):
                         'corrientes paleocorriente granulometría' if col['family'] == 'corrientes' else
                         'oxigenación profunda bentónica redox' if col['family'] in ('redox','oxigenacion_bent') else
                         'ratios razones elementos inorgánicos'])
+                if col.get('comparison_parameter_name'):
+                    s['comparison_parameter_name'] = col['comparison_parameter_name']
+                    s['search_aliases'].append(col['comparison_parameter_name'])
                 reason = ('native percentage outside [0,100]' if col['unit'] == '%' and any(r[1] < 0 or r[1] > 100 for r in out)
                           else 'no finite native ages' if not ages
                           else 'native percent label for sortable-silt mean conflicts with mean-size interpretation' if 'mean_carb_free_percent' in (context or '') else None)
@@ -294,13 +304,13 @@ def curate(fetch=False):
     fragment = dict(parent_version=contract['parent_version'],parent_sha256=contract['parent_sha256'],
                     records=[r for r in records.values() if r['id'] in used], series=series,
                     quarantined_series=quarantined, pending=[e for e in contract['datasets'] if e['status'] == 'held'])
-    FRAGMENT.parent.mkdir(parents=True, exist_ok=True)
-    FRAGMENT.write_text(json.dumps(fragment, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
+    fragment_path.parent.mkdir(parents=True, exist_ok=True)
+    fragment_path.write_text(json.dumps(fragment, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
     report = dict(parent_version=contract['parent_version'],
         counts=dict(records=len(used), series=len(series), observations=sum(len(s['rows']) for s in series),
                     quarantined_series=len(quarantined)), audit=audit,
         held=[{k:e.get(k) for k in ('id','status','reason')} for e in contract['datasets'] if e['status'] == 'held'])
-    AUDIT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
+    audit_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
     print(json.dumps(report['counts']))
 
 

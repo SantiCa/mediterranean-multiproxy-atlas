@@ -146,12 +146,12 @@ export function landMask(geojson) {
     );
 }
 export function fieldGrid(items, radiusKm = 600, isLand = null) {
-  // Series at identical coordinates (one core with several methods, or two records of
-  // the same site) become one interpolation node with their median; the map points
-  // stay separate. Counting them twice would overweight that site.
+  // Co-located deployments can differ only in published coordinate precision.
+  // Group to four decimals (about 11 m in latitude) for the regional surface.
+  // Keep the original coordinates, measurements and record identities on the map.
   const bySite = new Map();
   for (const s of items.filter((x) => finite(x.value))) {
-    const k = s.record.longitude + "," + s.record.latitude;
+    const k = Math.round(s.record.longitude * 1e4) + "," + Math.round(s.record.latitude * 1e4);
     if (!bySite.has(k)) bySite.set(k, []);
     bySite.get(k).push(s);
   }
@@ -218,7 +218,7 @@ export function fieldGrid(items, radiusKm = 600, isLand = null) {
     merged,
     reason: cells.length
       ? merged
-        ? `${merged} sitios con varias series en las mismas coordenadas: en la superficie cuentan una vez (mediana); los puntos se muestran por separado.`
+        ? `${merged} sitios con varias series en las mismas coordenadas a cuatro decimales. Cada sitio cuenta una vez en la superficie (mediana).`
         : null
       : "Sin celdas con 3 vecinos dentro del radio. Se conservan los puntos observados.",
   };

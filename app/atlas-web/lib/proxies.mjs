@@ -28,10 +28,9 @@ export function recordMatches(r, f) {
   );
 }
 export function seriesMatches(s, r, f) {
-  const sourceRecord =
-    s.publication_year !== undefined
-      ? { ...r, publication_year: s.publication_year }
-      : r;
+  // A newly linked series can come from another repository than the core record.
+  const sourceRecord = { ...r, provider: s.provider || r.provider,
+    publication_year: s.publication_year !== undefined ? s.publication_year : r.publication_year };
   return (
     recordMatches(sourceRecord, f) &&
     (!f.chronology ||
@@ -88,7 +87,7 @@ export function proxyGroups(data, f = {}) {
         r.name,
         r.provider,
         s.search_aliases,
-        elementRatioAlias(s.parameter_name_pangaea || s.comparison_parameter_name),
+        elementRatioAlias(s.comparison_parameter_name || s.parameter_name_pangaea),
         /polen|pollen/i.test(s.family || "") ? "bosque vegetación árboles" : "",
       ]
         .flat()
@@ -164,7 +163,7 @@ export const aggregateKey = (a) => JSON.stringify(["agg", a.id, a.unit]);
 export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["agg"');
 /* Same PANGAEA parameter (controlled vocabulary) and same unit, any method: the
  * parameter defines the measured quantity; methods remain per series. */
-const paramName = (s) => s.parameter_name_pangaea || s.comparison_parameter_name || null;
+const paramName = (s) => s.comparison_parameter_name || s.parameter_name_pangaea || null;
 /** Identical parameter names can hide different fractions or pollen sums.
  * Native counts remain sample counts, not abundance percentages. */
 export function comparisonContext(s) {
