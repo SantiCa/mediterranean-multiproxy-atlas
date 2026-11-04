@@ -24,7 +24,7 @@ test('dense display thinning preserves extrema and full source array',()=>{
  const shown=displayRows(rows,1000);assert.ok(shown.length<=1000);assert.equal(shown[0],rows[0]);assert.equal(shown.at(-1),rows.at(-1));assert.ok(shown.includes(rows[12345]));assert.ok(shown.includes(rows[23456]));assert.equal(rows.length,36000);assert.deepEqual(extent(rows.map(x=>x.value)),[-90000,90000]);
 });
 test('coincident records are not independent spatial neighbours: one node (median)',()=>{
- const items=[[0,0,1],[0,0,3],[1,0,2],[0,1,2],[1,1,2]].map(c=>({record:{longitude:c[0],latitude:c[1],realm:'marine'},value:c[2]}));
+ const items=[[0,0,1],[0.000003,0.000004,3],[1,0,2],[0,1,2],[1,1,2]].map(c=>({record:{longitude:c[0],latitude:c[1],realm:'marine'},value:c[2]}));
  const g=fieldGrid(items,1000);
  assert.equal(g.merged,1);assert.match(g.reason,/mismas coordenadas/);
  // only 4 distinct sites support each cell; the duplicated site counts once with median 2

@@ -1,4 +1,4 @@
-"""Compare every deployed V28 snapshot asset with the checked local build.
+"""Compare every deployed snapshot asset with the checked local build.
 
 Read-only; no D1 bootstrap or observation API. Optional official Sites service
 access is read through hidden stdin and accepted only for this exact Site origin.
@@ -15,7 +15,7 @@ from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.request import Request, HTTPRedirectHandler, build_opener
 
-SITE = 'https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site'
+SITE = 'https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site'
 
 
 def main():

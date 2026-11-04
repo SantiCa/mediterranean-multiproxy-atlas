@@ -61,6 +61,9 @@ def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX, 
     for provider,fragment in zip(providers,fragments):
         input_counts[provider]={"records":len(fragment["records"]),"series":len(fragment["series"]),"values":sum(len(s["rows"]) for s in fragment["series"])}
         incoming={r["id"]:copy.deepcopy(r) for r in fragment["records"]}
+        explicit_links = fragment.get('verified_parent_links', {})
+        if explicit_links.keys() - incoming.keys():
+            raise ValueError('Parent link refers to an absent incoming record')
         if len(incoming)!=len(fragment["records"]):raise ValueError("Repeated physical-record ID in fragment")
         for r in incoming.values():
             if r["id"] in byrecord:raise ValueError("Existing record ID cannot be overwritten: "+r["id"])
@@ -69,6 +72,12 @@ def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX, 
             r["provider"]="NOAA WDS" if r["provider"].startswith("NOAA") else r["provider"]
             r["inventory_ids"]=r.get("inventory_ids",r.get("inventory_links",[]))
             if any(identifier not in known_inventory for identifier in r["inventory_ids"]):raise ValueError("Unresolved native inventory link: "+r["id"])
+            if r['id'] in explicit_links:
+                parent = byrecord[explicit_links[r['id']]]
+                if core_key(parent) != core_key(r) or any(parent[k] != r[k] for k in ('latitude', 'longitude')):
+                    raise ValueError('Verified link no longer matches the exact parent hole and position')
+                linked[r['id']] = parent['id']
+                continue
             if core_key(r) in oldcores:
                 parent=byrecord[oldcores[core_key(r)]]
                 # Vínculo v5: misma etiqueta de evento PANGAEA y coordenadas idénticas (±1e-4°) en ambos
@@ -83,7 +92,10 @@ def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX, 
             s=copy.deepcopy(source)
             if s["record_id"] in linked:
                 s["linked_from_record"]=s["record_id"];s["record_id"]=linked[s["record_id"]]
-                s.setdefault("qc_notes",[]).append("Serie nueva enlazada a registro padre por evento PANGAEA idéntico (etiqueta+coordenadas)")
+                note = ('Serie enlazada a la misma perforación IODP verificada en el contrato de fuente'
+                        if s['linked_from_record'] in explicit_links else
+                        'Serie nueva enlazada a registro padre por evento PANGAEA idéntico (etiqueta+coordenadas)')
+                s.setdefault('qc_notes', []).append(note)
             if s["record_id"] in held:
                 quarantine.append({"id":s["id"],"reason":"parent_core_identity_requires_linkage_review"});continue
             if s["id"] in byseries:raise ValueError("Series ID reused: "+s["id"])

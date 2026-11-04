@@ -1,0 +1,596 @@
+{
+  "version": "atlas-quantitative-2026-11-04-v7-cb1b445291e",
+  "parent_version": "atlas-quantitative-2026-10-30-v6-c8ff5c5a738",
+  "parent_sha256": "efb5058363910aaa1049b16e6d47b4f7bbc45de1e5cb2df9be24ff6676d4e95c",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 151,
+    "series": 1349,
+    "values": 924446,
+    "new_records": 13,
+    "new_series": 38,
+    "new_values": 20756,
+    "missing_age_values": 6557
+  },
+  "input_fragments": {
+    "pangaea": {
+      "records": 14,
+      "series": 36,
+      "values": 18076
+    },
+    "zenodo": {
+      "records": 1,
+      "series": 2,
+      "values": 2680
+    }
+  },
+  "family_counts": {
+    "Temperatura": 38,
+    "Geoquímica elemental": 327,
+    "Sedimentología": 216,
+    "Biomarcadores": 20,
+    "Micropaleontología": 8,
+    "Isótopos estables": 157,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 172,
+    "Materia orgánica y biomarcadores": 57,
+    "Polen": 321,
+    "Oxigenación bentónica": 9
+  },
+  "comparison_groups": 985,
+  "numeric_age_extent_ka_bp": [
+    -1.5,
+    4700.0
+  ],
+  "admitted_series": [
+    "pangaea7-941786:TTR_12_292G:col2~49f33b46a7",
+    "pangaea7-941790:TTR_12_293G:col2~86c949ee13",
+    "pangaea7-941800:TTR_14_300G:col2~26a32ea2a3",
+    "pangaea7-941806:TTR_14_302G:col2~19da2de119",
+    "pangaea7-941808:TTR_14_304G:col2~2472b41794",
+    "pangaea7-941812:TTR_17_434G:col2~ef6db1a316",
+    "pangaea7-941824:161_975B:col2~894b26339b",
+    "pangaea7-896929:MP39PC:col5~e56946e323",
+    "pangaea7-896930:MP50PC:col4~ec03f734e2",
+    "pangaea7-892362:OHRID:col1~4a62b43d9b",
+    "pangaea7-892362:OHRID:col2~c7df920640",
+    "pangaea7-892362:OHRID:col3~8670eeec29",
+    "pangaea7-892362:OHRID:col4~34991e0d17",
+    "pangaea7-892362:OHRID:col10~87ca8020e8",
+    "pangaea7-892362:OHRID:col11~dd4939f00b",
+    "pangaea7-892362:OHRID:col22~1a791a6831",
+    "pangaea7-892362:OHRID:col26~92386813c9",
+    "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col2~78b1d04b93",
+    "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col4~ab22a15119",
+    "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col5~3ced6f2a3d",
+    "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col6~34703a6bb8",
+    "pangaea7-934305:FU_2001:col6~80c92194c5",
+    "pangaea7-934305:FU_2001:col8~ba54a556e7",
+    "pangaea7-934305:FU_2001:col9~5ff76193a9",
+    "pangaea7-934305:FU_2001:col44~28751b02a2",
+    "pangaea7-934305:FU_2001:col74~398fb45471",
+    "pangaea7-934305:FU_2001:col81~97c42687c6",
+    "pangaea7-934305:FU_2017:col6~88c39e4937",
+    "pangaea7-934305:FU_2017:col8~9e69c6fd71",
+    "pangaea7-934305:FU_2017:col9~777283dc3b",
+    "pangaea7-934305:FU_2017:col44~b6e36fb4dd",
+    "pangaea7-934305:FU_2017:col74~0a6eb2e93e",
+    "pangaea7-934305:FU_2017:col81~7bc477fb05",
+    "pangaea7-896847:ICDP5045_1:col8~d5c32a929f",
+    "pangaea7-896847:ICDP5045_1:col9~07939f2749",
+    "pangaea7-693917:161_975B:col3~52dba9d5e2",
+    "zenodo7-8163513-col3",
+    "zenodo7-8163513-col4"
+  ],
+  "integration_quarantine": [],
+  "held_core_records": [],
+  "linked_to_parent_records": {
+    "pangaea7-icdp5045_1": "pangaea5-icdp5045_1",
+    "zenodo7-339-u1389a": "pangaea5-339_u1389a"
+  },
+  "partial_numeric_overlap_links": [],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "reports/four_v7_pangaea_audit.json",
+    "scripts/importers/four_v7_sources.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "pangaea": [],
+    "zenodo": []
+  },
+  "pending_source_candidates": {
+    "pangaea": [
+      {
+        "id": "941705",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.941705",
+        "sha": "0e087b911c3e77556d639274ef21942b5d314334f5988719da1ddbccbadb8c9b",
+        "xml_sha": "b96e6804841d1584f2d7d08c46294e3bda01fc88817cc374de3d47b29f7ec61f",
+        "title": "Geochemical ratios of ODP Hole 161-975B",
+        "status": "held",
+        "reason": "Separate ODP table lacks a Ti/Ca column. Use 941824."
+      },
+      {
+        "id": "991020",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.991020",
+        "sha": "09f5d369909d09e8d585178f160694950fe9d59788ccfba83b14652289a10f3e",
+        "xml_sha": "262a1d461ae2d2133b2041cb7ef5e12f1425397e29ca5ad094f3a9c41708c122",
+        "title": "X-Ray Fluoresce (XRF) core scanning data from sediment core KC-13, Central Aegean, Greece",
+        "status": "held",
+        "reason": "The log-Ti/Ca column is already in v6 (KC-13)."
+      },
+      {
+        "id": "963433",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.963433",
+        "sha": "ebb7f7c098cbeb478477144dc0f77ecf66c9150ddaf65eb4e309b3bdc2211484",
+        "xml_sha": "ff9700ef8a6d0670537120940bbb88e42febdb3b28bfb0a508c6f25b0a5d4a4a",
+        "title": "Normalized element ratios of sediment core LVL15-1 from Lake Vouliagmeni, Greece",
+        "status": "held",
+        "reason": "Normalized single-element signals, no per-sample age or published Ti/Ca."
+      },
+      {
+        "id": "963435",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.963435",
+        "sha": "b8f54869ee9a5a9d87c0bf26c447f5d88028f3b057f860b1267ade9cf00b87eb",
+        "xml_sha": "3abe4d88a09e6034518cdf323df6b2c5830cab96d140f7eb089286687b01b684",
+        "title": "Normalized element ratios of sediment core LVL15-4 from Lake Vouliagmeni, Greece",
+        "status": "held",
+        "reason": "Normalized single-element signals, no per-sample age or published Ti/Ca."
+      },
+      {
+        "id": "876039",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.876039",
+        "sha": "dd629fd8283ccb392b107bd8b6e719651390489cb31036df857d64bdc48e62c2",
+        "xml_sha": "c31692038fe038ec7feb11766055281d78b0228d06b00d70c55643fb5de4de77",
+        "title": "(Figure 12) Element ratios and silt/clay size fraction of core BL12-10 from the El Bibane Lagoon, Tunisia",
+        "status": "held",
+        "reason": "No sample ages in table. The BL12-10 model needs a verified tie-point source."
+      },
+      {
+        "id": "896928",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.896928",
+        "sha": "4ba607f726b7df99ee67c943a7167e1f2e8536c9581aa39459cc1b304dea8d18",
+        "xml_sha": "ccc7c0d8150c711b380fbe38b9646a6fa7e6b675fec06b1b58a8184adbc69a41",
+        "title": "Geochemistry and δ¹⁸O Globigerinoides ruber records of sediment core MP37PC",
+        "status": "held",
+        "reason": "Native field says Fe/A [%]. Confirm identity and unit with authors or an explicit correction before including MP37PC."
+      },
+      {
+        "id": "971575",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.971575",
+        "sha": "c17f857c2a43c12086cc7d1cdf5ee388d062136f747ea6d274d9c73f1886b73c",
+        "xml_sha": "73ed16ca2f2a745c7538216e6c6ce84fd0efe173f2a10ed063daa057c931dc21",
+        "title": "Comprises cohesive fine particles of sediment core MD99-2337",
+        "status": "held",
+        "reason": "Sortable-silt mean with sediment depth only. No verified same-core depth-age contract."
+      },
+      {
+        "id": "971577",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.971577",
+        "sha": "5195d37bfe81a01f769fb0a047d9ea3a57903a43e6e39ab3dff9ca5c431db454",
+        "xml_sha": "74536322a4d35baf0cece379fd4db57557c8f05f110d482460d8b3fb03db8283",
+        "title": "Comprises cohesive fine particles of sediment core CADKS24",
+        "status": "held",
+        "reason": "Sortable-silt mean with sediment depth only. No verified same-core depth-age contract."
+      },
+      {
+        "id": "859195",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.859195",
+        "sha": "c65709b2ad49d60e347f7a8e77dd4b064ad170dcf49127a90f5d1e7b5e15dd8e",
+        "xml_sha": "40aca8e5e590cbf8df0371c6b1d3730ab61d302b4a980b1f7bc4e95b9cead9dd",
+        "title": "Grain size composition of IODP Hole 339-U1387C",
+        "status": "held",
+        "reason": "No native age or sortable-silt series in the target size fraction."
+      },
+      {
+        "id": "871498",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.871498",
+        "sha": "bf1bb22bdf329f1279b97b65b505b60ecfe2ed0b5d67d481bf688fb830220e89",
+        "xml_sha": "099dcbdc6499e7484f9d4e4b967812dfc8f03fb814c0679fd2b56f6096d08034",
+        "title": "Grain size distribution of IODP Site 339-U1389",
+        "status": "held",
+        "reason": "Native 63–150 µm sand fraction, not 10–63 µm sortable silt."
+      },
+      {
+        "id": "833980",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.833980",
+        "sha": "79b1c2407ef5b48b23e65c12f353cd0d70e70ce2ee1e269b5b4988222693203a",
+        "xml_sha": "f636c416532107542e671a5415ae73a58dd7bdd2df802179ec7629e5b857617b",
+        "title": "Grain size analysis of IODP Hole 339-U1387B",
+        "status": "held",
+        "reason": "Bulk <63 µm mean and no native age."
+      },
+      {
+        "id": "937299",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.937299",
+        "sha": "7098e58b58ec5e4eb6d8ae7aab7e1fd3df84bfcff584591a3600617426cd22ab",
+        "xml_sha": "68ff4f2de2612a467df7766ac7c3d4f6c597db2a6e50a5558959aadc928988e2",
+        "title": "Grain size analysis from IODP Core 339-U1389A-11H",
+        "status": "held",
+        "reason": "Native grain-size bins, no age."
+      },
+      {
+        "id": "937300",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.937300",
+        "sha": "226764b64c6ebad367d7282ee15c14c372f592504442ab1773e5a34432f5b3c9",
+        "xml_sha": "71f5354d95081d4b31de359b1094514217204b51a5145928e04d7a5ed4e9f813",
+        "title": "Carbonate free grain size analysis from IODP Core 339-U1389A-11H",
+        "status": "held",
+        "reason": "Native carbonate-free grain-size bins, no age."
+      },
+      {
+        "id": "885796",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.885796",
+        "sha": "d2796834450d212920aadebf79700a067f468257715aac3e9bea4d85ae8ae2ce",
+        "xml_sha": "9604faec5f20e9010556c3394fba8d6eb2d8f7163e2f620f1643b284e3451983",
+        "title": "Pollen record of sediment core Co1260 from Lake Dojran",
+        "status": "held",
+        "reason": "CC-BY-NC-ND. New redistribution awaits rights review."
+      },
+      {
+        "id": "858056",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.858056",
+        "sha": "430fbe7bbf38ada7289ceaa26b40422b356cf74bc8733a92a0c8716b1234babf",
+        "xml_sha": "b893771cfda75791171a5b58a5d43c133440fa4a885444be63d599484a843fe5",
+        "title": "Pollen and non-pollen palynomorph data from Lake Iznik, NW Turkey (last 31 ka cal BP)",
+        "status": "held",
+        "reason": "Native counts, not the already-used forest percentage proxies."
+      },
+      {
+        "id": "871228",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.871228",
+        "sha": "6e35074107d9f029f0fbead7b27ee3a0978434f917bb0aada237bac59a704c8a",
+        "xml_sha": "eb6ccf719c0fbdabb9781e671646ff8890fbb8b8ff9e973c472d07ec0c8fae14",
+        "title": "A new high-resolution pollen sequence at Lake Van, Turkey, during MIS 6-7",
+        "status": "held",
+        "reason": "Native forest taxa percentages, outside the current longitude limit (42.669° E)."
+      },
+      {
+        "id": "987196",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.987196",
+        "sha": "c1b93aa0f9e8140bb5bb06184f255ce350102d91e019d898e293cb3a6efc21d8",
+        "xml_sha": "2f097974cf54bb5f3c3749b1b82e1229c8419d6992b0d7f7e28f4dbf94f1b25b",
+        "title": "Pigments, sequential extraction (P, Mn and Fe), Ages, LOI from core SOP08-3C3 of Late Glacial Soppensee, Switzerland",
+        "status": "held",
+        "reason": "Latest native metadata links work in preparation. Adjacent site retained as candidate."
+      },
+      {
+        "id": "993109",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993109",
+        "sha": "49410cb5eeaab54ceb13540a0a139bbc669840e778d1a78190f59b4f015a047f",
+        "xml_sha": "c283df974227f0f3164043894f41d72053a872572ae613766cb2bacde92bb8ba",
+        "title": "Pigments, sequential extraction (P, Fe, Mn), pollen and CNS measurements from sediment core UBE22-COMP1 of lake Übeschi, Switzerland",
+        "status": "held",
+        "reason": "Work in preparation. Table has both modelled calendar and raw radiocarbon columns. Adjacent site retained as candidate."
+      },
+      {
+        "id": "872820",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872820",
+        "sha": "683cc78adf545ae60ed0d909bde836b3ff23c7869f95cdf3f2afed8d58c60621",
+        "xml_sha": "c840c6bf01d22d8275ac759ec92d39ba9001948fa62706db3792f161e28af2a1",
+        "title": "CLAM age model and biomes of sediment core Stracciacappa",
+        "status": "held",
+        "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+      },
+      {
+        "id": "872823",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872823",
+        "sha": "3ecd8bb7ae58d4618e625da4157fcbafaa6e3786c2e1b128fabb35cd8ceda74d",
+        "xml_sha": "c8d655fb987e710c1c15e03bd9268c15105f781335a5ec07aec2740df7ef38d1",
+        "title": "CLAM age model and biomes of sediment core Valle_di_Castiglione",
+        "status": "held",
+        "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+      },
+      {
+        "id": "872825",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872825",
+        "sha": "6bc5dc600e1d441e30c55e9bb2101e5d5a4b3ada95003b5c7351269b86a02c82",
+        "xml_sha": "af63b153007a1343861a6d8c9382d4f922beb3e058d2c99a8ed18f9b092cf9a2",
+        "title": "CLAM age model and biomes of sediment core XINIAS",
+        "status": "held",
+        "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+      },
+      {
+        "id": "884740",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.884740",
+        "sha": "c8ce67ce84c948471637ef7d216c1130eac7a3d1d7e486119eaa2d7b0f226a3d",
+        "xml_sha": "ea9a191800fd6fe38f5cd42f63aa4212231d90b902f5b20199d4a5fd20fa085d",
+        "title": "Holocene pollen record from Lake Kinneret (Sea of Galilee), Israel",
+        "status": "held",
+        "reason": "Native counts, not the already-used forest percentage proxies."
+      },
+      {
+        "id": "874340",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.874340",
+        "sha": "d04254a9f83dc17eae3bc8272f42edb7e186382abeff8c5de90d956d02be6426",
+        "xml_sha": "0becdf1779dda0786e4838316c335b65b3c37821b6451a18dfa2b8f97bb394dd",
+        "title": "Pollen record of sediment core Ein Gedi (DSEn), Dead Sea",
+        "status": "held",
+        "reason": "Native counts, not the already-used forest percentage proxies."
+      },
+      {
+        "id": "713169",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.713169",
+        "sha": "090748ba3c0e2aab295fc5e5f9ffc58eb5554c456ca086d5c14e1b4b6b8f95ac",
+        "xml_sha": "673eeab65b5c9a7ab89daac2217ed7ecf6f44c9b735d8bd0fbd79a44665c8229",
+        "title": "Pollen record of sediment core Bokanjacko Blato 1",
+        "status": "held",
+        "reason": "Native counts, no sample ages."
+      },
+      {
+        "id": "713170",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.713170",
+        "sha": "88b9deeaf260a3476b7ed029ddf943ae85d9cd18bc55fe6b64cc06ba2f054454",
+        "xml_sha": "068c6cc6a39c5187d4f19440d7601985a19f1b86025268b91c6780485ed55eab",
+        "title": "Pollen record of sediment core Bokanjacko Blato 2",
+        "status": "held",
+        "reason": "Native counts, no sample ages."
+      },
+      {
+        "id": "783369",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.783369",
+        "sha": "1b7626609fb73bd0765577ff111905968825900d1938288e3eb04cfc412d45d7",
+        "xml_sha": "9ecece8ece77dde9f44917467c0dbf0e487f798bd62b6fb56293cab3f9d67c1f",
+        "title": "(Table S2) Ratios of major elements to Al concentrations in ODP Hole 161-974C",
+        "status": "held",
+        "reason": "Fe/Al by sediment depth. No verified same-core depth-age contract."
+      }
+    ],
+    "zenodo": []
+  },
+  "sha256": "5d64227c4b8c21c3657cfed9246488c2be1b140218a2e8454336a6086cf10fbe",
+  "bytes": 61159572,
+  "coverage_before": {
+    "Ti/Ca": {
+      "records": 8,
+      "locations": 8,
+      "series": 9,
+      "values": 3591,
+      "record_ids": [
+        "noaa-43639-61971",
+        "pangaea-667328",
+        "pangaea-954457",
+        "pangaea5-geob7604_2",
+        "pangaea5-geob7607_2",
+        "pangaea5-geob7609_1",
+        "pangaea5-geob7610_1",
+        "pangaea5-md99_2339"
+      ]
+    },
+    "Fe/Al": {
+      "records": 4,
+      "locations": 3,
+      "series": 4,
+      "values": 859,
+      "record_ids": [
+        "pangaea5-160_969d",
+        "pangaea5-mvseis08_tg_2",
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ]
+    },
+    "sortable silt mean": {
+      "records": 3,
+      "locations": 3,
+      "series": 3,
+      "values": 709,
+      "record_ids": [
+        "noaa-43639-61971",
+        "pangaea5-339_u1387c",
+        "pangaea5-ote_2019_kc_13"
+      ]
+    },
+    "sortable silt %": {
+      "records": 4,
+      "locations": 3,
+      "series": 7,
+      "values": 230,
+      "record_ids": [
+        "noaa-43639-61971",
+        "pangaea5-mvseis08_tg_2",
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ]
+    },
+    "forest pollen %": {
+      "records": 2,
+      "locations": 2,
+      "series": 12,
+      "values": 1508,
+      "record_ids": [
+        "pangaea-818921",
+        "pangaea6-co1215"
+      ]
+    }
+  },
+  "coverage_after": {
+    "Ti/Ca": {
+      "records": 15,
+      "locations": 14,
+      "series": 16,
+      "values": 4866,
+      "record_ids": [
+        "noaa-43639-61971",
+        "pangaea-667328",
+        "pangaea-954457",
+        "pangaea5-geob7604_2",
+        "pangaea5-geob7607_2",
+        "pangaea5-geob7609_1",
+        "pangaea5-geob7610_1",
+        "pangaea5-md99_2339",
+        "pangaea7-161_975b",
+        "pangaea7-ttr_12_292g",
+        "pangaea7-ttr_12_293g",
+        "pangaea7-ttr_14_300g",
+        "pangaea7-ttr_14_302g",
+        "pangaea7-ttr_14_304g",
+        "pangaea7-ttr_17_434g"
+      ]
+    },
+    "Fe/Al": {
+      "records": 7,
+      "locations": 6,
+      "series": 7,
+      "values": 1228,
+      "record_ids": [
+        "pangaea5-160_969d",
+        "pangaea5-mvseis08_tg_2",
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc",
+        "pangaea7-161_975b",
+        "pangaea7-mp39pc",
+        "pangaea7-mp50pc"
+      ]
+    },
+    "sortable silt mean": {
+      "records": 4,
+      "locations": 4,
+      "series": 4,
+      "values": 2049,
+      "record_ids": [
+        "noaa-43639-61971",
+        "pangaea5-339_u1387c",
+        "pangaea5-339_u1389a",
+        "pangaea5-ote_2019_kc_13"
+      ]
+    },
+    "sortable silt %": {
+      "records": 5,
+      "locations": 4,
+      "series": 8,
+      "values": 1570,
+      "record_ids": [
+        "noaa-43639-61971",
+        "pangaea5-339_u1389a",
+        "pangaea5-mvseis08_tg_2",
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ]
+    },
+    "forest pollen %": {
+      "records": 7,
+      "locations": 5,
+      "series": 38,
+      "values": 17940,
+      "record_ids": [
+        "pangaea-818921",
+        "pangaea5-icdp5045_1",
+        "pangaea6-co1215",
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017",
+        "pangaea7-ohrid",
+        "pangaea7-tenaghi_philippon_tp_2005_tp_2009_composite"
+      ]
+    }
+  },
+  "coverage_scope": "Coordinates rounded to 4 decimals. The two documented event labels for the Ohrid DEEP sequence count as one site. Methods, units and denominators remain separate for map compatibility."
+}

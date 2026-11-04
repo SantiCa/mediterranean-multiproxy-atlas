@@ -1,0 +1,539 @@
+{
+  "parent_version": "atlas-quantitative-2026-10-30-v6-c8ff5c5a738",
+  "counts": {
+    "records": 14,
+    "series": 36,
+    "observations": 18076,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea7-941786:TTR_12_292G:col2~49f33b46a7",
+      "dataset": "10.1594/PANGAEA.941786",
+      "event": "TTR-12_292G",
+      "source_column": 2,
+      "observations": 235,
+      "missing_cells": 3,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-941790:TTR_12_293G:col2~86c949ee13",
+      "dataset": "10.1594/PANGAEA.941790",
+      "event": "TTR-12_293G",
+      "source_column": 2,
+      "observations": 267,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-941800:TTR_14_300G:col2~26a32ea2a3",
+      "dataset": "10.1594/PANGAEA.941800",
+      "event": "TTR-14_300G",
+      "source_column": 2,
+      "observations": 159,
+      "missing_cells": 17,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-941806:TTR_14_302G:col2~19da2de119",
+      "dataset": "10.1594/PANGAEA.941806",
+      "event": "TTR-14_302G",
+      "source_column": 2,
+      "observations": 234,
+      "missing_cells": 4,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-941808:TTR_14_304G:col2~2472b41794",
+      "dataset": "10.1594/PANGAEA.941808",
+      "event": "TTR-14_304G",
+      "source_column": 2,
+      "observations": 75,
+      "missing_cells": 120,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-941812:TTR_17_434G:col2~ef6db1a316",
+      "dataset": "10.1594/PANGAEA.941812",
+      "event": "TTR-17_434G",
+      "source_column": 2,
+      "observations": 165,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-941824:161_975B:col2~894b26339b",
+      "dataset": "10.1594/PANGAEA.941824",
+      "event": "161-975B",
+      "source_column": 2,
+      "observations": 140,
+      "missing_cells": 22,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-896929:MP39PC:col5~e56946e323",
+      "dataset": "10.1594/PANGAEA.896929",
+      "event": "MP39PC",
+      "source_column": 5,
+      "observations": 140,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-896930:MP50PC:col4~ec03f734e2",
+      "dataset": "10.1594/PANGAEA.896930",
+      "event": "MP50PC",
+      "source_column": 4,
+      "observations": 153,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col1~4a62b43d9b",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 1,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col2~c7df920640",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 2,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col3~8670eeec29",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 3,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col4~34991e0d17",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 4,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col10~87ca8020e8",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 10,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col11~dd4939f00b",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 11,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col22~1a791a6831",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 22,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-892362:OHRID:col26~92386813c9",
+      "dataset": "10.1594/PANGAEA.892362",
+      "event": "OHRID",
+      "source_column": 26,
+      "observations": 308,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col2~78b1d04b93",
+      "dataset": "10.1594/PANGAEA.943593",
+      "event": "Tenaghi Philippon TP-2005/TP-2009 composite",
+      "source_column": 2,
+      "observations": 2347,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col4~ab22a15119",
+      "dataset": "10.1594/PANGAEA.943593",
+      "event": "Tenaghi Philippon TP-2005/TP-2009 composite",
+      "source_column": 4,
+      "observations": 2347,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col5~3ced6f2a3d",
+      "dataset": "10.1594/PANGAEA.943593",
+      "event": "Tenaghi Philippon TP-2005/TP-2009 composite",
+      "source_column": 5,
+      "observations": 2347,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-943593:Tenaghi_Philippon_TP_2005_TP_2009_composite:col6~34703a6bb8",
+      "dataset": "10.1594/PANGAEA.943593",
+      "event": "Tenaghi Philippon TP-2005/TP-2009 composite",
+      "source_column": 6,
+      "observations": 2347,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2001:col6~80c92194c5",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2001",
+      "source_column": 6,
+      "observations": 206,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2001:col8~ba54a556e7",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2001",
+      "source_column": 8,
+      "observations": 206,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2001:col9~5ff76193a9",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2001",
+      "source_column": 9,
+      "observations": 206,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2001:col44~28751b02a2",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2001",
+      "source_column": 44,
+      "observations": 206,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2001:col74~398fb45471",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2001",
+      "source_column": 74,
+      "observations": 206,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2001:col81~97c42687c6",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2001",
+      "source_column": 81,
+      "observations": 206,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2017:col6~88c39e4937",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2017",
+      "source_column": 6,
+      "observations": 324,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2017:col8~9e69c6fd71",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2017",
+      "source_column": 8,
+      "observations": 324,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2017:col9~777283dc3b",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2017",
+      "source_column": 9,
+      "observations": 324,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2017:col44~b6e36fb4dd",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2017",
+      "source_column": 44,
+      "observations": 324,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2017:col74~0a6eb2e93e",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2017",
+      "source_column": 74,
+      "observations": 324,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-934305:FU_2017:col81~7bc477fb05",
+      "dataset": "10.1594/PANGAEA.934305",
+      "event": "FU-2017",
+      "source_column": 81,
+      "observations": 324,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-896847:ICDP5045_1:col8~d5c32a929f",
+      "dataset": "10.1594/PANGAEA.896847",
+      "event": "ICDP5045-1",
+      "source_column": 8,
+      "observations": 700,
+      "missing_cells": 2094,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-896847:ICDP5045_1:col9~07939f2749",
+      "dataset": "10.1594/PANGAEA.896847",
+      "event": "ICDP5045-1",
+      "source_column": 9,
+      "observations": 700,
+      "missing_cells": 2094,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea7-693917:161_975B:col3~52dba9d5e2",
+      "dataset": "10.1594/PANGAEA.693917",
+      "event": "161-975B",
+      "source_column": 3,
+      "observations": 76,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": "941705",
+      "status": "held",
+      "reason": "Separate ODP table lacks a Ti/Ca column. Use 941824."
+    },
+    {
+      "id": "991020",
+      "status": "held",
+      "reason": "The log-Ti/Ca column is already in v6 (KC-13)."
+    },
+    {
+      "id": "963433",
+      "status": "held",
+      "reason": "Normalized single-element signals, no per-sample age or published Ti/Ca."
+    },
+    {
+      "id": "963435",
+      "status": "held",
+      "reason": "Normalized single-element signals, no per-sample age or published Ti/Ca."
+    },
+    {
+      "id": "876039",
+      "status": "held",
+      "reason": "No sample ages in table. The BL12-10 model needs a verified tie-point source."
+    },
+    {
+      "id": "896928",
+      "status": "held",
+      "reason": "Native field says Fe/A [%]. Confirm identity and unit with authors or an explicit correction before including MP37PC."
+    },
+    {
+      "id": "971575",
+      "status": "held",
+      "reason": "Sortable-silt mean with sediment depth only. No verified same-core depth-age contract."
+    },
+    {
+      "id": "971577",
+      "status": "held",
+      "reason": "Sortable-silt mean with sediment depth only. No verified same-core depth-age contract."
+    },
+    {
+      "id": "859195",
+      "status": "held",
+      "reason": "No native age or sortable-silt series in the target size fraction."
+    },
+    {
+      "id": "871498",
+      "status": "held",
+      "reason": "Native 63–150 µm sand fraction, not 10–63 µm sortable silt."
+    },
+    {
+      "id": "833980",
+      "status": "held",
+      "reason": "Bulk <63 µm mean and no native age."
+    },
+    {
+      "id": "937299",
+      "status": "held",
+      "reason": "Native grain-size bins, no age."
+    },
+    {
+      "id": "937300",
+      "status": "held",
+      "reason": "Native carbonate-free grain-size bins, no age."
+    },
+    {
+      "id": "885796",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. New redistribution awaits rights review."
+    },
+    {
+      "id": "858056",
+      "status": "held",
+      "reason": "Native counts, not the already-used forest percentage proxies."
+    },
+    {
+      "id": "871228",
+      "status": "held",
+      "reason": "Native forest taxa percentages, outside the current longitude limit (42.669° E)."
+    },
+    {
+      "id": "987196",
+      "status": "held",
+      "reason": "Latest native metadata links work in preparation. Adjacent site retained as candidate."
+    },
+    {
+      "id": "993109",
+      "status": "held",
+      "reason": "Work in preparation. Table has both modelled calendar and raw radiocarbon columns. Adjacent site retained as candidate."
+    },
+    {
+      "id": "872820",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+    },
+    {
+      "id": "872823",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+    },
+    {
+      "id": "872825",
+      "status": "held",
+      "reason": "CC-BY-NC-ND. Biome definition and redistribution require review."
+    },
+    {
+      "id": "884740",
+      "status": "held",
+      "reason": "Native counts, not the already-used forest percentage proxies."
+    },
+    {
+      "id": "874340",
+      "status": "held",
+      "reason": "Native counts, not the already-used forest percentage proxies."
+    },
+    {
+      "id": "713169",
+      "status": "held",
+      "reason": "Native counts, no sample ages."
+    },
+    {
+      "id": "713170",
+      "status": "held",
+      "reason": "Native counts, no sample ages."
+    },
+    {
+      "id": "783369",
+      "status": "held",
+      "reason": "Fe/Al by sediment depth. No verified same-core depth-age contract."
+    }
+  ]
+}

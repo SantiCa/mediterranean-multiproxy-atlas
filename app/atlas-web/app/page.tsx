@@ -898,7 +898,7 @@ export default function Atlas() {
               onChange={(e) => change("provider", e.target.value)}
             >
               <option value="all">Todas las fuentes</option>
-              {[...new Set(catalog.records.map((r: any) => r.provider))]
+              {[...new Set([...catalog.records, ...catalog.series].map((r: any) => r.provider).filter(Boolean))]
                 .sort()
                 .map((v: any) => (
                   <option key={v}>{v}</option>
@@ -994,7 +994,7 @@ export default function Atlas() {
             <Database size={16} />
             <span>
               <b>{fmt(totalValues, 0)} valores trazables</b>
-              <small>PANGAEA + NOAA · {catalog.records.length} registros</small>
+              <small>Fuentes publicadas · {catalog.records.length} registros</small>
             </span>
           </div>
         </aside>
@@ -1165,10 +1165,12 @@ export default function Atlas() {
                   <span>
                     {active.record.realm === "marine"
                       ? "Sedimento marino"
-                      : "Espeleotema"}
+                      : /speleothem/i.test(active.record.archive_type || "")
+                        ? "Espeleotema"
+                        : "Archivo continental"}
                   </span>
                   <span>
-                    {active.record.provider === "PANGAEA" ? "PANGAEA" : "NOAA"}
+                    {active.series.provider || active.record.provider}
                   </span>
                 </div>
                 <div className="result-card">
