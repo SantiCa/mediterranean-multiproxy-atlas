@@ -4,7 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 04-11-2026
-- Tarea actual: CUR-SS-AGES en curso. Verificar cronologías de CADKS24, MD99-2337, U1386 y U1390, incorporar las series verificadas, corregir el contador de ubicaciones únicas y publicar.
+- Tarea actual: CUR-SS-AGES en curso. Verificar cronologías de CADKS24, MD99-2337, U1386 y U1390, incorporar las series verificadas, corregir el contador de ubicaciones únicas y publicar. Contador corregido y 28 pruebas web correctas. Continúa la auditoría cronológica.
 - Lote anterior: CUR-COVERAGE-30 cerrado: lote PANGAEA+NOAA incorporado y publicado. Siguiente propuesta: ampliar cobertura comparable continental y ratios/corrientes por ubicación.
 - Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v7-cb1b445291e con 151 registros, 1.349 series y 924.446 valores. El dominio anterior redirige al actual. Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: 13 registros, 38 series y 20.756 valores nuevos. Ti/Ca 8→14 ubicaciones, Fe/Al 3→6, sortable silt 3→4 por medida y polen forestal 2→5. 74 pruebas Python, 27 Node, tsc, compilación, cotejo local y QA del mapa. Handoff docs/handoffs/cur-four-coverage.md.

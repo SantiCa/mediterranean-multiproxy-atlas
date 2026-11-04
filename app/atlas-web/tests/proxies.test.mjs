@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {groupKey,proxyGroups,filterGroups,recordMatches} from '../lib/proxies.mjs';
-import {summarize,fieldGrid} from '../lib/science.mjs';
+import {summarize,fieldGrid,mapSiteCounts} from '../lib/science.mjs';
 import {timeExtent} from '../lib/timeline.mjs';
 import {displayRows,extent} from '../lib/plot.mjs';
 const records=[{id:'m',name:'MD1',provider:'PANGAEA',realm:'marine',publication_year:2004},{id:'l',name:'Lake',provider:'NOAA WDS',realm:'lake',publication_year:2020},{id:'u',name:'Unknown paper',provider:'PANGAEA',realm:'marine',publication_year:null}];
@@ -29,4 +29,10 @@ test('coincident records are not independent spatial neighbours: one node (media
  assert.equal(g.merged,1);assert.match(g.reason,/mismas coordenadas/);
  // only 4 distinct sites support each cell; the duplicated site counts once with median 2
  assert.ok(g.cells.every(c=>c.neighbors<=4));assert.ok(g.cells.every(c=>Math.abs(c.value-2)<1e-9));
+});
+test('map coverage counts distinct locations, including zero and excluding missing coordinates',()=>{
+ const point=(id,longitude,latitude,value)=>({record:{id,longitude,latitude},value});
+ const items=[point('a',-2.75467,36.17357,0),point('a',-2.75467,36.17357,null),
+   point('b',-2.75466667,36.17356667,2),point('c',-4,36,null),point('d',null,36,3)];
+ assert.deepEqual(mapSiteCounts(items),{total:2,withData:1});
 });
