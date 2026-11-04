@@ -145,13 +145,30 @@ export function landMask(geojson) {
         !g.rings.slice(1).some((h) => inside(p, h)),
     );
 }
+// Four decimals group coordinates reported at slightly different precision.
+// Use the same location key for map coverage and interpolation.
+function siteKey({ longitude, latitude }) {
+  return finite(longitude) && finite(latitude)
+    ? `${Math.round(longitude * 1e4)},${Math.round(latitude * 1e4)}`
+    : null;
+}
+
+export function mapSiteCounts(items) {
+  const sites = new Set(), withData = new Set();
+  for (const item of items) {
+    const key = siteKey(item.record);
+    if (key === null) continue;
+    sites.add(key);
+    if (finite(item.value)) withData.add(key);
+  }
+  return { total: sites.size, withData: withData.size };
+}
+
 export function fieldGrid(items, radiusKm = 600, isLand = null) {
-  // Co-located deployments can differ only in published coordinate precision.
-  // Group to four decimals (about 11 m in latitude) for the regional surface.
-  // Keep the original coordinates, measurements and record identities on the map.
   const bySite = new Map();
   for (const s of items.filter((x) => finite(x.value))) {
-    const k = Math.round(s.record.longitude * 1e4) + "," + Math.round(s.record.latitude * 1e4);
+    const k = siteKey(s.record);
+    if (k === null) continue;
     if (!bySite.has(k)) bySite.set(k, []);
     bySite.get(k).push(s);
   }

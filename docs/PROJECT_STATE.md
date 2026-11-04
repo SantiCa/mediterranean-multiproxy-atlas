@@ -1,8 +1,15 @@
 # Estado breve del proyecto
 
-Actualizado: 04-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
+Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable v7 (actual, 04-11-2026)
+## Ejecutable v8 (actual, 05-11-2026)
+
+- Site privado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site.
+- Release v8-c131d231e50: **154 registros / 1.352 series / 924.752 valores / 986 grupos base**. Añade 306 mediciones de tamaño medio de sortable silt en U1386, U1390 y CADKS24. 248 quedan fechadas por interpolación entre controles publicados.
+- Contador del mapa por coordenadas a cuatro decimales. Los valores fuera de controles se conservan por profundidad y se excluyen de las ventanas de edad.
+- Verificación y límites en docs/handoffs/cur-ss-ages.md y reports/quantitative_v8_release.json.
+
+## Referencia histórica v7 (04-11-2026)
 
 - Site privado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site. La dirección anterior redirige aquí.
 - Release v7-cb1b445291e: **151 registros / 1.349 series / 924.446 valores / 985 grupos base**. Añade 13 registros, 38 series y 20.756 valores de PANGAEA y Zenodo sobre v6.

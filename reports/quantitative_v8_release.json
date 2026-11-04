@@ -1,0 +1,236 @@
+{
+  "version": "atlas-quantitative-2026-11-05-v8-c131d231e50",
+  "parent_version": "atlas-quantitative-2026-11-04-v7-cb1b445291e",
+  "parent_sha256": "5d64227c4b8c21c3657cfed9246488c2be1b140218a2e8454336a6086cf10fbe",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 154,
+    "series": 1352,
+    "values": 924752,
+    "new_records": 3,
+    "new_series": 3,
+    "new_values": 306,
+    "missing_age_values": 6615
+  },
+  "input_fragments": {
+    "sortable_silt": {
+      "records": 3,
+      "series": 3,
+      "values": 306
+    }
+  },
+  "family_counts": {
+    "Temperatura": 38,
+    "Geoquímica elemental": 327,
+    "Sedimentología": 219,
+    "Biomarcadores": 20,
+    "Micropaleontología": 8,
+    "Isótopos estables": 157,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 172,
+    "Materia orgánica y biomarcadores": 57,
+    "Polen": 321,
+    "Oxigenación bentónica": 9
+  },
+  "comparison_groups": 986,
+  "numeric_age_extent_ka_bp": [
+    -1.5,
+    4700.0
+  ],
+  "admitted_series": [
+    "mendeley8-339-u1386-ss-mean",
+    "mendeley8-339-u1390-ss-mean",
+    "pangaea8-cadks24-ss-mean"
+  ],
+  "integration_quarantine": [],
+  "held_core_records": [],
+  "linked_to_parent_records": {},
+  "partial_numeric_overlap_links": [],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "mendeley8-339-u1386",
+        "mendeley8-339-u1390"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "scripts/importers/ss_v8_sources.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "sortable_silt": []
+  },
+  "pending_source_candidates": {
+    "sortable_silt": [
+      {
+        "core": "MD99-2337",
+        "doi": "10.1594/PANGAEA.971575",
+        "reference": "https://doi.org/10.1016/j.margeo.2017.09.014",
+        "reason": "Los datos PANGAEA son por profundidad. Hassan (2014), cap. I, fig. 4, y Moal-Darrigade (2022), §3.2.1.2, identifican bioeventos y la referencia de Ducassou et al. (2018), pero no se localizó una tabla numérica edad–profundidad verificable para este testigo. No se tomaron edades de MD99-2339 ni se convirtieron las bandas de la figura en puntos de control."
+      }
+    ]
+  },
+  "sha256": "f3fa459a341e68d83c677e9aecb6ceb9832a960253635d4a56cb8460f0c7bbd9",
+  "bytes": 61194507,
+  "chronology_audit": [
+    {
+      "core": "339-U1386",
+      "series": "mendeley8-339-u1386-ss-mean",
+      "source_values": 33,
+      "dated_values": 30,
+      "no_age_values": 3,
+      "model_depth_m": [
+        0.18,
+        13.613
+      ],
+      "dated_age_ka_bp": [
+        3.1803777777777773,
+        24.02900697292863
+      ],
+      "chronology": "Moal-Darrigade (2022), thesis table 3-5, printed p. 74 (PDF p. 110)"
+    },
+    {
+      "core": "339-U1390",
+      "series": "mendeley8-339-u1390-ss-mean",
+      "source_values": 187,
+      "dated_values": 186,
+      "no_age_values": 1,
+      "model_depth_m": [
+        0.16,
+        21.23
+      ],
+      "dated_age_ka_bp": [
+        0.33325,
+        22.282
+      ],
+      "chronology": "van Dijk et al. (2018), archived sample ages at IODP 339-U1390, PANGAEA.884620"
+    },
+    {
+      "core": "CADKS24",
+      "series": "pangaea8-cadks24-ss-mean",
+      "source_values": 86,
+      "dated_values": 32,
+      "no_age_values": 54,
+      "model_depth_m": [
+        2.145,
+        5.26
+      ],
+      "dated_age_ka_bp": [
+        11.732296296296298,
+        18.104645484949835
+      ],
+      "chronology": "Hassan (2014), chapter III, table 2, printed p. 202 (PDF p. 208)"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "parent_sha256": "5d64227c4b8c21c3657cfed9246488c2be1b140218a2e8454336a6086cf10fbe",
+  "workbook": {
+    "file": "mend-ss.xlsx",
+    "url": "https://data.mendeley.com/public-files/datasets/8h9cfjkdpg/files/c8bc034c-6069-4452-9bd5-382dc40b8098/file_downloaded",
+    "sha256": "c1fec228fc0b95dc1550f2a5312cb8f8c56154c5a5403dc5191461fed250498e",
+    "doi": "10.17632/8h9cfjkdpg.2",
+    "landing_page": "https://data.mendeley.com/datasets/8h9cfjkdpg/2",
+    "paper_doi": "10.1016/j.margeo.2021.106697",
+    "paper_method_evidence": {
+      "file": "hal1.pdf",
+      "url": "https://hal.science/hal-03437595/document",
+      "sha256": "e4d5d504b848ea3af4249466144899708d38f6bae56b1dd6774cbb93692b1cee",
+      "accept": "application/pdf"
+    },
+    "license": "Creative Commons Attribution 4.0 International",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "citation": "Moal-Darrigade, P.; Ducassou, E.; Bout-Roumazeilles, V.; Hanquiez, V.; Perello, M.-C.; Mulder, T.; Giraudeau, J. (2021). Clay minerals in the Cadiz contourite system over the last 25 kyrs. Mendeley Data, v2. doi:10.17632/8h9cfjkdpg.2."
+  },
+  "admitted": [
+    {
+      "core": "339-U1386",
+      "latitude": 36.83,
+      "longitude": -7.76,
+      "water_depth_m": 560,
+      "sheet": "U1386",
+      "header_row": 11,
+      "last_row": 76,
+      "header": [
+        " Depth (mcd)",
+        "Sortable silt (µm)   "
+      ],
+      "depth_frame": "mcd",
+      "chronology": {
+        "depth_frame": "mcd",
+        "locator": "Moal-Darrigade (2022), thesis table 3-5, printed p. 74 (PDF p. 110)",
+        "landing_page": "https://theses.hal.science/tel-03698468",
+        "sha256": "2e806e01c634a595b7e72ebce30c89053c1871a2f9f7edd37b5aab27b9e754d8",
+        "source": {
+          "file": "moal-thesis.pdf",
+          "url": "https://theses.hal.science/tel-03698468/document",
+          "sha256": "2e806e01c634a595b7e72ebce30c89053c1871a2f9f7edd37b5aab27b9e754d8",
+          "accept": "application/pdf"
+        },
+        "table": [
+          [
+            "0.18",
+            "1568"
+          ],
+          [
+            "1.08",
+            "7044"
+          ],
+          [
+            "1.68",
+            "9015"
+          ],
+          [
+            "2.38",
+            "10587"
+          ],
+          [
+            "4",
+            "18000"
+          ],
+          [
+            "6.438",
+            "26433"
+          ],
+          [
+            "13.613",
+            "30569"
+          ]
+        ],
+        "evidence": "El artículo de las muestras (§3.2.1) describe el modelo AMS/LR04. La tesis de Moal-Darrigade (§3.2.2, tabla 3-5) identifica los controles del mismo compuesto U1386 en mcd. La cabecera dice ka, pero los valores son años según la tabla 3-4 y las tasas de la tabla 3-5.",
+        "uncertainty_note": "Se conserva el modelo publicado y se excluye el control rechazado por el autor a 4,438 m. No se usa el ajuste alternativo de Br de PANGAEA.870577 ni se extrapola al techo."
+      }
+    },
+    {
+      "core": "339-U1390",
+      "latitude": 36.32,
+      "longitude": -7.72,
+      "water_depth_m": 992,
+      "sheet": "U1390",
+      "header_row": 9,
+      "last_row": 196,
+      "header": [
+        " Depth (mcd)",
+        "Sortable silt (µm)"
+      ],
+      "depth_frame": "mcd",
+      "chronology": {
+        "depth_frame": "mcd",
+        "locator": "van Dijk et al. (2018), archived sample ages at IODP 339-U1390, PANGAEA.884620",
+        "doi": "10.1594/PANGAEA.884620",
+        "paper_doi": "10.1002/2017PA003228",
+        "landing_page": "https://doi.pangaea.de/10.1594/PANGAEA.884620",
+        "sha256": "ed98996ded4d7c79a8eeb5681c15f3e462451a0322cdcc16b9fcd4bc2590196f",
+        "source": {
+          "file": "884620.tsv",
+          "url": "https://doi.pangaea.de/10.1594/PANGAEA.884620?format=textfile",
+          "sha256": "ed98996ded4d7c79a8eeb5681c15f3e462451a0322cdcc16b9fcd4bc2590196f",
+          "accept": "text/plain"
+        },
+        "xml": {
+          "file": "884620.xml",
+          "url": "https://doi.pangaea.de/10.1594/PANGAEA.884620",
+          "sha256": "075ec02631259026f0bef4de80cd4f43978f2edf484558012f83b4e0f5a90511",
+          "accept": "application/vnd.pangaea.metadata+xml"
+        },
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "header": [
+          "Event",
+          "Sample label",
+          "Depth comp [mcd]",
+          "Age [ka BP]"
+        ],
+        "component_events": [
+          "339-U1390A",
+          "339-U1390B",
+          "339-U1390C"
+        ],
+        "evidence": "Moal-Darrigade et al. (2022), §3.2.1, cita el modelo de van Dijk et al. (2018) para U1390. Los tres pozos A/B/C forman el compuesto y el archivo PANGAEA declara Depth comp [mcd] y edad calendario.",
+        "uncertainty_note": "Cronología publicada de AMS calibrado y correlación de δ18O con NGRIP. Se interpola entre edades publicadas por muestra, con la precisión del archivo. No se recalibra ni se propaga incertidumbre."
+      }
+    },
+    {
+      "core": "CADKS24",
+      "latitude": 36.08,
+      "longitude": -7.94,
+      "water_depth_m": 1316.0,
+      "campaign": "CADISAR_2",
+      "header": [
+        "Depth sed [m]",
+        "SS [µm]",
+        "<10 µm [%]"
+      ],
+      "depth_frame": "sediment depth m",
+      "source": {
+        "file": "971577.tsv",
+        "url": "https://doi.pangaea.de/10.1594/PANGAEA.971577?format=textfile",
+        "sha256": "5195d37bfe81a01f769fb0a047d9ea3a57903a43e6e39ab3dff9ca5c431db454",
+        "accept": "text/plain",
+        "doi": "10.1594/PANGAEA.971577",
+        "landing_page": "https://doi.pangaea.de/10.1594/PANGAEA.971577",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "citation": "Moal-Darrigade, Paul; Ducassou, Emmanuelle; Alvarez-Zarikian, Carlos A; Carbonel, Pierre; Hanquiez, Vincent; Bout-Roumazeilles, Viviane; Mulder, Thierry; Perello, Marie-Claire; Giraudeau, Jacques (2025): Comprises cohesive fine particles of sediment core CADKS24 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.971577,"
+      },
+      "xml": {
+        "file": "971577.xml",
+        "url": "https://doi.pangaea.de/10.1594/PANGAEA.971577",
+        "sha256": "74536322a4d35baf0cece379fd4db57557c8f05f110d482460d8b3fb03db8283",
+        "accept": "application/vnd.pangaea.metadata+xml"
+      },
+      "method": "Microgranulometer, Malvern Panalytical , MASTERSIZER S",
+      "comparison_context": "sortable_silt_pangaea_971577_matrix_unverified",
+      "chronology": {
+        "depth_frame": "sediment depth m",
+        "locator": "Hassan (2014), chapter III, table 2, printed p. 202 (PDF p. 208)",
+        "landing_page": "https://theses.hal.science/tel-01187962",
+        "sha256": "c98e65c8cd3f51ee18b402dc1a4fa4398754173fc76698166d4cb77d9c12c86b",
+        "source": {
+          "file": "hassan.pdf",
+          "url": "https://theses.hal.science/tel-01187962/document",
+          "sha256": "c98e65c8cd3f51ee18b402dc1a4fa4398754173fc76698166d4cb77d9c12c86b",
+          "accept": "application/pdf"
+        },
+        "table": [
+          [
+            "2.145",
+            "11628"
+          ],
+          [
+            "3.765",
+            "14700"
+          ],
+          [
+            "5.26",
+            "18247"
+          ]
+        ],
+        "native_intervals_cm": [
+          [
+            214,
+            215
+          ],
+          [
+            375,
+            378
+          ],
+          [
+            525,
+            527
+          ]
+        ],
+        "native_calibrated_bounds_95_4_years_bp": [
+          [
+            11320,
+            11934
+          ],
+          [
+            14221,
+            15095
+          ],
+          [
+            18007,
+            18551
+          ]
+        ],
+        "native_raw_radiocarbon_years_bp": [
+          [
+            10490,
+            70
+          ],
+          [
+            12930,
+            60
+          ],
+          [
+            15430,
+            70
+          ]
+        ],
+        "evidence": "Hassan (2014), capítulo III, tabla 2, identifica CADKS24 y publica tres edades calibradas. Se usa el punto medio de cada intervalo de muestreo (cm a m). Es el testigo de 1316 m de profundidad de agua del archivo PANGAEA.971577.",
+        "uncertainty_note": "Se interpola solo entre tres edades AMS calibradas publicadas (Calib 6.0, reservorio de 400 años), sin recalibrarlas ni convertir rangos de bioeventos en edades puntuales. Los intervalos calibrados se conservan en el contrato; no se propagan a las muestras interpoladas."
+      }
+    }
+  ],
+  "held": [
+    {
+      "core": "MD99-2337",
+      "doi": "10.1594/PANGAEA.971575",
+      "reference": "https://doi.org/10.1016/j.margeo.2017.09.014",
+      "reason": "Los datos PANGAEA son por profundidad. Hassan (2014), cap. I, fig. 4, y Moal-Darrigade (2022), §3.2.1.2, identifican bioeventos y la referencia de Ducassou et al. (2018), pero no se localizó una tabla numérica edad–profundidad verificable para este testigo. No se tomaron edades de MD99-2339 ni se convirtieron las bandas de la figura en puntos de control."
+    }
+  ]
+}

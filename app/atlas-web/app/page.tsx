@@ -23,6 +23,7 @@ import {
 import {
   summarize,
   fieldGrid,
+  mapSiteCounts,
   landMask,
   color,
   colorDomain,
@@ -366,6 +367,7 @@ export default function Atlas() {
   const items: any[] = summary.items,
     valid = items.filter((s) => finite(s.value)),
     active = items.find((s) => s.record.id === selected) || items[0];
+  const mapSites = useMemo(() => mapSiteCounts(items), [items]);
   useEffect(() => {
     if (items.length && !items.some((s) => s.record.id === selected))
       setSelected(items[0].record.id);
@@ -1038,10 +1040,10 @@ export default function Atlas() {
             <div className="map-stats">
               <div>
                 <strong>
-                  {valid.length}
-                  <small>/{items.length}</small>
+                  {mapSites.withData}
+                  <small>/{mapSites.total}</small>
                 </strong>
-                <span>SITIOS CON DATOS</span>
+                <span title="Ubicaciones únicas por coordenadas a cuatro decimales">SITIOS CON DATOS</span>
               </div>
               <i />
               <div>
