@@ -3,8 +3,8 @@
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
 - Último agente: ChatGPT/Codex
-- Fecha: 04-11-2026
-- Tarea actual: CUR-SS-AGES en curso. Verificar cronologías de CADKS24, MD99-2337, U1386 y U1390, incorporar las series verificadas, corregir el contador de ubicaciones únicas y publicar. Contador corregido y 28 pruebas web correctas. Continúa la auditoría cronológica.
+- Fecha: 05-11-2026
+- Tarea actual: CUR-SS-AGES en curso. Verificar cronologías de CADKS24, MD99-2337, U1386 y U1390, incorporar las series verificadas, corregir el contador de ubicaciones únicas y publicar. Incorporados U1386, U1390 y CADKS24 en v8. MD99-2337 queda pendiente. El contador está corregido. 76 Python y 28 Node correctas. Falta publicar y cerrar.
 - Lote anterior: CUR-COVERAGE-30 cerrado: lote PANGAEA+NOAA incorporado y publicado. Siguiente propuesta: ampliar cobertura comparable continental y ratios/corrientes por ubicación.
 - Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v7-cb1b445291e con 151 registros, 1.349 series y 924.446 valores. El dominio anterior redirige al actual. Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: 13 registros, 38 series y 20.756 valores nuevos. Ti/Ca 8→14 ubicaciones, Fe/Al 3→6, sortable silt 3→4 por medida y polen forestal 2→5. 74 pruebas Python, 27 Node, tsc, compilación, cotejo local y QA del mapa. Handoff docs/handoffs/cur-four-coverage.md.
@@ -12,7 +12,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
-1. Leer docs/handoffs/cur-four-coverage.md y scripts/importers/four_v7_sources.json. Priorizar sortable silt en CADKS24, MD99-2337, U1386 y U1390. Exigir una cronología publicada en el mismo marco de profundidad; U1386 tiene candidato PANGAEA.870577 pendiente de verificar el splice. No repetir candidatos ya resueltos.
+1. CUR-SS-AGES: validar snapshot de atlas-v8-c131d231e50 y desplegar. Tres series, 306 valores originales, 248 con edad interpolada y 58 sin edad. Leer docs/handoffs/cur-ss-ages.md. Para MD99-2337 buscar controles numéricos con profundidad propia; consultar la auditoría antes de repetir fuentes.
 2. Revisar polen de Monticchio en Neotoma y otras ubicaciones continentales. Verificar denominador y cronología antes de derivar porcentajes. Revisar BL12-10 para Ti/Ca. Mantener MP37PC en espera hasta confirmar el rótulo Fe/A.
 3. Al actualizar v6, revisar de nuevo los solapamientos y actualizar el hash padre del contrato v7 antes de recompilar. El snapshot rechaza una versión con un padre obsoleto. Reproducir desde los contratos fijados y no sustituir originales silenciosamente.
 4. La tabla completa de originales, usados y exclusiones por usuario sigue pendiente. Revisar también el contador del mapa: actualmente cuenta filas resumidas por serie bajo el rótulo «sitios». El informe de cobertura deduplica por ubicación.
