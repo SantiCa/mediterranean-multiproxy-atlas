@@ -4,19 +4,18 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 05-11-2026
-- Tarea actual: CUR-SS-AGES en curso. Verificar cronologías de CADKS24, MD99-2337, U1386 y U1390, incorporar las series verificadas, corregir el contador de ubicaciones únicas y publicar. Incorporados U1386, U1390 y CADKS24 en v8. MD99-2337 queda pendiente. El contador está corregido. 76 Python y 28 Node correctas. Falta publicar y cerrar.
-- Lote anterior: CUR-COVERAGE-30 cerrado: lote PANGAEA+NOAA incorporado y publicado. Siguiente propuesta: ampliar cobertura comparable continental y ratios/corrientes por ubicación.
-- Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v7-cb1b445291e con 151 registros, 1.349 series y 924.446 valores. El dominio anterior redirige al actual. Mis datos desactivado sin OWNER_PASSWORD.
-- Hecho: 13 registros, 38 series y 20.756 valores nuevos. Ti/Ca 8→14 ubicaciones, Fe/Al 3→6, sortable silt 3→4 por medida y polen forestal 2→5. 74 pruebas Python, 27 Node, tsc, compilación, cotejo local y QA del mapa. Handoff docs/handoffs/cur-four-coverage.md.
+- Tarea actual: CUR-SS-AGES cerrado. v8 publicada. Incorporados U1386, U1390 y CADKS24. Pendiente MD99-2337.
+- Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v8-c131d231e50 con 154 registros, 1.352 series y 924.752 valores. Mis datos desactivado sin OWNER_PASSWORD.
+- Hecho: tres series de sortable silt, 306 valores originales, 248 edades interpoladas y 58 sin edad. Contador de ubicaciones a cuatro decimales, consistente con la superficie. 76 pruebas Python, 28 Node, tsc, compilación, snapshot y QA local. Detalles en docs/handoffs/cur-ss-ages.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. CUR-SS-AGES: validar snapshot de atlas-v8-c131d231e50 y desplegar. Tres series, 306 valores originales, 248 con edad interpolada y 58 sin edad. Leer docs/handoffs/cur-ss-ages.md. Para MD99-2337 buscar controles numéricos con profundidad propia; consultar la auditoría antes de repetir fuentes.
-2. Revisar polen de Monticchio en Neotoma y otras ubicaciones continentales. Verificar denominador y cronología antes de derivar porcentajes. Revisar BL12-10 para Ti/Ca. Mantener MP37PC en espera hasta confirmar el rótulo Fe/A.
-3. Al actualizar v6, revisar de nuevo los solapamientos y actualizar el hash padre del contrato v7 antes de recompilar. El snapshot rechaza una versión con un padre obsoleto. Reproducir desde los contratos fijados y no sustituir originales silenciosamente.
-4. La tabla completa de originales, usados y exclusiones por usuario sigue pendiente. Revisar también el contador del mapa: actualmente cuenta filas resumidas por serie bajo el rótulo «sitios». El informe de cobertura deduplica por ubicación.
-5. Site privado del mismo proyecto. Despliegue appgdep_6aeb7107ffdc819198245c48b3cca0f8 y fuente e87a5359. Los 987 archivos de producción coinciden byte a byte con el snapshot validado. Recibos reports/four_v7_sites_*.json. URL anterior redirige. Handoff visual en navegador requiere sesión ChatGPT.
+1. Continuar la curación con los mismos criterios de procedencia y compatibilidad. Para MD99-2337 buscar puntos numéricos del propio sondeo, en la escala original. Se consultaron PANGAEA.971575/.971574/.256528, Ducassou et al. (2018) y las tesis de Moal-Darrigade y Hassan. Consultar el contrato v8 antes de repetir búsquedas.
+2. Continuar con polen de Monticchio en Neotoma y otras ubicaciones continentales. Verificar denominador y cronología antes de derivar porcentajes. Revisar BL12-10 para Ti/Ca. Mantener MP37PC en espera hasta confirmar el rótulo Fe/A.
+3. Al cambiar v7, revisar solapamientos y actualizar el hash padre del contrato v8 antes de recompilar. El snapshot bloquea releases con padre obsoleto.
+4. La tabla completa de originales, usados y exclusiones por usuario sigue pendiente. El contador del mapa ya cuenta ubicaciones únicas. En Ti/Ca, 11 de 14 sitios con datos en 6–8 ka BP frente a 13 de 16 series en v7.
+5. Site privado del mismo proyecto. Despliegue appgdep_6aebc09358a481919ea6def7e182fece y fuente 44c2420. Recibos reports/ss_v8_sites_*.json. El navegador requiere sesión ChatGPT.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
@@ -36,6 +35,6 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Hosting y preservación
 
-Sites v7 publicado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site (privado del propietario). El checkout nuevo conserva intacto ../sites/medatlas-v1 y sus borradores. Las credenciales efímeras no se guardan en Git ni informes. El despliegue Sites continúa siendo exclusivo de Codex.
+Sites v8 publicado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site (privado del propietario). El checkout nuevo conserva intacto ../sites/medatlas-v1 y sus borradores. Las credenciales efímeras no se guardan en Git ni informes. El despliegue Sites continúa siendo exclusivo de Codex.
 
-HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sirve ahora la instantánea estática v7; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.
+HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sirve ahora la instantánea estática v8; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.
