@@ -4,7 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 05-11-2026
-- Tarea actual: CUR-SS-AGES cerrado. v8 publicada. Incorporados U1386, U1390 y CADKS24. Pendiente MD99-2337.
+- Tarea actual: CUR-POLLEN-MONTICCHIO. Verificar Monticchio y ampliar polen forestal continental. En paralelo, buscar controles numéricos del propio MD99-2337. Publicar las series verificadas.
 - Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v8-c131d231e50 con 154 registros, 1.352 series y 924.752 valores. Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: tres series de sortable silt, 306 valores originales, 248 edades interpoladas y 58 sin edad. Contador de ubicaciones a cuatro decimales, consistente con la superficie. 76 pruebas Python, 28 Node, tsc, compilación, snapshot y QA local. Detalles en docs/handoffs/cur-ss-ages.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
