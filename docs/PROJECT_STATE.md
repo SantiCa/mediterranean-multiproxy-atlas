@@ -1,8 +1,15 @@
 # Estado breve del proyecto
 
-Actualizado: 30-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
+Actualizado: 04-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable v6 (actual, 30-10-2026)
+## Ejecutable v7 (actual, 04-11-2026)
+
+- Site privado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site. La dirección anterior redirige aquí.
+- Release v7-cb1b445291e: **151 registros / 1.349 series / 924.446 valores / 985 grupos base**. Añade 13 registros, 38 series y 20.756 valores de PANGAEA y Zenodo sobre v6.
+- Ti/Ca, Fe/Al, sortable silt y polen forestal. Los grupos conservan escalas, unidades, métodos, fracciones y sumas de polen. El filtro de fuente sigue el repositorio de la serie aunque se vincule a un sondeo existente.
+- Reproducción, cobertura y límites en docs/handoffs/cur-four-coverage.md y reports/quantitative_v7_release.json. Pruebas Python/Node, snapshot, tsc, build y verificación local del selector correctos. Los 987 archivos remotos coinciden con el snapshot validado.
+
+## Referencia histórica v6 (30-10-2026)
 
 - Site privado: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site.
 - Release v6-c8ff5c5a738: **138 registros/1.311 series/903.690 valores/962 grupos base**. Incremento sobre V29:10 registros/225 series/38.097 valores, de PANGAEA y NOAA.

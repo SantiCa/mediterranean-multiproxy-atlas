@@ -1,4 +1,4 @@
-# CUR-FOUR-COVERAGE
+# CUR-FOUR-COVERAGE — cerrado
 
 Codex, 4 de noviembre de 2026. Base `f9a9d0f`, cierre del lote anterior. v7 incorpora 13 registros, 38 series y 20.756 valores. Total 151 registros, 1.349 series y 924.446 valores. v6 se conserva íntegra.
 
@@ -14,4 +14,6 @@ Ti/Ca de PANGAEA.941818 y Fe/Al de PANGAEA.693917, .896929 y .896930. Las dos se
 
 Reproducir con `python -m pip install openpyxl==3.1.5`, `python scripts/importers/curate_four_v7.py --fetch` y `python scripts/build_quantitative_v7.py`. Contratos en `scripts/importers/four_v7_sources.json`. La compilación rechaza un padre v6 distinto. Pasaron 74 pruebas Python y 27 Node, incluidos cotejo celda a celda y agrupación espacial a cuatro decimales.
 
-Pendiente inmediato: validar el snapshot, compilar y publicar. Después, verificar cronologías en la misma escala de profundidad para CADKS24, MD99-2337, U1386 y U1390. Revisar denominadores de Neotoma antes de calcular porcentajes.
+Site privado publicado en https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site. Fuente e87a5359, despliegue appgdep_6aeb7107ffdc819198245c48b3cca0f8. El dominio anterior redirige. Snapshot, tsc y build correctos. Los 987 archivos remotos coinciden byte a byte con el snapshot. Selector y mapa comprobados localmente.
+
+Siguiente lote: verificar cronologías en la misma escala de profundidad para CADKS24, MD99-2337, U1386 y U1390. Revisar denominadores de Neotoma antes de calcular porcentajes.
