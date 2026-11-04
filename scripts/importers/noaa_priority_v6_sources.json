@@ -1,0 +1,1019 @@
+{
+  "study_id": "43639",
+  "metadata_url": "https://www.ncei.noaa.gov/access/paleo-search/study/search.json?NOAAStudyId=43639",
+  "metadata_sha256": "6dab791b7c788637b40983d87aa6cd6d710e486e7eea01fd95576bcf049d00a9",
+  "site": {
+    "NOAASiteId": "61971",
+    "siteName": "NDT_22_2016",
+    "siteCode": null,
+    "mappable": "Y",
+    "locationName": "Ocean>Atlantic Ocean>North Atlantic Ocean>Mediterranean Sea",
+    "geo": {
+      "geoType": "Feature",
+      "geometry": {
+        "type": "POINT",
+        "coordinates": [
+          "43.491496",
+          "9.351999"
+        ]
+      },
+      "properties": {
+        "southernmostLatitude": "43.491496",
+        "northernmostLatitude": "43.491496",
+        "westernmostLongitude": "9.351999",
+        "easternmostLongitude": "9.351999",
+        "minElevationMeters": "-432",
+        "maxElevationMeters": "-432"
+      }
+    },
+    "paleoData": [
+      {
+        "dataTableName": "NDT_22_2016 d18O Selvaggi2025",
+        "NOAADataTableId": "58486",
+        "earliestYear": 17551,
+        "mostRecentYear": -39,
+        "timeUnit": "cal yr BP",
+        "earliestYearBP": 17551,
+        "mostRecentYearBP": -39,
+        "earliestYearCE": -15601,
+        "mostRecentYearCE": 1989,
+        "coreLengthMeters": null,
+        "dataTableNotes": null,
+        "species": [],
+        "dataFile": [
+          {
+            "fileUrl": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-d18o.txt",
+            "urlDescription": "NOAA Template File",
+            "linkText": "NDT_22_2016 d18O Data",
+            "variables": [
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "depth variable>depth",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "length unit>centimeter",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Depth_cm"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "age variable>age",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "time unit>age unit>calendar year before present",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Age_BP"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>isotope>isotope ratio>delta 18O",
+                "cvMaterial": "biological material>organism>foraminifer>benthic foraminifer>calcareous benthic foraminifer>Uvigerina sp.>Uvigerina mediterranea",
+                "cvError": null,
+                "cvUnit": "concentration unit>parts per notation unit>parts per thousand>per mil>per mil VPDB",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "U. mediterranea",
+                "cvFormat": "Numeric",
+                "cvShortName": "d18O-U.med"
+              }
+            ],
+            "NOAAKeywords": [
+              "earth science>paleoclimate>paleocean>oxygen isotopes"
+            ]
+          }
+        ]
+      },
+      {
+        "dataTableName": "NDT_22_2016 Biodiversity Selvaggi2025",
+        "NOAADataTableId": "58487",
+        "earliestYear": 18055,
+        "mostRecentYear": -39,
+        "timeUnit": "cal yr BP",
+        "earliestYearBP": 18055,
+        "mostRecentYearBP": -39,
+        "earliestYearCE": -16105,
+        "mostRecentYearCE": 1989,
+        "coreLengthMeters": null,
+        "dataTableNotes": null,
+        "species": [],
+        "dataFile": [
+          {
+            "fileUrl": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-div-idx.txt",
+            "urlDescription": "NOAA Template File",
+            "linkText": "NDT_22_2016 Biodiversity Index Data",
+            "variables": [
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "depth variable>depth",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "length unit>centimeter",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Depth_cm"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "age variable>age",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "time unit>age unit>calendar year before present",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Age_BP"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "earth system variable>ecosystem variable>ecosystem index>diversity index>Shannon diversity index",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Shannon_H"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "earth system variable>ecosystem variable>ecosystem index>diversity index",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Dominance D",
+                "cvFormat": "Numeric",
+                "cvShortName": "Dominance_D"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "earth system variable>ecosystem variable>ecosystem index>diversity index",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Fisher's alpha",
+                "cvFormat": "Numeric",
+                "cvShortName": "Fisher_alpha"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>compound>organic compound>organic compound index>oxygen index",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Oxy_Index"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "epifauna percentage",
+                "cvFormat": "Numeric",
+                "cvShortName": "Epifauna%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "infauna percentage",
+                "cvFormat": "Numeric",
+                "cvShortName": "Infauna%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "deep infauna percentage",
+                "cvFormat": "Numeric",
+                "cvShortName": "Deep_infauna%"
+              }
+            ],
+            "NOAAKeywords": [
+              "earth science>paleoclimate>paleocean>population abundance"
+            ]
+          }
+        ]
+      },
+      {
+        "dataTableName": "NDT_22_2016 Forams Selvaggi2025",
+        "NOAADataTableId": "58488",
+        "earliestYear": 18055,
+        "mostRecentYear": -39,
+        "timeUnit": "cal yr BP",
+        "earliestYearBP": 18055,
+        "mostRecentYearBP": -39,
+        "earliestYearCE": -16105,
+        "mostRecentYearCE": 1989,
+        "coreLengthMeters": null,
+        "dataTableNotes": null,
+        "species": [],
+        "dataFile": [
+          {
+            "fileUrl": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-forams.txt",
+            "urlDescription": "NOAA Template File",
+            "linkText": "NDT_22_2016 Foraminiferal Data",
+            "variables": [
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "depth variable>depth",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "length unit>centimeter",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Depth_cm"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "age variable>age",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "time unit>age unit>calendar year before present",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Age_BP"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Hansenica soldanii (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "H.soldanii%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Gyroidina umbonata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "G.umbonata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Gyroidina laevigata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "G.laevigata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Uvigerina mediterranea (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "U.mediterranea%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Trifarina angulosa (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "T.angulosa%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Cassidulina carinata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "C.carinata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Bulimina marginata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "B.marginata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Bulimina costata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "B.costata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Bulimina aculeata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "B.aculeata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Bolivina spathulata (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "B.spathulata%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Cibicides refulgens (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "C.refulgens%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Hanzawaia boueana (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "H.boueana%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "biological material>organism>foraminifer>identified foraminifer",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Shelf taxa (%)",
+                "cvFormat": "Numeric",
+                "cvShortName": "Shelf_taxa%"
+              }
+            ],
+            "NOAAKeywords": [
+              "earth science>paleoclimate>paleocean>population abundance"
+            ]
+          }
+        ]
+      },
+      {
+        "dataTableName": "NDT_22_2016 Geochemistry Selvaggi2025",
+        "NOAADataTableId": "58489",
+        "earliestYear": 17973,
+        "mostRecentYear": -39,
+        "timeUnit": "cal yr BP",
+        "earliestYearBP": 17973,
+        "mostRecentYearBP": -39,
+        "earliestYearCE": -16023,
+        "mostRecentYearCE": 1989,
+        "coreLengthMeters": null,
+        "dataTableNotes": null,
+        "species": [],
+        "dataFile": [
+          {
+            "fileUrl": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-geochem.txt",
+            "urlDescription": "NOAA Template File",
+            "linkText": "NDT_22_2016 Geochemistry Data",
+            "variables": [
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "depth variable>depth",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "length unit>centimeter",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Depth_cm"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "age variable>age",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "time unit>age unit>calendar year before present",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Age_BP"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>element or compound ratio>manganese/aluminum",
+                "cvMaterial": "geological material>bulk geological material>sediment",
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Mn/Al"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>element or compound ratio>zirconium/rubidium",
+                "cvMaterial": "geological material>bulk geological material>sediment",
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Zr/Rb"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>element or compound ratio>titanium/calcium",
+                "cvMaterial": "geological material>bulk geological material>sediment",
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Ti/Ca"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "statistical variable>multivariate eigenvector-based variable>principal component",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Loading factor PC-a-1",
+                "cvFormat": "Numeric",
+                "cvShortName": "LoadFact_PC-a-1"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "statistical variable>multivariate eigenvector-based variable>principal component",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Loading factor PC-a-2",
+                "cvFormat": "Numeric",
+                "cvShortName": "LoadFact_PC-a-2"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "statistical variable>multivariate eigenvector-based variable>principal component",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Loading factor PC-b-1",
+                "cvFormat": "Numeric",
+                "cvShortName": "LoadFact_PC-b-1"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "statistical variable>multivariate eigenvector-based variable>principal component",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "dimensionless",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "Loading factor PC-b-2",
+                "cvFormat": "Numeric",
+                "cvShortName": "LoadFact_PC-b-2"
+              }
+            ],
+            "NOAAKeywords": [
+              "earth science>paleoclimate>paleocean>geochemistry"
+            ]
+          }
+        ]
+      },
+      {
+        "dataTableName": "NDT_22_2016 SS Selvaggi2025",
+        "NOAADataTableId": "58490",
+        "earliestYear": 18055,
+        "mostRecentYear": 15,
+        "timeUnit": "cal yr BP",
+        "earliestYearBP": 18055,
+        "mostRecentYearBP": 15,
+        "earliestYearCE": -16105,
+        "mostRecentYearCE": 1935,
+        "coreLengthMeters": null,
+        "dataTableNotes": null,
+        "species": [],
+        "dataFile": [
+          {
+            "fileUrl": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-ss.txt",
+            "urlDescription": "NOAA Template File",
+            "linkText": "NDT_22_2016 SS Data",
+            "variables": [
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "depth variable>depth",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "length unit>centimeter",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Depth_cm"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "age variable>age",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "time unit>age unit>calendar year before present",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Age_BP"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "physical property>length>diameter>grain size>grain size class>silt",
+                "cvMaterial": "geological material>bulk geological material>sediment",
+                "cvError": null,
+                "cvUnit": "concentration unit>percent",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": "sortable silt percentage",
+                "cvFormat": "Numeric",
+                "cvShortName": "SS%"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "physical property>length>diameter>grain size>grain size parameter>grain size mean>sortable silt mean grain size",
+                "cvMaterial": "geological material>bulk geological material>sediment",
+                "cvError": null,
+                "cvUnit": "length unit>micrometer",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "SS_mean"
+              }
+            ],
+            "NOAAKeywords": [
+              "earth science>paleoclimate>paleocean>physical properties"
+            ]
+          }
+        ]
+      },
+      {
+        "dataTableName": "NDT_22_2016 U/Mn Selvaggi2025",
+        "NOAADataTableId": "58491",
+        "earliestYear": 18055,
+        "mostRecentYear": 15,
+        "timeUnit": "cal yr BP",
+        "earliestYearBP": 18055,
+        "mostRecentYearBP": 15,
+        "earliestYearCE": -16105,
+        "mostRecentYearCE": 1935,
+        "coreLengthMeters": null,
+        "dataTableNotes": null,
+        "species": [],
+        "dataFile": [
+          {
+            "fileUrl": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-u_mn.txt",
+            "urlDescription": "NOAA Template File",
+            "linkText": "NDT_22_2016 U/Mn Data",
+            "variables": [
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "depth variable>depth",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "length unit>centimeter",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Depth_cm"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "age variable>age",
+                "cvMaterial": null,
+                "cvError": null,
+                "cvUnit": "time unit>age unit>calendar year before present",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "Age_BP"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>element or compound ratio>uranium/manganese",
+                "cvMaterial": "biological material>organism>foraminifer>planktic foraminifer",
+                "cvError": null,
+                "cvUnit": "concentration unit>mole fraction unit>micromole per mole",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "U/Mn"
+              },
+              {
+                "cvDataType": "PALEOCEANOGRAPHY",
+                "cvWhat": "chemical composition>element or compound ratio>uranium/manganese",
+                "cvMaterial": "biological material>organism>foraminifer>planktic foraminifer",
+                "cvError": "standard deviation>one standard deviation",
+                "cvUnit": "concentration unit>mole fraction unit>micromole per mole",
+                "cvSeasonality": null,
+                "cvDetail": null,
+                "cvMethod": null,
+                "cvAdditionalInfo": null,
+                "cvFormat": "Numeric",
+                "cvShortName": "U/Mn_std"
+              }
+            ],
+            "NOAAKeywords": [
+              "earth science>paleoclimate>paleocean>geochemistry"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "publication": {
+    "author": {
+      "name": "Selvaggi, Mar; Cacho, Isabel; Pérez-Asensio, José N.; Evangelinos, Dimitris; Martinelli, Pierluigi; Bronzo, Laura; Català, Albert; Pena; Leopoldo D.; Frigola, Jaime; Gennari, Rocco; Bonomo, Sergio; Cascella, Antonio; Lirer, Fabrizio; Di Bella, Letizia"
+    },
+    "pubYear": 2026,
+    "title": "Deglacial and Holocene variability of intermediate water masses in the Ligurian Sea based on a multi-proxy approach",
+    "journal": "Quaternary Science Reviews",
+    "volume": "375",
+    "edition": null,
+    "issue": null,
+    "pages": null,
+    "reportNumber": "109800",
+    "citation": "Selvaggi, Mar; Cacho, Isabel; Pérez-Asensio, José N.; Evangelinos, Dimitris; Martinelli, Pierluigi; Bronzo, Laura; Català, Albert; Pena; Leopoldo D.; Frigola, Jaime; Gennari, Rocco; Bonomo, Sergio; Cascella, Antonio; Lirer, Fabrizio; Di Bella, Letizia. 2026. Deglacial and Holocene variability of intermediate water masses in the Ligurian Sea based on a multi-proxy approach. Quaternary Science Reviews, 375, 109800. doi: 10.1016/j.quascirev.2026.109800",
+    "type": "publication",
+    "identifier": {
+      "type": "doi",
+      "id": "10.1016/j.quascirev.2026.109800",
+      "url": "http://dx.doi.org/10.1016/j.quascirev.2026.109800"
+    },
+    "abstract": "In this study, we combine analyses of benthic foraminiferal assemblages, grain-size distributions, and elemental composition (X-ray fluorescence) with geochemical measurements of foraminiferal coatings (U/Mnfc) and stable oxygen isotopes (δ18O) from sediment core NDT_22_2016 (432 m water depth) to reconstruct oceanographic variability over the past ∼18 kyr. Our findings reveal a significant influx of shelf-derived benthic foraminiferal assemblages during Heinrich Stadial 1 (HS1), which we attribute to enhanced melting of Northern Apennines glaciers, particularly during HS1b (∼17-16 kyr). These observations support the occurrence of warm summers despite the overall regional cooling linked to HS1. At the same time, micropaleontological and geochemical data record an abrupt decline in mid-depth oxygen conditions, potentially reflecting HS1-driven changes in the properties of intermediate waters originating from the eastern Mediterranean Sea. During the formation of Sapropel 1 (S1) in the eastern basin, the presence of well-oxygenated waters and the formation of a sandy condensed layer are interpreted to reflect intense sediment winnowing associated with episodes of dense shelf-water formation in the study region. We argue that these conditions may have facilitated the development of a western-sourced intermediate water mass, which would have occupied the pathway of weakened eastern-sourced Mediterranean waters during S1 deposition. We further propose that the modern Mediterranean circulation pattern was established at ∼6 kyr, marked by notable changes in both sedimentary and benthic ecosystem records. Lastly, a significant shift in sediment supply over the last ∼2 kyr is linked to pronounced anthropogenic impacts.",
+    "pubRank": "1"
+  },
+  "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.quascirev.2026.109800",
+  "crossref_sha256": "0cf578bd05c90ae70d6fe0f628f27a1b64f9c9f8bb6079362b5cef8e8f19cb3a",
+  "dataset_doi": "10.25921/z9er-1871",
+  "files": [
+    {
+      "table_id": "58487",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-div-idx.txt",
+      "filename": "43639-selvaggi2025-div-idx.txt",
+      "sha256": "1e5ccaa872a1aacdf5b7abbfb2987d114403f7b3ae649e60ac19d9b9b525930c",
+      "header": [
+        "Depth_cm",
+        "Age_BP",
+        "Shannon_H",
+        "Dominance_D",
+        "Fisher_alpha",
+        "Oxy_Index",
+        "Epifauna%",
+        "Infauna%",
+        "Deep_infauna%"
+      ],
+      "columns": [
+        {
+          "column": "Oxy_Index",
+          "index": 5,
+          "parameter": "Benthic oxygen index, Selvaggi2026, native definition",
+          "unit": "sin unidad",
+          "native_unit": "dimensionless",
+          "family": "Oxigenación bentónica",
+          "method": "Published benthic oxygen index, formula not independently harmonized",
+          "context": "oxygen_index_selvaggi2026",
+          "uncertainty_column": null
+        },
+        {
+          "column": "Epifauna%",
+          "index": 6,
+          "parameter": "Foraminifera, benthic, epifaunal",
+          "unit": "%",
+          "native_unit": "percent",
+          "family": "Oxigenación bentónica",
+          "method": "Published benthic microhabitat assemblage",
+          "context": null,
+          "uncertainty_column": null
+        },
+        {
+          "column": "Infauna%",
+          "index": 7,
+          "parameter": "Foraminifera, benthic, infaunal",
+          "unit": "%",
+          "native_unit": "percent",
+          "family": "Oxigenación bentónica",
+          "method": "Published benthic microhabitat assemblage",
+          "context": null,
+          "uncertainty_column": null
+        },
+        {
+          "column": "Deep_infauna%",
+          "index": 8,
+          "parameter": "Foraminifera, benthic, deep infaunal",
+          "unit": "%",
+          "native_unit": "percent",
+          "family": "Oxigenación bentónica",
+          "method": "Published benthic microhabitat assemblage",
+          "context": null,
+          "uncertainty_column": null
+        }
+      ]
+    },
+    {
+      "table_id": "58488",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-forams.txt",
+      "filename": "43639-selvaggi2025-forams.txt",
+      "sha256": "bd1c2f0e9cf89475eed7e7c4c6958fb2e90a76b858a2c9c46e94419851262adf",
+      "header": [
+        "Depth_cm",
+        "Age_BP",
+        "H.soldanii%",
+        "G.umbonata%",
+        "G.laevigata%",
+        "U.mediterranea%",
+        "T.angulosa%",
+        "C.carinata%",
+        "B.marginata%",
+        "B.costata%",
+        "B.aculeata%",
+        "B.spathulata%",
+        "C.refulgens%",
+        "H.boueana%",
+        "Shelf_taxa%"
+      ],
+      "columns": [
+        {
+          "column": "B.marginata%",
+          "index": 8,
+          "parameter": "Bulimina marginata",
+          "unit": "%",
+          "native_unit": "percent",
+          "family": "Foraminíferos",
+          "method": "Published benthic foraminiferal percentage",
+          "context": null,
+          "uncertainty_column": null
+        },
+        {
+          "column": "B.spathulata%",
+          "index": 11,
+          "parameter": "Bolivina spathulata",
+          "unit": "%",
+          "native_unit": "percent",
+          "family": "Foraminíferos",
+          "method": "Published benthic foraminiferal percentage",
+          "context": null,
+          "uncertainty_column": null
+        }
+      ]
+    },
+    {
+      "table_id": "58489",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-geochem.txt",
+      "filename": "43639-selvaggi2025-geochem.txt",
+      "sha256": "25f7c84d7d5e45a0b54f5b16563281c7e718736824f9bc4c5469f68d10872eb2",
+      "header": [
+        "Depth_cm",
+        "Age_BP",
+        "Mn/Al",
+        "Zr/Rb",
+        "Ti/Ca",
+        "LoadFact_PC-a-1",
+        "LoadFact_PC-a-2",
+        "LoadFact_PC-b-1",
+        "LoadFact_PC-b-2"
+      ],
+      "columns": [
+        {
+          "column": "Mn/Al",
+          "index": 2,
+          "parameter": "Manganese/Aluminium ratio",
+          "unit": "sin unidad",
+          "native_unit": "dimensionless",
+          "family": "Geoquímica elemental",
+          "method": "XRF ratio as published",
+          "context": null,
+          "uncertainty_column": null
+        },
+        {
+          "column": "Zr/Rb",
+          "index": 3,
+          "parameter": "Zirconium/Rubidium ratio",
+          "unit": "sin unidad",
+          "native_unit": "dimensionless",
+          "family": "Sedimentología",
+          "method": "XRF ratio as published",
+          "context": null,
+          "uncertainty_column": null
+        },
+        {
+          "column": "Ti/Ca",
+          "index": 4,
+          "parameter": "Titanium/Calcium ratio",
+          "unit": "sin unidad",
+          "native_unit": null,
+          "family": "Geoquímica elemental",
+          "method": "XRF ratio as published",
+          "context": null,
+          "uncertainty_column": null
+        }
+      ]
+    },
+    {
+      "table_id": "58490",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-ss.txt",
+      "filename": "43639-selvaggi2025-ss.txt",
+      "sha256": "54f7e107b4aacab3235f66fc3cc1e50776eed7bdbb412e9b9d8363e12c0c2a16",
+      "header": [
+        "Depth_cm",
+        "Age_BP",
+        "SS%",
+        "SS_mean"
+      ],
+      "columns": [
+        {
+          "column": "SS%",
+          "index": 2,
+          "parameter": "Size fraction 0.063-0.010 mm, sortable silt",
+          "unit": "%",
+          "native_unit": "percent",
+          "family": "Sedimentología",
+          "method": "Published sortable-silt percentage",
+          "context": "sortable_silt_percent_below63",
+          "uncertainty_column": null
+        },
+        {
+          "column": "SS_mean",
+          "index": 3,
+          "parameter": "Sortable silt mean grain size",
+          "unit": "µm",
+          "native_unit": "micrometer",
+          "family": "Sedimentología",
+          "method": "Published sortable-silt mean size",
+          "context": "sortable_silt_mean_size",
+          "uncertainty_column": null
+        }
+      ]
+    },
+    {
+      "table_id": "58491",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/mediterranean/selvaggi2025b/selvaggi2025-u_mn.txt",
+      "filename": "43639-selvaggi2025-u_mn.txt",
+      "sha256": "c563153de5ac3812109d8f090b0f973345c50fae6764cf5b56330567a41c3f36",
+      "header": [
+        "Depth_cm",
+        "Age_BP",
+        "U/Mn",
+        "U/Mn_std"
+      ],
+      "columns": [
+        {
+          "column": "U/Mn",
+          "index": 2,
+          "parameter": "Uranium/Manganese ratio, planktic foraminiferal coatings",
+          "unit": "µmol/mol",
+          "native_unit": "micromole per mole",
+          "family": "Oxigenación bentónica",
+          "method": "Foraminiferal coating U/Mn as published",
+          "context": "foraminiferal_coating",
+          "uncertainty_column": "U/Mn_std"
+        }
+      ]
+    }
+  ],
+  "held": [
+    {
+      "study_id": "10418",
+      "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/dean2010/dean2010.txt",
+      "sha256": "1630a565ef14c57cf497a6a3917055fcb85f4693601e20de5141d76140e6d401",
+      "reason": "11 native core tables have sediment depth but no point age column; no ages assigned from narrative boundaries",
+      "publication_doi": "10.3133/ofr20101323"
+    }
+  ]
+}

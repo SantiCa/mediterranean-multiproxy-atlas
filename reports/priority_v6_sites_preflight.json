@@ -1,0 +1,27 @@
+{
+  "task": "CUR-COVERAGE-30",
+  "github_source_commit": "803fd451f4e0e5b1fbba59afec13a86f580ece16",
+  "site_project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "seed_sha256": "efb5058363910aaa1049b16e6d47b4f7bbc45de1e5cb2df9be24ff6676d4e95c",
+  "source_files": 159,
+  "snapshot_files": 964,
+  "largest_static_file": "public/snapshot/inventory.json",
+  "largest_static_bytes": 17392186,
+  "cell_by_cell_check": "passed",
+  "publication": "succeeded",
+  "final_github_source_commit": "cf186c5f8fe506c355a03b0f7b354ae6882beea9",
+  "site_source_commit": "525ef3fc345122ebcbb55570b69035b9c5608308",
+  "typescript_no_emit": "passed",
+  "production_build": "passed",
+  "node_tests_passed": 27,
+  "python_tests_passed": 71,
+  "local_browser_qa": [
+    "Fe/Al:4records859values; native time series loaded",
+    "Ti/Ca:PANGAEA+NOAA8records9series3591values",
+    "minRecords>=2 enabled by default"
+  ],
+  "archive_sha256": "602e00d3e92bec418050b426e9da359e6a50e2297c6aecf3cee5024719a923cb",
+  "production_static_verification": "964 files identical to checked snapshot",
+  "production_browser_qa": "Not completed: integrated browser requires ChatGPT sign-in; local UI checked",
+  "site_audience": "owner-only custom unchanged"
+}

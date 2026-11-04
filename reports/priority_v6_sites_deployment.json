@@ -1,0 +1,15 @@
+{
+  "id": "appgdep_6ae470954d0c8191a2574ae50de66207",
+  "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "title": "Mediterranean Multiproxy Atlas",
+  "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_a5abefe513fc8191b486b6e457f8b34d",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6ae21e92359c819185d57ecd9bed0133",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-10-30T10:25:50.318497+00:00"
+}

@@ -1,0 +1,115 @@
+{
+  "counts": {
+    "records": 1,
+    "series": 12,
+    "observations": 1160,
+    "quarantined": 0
+  },
+  "audit": [
+    {
+      "id": "noaa6-43639:58487:Oxy_Index~83779070f4",
+      "table": "58487",
+      "column": "Oxy_Index",
+      "observations": 54,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58487:Epifauna~1259e242a8",
+      "table": "58487",
+      "column": "Epifauna%",
+      "observations": 54,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58487:Infauna~eeff194439",
+      "table": "58487",
+      "column": "Infauna%",
+      "observations": 54,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58487:Deep_infauna~e2815fdb50",
+      "table": "58487",
+      "column": "Deep_infauna%",
+      "observations": 54,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58488:B_marginata~e116510cea",
+      "table": "58488",
+      "column": "B.marginata%",
+      "observations": 54,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58488:B_spathulata~21a3a5885f",
+      "table": "58488",
+      "column": "B.spathulata%",
+      "observations": 54,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58489:Mn_Al~00717f1b3d",
+      "table": "58489",
+      "column": "Mn/Al",
+      "observations": 183,
+      "missing": 15,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58489:Zr_Rb~6cd280b43d",
+      "table": "58489",
+      "column": "Zr/Rb",
+      "observations": 198,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58489:Ti_Ca~7e10a82df5",
+      "table": "58489",
+      "column": "Ti/Ca",
+      "observations": 198,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58490:SS~62f4b51c78",
+      "table": "58490",
+      "column": "SS%",
+      "observations": 101,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58490:SS_mean~d13f683fd3",
+      "table": "58490",
+      "column": "SS_mean",
+      "observations": 101,
+      "missing": 0,
+      "quarantine": null
+    },
+    {
+      "id": "noaa6-43639:58491:U_Mn~20710c319e",
+      "table": "58491",
+      "column": "U/Mn",
+      "observations": 55,
+      "missing": 0,
+      "quarantine": null
+    }
+  ],
+  "held": [
+    {
+      "study_id": "10418",
+      "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/dean2010/dean2010.txt",
+      "sha256": "1630a565ef14c57cf497a6a3917055fcb85f4693601e20de5141d76140e6d401",
+      "reason": "11 native core tables have sediment depth but no point age column; no ages assigned from narrative boundaries",
+      "publication_doi": "10.3133/ofr20101323"
+    }
+  ]
+}

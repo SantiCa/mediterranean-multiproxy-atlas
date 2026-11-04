@@ -1,0 +1,1969 @@
+{
+  "parent_version": "atlas-quantitative-2026-10-29-v5-c501be5f380",
+  "version": "atlas-quantitative-2026-10-30-v6-c8ff5c5a738",
+  "counts": {
+    "records_added": 10,
+    "series_added": 225,
+    "observations_added": 38097
+  },
+  "changes": [
+    {
+      "parameter": "Titanium/Calcium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 7,
+        "locations": 7,
+        "series": 8,
+        "values": 3393
+      },
+      "after": {
+        "records": 8,
+        "locations": 8,
+        "series": 9,
+        "values": 3591
+      }
+    },
+    {
+      "parameter": "Size fraction > 0.063 mm, sand",
+      "unit": "%",
+      "before": {
+        "records": 3,
+        "locations": 3,
+        "series": 3,
+        "values": 589
+      },
+      "after": {
+        "records": 6,
+        "locations": 6,
+        "series": 7,
+        "values": 1267
+      }
+    },
+    {
+      "parameter": "Corylus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 5,
+        "locations": 5,
+        "series": 5,
+        "values": 729
+      }
+    },
+    {
+      "parameter": "Salix",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 5,
+        "locations": 5,
+        "series": 5,
+        "values": 729
+      }
+    },
+    {
+      "parameter": "Tilia",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 5,
+        "locations": 5,
+        "series": 5,
+        "values": 729
+      }
+    },
+    {
+      "parameter": "Acer",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 4,
+        "values": 608
+      }
+    },
+    {
+      "parameter": "Alnus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 4,
+        "values": 581
+      }
+    },
+    {
+      "parameter": "Bromine/Chlorine ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 5,
+        "values": 462
+      }
+    },
+    {
+      "parameter": "Magnesium/Chlorine ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 5,
+        "values": 472
+      }
+    },
+    {
+      "parameter": "Median, grain size, D50",
+      "unit": "µm",
+      "before": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 347
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 5,
+        "values": 1982
+      }
+    },
+    {
+      "parameter": "Picea",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 4,
+        "values": 669
+      }
+    },
+    {
+      "parameter": "Size fraction < 0.002 mm, clay",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 4,
+        "values": 1178
+      }
+    },
+    {
+      "parameter": "Sodium/Chlorine ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 5,
+        "values": 472
+      }
+    },
+    {
+      "parameter": "Ulmus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 4,
+        "series": 4,
+        "values": 591
+      }
+    },
+    {
+      "parameter": "Iron/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 249
+      },
+      "after": {
+        "records": 4,
+        "locations": 3,
+        "series": 4,
+        "values": 859
+      }
+    },
+    {
+      "parameter": "Size fraction 0.063-0.010 mm, sortable silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 4,
+        "locations": 3,
+        "series": 7,
+        "values": 230
+      }
+    },
+    {
+      "parameter": "Arboreal pollen",
+      "unit": "%",
+      "before": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 121
+      },
+      "after": {
+        "records": 3,
+        "locations": 3,
+        "series": 4,
+        "values": 492
+      }
+    },
+    {
+      "parameter": "Castanea",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 3,
+        "series": 3,
+        "values": 346
+      }
+    },
+    {
+      "parameter": "Grain size, mean",
+      "unit": "µm",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 3,
+        "series": 3,
+        "values": 1016
+      }
+    },
+    {
+      "parameter": "Size fraction 0.063-0.002 mm, silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 3,
+        "series": 3,
+        "values": 645
+      }
+    },
+    {
+      "parameter": "Calcium/Iron ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 2,
+        "series": 3,
+        "values": 822
+      }
+    },
+    {
+      "parameter": "Silicon/Calcium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 2,
+        "series": 3,
+        "values": 822
+      }
+    },
+    {
+      "parameter": "Size fraction 0.016-0.010 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 2,
+        "series": 3,
+        "values": 127
+      }
+    },
+    {
+      "parameter": "Size fraction 0.031-0.016 mm, coarse silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 2,
+        "series": 3,
+        "values": 127
+      }
+    },
+    {
+      "parameter": "Zirconium/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 2,
+        "series": 3,
+        "values": 821
+      }
+    },
+    {
+      "parameter": "ln-Zirconium/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 3,
+        "locations": 2,
+        "series": 3,
+        "values": 821
+      }
+    },
+    {
+      "parameter": "Arboreal pollen",
+      "unit": "#/cm**3",
+      "before": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 98
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 263
+      }
+    },
+    {
+      "parameter": "Barium/Titanium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 941
+      }
+    },
+    {
+      "parameter": "Bolivina spathulata",
+      "unit": "%",
+      "before": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 44
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 98
+      }
+    },
+    {
+      "parameter": "Bromine/Magnesium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 310
+      }
+    },
+    {
+      "parameter": "Bulimina marginata",
+      "unit": "%",
+      "before": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 44
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 98
+      }
+    },
+    {
+      "parameter": "Fagus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 286
+      }
+    },
+    {
+      "parameter": "Foraminifera, benthic, deep infaunal",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 98
+      }
+    },
+    {
+      "parameter": "Foraminifera, benthic, epifaunal",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 98
+      }
+    },
+    {
+      "parameter": "Foraminifera, benthic, infaunal",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 98
+      }
+    },
+    {
+      "parameter": "Fraxinus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 198
+      }
+    },
+    {
+      "parameter": "Manganese/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 220
+      }
+    },
+    {
+      "parameter": "Ostrya",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 286
+      }
+    },
+    {
+      "parameter": "Pollen, total",
+      "unit": "#/cm**3",
+      "before": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 303
+      }
+    },
+    {
+      "parameter": "Taxus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 2,
+        "locations": 2,
+        "series": 2,
+        "values": 410
+      }
+    },
+    {
+      "parameter": "Abies/Picea",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Abies: stomata",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Alnus",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Alnus fruticosa-type",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 88
+      }
+    },
+    {
+      "parameter": "Alnus glutinosa",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Alnus viridis",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Alnus/Betula",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Benthic Foraminifer Oxygen Index (Schmiedl)",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 44
+      }
+    },
+    {
+      "parameter": "Benthic oxygen index, Selvaggi2026, native definition",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 54
+      }
+    },
+    {
+      "parameter": "Betula nana",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 121
+      }
+    },
+    {
+      "parameter": "Carpinus orientalis",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Clay/Silt ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 238
+      }
+    },
+    {
+      "parameter": "Corylus",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Fagus",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Fraxinus",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Fraxinus excelsior",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Fraxinus excelsior-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Fraxinus ornus",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Juglans",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Juglans",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 14
+      }
+    },
+    {
+      "parameter": "Non arboreal pollen",
+      "unit": "#/cm**3",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 165
+      }
+    },
+    {
+      "parameter": "Olea europaea",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Picea",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Plants, semi-desert",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 41
+      }
+    },
+    {
+      "parameter": "Pollen",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Pollen and spores",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Pollen and spores, other",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 19,
+        "values": 2812
+      }
+    },
+    {
+      "parameter": "Pollen indeterminata",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Pollen, broken",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Pollen, corroded",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Pollen, crumpled",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Pollen, dicolpate",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Pollen, herbs",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Pollen, main",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Pollen, main concentration",
+      "unit": "#/cm**3",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Pollen, temperate",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 165
+      }
+    },
+    {
+      "parameter": "Pollen, temperate Mediterranean forest",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Potassium/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 429
+      }
+    },
+    {
+      "parameter": "Quercus calliprinos-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Quercus deciduous",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Quercus evergreen-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Quercus ilex",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Quercus ithaburensis-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Quercus suber-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Quercus, deciduous",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 148
+      }
+    },
+    {
+      "parameter": "Quercus, deciduous",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 165
+      }
+    },
+    {
+      "parameter": "Quercus, deciduous-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 262
+      }
+    },
+    {
+      "parameter": "Rhenium",
+      "unit": "µg/kg",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 28
+      }
+    },
+    {
+      "parameter": "Rhenium/molybdenum ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 28
+      }
+    },
+    {
+      "parameter": "Salix",
+      "unit": "#/g",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 121
+      }
+    },
+    {
+      "parameter": "Salix",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 2,
+        "values": 217
+      }
+    },
+    {
+      "parameter": "Salix herbacea-type",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 121
+      }
+    },
+    {
+      "parameter": "Silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 238
+      }
+    },
+    {
+      "parameter": "Silt/clay ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 2,
+        "values": 857
+      }
+    },
+    {
+      "parameter": "Size fraction 0.006-0.002 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 533
+      }
+    },
+    {
+      "parameter": "Size fraction 0.020-0.006 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 533
+      }
+    },
+    {
+      "parameter": "Size fraction 0.063-0.004 mm, silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 245
+      }
+    },
+    {
+      "parameter": "Size fraction 0.063-0.020 mm, coarse silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 533
+      }
+    },
+    {
+      "parameter": "Size fraction 0.063-0.031 mm, very coarse silt",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 14
+      }
+    },
+    {
+      "parameter": "Size fraction 0.150-0.063 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 33
+      }
+    },
+    {
+      "parameter": "Size fraction 0.200-0.063 mm, fine sand",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 533
+      }
+    },
+    {
+      "parameter": "Size fraction 0.250-0.150 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 33
+      }
+    },
+    {
+      "parameter": "Size fraction 0.630-0.200 mm, medium sand",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 533
+      }
+    },
+    {
+      "parameter": "Size fraction 2.000-0.063 mm, sand",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 245
+      }
+    },
+    {
+      "parameter": "Size fraction 2.000-0.630 mm, coarse sand",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 533
+      }
+    },
+    {
+      "parameter": "Size fraction < 0.004 mm, clay",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 245
+      }
+    },
+    {
+      "parameter": "Size fraction < 0.063 mm, mud, silt+clay",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 33
+      }
+    },
+    {
+      "parameter": "Size fraction > 0.010 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 2,
+        "values": 857
+      }
+    },
+    {
+      "parameter": "Size fraction > 0.150 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 33
+      }
+    },
+    {
+      "parameter": "Size fraction > 0.250 mm",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 33
+      }
+    },
+    {
+      "parameter": "Sortable silt mean grain size",
+      "unit": "µm",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 101
+      }
+    },
+    {
+      "parameter": "Sortable-silt mean",
+      "unit": "µm",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 370
+      }
+    },
+    {
+      "parameter": "Titanium/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 429
+      }
+    },
+    {
+      "parameter": "Ulmus",
+      "unit": "%",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 100
+      }
+    },
+    {
+      "parameter": "Ulmus/Zelkova",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 138
+      }
+    },
+    {
+      "parameter": "Unknown pollen",
+      "unit": "#",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 60
+      }
+    },
+    {
+      "parameter": "Uranium/Manganese ratio, planktic foraminiferal coatings",
+      "unit": "µmol/mol",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 55
+      }
+    },
+    {
+      "parameter": "Zirconium/Rubidium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 198
+      }
+    },
+    {
+      "parameter": "log-Barium/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 224
+      }
+    },
+    {
+      "parameter": "log-Bromine/Titanium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 224
+      }
+    },
+    {
+      "parameter": "log-Titanium/Aluminium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 224
+      }
+    },
+    {
+      "parameter": "log-Titanium/Calcium ratio",
+      "unit": "sin unidad",
+      "before": {
+        "records": 0,
+        "locations": 0,
+        "series": 0,
+        "values": 0
+      },
+      "after": {
+        "records": 1,
+        "locations": 1,
+        "series": 1,
+        "values": 224
+      }
+    }
+  ],
+  "limitations": [
+    "Grain=controlled variable or explicit NOAA mapping + unit, not a declaration of methodological equivalence",
+    "Fractions, matrices and pollen denominators remain separated by the web comparison contexts",
+    "Coincident coordinates count once as a location, without asserting identity of different cores",
+    "Native counts are not converted to percentages or inferred forest types"
+  ]
+}

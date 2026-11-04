@@ -23,7 +23,7 @@ export default function ProxyPicker({
       favoritesOnly: false,
       sort: "records",
       aggregates: true,
-      minRecords: 0,
+      minRecords: 2,
     }),
     [favorites, setFavorites] = useState<string[]>([]),
     [page, setPage] = useState(0);
@@ -138,7 +138,7 @@ export default function ProxyPicker({
       favoritesOnly: false,
       sort: "records",
       aggregates: true,
-      minRecords: 0,
+      minRecords: 2,
     });
   return (
     <section className="proxy-picker">

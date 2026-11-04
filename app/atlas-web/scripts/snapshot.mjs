@@ -2,13 +2,22 @@
 // one observation file per comparison group and the site inventory. Built from the
 // newest versioned seed. Usage: node scripts/snapshot.mjs <seed.json> <outDir> [inventory.json]
 import { createHash } from "node:crypto";
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { groupKey } from "../lib/proxies.mjs";
 
 const [seedPath, out, inventoryPath] = process.argv.slice(2);
 if (!seedPath || !out) throw new Error("uso: snapshot.mjs <seed.json> <outDir>");
 const seed = JSON.parse(readFileSync(seedPath, "utf8"));
+// A newer file number must not hide fresh data curated into its parent release.
+// Check before replacing the checked snapshot, so a stale v6 never publishes
+// silently after v5 changes in another curation session.
+const parentNumber = seed.parent_version?.match(/-v(\d+)-/)?.[1];
+if (parentNumber) {
+  const parentPath = join(dirname(seedPath), `atlas-v${parentNumber}.json`);
+  if (existsSync(parentPath) && JSON.parse(readFileSync(parentPath, "utf8")).version !== seed.parent_version)
+    throw new Error("Release padre modificada: regenerar la colección más reciente antes de crear el snapshot");
+}
 rmSync(out, { recursive: true, force: true });
 mkdirSync(join(out, "obs"), { recursive: true });
 

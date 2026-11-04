@@ -11,6 +11,11 @@ export const fold = (s) =>
     .replaceAll("³", "3")
     .replaceAll("⁸", "8");
 export const isContinental = (r) => r.realm !== "marine";
+/** Search aliases do not transform the archived variable or its values. */
+export function elementRatioAlias(name) {
+  const elements = { titanium:"Ti", calcium:"Ca", aluminium:"Al", aluminum:"Al", iron:"Fe", potassium:"K", zirconium:"Zr", rubidium:"Rb", barium:"Ba", strontium:"Sr", manganese:"Mn", silicon:"Si", bromine:"Br", chlorine:"Cl", molybdenum:"Mo", uranium:"U", thorium:"Th" };
+  return String(name || "").replace(/\b(titanium|calcium|aluminium|aluminum|iron|potassium|zirconium|rubidium|barium|strontium|manganese|silicon|bromine|chlorine|molybdenum|uranium|thorium)\b/gi, x => elements[x.toLowerCase()]);
+}
 export function recordMatches(r, f) {
   return (
     (!f.provider || f.provider === "all" || r.provider === f.provider) &&
@@ -83,6 +88,8 @@ export function proxyGroups(data, f = {}) {
         r.name,
         r.provider,
         s.search_aliases,
+        elementRatioAlias(s.parameter_name_pangaea || s.comparison_parameter_name),
+        /polen|pollen/i.test(s.family || "") ? "bosque vegetación árboles" : "",
       ]
         .flat()
         .filter(Boolean)
@@ -157,9 +164,29 @@ export const aggregateKey = (a) => JSON.stringify(["agg", a.id, a.unit]);
 export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["agg"');
 /* Same PANGAEA parameter (controlled vocabulary) and same unit, any method: the
  * parameter defines the measured quantity; methods remain per series. */
-const paramName = (s) => s.parameter_name_pangaea || null;
+const paramName = (s) => s.parameter_name_pangaea || s.comparison_parameter_name || null;
+/** Identical parameter names can hide different fractions or pollen sums.
+ * Native counts remain sample counts, not abundance percentages. */
+export function comparisonContext(s) {
+  if (s.comparison_context_key) return s.comparison_context_key;
+  const t = fold([s.source_column, s.parameter_comment, s.source_dataset_title, s.compatibility_group].filter(Boolean).join(" "));
+  if (/excl.{0,12}pin|without.{0,12}pin|sin.{0,12}pin/.test(t)) return "pollen_sum_excludes_pinus";
+  if (/sortable silt/i.test(paramName(s) || "")) {
+    if (/mean.*carb.free/.test(t)) return "sortable_silt_native_mean_carb_free_percent_label_requires_review";
+    if (/contourite/.test(t)) return "sortable_silt_percent_contourites";
+    if (/pelagic/.test(t)) return "sortable_silt_percent_pelagics";
+  }
+  if (/grain|size fraction|silt|clay/i.test(paramName(s) || "")) {
+    if (/non.carbonate|carb.free|carbonate.free/.test(t)) return "grain_fraction_noncarbonate";
+    if (/total fraction|bulk sediment/.test(t)) return "grain_fraction_total";
+  }
+  if (/pore fluids/.test(t)) return "matrix_pore_fluid";
+  if (/soluble salts/.test(t)) return "matrix_soluble_salt";
+  return null;
+}
 export const paramKey = (s) =>
-  paramName(s) ? JSON.stringify(["agg", "p:" + fold(paramName(s)), s.unit]) : null;
+  paramName(s) && !(s.unit === "#" && /polen|pollen/i.test(s.family || ""))
+    ? JSON.stringify(["agg", "p:" + fold(paramName(s)), s.unit, ...(comparisonContext(s) ? [comparisonContext(s)] : [])]) : null;
 export function aggregatesOf(s) {
   const t = txt(s),
     out = AGGREGATES.filter((a) => a.test(s, t)).map(aggregateKey),
@@ -203,7 +230,7 @@ export function aggregateGroups(groups, data) {
     for (const s of g.series) {
       const k = paramKey(s);
       if (!k) continue;
-      if (!byParam.has(k)) byParam.set(k, { name: paramName(s), unit: s.unit, family: g.family, members: new Map() });
+      if (!byParam.has(k)) byParam.set(k, { name: paramName(s), unit: s.unit, family: g.family, context: comparisonContext(s), members: new Map() });
       byParam.get(k).members.set(g.key, g);
     }
   for (const [key, a] of byParam) {
@@ -215,11 +242,11 @@ export function aggregateGroups(groups, data) {
     out.push({
       key,
       id: "agg:" + key,
-      label: a.name + " · todos los métodos",
+      label: a.name + (a.context ? " · " + ({pollen_sum_excludes_pinus:"suma sin Pinus",grain_fraction_noncarbonate:"fracción no carbonatada",grain_fraction_total:"fracción total",sortable_silt_percent_pelagics:"sedimento pelágico",sortable_silt_percent_contourites:"contornitas",matrix_pore_fluid:"fluido intersticial",matrix_soluble_salt:"sales solubles"}[a.context] || "contexto específico") : "") + " · todos los métodos",
       unit: a.unit,
       family: a.family,
       variable: a.name,
-      method: "Agrupado por parámetro PANGAEA: " + members.length + " grupos (" + [...new Set(members.map((g) => g.method))].slice(0, 4).join("; ") + (members.length > 4 ? "…" : "") + ")",
+      method: "Agrupado por variable: " + members.length + " grupos (" + [...new Set(members.map((g) => g.method))].slice(0, 4).join("; ") + (members.length > 4 ? "…" : "") + ")",
       compatibility: null,
       evidence: "aggregation",
       aggregate: true,

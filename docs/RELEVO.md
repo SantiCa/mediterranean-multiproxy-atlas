@@ -2,18 +2,20 @@
 
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
-- Último agente: Claude
+- Último agente: ChatGPT/Codex
 - Fecha: 30-10-2026
-- Tarea actual: CURADO en claude/curado (Claude retoma 30-10 01:52). V29 publicado en Cloudflare: v5-c501be5f380 (128 registros, 1.086 series, 865.593 valores) y arreglo de superficie con sitios coincidentes. El Site de ChatGPT sigue en V28 (actualizarlo lo hace Codex). SITES-V28 cerrada por Codex.
-- Estado: Site ChatGPT privado actualizado desde main dfdb419 (V28.1), con datos públicos estáticos. Release v5-c25cc8a2394: 102 registros, 815 series, 606 grupos y 241.826 valores. Ya no depende de completar cargas públicas D1. Mis datos desactivado: falta OWNER_PASSWORD; migración 0004 incluida en el paquete y despliegue gestionado por Sites.
-- Hecho: snapshot.mjs + check-snapshot.mjs antes de compilar; 24 Node, tsc y build correctos. 608 archivos remotos idénticos por SHA256 al snapshot comprobado celda a celda; las cuatro API retiradas devuelven404. QA visual de inventario, mapa, serie temporal y Mis datos en producción. Handoff docs/handoffs/sites-v28.md; recibos reports/sites_v28_*.json. Fuente Sites743a94ba4509999d409ce07a07519fe90e9abebe; despliegue succeeded appgdep_6ae3c6fb23d08191a63ccb7ba6658dd6.
+- Tarea actual: CUR-COVERAGE-30 cerrado: lote PANGAEA+NOAA incorporado y publicado. Siguiente propuesta: ampliar cobertura comparable continental y ratios/corrientes por ubicación.
+- Estado: Site ChatGPT privado sirve v6-c8ff5c5a738 (138 registros,1.311 series,903.690 valores). Lote propio sobre V29:+10/+225/+38.097. Snapshot público estático; Mis datos desactivado sin OWNER_PASSWORD.
+- Hecho: contratos nativos por columna/evento, DOI/año/licencia, duplicados y unidades revisados; cada celda nueva contrastada, v5 inmutable. 71 pruebas Python/27 pruebas Node locales, tsc/build y snapshot completos correctos.964 archivos estáticos remotos idénticos. Handoff docs/handoffs/cur-coverage-30.md; balance reports/priority_v6_coverage.json.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. Seguir curado en `claude/curado` con `[v5 propose=60 agemodels prune]`; al fusionar en main se publica en Cloudflare. Pendiente: NOAA WDS y Neotoma con el mismo patrón; 105 hermanos sin `Depth sed`. Consultar su handoff y log antes de repetir fuentes; el checkpoint antiguo de temperatura no está integrado.
-2. Si Santiago decide activar Mis datos: GitHub usa ATLAS_OWNER_PASSWORD y el Worker recibe OWNER_PASSWORD; el Site ChatGPT necesita su propio secreto OWNER_PASSWORD. No copiar ni inventar contraseñas. La ausencia del secreto no impide usar datos públicos.
-3. Futuros despliegues Sites: usar ../sites/medatlas-v28, conservar identidad/audiencia y generar/comprobar snapshot desde la semilla más reciente antes del build. scripts/validate_static_site.py verifica los archivos publicados; ya no usar validate_quantitative_api.py contra las API eliminadas. No repetir el despliegue V28 ya confirmado.
+1. CUR-COVERAGE-30 terminado y publicado en Sites. No repetir este lote ni sus82 fuentes: leer docs/handoffs/cur-coverage-30.md y docs/curation/priority_v6.md. Release v6-c8ff5c5a738:138 registros/1.311 series/903.690 valores. Incremento propio sobre V29:10 registros/225 series/38.097 valores. Datos v5 preservados íntegramente.
+2. Siguiente lote propuesto: ampliar porcentajes forestales con denominadores publicados (NOAA/Neotoma); completar Ti/Ca/Fe/Al/sortable silt a más ubicaciones y buscar modelos de edad explícitos para los11 cores de NOAA 10418. Integrar los alias conservadores en el ranking general: el antiguo informe PANGAEA con cero ratios NO demuestra ausencia de razones elementales. No reutilizar automáticamente casos 401/ND/radiocarbono ni convertir cuentas en porcentajes.
+3. Al cambiar v5, ejecutar el tramo priority-v6 del flujo de curación antes de publicar: prepare/curate PANGAEA, curate NOAA, build_v6, coverage. La semilla y el snapshot bloquean padres obsoletos. La caja actual sigue [-10,28,42,48]; U1385 (-10,126°) permanece fuera, sin cambio silencioso de región.
+4. Tabla completa de originales/usados y exclusiones por usuario sigue pendiente; actualmente se muestran notas por serie y cuarentenas en informes. No afirmar que esa interfaz exista. Cinco series v6 conservadas en cuarentena;29 fuentes PANGAEA retenidas y NOAA 10418 sin edades por muestra.
+5. Sites: mismo proyecto privado y checkout ../sites/medatlas-v28. Publicación525ef3fc; despliegue succeeded appgdep_6ae470954d0c8191a2574ae50de66207. Recibos reports/priority_v6_sites_*.json.964 archivos remotos iguales al snapshot comprobado.71 pruebas Python/27 pruebas Node,tsc/build y QA local correctos; navegador de producción pide sesión ChatGPT (no se elude). Mis datos sigue sin OWNER_PASSWORD. No pedir IDs al usuario para retomar.
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
@@ -33,6 +35,6 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Hosting y preservación
 
-Sites V28 verificado: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado del propietario). El checkout nuevo conserva intacto ../sites/medatlas-v1 y sus borradores. Las credenciales efímeras no se guardan en Git ni informes. El despliegue Sites continúa siendo exclusivo de Codex.
+Sites v6 verificado: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site (privado del propietario). El checkout nuevo conserva intacto ../sites/medatlas-v1 y sus borradores. Las credenciales efímeras no se guardan en Git ni informes. El despliegue Sites continúa siendo exclusivo de Codex.
 
-HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sirve ahora la instantánea estática V28 verificada; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.
+HOST-CF validado (Claude, 29-10, V17): **https://med.proxyatlas.workers.dev** (Worker `med`, subdominio `proxyatlas`, D1 `medatlas`). Despliegue automático al fusionar en `main` cambios de `app/atlas-web/`. Plan Workers Free sin método de pago: no hay cobro posible; al superar límites diarios D1 las escrituras fallan hasta 00:00 UTC. Pendiente de Santiago: Roll del token (se expuso en chat), borrar el Worker sobrante `medatlas`, decidir visibilidad. Sites sirve ahora la instantánea estática v6 verificada; su despliegue es exclusivo de Codex. Un solo agente a la vez en `relevo`.

@@ -1,0 +1,3621 @@
+{
+  "version": "atlas-quantitative-2026-10-30-v6-c8ff5c5a738",
+  "parent_version": "atlas-quantitative-2026-10-29-v5-c501be5f380",
+  "parent_sha256": "c3729bbc2a3fa7883e1609f0f930c701532739f41ef4174e8b18cfe563cc36c5",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 138,
+    "series": 1311,
+    "values": 903690,
+    "new_records": 10,
+    "new_series": 225,
+    "new_values": 38097,
+    "missing_age_values": 6557
+  },
+  "input_fragments": {
+    "pangaea": {
+      "records": 27,
+      "series": 275,
+      "values": 46465
+    },
+    "noaa": {
+      "records": 1,
+      "series": 12,
+      "values": 1160
+    }
+  },
+  "family_counts": {
+    "Temperatura": 38,
+    "Geoquímica elemental": 317,
+    "Sedimentología": 214,
+    "Biomarcadores": 20,
+    "Micropaleontología": 8,
+    "Isótopos estables": 157,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 172,
+    "Materia orgánica y biomarcadores": 57,
+    "Polen": 295,
+    "Oxigenación bentónica": 9
+  },
+  "comparison_groups": 962,
+  "numeric_age_extent_ka_bp": [
+    -1.5,
+    4700.0
+  ],
+  "admitted_series": [
+    "pangaea6-680762:GeoTu_SL112:col2~9897b2c5d6",
+    "pangaea6-680762:GeoTu_SL112:col3~aa2439a07a",
+    "pangaea6-680762:GeoTu_SL112:col4~08607c9dbd",
+    "pangaea6-680763:GeoTu_SL148:col2~456b155ace",
+    "pangaea6-680763:GeoTu_SL148:col3~445319929f",
+    "pangaea6-680763:GeoTu_SL148:col4~900dcf9595",
+    "pangaea6-711649:MD95_2043:col3~c1769435b6",
+    "pangaea6-711649:MD95_2043:col4~2eae013ce6",
+    "pangaea6-711649:MD95_2043:col30~fc849d5c95",
+    "pangaea6-711649:MD95_2043:col42~c9ba439beb",
+    "pangaea6-711649:MD95_2043:col61~0885c81c74",
+    "pangaea6-711649:MD95_2043:col70~a79b9e955b",
+    "pangaea6-711649:MD95_2043:col71~7b51b25a16",
+    "pangaea6-711649:MD95_2043:col72~4871d58cd2",
+    "pangaea6-711649:MD95_2043:col77~22266fb34d",
+    "pangaea6-711649:MD95_2043:col86~7d0511bc28",
+    "pangaea6-711649:MD95_2043:col88~af0a0a46ed",
+    "pangaea6-711649:MD95_2043:col90~fdb4a1f8bc",
+    "pangaea6-711649:MD95_2043:col121~70b3d8ecbe",
+    "pangaea6-711649:MD95_2043:col122~2292bbaa1d",
+    "pangaea6-711649:MD95_2043:col123~4062924f3b",
+    "pangaea6-711649:MD95_2043:col128~bcd683f8d2",
+    "pangaea6-758357:Mo05:col7~0e02d87709",
+    "pangaea6-758359:Mo05:col4~f24c96fdeb",
+    "pangaea6-758497:Mo05:col4~448a2589aa",
+    "pangaea6-758497:Mo05:col5~bf9f79ea20",
+    "pangaea6-758497:Mo05:col6~7fb99950e4",
+    "pangaea6-758497:Mo05:col8~527597eeca",
+    "pangaea6-758497:Mo05:col9~d60f2f24f3",
+    "pangaea6-758497:Mo05:col10~8d887d7330",
+    "pangaea6-758497:Mo05:col11~d22b95df61",
+    "pangaea6-758497:Mo05:col17~0b41689acc",
+    "pangaea6-759534:MD99_2343:col2~b52b90cc4a",
+    "pangaea6-759534:MD99_2343:col3~8323c11120",
+    "pangaea6-759534:MD99_2343:col4~22926cc8c5",
+    "pangaea6-759535:MD99_2343:col2~f83a170be7",
+    "pangaea6-759535:MD99_2343:col3~173913941a",
+    "pangaea6-759535:MD99_2343:col4~e89d7637e6",
+    "pangaea6-780234:160_969D:col11~81ab870d63",
+    "pangaea6-780234:160_969D:col12~fdb80efdc1",
+    "pangaea6-780234:160_969D:col14~c6bae9c2b7",
+    "pangaea6-858954:POS287_26_D13902:col3~2e5fd0f7e0",
+    "pangaea6-858954:POS287_26_D13902:col4~996a8b58c4",
+    "pangaea6-858954:POS287_26_D13902:col5~053584475e",
+    "pangaea6-858954:POS287_26_D13902:col6~c209a16ce1",
+    "pangaea6-858954:POS287_26_D13902:col7~7311704b5e",
+    "pangaea6-867316:KIN2:col4~6969075cb4",
+    "pangaea6-867316:KIN2:col5~fcc3852877",
+    "pangaea6-867316:KIN2:col7~65f72ecc29",
+    "pangaea6-867316:KIN2:col9~db5de725af",
+    "pangaea6-867316:KIN2:col14~f66e7a273c",
+    "pangaea6-867316:KIN2:col17~4b038158a4",
+    "pangaea6-867316:KIN2:col20~558b6e9454",
+    "pangaea6-867316:KIN2:col27~4e0af4e2ed",
+    "pangaea6-867316:KIN2:col28~38de57ba6e",
+    "pangaea6-867316:KIN2:col33~ac0e4fd777",
+    "pangaea6-867316:KIN2:col37~3c8be4f61b",
+    "pangaea6-867316:KIN2:col38~26b0d28082",
+    "pangaea6-867316:KIN2:col140~5ed9d6f1c9",
+    "pangaea6-867316:KIN2:col141~9b59b14322",
+    "pangaea6-867316:KIN2:col142~d3d89379a9",
+    "pangaea6-867316:KIN2:col144~41a682999f",
+    "pangaea6-882268:POPEI_VC2B:col3~566b62be5d",
+    "pangaea6-882268:POPEI_VC2B:col4~f37266f902",
+    "pangaea6-882268:POPEI_VC2B:col5~49938e3180",
+    "pangaea6-894213:TRIFOGLI:col4~58cdf159b6",
+    "pangaea6-894213:TRIFOGLI:col6~f698194c8a",
+    "pangaea6-894213:TRIFOGLI:col7~8ff057f499",
+    "pangaea6-894213:TRIFOGLI:col15~148c69089a",
+    "pangaea6-894213:TRIFOGLI:col22~cde9fea76f",
+    "pangaea6-894213:TRIFOGLI:col29~7a31dea5a4",
+    "pangaea6-894213:TRIFOGLI:col31~b46f2e332e",
+    "pangaea6-894213:TRIFOGLI:col32~0fdc4e85b3",
+    "pangaea6-894213:TRIFOGLI:col47~f2616071c5",
+    "pangaea6-894213:TRIFOGLI:col49~ecb4aa4729",
+    "pangaea6-894213:TRIFOGLI:col66~7fbce4b9ac",
+    "pangaea6-894213:TRIFOGLI:col74~fbdbe57a91",
+    "pangaea6-894213:TRIFOGLI:col76~28ed69809a",
+    "pangaea6-894213:TRIFOGLI:col78~38a51be759",
+    "pangaea6-894213:TRIFOGLI:col88~2051a196a3",
+    "pangaea6-894213:TRIFOGLI:col98~6c1dfb7bdf",
+    "pangaea6-894213:TRIFOGLI:col118~c4a8d0f959",
+    "pangaea6-894213:TRIFOGLI:col120~597f290442",
+    "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+    "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+    "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+    "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+    "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+    "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+    "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+    "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+    "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+    "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+    "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+    "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+    "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4",
+    "pangaea6-894213:TRIFOGLI:col135~90101471c8",
+    "pangaea6-894213:TRIFOGLI:col136~6c12941a6a",
+    "pangaea6-894213:TRIFOGLI:col137~6094765b9b",
+    "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f",
+    "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5",
+    "pangaea6-910794:HER_GC_UB06:col16~f87cbdd5c0",
+    "pangaea6-910794:HER_GC_UB06:col17~0c5ab73fb5",
+    "pangaea6-910794:HER_GC_UB06:col18~610dede869",
+    "pangaea6-910794:HER_GC_UB06:col19~5815abbfa3",
+    "pangaea6-914104:NTG16:col4~a9f6616555",
+    "pangaea6-914104:NTG16:col5~d1cd66a505",
+    "pangaea6-914104:NTG16:col6~6bd7c74ecf",
+    "pangaea6-914104:NTG16:col7~e52ca4a15b",
+    "pangaea6-914104:NTG16:col8~5f939bc715",
+    "pangaea6-914104:NTG16:col9~6cf9def77e",
+    "pangaea6-914104:NTG16:col10~f6e52fd23a",
+    "pangaea6-914104:NTG16:col11~b56f778c5d",
+    "pangaea6-914104:NTG16:col12~96685bea67",
+    "pangaea6-929110:Mo05:col6~533c6b3bf2",
+    "pangaea6-929110:Mo05:col7~b77ec3334c",
+    "pangaea6-929110:Mo05:col9~a1a7c604e9",
+    "pangaea6-929110:Mo05:col11~940f854919",
+    "pangaea6-929110:Mo05:col13~a78d34f683",
+    "pangaea6-929110:Mo05:col14~e771dfdd50",
+    "pangaea6-929110:Mo05:col15~9102c3ddac",
+    "pangaea6-929110:Mo05:col16~f3d102df67",
+    "pangaea6-929110:Mo05:col18~1eb508825c",
+    "pangaea6-929110:Mo05:col19~e5272887d5",
+    "pangaea6-929110:Mo05:col20~18ec7051c6",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col3~447299269e",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col8~17d2778ed6",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col10~63f03f9f9e",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col11~9b16b42890",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col12~461b5951c0",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col15~397adcf8c9",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col16~2dd7a6c7ec",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col17~20d97797bf",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col19~70acb71fce",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col20~ad94fc6268",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col22~040695106b",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col24~6cccebe3ed",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col31~19ac86e3f5",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col138~a4dcb94cc2",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col141~251756dae5",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col142~c9b893e106",
+    "pangaea6-930103:Tenaghi_Philippon_Phi2:col158~b3312efa7e",
+    "pangaea6-944306:NDT_6_2016:col2~b74e9dead1",
+    "pangaea6-944306:NDT_6_2016:col3~816674094c",
+    "pangaea6-944306:NDT_6_2016:col4~b414900532",
+    "pangaea6-961603:Co1215:col2~a695340865",
+    "pangaea6-961603:Co1215:col3~fc68c1d2c5",
+    "pangaea6-961603:Co1215:col4~5fc2919cd0",
+    "pangaea6-961603:Co1215:col5~c09ea3a5a5",
+    "pangaea6-961603:Co1215:col6~3b6afb2501",
+    "pangaea6-961603:Co1215:col7~e734646df4",
+    "pangaea6-966670:MVSEIS08_TG_2:col4~73c1a476c7",
+    "pangaea6-966670:MVSEIS08_TG_2:col5~6dd385a3d5",
+    "pangaea6-966670:MVSEIS08_TG_2:col6~fd4f147c5e",
+    "pangaea6-966670:MVSEIS08_TG_2:col7~0a7cd1ab3e",
+    "pangaea6-966670:MVSEIS08_TG_2:col8~e14b9ebc18",
+    "pangaea6-966670:MVSEIS08_TG_2:col9~e46555c50f",
+    "pangaea6-966838:MVSEIS08_TG_2:col2~d3cd5d867f",
+    "pangaea6-966838:MVSEIS08_TG_2:col3~0a724276f6",
+    "pangaea6-966838:MVSEIS08_TG_2:col5~23be326cc1",
+    "pangaea6-966838:MVSEIS08_TG_2:col6~6ade85cc98",
+    "pangaea6-966839:GC_01A_PC:col7~361d504c60",
+    "pangaea6-966839:GC_01A_PC:col8~a1540a3d02",
+    "pangaea6-966839:GC_01A_PC:col10~df2bd5f9d0",
+    "pangaea6-966839:GC_01A_PC:col11~812d68cfee",
+    "pangaea6-966839:GC_01A_TC:col7~7832fbec63",
+    "pangaea6-966839:GC_01A_TC:col8~d0332e0ae2",
+    "pangaea6-966839:GC_01A_TC:col9~5c397a8d4c",
+    "pangaea6-966839:GC_01A_TC:col10~941da980c1",
+    "pangaea6-966839:GC_01A_TC:col11~c8afbf9cbf",
+    "pangaea6-966842:MVSEIS08_TG_2:col2~8f557b06d0",
+    "pangaea6-966842:MVSEIS08_TG_2:col3~dc161eb81c",
+    "pangaea6-966842:MVSEIS08_TG_2:col5~5d4770c904",
+    "pangaea6-966842:MVSEIS08_TG_2:col6~db2d8e15dc",
+    "pangaea6-966843:GC_01A_PC:col3~8b12c0cb81",
+    "pangaea6-966843:GC_01A_PC:col4~4e8c88048f",
+    "pangaea6-966843:GC_01A_PC:col5~711ecc9aaa",
+    "pangaea6-966843:GC_01A_PC:col6~70771f9a73",
+    "pangaea6-966843:GC_01A_PC:col7~b4d88da0f1",
+    "pangaea6-966843:GC_01A_TC:col3~0f412f4e3e",
+    "pangaea6-966843:GC_01A_TC:col4~112c9cf241",
+    "pangaea6-966843:GC_01A_TC:col5~7b39ec1f52",
+    "pangaea6-966843:GC_01A_TC:col6~79a474b9c3",
+    "pangaea6-966843:GC_01A_TC:col7~b283edfeb1",
+    "pangaea6-966997:Figino19_2:col5~03fee4552b",
+    "pangaea6-968469:DSDDP_5017_1_A:col8~7cc020a2b5",
+    "pangaea6-968469:DSDDP_5017_1_A:col9~c10f1bbcef",
+    "pangaea6-968469:DSDDP_5017_1_A:col10~49704c7bbc",
+    "pangaea6-968469:DSDDP_5017_1_A:col11~320ff7ba91",
+    "pangaea6-968471:DSDDP_5017_1_A:col9~359cb19510",
+    "pangaea6-968471:DSDDP_5017_1_A:col10~27aea157a8",
+    "pangaea6-968471:DSDDP_5017_1_A:col11~1ccddc47ba",
+    "pangaea6-968472:DSDDP_5017_3_C:col9~ad5f274cb9",
+    "pangaea6-968472:DSDDP_5017_3_C:col10~770c8732be",
+    "pangaea6-968472:DSDDP_5017_3_C:col11~8c5918d2d1",
+    "pangaea6-968494:Mount_Sedom:col7~89a27ce3a1",
+    "pangaea6-968494:Mount_Sedom:col8~997cda9226",
+    "pangaea6-968494:Mount_Sedom:col9~f7256dfde5",
+    "pangaea6-968495:PZ_1:col7~31a05c4882",
+    "pangaea6-968495:PZ_1:col8~c8de188cd8",
+    "pangaea6-968495:PZ_1:col9~892c5b38b2",
+    "pangaea6-968495:PZ_1:col10~318bf5fc29",
+    "pangaea6-987452:339_U1387C:col5~f5e478e022",
+    "pangaea6-987452:339_U1387C:col6~a13cec0b6e",
+    "pangaea6-987452:339_U1387C:col7~bc6935a5b8",
+    "pangaea6-987452:339_U1387C:col8~c663252337",
+    "pangaea6-991020:OTE_2019_KC_13:col2~e96b72e043",
+    "pangaea6-991020:OTE_2019_KC_13:col3~a91d932fdb",
+    "pangaea6-991020:OTE_2019_KC_13:col4~f70a4bda86",
+    "pangaea6-991020:OTE_2019_KC_13:col5~1e8358728d",
+    "pangaea6-991021:OTE_2019_KC_13:col2~c1b9b75e31",
+    "pangaea6-991021:OTE_2019_KC_13:col3~e29b5ad5e0",
+    "pangaea6-991021:OTE_2019_KC_13:col4~71e71a9595",
+    "noaa6-43639:58487:Oxy_Index~83779070f4",
+    "noaa6-43639:58487:Epifauna~1259e242a8",
+    "noaa6-43639:58487:Infauna~eeff194439",
+    "noaa6-43639:58487:Deep_infauna~e2815fdb50",
+    "noaa6-43639:58488:B_marginata~e116510cea",
+    "noaa6-43639:58488:B_spathulata~21a3a5885f",
+    "noaa6-43639:58489:Mn_Al~00717f1b3d",
+    "noaa6-43639:58489:Zr_Rb~6cd280b43d",
+    "noaa6-43639:58489:Ti_Ca~7e10a82df5",
+    "noaa6-43639:58490:SS~62f4b51c78",
+    "noaa6-43639:58490:SS_mean~d13f683fd3",
+    "noaa6-43639:58491:U_Mn~20710c319e"
+  ],
+  "integration_quarantine": [
+    {
+      "id": "pangaea6-227740:GeoB7608_1:col4~d28db85728",
+      "matches": [
+        "pangaea5-227740:Manganese_cps~d28db857"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-227740:GeoB7608_1:col5~3508083b10",
+      "matches": [
+        "pangaea5-227740:Titanium_Calcium_ratio_sin_unidad~3508083b"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-667479:GeoB7608_1:col2~2a32535a94",
+      "matches": [
+        "pangaea5-667479:Titanium_Calcium_ratio_sin_unidad"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-704428:160_969D:col6~da470ed0a0",
+      "matches": [
+        "pangaea5-704428:Median_grain_size_D50_phi"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col2~0e9e5d66e1",
+      "matches": [
+        "pangaea5-711649:Abies_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col12~5dad6bdcd9",
+      "matches": [
+        "pangaea5-711649:Betula_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col19~48cb3e71c5",
+      "matches": [
+        "pangaea5-711649:Carpinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col21~6d9880f3e1",
+      "matches": [
+        "pangaea5-711649:Cedrus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col58~70172b0994",
+      "matches": [
+        "pangaea5-711649:Olea_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col62~489f45c45f",
+      "matches": [
+        "pangaea5-711649:Pistacia_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col96~741c6339b4",
+      "matches": [
+        "pangaea5-711649:Pinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-711649:MD95_2043:col129~54ac40ebab",
+      "matches": [
+        "pangaea5-711649:Pollen_total_cm_3"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758357:Mo05:col2~dfe714c199",
+      "matches": [
+        "pangaea5-758357:Betula_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758357:Mo05:col3~f247dab153",
+      "matches": [
+        "pangaea5-758357:Pinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758357:Mo05:col4~61cd53f0bb",
+      "matches": [
+        "pangaea5-758357:Arboreal_pollen_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758357:Mo05:col5~29b3060596",
+      "matches": [
+        "pangaea5-758357:Non_arboreal_pollen_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758357:Mo05:col8~9571656bb1",
+      "matches": [
+        "pangaea5-758357:Juniperus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758359:Mo05:col2~5a1643acba",
+      "matches": [
+        "pangaea5-758359:Betula_g"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758359:Mo05:col3~440d046f18",
+      "matches": [
+        "pangaea5-758359:Pinus_g"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758359:Mo05:col5~8fbb1ac7d1",
+      "matches": [
+        "pangaea5-758359:Juniperus_g"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758497:Mo05:col2~9b4f8d612a",
+      "matches": [
+        "pangaea5-758497:Pinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758497:Mo05:col3~06dd149303",
+      "matches": [
+        "pangaea5-758497:Betula_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758497:Mo05:col7~2e7c5e5aea",
+      "matches": [
+        "pangaea5-758497:Quercus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758497:Mo05:col18~759c3b6b61",
+      "matches": [
+        "pangaea5-758497:Abies_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758497:Mo05:col19~de709a308a",
+      "matches": [
+        "pangaea5-758497:Juniperus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-758620:M51_3_569_3:col18~d6bcdafb5f",
+      "matches": [
+        "pangaea5-758620:Manganese_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-780234:160_969D:col8~78fd83ffc6",
+      "matches": [
+        "pangaea5-780234:Vanadium_mg_kg"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-780234:160_969D:col9~657d495c79",
+      "matches": [
+        "pangaea5-780234:Molybdenum_mg_kg"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-780234:160_969D:col13~ff3078f363",
+      "matches": [
+        "pangaea5-780234:Iron_Aluminium_ratio_sin_unidad"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col6~f9cee35657",
+      "matches": [
+        "pangaea5-867316:Betula_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col8~d39aa4225b",
+      "matches": [
+        "pangaea5-867316:Cedrus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col18~fefb9ac64b",
+      "matches": [
+        "pangaea5-867316:Juniperus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col22~e2f47f15e7",
+      "matches": [
+        "pangaea5-867316:Pinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col23~306793d82b",
+      "matches": [
+        "pangaea5-867316:Pistacia_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col40~a4d62fdd02",
+      "matches": [
+        "pangaea5-867316:Arboreal_pollen_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col123~81a7c66375",
+      "matches": [
+        "pangaea5-867316:Non_arboreal_pollen_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-867316:KIN2:col124~bdd03a5f86",
+      "matches": [
+        "pangaea5-867316:Pollen_total_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col3~4fdc525034",
+      "matches": [
+        "pangaea5-894213:Abies_~4fdc5250"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col10~9d66a9308a",
+      "matches": [
+        "pangaea5-894213:Betula_~9d66a930"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col13~470acd65fe",
+      "matches": [
+        "pangaea5-894213:Carpinus_betulus_~470acd65"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col16~fba1aa9093",
+      "matches": [
+        "pangaea5-894213:Cedrus_~fba1aa90"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col38~8c3db7d531",
+      "matches": [
+        "pangaea5-894213:Juniperus_~8c3db7d5"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col46~40317c662f",
+      "matches": [
+        "pangaea5-894213:Olea_~40317c66"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col50~b9b857a5e0",
+      "matches": [
+        "pangaea5-894213:Pinus_~b9b857a5"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-894213:TRIFOGLI:col51~b2a11d4f18",
+      "matches": [
+        "pangaea5-894213:Pistacia_~b2a11d4f"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-910794:HER_GC_UB06:col21~610dede869",
+      "matches": [
+        "pangaea5-910794:Low_oxygen_indicators_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-910795:MD95_2043:col4~3145506e8c",
+      "matches": [
+        "pangaea5-910795:Low_oxygen_indicators_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-910796:MD99_2343:col4~2850405619",
+      "matches": [
+        "pangaea5-910796:Low_oxygen_indicators_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-929110:Mo05:col5~a899444f23",
+      "matches": [
+        "pangaea5-929110:Abies_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-929110:Mo05:col8~6937d36a0e",
+      "matches": [
+        "pangaea5-929110:Pinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-929110:Mo05:col10~ee1d888d63",
+      "matches": [
+        "pangaea5-929110:Betula_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-929110:Mo05:col12~f8b5078736",
+      "matches": [
+        "pangaea5-929110:Carpinus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-929110:Mo05:col17~a9851c3cd3",
+      "matches": [
+        "pangaea5-929110:Quercus_"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col2~c38d4a2cc9",
+      "matches": [
+        "pangaea5-930103:Pinus_~c38d4a2c"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col4~18f2443577",
+      "matches": [
+        "pangaea5-930103:Abies_~18f24435"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col5~e67581ee38",
+      "matches": [
+        "pangaea5-930103:Juniperus_~e67581ee"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col9~2b21c5d2bf",
+      "matches": [
+        "pangaea5-930103:Betula_~2b21c5d2"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col14~d126e3e7aa",
+      "matches": [
+        "pangaea5-930103:Quercus_ilex_type_~d126e3e7"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col21~58d79e4bff",
+      "matches": [
+        "pangaea5-930103:Carpinus_betulus_~58d79e4b"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col23~23ce1a98bb",
+      "matches": [
+        "pangaea5-930103:Pistacia_~23ce1a98"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-930103:Tenaghi_Philippon_Phi2:col32~9a15911f52",
+      "matches": [
+        "pangaea5-930103:Olea_~9a15911f"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    },
+    {
+      "id": "pangaea6-966842:MVSEIS08_TG_2:col4~80fbcb09c9",
+      "matches": [
+        "pangaea5-966842:Iron_Aluminium_ratio_sin_unidad"
+      ],
+      "reason": "exact_complete_variable_unit_vector_already_present"
+    }
+  ],
+  "held_core_records": [],
+  "linked_to_parent_records": {
+    "pangaea6-geob7608_1": "pangaea-667328",
+    "pangaea6-160_969d": "pangaea5-160_969d",
+    "pangaea6-md95_2043": "pangaea-438816",
+    "pangaea6-mo05": "pangaea-818921",
+    "pangaea6-m51_3_569_3": "pangaea5-m51_3_569_3",
+    "pangaea6-md99_2343": "pangaea-759535",
+    "pangaea6-kin2": "pangaea5-kin2",
+    "pangaea6-popei_vc2b": "pangaea5-popei_vc2b",
+    "pangaea6-trifogli": "pangaea5-trifogli",
+    "pangaea6-her_gc_ub06": "pangaea5-her_gc_ub06",
+    "pangaea6-ntg16": "pangaea5-ntg16",
+    "pangaea6-tenaghi_philippon_phi2": "pangaea5-tenaghi_philippon_phi2",
+    "pangaea6-ndt_6_2016": "pangaea5-ndt_6_2016",
+    "pangaea6-mvseis08_tg_2": "pangaea5-mvseis08_tg_2",
+    "pangaea6-figino19_2": "pangaea5-figino19_2",
+    "pangaea6-dsddp_5017_1_a": "pangaea-940127",
+    "pangaea6-339_u1387c": "pangaea5-339_u1387c",
+    "pangaea6-ote_2019_kc_13": "pangaea5-ote_2019_kc_13"
+  },
+  "partial_numeric_overlap_links": [
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443"
+      ],
+      "exact_shared_pairs": 103,
+      "fraction_of_smaller_unique_set": 0.6959459459459459,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e"
+      ],
+      "exact_shared_pairs": 104,
+      "fraction_of_smaller_unique_set": 0.7027027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 104,
+      "fraction_of_smaller_unique_set": 0.7027027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 104,
+      "fraction_of_smaller_unique_set": 0.7027027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 107,
+      "fraction_of_smaller_unique_set": 0.722972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 106,
+      "fraction_of_smaller_unique_set": 0.7162162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 104,
+      "fraction_of_smaller_unique_set": 0.7027027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 104,
+      "fraction_of_smaller_unique_set": 0.7027027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 105,
+      "fraction_of_smaller_unique_set": 0.7094594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 101,
+      "fraction_of_smaller_unique_set": 0.6824324324324325,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 107,
+      "fraction_of_smaller_unique_set": 0.722972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col120~597f290442",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 107,
+      "fraction_of_smaller_unique_set": 0.722972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e"
+      ],
+      "exact_shared_pairs": 126,
+      "fraction_of_smaller_unique_set": 0.8513513513513513,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a"
+      ],
+      "exact_shared_pairs": 137,
+      "fraction_of_smaller_unique_set": 0.9256756756756757,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550"
+      ],
+      "exact_shared_pairs": 137,
+      "fraction_of_smaller_unique_set": 0.9256756756756757,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a"
+      ],
+      "exact_shared_pairs": 138,
+      "fraction_of_smaller_unique_set": 0.9324324324324325,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 134,
+      "fraction_of_smaller_unique_set": 0.9054054054054054,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 138,
+      "fraction_of_smaller_unique_set": 0.9324324324324325,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 135,
+      "fraction_of_smaller_unique_set": 0.9121621621621622,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 135,
+      "fraction_of_smaller_unique_set": 0.9121621621621622,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 137,
+      "fraction_of_smaller_unique_set": 0.9256756756756757,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col121~2039ff3443",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15"
+      ],
+      "exact_shared_pairs": 130,
+      "fraction_of_smaller_unique_set": 0.8783783783783784,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a"
+      ],
+      "exact_shared_pairs": 130,
+      "fraction_of_smaller_unique_set": 0.8783783783783784,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550"
+      ],
+      "exact_shared_pairs": 129,
+      "fraction_of_smaller_unique_set": 0.8716216216216216,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a"
+      ],
+      "exact_shared_pairs": 131,
+      "fraction_of_smaller_unique_set": 0.8851351351351351,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 127,
+      "fraction_of_smaller_unique_set": 0.8581081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 129,
+      "fraction_of_smaller_unique_set": 0.8716216216216216,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 118,
+      "fraction_of_smaller_unique_set": 0.7972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 118,
+      "fraction_of_smaller_unique_set": 0.7972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 131,
+      "fraction_of_smaller_unique_set": 0.8851351351351351,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 127,
+      "fraction_of_smaller_unique_set": 0.8581081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 129,
+      "fraction_of_smaller_unique_set": 0.8716216216216216,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 130,
+      "fraction_of_smaller_unique_set": 0.8783783783783784,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 123,
+      "fraction_of_smaller_unique_set": 0.831081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col122~15b1ef501e",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 129,
+      "fraction_of_smaller_unique_set": 0.8716216216216216,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 140,
+      "fraction_of_smaller_unique_set": 0.9459459459459459,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 125,
+      "fraction_of_smaller_unique_set": 0.8445945945945946,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 126,
+      "fraction_of_smaller_unique_set": 0.8513513513513513,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 132,
+      "fraction_of_smaller_unique_set": 0.8918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col123~af05214b15",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a"
+      ],
+      "exact_shared_pairs": 146,
+      "fraction_of_smaller_unique_set": 0.9864864864864865,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 123,
+      "fraction_of_smaller_unique_set": 0.831081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 146,
+      "fraction_of_smaller_unique_set": 0.9864864864864865,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 136,
+      "fraction_of_smaller_unique_set": 0.918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col124~66079b063a",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 140,
+      "fraction_of_smaller_unique_set": 0.9459459459459459,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 134,
+      "fraction_of_smaller_unique_set": 0.9054054054054054,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col125~2f0bd92550",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 124,
+      "fraction_of_smaller_unique_set": 0.8378378378378378,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 146,
+      "fraction_of_smaller_unique_set": 0.9864864864864865,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 134,
+      "fraction_of_smaller_unique_set": 0.9054054054054054,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col126~a4e41a695a",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee"
+      ],
+      "exact_shared_pairs": 141,
+      "fraction_of_smaller_unique_set": 0.9527027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 124,
+      "fraction_of_smaller_unique_set": 0.8378378378378378,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 141,
+      "fraction_of_smaller_unique_set": 0.9527027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 140,
+      "fraction_of_smaller_unique_set": 0.9459459459459459,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 140,
+      "fraction_of_smaller_unique_set": 0.9459459459459459,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 141,
+      "fraction_of_smaller_unique_set": 0.9527027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 131,
+      "fraction_of_smaller_unique_set": 0.8851351351351351,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 141,
+      "fraction_of_smaller_unique_set": 0.9527027027027027,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col127~b8984184d2",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 140,
+      "fraction_of_smaller_unique_set": 0.9459459459459459,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e"
+      ],
+      "exact_shared_pairs": 123,
+      "fraction_of_smaller_unique_set": 0.831081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 135,
+      "fraction_of_smaller_unique_set": 0.9121621621621622,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col128~b0548bd0ee",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95"
+      ],
+      "exact_shared_pairs": 118,
+      "fraction_of_smaller_unique_set": 0.7972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 123,
+      "fraction_of_smaller_unique_set": 0.831081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 121,
+      "fraction_of_smaller_unique_set": 0.8175675675675675,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 125,
+      "fraction_of_smaller_unique_set": 0.8445945945945946,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 118,
+      "fraction_of_smaller_unique_set": 0.7972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col130~c8029e572e",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 122,
+      "fraction_of_smaller_unique_set": 0.8243243243243243,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 127,
+      "fraction_of_smaller_unique_set": 0.8581081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 127,
+      "fraction_of_smaller_unique_set": 0.8581081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 121,
+      "fraction_of_smaller_unique_set": 0.8175675675675675,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 127,
+      "fraction_of_smaller_unique_set": 0.8581081081081081,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col131~071abfbb95",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 128,
+      "fraction_of_smaller_unique_set": 0.8648648648648649,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 135,
+      "fraction_of_smaller_unique_set": 0.9121621621621622,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col132~154598af5e",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 132,
+      "fraction_of_smaller_unique_set": 0.8918918918918919,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col133~3ecffaaade",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4",
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8"
+      ],
+      "exact_shared_pairs": 147,
+      "fraction_of_smaller_unique_set": 0.9932432432432432,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 134,
+      "fraction_of_smaller_unique_set": 0.9054054054054054,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col134~a0b4452fb4",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 142,
+      "fraction_of_smaller_unique_set": 0.9594594594594594,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8",
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 133,
+      "fraction_of_smaller_unique_set": 0.8986486486486487,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 144,
+      "fraction_of_smaller_unique_set": 0.972972972972973,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col135~90101471c8",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a",
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b"
+      ],
+      "exact_shared_pairs": 134,
+      "fraction_of_smaller_unique_set": 0.9054054054054054,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col136~6c12941a6a",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 145,
+      "fraction_of_smaller_unique_set": 0.9797297297297297,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b",
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f"
+      ],
+      "exact_shared_pairs": 135,
+      "fraction_of_smaller_unique_set": 0.9121621621621622,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col137~6094765b9b",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 133,
+      "fraction_of_smaller_unique_set": 0.8986486486486487,
+      "status": "review_link; not merged"
+    },
+    {
+      "series": [
+        "pangaea6-894213:TRIFOGLI:col138~e3d5cfae2f",
+        "pangaea6-894213:TRIFOGLI:col139~1415c7fdd5"
+      ],
+      "exact_shared_pairs": 143,
+      "fraction_of_smaller_unique_set": 0.9662162162162162,
+      "status": "review_link; not merged"
+    }
+  ],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "reports/priority_v6_audit.json",
+    "reports/noaa_priority_v6_audit.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "pangaea": [
+      {
+        "id": "pangaea6-966838:MVSEIS08_TG_2:col4~36f3f2c97b",
+        "record_id": "pangaea6-mvseis08_tg_2",
+        "proxy": "Size_fraction_0_063_0_031_mm_very_coarse_silt_",
+        "variable_id": "Size_fraction_0_063_0_031_mm_very_coarse_silt_",
+        "label": "Size fraction 0.063-0.031 mm, very coarse silt · fines (very coarse silt)",
+        "unit": "%",
+        "original_unit": "%",
+        "family": "Sedimentología",
+        "proxy_families": [
+          "corrientes"
+        ],
+        "parameter_name_pangaea": "Size fraction 0.063-0.031 mm, very coarse silt",
+        "parameter_comment": "fines (very coarse silt)",
+        "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+        "compatibility_group": "Size_fraction_0_063_0_031_mm_very_coarse_silt__Micromeritics_Sedigraph_III_5120_X_ray_absorption_sedimentat",
+        "comparison_context_key": null,
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "dataset_doi": "10.1594/PANGAEA.966838",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966838?format=textfile",
+        "source_column": "63-31 µm [%] (fines (very coarse silt))",
+        "source_column_index": 4,
+        "raw_sha256": "86c366b361df468ce3c1b7e5a757e02b894d8e38b1ed30cd3a0f5a50f2d85964",
+        "xml_sha256": "81a0877ee3f77cf08bc1ace8c6262a28bb5ed5677378e0d507fde9ef470a6969",
+        "source_event": "MVSEIS08_TG-2",
+        "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Sortable silt of sediment core MVSEIS08_TG-2 from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966838, ",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper_doi": "10.1016/j.quascirev.2018.07.036",
+        "publication_year": 2018,
+        "publication_relation": "native_related_to",
+        "paper_identity_sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040",
+        "chronology_status": "published_BP",
+        "chronology_label": "Published native age; calendar harmonization not independently audited",
+        "age_column_original": "Age [ka BP]",
+        "age_column_index": 1,
+        "age_unit_original": "Age [ka BP]",
+        "age_scale": "identity: source point age in ka BP",
+        "age_model": "identity: source point age in ka BP",
+        "age_transformation": "identity: source point age in ka BP",
+        "depth_frame": "Depth sed [m] (Depth in core)",
+        "uncertainty_type": "not supplied for selected value; no error estimated",
+        "qc_notes": [
+          "Original source values; no new proxy calibration or forest-type inference",
+          "Article linked as Related to by PANGAEA; not an independent claim of original measurement provenance",
+          "Published grain-size indicator; not converted to current velocity"
+        ],
+        "review_status": "native_contract_checked; independent_scientific_review_pending",
+        "source_dataset_title": "Sortable silt of sediment core MVSEIS08_TG-2 from Gulf of Cadiz",
+        "search_aliases": [
+          "Size fraction 0.063-0.031 mm, very coarse silt",
+          "",
+          "corrientes",
+          "corrientes paleocorriente granulometría"
+        ],
+        "quarantine_reason": "native percentage outside [0,100]"
+      },
+      {
+        "id": "pangaea6-966838:MVSEIS08_TG_2:col7~b7e38b8886",
+        "record_id": "pangaea6-mvseis08_tg_2",
+        "proxy": "Size_fraction_0_063_0_010_mm_sortable_silt_",
+        "variable_id": "Size_fraction_0_063_0_010_mm_sortable_silt_",
+        "label": "Size fraction 0.063-0.010 mm, sortable silt · mean, carb-free",
+        "unit": "%",
+        "original_unit": "%",
+        "family": "Sedimentología",
+        "proxy_families": [
+          "corrientes"
+        ],
+        "parameter_name_pangaea": "Size fraction 0.063-0.010 mm, sortable silt",
+        "parameter_comment": "mean, carb-free",
+        "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+        "compatibility_group": "Size_fraction_0_063_0_010_mm_sortable_silt__Micromeritics_Sedigraph_III_5120_X_ray_absorption_sedimentat_context_sortable_silt_native_mean_carb_free_percent_label_requires_r",
+        "comparison_context_key": "sortable_silt_native_mean_carb_free_percent_label_requires_review",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "dataset_doi": "10.1594/PANGAEA.966838",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966838?format=textfile",
+        "source_column": "63-10 µm sort silt [%] (mean, carb-free)",
+        "source_column_index": 7,
+        "raw_sha256": "86c366b361df468ce3c1b7e5a757e02b894d8e38b1ed30cd3a0f5a50f2d85964",
+        "xml_sha256": "81a0877ee3f77cf08bc1ace8c6262a28bb5ed5677378e0d507fde9ef470a6969",
+        "source_event": "MVSEIS08_TG-2",
+        "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Sortable silt of sediment core MVSEIS08_TG-2 from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966838, ",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper_doi": "10.1016/j.quascirev.2018.07.036",
+        "publication_year": 2018,
+        "publication_relation": "native_related_to",
+        "paper_identity_sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040",
+        "chronology_status": "published_BP",
+        "chronology_label": "Published native age; calendar harmonization not independently audited",
+        "age_column_original": "Age [ka BP]",
+        "age_column_index": 1,
+        "age_unit_original": "Age [ka BP]",
+        "age_scale": "identity: source point age in ka BP",
+        "age_model": "identity: source point age in ka BP",
+        "age_transformation": "identity: source point age in ka BP",
+        "depth_frame": "Depth sed [m] (Depth in core)",
+        "uncertainty_type": "not supplied for selected value; no error estimated",
+        "qc_notes": [
+          "Original source values; no new proxy calibration or forest-type inference",
+          "Article linked as Related to by PANGAEA; not an independent claim of original measurement provenance",
+          "Published grain-size indicator; not converted to current velocity",
+          "Comparison context: sortable_silt_native_mean_carb_free_percent_label_requires_review",
+          "Source labels this mean in percent; do not reinterpret as micrometres"
+        ],
+        "review_status": "native_contract_checked; independent_scientific_review_pending",
+        "source_dataset_title": "Sortable silt of sediment core MVSEIS08_TG-2 from Gulf of Cadiz",
+        "search_aliases": [
+          "Size fraction 0.063-0.010 mm, sortable silt",
+          "",
+          "corrientes",
+          "corrientes paleocorriente granulometría"
+        ],
+        "quarantine_reason": "native percent label for sortable-silt mean conflicts with mean-size interpretation"
+      },
+      {
+        "id": "pangaea6-966839:GC_01A_PC:col9~e57bfd1529",
+        "record_id": "pangaea6-gc_01a_pc",
+        "proxy": "Size_fraction_0_063_0_031_mm_very_coarse_silt_",
+        "variable_id": "Size_fraction_0_063_0_031_mm_very_coarse_silt_",
+        "label": "Size fraction 0.063-0.031 mm, very coarse silt · fines (very coarse silt)",
+        "unit": "%",
+        "original_unit": "%",
+        "family": "Sedimentología",
+        "proxy_families": [
+          "corrientes"
+        ],
+        "parameter_name_pangaea": "Size fraction 0.063-0.031 mm, very coarse silt",
+        "parameter_comment": "fines (very coarse silt)",
+        "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+        "compatibility_group": "Size_fraction_0_063_0_031_mm_very_coarse_silt__Micromeritics_Sedigraph_III_5120_X_ray_absorption_sedimentat",
+        "comparison_context_key": null,
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "dataset_doi": "10.1594/PANGAEA.966839",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966839?format=textfile",
+        "source_column": "63-31 µm [%] (fines (very coarse silt))",
+        "source_column_index": 9,
+        "raw_sha256": "c0b00643b6e3f2a5b33e7071901f4a8f817a63ce140a9e577b0f8b7ccd4f2c51",
+        "xml_sha256": "d0d4b22b60bd213d53bdc7ea7b965f8fba4cbd120384a7f4a33b2f441e72e033",
+        "source_event": "GC-01A-PC",
+        "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Sortable silt of sediment cores GC-01A from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966839, ",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper_doi": "10.1016/j.quascirev.2018.07.036",
+        "publication_year": 2018,
+        "publication_relation": "native_related_to",
+        "paper_identity_sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040",
+        "chronology_status": "published_BP",
+        "chronology_label": "Published native age; calendar harmonization not independently audited",
+        "age_column_original": "Age [ka BP]",
+        "age_column_index": 6,
+        "age_unit_original": "Age [ka BP]",
+        "age_scale": "identity: source point age in ka BP",
+        "age_model": "identity: source point age in ka BP",
+        "age_transformation": "identity: source point age in ka BP",
+        "depth_frame": "Depth sed [m] (Depth in core)",
+        "uncertainty_type": "not supplied for selected value; no error estimated",
+        "qc_notes": [
+          "Original source values; no new proxy calibration or forest-type inference",
+          "Article linked as Related to by PANGAEA; not an independent claim of original measurement provenance",
+          "Published grain-size indicator; not converted to current velocity"
+        ],
+        "review_status": "native_contract_checked; independent_scientific_review_pending",
+        "source_dataset_title": "Sortable silt of sediment cores GC-01A from Gulf of Cadiz",
+        "search_aliases": [
+          "Size fraction 0.063-0.031 mm, very coarse silt",
+          "",
+          "corrientes",
+          "corrientes paleocorriente granulometría"
+        ],
+        "quarantine_reason": "native percentage outside [0,100]"
+      },
+      {
+        "id": "pangaea6-966839:GC_01A_PC:col12~0f800c7311",
+        "record_id": "pangaea6-gc_01a_pc",
+        "proxy": "Size_fraction_0_063_0_010_mm_sortable_silt_",
+        "variable_id": "Size_fraction_0_063_0_010_mm_sortable_silt_",
+        "label": "Size fraction 0.063-0.010 mm, sortable silt · mean, carb-free",
+        "unit": "%",
+        "original_unit": "%",
+        "family": "Sedimentología",
+        "proxy_families": [
+          "corrientes"
+        ],
+        "parameter_name_pangaea": "Size fraction 0.063-0.010 mm, sortable silt",
+        "parameter_comment": "mean, carb-free",
+        "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+        "compatibility_group": "Size_fraction_0_063_0_010_mm_sortable_silt__Micromeritics_Sedigraph_III_5120_X_ray_absorption_sedimentat_context_sortable_silt_native_mean_carb_free_percent_label_requires_r",
+        "comparison_context_key": "sortable_silt_native_mean_carb_free_percent_label_requires_review",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "dataset_doi": "10.1594/PANGAEA.966839",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966839?format=textfile",
+        "source_column": "63-10 µm sort silt [%] (mean, carb-free)",
+        "source_column_index": 12,
+        "raw_sha256": "c0b00643b6e3f2a5b33e7071901f4a8f817a63ce140a9e577b0f8b7ccd4f2c51",
+        "xml_sha256": "d0d4b22b60bd213d53bdc7ea7b965f8fba4cbd120384a7f4a33b2f441e72e033",
+        "source_event": "GC-01A-PC",
+        "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Sortable silt of sediment cores GC-01A from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966839, ",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper_doi": "10.1016/j.quascirev.2018.07.036",
+        "publication_year": 2018,
+        "publication_relation": "native_related_to",
+        "paper_identity_sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040",
+        "chronology_status": "published_BP",
+        "chronology_label": "Published native age; calendar harmonization not independently audited",
+        "age_column_original": "Age [ka BP]",
+        "age_column_index": 6,
+        "age_unit_original": "Age [ka BP]",
+        "age_scale": "identity: source point age in ka BP",
+        "age_model": "identity: source point age in ka BP",
+        "age_transformation": "identity: source point age in ka BP",
+        "depth_frame": "Depth sed [m] (Depth in core)",
+        "uncertainty_type": "not supplied for selected value; no error estimated",
+        "qc_notes": [
+          "Original source values; no new proxy calibration or forest-type inference",
+          "Article linked as Related to by PANGAEA; not an independent claim of original measurement provenance",
+          "Published grain-size indicator; not converted to current velocity",
+          "Comparison context: sortable_silt_native_mean_carb_free_percent_label_requires_review",
+          "Source labels this mean in percent; do not reinterpret as micrometres"
+        ],
+        "review_status": "native_contract_checked; independent_scientific_review_pending",
+        "source_dataset_title": "Sortable silt of sediment cores GC-01A from Gulf of Cadiz",
+        "search_aliases": [
+          "Size fraction 0.063-0.010 mm, sortable silt",
+          "",
+          "corrientes",
+          "corrientes paleocorriente granulometría"
+        ],
+        "quarantine_reason": "native percent label for sortable-silt mean conflicts with mean-size interpretation"
+      },
+      {
+        "id": "pangaea6-966839:GC_01A_TC:col12~d61a208057",
+        "record_id": "pangaea6-gc_01a_tc",
+        "proxy": "Size_fraction_0_063_0_010_mm_sortable_silt_",
+        "variable_id": "Size_fraction_0_063_0_010_mm_sortable_silt_",
+        "label": "Size fraction 0.063-0.010 mm, sortable silt · mean, carb-free",
+        "unit": "%",
+        "original_unit": "%",
+        "family": "Sedimentología",
+        "proxy_families": [
+          "corrientes"
+        ],
+        "parameter_name_pangaea": "Size fraction 0.063-0.010 mm, sortable silt",
+        "parameter_comment": "mean, carb-free",
+        "method": "Micromeritics Sedigraph III 5120 X-ray absorption sedimentation analyzer",
+        "compatibility_group": "Size_fraction_0_063_0_010_mm_sortable_silt__Micromeritics_Sedigraph_III_5120_X_ray_absorption_sedimentat_context_sortable_silt_native_mean_carb_free_percent_label_requires_r",
+        "comparison_context_key": "sortable_silt_native_mean_carb_free_percent_label_requires_review",
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "dataset_doi": "10.1594/PANGAEA.966839",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966839?format=textfile",
+        "source_column": "63-10 µm sort silt [%] (mean, carb-free)",
+        "source_column_index": 12,
+        "raw_sha256": "c0b00643b6e3f2a5b33e7071901f4a8f817a63ce140a9e577b0f8b7ccd4f2c51",
+        "xml_sha256": "d0d4b22b60bd213d53bdc7ea7b965f8fba4cbd120384a7f4a33b2f441e72e033",
+        "source_event": "GC-01A-TC",
+        "citation": "Lebreiro, Susana Martin; Antón López, Laura; Reguera, Maria Isabel (2024): Sortable silt of sediment cores GC-01A from Gulf of Cadiz [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.966839, ",
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper_doi": "10.1016/j.quascirev.2018.07.036",
+        "publication_year": 2018,
+        "publication_relation": "native_related_to",
+        "paper_identity_sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040",
+        "chronology_status": "published_BP",
+        "chronology_label": "Published native age; calendar harmonization not independently audited",
+        "age_column_original": "Age [ka BP]",
+        "age_column_index": 6,
+        "age_unit_original": "Age [ka BP]",
+        "age_scale": "identity: source point age in ka BP",
+        "age_model": "identity: source point age in ka BP",
+        "age_transformation": "identity: source point age in ka BP",
+        "depth_frame": "Depth sed [m] (Depth in core)",
+        "uncertainty_type": "not supplied for selected value; no error estimated",
+        "qc_notes": [
+          "Original source values; no new proxy calibration or forest-type inference",
+          "Article linked as Related to by PANGAEA; not an independent claim of original measurement provenance",
+          "Published grain-size indicator; not converted to current velocity",
+          "Comparison context: sortable_silt_native_mean_carb_free_percent_label_requires_review",
+          "Source labels this mean in percent; do not reinterpret as micrometres"
+        ],
+        "review_status": "native_contract_checked; independent_scientific_review_pending",
+        "source_dataset_title": "Sortable silt of sediment cores GC-01A from Gulf of Cadiz",
+        "search_aliases": [
+          "Size fraction 0.063-0.010 mm, sortable silt",
+          "",
+          "corrientes",
+          "corrientes paleocorriente granulometría"
+        ],
+        "quarantine_reason": "native percent label for sortable-silt mean conflicts with mean-size interpretation"
+      }
+    ],
+    "noaa": []
+  },
+  "pending_source_candidates": {
+    "pangaea": [
+      {
+        "id": 855219,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.855219",
+        "sha": "2cb01eb53f309423ece15d50a852923f1a246a13ec52ad906266a9519e3f0b3d",
+        "xml_sha": "49c28d82eb1a6b306ae53e7bb2ddb5d0f98f85f8940e06ff57761fc2961e9fd2",
+        "retrieved_at_utc": "2026-10-30T09:44:49.770992+00:00",
+        "title": "High resolution XRF elemental composition of sediment core DSEn",
+        "header": [
+          "Depth sed [m]",
+          "Varve age [a BP]",
+          "Age [ka BP]",
+          "Si [cps]",
+          "S [cps]",
+          "Cl [cps]",
+          "K [cps]",
+          "Ca [cps]",
+          "Ti [cps]",
+          "Fe [cps]",
+          "Br [cps]",
+          "Sr [cps]"
+        ],
+        "events": [
+          {
+            "label": "DSEn",
+            "lat": 31.46528,
+            "lon": 35.39417,
+            "elevation": "-413.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "paper": null,
+        "source_rows": 12218,
+        "columns": [],
+        "status": "held",
+        "reason": "radiocarbon age requires explicit calendar chronology review"
+      },
+      {
+        "id": 855220,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.855220",
+        "sha": "893327975bb2ea1944c1e392db954211a2f71ab00736e2959323b8c8f4e6c6ba",
+        "xml_sha": "d201bad961fb05715d06314a5ccc90ba946cf89529ad098baa873103ea8543ad",
+        "retrieved_at_utc": "2026-10-30T09:44:49.735628+00:00",
+        "title": "High resolution XRF elemental composition of sediment core DSDDP_5017-1",
+        "header": [
+          "Depth sed [m]",
+          "Depth comp [mcd]",
+          "Age [ka BP]",
+          "Si [cps]",
+          "S [cps]",
+          "Cl [cps]",
+          "K [cps]",
+          "Ca [cps]",
+          "Ti [cps]",
+          "Fe [cps]",
+          "Br [cps]",
+          "Sr [cps]"
+        ],
+        "events": [
+          {
+            "label": "DSDDP_5017-1",
+            "lat": 31.50806,
+            "lon": 35.47111,
+            "elevation": "-428.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "paper": null,
+        "source_rows": 12043,
+        "columns": [],
+        "status": "held",
+        "reason": "radiocarbon age requires explicit calendar chronology review"
+      },
+      {
+        "id": 872767,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872767",
+        "sha": "171a100c62fc65e591d07a217691e0196d23ebc6a0ebfb2ef5446dbe9b20d7be",
+        "xml_sha": "e45d40b624ab70b884b46fbea6d159c7b9081bb0addaf2bce0ef37c214428e3d",
+        "retrieved_at_utc": "2026-10-30T09:44:50.124125+00:00",
+        "title": "CLAM age model and biomes of sediment core 161-976",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "161-976",
+            "lat": 36.205366666667,
+            "lon": -4.3126666666667,
+            "elevation": "-1108.0",
+            "campaign": "Leg161",
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 256,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872776,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872776",
+        "sha": "6be3313764edffba64632acf9c2731e77719e3f1d8ae91fed9cb1c76ac2edd6a",
+        "xml_sha": "599b766e6c253dad8c5543fe9039c149e37c0e76ad5d53323d9001c329b06f7d",
+        "retrieved_at_utc": "2026-10-30T09:44:50.134215+00:00",
+        "title": "CLAM age model and biomes of sediment core Abric_Romani",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Abric_Romani",
+            "lat": 41.53,
+            "lon": 1.68,
+            "elevation": "350.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 98,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872777,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872777",
+        "sha": "c0b5f6f6a43a7217474cc68af2f4e845e77de043e93bfe49f94a040f0716b270",
+        "xml_sha": "20c0668c76518b41682353a376a47888f2d86dfcd73cadf7fef23e97272a243d",
+        "retrieved_at_utc": "2026-10-30T09:44:50.231830+00:00",
+        "title": "CLAM age model and biomes of sediment core Azzano_Decimo",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Azzano_Decimo",
+            "lat": 45.8833,
+            "lon": 12.7165,
+            "elevation": "10.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 248,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872778,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872778",
+        "sha": "2b24f040cd324171b26359c63aeff50222a8f42d418e517180a65e94353f287a",
+        "xml_sha": "9d2dddaa9a617eed1bc504958142160189ad03654c4237515d12308e0ee03842",
+        "retrieved_at_utc": "2026-10-30T09:44:50.620025+00:00",
+        "title": "CLAM age model and biomes of sediment core BANYOLES",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "BANYOLES",
+            "lat": 42.133333,
+            "lon": 2.75,
+            "elevation": "173.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 110,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872788,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872788",
+        "sha": "57ad31fbf31c5d6ce79741fdc23c436d8bf8226ce85bc3a5f4b5f167a73c0593",
+        "xml_sha": "ed8d8c7868df7e60029b32b36a15c0158da3e15042d8d4e25176973c4c819c5e",
+        "retrieved_at_utc": "2026-10-30T09:44:50.588018+00:00",
+        "title": "CLAM age model and biomes of sediment core FURAMOOS",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "FURAMOOS",
+            "lat": 47.98333,
+            "lon": 9.88333,
+            "elevation": "662.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 122,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872791,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872791",
+        "sha": "ada250280d88628c809f2f87549d25362bce4e52ebaa44c80eef6b0bd559f1d7",
+        "xml_sha": "0dca5a502f83a221327145d97bb75a0bc281b777416a5562e453821a32b5c379",
+        "retrieved_at_utc": "2026-10-30T09:44:50.720559+00:00",
+        "title": "CLAM age model and biomes of sediment core Ioannina",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "IOANNINA",
+            "lat": 39.7625,
+            "lon": 20.730556,
+            "elevation": "470.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 291,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872797,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872797",
+        "sha": "ac56b1bf21deea5c0233da4fac61521034a1eb5e288e6d0d189d8fcff1b9bbfc",
+        "xml_sha": "e02017b66909b91fd99b833a3eb6bd3b27ac837a9022a06a1ec29d76121dbe00",
+        "retrieved_at_utc": "2026-10-30T09:44:50.825618+00:00",
+        "title": "CLAM age model and biomes of sediment core Lac_du_Bouchet",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Lac_du_Bouchet",
+            "lat": 44.83,
+            "lon": 3.82,
+            "elevation": "1200.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 505,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872798,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872798",
+        "sha": "1c597763d6181570909bedd048613c1071c80ef44f1a1836fd9207fda45e53ea",
+        "xml_sha": "b9ddb04328d20acf56ae041699d71f0ff22a8ed5c74f780f9f14f908a336fbd4",
+        "retrieved_at_utc": "2026-10-30T09:44:51.124129+00:00",
+        "title": "CLAM age model and biomes of sediment core Lagaccione",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Lagaccione",
+            "lat": 42.57,
+            "lon": 11.8,
+            "elevation": "355.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 235,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872799,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872799",
+        "sha": "05eb986aa8cb417d2a5ec8ce3fb71c4798ea21822c4e3a502d1fdafc8a62be28",
+        "xml_sha": "101237af40ee4bd456287f2e8cf924feb8b0a49f5352e5dbd98076deee403d72",
+        "retrieved_at_utc": "2026-10-30T09:44:51.129363+00:00",
+        "title": "CLAM age model and biomes of sediment core Lago_Grande_di_Monticchio",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Lago_Grande_di_Monticchio",
+            "lat": 40.9317,
+            "lon": 15.6049,
+            "elevation": "656.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 542,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872804,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872804",
+        "sha": "e5e8e6529dce5d19601fb411d613f0dbd7b1a253ba3bd5efe7e1438ae013f1db",
+        "xml_sha": "597a1da30f86dc0953836d1302fc49b2c92a955454f9aed42d1d98b95d6c4c41",
+        "retrieved_at_utc": "2026-10-30T09:44:51.333277+00:00",
+        "title": "CLAM age model and biomes of sediment core Les_Echets_G",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Les_Echets_G",
+            "lat": 45.9,
+            "lon": 4.93,
+            "elevation": "267.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 3001,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872808,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872808",
+        "sha": "54247ba7ffcca5f0db2468df87a2099e3a50e9f2906bfe4fa114e79c9c014809",
+        "xml_sha": "e7f5d0d74acde70a2b3531566cf65b5d44d96eb3d5f68ea60b6c3b90d84464d9",
+        "retrieved_at_utc": "2026-10-30T09:44:51.267509+00:00",
+        "title": "CLAM age model and biomes of sediment core MD04-2845",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "MD04-2845",
+            "lat": 45.34767,
+            "lon": -5.2195,
+            "elevation": "-4175.0",
+            "campaign": "MD141",
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 149,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872809,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872809",
+        "sha": "594a083c0e6ad1864e3bed0ffb139df518a874a74d98d4b1751bc8c59a6218b0",
+        "xml_sha": "fdef1133b7769eaee1f34e11dccba88047446917db696188b8ededde535b03e0",
+        "retrieved_at_utc": "2026-10-30T09:44:51.556759+00:00",
+        "title": "CLAM age model and biomes of sediment core MD84-629",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "MD84-629",
+            "lat": 32.04,
+            "lon": 34.21,
+            "elevation": "-745.0",
+            "campaign": "NOE",
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 87,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872812,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872812",
+        "sha": "0cbcaa57f120d72444d106258fdfa33c81e27ce5246b36122dd12b6e8e6324cb",
+        "xml_sha": "5875dc3444b1d1571b9109aa47b06698095df3dcb49680d53ed096e22f5aefc6",
+        "retrieved_at_utc": "2026-10-30T09:44:51.633245+00:00",
+        "title": "CLAM age model and biomes of sediment core MD95-2043",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "MD95-2043",
+            "lat": 36.143333333333,
+            "lon": -2.6211666666667,
+            "elevation": "-1841.0",
+            "campaign": "MD101__Campaign",
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 262,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872813,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872813",
+        "sha": "439f37e266ccec6688a70df7f01eb7e0cd2bc7c15873718349aa1fbd120ee932",
+        "xml_sha": "d0ab7ecd71195e3f3442c9b0b0a48a6f33c5e335cd3028d34bf906330b573da0",
+        "retrieved_at_utc": "2026-10-30T09:44:51.835021+00:00",
+        "title": "CLAM age model and biomes of sediment core MD99-2331",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "MD99-2331",
+            "lat": 42.15,
+            "lon": -9.68333,
+            "elevation": "-2120.0",
+            "campaign": "MD114",
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 245,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872815,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872815",
+        "sha": "aaed2027cb2f7e0a55af6505b1caac30f33cbb0b7e06723baeb67eab5bed60d0",
+        "xml_sha": "ca0449e79fe7c34759d9883c389b9f7b86334b33a7f96d2b691e1a29be8037ec",
+        "retrieved_at_utc": "2026-10-30T09:44:51.887165+00:00",
+        "title": "CLAM age model and biomes of sediment core Navarres",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Navarres",
+            "lat": 39.1,
+            "lon": -0.68,
+            "elevation": "225.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 182,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872820,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872820",
+        "sha": "683cc78adf545ae60ed0d909bde836b3ff23c7869f95cdf3f2afed8d58c60621",
+        "xml_sha": "c840c6bf01d22d8275ac759ec92d39ba9001948fa62706db3792f161e28af2a1",
+        "retrieved_at_utc": "2026-10-30T09:44:52.046888+00:00",
+        "title": "CLAM age model and biomes of sediment core Stracciacappa",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Stracciacappa",
+            "lat": 42.13,
+            "lon": 12.32,
+            "elevation": "220.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 136,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872823,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872823",
+        "sha": "3ecd8bb7ae58d4618e625da4157fcbafaa6e3786c2e1b128fabb35cd8ceda74d",
+        "xml_sha": "c8d655fb987e710c1c15e03bd9268c15105f781335a5ec07aec2740df7ef38d1",
+        "retrieved_at_utc": "2026-10-30T09:44:52.129717+00:00",
+        "title": "CLAM age model and biomes of sediment core Valle_di_Castiglione",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "Valle_di_Castiglione",
+            "lat": 41.9,
+            "lon": 12.76,
+            "elevation": "44.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 82,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 872825,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.872825",
+        "sha": "6bc5dc600e1d441e30c55e9bb2101e5d5a4b3ada95003b5c7351269b86a02c82",
+        "xml_sha": "af63b153007a1343861a6d8c9382d4f922beb3e058d2c99a8ed18f9b092cf9a2",
+        "retrieved_at_utc": "2026-10-30T09:44:52.281086+00:00",
+        "title": "CLAM age model and biomes of sediment core XINIAS",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "Cal age min [ka BP]",
+          "Cal age max [ka BP]",
+          "Cal age [ka BP]",
+          "Accu model [a/cm]",
+          "Age model type",
+          "Sample ID",
+          "Pollen te forest [%]"
+        ],
+        "events": [
+          {
+            "label": "XINIAS",
+            "lat": 39.05,
+            "lon": 22.26666,
+            "elevation": "500.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+        "paper": null,
+        "source_rows": 91,
+        "columns": [],
+        "status": "held",
+        "reason": "licence requires separate review before new redistribution (no adaptation assumed)"
+      },
+      {
+        "id": 885543,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.885543",
+        "sha": null,
+        "xml_sha": null,
+        "retrieved_at_utc": null,
+        "status": "held",
+        "reason": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "id": 886655,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.886655",
+        "sha": null,
+        "xml_sha": null,
+        "retrieved_at_utc": null,
+        "status": "held",
+        "reason": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "id": 886662,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.886662",
+        "sha": null,
+        "xml_sha": null,
+        "retrieved_at_utc": null,
+        "status": "held",
+        "reason": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "id": 889557,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.889557",
+        "sha": null,
+        "xml_sha": null,
+        "retrieved_at_utc": null,
+        "status": "held",
+        "reason": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "id": 889586,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.889586",
+        "sha": null,
+        "xml_sha": null,
+        "retrieved_at_utc": null,
+        "status": "held",
+        "reason": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "id": 889638,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.889638",
+        "sha": null,
+        "xml_sha": null,
+        "retrieved_at_utc": null,
+        "status": "held",
+        "reason": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "id": 915453,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.915453",
+        "sha": "1540cdc971c3f0b1968fb975dee177df81d7f6f19f03391f68b6e6ff708d506a",
+        "xml_sha": "c42cc8e44b1357581a2ff4b01e058f6905e63f10899d96621b45811d8f5999ce",
+        "retrieved_at_utc": "2026-10-30T09:45:02.535917+00:00",
+        "title": "Zr/Rb ratios of IOD Site 339-U1385",
+        "header": [
+          "Depth sed [m]",
+          "Age [ka BP]",
+          "ln(Zr/Rb)"
+        ],
+        "events": [
+          {
+            "label": "339-U1385",
+            "lat": 37.5714158,
+            "lon": -10.126027,
+            "elevation": "-2587.0",
+            "campaign": "Exp339",
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper": null,
+        "source_rows": 6073,
+        "columns": [],
+        "status": "held",
+        "reason": "outside configured region or no named georeferenced event"
+      },
+      {
+        "id": 993109,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993109",
+        "sha": "49410cb5eeaab54ceb13540a0a139bbc669840e778d1a78190f59b4f015a047f",
+        "xml_sha": "c283df974227f0f3164043894f41d72053a872572ae613766cb2bacde92bb8ba",
+        "retrieved_at_utc": "2026-10-30T09:45:08.472031+00:00",
+        "title": "Pigments, sequential extraction (P, Fe, Mn), pollen and CNS measurements from sediment core UBE22-COMP1 of lake Übeschi, Switzerland",
+        "header": [
+          "Cal age min [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Cal age max [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Cal age median [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Cal age mean [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Depth sed [m]",
+          "Depth ref [m] (Radiocarbon depth)",
+          "Age [ka BP] (Radiocarbon age, mean, Age mo...)",
+          "Age std dev [±] (Age model, Bacon (Blaauw & Ch...)",
+          "Lab label",
+          "AP [%] (Relative abundance (calculated))",
+          "Tre.shr [%] (Relative abundance (calculated))",
+          "Betula [%] (Relative abundance (calculated))",
+          "Jun [%] (Relative abundance (calculated))",
+          "Pinus s/g Pinus [%] (Relative abundance (calculated))",
+          "Artemisia [%] (Relative abundance (calculated))",
+          "Poac [%] (Relative abundance (calculated))",
+          "Pollen tot [#] (Counted)",
+          "Moisture [%]",
+          "DBD [g/cm**3]",
+          "TOC [%] (% of weight, dry, Calculated)",
+          "TIC [%] (% of weight, dry, Calculated)",
+          "TN [%] (% of weight, dry, Calculated)",
+          "TS [%] (% of weight, dry, Calculated)",
+          "TOC/TN (Calculated)",
+          "AP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "RP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "MnCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Fe redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Fe org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "FeCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Fe res/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Chloropigm a/sed [µg/g] (Measurement on wet sediment, ...)",
+          "BChl a/sed [µg/g] (Measurement on wet sediment, ...)",
+          "Chl a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Phaeopho a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Phaeophytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Green pigm/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Carotenoids/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Cantha/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Echin/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Asta/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Zea/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Oke/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Isor/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Allo/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Diadino/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Fuco/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Lut/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Diatox/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Sphe/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "BPhytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Batch no [#] (Number of batch of pigment ex...)"
+        ],
+        "events": [
+          {
+            "label": "UBE22-COMP1",
+            "lat": 46.7344,
+            "lon": 7.565,
+            "elevation": "641.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper": null,
+        "source_rows": 67,
+        "columns": [],
+        "status": "held",
+        "reason": "radiocarbon age requires explicit calendar chronology review"
+      },
+      {
+        "id": 994156,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.994156",
+        "sha": "e7d7e8cf9346dfeda9d0db7f39cddd1888280247dd6d45a16dedf3a61450b19b",
+        "xml_sha": "1a3bb01c489ce8bd1b6e943e89b50091401d0953ba22be941cb94f3d169522f8",
+        "retrieved_at_utc": "2026-10-30T09:45:08.610264+00:00",
+        "title": "XRF data Late Glacial sediments, Lago di Mezzano, Central Italy",
+        "header": [
+          "Age max [ka]",
+          "Age min [ka]",
+          "Age median [ka]",
+          "Age mean [ka]",
+          "Depth sed [m]",
+          "Sec label",
+          "Al [cps]",
+          "Si [cps]",
+          "Rb [cps]",
+          "Zr [cps]",
+          "K [cps]",
+          "Ti [cps]",
+          "Mn [cps]",
+          "Fe [cps]",
+          "P [cps]",
+          "S [cps]",
+          "Sr [cps]",
+          "Ca [cps]",
+          "Ba [cps]",
+          "Br [cps]",
+          "Cr coh/Cr inc"
+        ],
+        "events": [
+          {
+            "label": "MZZ20",
+            "lat": 42.612055,
+            "lon": 11.770339,
+            "elevation": "452.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "license": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "paper": null,
+        "source_rows": 414,
+        "columns": [],
+        "status": "held",
+        "reason": "no admitted native age column; model link still needs review"
+      }
+    ],
+    "noaa": [
+      {
+        "study_id": "10418",
+        "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/dean2010/dean2010.txt",
+        "sha256": "1630a565ef14c57cf497a6a3917055fcb85f4693601e20de5141d76140e6d401",
+        "reason": "11 native core tables have sediment depth but no point age column; no ages assigned from narrative boundaries",
+        "publication_doi": "10.3133/ofr20101323"
+      }
+    ]
+  },
+  "sha256": "efb5058363910aaa1049b16e6d47b4f7bbc45de1e5cb2df9be24ff6676d4e95c",
+  "bytes": 59824966
+}

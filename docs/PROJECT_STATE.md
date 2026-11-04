@@ -1,8 +1,17 @@
 # Estado breve del proyecto
 
-Actualizado: 29-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
+Actualizado: 30-10-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable V28.1 (actual)
+## Ejecutable v6 (actual, 30-10-2026)
+
+- Site privado: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site.
+- Release v6-c8ff5c5a738: **138 registros/1.311 series/903.690 valores/962 grupos base**. Incremento sobre V29:10 registros/225 series/38.097 valores, de PANGAEA y NOAA.
+- Prioridad: razones inorgánicas, indicadores de corrientes/bentónicos y vegetación continental. Datos anteriores íntegros; fuentes, unidades, denominadores y matrices conservados. No se afirma cobertura exhaustiva ni equivalencia de métodos por compartir unidades.
+- Selección: alias Fe/Al/Ti/Ca, ≥2 registros por defecto y separación de contextos. Notas por serie visibles también al colgar de un registro padre. Cuarentenas e inclusión/exclusión manual: consultar límites en docs/curation/priority_v6.md.
+- 71 pruebas Python/27 pruebas Node locales, tsc/build y snapshot correctos; 964 archivos estáticos remotos iguales. Navegador de producción requiere sesión; QA visual local realizada. Recibos reports/priority_v6_sites_*.json; handoff docs/handoffs/cur-coverage-30.md.
+- El flujo recompone v6 tras cambios en v5; el snapshot rechaza padres obsoletos. Revisar RELEVO antes de ampliar. Los apartados siguientes son históricos.
+
+## Referencia histórica V28.1
 
 - Site ChatGPT privado actualizado desde main dfdb419: https://mediterranean-multiproxy-atlas.nimblequail260.chatgpt.site.
 - Datos públicos desde /snapshot/catalog.json, /snapshot/obs/*.json e /snapshot/inventory.json; las cuatro API públicas anteriores se han retirado. D1 se conserva para el área privada y la cola DOI.
