@@ -1,0 +1,214 @@
+{
+  "parent_sha256": "4b2569568a56c47af24e3744c77e2c0f1be56c5089e0cf9de88d6c20a017b840",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "ADAJA",
+      "site": "Almenara de Adaja",
+      "latitude": 41.19194444,
+      "longitude": -4.668055556,
+      "rows": 25,
+      "first_row": 1,
+      "last_row": 25,
+      "reference": "López Merino, L. et al. 2009 Estudio polínico de una laguna endorreica en Almenara de Adaja (Valladolid, Meseta Norte): cambios ambientales y actividad humana durante los últimos 2.800 años, Revista española de micropaleontología, 41(3), 333–347. Available at: https://digital.csic.es/bitstream/10261/93733/1/Estudio_polinico_laguna_endorreica.pdf (Accessed: 22 March 2021).",
+      "paper_dois": []
+    },
+    {
+      "entity": "ALSA",
+      "site": "Alsa",
+      "latitude": 43.11777778,
+      "longitude": -4.016666667,
+      "rows": 24,
+      "first_row": 26,
+      "last_row": 49,
+      "reference": "Mariscal, B. 1993 Variación de la vegetación holocena (4300-280 B.P.) de Cantabria a traves del análisis polínico de la turbera del Alsa, Estudios geológicos, 49(1), 63–69. doi:10.3989/egeol.93491-2338.",
+      "paper_dois": [
+        "10.3989/egeol.93491-2338"
+      ]
+    },
+    {
+      "entity": "NAVALACA",
+      "site": "Arroyo de Navalacarreta",
+      "latitude": 40.85222222,
+      "longitude": -4.031111111,
+      "rows": 38,
+      "first_row": 245,
+      "last_row": 282,
+      "reference": "Morales-Molino, C. et al. 2017 Land-use history as a major driver for long-term forest dynamics in the Sierra de Guadarrama National Park (central Spain) during the last millennia: implications for forest conservation and management, Global and Planetary Change, 152, 64–75. doi:10.1016/j.gloplacha.2017.02.012.",
+      "paper_dois": [
+        "10.1016/j.gloplacha.2017.02.012"
+      ]
+    },
+    {
+      "entity": "VALDECON",
+      "site": "Arroyo de Valdeconejos",
+      "latitude": 40.8622,
+      "longitude": -4.0597,
+      "rows": 44,
+      "first_row": 283,
+      "last_row": 326,
+      "reference": "Morales-Molino, C. et al. 2017 Land-use history as a major driver for long-term forest dynamics in the Sierra de Guadarrama National Park (central Spain) during the last millennia: implications for forest conservation and management, Global and Planetary Change, 152, 64–75. doi:10.1016/j.gloplacha.2017.02.012.",
+      "paper_dois": [
+        "10.1016/j.gloplacha.2017.02.012"
+      ]
+    },
+    {
+      "entity": "CARCAVAS",
+      "site": "Arroyo de las Cárcavas",
+      "latitude": 40.8419,
+      "longitude": -4.0314,
+      "rows": 40,
+      "first_row": 327,
+      "last_row": 366,
+      "reference": "Morales-Molino, C. et al. 2017 Land-use history as a major driver for long-term forest dynamics in the Sierra de Guadarrama National Park (central Spain) during the last millennia: implications for forest conservation and management, Global and Planetary Change, 152, 64–75. doi:10.1016/j.gloplacha.2017.02.012.",
+      "paper_dois": [
+        "10.1016/j.gloplacha.2017.02.012"
+      ]
+    },
+    {
+      "entity": "ATXURI01",
+      "site": "Atxuri",
+      "latitude": 43.25,
+      "longitude": -1.55,
+      "rows": 33,
+      "first_row": 367,
+      "last_row": 399,
+      "reference": "Penalba, M.C. and Garmendia, M.P. 1989 Dynamique de végétation tardiglaciaire et holocène du Centre-Nord de l’Espagne d’après l’analyse pollinique. Aix-Marseille 3. Available at: https://www.theses.fr/1989AIX30033 (Accessed: 22 March 2021).; \nPenalba, M.C. 1994 The History of the Holocene vegetation in Northern Spain from pollen analysis, Journal of Ecology, 82(4), 815. doi:10.2307/2261446.",
+      "paper_dois": [
+        "10.2307/2261446"
+      ]
+    },
+    {
+      "entity": "QUINTA02",
+      "site": "Quintanar de la Sierra",
+      "latitude": 42.03333333,
+      "longitude": -3.016666667,
+      "rows": 82,
+      "first_row": 2228,
+      "last_row": 2309,
+      "reference": "Penalba, M.C. and Garmendia, M.P. 1989 Dynamique de végétation tardiglaciaire et holocène du Centre-Nord de l’Espagne d’après l’analyse pollinique. Aix-Marseille 3. Available at: https://www.theses.fr/1989AIX30033 (Accessed: 22 March 2021).; \nPenalba, M.C. 1994 The History of the Holocene vegetation in Northern Spain from pollen analysis, Journal of Ecology, 82(4), 815. doi:10.2307/2261446.",
+      "paper_dois": [
+        "10.2307/2261446"
+      ],
+      "qc_notes": [
+        "Reading v3 corrige las fechas erróneas de QUINTA02 presentes en v2, según README_Harrison_2021_dataset_v3.docx. Se conserva exclusivamente la mediana IntCal20 de v3, sin recalibración local."
+      ]
+    },
+    {
+      "entity": "AREO",
+      "site": "Monte Areo mire",
+      "latitude": 43.52888889,
+      "longitude": -5.768888889,
+      "rows": 55,
+      "first_row": 1546,
+      "last_row": 1600,
+      "reference": "López-Merino, L., Cortizas, A.M. and López-Sáez, J.A. 2010 Early agriculture and palaeoenvironmental history in the North of the Iberian Peninsula: a multi-proxy analysis of the Monte Areo mire (Asturias, Spain), Journal of Archaeological Science, 37(8), 1978–1988. doi:10.1016/j.jas.2010.03.003.",
+      "paper_dois": [
+        "10.1016/j.jas.2010.03.003"
+      ]
+    },
+    {
+      "entity": "LAMEIRAS",
+      "site": "Cha das Lameiras",
+      "latitude": 40.9428,
+      "longitude": -7.6761,
+      "rows": 61,
+      "first_row": 5178,
+      "last_row": 5238,
+      "reference": "López-Sáez, J.A., Figueiral, I. and Cruz, D. 2017 Palaeoenvironment and vegetation dynamics in Serra da Nave (Alto Paiva, Beira Alta, Portugal) during the Late Pleistocene and the Holocene, Estudos Pré-históricos, 19, 71–83.",
+      "paper_dois": []
+    },
+    {
+      "entity": "TIEMBLO",
+      "site": "El Tiemblo",
+      "latitude": 40.3575,
+      "longitude": -4.5263,
+      "rows": 60,
+      "first_row": 4556,
+      "last_row": 4615,
+      "reference": "López-Sáez, J.A. et al. 2018 Paleofire dynamics in Central Spain during the Late Holocene: The role of climatic and anthropogenic forcing, Land Degradation & Development, 29(7), 2045–2059. doi:10.1002/ldr.2751.",
+      "paper_dois": [
+        "10.1002/ldr.2751"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    }
+  ]
+}
