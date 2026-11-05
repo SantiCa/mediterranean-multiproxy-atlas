@@ -24,8 +24,8 @@ class ReadingPollenBatch(unittest.TestCase):
             for entry in self.parent[field]:
                 self.assertEqual(current[entry['id']], entry)
         self.assertEqual(self.seed['parent_version'], self.parent['version'])
-        self.assertEqual(len(self.new), 60)
-        self.assertEqual(len(self.seed['records']) - len(self.parent['records']), 10)
+        self.assertEqual(len(self.new), 6 * len(self.contract['reading_entities']))
+        self.assertEqual(len(self.seed['records']) - len(self.parent['records']), len(self.contract['reading_entities']))
         for series in self.new:
             self.assertEqual(series['comparison_context_key'], batch.pollen.READING_CONTEXT)
             self.assertEqual(len(series['denominator_columns']), 205)
