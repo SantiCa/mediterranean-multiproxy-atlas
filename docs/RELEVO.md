@@ -4,7 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 05-11-2026
-- Tarea en curso: CUR-READING-13 (Atlas 01), activada el 05-11. Revisar hasta diez entidades interiores nuevas de Reading v3 sobre v12. Cierre previo 20a43bb, docs/handoffs/cur-reading-12.md. Publicación reservada al rol 04; Sites sigue en v9.
+- Tarea en curso: CUR-READING-13 (Atlas 01). v13-c0f960a7901 construida: diez ubicaciones, 60 series y 1.968 valores nuevos; total 223 registros / 1.774 series / 960.682 valores. Seis pruebas específicas pasan, incluidos vectores cortos y separación dataset/artículo en N-PEQ. Pendientes comprobaciones generales, snapshot y cierre. Publicación reservada al rol 04; Sites sigue en v9.
 - Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v9-c55489c6f83. 183 registros, 1.534 series y 944.650 valores. 29 ubicaciones nuevas, ocho series de Monticchio. Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: 182 series y 19.898 valores nuevos con fuentes fijadas por hash, sumas de polen explícitas y originales conservados. 81 pruebas Python, 28 Node, tsc, snapshot, build y QA local. Los 1.002 archivos de producción coinciden. Handoff docs/handoffs/cur-pollen-monticchio.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
