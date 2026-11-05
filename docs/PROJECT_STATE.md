@@ -2,7 +2,15 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v14 validada, pendiente de publicar (05-11-2026)
+## Colección v15 validada, pendiente de publicar (05-11-2026)
+
+- Release v15-c43715a903d: **243 registros / 1.894 series / 965.152 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 386 muestras, 60 series y 2.316 valores. Padre v14 íntegro; seis parámetros y suma armonizada de 205 taxones conservados.
+- Reproducción: `python scripts/build_forest_pollen_v15.py`; contrato pollen_v15_sources.json e informe quantitative_v15_release.json. Originales fijados por hash e importadores reutilizados. VILLUERCAS usa exclusivamente INTCAL2020_median, preservando IPE en auditoría.
+- 114 pruebas Python, 15 Node y snapshot con 965.152 valores cotejados celda a celda. Sin cuarentenas de admisión ni solapamientos numéricos parciales detectados; vectores completos auditados. Handoff docs/handoffs/cur-reading-15.md. No se certifica independencia física exhaustiva.
+- CANALEJA retenida por posible incoherencia entre coordenadas y referencia. CUCU retenida por valores INTCAL2020_median hasta 130 ka: requieren contrato cronológico específico, fuera del dominio 0–55 ka de IntCal20 (Reimer et al. 2020, DOI 10.1017/RDC.2020.41). El ensamblador rechaza nuevas edades >55 ka bajo este contrato. Ojos del Tremendal y Saloio completan el lote; la versión provisional de v15 se sustituye.
+- Producción sigue en v13; publicación de v15 reservada al rol 04. Contratos v9–v15: 89/122 entidades incorporadas; 33 restantes incluyen bloqueos y solapamientos pendientes.
+
+## Colección v14 validada, sustituida por v15 (05-11-2026)
 
 - Release v14-c21d91a390a: **233 registros / 1.834 series / 962.836 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 359 muestras, 60 series y 2.154 valores. Padre v13 íntegro; seis parámetros y suma armonizada de 205 taxones conservados.
 - Reproducción: `python scripts/build_forest_pollen_v14.py`; contrato pollen_v14_sources.json e informe quantitative_v14_release.json. Originales fijados por hash e importadores existentes reutilizados sin cambios. XL conserva el tratamiento corregido de fechas postmodernas del techo publicado en v3.
