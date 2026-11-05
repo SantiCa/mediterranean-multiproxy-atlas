@@ -2,7 +2,15 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v16 validada, pendiente de publicar (05-11-2026)
+## Colección v17 validada, pendiente de publicar (05-11-2026)
+
+- Release v17-c6564e1246e: **256 registros / 1.972 series / 971.380 valores / 1.000 grupos base**. Cinco entidades Reading v3 admitidas de diez revisadas: CANDIEIR, CreixellT, TRAVESS1, VdL PB2 y ADP 01/06. 565 muestras, 30 series y 3.390 valores nuevos; padre v16 íntegro.
+- Reproducción: `python scripts/build_forest_pollen_v17.py`; contrato pollen_v17_sources.json e informe quantitative_v17_release.json. Añade la tabla oficial Iberia_data_dates_v3.csv fijada por hash y 64 controles con celdas, filas, materiales y notas originales en record.reading_dates_audit. Age_used vacío significa no especificado, no aceptación explícita. No se recalibran edades.
+- Candieira se distingue de PEX19-01 (lago Peixao) con la ficha primaria PANGAEA.954457. Archivos costeros/estuarinos etiquetados; el grupo continental operativo de polen no demuestra deposición exclusivamente terrestre. VdL conserva la dependencia publicada respecto del testigo paralelo VDL 02/08, sin interpolación local.
+- 126 pruebas Python, 15 Node y snapshot con 971.380 valores cotejados celda a celda. v16 reproducida sin cambios de contenido; sin cuarentena de admisión ni solapamientos numéricos parciales detectados. Handoff docs/handoffs/cur-reading-17.md. No se certifica independencia física exhaustiva ni ausencia de reservorio en sedimento total.
+- ROQUETAS, ALCUDIA, Vilamora P01-5, Abi 05/07 y LLIGAT retenidas con sus filas de fechas por materiales/reservorio/posición. Contratos v9–v17: 102/122 entidades incorporadas; 20 restantes con bloqueos específicos. Producción sigue en v13; publicación de v17 reservada al rol 04.
+
+## Colección v16 validada, sustituida por v17 (05-11-2026)
 
 - Release v16-cc875bfb999: **251 registros / 1.942 series / 967.990 valores / 1.000 grupos base**. Ocho ubicaciones Reading v3 nuevas, 473 muestras, 48 series y 2.838 valores. Padre v15 íntegro; seis parámetros y denominadores conservados.
 - Reproducción: `python scripts/build_forest_pollen_v16.py`; contrato pollen_v16_sources.json e informe quantitative_v16_release.json. Originales por hash e importadores existentes reutilizados sin cambios. Las exclusiones de carbón de PozoN_2015 no se trasladan automáticamente al polen: se conservan sus 41 muestras publicadas y se documenta la diferencia.

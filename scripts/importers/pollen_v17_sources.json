@@ -1,0 +1,413 @@
+{
+  "parent_sha256": "bf5757b2ec197055ed662115342ec388bc16464e1efb180809ea9c324e773f41",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "resources": [
+    {
+      "file": "iberia-dates.csv",
+      "url": "https://researchdata.reading.ac.uk/369/23/Iberia_data_dates_v3.csv",
+      "sha256": "a9bde3e7c9e063ea05e2fcb639596f5a2ecca961ca5c8221a8d7f851ae1986a6"
+    }
+  ],
+  "date_header": [
+    "site_name",
+    "entity_name",
+    "lab_number",
+    "date_type",
+    "avg_depth",
+    "thickness",
+    "material_dated",
+    "age_C14",
+    "error",
+    "age_calib",
+    "age_calib_error",
+    "age_used",
+    "notes"
+  ],
+  "reading_entities": [
+    {
+      "entity": "CANDIEIR",
+      "site": "Charco da Candieira",
+      "latitude": 40.3436,
+      "longitude": -7.5781,
+      "rows": 307,
+      "first_row": 4783,
+      "last_row": 5089,
+      "reference": "van der Knaap, W.O. and van Leeuwen, J. 1984 Holocene vegetation, human impact, and climatic change in the Serra da Estrela, Portugal, Dissertationes Botanicae, 234, 497–535.; \nvan der Knaap, W.O. and van Leeuwen, J. 1995 Holocene vegetation succession and degradation as responses to climatic change and human activity in the Serra de Estrela, Portugal, Review of Palaeobotany and Palynology, 89(3–4), 153–211.; van der Knaap, W.O. and van Leeuwen, J. 1997 Late Glacial and early Holocene vegetation succession, altitudinal vegetation zonation, and climatic change in the Serra da Estrela, Portugal, Review of Palaeobotany and Palynology, 97(3–4), 239–285.",
+      "paper_dois": [],
+      "date_rows": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549,
+        550,
+        551,
+        552,
+        553,
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574
+      ],
+      "date_materials": [
+        "NULL",
+        "bulk sediment, gytta",
+        "terrestrial plant macrofossil"
+      ],
+      "qc_notes": [
+        "Charco da Candieira es distinto del lago Peixao (PEX19-01), identificado en PANGAEA.954457; posiciones y elevaciones nativas distintas. La tabla Reading conserva cinco fechas excluidas y un techo asumido; no se interpretan campos age_used vacíos como aceptación explícita. Posible efecto de reservorio en gyttja no cuantificado localmente."
+      ]
+    },
+    {
+      "entity": "CreixellT",
+      "site": "Creixell",
+      "latitude": 41.15555556,
+      "longitude": 1.433888889,
+      "rows": 32,
+      "first_row": 3562,
+      "last_row": 3593,
+      "reference": "Burjachs, F. and Expósito, I. 2015 Charcoal and pollen analysis: Examples of Holocene fire dynamics in Mediterranean Iberian Peninsula, Catena, 135, 340–349. doi:10.1016/j.catena.2014.10.006.",
+      "paper_dois": [
+        "10.1016/j.catena.2014.10.006"
+      ],
+      "date_rows": [
+        415,
+        416
+      ],
+      "date_materials": [
+        "charcoal"
+      ],
+      "qc_notes": [
+        "Archivo costero con dos controles AMS de carbón en Reading. Se conserva la mediana publicada, sin inferir depósitos exclusivamente continentales por el origen terrestre del polen ni recalibrar localmente."
+      ],
+      "archive_type": "coastal or estuarine sediment; terrestrial pollen"
+    },
+    {
+      "entity": "TRAVESS1",
+      "site": "Lagoa Travessa",
+      "latitude": 38.30444444,
+      "longitude": -8.7725,
+      "rows": 65,
+      "first_row": 8643,
+      "last_row": 8707,
+      "reference": "Mateus, J.E. 1985 The coastal lagoon region near Carvalhal during the Holocene; \nsome geomorphological aspects derived from palaeoecological study at Lagoa Travessa, in Actas. Portugal: Inst. nac. invest. ci, Lisboa, 237–250.; Mateus, J.E. 1989 Lagoa Travessa : a Holocene pollen diagram from the south-west coast of Portugal, Revista de Biologia, 14, 17–94.",
+      "paper_dois": [],
+      "date_rows": [
+        938,
+        939,
+        940,
+        941
+      ],
+      "date_materials": [
+        "peat"
+      ],
+      "qc_notes": [
+        "Laguna costera con cuatro controles C14 de turba en Reading. Se conserva la mediana publicada; no se infiere ausencia de influencia marina en todo el sedimento."
+      ],
+      "archive_type": "coastal or estuarine sediment; terrestrial pollen"
+    },
+    {
+      "entity": "VdL PB2",
+      "site": "Valle do Lobo Ribeira de Carcavai",
+      "latitude": 37.057965,
+      "longitude": -8.074734,
+      "rows": 144,
+      "first_row": 7469,
+      "last_row": 7612,
+      "reference": "Schneider, H. et al. 2010 Holocene estuary development in the Algarve Region (Southern Portugal) - A reconstruction of sedimentological and ecological evolution, Quaternary International, 221(1–2), 141–158. doi:10.1016/j.quaint.2009.10.004.; \nSchneider, H. et al. 2016 Holocene landscape development along the Portuguese Algarve coast - A high resolution palynological approach, Quaternary International, 407, 47–63. doi:10.1016/j.quaint.2016.02.039.",
+      "paper_dois": [
+        "10.1016/j.quaint.2009.10.004",
+        "10.1016/j.quaint.2016.02.039"
+      ],
+      "date_rows": [
+        868,
+        869,
+        870,
+        871,
+        872,
+        873,
+        874,
+        875,
+        876,
+        877,
+        878,
+        879,
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887
+      ],
+      "date_materials": [
+        "charcoal",
+        "charred material",
+        "plant macrofossil"
+      ],
+      "qc_notes": [
+        "Archivo estuarino: los controles publicados incluyen material carbonizado y macrofósiles, con correlaciones de profundidad al testigo paralelo VDL 02/08 declaradas en las notas originales. Dependencia del modelo preservada; no se construye ni aplica una interpolación local entre testigos."
+      ],
+      "archive_type": "coastal or estuarine sediment; terrestrial pollen"
+    },
+    {
+      "entity": "ADP 01/06",
+      "site": "Armacao de Pera Ribeira de Alcantarilha",
+      "latitude": 37.110107,
+      "longitude": -8.34459,
+      "rows": 17,
+      "first_row": 7613,
+      "last_row": 7629,
+      "reference": "Schneider, H. et al. 2010 Holocene estuary development in the Algarve Region (Southern Portugal) - A reconstruction of sedimentological and ecological evolution, Quaternary International, 221(1–2), 141–158. doi:10.1016/j.quaint.2009.10.004.; \nSchneider, H. et al. 2016 Holocene landscape development along the Portuguese Algarve coast - A high resolution palynological approach, Quaternary International, 407, 47–63. doi:10.1016/j.quaint.2016.02.039.",
+      "paper_dois": [
+        "10.1016/j.quaint.2009.10.004",
+        "10.1016/j.quaint.2016.02.039"
+      ],
+      "date_rows": [
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894
+      ],
+      "date_materials": [
+        "charcoal"
+      ],
+      "qc_notes": [
+        "Archivo estuarino con siete controles AMS de carbón y uno marcado no en age_used. Se conserva la mediana publicada y la exclusión original; campos age_used vacíos significan no especificado, no aceptación explícita."
+      ],
+      "archive_type": "coastal or estuarine sediment; terrestrial pollen"
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    },
+    {
+      "record": "Reading CANALEJA",
+      "reason": "Possible coordinate/reference inconsistency: Reading and PANGAEA archive latitude 40.9, longitude -2.45, elevation 1029 m, but cited publications identify Garganta Canaleja in Romangordo (Caceres). Physical identity and correct sampling coordinates require audit. No replacement coordinates inferred.",
+      "source_rows": [
+        479,
+        480,
+        481,
+        482,
+        483,
+        484
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.835786",
+      "checked_date": "2026-11-05",
+      "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
+      "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+    },
+    {
+      "record": "Reading CUCU",
+      "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+      "source_rows": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "age_medians_original": [
+        "46057",
+        "61527",
+        "114264",
+        "130000"
+      ],
+      "calibration_doi": "10.1017/RDC.2020.41",
+      "checked_date": "2026-11-05"
+    },
+    {
+      "record": "Reading Armena",
+      "reason": "Zero retained-205 assemblage sum in 11 of 53 samples. Entire entity held for missing-assemblage review; no zero percentages or interpolated assemblages inferred.",
+      "source_rows": [
+        3399,
+        3400,
+        3401,
+        3402,
+        3421,
+        3430,
+        3433,
+        3437,
+        3438,
+        3443,
+        3446
+      ],
+      "entity_rows": 53
+    },
+    {
+      "record": "Reading Estanya Catena",
+      "reason": "Zero retained-205 assemblage sum in 2 of 92 samples. Entire entity held for missing-assemblage review; no zero percentages or interpolated assemblages inferred.",
+      "source_rows": [
+        5936,
+        5939
+      ],
+      "entity_rows": 92
+    },
+    {
+      "record": "Reading ROQUETAS",
+      "reason": "Three bulk organic sediment dates from a coastal setting; terrestrial versus marine carbon contribution and reservoir treatment unresolved.",
+      "date_rows": [
+        272,
+        273,
+        274
+      ]
+    },
+    {
+      "record": "Reading ALCUDIA",
+      "reason": "All four dated-material fields empty in the coastal dataset; calibration/reservoir basis requires review.",
+      "date_rows": [
+        911,
+        912,
+        913,
+        914
+      ]
+    },
+    {
+      "record": "Reading Vilamora P01-5",
+      "reason": "Two shell dates lack explicit exclusion and reservoir treatment in the date table; mixed terrestrial/marine controls require review.",
+      "date_rows": [
+        856,
+        857,
+        858,
+        859,
+        860,
+        861,
+        862,
+        863,
+        864,
+        865,
+        866,
+        867
+      ]
+    },
+    {
+      "record": "Reading Abi 05/07",
+      "reason": "One organic-matter date alongside eight charcoal dates in an estuary; carbon origin and reservoir implications require review.",
+      "date_rows": [
+        895,
+        896,
+        897,
+        898,
+        899,
+        900,
+        901,
+        902,
+        903
+      ]
+    },
+    {
+      "record": "Reading LLIGAT",
+      "reason": "Marine reservoir notes and position longitude -3.291111111 conflict with the NE Iberian marine site description. Review calibration and physical position; do not flip longitude sign without verified source.",
+      "date_rows": [
+        232,
+        233,
+        234,
+        235,
+        236
+      ]
+    }
+  ],
+  "identity_audit": {
+    "entity": "CANDIEIR",
+    "nearby_parent": "pangaea-954457",
+    "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.954457",
+    "checked_date": "2026-11-05",
+    "decision": "Distinct named lake: PEX19-01 is Lake Peixao at 1677 m, Charco da Candieira is at 1409 m; not merged by proximity."
+  }
+}

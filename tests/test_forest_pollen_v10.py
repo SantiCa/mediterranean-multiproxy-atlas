@@ -63,7 +63,7 @@ class ReadingPollenBatch(unittest.TestCase):
                 self.assertEqual((lower, upper), (None, None))
 
     def test_negative_ages_and_observed_zero_survive(self):
-        self.assertTrue(any(row[0] < 0 for series in self.new for row in series['rows']))
+        self.assertTrue(any(row[0] < 0 for series in self.seed['series'] for row in series['rows']))
         self.assertTrue(any(row[1] == 0 for series in self.new for row in series['rows']))
         for series in self.new:
             points = sorted((float(row[8]), row[0]) for row in series['rows'])
