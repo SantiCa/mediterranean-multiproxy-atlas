@@ -2,10 +2,16 @@
 // Workers static-asset limits (≤ 25 MiB per file, ≤ 20 000 files on Free).
 // Usage: node scripts/check-snapshot.mjs <seed.json> <snapshotDir>
 import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { groupKey } from "../lib/proxies.mjs";
+import { applyQc } from "../lib/qc-corrections.mjs";
 const [seedPath, dir] = process.argv.slice(2);
-const seed = JSON.parse(readFileSync(seedPath, "utf8"));
+const qcPath = fileURLToPath(new URL("../../../config/qc_corrections.json", import.meta.url));
+const qcFile = existsSync(qcPath) ? JSON.parse(readFileSync(qcPath, "utf8")) : {};
+// Compare against the seed with the same publication QC applied.
+const seed = applyQc(JSON.parse(readFileSync(seedPath, "utf8")), qcFile).seed;
 const cat = JSON.parse(readFileSync(join(dir, "catalog.json"), "utf8"));
 const fail = (m) => {
   console.error("::error title=Instantánea::" + m);
@@ -14,6 +20,7 @@ const fail = (m) => {
 if (cat.release.id !== seed.version) fail("versión distinta");
 if (cat.records.length !== seed.records.length || cat.series.length !== seed.series.length) fail("recuentos distintos");
 if (cat.series.some((s) => s.rows.length)) fail("el catálogo no debe llevar observaciones");
+if (cat.series.some((s) => s.age_min_ka_bp < -0.5)) fail("edades futuras (< -0,5 ka BP) en el catálogo");
 const want = new Map(seed.series.map((s) => [s.id, s]));
 let cells = 0, files = 0, biggest = 0;
 for (const [key, file] of Object.entries(cat.snapshot.groups)) {

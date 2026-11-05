@@ -23,6 +23,10 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
+- 05-11 (16:37) HECHO V31 (Claude): fallaban los «Python checks» en cada push. Causas: (1) `test_forest_pollen_v15` no se omitía sin el original ignorado iberia.csv; (2) la suite en un proceso agotaba memoria (semillas de ~70 MB retenidas por clase) y los trabajos se cancelaban. Arreglo: skip como en v16+, y checks.yml ejecuta un archivo de prueba por proceso. Nuevas pruebas que carguen semillas: liberar en tearDownClass o mantener el patrón.
+
+- 05-11 (16:08) HECHO V30 (Claude, rama claude/qc-v30 fusionada en main y aquí; docs/handoffs/auditoria-v17.md): repasar cambios, auditar datos, mejorar y subir. `scripts/audit_science.py` en el despliegue Cloudflare; QC al publicar (`config/qc_corrections.json`): edades Mondsee PANGAEA.929110 corregidas (columna «Age [ka BP]» en ka CE → ka BP = 1,95 − ka CE), 6 series duplicadas pangaea6 retenidas. Rol datos: incorporarlos en v18 y vaciar esas entradas. AUD-PROXY-USO y la v18 provisional de esta rama NO se han publicado.
+
 - 30-10 (01:54) HECHO V29.1: en SST agrupada, «registros con coordenadas coincidentes» suspendía la superficie; ahora cuentan como un nodo (mediana) y se avisa.
 
 - 29-10 (22:47) HECHO V28: datos públicos desde archivos estáticos; D1 solo para Mis datos y DOI.

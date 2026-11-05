@@ -1542,6 +1542,16 @@ export default function Atlas() {
                   hash y parámetros de cálculo; el SVG incorpora la selección y
                   las fuentes.
                 </p>
+                {data.qc && (data.qc.age_corrected_series > 0 || data.qc.holds?.length > 0) && (
+                  <p>
+                    Control de calidad al publicar: {data.qc.age_corrected_series} series con
+                    edad corregida ({data.qc.age_corrections.map((c: any) => c.dataset_doi).join(", ")}:{" "}
+                    {data.qc.age_corrections.map((c: any) => c.reason).join(" ")}) y{" "}
+                    {data.qc.holds.length} series duplicadas retiradas
+                    ({data.qc.holds.map((h: any) => h.id + " = " + h.duplicate_of).join("; ")}).
+                    Los valores originales se conservan en cada fila.
+                  </p>
+                )}
               </>
             ) : (
               <>

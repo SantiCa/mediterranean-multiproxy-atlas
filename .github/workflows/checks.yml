@@ -18,7 +18,15 @@ jobs:
       - run: python -m pip install -e .
       # Public services are checked explicitly, never as a dependency of offline CI.
       # Seed integrity is skipped until the ignored source originals are downloaded.
-      - run: python -m unittest discover -s tests -v
+      # One process per test file: several suites keep a full seed (~70 MB JSON, ~1 GB
+      # parsed) in class attributes, and a single process ran out of memory.
+      - shell: bash
+        run: |
+          fail=0
+          for f in tests/test_*.py; do
+            python -m unittest discover -s tests -p "$(basename "$f")" || { echo "::error title=Prueba::$f"; fail=1; }
+          done
+          exit $fail
       - run: python -m compileall -q src scripts
 
       - uses: actions/setup-node@v4
