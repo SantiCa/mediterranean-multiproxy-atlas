@@ -4,14 +4,14 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 05-11-2026
-- Tarea cerrada: CUR-READING-10 (Atlas 01). Lote v10-cf8f572c33a: diez entidades interiores nuevas, 60 series y 6.810 valores; 193 registros / 1.594 series / 951.460 valores. 85 pruebas Python, 15 Node y snapshot celda a celda correctos. Sin duplicados completos ni solapamientos numéricos parciales detectados por el control. Handoff docs/handoffs/cur-reading-10.md. Publicación Sites reservada al rol 04; producción sigue en v9.
+- Tarea en curso: CUR-READING-11 (Atlas 01), activada por Santiago el 05-11. Completar hasta diez entidades nuevas de Reading v3 sobre v10, conservando los seis parámetros existentes. Publicación reservada al rol 04. Lote anterior cerrado en 3311929; handoff docs/handoffs/cur-reading-10.md.
 - Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site sirve v9-c55489c6f83. 183 registros, 1.534 series y 944.650 valores. 29 ubicaciones nuevas, ocho series de Monticchio. Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: 182 series y 19.898 valores nuevos con fuentes fijadas por hash, sumas de polen explícitas y originales conservados. 81 pruebas Python, 28 Node, tsc, snapshot, build y QA local. Los 1.002 archivos de producción coinciden. Handoff docs/handoffs/cur-pollen-monticchio.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
 
 ## Siguiente acción
 
-1. Activar el rol 04 para publicar main con data/processed/atlas-v10.json, generar y comprobar el snapshot antes de compilar y conservar acceso privado. La instantánea local comprobada está en outputs/reading-v10-snapshot (ignorada); regenerarla en el checkout de publicación. Producción sigue en v9 hasta ese paso.
+1. Completar CUR-READING-11: revisar hasta diez entidades interiores ausentes de los contratos v9/v10, construir hijo v11, comprobar valores/cronología/duplicados, pruebas y snapshot, handoff y merge según AGENTS. Después rol 04 publicará la última semilla validada. Producción sigue en v9.
 2. Próximo lote de datos: continuar seis parámetros Reading v3 con hasta diez entidades interiores nuevas. Consultar ambos contratos pollen_v9_sources.json y pollen_v10_sources.json (39 entidades ya incorporadas). Candidatas por revisar: LAGNEGRA, AYOO, LAGOAJO, LASPARDI, PEDRIDO, SALDROPO. Villarquemado carece de medianas IntCal20 en sus 361 filas: requiere contrato independiente para IPE, sin fallback implícito. Reutilizar originales por hash.
 2. MD99-2337 sigue en espera. Falta una tabla numérica de edad y profundidad del propio sondeo. Consultar el handoff actual y el contrato ss_v8 antes de repetir búsquedas ya documentadas. No usar MD99-2339 como sustituto. Revisar una versión pública de Ducassou 2018 o sus suplementos si aparece acceso nuevo.
 3. Monticchio Neotoma 47525 requiere auditoría de versiones y muestras compartidas con NOAA/ACER antes de ampliar su intervalo. Para Reading revisar las entidades de costa con edades marinas y los solapamientos con archivos existentes. ELX tiene 23 filas de suma nula y permanece en espera.
