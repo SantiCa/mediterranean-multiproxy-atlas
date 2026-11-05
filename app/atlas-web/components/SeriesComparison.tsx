@@ -3,6 +3,7 @@ import { useMemo, useState, useRef, useEffect } from "react";
 import { Download, Expand, X } from "lucide-react";
 import { displayRows, extent } from "../lib/plot.mjs";
 import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
+import { derivationRow } from "../lib/derived-proxies.mjs";
 import { scientificNumber } from "../lib/format.mjs";
 const COLORS = [
   "#267783",
@@ -211,6 +212,9 @@ export default function SeriesComparison({ items, active, f, release }: any) {
       "value_uncertainty_type",
       "age_probability_levels",
       "age_probability_bounds",
+      "derivation_formula",
+      "derivation_inputs_json",
+      "evidence_type",
     ];
     const rows = series.flatMap((i: any) =>
       i.plotRows.map((p: any) => {
@@ -252,6 +256,9 @@ export default function SeriesComparison({ items, active, f, release }: any) {
           rowUncertainty(i.series, row).value_uncertainty_type,
           JSON.stringify(rowUncertainty(i.series, row).age_probability_levels),
           JSON.stringify(rowUncertainty(i.series, row).age_probability_bounds),
+          i.series.derivation?.formula,
+          JSON.stringify(derivationRow(i.series, row)),
+          i.series.evidence_type,
         ];
       }),
     );

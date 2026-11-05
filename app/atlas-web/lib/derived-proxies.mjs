@@ -39,6 +39,8 @@ export function planDerivedProxy(catalog, recipe) {
   const ids = [...new Set([...numerator, ...denominator])];
   const reference = ids.map((id) => byId.get(id));
   if (reference.some((series) => !series || !isAbundance(series))) throw new Error("Hay entradas ausentes o sin contexto de abundancia verificable.");
+  if (recipe.input_hashes && reference.some((series) => recipe.input_hashes[series.id] !== (series.raw_sha256 || series.source_sha256)))
+    throw new Error("Los originales han cambiado o no coinciden con los hashes de la receta.");
   if (!reference[0].raw_sha256 && !reference[0].source_sha256) throw new Error("Falta el hash de la tabla original.");
   if (new Set(reference.map(abundanceTable)).size !== 1) throw new Error("Los términos deben pertenecer a la misma tabla, sondeo, unidad, método y cronología.");
   if (new Set(reference.map(parameter)).size !== reference.length) throw new Error("Dos columnas representan el mismo taxón o grupo: revisa su identidad.");

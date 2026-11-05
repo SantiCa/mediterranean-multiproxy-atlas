@@ -21,7 +21,7 @@ export function associationAliases(s) {
   const family = proxyFamily(s);
   return /Polen|Foraminíferos|Micropaleontología|Oxigenación bentónica/.test(family)
     ? "asociación asociaciones ensamblaje assemblage especies taxones censo abundancia " +
-      (/Polen/.test(family) ? "vegetación polen pollen AP NAP arbóreo no arbóreo" : "microfósiles")
+      (/Polen/.test(family) ? "vegetación polen pollen" : "microfósiles")
     : "";
 }
 /** Search aliases do not transform the archived variable or its values. */
@@ -203,6 +203,7 @@ export const paramKey = (s) =>
     !(s.unit === "%" && proxyFamily(s) === "Polen" && !comparisonContext(s))
     ? JSON.stringify(["agg", "p:" + fold(paramName(s)), s.unit, ...(comparisonContext(s) ? [comparisonContext(s)] : [])]) : null;
 export function aggregatesOf(s) {
+  if (s.derivation) return [];
   const t = txt(s),
     out = AGGREGATES.filter((a) => a.test(s, t)).map(aggregateKey),
     p = paramKey(s);

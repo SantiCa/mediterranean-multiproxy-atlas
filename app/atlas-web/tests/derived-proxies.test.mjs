@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { computeDerivedProxy, planDerivedProxy, derivationRow, isAbundance } from "../lib/derived-proxies.mjs";
-import { groupKey } from "../lib/proxies.mjs";
+import { groupKey, aggregatesOf, proxyFamily } from "../lib/proxies.mjs";
 import { summarize } from "../lib/science.mjs";
 
 const row = (sample, value, age = sample) => [age, value, sample, sample + 10, String(age), String(value), null, null, String(sample)];
@@ -17,6 +17,8 @@ test("sum preserves native zeros, negative BP and missing ages, with input prove
   assert.equal(output.rows[0][7], null);
   assert.equal(derivationRow(output, output.rows[0])[0].row[5], "0");
   assert.equal(output.age_missing_count, 1);
+  assert.deepEqual(aggregatesOf({ ...output, label: "Carbonato CaCO3" }), []);
+  assert.equal(proxyFamily({ family: "Foraminíferos", parameter_name_pangaea: "Oxygen index, mass CO2, per unit mass total organic carbon" }), "Materia orgánica y biomarcadores");
   assert.equal(data.series[0].rows[0][1], 0);
   assert.equal(summarize({ ...data, series: [output] }, { proxy: output.proxy, group: groupKey(output), min: -1, max: 1, mode: "raw", stat: "mean", minN: 1 })[0].value, 0);
 });
@@ -45,6 +47,7 @@ test("units, denominators, tables, chronology and overlapping taxonomy are guard
   assert.equal(isAbundance(term("x", [], { comparison_context_key: null })), false);
   assert.equal(isAbundance(term("x", [], { unit: "mmol/mol" })), false);
   assert.throws(() => planDerivedProxy(catalog([]), recipe({ disjointConfirmed: false })), /solapan/);
+  assert.throws(() => planDerivedProxy(catalog([term("a", [row(1, 10)]), term("b", [row(1, 20)])]), recipe({ input_hashes: { a: "changed", b: "abc" } })), /hashes/);
 });
 test("duplicate sample locators are excluded instead of overwritten; excessive percentages fail", () => {
   const data = catalog([term("a", [row(1, 10), row(1, 15), row(2, 80), row(3, 10)]), term("b", [row(1, 20), row(2, 50), row(3, 20)])]);

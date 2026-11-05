@@ -64,7 +64,10 @@ const coverageRules = [
   ["Bioturbación e icnofábrica", /bioturb|ichnofabric|ichnofossil/],
 ];
 const coverage = coverageRules.map(([use, rule]) => {
-  const series = data.series.filter((term) => rule.test(fold([term.proxy, term.label, term.parameter_name_pangaea, term.search_aliases].flat().join(" "))));
+  const series = data.series.filter((term) => use.startsWith("Vegetación") ? proxyFamily(term) === "Polen" :
+    use.startsWith("Censos") ? proxyFamily(term) === "Foraminíferos" :
+    use.startsWith("Oxigenación") && proxyFamily(term) === "Materia orgánica y biomarcadores" ? false :
+    rule.test(fold([term.proxy, term.label, term.parameter_name_pangaea, term.search_aliases].flat().join(" "))));
   return { use, records: new Set(series.map((term) => term.record_id)).size, series: series.length, values: series.reduce((count, term) => count + term.rows.length, 0), example_series: series.slice(0, 4).map((term) => term.id), status: series.length ? "numeric_available_keyword_screen_not_environmental_validation" : "no_numeric_series_detected_by_rule", rule: rule.source };
 });
 const abundance = data.series.filter(isAbundance);

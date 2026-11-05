@@ -2205,3 +2205,23 @@ td a {
 @media(max-width:600px){.private-new{grid-template-columns:1fr}}
 .file-input{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;color:#41777b}.file-input input{font-size:12px}
 .link-button{background:none;border:0;color:#41777b;text-decoration:underline;font-size:12px;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+/* Derived abundance recipes retain the existing atlas controls and dialog scale. */
+.proxy-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; }
+.proxy-shortcuts button { border: 1px solid #c8d6d3; border-radius: 1rem; padding: .35rem .7rem; background: #f3f7f5; color: #23443d; }
+.derived-section { padding: 1rem 0; border-bottom: 1px solid #dce5df; }
+.derived-saved { padding: .75rem 0; overflow-wrap: anywhere; }
+.derived-saved button, .derived-import { display: block; margin: .5rem 0; }
+.derived-import input { max-width: 100%; }
+.derived-error { color: #9b342f; overflow-wrap: anywhere; }
+.derived-dialog { width: min(760px, calc(100vw - 2rem)); max-height: 88vh; padding: 1.5rem; border: 1px solid #c8d6d3; border-radius: 1rem; color: #243d37; }
+.derived-dialog::backdrop { background: #142f2b99; }
+.derived-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.derived-dialog form > label { display: grid; gap: .3rem; margin: .8rem 0; }
+.derived-dialog input:not([type=checkbox]), .derived-dialog select { width: 100%; min-width: 0; padding: .6rem; border: 1px solid #a9c0b6; border-radius: .3rem; }
+.derived-dialog p { margin: .8rem 0; line-height: 1.5; }
+.derived-terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.derived-terms fieldset { min-width: 0; border: 1px solid #c8d6d3; padding: .5rem; }
+.derived-terms fieldset > div { max-height: 240px; overflow: auto; }
+.derived-terms label { display: flex; align-items: start; gap: .5rem; margin: .5rem 0; overflow-wrap: anywhere; }
+.derived-dialog form > .derived-check { display: flex; align-items: start; gap: .5rem; }
+.derived-check input, .derived-terms input { flex-shrink: 0; margin-top: .2rem; }

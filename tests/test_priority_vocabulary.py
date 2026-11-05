@@ -3,6 +3,7 @@ from pathlib import Path
 import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts/discovery'))
 from priority_vocabulary import ratio_alias, target_family
+from proxy_coverage import families_of
 
 
 class PriorityVocabulary(unittest.TestCase):
@@ -17,6 +18,12 @@ class PriorityVocabulary(unittest.TestCase):
         self.assertIsNone(target_family('Stephanodiscus alpinus', 'Diatom abundance'))
         self.assertIsNone(target_family('Uranium', 'Thorium-Uranium dating', 'marine'))
         self.assertIsNone(target_family('Quercus', 'Plant DNA taxa detected in lake'))
+
+    def test_coverage_distinguishes_rock_eval_from_benthic_oxygen_indices(self):
+        parameter = 'Oxygen index, mass CO2, per unit mass total organic carbon'
+        self.assertNotIn('oxigenacion_bent', families_of([parameter]))
+        self.assertIn('mo_otros', families_of([parameter]))
+        self.assertIn('oxigenacion_bent', families_of(['Benthic Foraminifer Oxygen Index']))
 
     def test_forest_and_current_targets_require_context(self):
         self.assertEqual(target_family('Fagus', 'Pollen profile'), 'polen')

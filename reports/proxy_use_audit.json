@@ -260,14 +260,14 @@
     },
     {
       "use": "Censos y asociaciones de foraminíferos",
-      "records": 35,
-      "series": 270,
-      "values": 55407,
+      "records": 20,
+      "series": 170,
+      "values": 41757,
       "example_series": [
-        "pangaea-836213:G_bulloides_d13C",
-        "pangaea-836213:G_bulloides_d18O",
-        "pangaea-836213:G_ruber_d13C",
-        "pangaea-836213:G_ruber_d18O"
+        "pangaea5-54940:Foraminifera_benthic_g",
+        "pangaea5-54940:Globocassidulina_subglobosa_",
+        "pangaea5-54940:Oridorsalis_umbonatus_",
+        "pangaea5-66714:Orbulina_universa_"
       ],
       "status": "numeric_available_keyword_screen_not_environmental_validation",
       "rule": "foraminifer|globiger|globorotal|neoglobo|orbulina|quinqueloba"
@@ -275,8 +275,8 @@
     {
       "use": "Vegetación: taxones, AP/NAP y asociaciones",
       "records": 134,
-      "series": 416,
-      "values": 61577,
+      "series": 955,
+      "values": 111896,
       "example_series": [
         "noaa-28070-58190:40697:relict",
         "noaa-28070-58190:40697:mesophilous",
@@ -288,14 +288,14 @@
     },
     {
       "use": "Oxigenación y microhábitats bentónicos",
-      "records": 7,
-      "series": 22,
-      "values": 1655,
+      "records": 5,
+      "series": 20,
+      "values": 1581,
       "example_series": [
-        "pangaea5-259364:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g~27953cba",
-        "pangaea5-259373:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g~fc7842ec",
         "pangaea5-910794:Low_oxygen_indicators_",
-        "pangaea5-910795:Low_oxygen_indicators_"
+        "pangaea5-910795:Low_oxygen_indicators_",
+        "pangaea5-910796:Low_oxygen_indicators_",
+        "pangaea6-780234:160_969D:col11~81ab870d63"
       ],
       "status": "numeric_available_keyword_screen_not_environmental_validation",
       "rule": "oxygen|oxigen|epifaun|infaun|redox"

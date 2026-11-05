@@ -37,11 +37,11 @@ FAMILIES = {
     'd13C_planct': ('δ13C foraminíferos planctónicos', lambda p: re.search(r'δ13C|delta 13C|d13C', p, re.I) and re.search(PLANKTIC, p, re.I)),
     'd13C_bent': ('δ13C foraminíferos bentónicos', lambda p: re.search(r'δ13C|delta 13C|d13C', p, re.I) and re.search(BENTHIC, p, re.I)),
     'mgca_foram': ('Mg/Ca y otras razones en foraminíferos', lambda p: re.search(r'\b(Mg|Sr|B|Mn|U|Ba|Cd|Li)/Ca\b', p)),
-    'oxigenacion_bent': ('Indicadores bentónicos de oxigenación (BFOI, O2)', lambda p: re.search(r'oxygen index|BFOI|Oxygen, dissolved|dysox|suboxic|low.oxygen', p, re.I)),
+    'oxigenacion_bent': ('Indicadores bentónicos de oxigenación (BFOI, O2)', lambda p: re.search(r'oxygen index|BFOI|Oxygen, dissolved|dysox|suboxic|low.oxygen', p, re.I) and not re.search(r'Rock.Eval|mass CO2|organic carbon|pyrolysis', p, re.I)),
     'redox': ('Elementos redox (Mo, U, V, Re, Mn, Cd y razones)', lambda p: re.search(r'\b(Molybdenum|Uranium|Vanadium|Rhenium|Manganese|Cadmium)\b|\b(Mo|U|V|Re|Mn|Cd|Ni|Cu)/(Al|Ti|Th|U|Fe)\b|U/Th|Fe/Mn', p) and not re.search(r'/Ca\b', p)),
     'bario': ('Bario / productividad exportada (Ba, Ba/Al, Ba exceso)', lambda p: re.search(r'\bBarium\b|\bBa/(Al|Ti)\b|\bBa/Ti\b|Ba excess|Ba xs|Ba, biogenic|Ba EF', p)),
     'toc': ('Carbono orgánico (TOC/Corg)', lambda p: re.search(r'Carbon, organic|organic carbon|\bTOC\b|C org\b|Corg', p, re.I)),
-    'mo_otros': ('Materia orgánica: N total, C/N, δ13Corg, Rock-Eval, biomarcadores totales', lambda p: re.search(r'Nitrogen, total|\bC/N\b|C org/N|δ13C, organic|δ13C org|Hydrogen index|Oxygen index, Rock|Rock-Eval|Kerogen|Alkenones, total|n-Alkanes, total|Chlorin|Porphyrin', p, re.I)),
+    'mo_otros': ('Materia orgánica: N total, C/N, δ13Corg, Rock-Eval, biomarcadores totales', lambda p: re.search(r'Nitrogen, total|\bC/N\b|C org/N|δ13C, organic|δ13C org|Hydrogen index|Oxygen index, (?:Rock|mass CO2)|Rock-Eval|Kerogen|Alkenones, total|n-Alkanes, total|Chlorin|Porphyrin', p, re.I)),
     # Petición 29-10-2026 (17:24): relaciones de geoquímica orgánica, polen, isótopos radiogénicos,
     # europio/REE y proxies de corrientes. Las familias se solapan a propósito (p. ej. εNd es
     # radiogénico y también trazador de masas de agua); el recuento es por familia, no excluyente.

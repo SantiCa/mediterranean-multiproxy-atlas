@@ -2,6 +2,10 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Auditoría de uso y creador de proxies (05-11-2026, relevo)
+
+Auditoría reproducible de todas las celdas v17, más cribado adicional de v18 provisional; informes `reports/proxy_use_audit.json` y `reports/proxy_use_v18_provisional_audit.json`. Selector incluye registros únicos, familias de consulta coherentes, OI Rock-Eval corregido, SST sin estación separada de anual y contexto de sumas polínicas conservado. Creador de sumas/relaciones/proporciones de abundancias con muestras nativas, opción multisondeo compatible, recetas locales y exportación de originales/fórmulas/exclusiones. 133 Python, 34 Node, tsc/build, snapshot v17 y QA escritorio correctos. Integración en main pendiente del cierre de CUR-READING-18 provisional; producción v13. Límites en docs/curation/proxy_use_audit.md y handoff docs/handoffs/aud-proxy-uso.md.
+
 ## Colección v17 validada, pendiente de publicar (05-11-2026)
 
 - Release v17-c6564e1246e: **256 registros / 1.972 series / 971.380 valores / 1.000 grupos base**. Cinco entidades Reading v3 admitidas de diez revisadas: CANDIEIR, CreixellT, TRAVESS1, VdL PB2 y ADP 01/06. 565 muestras, 30 series y 3.390 valores nuevos; padre v16 íntegro.

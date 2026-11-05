@@ -23,7 +23,7 @@ export default function ProxyPicker({
       favoritesOnly: false,
       sort: "records",
       aggregates: true,
-      minRecords: 2,
+      minRecords: 0,
     }),
     [favorites, setFavorites] = useState<string[]>([]),
     [page, setPage] = useState(0);
@@ -138,7 +138,7 @@ export default function ProxyPicker({
       favoritesOnly: false,
       sort: "records",
       aggregates: true,
-      minRecords: 2,
+      minRecords: 0,
     });
   return (
     <section className="proxy-picker">
@@ -161,8 +161,9 @@ export default function ProxyPicker({
               <p className="aggregate-note">
                 Agrupación de {selected.members.length} grupos que miden la
                 misma variable en {selected.unit}. Métodos, calibraciones y
-                estaciones son distintos y no se armonizan: cada punto conserva
-                el suyo. Para comparar anomalías usa «z por sondeo».
+                estaciones pueden diferir: cada punto conserva el suyo. La
+                normalización z tampoco demuestra equivalencia entre métodos,
+                especies o estaciones. No es una suma de especies.
               </p>
             ) : (
               <p>
@@ -170,6 +171,9 @@ export default function ProxyPicker({
                 demuestra equivalencia.
               </p>
             )}
+            {selected.series[0]?.derivation && <p className="aggregate-note">
+              Cálculo de usuario: {selected.series[0].derivation.formula}. Sin calibración ambiental ni incertidumbre propagada.
+            </p>}
           </details>
           {Number.isFinite(selected.min) && (
             <button
@@ -189,7 +193,7 @@ export default function ProxyPicker({
         </div>
       )}
       <p className="field-note">
-        Familia → variable → método → unidad. Ordena por nº de sondeos o de datos y agrupa métodos que miden lo mismo (p. ej. SST) para mapas más completos. Busca también por sondeo, especie,
+        Familia → variable → método → unidad. Incluye registros únicos, útiles para localizar sondeos. Busca también por asociación, sondeo, especie,
         calibración o δ18O / d18O. Los favoritos se guardan en este navegador.
       </p>
       {open &&
@@ -232,6 +236,14 @@ export default function ProxyPicker({
                   value={q.search}
                   onChange={(e) => setQ({ ...q, search: e.target.value })}
                 />
+              </div>
+              <div className="proxy-shortcuts" aria-label="Ejemplos de proxies disponibles">
+                {[
+                  ["SST", "SST"], ["Foraminíferos y censos", "Foraminíferos"],
+                  ["AP / NAP", "arbóreo"], ["Asociaciones mesófilas", "mesófilos"],
+                  ["Microhábitats bentónicos", "infauna"], ["Ti/Ca", "Ti/Ca"],
+                  ["Sortable silt", "sortable silt"],
+                ].map(([name, search]) => <button key={name} onClick={() => setQ({ ...q, search, family: "all", variable: "all", method: "all", unit: "all", minRecords: 0 })}>{name}</button>)}
               </div>
               <div className="proxy-facets">
                 <label>
@@ -325,7 +337,7 @@ export default function ProxyPicker({
                       setQ({ ...q, aggregates: e.target.checked })
                     }
                   />{" "}
-                  Agrupar proxies que miden lo mismo
+                  Mostrar agrupaciones de consulta (sin sumar especies)
                 </label>
                 <label>
                   <input
@@ -358,10 +370,11 @@ export default function ProxyPicker({
                 <button onClick={reset}>Limpiar búsqueda</button>
               </div>
               <p className="proxy-results">
-                {matches.length} grupos compatibles disponibles · {all.length}{" "}
+                {matches.length} grupos disponibles · {all.length}{" "}
                 en la colección. Se aplican los filtros de fuente, archivo,
                 cronología y año del panel. El solapamiento de cobertura no
                 garantiza muestras dentro de la ventana.
+                El inventario «Sondeos» añade localizaciones y referencias sin garantizar valores numéricos revisados. Un registro no equivale necesariamente a un sondeo físico independiente.
               </p>
               <div className="proxy-cards">
                 {matches.slice(page * 18, page * 18 + 18).map((g: any) => (
@@ -374,7 +387,7 @@ export default function ProxyPicker({
                   >
                     <div className="proxy-card-top">
                       <small>
-                        {g.aggregate ? "AGRUPADO · " : ""}
+                        {g.aggregate ? "AGRUPADO · " : g.series[0]?.derivation ? "CALCULADO POR USUARIO · " : ""}
                         {g.family}
                       </small>
                       <button
