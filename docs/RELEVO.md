@@ -11,6 +11,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 05-11: Santiago ordena publicar main validado en el Site existente; rol 04 inicia comprobación y preparación de v13, conservando acceso privado.
 1. Rol 04: publicar main con data/processed/atlas-v13.json. Regenerar y comprobar snapshot antes de compilar; conservar acceso privado. Referencia local comprobada: outputs/reading-v13-snapshot (ignorada). Producción sigue en v9.
 2. Próximo lote de datos: continuar seis parámetros Reading v3 con hasta diez entidades interiores nuevas. Consultar contratos pollen_v9_sources.json a pollen_v13_sources.json (69 entidades ya incorporadas). Candidatas por revisar: LABRADILLOS, BOTIJA, LANCHAS, BOSSIER, AGUASFRIAS, BERMU, REDONDO, VALDEYER, XL y LECHE. Pedrido requiere auditoría de sumas nulas, sin convertirlas en porcentajes cero. Villarquemado requiere contrato propio de edades IPE. Reutilizar originales por hash.
 3. MD99-2337 sigue en espera. Falta una tabla numérica de edad y profundidad del propio sondeo. Consultar el handoff actual y el contrato ss_v8 antes de repetir búsquedas ya documentadas. No usar MD99-2339 como sustituto. Revisar una versión pública de Ducassou 2018 o sus suplementos si aparece acceso nuevo.
