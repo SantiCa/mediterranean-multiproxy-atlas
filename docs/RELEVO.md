@@ -11,6 +11,8 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. Lote actual en investigación. Se descargaron Neotoma 47525 (Monticchio, 924 muestras), NOAA 5463 pollen.txt (496 muestras) y Reading Iberia v3 DOI 10.17864/1947.000369. Monticchio tiene solapamiento entre repositorios. Reading contiene unidades mixtas y campos de incertidumbre que requieren revisar su significado antes de convertirlos. Originales locales en data/interim/pollen_v9, aún sin admisión. MD99-2337 sigue sin controles numéricos verificados. Terminar el lote y publicarlo. Petición del 05-11 añadida antes de implementarla: explicar y proponer cómo reducir el consumo de créditos en siguientes sesiones.
+
 1. Continuar la curación con los mismos criterios de procedencia y compatibilidad. Para MD99-2337 buscar puntos numéricos del propio sondeo, en la escala original. Se consultaron PANGAEA.971575/.971574/.256528, Ducassou et al. (2018) y las tesis de Moal-Darrigade y Hassan. Consultar el contrato v8 antes de repetir búsquedas.
 2. Continuar con polen de Monticchio en Neotoma y otras ubicaciones continentales. Verificar denominador y cronología antes de derivar porcentajes. Revisar BL12-10 para Ti/Ca. Mantener MP37PC en espera hasta confirmar el rótulo Fe/A.
 3. Al cambiar v7, revisar solapamientos y actualizar el hash padre del contrato v8 antes de recompilar. El snapshot bloquea releases con padre obsoleto.
