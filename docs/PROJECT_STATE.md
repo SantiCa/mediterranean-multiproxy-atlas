@@ -2,7 +2,15 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v15 validada, pendiente de publicar (05-11-2026)
+## Colección v16 validada, pendiente de publicar (05-11-2026)
+
+- Release v16-cc875bfb999: **251 registros / 1.942 series / 967.990 valores / 1.000 grupos base**. Ocho ubicaciones Reading v3 nuevas, 473 muestras, 48 series y 2.838 valores. Padre v15 íntegro; seis parámetros y denominadores conservados.
+- Reproducción: `python scripts/build_forest_pollen_v16.py`; contrato pollen_v16_sources.json e informe quantitative_v16_release.json. Originales por hash e importadores existentes reutilizados sin cambios. Las exclusiones de carbón de PozoN_2015 no se trasladan automáticamente al polen: se conservan sus 41 muestras publicadas y se documenta la diferencia.
+- 120 pruebas Python, 15 Node y snapshot con 967.990 valores cotejados celda a celda. Sin cuarentenas de admisión ni solapamientos numéricos parciales detectados; vectores completos auditados. Handoff docs/handoffs/cur-reading-16.md. La proximidad se registra como cribado, sin certificar independencia física exhaustiva.
+- Armena retenida por 11/53 muestras de suma nula; Estanya Catena por 2/92. Filas explícitas en contrato e informe; no se convierten en porcentajes cero ni se imputan. Lote acotado a diez candidatas: ocho admitidas, dos retenidas.
+- Producción sigue en v13; publicación de v16 reservada al rol 04. Contratos v9–v16: 97/122 entidades Reading incorporadas; 25 restantes incluyen bloqueos, cronologías marinas e identidades pendientes.
+
+## Colección v15 validada, sustituida por v16 (05-11-2026)
 
 - Release v15-c43715a903d: **243 registros / 1.894 series / 965.152 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 386 muestras, 60 series y 2.316 valores. Padre v14 íntegro; seis parámetros y suma armonizada de 205 taxones conservados.
 - Reproducción: `python scripts/build_forest_pollen_v15.py`; contrato pollen_v15_sources.json e informe quantitative_v15_release.json. Originales fijados por hash e importadores reutilizados. VILLUERCAS usa exclusivamente INTCAL2020_median, preservando IPE en auditoría.
