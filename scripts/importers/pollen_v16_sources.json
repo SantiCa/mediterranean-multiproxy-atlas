@@ -1,0 +1,253 @@
+{
+  "parent_sha256": "17df2d5959720dc3c83154c1dfd9acb691bdf094531f3f1af7d3a64002cb3b11",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "PLAESTANY",
+      "site": "Pla de l'Estany",
+      "latitude": 42.1875,
+      "longitude": 2.536111111,
+      "rows": 48,
+      "first_row": 3594,
+      "last_row": 3641,
+      "reference": "Burjachs, F. 1994 Palynology of the Upper Pleistocene and Holocene of the North-East Iberian Peninsula: Pla De L’estany (Catalonia), Historical Biology, 9(1–2), 17–33. doi:10.1080/10292389409380485.",
+      "paper_dois": [
+        "10.1080/10292389409380485"
+      ]
+    },
+    {
+      "entity": "Manaderos core",
+      "site": "Manaderos",
+      "latitude": 40.3424,
+      "longitude": -4.6939,
+      "rows": 59,
+      "first_row": 6680,
+      "last_row": 6738,
+      "reference": "Robles-López, S. et al. 2020 Holocene vegetation and fire dynamics in the supra-Mediterranean belt of the Gredos Range (central Iberian Peninsula), Plant Biosystems - An International Journal Dealing with all Aspects of Plant Biology, 154(1), 74–86. doi:10.1080/11263504.2019.1578281.",
+      "paper_dois": [
+        "10.1080/11263504.2019.1578281"
+      ]
+    },
+    {
+      "entity": "PozoN_2015 core",
+      "site": "Pozo de la Nieve",
+      "latitude": 40.3532,
+      "longitude": -4.5516,
+      "rows": 41,
+      "first_row": 7003,
+      "last_row": 7043,
+      "reference": "Robles-López, S. et al. 2017 Vulnerabilidad y resiliencia de los pinares de alta montaña de la Sierra de Gredos (Ávila, sistema central): Dos mil años de dinámica socioecológica, Cuaternario y Geomorfologia, 31(3–4), 51–72. doi:10.17735/cyg.v31i3-4.55594.",
+      "paper_dois": [
+        "10.17735/cyg.v31i3-4.55594"
+      ],
+      "qc_notes": [
+        "El readme v3 documenta exclusiones por hiato para el archivo de carbón PozoN_2015. No se trasladan automáticamente al polen: este lote conserva las 41 filas publicadas de polen y su mediana IntCal20, sin interpolación local."
+      ]
+    },
+    {
+      "entity": "Laguna de Rio Seco core 1",
+      "site": "Laguna de Rio Seco",
+      "latitude": 37.045278,
+      "longitude": -3.349167,
+      "rows": 69,
+      "first_row": 7044,
+      "last_row": 7112,
+      "reference": "Anderson, R.S. et al. 2011 Postglacial history of alpine vegetation, fire, and climate from Laguna de Río Seco, Sierra Nevada, southern Spain, Quaternary Science Reviews, 30(13–14), 1615–1629. doi:10.1016/j.quascirev.2011.03.005.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2011.03.005"
+      ]
+    },
+    {
+      "entity": "LdlM 10-02",
+      "site": "Laguna de la Mula",
+      "latitude": 37.0597,
+      "longitude": -3.4168,
+      "rows": 32,
+      "first_row": 7331,
+      "last_row": 7362,
+      "reference": "Jiménez-Moreno, G. et al. 2013 Vegetation, fire, climate and human disturbance history in the southwestern Mediterranean area during the late Holocene, Quaternary Research, 79(2), 110–122. doi:10.1016/j.yqres.2012.11.008.",
+      "paper_dois": [
+        "10.1016/j.yqres.2012.11.008"
+      ]
+    },
+    {
+      "entity": "LdlMo composite",
+      "site": "Laguna de la Mosca",
+      "latitude": 37.0597,
+      "longitude": -3.3147,
+      "rows": 73,
+      "first_row": 7363,
+      "last_row": 7435,
+      "reference": "Manzano, S. et al. 2019 A palaeoecological approach to understanding the past and present of Sierra Nevada, a Southwestern European biodiversity hotspot, Global and Planetary Change, 175, 238–250. doi:10.1016/j.gloplacha.2019.02.006.",
+      "paper_dois": [
+        "10.1016/j.gloplacha.2019.02.006"
+      ]
+    },
+    {
+      "entity": "PENANEGR",
+      "site": "Peña Negra",
+      "latitude": 40.3347,
+      "longitude": -5.7922,
+      "rows": 63,
+      "first_row": 1973,
+      "last_row": 2035,
+      "reference": "Abel-Schaad, D. and López-Sáez, J.A. 2013 Vegetation changes in relation to fire history and human activities at the Peña Negra mire (Bejar Range, Iberian Central Mountain System, Spain) during the past 4,000 years, Vegetation History and Archaeobotany, 22(3), 199–214. doi:10.1007/s00334-012-0368-9.",
+      "paper_dois": [
+        "10.1007/s00334-012-0368-9"
+      ]
+    },
+    {
+      "entity": "LAGOA_CO",
+      "site": "Lagoa Comprida 2",
+      "latitude": 40.36277778,
+      "longitude": -7.636111111,
+      "rows": 88,
+      "first_row": 5090,
+      "last_row": 5177,
+      "reference": "Janssen, C.R. and Woldringh, R.E. 1981 A preliminary radiocarbon dated pollen sequence from the Serra da Estrela, Portugal., Finisterra, 16(32), 299–309. doi:10.18055/finis2176.; \nvan den Brink, L.M. and Janssen, C.R. 1985 The effect of human activities during cultural phases on the development of montane vegetation in the Serra de Estrela, Portugal, Review of Palaeobotany and Palynology, 44, 193–215.; \nMoe, D. and Van Der Knaap, W.O. 1990 Transhumance in mountain areas: Additional interpretation of three pollen diagrams from Norway, Portugal and Switzerland, Pact, (31), 91–103.",
+      "paper_dois": [
+        "10.18055/finis2176"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    },
+    {
+      "record": "Reading CANALEJA",
+      "reason": "Possible coordinate/reference inconsistency: Reading and PANGAEA archive latitude 40.9, longitude -2.45, elevation 1029 m, but cited publications identify Garganta Canaleja in Romangordo (Caceres). Physical identity and correct sampling coordinates require audit. No replacement coordinates inferred.",
+      "source_rows": [
+        479,
+        480,
+        481,
+        482,
+        483,
+        484
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.835786",
+      "checked_date": "2026-11-05",
+      "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
+      "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+    },
+    {
+      "record": "Reading CUCU",
+      "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+      "source_rows": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "age_medians_original": [
+        "46057",
+        "61527",
+        "114264",
+        "130000"
+      ],
+      "calibration_doi": "10.1017/RDC.2020.41",
+      "checked_date": "2026-11-05"
+    },
+    {
+      "record": "Reading Armena",
+      "reason": "Zero retained-205 assemblage sum in 11 of 53 samples. Entire entity held for missing-assemblage review; no zero percentages or interpolated assemblages inferred.",
+      "source_rows": [
+        3399,
+        3400,
+        3401,
+        3402,
+        3421,
+        3430,
+        3433,
+        3437,
+        3438,
+        3443,
+        3446
+      ],
+      "entity_rows": 53
+    },
+    {
+      "record": "Reading Estanya Catena",
+      "reason": "Zero retained-205 assemblage sum in 2 of 92 samples. Entire entity held for missing-assemblage review; no zero percentages or interpolated assemblages inferred.",
+      "source_rows": [
+        5936,
+        5939
+      ],
+      "entity_rows": 92
+    }
+  ]
+}
