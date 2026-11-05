@@ -1,5 +1,6 @@
 """Append ten reviewed inland Reading v3 entities using the frozen v9 parser."""
 import argparse
+import csv
 import json
 import math
 
@@ -27,6 +28,8 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
     resources = {entry['file']: entry for entry in previous['resources']}
     for filename in ('iberia.csv', 'iberia-readme.docx'):
         pollen.original(resources[filename], fetch)
+    for resource in contract.get('resources', []):
+        pollen.original(resource, fetch)
     parent = json.loads(baseline.read_bytes())
     if names & {series.get('source_event') for series in parent['series']}:
         raise ValueError('Entity already present in parent')
@@ -34,6 +37,25 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
         resources['iberia.csv'], dict(previous, reading_entities=entities))
     if any(row[0] > 55 for item in series for row in item['rows']):
         raise ValueError('Age beyond IntCal20 domain (55 ka BP); source-specific chronology review required')
+    if 'date_header' in contract:
+        resource = next(item for item in contract['resources'] if item['file'] == 'iberia-dates.csv')
+        with (pollen.RAW / resource['file']).open(encoding='utf-8-sig', newline='') as stream:
+            reader = csv.DictReader(stream)
+            if reader.fieldnames != contract['date_header']:
+                raise ValueError('Reading date columns changed')
+            dating = {index: dict(source_row=index, source_line=reader.line_num, original=row)
+                      for index, row in enumerate(reader, 1)}
+        for record, entry in zip(records, entities):
+            selected = [dating[index] for index in entry['date_rows']]
+            actual = [index for index, item in dating.items()
+                      if item['original']['entity_name'] == entry['entity']]
+            materials = sorted({item['original']['material_dated'] for item in selected})
+            if entry['date_rows'] != actual or materials != entry['date_materials']:
+                raise ValueError('Reading date-entity or material contract changed')
+            record['reading_dates_audit'] = dict(source_url=resource['url'],
+                raw_sha256=resource['sha256'], rows=selected,
+                age_used_empty_meaning='unspecified, not explicit acceptance')
+            record['archive_type'] = entry.get('archive_type', record['archive_type'])
     notes = {entry['entity']: entry.get('qc_notes', []) for entry in entities}
     for item in records + series:
         entity_notes = notes[item.get('core') or item['source_event']]
@@ -67,7 +89,9 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
         chronology_and_denominator_audit=audit, held=contract['held'],
         source_audits=[contract_path.relative_to(ROOT).as_posix(),
                        'scripts/importers/pollen_v9_sources.json'],
-        resources=[resources[name] for name in ('iberia.csv', 'iberia-readme.docx')])
+        resources=[resources[name] for name in ('iberia.csv', 'iberia-readme.docx')] + contract.get('resources', []))
+    if 'identity_audit' in contract:
+        report['identity_audit'] = contract['identity_audit']
     (ROOT / f'data/processed/atlas-v{version}.json').write_bytes(raw)
     (ROOT / f'reports/quantitative_v{version}_release.json').write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
