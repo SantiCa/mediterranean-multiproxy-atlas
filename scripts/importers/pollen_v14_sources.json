@@ -1,0 +1,214 @@
+{
+  "parent_sha256": "d545c51a350754004455a73f15cba8230cf5d42b563a0110fe43a0731f021cdd",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "LABRADILLOS",
+      "site": "Labradillos Mire",
+      "latitude": 40.34495556,
+      "longitude": -4.573055556,
+      "rows": 25,
+      "first_row": 2887,
+      "last_row": 2911,
+      "reference": "Robles López, S. et al. 2017 35. Labradillos mire, Gregos Range (central Spain), Grana, 56(5), 398–400. doi:10.1080/00173134.2017.1282976.",
+      "paper_dois": [
+        "10.1080/00173134.2017.1282976"
+      ]
+    },
+    {
+      "entity": "BOTIJA",
+      "site": "Botija Bog",
+      "latitude": 39.60165833,
+      "longitude": -4.696236111,
+      "rows": 25,
+      "first_row": 2996,
+      "last_row": 3020,
+      "reference": "Luelmo-Lautenschlaeger, R., López Sáez, J.A. and Pérez Díaz, S. 2018 Contributions to the European Pollen Database. Botija, Toledo Mountains (central Spain). Grana 57(4), 322- 324.",
+      "paper_dois": []
+    },
+    {
+      "entity": "LANCHAS",
+      "site": "Las Lanchas",
+      "latitude": 39.58576667,
+      "longitude": -4.894297222,
+      "rows": 20,
+      "first_row": 3118,
+      "last_row": 3137,
+      "reference": "Luelmo-Lautenschlaeger, R., López-Sáez, J.A. and Pérez-Díaz, S. 2018 39. Las Lanchas, Toledo Mountains (central Spain), Grana, 57(3),246–248. doi:10.1080/00173134.2017.1366547.",
+      "paper_dois": [
+        "10.1080/00173134.2017.1366547"
+      ]
+    },
+    {
+      "entity": "BOSSIER",
+      "site": "Praillos de Bossier Mire",
+      "latitude": 36.905,
+      "longitude": -4.071944444,
+      "rows": 25,
+      "first_row": 3254,
+      "last_row": 3278,
+      "reference": "Abel-Schaad, D. et al. 2017 36. Praillos de Boissier mire, Tejeda Natural Park (Baetic Range, southern Spain), Grana, 56(6), 475–477. doi:10.1080/00173134.2017.1282977.",
+      "paper_dois": [
+        "10.1080/00173134.2017.1282977"
+      ]
+    },
+    {
+      "entity": "AGUASFRIAS",
+      "site": "Arroyo de Aguas Frias",
+      "latitude": 40.2667,
+      "longitude": -5.1167,
+      "rows": 50,
+      "first_row": 6342,
+      "last_row": 6391,
+      "reference": "Julio Camarero, J. et al. 2019 Abrupt regime shifts in post-fire resilience of Mediterranean mountain pinewoods are fuelled by land use, International Journal of Wildland Fire, 28(5), 329–341. doi:10.1071/WF18160.",
+      "paper_dois": [
+        "10.1071/WF18160"
+      ]
+    },
+    {
+      "entity": "BERMU",
+      "site": "Bermu Mire",
+      "latitude": 39.4341,
+      "longitude": -4.146,
+      "rows": 38,
+      "first_row": 6392,
+      "last_row": 6429,
+      "reference": "Luelmo-Lautenschlaeger, R. et al. 2018 Vegetation history in the Toledo Mountains (central Iberia): human impact during the last 1300 years, Sustainability, 10(7), 2575.",
+      "paper_dois": []
+    },
+    {
+      "entity": "REDONDO",
+      "site": "El Redondo",
+      "latitude": 40.2214,
+      "longitude": -5.6569,
+      "rows": 60,
+      "first_row": 6430,
+      "last_row": 6489,
+      "reference": "López-Sáez, J.A. et al. 2016 Landscape dynamics and human impact on high-mountain woodlands in the western Spanish Central System during the last three millennia, Journal of Archaeological Science: Reports, 9, 203–218. doi:10.1016/j.jasrep.2016.07.027.",
+      "paper_dois": [
+        "10.1016/j.jasrep.2016.07.027"
+      ]
+    },
+    {
+      "entity": "VALDEYER",
+      "site": "Valdeyernos bog",
+      "latitude": 39.44111111,
+      "longitude": -4.096388889,
+      "rows": 25,
+      "first_row": 2829,
+      "last_row": 2853,
+      "reference": "Dorado-Valiño, M., López-Sáez, J.A. and García-Gómez, E. 2014 26. Valdeyernos, Toledo Mountains (central Spain), Grana, 53(4), 315–317. doi:10.1080/00173134.2014.936490.",
+      "paper_dois": [
+        "10.1080/00173134.2014.936490"
+      ]
+    },
+    {
+      "entity": "XL",
+      "site": "Xan de Llamas",
+      "latitude": 42.30416667,
+      "longitude": -6.321388889,
+      "rows": 33,
+      "first_row": 2854,
+      "last_row": 2886,
+      "reference": "Morales-Molino, C., García Antón, M. and Morla, C. 2011 Late Holocene vegetation dynamics on an Atlantic-Mediterranean mountain in NW Iberia, Palaeogeography, Palaeoclimatology, Palaeoecology, 302(3–4), 323–337. doi:10.1016/j.palaeo.2011.01.020.",
+      "paper_dois": [
+        "10.1016/j.palaeo.2011.01.020"
+      ],
+      "qc_notes": [
+        "Reading v3 corrige el tratamiento de fechas postmodernas del techo de XL respecto de v2, según el readme original. Se conserva exclusivamente la mediana IntCal20 de v3, sin recalibración local."
+      ]
+    },
+    {
+      "entity": "LECHE",
+      "site": "Fuente de la Leche",
+      "latitude": 40.3468,
+      "longitude": -5.0569,
+      "rows": 58,
+      "first_row": 4498,
+      "last_row": 4555,
+      "reference": "Robles-López, S. et al. 2018 The dialectic between deciduous and coniferous forests in central Iberia: A palaeoenvironmental perspective during the late Holocene in the Gredos range, Quaternary International, 470, 148–165. doi:10.1016/j.quaint.2017.05.012.",
+      "paper_dois": [
+        "10.1016/j.quaint.2017.05.012"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    }
+  ]
+}
