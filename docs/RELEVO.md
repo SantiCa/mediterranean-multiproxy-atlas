@@ -24,7 +24,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
-- 05-11: permitir elegir la escala de color del mapa de proxy y mantenerla fija al cambiar de edad para facilitar comparaciones. Rol 03 en curso.
+- 05-11 HECHO: escala de color fija entre edades con límites editables; se reinicia al cambiar proxy, modo o referencia. Handoff docs/handoffs/escala-mapa.md. Pendiente integrar en main después de cerrar v18 provisional y publicar mediante rol 04.
 
 - 05-11 (16:37) HECHO V31 (Claude): fallaban los «Python checks» en cada push. Causas: (1) `test_forest_pollen_v15` no se omitía sin el original ignorado iberia.csv; (2) la suite en un proceso agotaba memoria (semillas de ~70 MB retenidas por clase) y los trabajos se cancelaban. Arreglo: skip como en v16+, y checks.yml ejecuta un archivo de prueba por proceso. Nuevas pruebas que carguen semillas: liberar en tearDownClass o mantener el patrón.
 

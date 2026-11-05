@@ -129,6 +129,10 @@ export default function Atlas() {
     [surface, setSurface] = useState(false),
     [radius, setRadius] = useState(600),
     [tileError, setTileError] = useState(false);
+  const [scale, setScale] = useState<{ key: string; domain: [number, number] } | null>(null);
+  const [scaleMin, setScaleMin] = useState("");
+  const [scaleMax, setScaleMax] = useState("");
+  const [scaleError, setScaleError] = useState("");
   const [mask, setMask] = useState<any>(null),
     [coast, setCoast] = useState<any>(null),
     [mapReady, setMapReady] = useState(false),
@@ -379,7 +383,27 @@ export default function Atlas() {
     if (items.length && !items.some((s) => s.record.id === selected))
       setSelected(items[0].record.id);
   }, [items, selected]);
-  const domain = colorDomain(items, f.mode === "z");
+  const scaleKey = JSON.stringify([f.group, f.mode, f.refMin, f.refMax]);
+  const windowDomain = colorDomain(items, f.mode === "z") as [number, number];
+  useEffect(() => {
+    if (seriesLoading || !valid.length || scale?.key === scaleKey) return;
+    let [minimum, maximum] = windowDomain;
+    if (minimum === maximum) { minimum -= 1; maximum += 1; }
+    setScale({ key: scaleKey, domain: [minimum, maximum] });
+    setScaleMin(String(minimum));
+    setScaleMax(String(maximum));
+    setScaleError("");
+  }, [scaleKey, scale, seriesLoading, valid.length, windowDomain[0], windowDomain[1]]);
+  const domain: [number, number] = scale?.key === scaleKey ? scale.domain : windowDomain;
+  function applyScale() {
+    const minimum = Number(scaleMin), maximum = Number(scaleMax);
+    if (!scaleMin.trim() || !scaleMax.trim() || !Number.isFinite(minimum) || !Number.isFinite(maximum) || minimum >= maximum) {
+      setScaleError("Introduce límites numéricos con mínimo menor que máximo.");
+      return;
+    }
+    setScale({ key: scaleKey, domain: [minimum, maximum] });
+    setScaleError("");
+  }
   const grid = useMemo(
     () =>
       surface && mask
@@ -1102,6 +1126,16 @@ export default function Atlas() {
                 <i className="missing-dot" /> Gris: sin valor comparable en esta
                 selección
               </small>
+              <div className="scale-controls">
+                <b>Escala fija entre edades</b>
+                <div>
+                  <label>Mín. <input aria-label="Mínimo de escala" type="number" value={scaleMin} onChange={(event) => setScaleMin(event.target.value)} /></label>
+                  <label>Máx. <input aria-label="Máximo de escala" type="number" value={scaleMax} onChange={(event) => setScaleMax(event.target.value)} /></label>
+                  <button onClick={applyScale}>Aplicar</button>
+                </div>
+                <small>Fuera de escala: color del extremo. Cambiar proxy o modo reinicia la escala.</small>
+                {scaleError && <small role="alert">{scaleError}</small>}
+              </div>
             </div>
             <div className="map-export">
               <button onClick={exportMap}>
