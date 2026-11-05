@@ -1,0 +1,641 @@
+{
+  "parent_sha256": "f3fa459a341e68d83c677e9aecb6ceb9832a960253635d4a56cb8460f0c7bbd9",
+  "resources": [
+    {
+      "file": "pollen.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/pollen.txt",
+      "sha256": "45146ca5056d148a6ad150a03af2887620938665541aae3af6281acbb4fbf597"
+    },
+    {
+      "file": "readme_allen1999.txt",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/europe/italy/readme_allen1999.txt",
+      "sha256": "788e612da2f01d62526a334dec27325a0ddafc840f0e102f0704989dbd0512d3"
+    },
+    {
+      "file": "iberia.csv",
+      "url": "https://researchdata.reading.ac.uk/369/24/Iberia_pollen_records_v3.csv",
+      "sha256": "37f5daa02a20cd99f452cc9cdad9ec6a385f0569982871c932bceaad7c804170"
+    },
+    {
+      "file": "iberia-readme.docx",
+      "url": "https://researchdata.reading.ac.uk/369/25/README_Harrison_2021_dataset_v3.docx",
+      "sha256": "faae4ec25b964fe6a48e9815732fb081ef3e6fa7199789f619426a728eb155d6"
+    }
+  ],
+  "reading_header": [
+    "site_name",
+    "entity_name",
+    "latitude",
+    "longitude",
+    "elevation",
+    "source",
+    "reference",
+    "avg_depth..cm.",
+    "IPE.age..cal.",
+    "INTCAL2020_mean",
+    "INTCAL2020_median",
+    "INTCAL2020_uncert_5",
+    "INTCAL2020_uncert_95",
+    "INTCAL2020_uncert_25",
+    "INTCAL2020_uncert_75",
+    "Abies",
+    "Acer",
+    "Aconitum",
+    "Adonis",
+    "Aesculus",
+    "Aizoaceae",
+    "Alnus",
+    "Amaranthaceae",
+    "Amaryllidaceae",
+    "Anacardiaceae",
+    "Apiaceae",
+    "Aquilegia",
+    "Araliaceae",
+    "Arbutus",
+    "Arctostaphylos",
+    "Aristolochiaceae",
+    "Artemisia",
+    "Asparagaceae",
+    "Asphodelaceae",
+    "Asteraceae",
+    "Asteraceae..Liguliflorae.",
+    "Asteroideae",
+    "Astragalus",
+    "Berberidaceae",
+    "Berberis",
+    "Betula",
+    "Boraginaceae",
+    "Brassicaceae",
+    "Buxus",
+    "Calicotome",
+    "Calluna",
+    "Campanulaceae",
+    "Caprifoliaceae",
+    "Carduoideae",
+    "Carpinus.betulus",
+    "Carpinus.orientalis.Ostrya",
+    "Caryophyllaceae",
+    "Castanea",
+    "Cedrus",
+    "Celastraceae",
+    "Celtis",
+    "Ceratonia",
+    "Chamaerops",
+    "Cichorioideae",
+    "Cistaceae",
+    "Cistus",
+    "Clematis",
+    "Colchicaceae",
+    "Convolvulaceae",
+    "Coriaria",
+    "Cornus",
+    "Corylus",
+    "Crassulaceae",
+    "Crataegus",
+    "Cucurbitaceae",
+    "Cupressaceae",
+    "Cyperaceae",
+    "Cytinaceae",
+    "Daphne",
+    "Delphinium",
+    "Dennstaedtiaceae",
+    "Dryas",
+    "Elaeagnus",
+    "Empetrum",
+    "Ephedra",
+    "Ephedraceae",
+    "Equisetum",
+    "Erica",
+    "Ericaceae",
+    "Eriocaulaceae",
+    "Euphorbiaceae",
+    "Fabaceae",
+    "Fabaceae..herbs.",
+    "Fagus",
+    "Frangula",
+    "Fraxinus",
+    "Genisteae",
+    "Gentianaceae",
+    "Geraniaceae",
+    "Grossulariaceae",
+    "Halimium",
+    "Haloragaceae",
+    "Hedera",
+    "Helianthemum",
+    "Helleborus",
+    "Hippophae",
+    "Huperzia",
+    "Hymenophyllaceae",
+    "Hypericaceae",
+    "Ilex",
+    "Iridaceae",
+    "Jasminum",
+    "Juglans",
+    "Juncaceae",
+    "Juncaginaceae",
+    "Koenigia",
+    "Lamiaceae",
+    "Larix",
+    "Lavandula",
+    "Ledum",
+    "Ligustrum",
+    "Liliaceae",
+    "Linaceae",
+    "Linnaea",
+    "Linum",
+    "Lonicera",
+    "Loranthaceae",
+    "Lycopodium",
+    "Lysimachia",
+    "Lythraceae",
+    "Malvaceae",
+    "Maytenus",
+    "Melanthiaceae",
+    "Mercurialis",
+    "Montiaceae",
+    "Moraceae",
+    "Myrica",
+    "Myrtaceae",
+    "Nartheciaceae",
+    "Nerium",
+    "Nigella",
+    "Olea",
+    "Oleaceae",
+    "Onagraceae",
+    "Ononis",
+    "Ophioglossaceae",
+    "Orchidaceae",
+    "Orobanchaceae",
+    "Osmundaceae",
+    "Oxalidaceae",
+    "Oxyria.Rumex",
+    "Paeonia",
+    "Papaveraceae",
+    "Parrotia",
+    "Periploca",
+    "Phillyrea",
+    "Picea",
+    "Pinus",
+    "Pinus..diploxylon.",
+    "Pinus..haploxylon.",
+    "Pistacia",
+    "Plantaginaceae",
+    "Platanus",
+    "Plumbaginaceae",
+    "Poaceae",
+    "Polemoniaceae",
+    "Polygalaceae",
+    "Polygonaceae",
+    "Polygonum",
+    "Polypodiales",
+    "Populus",
+    "Portulacaceae",
+    "Potentilla",
+    "Primulaceae",
+    "Prunus",
+    "Pteridaceae",
+    "Pterocarya",
+    "Quercus.deciduous",
+    "Quercus.evergreen",
+    "Quercus.intermediate",
+    "Ranunculaceae",
+    "Ranunculus",
+    "Resedaceae",
+    "Retama",
+    "Rhamnaceae",
+    "Rhamnus",
+    "Rhododendron",
+    "Rhus",
+    "Ribes",
+    "Rosaceae",
+    "Rosmarinus",
+    "Rubiaceae",
+    "Rubus",
+    "Rutaceae",
+    "Salix",
+    "Sambucus",
+    "Sanguisorba.group",
+    "Santalaceae",
+    "Sapotaceae",
+    "Saxifragaceae",
+    "Sciadopityaceae",
+    "Scrophulariaceae",
+    "Smilax",
+    "Solanaceae",
+    "Sorbus",
+    "Tamarix",
+    "Taxaceae",
+    "Taxus",
+    "Teucrium",
+    "Thalictrum",
+    "Thymelaeaceae",
+    "Tilia",
+    "Trollius",
+    "Ulmus",
+    "Ulmus.Zelkova",
+    "Urticaceae",
+    "Vaccinium",
+    "Valerianaceae",
+    "Verbenaceae",
+    "Viburnum",
+    "Violaceae",
+    "Viscum",
+    "Vitex",
+    "Ziziphus",
+    "Zygophyllaceae"
+  ],
+  "reading_entities": [
+    {
+      "entity": "ANTAS",
+      "site": "Antas",
+      "latitude": 37.20833333,
+      "longitude": -1.823611111,
+      "rows": 195,
+      "first_row": 50,
+      "last_row": 244,
+      "reference": "Yii, E.I. et al. 1995 Dinámica del paisaje vegetal en la vertiente mediterránea de la Península Ibérica e Islas Baleares desde el Tardiglaciar hasta el presente., Reconstrucción de Paleoambientes y cambios climáticos durante el Cuaternario, 3, 319–328.; \nCano Villanueva, J.P. 1997 Estudi palinologic de sediments litorals de la provincia d’almeria. Transformacions del paisatge vegetal en un territori semiarid. Universitat Autònoma de Barcelona, Barcelona, Spain. Available at: https://dialnet.unirioja.es/servlet/tesis?codigo=247794&info=resumen&idioma=SPA (Accessed: 22 March 2021).; Pantaléon-Cano, J. et al. 2003 Palynological evidence for vegetational history in semi-arid areas of the western Mediterranean (Almería, Spain), The Holocene, 13(1), 109–119. doi:10.1191/0959683603hl598rp.",
+      "paper_dois": [
+        "10.1191/0959683603hl598rp"
+      ]
+    },
+    {
+      "entity": "N-CAS",
+      "site": "Hoya del Castillo",
+      "latitude": 41.482,
+      "longitude": -0.1583,
+      "rows": 34,
+      "first_row": 701,
+      "last_row": 734,
+      "reference": "Davis, B.A.S. and Stevenson, A.C. 2007 The 8.2 ka event and Early-Mid Holocene forests, fires and flooding in the Central Ebro Desert, NE Spain, Quaternary Science Reviews, 26(13–14), 1695–1712. doi:10.1016/j.quascirev.2007.04.007.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2007.04.007"
+      ]
+    },
+    {
+      "entity": "N-GUA",
+      "site": "Laguna Guallar",
+      "latitude": 41.4083,
+      "longitude": -0.2278,
+      "rows": 30,
+      "first_row": 965,
+      "last_row": 994,
+      "reference": "Davis, B.A.S. and Stevenson, A.C. 2007 The 8.2 ka event and Early-Mid Holocene forests, fires and flooding in the Central Ebro Desert, NE Spain, Quaternary Science Reviews, 26(13–14), 1695–1712. doi:10.1016/j.quascirev.2007.04.007.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2007.04.007"
+      ]
+    },
+    {
+      "entity": "LAROYA",
+      "site": "Laguna de la Roya",
+      "latitude": 42.21666667,
+      "longitude": -6.766666667,
+      "rows": 72,
+      "first_row": 1239,
+      "last_row": 1310,
+      "reference": "Allen, J.R.M., Huntley, B. and Watts, W.A. 1996 The vegetation and climate of northwest Iberia over the last 14,000 years, Journal of Quaternary Science, 11(2), 125–147. doi:10.1002/(SICI)1099-1417(199603/04)11:2<125::AID-JQS232>3.0.CO;2-U.",
+      "paper_dois": [
+        "10.1002/(SICI)1099-1417(199603/04)11:2<125::AID-JQS232>3.0.CO;2-U"
+      ]
+    },
+    {
+      "entity": "SERRANIL",
+      "site": "Puerto de Serranillos",
+      "latitude": 40.3072,
+      "longitude": -4.9342,
+      "rows": 34,
+      "first_row": 2185,
+      "last_row": 2218,
+      "reference": "López-Merino, L. et al. 2009 2000 years of pastoralism and fire shaping high-altitude vegetation of Sierra de Gredos in central Spain, Review of Palaeobotany and Palynology, 158(1–2), 42–51. doi:10.1016/j.revpalbo.2009.07.003.",
+      "paper_dois": [
+        "10.1016/j.revpalbo.2009.07.003"
+      ]
+    },
+    {
+      "entity": "SANRAFA",
+      "site": "San Rafael",
+      "latitude": 36.77361111,
+      "longitude": -2.601388889,
+      "rows": 160,
+      "first_row": 2461,
+      "last_row": 2620,
+      "reference": "Yll, E.I. et al. 1995 Dinámica del paisaje vegetal en la vertiente mediterránea de la Península Ibérica e Islas Baleares desde el Tardiglaciar hasta el presente, Reconstrucción de Paleoambientes y cambios climáticos durante el Cuaternario, 3, 319–328.; \nCano Villanueva, J.P. 1997 Estudi palinologic de sediments litorals de la provincia d’almeria. Transformacions del paisatge vegetal en un territori semiarid. Universitat Autònoma de Barcelona, Barcelona, Spain. Available at: https://dialnet.unirioja.es/servlet/tesis?codigo=247794&info=resumen&idioma=SPA (Accessed: 22 March 2021).; Pantaléon-Cano, J. et al. 2003 Palynological evidence for vegetational history in semi-arid areas of the western Mediterranean (Almería, Spain), The Holocene, 13(1), 109–119. doi:10.1191/0959683603hl598rp.",
+      "paper_dois": [
+        "10.1191/0959683603hl598rp"
+      ]
+    },
+    {
+      "entity": "ESTANILLES",
+      "site": "Estanilles",
+      "latitude": 42.62611111,
+      "longitude": 1.296111111,
+      "rows": 58,
+      "first_row": 3279,
+      "last_row": 3336,
+      "reference": "Pérez-Obiol, R. et al. 2012 Vegetation dynamics and anthropogenically forced changes in the Estanilles peat bog (southern Pyrenees) during the last seven millennia, Vegetation History and Archaeobotany, 21(4–5), 385–396. doi:10.1007/s00334-012-0351-5.",
+      "paper_dois": [
+        "10.1007/s00334-012-0351-5"
+      ]
+    },
+    {
+      "entity": "BSN6",
+      "site": "Bassa Nera",
+      "latitude": 42.63847222,
+      "longitude": 0.924333333,
+      "rows": 62,
+      "first_row": 3337,
+      "last_row": 3398,
+      "reference": "Garces-Pastor, S. et al. 2017 Vegetation shifts, human impact and peat bog development in Bassa Nera pond (Central Pyrenees) during the last millennium, The Holocene, 27(4), 553–565.",
+      "paper_dois": []
+    },
+    {
+      "entity": "SALINES",
+      "site": "Salines playa-lake",
+      "latitude": 38.50472222,
+      "longitude": -0.888888889,
+      "rows": 98,
+      "first_row": 3665,
+      "last_row": 3762,
+      "reference": "Burjachs, F. et al. 2017 Overview of environmental changes and human colonization in the Balearic Islands (Western Mediterranean) and their impacts on vegetation composition during the Holocene, Journal of Archaeological Science: Reports, 12, 845–859. doi:10.1016/j.jasrep.2016.09.018.",
+      "paper_dois": [
+        "10.1016/j.jasrep.2016.09.018"
+      ]
+    },
+    {
+      "entity": "SBAZA",
+      "site": "Canada del Gitano_Sierra de Baza",
+      "latitude": 37.2333,
+      "longitude": -2.7,
+      "rows": 111,
+      "first_row": 3763,
+      "last_row": 3873,
+      "reference": "Carrión, J.S. et al. 2007 Holocene environmental change in a montane region of southern Europe with a long history of human settlement, Quaternary Science Reviews, 26(11–12), 1455–1475. doi:10.1016/j.quascirev.2007.03.013.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2007.03.013"
+      ]
+    },
+    {
+      "entity": "CANCRUZ",
+      "site": "Cañada de la Cruz",
+      "latitude": 38.0675,
+      "longitude": -2.6875,
+      "rows": 39,
+      "first_row": 3874,
+      "last_row": 3912,
+      "reference": "Carrion, J.S. et al. 2001 Abrupt vegetation changes in the Segura Mountains of southern Spain throughout the Holocene, Journal of Ecology, 89(5), 783–797.",
+      "paper_dois": []
+    },
+    {
+      "entity": "GADOR",
+      "site": "Sierra de Gádor",
+      "latitude": 36.9,
+      "longitude": -2.9167,
+      "rows": 86,
+      "first_row": 3913,
+      "last_row": 3998,
+      "reference": "Carrión, J.S. et al. 2003 Holocene vegetation dynamics, fire and grazing in the Sierra de Gádor, southern Spain, The Holocene, 13(6), 839–849. doi:10.1191/0959683603hl662rp.",
+      "paper_dois": [
+        "10.1191/0959683603hl662rp"
+      ]
+    },
+    {
+      "entity": "SABINAR",
+      "site": "El Sabinar",
+      "latitude": 38.2,
+      "longitude": -2.116666667,
+      "rows": 129,
+      "first_row": 3999,
+      "last_row": 4127,
+      "reference": "Carrión, J.S. et al. 2004 Holocene forest history of the eastern plateaux in the Segura Mountains (Murcia, southeastern Spain), Review of Palaeobotany and Palynology, 132(3–4), 219–236. doi:10.1016/j.revpalbo.2004.07.002.",
+      "paper_dois": [
+        "10.1016/j.revpalbo.2004.07.002"
+      ]
+    },
+    {
+      "entity": "VILLAVERDE",
+      "site": "Villaverde",
+      "latitude": 38.8,
+      "longitude": -2.3667,
+      "rows": 116,
+      "first_row": 4128,
+      "last_row": 4243,
+      "reference": "Carrión, J.S. et al. 2001 Crossing forest thresholds: inertia and collapse in a Holocene sequence from south-central Spain, The Holocene, 11(6), 635–653. doi:10.1191/09596830195672.",
+      "paper_dois": [
+        "10.1191/09596830195672"
+      ]
+    },
+    {
+      "entity": "SILES",
+      "site": "Siles Lake",
+      "latitude": 38.4,
+      "longitude": -2.5,
+      "rows": 86,
+      "first_row": 4244,
+      "last_row": 4329,
+      "reference": "Carrión, J.S. 2002 Patterns and processes of Late Quaternary environmental change in a montane region of southwestern Europe, Quaternary Science Reviews, 21(18–19), 2047–2066. doi:10.1016/S0277-3791(02)00010-0.",
+      "paper_dois": [
+        "10.1016/S0277-3791(02)00010-0"
+      ]
+    },
+    {
+      "entity": "BSM08",
+      "site": "Basa de la Mora",
+      "latitude": 42.54527,
+      "longitude": 0.3255,
+      "rows": 137,
+      "first_row": 5427,
+      "last_row": 5563,
+      "reference": "Pérez-Sanz, A. et al. 2013 Holocene climate variability, vegetation dynamics and fire regime in the central Pyrenees: the Basa de la Mora sequence (NE Spain), Quaternary Science Reviews, 73, 149–169.",
+      "paper_dois": []
+    },
+    {
+      "entity": "PORTALET",
+      "site": "El Portalet",
+      "latitude": 42.79899,
+      "longitude": -0.39883,
+      "rows": 255,
+      "first_row": 5564,
+      "last_row": 5818,
+      "reference": "González-Sampériz, P. et al. 2006 Climate variability in the Spanish Pyrenees during the last 30,000 yr revealed by the El Portalet sequence, Quaternary Research, 66(1), 38–52. doi:10.1016/j.yqres.2006.02.004.",
+      "paper_dois": [
+        "10.1016/j.yqres.2006.02.004"
+      ]
+    },
+    {
+      "entity": "ENOL",
+      "site": "Enol",
+      "latitude": 43.27196,
+      "longitude": -4.99109,
+      "rows": 33,
+      "first_row": 5819,
+      "last_row": 5851,
+      "reference": "Moreno, Ana et al. 2011 Revealing the last 13,500 years of environmental history from the multiproxy record of a mountain lake (Lago Enol, northern Iberian Peninsula), J Paleolimnol, 46, 327–349. doi:10.1007/s10933-009-9387-7.",
+      "paper_dois": [
+        "10.1007/s10933-009-9387-7"
+      ]
+    },
+    {
+      "entity": "ZONARcombined",
+      "site": "Zoñar",
+      "latitude": 37.48273,
+      "longitude": -4.69008,
+      "rows": 52,
+      "first_row": 5944,
+      "last_row": 5995,
+      "reference": "Martín-Puertas, C. et al. 2008 Arid and humid phases in southern Spain during the last 4000 years: the Zoñar Lake record, Córdoba, The Holocene, 18(6), 907–921. doi:10.1177/0959683608093533.",
+      "paper_dois": [
+        "10.1177/0959683608093533"
+      ]
+    },
+    {
+      "entity": "CARRIZAL",
+      "site": "El Carrizal",
+      "latitude": 41.3185,
+      "longitude": -4.145,
+      "rows": 67,
+      "first_row": 6184,
+      "last_row": 6250,
+      "reference": "Franco-Múgica, F. et al. 2005 Ancient pine forest on inland dunes in the Spanish northern meseta, Quaternary Research, 63(1), 1–14.",
+      "paper_dois": []
+    },
+    {
+      "entity": "ANIMAS",
+      "site": "Las Animas Mire",
+      "latitude": 36.6858,
+      "longitude": -5.03,
+      "rows": 48,
+      "first_row": 6632,
+      "last_row": 6679,
+      "reference": "Alba-Sánchez, F. et al. 2019 The impact of climate and land-use changes on the most southerly fir forests ( Abies pinsapo ) in Europe, The Holocene, 29(7), 1176–1188. doi:10.1177/0959683619838043.",
+      "paper_dois": [
+        "10.1177/0959683619838043"
+      ]
+    },
+    {
+      "entity": "Navamuno_S3",
+      "site": "Navamuno",
+      "latitude": 40.3213,
+      "longitude": -5.7786,
+      "rows": 264,
+      "first_row": 6739,
+      "last_row": 7002,
+      "reference": "López-Sáez, J.A. et al. 2020 Late Glacial-early holocene vegetation and environmental changes in the western Iberian Central System inferred from a key site: The Navamuño record, Béjar range (Spain), Quaternary Science Reviews, 230, 106167. doi:10.1016/j.quascirev.2020.106167.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2020.106167"
+      ]
+    },
+    {
+      "entity": "BdlC-01",
+      "site": "Borreguil de la Caldera",
+      "latitude": 37.0506,
+      "longitude": -3.3233,
+      "rows": 80,
+      "first_row": 7251,
+      "last_row": 7330,
+      "reference": "Ramos-Román, M.J. et al. 2016 Centennial-scale vegetation and North Atlantic Oscillation changes during the Late Holocene in the southern Iberia, Quaternary Science Reviews, 143, 84–95. doi:10.1016/j.quascirev.2016.05.007.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2016.05.007"
+      ]
+    },
+    {
+      "entity": "ALGENDAR",
+      "site": "Algendar",
+      "latitude": 39.94055556,
+      "longitude": 3.958611111,
+      "rows": 137,
+      "first_row": 8171,
+      "last_row": 8307,
+      "reference": "Yll, E.I. et al. 1995 Dinámica del paisaje vegetal en la vertiente mediterránea de la Península Ibérica e Islas Baleares desde el Tardiglaciar hasta el presente, Reconstrucción de Paleoambientes y cambios climáticos durante el Cuaternario, 3, 319–328.; \nYii, E.I. et al. 1997 Palynological evidence for climatic change and human activity during the Holocene on Minorca (Balearic Islands), Quaternary Research, 48(3), 339–347. doi:10.1006/qres.1997.1925.",
+      "paper_dois": [
+        "10.1006/qres.1997.1925"
+      ]
+    },
+    {
+      "entity": "CPORTER",
+      "site": "Cala'n Porter",
+      "latitude": 39.87055556,
+      "longitude": 4.131388889,
+      "rows": 88,
+      "first_row": 8410,
+      "last_row": 8497,
+      "reference": "Yii, E.I. et al. 1997 Palynological evidence for climatic change and human activity during the Holocene on Minorca (Balearic Islands), Quaternary Research, 48(3), 339–347. doi:10.1006/qres.1997.1925.",
+      "paper_dois": [
+        "10.1006/qres.1997.1925"
+      ]
+    },
+    {
+      "entity": "HTIMONER",
+      "site": "Hort Timoner",
+      "latitude": 39.875,
+      "longitude": 4.126388889,
+      "rows": 46,
+      "first_row": 8597,
+      "last_row": 8642,
+      "reference": "Yii, E.I. et al. 1997 Palynological evidence for climatic change and human activity during the Holocene on Minorca (Balearic Islands), Quaternary Research, 48(3), 339–347. doi:10.1006/qres.1997.1925.",
+      "paper_dois": [
+        "10.1006/qres.1997.1925"
+      ]
+    },
+    {
+      "entity": "PRATVILA",
+      "site": "Prat de Vila",
+      "latitude": 38.91583333,
+      "longitude": 1.434722222,
+      "rows": 48,
+      "first_row": 8708,
+      "last_row": 8755,
+      "reference": "Burjachs, F. et al. 2017 Overview of environmental changes and human colonization in the Balearic Islands (Western Mediterranean) and their impacts on vegetation composition during the Holocene, Journal of Archaeological Science: Reports, 12, 845–859. doi:10.1016/j.jasrep.2016.09.018.",
+      "paper_dois": [
+        "10.1016/j.jasrep.2016.09.018"
+      ]
+    },
+    {
+      "entity": "SONBOU",
+      "site": "Son Bou",
+      "latitude": 39.92472222,
+      "longitude": 4.027222222,
+      "rows": 24,
+      "first_row": 8756,
+      "last_row": 8779,
+      "reference": "Yii, E.I. et al. 1997 Palynological evidence for climatic change and human activity during the Holocene on Minorca (Balearic Islands), Quaternary Research, 48(3), 339–347. doi:10.1006/qres.1997.1925.",
+      "paper_dois": [
+        "10.1006/qres.1997.1925"
+      ]
+    },
+    {
+      "entity": "Marbore composite",
+      "site": "Marbore",
+      "latitude": 42.695631,
+      "longitude": 0.040019,
+      "rows": 66,
+      "first_row": 5330,
+      "last_row": 5395,
+      "reference": "Leunda, M. et al. 2017 The Late-Glacial and Holocene Marboré Lake sequence (2612 m a.s.l., Central Pyrenees, Spain): Testing high altitude sites sensitivity to millennial scale vegetation and climate variability, Global and Planetary Change, 157, 214–231. doi:10.1016/j.gloplacha.2017.08.008.",
+      "paper_dois": [
+        "10.1016/j.gloplacha.2017.08.008"
+      ]
+    }
+  ],
+  "monticchio_parent": "noaa-5463-8909",
+  "monticchio_rows": 496,
+  "held": [
+    {
+      "record": "MD99-2337",
+      "reason": "No numeric same-core depth-age anchors verified. PANGAEA.971575, .971574 and .256528 supply depth only. Ducassou 2018 text inaccessible in this audit, official Elsevier text-mining endpoint returned 429. Published stratigraphic bands are insufficient.",
+      "paper_doi": "10.1016/j.margeo.2017.09.014",
+      "dataset_doi": "10.1594/PANGAEA.971575"
+    },
+    {
+      "record": "Neotoma 47525 Monticchio",
+      "reason": "924-sample composite overlaps NOAA 5463, retained for a later version-replacement audit. Includes older material to 132809 cal BP; not appended as independent replicates.",
+      "dataset_doi": "10.21233/KVNC-0856"
+    },
+    {
+      "record": "Reading ELX",
+      "reason": "23 of 110 rows have a zero retained assemblage sum. Held for a separate missing-assemblage review."
+    },
+    {
+      "record": "Reading other entities",
+      "reason": "Bounded batch of 29 new locations. Coastal marine-date and existing-parent overlaps require separate admission audits."
+    }
+  ]
+}
