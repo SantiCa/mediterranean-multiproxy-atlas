@@ -2,7 +2,15 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Auditoría de uso y creador de proxies (05-11-2026, relevo)
+## Colección v18 validada, pendiente de publicar (05-11-2026)
+
+- v18-cd0f8159f62: **258 registros / 1.978 series / 969.801 valores / 994 grupos**. Armena/PEDRIDO añaden 12 series/300 valores de 50 muestras. Las 124 muestras originales y 57 controles siguen auditados; 74 sumas nulas excluidas explícitamente, sin imputación.
+- Incorpora las conclusiones Atlas 02 y QC V30: corrige 1.807 edades de 19 series Mondsee por cambio de referencia, sin recalibración, y retiene seis duplicados (1.879 valores). Objetos originales completos en seed.curation_excluded_series y en v17. Las 25 excepciones están declaradas; resto del padre y todos sus registros intactos.
+- Reproducción: `python scripts/build_forest_pollen_v18.py --fetch`; contrato pollen_v18_sources.json. Mondsee conserva ambos encabezados ambiguos: la segunda columna coincide numéricamente con años BP pese a su rótulo AD/CE. El intervalo publicado 1500 BCE–500 CE respalda la transformación; no se interpreta el segundo encabezado como control independiente.
+- 136 Python aisladas por archivo, sin omisiones; 36 Node, tsc/build y snapshot de 969.801 valores cotejados: 994 grupos/996 archivos. Auditorías científica/de uso sin errores estructurales; avisos conocidos preservados. Recibo reports/reading_v18_validation.json. V17 reproducida sin cambios de contenido; no se certifica validación científica exhaustiva.
+- QC incorporado científicamente: config/qc_corrections.json vacío; semillas antiguas necesitan su configuración histórica. Informes provisionales conservados como evidencia histórica, no como recuentos vigentes. Creador de proxies y escala configurable conservados. 104/122 entidades Reading incorporadas, dos parcialmente; ELX/Estanya mantienen bloqueos. Producción v13; publicación reservada al rol 04.
+
+## Auditoría de uso y creador de proxies (05-11-2026, validada junto con v18)
 
 Auditoría reproducible de todas las celdas v17, más cribado adicional de v18 provisional; informes `reports/proxy_use_audit.json` y `reports/proxy_use_v18_provisional_audit.json`. Selector incluye registros únicos, familias de consulta coherentes, OI Rock-Eval corregido, SST sin estación separada de anual y contexto de sumas polínicas conservado. Creador de sumas/relaciones/proporciones de abundancias con muestras nativas, opción multisondeo compatible, recetas locales y exportación de originales/fórmulas/exclusiones. 133 Python, 34 Node, tsc/build, snapshot v17 y QA escritorio correctos. Integración en main pendiente del cierre de CUR-READING-18 provisional; producción v13. Límites en docs/curation/proxy_use_audit.md y handoff docs/handoffs/aud-proxy-uso.md.
 
