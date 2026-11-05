@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { proxyCatalog, proxyGroups, proxyFamily, groupKey, fold, aggregatesOf } from "../app/atlas-web/lib/proxies.mjs";
 import { isAbundance, abundanceTable } from "../app/atlas-web/lib/derived-proxies.mjs";
+import { applyQc } from "../app/atlas-web/lib/qc-corrections.mjs";
 
 const [seedPath = "data/processed/atlas-v17.json", output = "reports/proxy_use_audit.json"] = process.argv.slice(2);
 const raw = readFileSync(seedPath), data = JSON.parse(raw);
@@ -76,10 +77,14 @@ for (const group of groups) {
   if (group.series.some((term) => groupKey(term) !== group.key)) errors.push({ kind: "invalid_base_membership", group: group.key });
 }
 const unidentifiedSeason = data.series.filter((term) => aggregatesOf(term).some((key) => key.includes('"sst_unspecified"'))).map((term) => term.id);
+const usage = applyQc(data, JSON.parse(readFileSync("config/qc_corrections.json", "utf8")));
 const report = {
   schema_version: 1, seed: seedPath, release: data.version, seed_sha256: createHash("sha256").update(raw).digest("hex"),
   scope: "Offline structural and scientific-use audit of every numeric cell and catalog group; no fresh calibration, provider verification or exhaustive physical-identity audit.",
   totals, errors, warnings, sample_issues: sampleIssues,
+  usage_after_qc: { records: usage.seed.records.length, series: usage.seed.series.length,
+    values: usage.seed.series.reduce((count, term) => count + term.rows.length, 0),
+    base_groups: proxyGroups(usage.seed).length, qc: usage.qc },
   catalog: { base_groups: groups.length, aggregate_groups: catalog.length - groups.length, single_record_groups: catalog.filter((group) => group.records === 1).length, displayed_families: [...new Set(groups.map((group) => group.family))].sort(), family_corrections: familyCorrections, sst_season_not_declared: unidentifiedSeason },
   coverage, derivable: { series: abundance.length, records: new Set(abundance.map((term) => term.record_id)).size, source_tables: new Set(abundance.map(abundanceTable)).size },
   duplicate_vector_candidates: duplicateCandidates,

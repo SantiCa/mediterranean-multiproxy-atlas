@@ -12,6 +12,10 @@ Auditoría del 05-11-2026 sobre v17-c6564e1246e. Evidencia reproducible en `repo
 
 La auditoría recorre la colección procesada completa y la lógica de consulta. No reextrae todos los originales ni revalida cada edad o interpretación ambiental. El inventario de 5.846 entradas de sondeos/sitios/unidades y 9.726 referencias a datasets tiene otro grano: descubrir una fuente no garantiza observaciones cuantitativas revisadas.
 
+Al cerrar llegaron por remoto V30/V31 de Claude y se integraron conservando ambas contribuciones. Su QC corrige la escala de 19 series de Mondsee y retiene seis series duplicadas identificadas entre importadores con distintos IDs de proxy. El cribado de vectores de esta auditoría, restringido al mismo proxy, no detectaba esas equivalencias. `usage_after_qc` documenta ahora el uso efectivo: v17 sirve 1.966 series y 969.501 valores, frente a los totales brutos anteriores. Ver `docs/handoffs/auditoria-v17.md` y `config/qc_corrections.json`; originales conservados. Esta es una corrección material y confirma el límite del cribado automático de duplicación.
+
+Tras integrar V30/V31: 36 pruebas Node, TypeScript y build correctos; snapshot QC de 969.501 valores cotejados celda a celda, 994 grupos/996 archivos. Las 133 pruebas Python corresponden al cierre inmediatamente anterior; la contribución remota añade un skip explícito para un original ausente, no cambios de los datos probados.
+
 ## Correcciones de uso
 
 1. Se muestran por defecto los grupos de un solo registro: 873 grupos estaban ocultos por el mínimo de dos, pese a servir para localizar sondeos y asociaciones publicadas. El filtro de dos registros sigue disponible.
