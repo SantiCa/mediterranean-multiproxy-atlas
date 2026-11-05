@@ -1,0 +1,9 @@
+# CUR-READING-18: avance guardado, en pausa
+
+- Estado: pausa expresa de Santiago el 05-11-2026. Esperar a que termine AUD-PROXY-USO del rol 02 antes de continuar. No integrar en main ni publicar todavía. El puntero de RELEVO del rol 02 se conserva intacto.
+- Agente/rol: Codex / Atlas 01. Base científica 82917f1; registro eb85664. Guardado posterior a c90043b, exclusivamente con archivos del lote.
+- Archivos: scripts/build_forest_pollen_v9.py, scripts/build_forest_pollen_v18.py, scripts/importers/pollen_v18_sources.json, tests/test_forest_pollen_v18.py, data/processed/atlas-v18.json y reports/quantitative_v18_release.json.
+- Resultado provisional: v18-c6df0c5c06b. Armena y PEDRIDO aportan 12 series y 300 valores de 50 muestras con denominador positivo. Total 258 registros / 1.984 series / 971.680 valores. Las 124 muestras nativas permanecen en auditoría; 74 sumas nulas excluidas por filas explícitas, sin porcentajes cero inventados ni imputación. La política requiere lista exacta de exclusiones; filas inesperadas o de denominador positivo producen error.
+- Auditoría: 57 controles fechados de restos vegetales terrestres preservados. ELX permanece retenida por controles de concha sin tratamiento de reservorio verificado; Estanya Catena requiere verificar notas de corrección de agua dura 820+/-100. No basta resolver denominadores para admitir sus cronologías.
+- Evidencia realizada: construcción offline correcta y seis pruebas específicas v18 superadas. Originales reutilizados por hash. Sin comprobaciones generales ni snapshot v18 todavía; estado provisional, no validación completa.
+- Siguiente tras finalizar rol 02: fetch y leer RELEVO/handoff de auditoría, reconciliar recomendaciones con el parser modificado, ejecutar suite general y Node, reproducir v17 para comprobar compatibilidad, construir/cotejar snapshot v18, revisar duplicados y cerrar según AGENTS. Publicación reservada al rol 04.

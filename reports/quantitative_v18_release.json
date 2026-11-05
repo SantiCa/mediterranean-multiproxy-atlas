@@ -1,0 +1,739 @@
+{
+  "version": "atlas-quantitative-2026-11-05-v18-c6df0c5c06b",
+  "parent_version": "atlas-quantitative-2026-11-05-v17-c6564e1246e",
+  "parent_sha256": "cfe7e35611f9715324b74cef70da972f66ba9f40f362ce13c98a83be610418f1",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 258,
+    "series": 1984,
+    "values": 971680,
+    "new_records": 2,
+    "new_series": 12,
+    "new_values": 300,
+    "missing_age_values": 6615
+  },
+  "input_fragments": {
+    "reading_pollen_v18": {
+      "records": 2,
+      "series": 12,
+      "values": 300
+    }
+  },
+  "family_counts": {
+    "Temperatura": 38,
+    "Geoquímica elemental": 327,
+    "Sedimentología": 219,
+    "Biomarcadores": 20,
+    "Micropaleontología": 8,
+    "Isótopos estables": 157,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 172,
+    "Materia orgánica y biomarcadores": 57,
+    "Polen": 953,
+    "Oxigenación bentónica": 9
+  },
+  "comparison_groups": 1000,
+  "numeric_age_extent_ka_bp": [
+    -1.5,
+    4700.0
+  ],
+  "admitted_series": [
+    "reading9-armena-Abies_",
+    "reading9-armena-Alnus_",
+    "reading9-armena-Betula_",
+    "reading9-armena-Fagus_",
+    "reading9-armena-Pinus_",
+    "reading9-armena-Quercus_deciduous_",
+    "reading9-pedrido-Abies_",
+    "reading9-pedrido-Alnus_",
+    "reading9-pedrido-Betula_",
+    "reading9-pedrido-Fagus_",
+    "reading9-pedrido-Pinus_",
+    "reading9-pedrido-Quercus_deciduous_"
+  ],
+  "integration_quarantine": [],
+  "held_core_records": [],
+  "linked_to_parent_records": {},
+  "partial_numeric_overlap_links": [],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "mendeley8-339-u1386",
+        "mendeley8-339-u1390"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "reading9-antas",
+        "reading9-n-cas",
+        "reading9-n-gua",
+        "reading9-laroya",
+        "reading9-serranil",
+        "reading9-sanrafa",
+        "reading9-estanilles",
+        "reading9-bsn6",
+        "reading9-salines",
+        "reading9-sbaza",
+        "reading9-cancruz",
+        "reading9-gador",
+        "reading9-sabinar",
+        "reading9-villaverde",
+        "reading9-siles",
+        "reading9-bsm08",
+        "reading9-portalet",
+        "reading9-enol",
+        "reading9-zonarcombined",
+        "reading9-carrizal",
+        "reading9-animas",
+        "reading9-navamuno_s3",
+        "reading9-bdlc-01",
+        "reading9-algendar",
+        "reading9-cporter",
+        "reading9-htimoner",
+        "reading9-pratvila",
+        "reading9-sonbou",
+        "reading9-marbore-composite",
+        "reading9-cerrato",
+        "reading9-molinaes",
+        "reading9-lagmesag",
+        "reading9-verdeospesoa",
+        "reading9-mai",
+        "reading9-sanabria",
+        "reading9-pinoblanco",
+        "reading9-boscesta",
+        "reading9-arbarrain",
+        "reading9-cadela",
+        "reading9-lagnegra",
+        "reading9-ayoo",
+        "reading9-lagoajo",
+        "reading9-laspardi",
+        "reading9-saldropo",
+        "reading9-tub",
+        "reading9-palanques",
+        "reading9-perafita",
+        "reading9-belate01",
+        "reading9-culazon",
+        "reading9-adaja",
+        "reading9-alsa",
+        "reading9-navalaca",
+        "reading9-valdecon",
+        "reading9-carcavas",
+        "reading9-atxuri01",
+        "reading9-quinta02",
+        "reading9-areo",
+        "reading9-lameiras",
+        "reading9-tiemblo",
+        "reading9-cuetoav",
+        "reading9-n-sal",
+        "reading9-lanzbog",
+        "reading9-cuaii",
+        "reading9-prd4",
+        "reading9-patatero",
+        "reading9-sertal",
+        "reading9-tornos01",
+        "reading9-estacas",
+        "reading9-n-peq",
+        "reading9-labradillos",
+        "reading9-botija",
+        "reading9-lanchas",
+        "reading9-bossier",
+        "reading9-aguasfrias",
+        "reading9-bermu",
+        "reading9-redondo",
+        "reading9-valdeyer",
+        "reading9-xl",
+        "reading9-leche",
+        "reading9-saloio",
+        "reading9-panera",
+        "reading9-lacruz",
+        "reading9-brezosa",
+        "reading9-elperro",
+        "reading9-vinuelas",
+        "reading9-villuercas",
+        "reading9-mitjana",
+        "reading9-elpayo",
+        "reading9-ojos-del-tremendal-core-1",
+        "reading9-plaestany",
+        "reading9-manaderos-core",
+        "reading9-pozon_2015-core",
+        "reading9-laguna-de-rio-seco-core-1",
+        "reading9-ldlm-10-02",
+        "reading9-ldlmo-composite",
+        "reading9-penanegr",
+        "reading9-lagoa_co",
+        "reading9-candieir",
+        "reading9-creixellt",
+        "reading9-travess1",
+        "reading9-vdl-pb2",
+        "reading9-adp-01/06",
+        "reading9-armena",
+        "reading9-pedrido"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "scripts/importers/pollen_v18_sources.json",
+    "scripts/importers/pollen_v9_sources.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "reading_pollen_v18": []
+  },
+  "pending_source_candidates": {
+    "reading_pollen_v18": [
+      {
+        "record": "Reading Villarquemado",
+        "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+      },
+      {
+        "record": "Reading coastal entities and existing-site overlaps",
+        "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+      },
+      {
+        "record": "Reading CANALEJA",
+        "reason": "Possible coordinate/reference inconsistency: Reading and PANGAEA archive latitude 40.9, longitude -2.45, elevation 1029 m, but cited publications identify Garganta Canaleja in Romangordo (Caceres). Physical identity and correct sampling coordinates require audit. No replacement coordinates inferred.",
+        "source_rows": [
+          479,
+          480,
+          481,
+          482,
+          483,
+          484
+        ],
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.835786",
+        "checked_date": "2026-11-05",
+        "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
+        "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+      },
+      {
+        "record": "Reading CUCU",
+        "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+        "source_rows": [
+          485,
+          486,
+          487,
+          488
+        ],
+        "age_medians_original": [
+          "46057",
+          "61527",
+          "114264",
+          "130000"
+        ],
+        "calibration_doi": "10.1017/RDC.2020.41",
+        "checked_date": "2026-11-05"
+      },
+      {
+        "record": "Reading Estanya Catena",
+        "reason": "Zero retained-205 assemblage sum in 2 of 92 samples. Entire entity held for missing-assemblage review; no zero percentages or interpolated assemblages inferred.",
+        "source_rows": [
+          5936,
+          5939
+        ],
+        "entity_rows": 92
+      },
+      {
+        "record": "Reading ROQUETAS",
+        "reason": "Three bulk organic sediment dates from a coastal setting; terrestrial versus marine carbon contribution and reservoir treatment unresolved.",
+        "date_rows": [
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "record": "Reading ALCUDIA",
+        "reason": "All four dated-material fields empty in the coastal dataset; calibration/reservoir basis requires review.",
+        "date_rows": [
+          911,
+          912,
+          913,
+          914
+        ]
+      },
+      {
+        "record": "Reading Vilamora P01-5",
+        "reason": "Two shell dates lack explicit exclusion and reservoir treatment in the date table; mixed terrestrial/marine controls require review.",
+        "date_rows": [
+          856,
+          857,
+          858,
+          859,
+          860,
+          861,
+          862,
+          863,
+          864,
+          865,
+          866,
+          867
+        ]
+      },
+      {
+        "record": "Reading Abi 05/07",
+        "reason": "One organic-matter date alongside eight charcoal dates in an estuary; carbon origin and reservoir implications require review.",
+        "date_rows": [
+          895,
+          896,
+          897,
+          898,
+          899,
+          900,
+          901,
+          902,
+          903
+        ]
+      },
+      {
+        "record": "Reading LLIGAT",
+        "reason": "Marine reservoir notes and position longitude -3.291111111 conflict with the NE Iberian marine site description. Review calibration and physical position; do not flip longitude sign without verified source.",
+        "date_rows": [
+          232,
+          233,
+          234,
+          235,
+          236
+        ]
+      },
+      {
+        "record": "Reading ELX chronology",
+        "reason": "Two shell controls without verified reservoir treatment remain in the dating table; zero-sum audit alone cannot resolve chronology.",
+        "date_rows": [
+          411,
+          412,
+          413,
+          414
+        ]
+      },
+      {
+        "record": "Reading Estanya Catena chronology",
+        "reason": "Date notes require 820+/-100 hardwater correction and distinguish dates used for reservoir calculation from age-model controls. Verify published Reading treatment before admission; preserve two zero-sum rows.",
+        "date_rows": [
+          654,
+          655,
+          656,
+          657,
+          658,
+          659,
+          660,
+          661,
+          662,
+          663,
+          664,
+          665,
+          666,
+          667,
+          668,
+          669,
+          670,
+          671,
+          672,
+          673,
+          674
+        ]
+      }
+    ]
+  },
+  "sha256": "fbef751a26fd518203359c67e57b7b067bd9bdfbde99351b3ca4a8931a6778fe",
+  "bytes": 70014610,
+  "chronology_and_denominator_audit": [
+    {
+      "entity": "Armena",
+      "samples": 53,
+      "age_ka_bp": [
+        2.217,
+        5.668
+      ],
+      "denominator_range": [
+        0.0,
+        664.0
+      ],
+      "retained_samples": 42,
+      "excluded_source_rows": [
+        3399,
+        3400,
+        3401,
+        3402,
+        3421,
+        3430,
+        3433,
+        3437,
+        3438,
+        3443,
+        3446
+      ],
+      "nearest_parent": {
+        "record_id": "reading9-bsm08",
+        "name": "Basa de la Mora",
+        "angular_distance_degrees": 0.03260077953006884,
+        "status": "Screening only; proximity does not establish physical identity"
+      }
+    },
+    {
+      "entity": "PEDRIDO",
+      "samples": 71,
+      "age_ka_bp": [
+        0.106,
+        5.256
+      ],
+      "denominator_range": [
+        0.0,
+        2.0
+      ],
+      "retained_samples": 8,
+      "excluded_source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "nearest_parent": {
+        "record_id": "reading9-cuaii",
+        "name": "Montes do Buio Cuadramón",
+        "angular_distance_degrees": 0.4660055323867828,
+        "status": "Screening only; proximity does not establish physical identity"
+      }
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading CANALEJA",
+      "reason": "Possible coordinate/reference inconsistency: Reading and PANGAEA archive latitude 40.9, longitude -2.45, elevation 1029 m, but cited publications identify Garganta Canaleja in Romangordo (Caceres). Physical identity and correct sampling coordinates require audit. No replacement coordinates inferred.",
+      "source_rows": [
+        479,
+        480,
+        481,
+        482,
+        483,
+        484
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.835786",
+      "checked_date": "2026-11-05",
+      "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
+      "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+    },
+    {
+      "record": "Reading CUCU",
+      "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+      "source_rows": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "age_medians_original": [
+        "46057",
+        "61527",
+        "114264",
+        "130000"
+      ],
+      "calibration_doi": "10.1017/RDC.2020.41",
+      "checked_date": "2026-11-05"
+    },
+    {
+      "record": "Reading Estanya Catena",
+      "reason": "Zero retained-205 assemblage sum in 2 of 92 samples. Entire entity held for missing-assemblage review; no zero percentages or interpolated assemblages inferred.",
+      "source_rows": [
+        5936,
+        5939
+      ],
+      "entity_rows": 92
+    },
+    {
+      "record": "Reading ROQUETAS",
+      "reason": "Three bulk organic sediment dates from a coastal setting; terrestrial versus marine carbon contribution and reservoir treatment unresolved.",
+      "date_rows": [
+        272,
+        273,
+        274
+      ]
+    },
+    {
+      "record": "Reading ALCUDIA",
+      "reason": "All four dated-material fields empty in the coastal dataset; calibration/reservoir basis requires review.",
+      "date_rows": [
+        911,
+        912,
+        913,
+        914
+      ]
+    },
+    {
+      "record": "Reading Vilamora P01-5",
+      "reason": "Two shell dates lack explicit exclusion and reservoir treatment in the date table; mixed terrestrial/marine controls require review.",
+      "date_rows": [
+        856,
+        857,
+        858,
+        859,
+        860,
+        861,
+        862,
+        863,
+        864,
+        865,
+        866,
+        867
+      ]
+    },
+    {
+      "record": "Reading Abi 05/07",
+      "reason": "One organic-matter date alongside eight charcoal dates in an estuary; carbon origin and reservoir implications require review.",
+      "date_rows": [
+        895,
+        896,
+        897,
+        898,
+        899,
+        900,
+        901,
+        902,
+        903
+      ]
+    },
+    {
+      "record": "Reading LLIGAT",
+      "reason": "Marine reservoir notes and position longitude -3.291111111 conflict with the NE Iberian marine site description. Review calibration and physical position; do not flip longitude sign without verified source.",
+      "date_rows": [
+        232,
+        233,
+        234,
+        235,
+        236
+      ]
+    },
+    {
+      "record": "Reading ELX chronology",
+      "reason": "Two shell controls without verified reservoir treatment remain in the dating table; zero-sum audit alone cannot resolve chronology.",
+      "date_rows": [
+        411,
+        412,
+        413,
+        414
+      ]
+    },
+    {
+      "record": "Reading Estanya Catena chronology",
+      "reason": "Date notes require 820+/-100 hardwater correction and distinguish dates used for reservoir calculation from age-model controls. Verify published Reading treatment before admission; preserve two zero-sum rows.",
+      "date_rows": [
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        674
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "file": "iberia.csv",
+      "url": "https://researchdata.reading.ac.uk/369/24/Iberia_pollen_records_v3.csv",
+      "sha256": "37f5daa02a20cd99f452cc9cdad9ec6a385f0569982871c932bceaad7c804170"
+    },
+    {
+      "file": "iberia-readme.docx",
+      "url": "https://researchdata.reading.ac.uk/369/25/README_Harrison_2021_dataset_v3.docx",
+      "sha256": "faae4ec25b964fe6a48e9815732fb081ef3e6fa7199789f619426a728eb155d6"
+    },
+    {
+      "file": "iberia-dates.csv",
+      "url": "https://researchdata.reading.ac.uk/369/23/Iberia_data_dates_v3.csv",
+      "sha256": "a9bde3e7c9e063ea05e2fcb639596f5a2ecca961ca5c8221a8d7f851ae1986a6"
+    }
+  ]
+}
