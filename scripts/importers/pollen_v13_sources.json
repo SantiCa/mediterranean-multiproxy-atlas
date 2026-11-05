@@ -1,0 +1,215 @@
+{
+  "parent_sha256": "3dbac50c369a8501227b24e0b1d3fd007ad1d4de18c5a4e866df260973fe0a0f",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "CUETOAV",
+      "site": "Cueto de la Avellanosa",
+      "latitude": 43.11666667,
+      "longitude": -4.364166667,
+      "rows": 34,
+      "first_row": 489,
+      "last_row": 522,
+      "reference": "Mariscal Alvarez, B. 1983 Estudio polínico de la turbera del Cueto de la Avellanosa, Polaciones (Cantabria). VI Reunion do grupo espanol de traballo de Quaternario, Cuadernos do laboratorio xeloxico de laxe, 5, 205–226.",
+      "paper_dois": []
+    },
+    {
+      "entity": "N-SAL",
+      "site": "Laguna Salada Chiprana",
+      "latitude": 41.23333333,
+      "longitude": -0.166666667,
+      "rows": 39,
+      "first_row": 1200,
+      "last_row": 1238,
+      "reference": "Valero-Garces, B.L. et al. 2000 Responses of a saline lake ecosystem in a semiarid region to irrigation and climate variability: The history of Salada Chiprana, central Ebro basin, Spain, Ambio. doi:10.1579/0044-7447-29.6.344.",
+      "paper_dois": [
+        "10.1579/0044-7447-29.6.344"
+      ]
+    },
+    {
+      "entity": "LANZBOG",
+      "site": "Lanzahíta",
+      "latitude": 40.2222,
+      "longitude": -4.9358,
+      "rows": 51,
+      "first_row": 1421,
+      "last_row": 1471,
+      "reference": "López-Sáez, J.A., Sánchez, M. and López., P. 1999 Evolución del Lanzahíta (Valle del Tiétar, vila) durante el Holoceno reciente: Una interpretación palinológica., Trasierra, 1999(4), 81–86.; \nLópez-Sáez, J.A. et al. 2010 Late Holocene ecological history of Pinus pinaster forests in the Sierra de Gredos of central Spain, Plant Ecology, 206(2), 195–209. doi:10.1007/s11258-009-9634-z.",
+      "paper_dois": [
+        "10.1007/s11258-009-9634-z"
+      ]
+    },
+    {
+      "entity": "CUAII",
+      "site": "Montes do Buio Cuadramón",
+      "latitude": 43.47416667,
+      "longitude": -7.534722222,
+      "rows": 20,
+      "first_row": 1601,
+      "last_row": 1620,
+      "reference": "González, A. V. and Saa, M.P. 2000 Pollen analyse of Holocene peat-bog in the Montes do Buio: Cuadramon (Galice, N.W. of Spain, Quaternaire, 11(3–4), 257–267. doi:10.3406/quate.2000.1674.",
+      "paper_dois": [
+        "10.3406/quate.2000.1674"
+      ]
+    },
+    {
+      "entity": "PRD4",
+      "site": "Campo Lameiro",
+      "latitude": 42.5333,
+      "longitude": -8.5167,
+      "rows": 47,
+      "first_row": 1827,
+      "last_row": 1873,
+      "reference": "López-Merino, L. et al. 2012 Post-disturbance vegetation dynamics during the Late Pleistocene and the Holocene: An example from NW Iberia, Global and Planetary Change, 92, 58–70.",
+      "paper_dois": []
+    },
+    {
+      "entity": "PATATERO",
+      "site": "Patateros bog",
+      "latitude": 39.59722222,
+      "longitude": -4.674166667,
+      "rows": 28,
+      "first_row": 1874,
+      "last_row": 1901,
+      "reference": "Dorado-Valiño, M., López-Sáez, J.A. and García-Gómez, E. 2014 21. Patateros, Toledo Mountains (central Spain), Grana, 53(2), 171–173. doi:10.1080/00173134.2014.903293.",
+      "paper_dois": [
+        "10.1080/00173134.2014.903293"
+      ],
+      "qc_notes": [
+        "Reading v3 corrige el tratamiento de fechas postmodernas del techo de PATATERO respecto de v2, según el readme original. Se usa exclusivamente la mediana IntCal20 de v3, sin recalibración local."
+      ]
+    },
+    {
+      "entity": "SERTAL",
+      "site": "Pico del Sertal",
+      "latitude": 43.21555556,
+      "longitude": -4.436111111,
+      "rows": 9,
+      "first_row": 2036,
+      "last_row": 2044,
+      "reference": "Mariscal Alvarez, B. 1986 Análisis polínico de la turbera del Pico del Sertal, de la Sierra de Paña Sagra. Reconstrucción de la paleoflora y de la paleoclimatología durante el Holoceno en la zona central de la Cordillera Cantábrica, Quaternary Climate in Western Mediterranean. Madrid: Universidad Autónoma [Preprint].",
+      "paper_dois": [],
+      "qc_notes": [
+        "La entidad contiene solo nueve muestras publicadas en Reading v3. Se conservan completas sin interpolación ni inferencia de resolución uniforme."
+      ]
+    },
+    {
+      "entity": "TORNOS01",
+      "site": "Puerto de Los Tornos",
+      "latitude": 43.15,
+      "longitude": -3.433333333,
+      "rows": 48,
+      "first_row": 2137,
+      "last_row": 2184,
+      "reference": "Penalba, M.C. and Garmendia, M.P. 1989 Dynamique de végétation tardiglaciaire et holocène du Centre-Nord de l’Espagne d’après l’analyse pollinique. Aix-Marseille 3. Available at: https://www.theses.fr/1989AIX30033 (Accessed: 22 March 2021).",
+      "paper_dois": []
+    },
+    {
+      "entity": "ESTACAS",
+      "site": "Puerto de las Estaces de Trueba",
+      "latitude": 43.12138889,
+      "longitude": -3.700555556,
+      "rows": 9,
+      "first_row": 2219,
+      "last_row": 2227,
+      "reference": "Mariscal, B. 1989 Comparacion palinologica entre una turbera de la cordillera central y unas turberas de la cordillera cantabrica, in II. European Paleobot. Universidad Complutense Madrid, 28.",
+      "paper_dois": [],
+      "qc_notes": [
+        "La entidad contiene solo nueve muestras publicadas en Reading v3. Se conservan completas sin interpolación ni inferencia de resolución uniforme."
+      ]
+    },
+    {
+      "entity": "N-PEQ",
+      "site": "Salada Pequeña",
+      "latitude": 41.03333333,
+      "longitude": -0.216666667,
+      "rows": 43,
+      "first_row": 2342,
+      "last_row": 2384,
+      "reference": "Davis, B.A.S. 2010 Pollen profile N-PEQ, Salada Pequeña, Spain, European Pollen Database (EPD), PANGAEA [Preprint]. doi:https://doi.org/10.1594/PANGAEA.738850.",
+      "paper_dois": [],
+      "qc_notes": [
+        "La referencia original identifica el dataset EPD/PANGAEA 10.1594/PANGAEA.738850, no un artículo. El dataset incorporado es Reading v3; se conserva su mediana IntCal20 y no se importa otra cronología desde PANGAEA."
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    }
+  ]
+}
