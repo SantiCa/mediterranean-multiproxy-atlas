@@ -127,6 +127,9 @@ jobs:
         # cell by cell before deploying. D1 keeps only private data and the DOI queue.
         run: |
           SEED="$(ls ../../data/processed/atlas-v*.json | sort -V | tail -1)"
+          # Scientific audit of the seed: fails only on integrity errors; warnings go to the log.
+          python3 ../../scripts/audit_science.py "$SEED" > audit.log || { cat audit.log; exit 1; }
+          head -60 audit.log
           node scripts/snapshot.mjs "$SEED" public/snapshot data/inventory.json
           node scripts/check-snapshot.mjs "$SEED" public/snapshot | tee check.log
           echo "::notice title=Instantánea::$(tail -1 check.log)"
