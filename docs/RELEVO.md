@@ -23,6 +23,8 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Solicitudes del usuario registradas, pendientes de implementar
 
+- 05-11 (16:08) HECHO V30 (Claude, rama claude/qc-v30 fusionada en main y aquí; docs/handoffs/auditoria-v17.md): repasar cambios, auditar datos, mejorar y subir. `scripts/audit_science.py` en el despliegue Cloudflare; QC al publicar (`config/qc_corrections.json`): edades Mondsee PANGAEA.929110 corregidas (columna «Age [ka BP]» en ka CE → ka BP = 1,95 − ka CE), 6 series duplicadas pangaea6 retenidas. Rol datos: incorporarlos en v18 y vaciar esas entradas. AUD-PROXY-USO y la v18 provisional de esta rama NO se han publicado.
+
 - 30-10 (01:54) HECHO V29.1: en SST agrupada, «registros con coordenadas coincidentes» suspendía la superficie; ahora cuentan como un nodo (mediana) y se avisa.
 
 - 29-10 (22:47) HECHO V28: datos públicos desde archivos estáticos; D1 solo para Mis datos y DOI.
