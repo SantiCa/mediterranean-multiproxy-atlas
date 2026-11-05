@@ -11,6 +11,19 @@ export const fold = (s) =>
     .replaceAll("³", "3")
     .replaceAll("⁸", "8");
 export const isContinental = (r) => r.realm !== "marine";
+/** Display vocabulary only: native metadata and observations remain unchanged. */
+export function proxyFamily(s) {
+  const parameter = s.comparison_parameter_name || s.parameter_name_pangaea || s.variable_label || s.label || "";
+  if (/oxygen index.*(?:CO2|carbon)|oxygen index.*organic carbon/i.test(parameter)) return "Materia orgánica y biomarcadores";
+  return ({ Palinología: "Polen", Biomarcadores: "Materia orgánica y biomarcadores" })[s.family] || s.family || "Otros";
+}
+export function associationAliases(s) {
+  const family = proxyFamily(s);
+  return /Polen|Foraminíferos|Micropaleontología|Oxigenación bentónica/.test(family)
+    ? "asociación asociaciones ensamblaje assemblage especies taxones censo abundancia " +
+      (/Polen/.test(family) ? "vegetación polen pollen AP NAP arbóreo no arbóreo" : "microfósiles")
+    : "";
+}
 /** Search aliases do not transform the archived variable or its values. */
 export function elementRatioAlias(name) {
   const elements = { titanium:"Ti", calcium:"Ca", aluminium:"Al", aluminum:"Al", iron:"Fe", potassium:"K", zirconium:"Zr", rubidium:"Rb", barium:"Ba", strontium:"Sr", manganese:"Mn", silicon:"Si", bromine:"Br", chlorine:"Cl", molybdenum:"Mo", uranium:"U", thorium:"Th" };
@@ -51,7 +64,7 @@ export function proxyGroups(data, f = {}) {
         id: s.proxy,
         label: s.label,
         unit: s.unit,
-        family: s.family || "Otros",
+        family: proxyFamily(s),
         variable: s.variable_label || s.label,
         method: s.method || "Método archivado",
         compatibility: s.compatibility_group,
@@ -87,6 +100,7 @@ export function proxyGroups(data, f = {}) {
         r.name,
         r.provider,
         s.search_aliases,
+        associationAliases(s),
         elementRatioAlias(s.comparison_parameter_name || s.parameter_name_pangaea),
         /polen|pollen/i.test(s.family || "") ? "bosque vegetación árboles" : "",
       ]
@@ -138,7 +152,7 @@ const season = (t) =>
       ? "winter"
       : /spring|primavera|autumn|otono|fall/.test(t)
         ? "other"
-        : "annual";
+        : /annual|anual|yearly|year.mean|mean.annual/.test(t) ? "annual" : "unspecified";
 const isSST = (s, t) =>
   s.unit === "°C" &&
   /sea.?surface.?temp|(^|[^a-z])sst([^a-z]|$)|temperatura superficial del mar/.test(t) &&
@@ -152,6 +166,7 @@ export const AGGREGATES = [
   { id: "sst_annual", label: "Temperatura superficial del mar · anual (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "annual" },
   { id: "sst_summer", label: "Temperatura superficial del mar · verano (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "summer" },
   { id: "sst_winter", label: "Temperatura superficial del mar · invierno (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "winter" },
+  { id: "sst_unspecified", label: "Temperatura superficial del mar · estación no declarada (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "unspecified" },
   { id: "d18o_planct", label: "δ18O foraminíferos planctónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "18") && PLANKTIC.test(t) && !BENTHIC.test(t) },
   { id: "d18o_bent", label: "δ18O foraminíferos bentónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "18") && BENTHIC.test(t) && !PLANKTIC.test(t) },
   { id: "d13c_planct", label: "δ13C foraminíferos planctónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "13") && PLANKTIC.test(t) && !BENTHIC.test(t) },
@@ -184,7 +199,8 @@ export function comparisonContext(s) {
   return null;
 }
 export const paramKey = (s) =>
-  paramName(s) && !(s.unit === "#" && /polen|pollen/i.test(s.family || ""))
+  paramName(s) && !s.derivation && !(s.unit === "#" && /polen|pollen/i.test(s.family || "")) &&
+    !(s.unit === "%" && proxyFamily(s) === "Polen" && !comparisonContext(s))
     ? JSON.stringify(["agg", "p:" + fold(paramName(s)), s.unit, ...(comparisonContext(s) ? [comparisonContext(s)] : [])]) : null;
 export function aggregatesOf(s) {
   const t = txt(s),
