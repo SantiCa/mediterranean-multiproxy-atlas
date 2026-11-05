@@ -4,7 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 05-11-2026
-- Tarea cerrada: publicación v13, con snapshot cotejado y compilación correcta. Recibo reports/reading_v13_sites_deployment.json.
+- Tarea en curso: CUR-READING-14 (Atlas 01), activada el 05-11. Hasta diez entidades Reading v3 nuevas sobre v13. Publicación reservada al rol 04; v13 ya publicada según reports/reading_v13_sites_deployment.json.
 - Estado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site publicado con v13-c0f960a7901: 223 registros, 1.774 series y 960.682 valores. Acceso privado conservado. Mis datos desactivado sin OWNER_PASSWORD.
 - Hecho: 182 series y 19.898 valores nuevos con fuentes fijadas por hash, sumas de polen explícitas y originales conservados. 81 pruebas Python, 28 Node, tsc, snapshot, build y QA local. Los 1.002 archivos de producción coinciden. Handoff docs/handoffs/cur-pollen-monticchio.md.
 - Cola científica: temperatura → foraminíferos → oxigenación/MO/bioturbación → detrítico → corrientes; geoquímica inorgánica (razones XRF, EF vs PAAS) prioritaria; litología categórica y mapas por edad pendientes. Detalle en docs/handoffs/claude-curado.md.
