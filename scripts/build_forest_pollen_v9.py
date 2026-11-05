@@ -141,17 +141,28 @@ def reading(resource, contract):
                       qc_notes=[note, age_note])
         source_audit, derived = [], {proxy: [] for proxy in TAXA}
         points = []
+        excluded = set(entry.get('zero_sum_rows', []))
+        seen_empty = set()
+        if len(excluded) != len(entry.get('zero_sum_rows', [])):
+            raise ValueError('Repeated zero-sum exclusion row')
         for rowid, line, row in samples:
             if any(row[k] != first[k] for k in ('latitude', 'longitude', 'elevation', 'reference', 'site_name')):
                 raise ValueError('Entity identity varies between samples')
             total = abundance(row, taxa)
             age, depth = number(row['INTCAL2020_median']), number(row['avg_depth..cm.'])
-            if age is None or depth is None or total <= 0:
+            if age is None or depth is None:
                 raise ValueError('Missing age/depth or empty retained assemblage')
             points.append((depth, age))
             source_audit.append([rowid, line, row['avg_depth..cm.'], total, row['INTCAL2020_median'],
                 *[row[k] for k in ('IPE.age..cal.', 'INTCAL2020_mean', 'INTCAL2020_uncert_5',
                                   'INTCAL2020_uncert_95', 'INTCAL2020_uncert_25', 'INTCAL2020_uncert_75')]])
+            if total == 0:
+                if rowid not in excluded:
+                    raise ValueError('Unreviewed empty retained assemblage')
+                seen_empty.add(rowid)
+                continue
+            if rowid in excluded:
+                raise ValueError('Zero-sum exclusion points to a positive assemblage')
             for proxy, (_, columns) in TAXA.items():
                 value = abundance(row, columns)
                 # Single-column native tokens stay exact. Composite Pinus retains
@@ -159,6 +170,8 @@ def reading(resource, contract):
                 original_value = row[columns[0]] if len(columns) == 1 else str(value)
                 derived[proxy].append([age / 1000, fraction(value, total), rowid, line,
                                        row['INTCAL2020_median'], original_value, None, None, row['avg_depth..cm.']])
+        if seen_empty != excluded:
+            raise ValueError('Zero-sum exclusion does not belong to this entity')
         points.sort()
         if any(b[0] <= a[0] or b[1] < a[1] for a, b in zip(points, points[1:])):
             raise ValueError('Duplicate depth or age reversal requires entity-specific review')
@@ -171,6 +184,9 @@ def reading(resource, contract):
                 'INTCAL2020_median', 'IPE.age..cal.', 'INTCAL2020_mean', 'INTCAL2020_uncert_5',
                 'INTCAL2020_uncert_95', 'INTCAL2020_uncert_25', 'INTCAL2020_uncert_75'],
             pollen_sample_audit=source_audit, **common))
+        if excluded:
+            records[-1]['pollen_excluded_samples'] = [dict(source_row=index,
+                reason='zero_retained_205_sum; relative abundance undefined') for index in sorted(excluded)]
         for proxy, (name, columns) in TAXA.items():
             series.append(dict(id=rid + '-' + proxy, record_id=rid, proxy=proxy,
                 label=name + ' · suma armonizada Reading', unit='%',
@@ -195,6 +211,8 @@ def reading(resource, contract):
         audit.append(dict(entity=entry['entity'], samples=len(samples),
                           age_ka_bp=[min(p[1] for p in points)/1000, max(p[1] for p in points)/1000],
                           denominator_range=[min(x[3] for x in source_audit), max(x[3] for x in source_audit)]))
+        if excluded:
+            audit[-1].update(retained_samples=len(samples) - len(excluded), excluded_source_rows=sorted(excluded))
     return records, series, audit
 
 

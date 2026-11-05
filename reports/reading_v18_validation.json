@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-05",
+  "release": "atlas-quantitative-2026-11-05-v18-cd0f8159f62",
+  "seed_sha256": "6464da775a11f1e1d3f6fcb9039a12b9c8d914b5d6ade37772f8e1371c007652",
+  "counts": {
+    "records": 258,
+    "series": 1978,
+    "values": 969801,
+    "new_records": 2,
+    "new_series": 12,
+    "new_values": 300,
+    "missing_age_values": 6615
+  },
+  "checks": {
+    "python": {
+      "tests": 136,
+      "skipped": 0,
+      "failed_files": 0,
+      "mode": "one process per test file; outputs/v18-test_*.py.log"
+    },
+    "node": {
+      "tests": 36,
+      "failed": 0
+    },
+    "typescript": "passed",
+    "build": "passed; outputs/reading-v18-build.log",
+    "snapshot": {
+      "values": 969801,
+      "groups": 994,
+      "files": 996,
+      "cell_by_cell": "passed",
+      "path": "app/atlas-web/public/snapshot"
+    },
+    "science": {
+      "errors": 0,
+      "warnings": {
+        "registros_mismas_coordenadas": 7,
+        "edad_futura": 14,
+        "inversiones_de_edad_en_orden_fuente": 40,
+        "series_identicas_en_registros_distintos": 57
+      }
+    },
+    "proxy_use": {
+      "errors": 0,
+      "report": "reports/proxy_use_v18_audit.json"
+    },
+    "v17_reproduction": "same seed and report content"
+  },
+  "publication": "Not performed; reserved for role 04",
+  "limits": [
+    "Known source chronology and coordinate warnings retained; no blanket scientific validation",
+    "No new interactive or mobile QA; role 02 UI QA remains documented in its handoff"
+  ]
+}

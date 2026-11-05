@@ -35,6 +35,8 @@ import TimeWindow from "../components/TimeWindow";
 import SeriesComparison from "../components/SeriesComparison";
 import { timeExtent } from "../lib/timeline.mjs";
 import ProxyPicker from "../components/ProxyPicker";
+import DerivedProxyBuilder from "../components/DerivedProxyBuilder";
+import { derivationRow } from "../lib/derived-proxies.mjs";
 import { groupKey, proxyCatalog as proxyGroups, isAggregateKey, inGroup, seriesMatches } from "../lib/proxies.mjs";
 import PrivateData from "../components/PrivateData";
 import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
@@ -127,11 +129,19 @@ export default function Atlas() {
     [surface, setSurface] = useState(false),
     [radius, setRadius] = useState(600),
     [tileError, setTileError] = useState(false);
+  const [scale, setScale] = useState<{ key: string; domain: [number, number] } | null>(null);
+  const [scaleMin, setScaleMin] = useState("");
+  const [scaleMax, setScaleMax] = useState("");
+  const [scaleError, setScaleError] = useState("");
   const [mask, setMask] = useState<any>(null),
     [coast, setCoast] = useState<any>(null),
     [mapReady, setMapReady] = useState(false),
     [mapError, setMapError] = useState("");
   const [privateSets, setPrivateSets] = useState<any[]>([]);
+  const [derivedSets, setDerivedSets] = useState<any[]>([]);
+  const viewCatalog = useMemo(() => catalog ? { ...catalog, series: [...catalog.series,
+    ...derivedSets.flatMap((entry: any) => entry.series.map(({ rows, ...series }: any) => ({ ...series, rows: [] })))] } : null,
+    [catalog, derivedSets]);
   // Owner datasets are merged client-side only; public endpoints never include them.
   useEffect(() => {
     setCatalog((c: any) => {
@@ -285,8 +295,8 @@ export default function Atlas() {
       setTimeout(() => mapRef.current?.invalidateSize(), 100);
   }, [tab, filtersOpen]);
   const proxies = useMemo(
-    () => (catalog ? proxyGroups(catalog) : []),
-    [catalog],
+    () => (viewCatalog ? proxyGroups(viewCatalog) : []),
+    [viewCatalog],
   );
   const proxy =
     proxies.find((p: any) => p.key === f.group) ||
@@ -333,7 +343,7 @@ export default function Atlas() {
       const out: any[] = [];
       for (let i = 0; i < keys.length; i += 6)
         out.push(...(await Promise.all(keys.slice(i, i + 6).filter((k: string) => !k.includes('"private_')).map(one))).flat());
-      const mine = privateSets.flatMap((d: any) => d.series).filter((s: any) => inGroup(s, f.group));
+      const mine = [...privateSets, ...derivedSets].flatMap((d: any) => d.series).filter((s: any) => inGroup(s, f.group));
       return [...out, ...mine];
     })()
       .then((series) => {
@@ -355,6 +365,7 @@ export default function Atlas() {
     f.yearMax,
     f.chronology,
     privateSets,
+    derivedSets,
   ]);
   const summary = useMemo(() => {
     if (!data) return { items: [], error: "" };
@@ -372,7 +383,27 @@ export default function Atlas() {
     if (items.length && !items.some((s) => s.record.id === selected))
       setSelected(items[0].record.id);
   }, [items, selected]);
-  const domain = colorDomain(items, f.mode === "z");
+  const scaleKey = JSON.stringify([f.group, f.mode, f.refMin, f.refMax]);
+  const windowDomain = colorDomain(items, f.mode === "z") as [number, number];
+  useEffect(() => {
+    if (seriesLoading || !valid.length || scale?.key === scaleKey) return;
+    let [minimum, maximum] = windowDomain;
+    if (minimum === maximum) { minimum -= 1; maximum += 1; }
+    setScale({ key: scaleKey, domain: [minimum, maximum] });
+    setScaleMin(String(minimum));
+    setScaleMax(String(maximum));
+    setScaleError("");
+  }, [scaleKey, scale, seriesLoading, valid.length, windowDomain[0], windowDomain[1]]);
+  const domain: [number, number] = scale?.key === scaleKey ? scale.domain : windowDomain;
+  function applyScale() {
+    const minimum = Number(scaleMin), maximum = Number(scaleMax);
+    if (!scaleMin.trim() || !scaleMax.trim() || !Number.isFinite(minimum) || !Number.isFinite(maximum) || minimum >= maximum) {
+      setScaleError("Introduce límites numéricos con mínimo menor que máximo.");
+      return;
+    }
+    setScale({ key: scaleKey, domain: [minimum, maximum] });
+    setScaleError("");
+  }
   const grid = useMemo(
     () =>
       surface && mask
@@ -493,6 +524,9 @@ export default function Atlas() {
       "value_uncertainty_type",
       "age_probability_levels",
       "age_probability_bounds",
+      "derivation_formula",
+      "derivation_inputs_json",
+      "evidence_type",
     ];
     const rows = items.flatMap((i) =>
       i.target.map((r: any) => [
@@ -500,7 +534,7 @@ export default function Atlas() {
         i.series.proxy,
         r[0],
         r[4],
-        r[5] ?? r[1],
+        i.series.derivation ? null : r[5] ?? r[1],
         r[1],
         i.series.unit,
         f.mode === "z" && i.reference.n >= 5 && i.reference.sd > 0
@@ -539,6 +573,9 @@ export default function Atlas() {
         rowUncertainty(i.series, r).value_uncertainty_type,
         JSON.stringify(rowUncertainty(i.series, r).age_probability_levels),
         JSON.stringify(rowUncertainty(i.series, r).age_probability_bounds),
+        i.series.derivation?.formula,
+        JSON.stringify(derivationRow(i.series, r)),
+        i.series.evidence_type,
       ]),
     );
     download(
@@ -754,7 +791,7 @@ export default function Atlas() {
             </button>
           </div>
           <ProxyPicker
-            catalog={catalog}
+            catalog={viewCatalog}
             selectedKey={f.group}
             f={f}
             setF={setF}
@@ -763,6 +800,8 @@ export default function Atlas() {
               setFiltersOpen(false);
             }}
           />
+          <DerivedProxyBuilder catalog={catalog} privateSets={privateSets} onChange={setDerivedSets}
+            onSelect={(series: any) => setF((previous: any) => ({ ...previous, proxy: series.proxy, group: groupKey(series), mode: "raw" }))} />
           <section>
             <label className="overline" htmlFor="realm">
               02 / ARCHIVO
@@ -804,7 +843,7 @@ export default function Atlas() {
               onChange={(e) => change("mode", e.target.value)}
             >
               <option value="z">Anomalía normalizada · z por sondeo</option>
-              <option value="raw">Valores originales · {proxy?.unit}</option>
+              <option value="raw">{proxy?.series[0]?.derivation ? "Valores calculados" : "Valores originales"} · {proxy?.unit}</option>
             </select>
             {f.mode === "z" && (
               <>
@@ -1087,6 +1126,16 @@ export default function Atlas() {
                 <i className="missing-dot" /> Gris: sin valor comparable en esta
                 selección
               </small>
+              <div className="scale-controls">
+                <b>Escala fija entre edades</b>
+                <div>
+                  <label>Mín. <input aria-label="Mínimo de escala" type="number" value={scaleMin} onChange={(event) => setScaleMin(event.target.value)} /></label>
+                  <label>Máx. <input aria-label="Máximo de escala" type="number" value={scaleMax} onChange={(event) => setScaleMax(event.target.value)} /></label>
+                  <button onClick={applyScale}>Aplicar</button>
+                </div>
+                <small>Fuera de escala: color del extremo. Cambiar proxy o modo reinicia la escala.</small>
+                {scaleError && <small role="alert">{scaleError}</small>}
+              </div>
             </div>
             <div className="map-export">
               <button onClick={exportMap}>
@@ -1234,7 +1283,8 @@ export default function Atlas() {
                   <div>
                     <dt>Tipo de evidencia</dt>
                     <dd>
-                      {active.series.evidence_type ===
+                      {active.series.derivation ? "Transformación de usuario"
+                        : active.series.evidence_type ===
                       "published_reconstruction"
                         ? "Reconstrucción publicada"
                         : active.series.evidence_type === "derived_relative_abundance"

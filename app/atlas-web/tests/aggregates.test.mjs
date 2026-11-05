@@ -20,8 +20,9 @@ test("SST aggregation joins methods in °C, excludes air temperature", () => {
   assert.equal(all.count, 22);
   assert.ok(!inGroup(data.series[3], all.key));
   assert.ok(inGroup(data.series[0], groupKey(data.series[0])));
-  const annual = g.find((x) => x.id === "agg:sst_annual");
-  assert.equal(annual.members.length, 2);
+  const unspecified = g.find((x) => x.id === "agg:sst_unspecified");
+  assert.equal(unspecified.members.length, 2);
+  assert.equal(g.find((x) => x.id === "agg:sst_annual"), undefined);
 });
 test("sorting by records and values; aggregation can be hidden", () => {
   const g = proxyGroups(data);
@@ -45,6 +46,7 @@ test("fractions, pollen sums and sample counts cannot be silently pooled", () =>
   const grain = { parameter_name_pangaea:"Median, grain size, D50", unit:"µm" };
   assert.notEqual(paramKey({...grain, comparison_context_key:"grain_fraction_total"}), paramKey({...grain, comparison_context_key:"grain_fraction_noncarbonate"}));
   const pollen = { parameter_name_pangaea:"Arboreal pollen", unit:"%", family:"Polen" };
+  assert.equal(paramKey(pollen), null);
   assert.notEqual(paramKey(pollen), paramKey({...pollen, source_column:"AP [%] (excl. Pines)"}));
   assert.equal(paramKey({...pollen,unit:"#"}),null);
   const ss = {parameter_name_pangaea:"Size fraction 0.063-0.010 mm, sortable silt",unit:"%"};

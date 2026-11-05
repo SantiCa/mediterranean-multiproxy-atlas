@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "seed": "data/processed/atlas-v17.json",
+  "release": "atlas-quantitative-2026-11-05-v17-c6564e1246e",
+  "seed_sha256": "cfe7e35611f9715324b74cef70da972f66ba9f40f362ce13c98a83be610418f1",
+  "scope": "Offline structural and scientific-use audit of every numeric cell and catalog group; no fresh calibration, provider verification or exhaustive physical-identity audit.",
+  "totals": {
+    "records": 256,
+    "series": 1972,
+    "values": 971380,
+    "missing_age": 6615,
+    "negative_bp": 7035,
+    "observed_zero": 70962,
+    "percent_out_of_range": 0
+  },
+  "errors": [],
+  "warnings": [],
+  "sample_issues": [],
+  "usage_after_qc": {
+    "records": 256,
+    "series": 1966,
+    "values": 969501,
+    "base_groups": 994,
+    "qc": {
+      "age_corrected_series": 19,
+      "age_corrections": [
+        {
+          "dataset_doi": "10.1594/PANGAEA.929110",
+          "transform": "ka_bp = 1.95 - ka_ce",
+          "reason": "La columna PANGAEA «Age [ka BP]» contiene ka CE (negativo = a.C.): el título del dataset declara 1500 BCE–500 CE y la columna «Age [a AD/CE]» lo confirma. Sin corregir, la serie aparece entre -1,5 y 0,5 ka BP (futuro)."
+        }
+      ],
+      "holds": [
+        {
+          "id": "pangaea6-759535:MD99_2343:col2~f83a170be7",
+          "duplicate_of": "pangaea-759535:D50_noncarbonate",
+          "reason": "Serie idéntica a otra del mismo sondeo (importada dos veces)"
+        },
+        {
+          "id": "pangaea6-759535:MD99_2343:col3~173913941a",
+          "duplicate_of": "pangaea-759535:silt_clay_noncarbonate",
+          "reason": "Serie idéntica a otra del mismo sondeo (importada dos veces)"
+        },
+        {
+          "id": "pangaea6-759535:MD99_2343:col4~e89d7637e6",
+          "duplicate_of": "pangaea-759535:UP10_noncarbonate",
+          "reason": "Serie idéntica a otra del mismo sondeo (importada dos veces)"
+        },
+        {
+          "id": "pangaea6-711649:MD95_2043:col70~a79b9e955b",
+          "duplicate_of": "pangaea5-872900:Quercus_~33acbcfb",
+          "reason": "Serie idéntica a otra del mismo sondeo (importada dos veces)"
+        },
+        {
+          "id": "pangaea6-711649:MD95_2043:col71~7b51b25a16",
+          "duplicate_of": "pangaea5-872900:Quercus__col89~b29bf9f6",
+          "reason": "Serie idéntica a otra del mismo sondeo (importada dos veces)"
+        },
+        {
+          "id": "pangaea6-910794:HER_GC_UB06:col18~610dede869",
+          "duplicate_of": "pangaea5-910794:Low_oxygen_indicators_",
+          "reason": "Serie idéntica a otra del mismo sondeo (importada dos veces)"
+        }
+      ]
+    }
+  },
+  "catalog": {
+    "base_groups": 1000,
+    "aggregate_groups": 143,
+    "single_record_groups": 873,
+    "displayed_families": [
+      "Foraminíferos",
+      "Geoquímica elemental",
+      "Isótopos estables",
+      "Isótopos radiogénicos",
+      "Materia orgánica y biomarcadores",
+      "Micropaleontología",
+      "Mineralogía",
+      "Oxigenación bentónica",
+      "Paleoincendios",
+      "Paleopolvo",
+      "Polen",
+      "Sedimentología",
+      "Temperatura"
+    ],
+    "family_corrections": [
+      {
+        "series": "pangaea-898587:BHT_isomer_per_TOC",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea-898587:ladderane_per_OC",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea-789685:alkenone_UK37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea-789686:alkenone_UK37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea-789690:alkenone_UK37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58840:45539:uk_37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58840:45539:n_alkanes",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58840:45539:acl",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58841:45540:uk_37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58841:45540:n_alkanes",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58841:45540:acl",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58842:45541:uk_37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58842:45541:n_alkanes",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58842:45541:acl",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58843:45542:uk_37",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58843:45542:n_alkanes",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-32914-58843:45542:acl",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-28070-58190:40697:relict",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:mesophilous",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:mesophilous_pine",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:montane",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:montane_pine",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:pines",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:ap",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:ap_pine",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:nap",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:nap_pine",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:poaceae",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:poaceae_pine",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:aquatics",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40697:aquatics_pine",
+        "original": "Palinología",
+        "displayed": "Polen"
+      },
+      {
+        "series": "noaa-28070-58190:40698:bit",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "noaa-28070-58190:40698:diol_diol_lolio",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea-961488:C4_plant_contribution",
+        "original": "Biomarcadores",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea5-259364:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g~27953cba",
+        "original": "Foraminíferos",
+        "displayed": "Materia orgánica y biomarcadores"
+      },
+      {
+        "series": "pangaea5-259373:Oxygen_index_mass_CO2_per_unit_mass_total_organic_carbon_mg_g~fc7842ec",
+        "original": "Foraminíferos",
+        "displayed": "Materia orgánica y biomarcadores"
+      }
+    ],
+    "sst_season_not_declared": [
+      "pangaea-901666:MgCa_SST",
+      "pangaea-789685:alkenone_SST",
+      "pangaea-789686:alkenone_SST",
+      "pangaea-789690:alkenone_SST",
+      "noaa-32914-58840:45539:ssts",
+      "noaa-32914-58841:45540:ssts",
+      "noaa-32914-58842:45541:ssts",
+      "noaa-32914-58843:45542:ssts",
+      "pangaea5-901746:Sea_surface_temperature_C"
+    ]
+  },
+  "coverage": [
+    {
+      "use": "Temperatura marina",
+      "records": 25,
+      "series": 35,
+      "values": 4532,
+      "example_series": [
+        "pangaea-438816:alkenone_SST",
+        "pangaea-901666:MgCa_SST",
+        "pangaea-438371:alkenone_SST",
+        "pangaea-438379:alkenone_SST"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "sst|sea.surface.temperature|temperatura superficial del mar"
+    },
+    {
+      "use": "Isótopos estables",
+      "records": 35,
+      "series": 152,
+      "values": 32564,
+      "example_series": [
+        "noaa-soreq-2003:speleothem_d18O",
+        "noaa-soreq-2003:speleothem_d13C",
+        "noaa-peqiin-2003:speleothem_d18O",
+        "noaa-peqiin-2003:speleothem_d13C"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "d18o|d13c|18o|13c"
+    },
+    {
+      "use": "Censos y asociaciones de foraminíferos",
+      "records": 20,
+      "series": 170,
+      "values": 41757,
+      "example_series": [
+        "pangaea5-54940:Foraminifera_benthic_g",
+        "pangaea5-54940:Globocassidulina_subglobosa_",
+        "pangaea5-54940:Oridorsalis_umbonatus_",
+        "pangaea5-66714:Orbulina_universa_"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "foraminifer|globiger|globorotal|neoglobo|orbulina|quinqueloba"
+    },
+    {
+      "use": "Vegetación: taxones, AP/NAP y asociaciones",
+      "records": 134,
+      "series": 955,
+      "values": 111896,
+      "example_series": [
+        "noaa-28070-58190:40697:relict",
+        "noaa-28070-58190:40697:mesophilous",
+        "noaa-28070-58190:40697:mesophilous_pine",
+        "noaa-28070-58190:40697:montane"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "pollen|polen|pinus|quercus"
+    },
+    {
+      "use": "Oxigenación y microhábitats bentónicos",
+      "records": 5,
+      "series": 20,
+      "values": 1581,
+      "example_series": [
+        "pangaea5-910794:Low_oxygen_indicators_",
+        "pangaea5-910795:Low_oxygen_indicators_",
+        "pangaea5-910796:Low_oxygen_indicators_",
+        "pangaea6-780234:160_969D:col11~81ab870d63"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "oxygen|oxigen|epifaun|infaun|redox"
+    },
+    {
+      "use": "Materia orgánica y productividad",
+      "records": 44,
+      "series": 68,
+      "values": 7781,
+      "example_series": [
+        "pangaea-438816:alkenone_SST",
+        "pangaea-898587:BHT_isomer_per_TOC",
+        "pangaea-898587:ladderane_per_OC",
+        "pangaea-438371:alkenone_SST"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "toc|carbon.organic|corg|biogenic|alkenone|ladderane"
+    },
+    {
+      "use": "Aporte detrítico y razones elementales",
+      "records": 42,
+      "series": 81,
+      "values": 85610,
+      "example_series": [
+        "noaa-28070-58190:40701:sand",
+        "noaa-13666-54312:23340:k_ti",
+        "pangaea-944660:Sr_detrital",
+        "pangaea-944660:Sr87_Sr86_detrital"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "titanium|aluminium|ti.ca|fe.al|zr.al|detriti"
+    },
+    {
+      "use": "Corrientes y tamaño de grano",
+      "records": 17,
+      "series": 71,
+      "values": 16737,
+      "example_series": [
+        "pangaea5-704428:Median_grain_size_D50_phi",
+        "pangaea5-864261:Median_grain_size_D50_m~617c1a8b",
+        "pangaea6-680762:GeoTu_SL112:col2~9897b2c5d6",
+        "pangaea6-680762:GeoTu_SL112:col3~aa2439a07a"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "sortable.silt|grain.size|current|corriente"
+    },
+    {
+      "use": "Nanofósiles y diatomeas",
+      "records": 2,
+      "series": 7,
+      "values": 589,
+      "example_series": [
+        "pangaea-921230:coccolith_absolute_abundance",
+        "noaa-28070-58190:40699:diatom_sum",
+        "noaa-28070-58190:40699:0_5m",
+        "noaa-28070-58190:40699:0_10m"
+      ],
+      "status": "numeric_available_keyword_screen_not_environmental_validation",
+      "rule": "coccolith|nannofossil|nanofosil|diatom"
+    },
+    {
+      "use": "Bioturbación e icnofábrica",
+      "records": 0,
+      "series": 0,
+      "values": 0,
+      "example_series": [],
+      "status": "no_numeric_series_detected_by_rule",
+      "rule": "bioturb|ichnofabric|ichnofossil"
+    }
+  ],
+  "derivable": {
+    "series": 944,
+    "records": 128,
+    "source_tables": 152
+  },
+  "duplicate_vector_candidates": [],
+  "colocated_record_candidates": [
+    {
+      "coordinates": "17.8986,39.7619",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ]
+    },
+    {
+      "coordinates": "20.7150,41.0492",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ]
+    },
+    {
+      "coordinates": "-7.2780,36.4253",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ]
+    },
+    {
+      "coordinates": "12.4055,37.7080",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ]
+    },
+    {
+      "coordinates": "-7.7453,36.7104",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ]
+    },
+    {
+      "coordinates": "-2.7547,36.1736",
+      "records": [
+        "pangaea7-ttr_12_293g",
+        "pangaea7-ttr_14_302g"
+      ]
+    },
+    {
+      "coordinates": "9.8869,47.9906",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ]
+    }
+  ],
+  "limits": [
+    "Coverage categories overlap and are search aids, not validated environmental reconstructions.",
+    "Unknown ages remain available by depth and are excluded from age maps.",
+    "Matching vectors or coordinates flag review candidates; they do not prove duplicate physical cores.",
+    "Partial duplicates, original table re-extraction and chronology independence are not exhaustively certified.",
+    "Displayed family corrections preserve archived metadata; Sites production remains on its last deployment."
+  ]
+}
