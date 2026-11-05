@@ -1,0 +1,143 @@
+{
+  "parent_sha256": "540db9b8475ecf6974d20c5332b088d82876b2e0b6db935232b06e246045d647",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "CERRATO",
+      "site": "Espinosa de Cerrato",
+      "latitude": 41.9567,
+      "longitude": -3.935,
+      "rows": 168,
+      "first_row": 4330,
+      "last_row": 4497,
+      "reference": "Múgica, F.F. et al. 2001 The Holocene history of Pinus forests in the Spanish Northern Meseta, The Holocene, 11(3), 343–358. doi:10.1191/095968301669474913.; \nMorales-Molino, C. et al. 2017 The historical demise of Pinus nigra forests in the Northern Iberian Plateau (south-western Europe), Journal of Ecology. Edited by M. McGlone, 105(3), 634–646. doi:10.1111/1365-2745.12702.",
+      "paper_dois": [
+        "10.1191/095968301669474913",
+        "10.1111/1365-2745.12702"
+      ]
+    },
+    {
+      "entity": "MOLINAES",
+      "site": "La Molina mire",
+      "latitude": 43.38111111,
+      "longitude": -6.327222222,
+      "rows": 152,
+      "first_row": 735,
+      "last_row": 886,
+      "reference": "López-Merino, L., Cortizas, A.M. and López-Sáez, J.A. 2011 Human-induced changes on wetlands: A study case from NW Iberia, Quaternary Science Reviews, 30(19–20), 2745–2754. doi:10.1016/j.quascirev.2011.06.004.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2011.06.004"
+      ]
+    },
+    {
+      "entity": "LAGMESAG",
+      "site": "Laguna Mesagosa",
+      "latitude": 41.96527778,
+      "longitude": -2.812222222,
+      "rows": 123,
+      "first_row": 995,
+      "last_row": 1117,
+      "reference": "Engelbrechten, S. Von 1999 Late-glacial and holocene vegetation and environmental history of the Sierra de Urbión, North-West Central Spain. Trinity College, Dublin, Ireland.",
+      "paper_dois": []
+    },
+    {
+      "entity": "VERDEOSPESOA",
+      "site": "Verdeospesoa mire",
+      "latitude": 43.055,
+      "longitude": -2.8614,
+      "rows": 116,
+      "first_row": 3138,
+      "last_row": 3253,
+      "reference": "Pérez-Díaz, S. and López-Sáez, J.A. 2017 33. Verdeospesoa mire (Basque Country, Northern Iberian Peninsula, Spain), Grana, 56(4), 315–317. doi:10.1080/00173134.2016.1271824.",
+      "paper_dois": [
+        "10.1080/00173134.2016.1271824"
+      ]
+    },
+    {
+      "entity": "MAI",
+      "site": "El Maíllo mire",
+      "latitude": 40.54666667,
+      "longitude": -6.209722222,
+      "rows": 109,
+      "first_row": 592,
+      "last_row": 700,
+      "reference": "Morales-Molino, C. et al. 2013 Holocene vegetation, fire and climate interactions on the westernmost fringe of the Mediterranean Basin, Quaternary Science Reviews, 59, 5–17. doi:10.1016/j.quascirev.2012.10.027.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2012.10.027"
+      ]
+    },
+    {
+      "entity": "SANABRIA",
+      "site": "Sanabria Marsh",
+      "latitude": 42.1,
+      "longitude": -6.733333333,
+      "rows": 97,
+      "first_row": 2621,
+      "last_row": 2717,
+      "reference": "Hannon, G.. 1985 Late Quaternary vegetation of Sanabria Marsh, North West Spain. Trinity College, Dublin, Ireland.; \nTurner, C. and Hannon, G.E. 1988 Vegetational evidence for late Quaternary climatic changes in southwest Europe in relation to the influence of the North Atlantic Ocean, Philosophical Transactions of the Royal Society of London. B, Biological Sciences, 318(1191), 451–485.; Allen, J.R.M., Huntley, B. and Watts, W.A. 1996 The vegetation and climate of northwest Iberia over the last 14,000 years, Journal of Quaternary Science, 11(2), 125–147. doi:10.1002/(SICI)1099-1417(199603/04)11:2<125::AID-JQS232>3.0.CO;2-U.",
+      "paper_dois": [
+        "10.1002/(SICI)1099-1417(199603/04)11:2<125::AID-JQS232>3.0.CO;2-U"
+      ]
+    },
+    {
+      "entity": "PINOBLANCO",
+      "site": "Fuente del Pino Blanco",
+      "latitude": 40.2363,
+      "longitude": -4.9776,
+      "rows": 96,
+      "first_row": 6490,
+      "last_row": 6585,
+      "reference": "Robles-López, S. et al. 2018 The dialectic between deciduous and coniferous forests in central Iberia: A palaeoenvironmental perspective during the late Holocene in the Gredos range, Quaternary International, 470, 148–165. doi:10.1016/j.quaint.2017.05.012.",
+      "paper_dois": [
+        "10.1016/j.quaint.2017.05.012"
+      ]
+    },
+    {
+      "entity": "BOSCESTA",
+      "site": "Bosc dels Estanyons",
+      "latitude": 42.4803,
+      "longitude": 1.6289,
+      "rows": 92,
+      "first_row": 6020,
+      "last_row": 6111,
+      "reference": "De Beaulieu, J.-L. et al. 2005 Vegetation dynamics in north-western Mediterranean regions: instability of the Mediterranean bioclimate, Plant Biosystems-An International Journal Dealing with all Aspects of Plant Biology, 139(2), 114–126.; \nMiras, Y. et al. 2007 Dynamique holocène de la végétation et occupation des Pyrénées andorranes depuis le Néolithique ancien, d’après l’analyse pollinique de la tourbière de Bosc dels Estanyons (2180 m, Vall del Madriu, Andorre), Comptes Rendus Palevol, 6(4), 291–300.",
+      "paper_dois": []
+    },
+    {
+      "entity": "ARBARRAIN",
+      "site": "Arbarrain Mire",
+      "latitude": 43.2114,
+      "longitude": -2.1729,
+      "rows": 91,
+      "first_row": 6251,
+      "last_row": 6341,
+      "reference": "Pérez-Díaz, S. et al. 2018 Early farmers, megalithic builders and the shaping of the cultural landscapes during the Holocene in Northern Iberian mountains. A palaeoenvironmental perspective, Journal of Archaeological Science: Reports, 18, 463–474. doi:10.1016/j.jasrep.2018.01.043.",
+      "paper_dois": [
+        "10.1016/j.jasrep.2018.01.043"
+      ]
+    },
+    {
+      "entity": "CADELA",
+      "site": "Pena de Cadela",
+      "latitude": 42.83,
+      "longitude": -7.17,
+      "rows": 91,
+      "first_row": 5239,
+      "last_row": 5329,
+      "reference": "Mighall, T.M. et al. 2006 Proxy climate and vegetation changes during the last five millennia in NW Iberia: Pollen and non-pollen palynomorph data from two ombrotrophic peat bogs in the North Western Iberian Peninsula, Review of Palaeobotany and Palynology, 141(1–2), 203–223. doi:10.1016/j.revpalbo.2006.03.013.",
+      "paper_dois": [
+        "10.1016/j.revpalbo.2006.03.013"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    }
+  ]
+}

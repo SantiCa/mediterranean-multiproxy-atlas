@@ -2,7 +2,14 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable v9 (actual, 05-11-2026)
+## Colección v10 validada, pendiente de publicar (05-11-2026)
+
+- Release v10-cf8f572c33a: **193 registros / 1.594 series / 951.460 valores / 1.000 grupos base**. Añade diez ubicaciones interiores Reading v3, 60 series y 6.810 valores para los seis parámetros polínicos existentes. Conserva íntegro el padre v9.
+- Contrato scripts/importers/pollen_v10_sources.json; reproducción offline con `python scripts/build_forest_pollen_v10.py`. Reutiliza el parser, las 205 columnas y los originales v3 fijados por hash del lote anterior. Porcentajes derivados y denominadores por muestra explícitos; MAI/MOLINAES conservan la corrección cronológica de v3.
+- 85 pruebas Python, 15 Node y snapshot con los 951.460 valores cotejados celda a celda. Sin cuarentenas de admisión ni solapamientos numéricos parciales detectados en este lote; no equivale a una auditoría exhaustiva de independencia física. Handoff docs/handoffs/cur-reading-10.md.
+- Sites permanece en v9; publicación reservada al rol 04. Villarquemado requiere contrato propio para las edades IPE (361 medianas IntCal20 ausentes). Los bloqueos marinos, ELX y Monticchio permanecen.
+
+## Ejecutable v9 (publicado, 05-11-2026)
 
 - Site privado actualizado en https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site.
 - Release v9-c55489c6f83 contiene **183 registros / 1.534 series / 944.650 valores / 1.000 grupos base**. Añade 29 ubicaciones ibéricas para seis parámetros forestales y amplía Monticchio NOAA con ocho series. Son 182 series y 19.898 valores nuevos.
