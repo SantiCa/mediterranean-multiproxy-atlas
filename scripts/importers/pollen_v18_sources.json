@@ -360,5 +360,50 @@
   "resolved_holds": [
     "Reading Armena",
     "Reading PEDRIDO"
-  ]
+  ],
+  "integrated_qc": {
+    "_doc": "Correcciones de QC aplicadas al publicar (snapshot) sobre la semilla versionada, sin modificarla. Cada entrada es idempotente y trazable; el rol de datos debe incorporarlas en la siguiente release y retirarlas de aquí. Ver docs/handoffs/auditoria-v17.md.",
+    "age_corrections": [
+      {
+        "dataset_doi": "10.1594/PANGAEA.929110",
+        "transform": "ka_bp = 1.95 - ka_ce",
+        "reason": "Corrección de referencia conforme al intervalo 1500 BCE–500 CE del título de PANGAEA.929110: ka BP = 1.95 - primera columna archivada. La segunda columna coincide numéricamente con años BP pese a su encabezado AD/CE, por lo que ambos rótulos se mantienen como ambiguos. Tokens originales conservados; sin recalibración.",
+        "detected": "scripts/audit_science.py · edad_futura · 05-11-2026",
+        "publication_qc_reason_original": "La columna PANGAEA «Age [ka BP]» contiene ka CE (negativo = a.C.): el título del dataset declara 1500 BCE–500 CE y la columna «Age [a AD/CE]» lo confirma. Sin corregir, la serie aparece entre -1,5 y 0,5 ka BP (futuro)."
+      }
+    ],
+    "holds": [
+      {
+        "id": "pangaea6-759535:MD99_2343:col2~f83a170be7",
+        "duplicate_of": "pangaea-759535:D50_noncarbonate"
+      },
+      {
+        "id": "pangaea6-759535:MD99_2343:col3~173913941a",
+        "duplicate_of": "pangaea-759535:silt_clay_noncarbonate"
+      },
+      {
+        "id": "pangaea6-759535:MD99_2343:col4~e89d7637e6",
+        "duplicate_of": "pangaea-759535:UP10_noncarbonate"
+      },
+      {
+        "id": "pangaea6-711649:MD95_2043:col70~a79b9e955b",
+        "duplicate_of": "pangaea5-872900:Quercus_~33acbcfb"
+      },
+      {
+        "id": "pangaea6-711649:MD95_2043:col71~7b51b25a16",
+        "duplicate_of": "pangaea5-872900:Quercus__col89~b29bf9f6"
+      },
+      {
+        "id": "pangaea6-910794:HER_GC_UB06:col18~610dede869",
+        "duplicate_of": "pangaea5-910794:Low_oxygen_indicators_"
+      }
+    ],
+    "source_handoff": "docs/handoffs/auditoria-v17.md",
+    "age_source": {
+      "path": "data/interim/priority_v6/pangaea/929110.tsv",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.929110?format=textfile",
+      "sha256": "b6b778aae62fb8d58e1ea3518a1150e5fcd136e64b3338ecc2e8f0ad4d93aa06",
+      "expected_series": 19
+    }
+  }
 }

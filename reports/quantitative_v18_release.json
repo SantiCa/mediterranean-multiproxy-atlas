@@ -1,12 +1,12 @@
 {
-  "version": "atlas-quantitative-2026-11-05-v18-c6df0c5c06b",
+  "version": "atlas-quantitative-2026-11-05-v18-cd0f8159f62",
   "parent_version": "atlas-quantitative-2026-11-05-v17-c6564e1246e",
   "parent_sha256": "cfe7e35611f9715324b74cef70da972f66ba9f40f362ce13c98a83be610418f1",
-  "parent_unchanged": true,
+  "parent_unchanged": false,
   "counts": {
     "records": 258,
-    "series": 1984,
-    "values": 971680,
+    "series": 1978,
+    "values": 969801,
     "new_records": 2,
     "new_series": 12,
     "new_values": 300,
@@ -22,7 +22,7 @@
   "family_counts": {
     "Temperatura": 38,
     "Geoquímica elemental": 327,
-    "Sedimentología": 219,
+    "Sedimentología": 216,
     "Biomarcadores": 20,
     "Micropaleontología": 8,
     "Isótopos estables": 157,
@@ -33,10 +33,10 @@
     "Mineralogía": 2,
     "Foraminíferos": 172,
     "Materia orgánica y biomarcadores": 57,
-    "Polen": 953,
-    "Oxigenación bentónica": 9
+    "Polen": 951,
+    "Oxigenación bentónica": 8
   },
-  "comparison_groups": 1000,
+  "comparison_groups": 994,
   "numeric_age_extent_ka_bp": [
     -1.5,
     4700.0
@@ -446,8 +446,104 @@
       }
     ]
   },
-  "sha256": "fbef751a26fd518203359c67e57b7b067bd9bdfbde99351b3ca4a8931a6778fe",
-  "bytes": 70014610,
+  "parent_records_unchanged": true,
+  "parent_series_exceptions": {
+    "corrected": [
+      "pangaea5-929110:Potassium_ng_g",
+      "pangaea5-929110:Abies_",
+      "pangaea5-929110:Pinus_",
+      "pangaea5-929110:Betula_",
+      "pangaea5-929110:Carpinus_",
+      "pangaea5-929110:Quercus_",
+      "pangaea5-929110:Artemisia_",
+      "pangaea5-929110:Poaceae_",
+      "pangaea6-929110:Mo05:col6~533c6b3bf2",
+      "pangaea6-929110:Mo05:col7~b77ec3334c",
+      "pangaea6-929110:Mo05:col9~a1a7c604e9",
+      "pangaea6-929110:Mo05:col11~940f854919",
+      "pangaea6-929110:Mo05:col13~a78d34f683",
+      "pangaea6-929110:Mo05:col14~e771dfdd50",
+      "pangaea6-929110:Mo05:col15~9102c3ddac",
+      "pangaea6-929110:Mo05:col16~f3d102df67",
+      "pangaea6-929110:Mo05:col18~1eb508825c",
+      "pangaea6-929110:Mo05:col19~e5272887d5",
+      "pangaea6-929110:Mo05:col20~18ec7051c6"
+    ],
+    "held": [
+      "pangaea6-711649:MD95_2043:col70~a79b9e955b",
+      "pangaea6-711649:MD95_2043:col71~7b51b25a16",
+      "pangaea6-759535:MD99_2343:col2~f83a170be7",
+      "pangaea6-759535:MD99_2343:col3~173913941a",
+      "pangaea6-759535:MD99_2343:col4~e89d7637e6",
+      "pangaea6-910794:HER_GC_UB06:col18~610dede869"
+    ]
+  },
+  "integrated_qc": {
+    "age_source": {
+      "path": "data/interim/priority_v6/pangaea/929110.tsv",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.929110?format=textfile",
+      "sha256": "b6b778aae62fb8d58e1ea3518a1150e5fcd136e64b3338ecc2e8f0ad4d93aa06",
+      "expected_series": 19
+    },
+    "age_corrected_series": [
+      "pangaea5-929110:Potassium_ng_g",
+      "pangaea5-929110:Abies_",
+      "pangaea5-929110:Pinus_",
+      "pangaea5-929110:Betula_",
+      "pangaea5-929110:Carpinus_",
+      "pangaea5-929110:Quercus_",
+      "pangaea5-929110:Artemisia_",
+      "pangaea5-929110:Poaceae_",
+      "pangaea6-929110:Mo05:col6~533c6b3bf2",
+      "pangaea6-929110:Mo05:col7~b77ec3334c",
+      "pangaea6-929110:Mo05:col9~a1a7c604e9",
+      "pangaea6-929110:Mo05:col11~940f854919",
+      "pangaea6-929110:Mo05:col13~a78d34f683",
+      "pangaea6-929110:Mo05:col14~e771dfdd50",
+      "pangaea6-929110:Mo05:col15~9102c3ddac",
+      "pangaea6-929110:Mo05:col16~f3d102df67",
+      "pangaea6-929110:Mo05:col18~1eb508825c",
+      "pangaea6-929110:Mo05:col19~e5272887d5",
+      "pangaea6-929110:Mo05:col20~18ec7051c6"
+    ],
+    "age_corrected_values": 1807,
+    "holds": [
+      {
+        "id": "pangaea6-759535:MD99_2343:col2~f83a170be7",
+        "duplicate_of": "pangaea-759535:D50_noncarbonate",
+        "reason": "reviewed_complete_vector_duplicate_across_importers"
+      },
+      {
+        "id": "pangaea6-759535:MD99_2343:col3~173913941a",
+        "duplicate_of": "pangaea-759535:silt_clay_noncarbonate",
+        "reason": "reviewed_complete_vector_duplicate_across_importers"
+      },
+      {
+        "id": "pangaea6-759535:MD99_2343:col4~e89d7637e6",
+        "duplicate_of": "pangaea-759535:UP10_noncarbonate",
+        "reason": "reviewed_complete_vector_duplicate_across_importers"
+      },
+      {
+        "id": "pangaea6-711649:MD95_2043:col70~a79b9e955b",
+        "duplicate_of": "pangaea5-872900:Quercus_~33acbcfb",
+        "reason": "reviewed_complete_vector_duplicate_across_importers"
+      },
+      {
+        "id": "pangaea6-711649:MD95_2043:col71~7b51b25a16",
+        "duplicate_of": "pangaea5-872900:Quercus__col89~b29bf9f6",
+        "reason": "reviewed_complete_vector_duplicate_across_importers"
+      },
+      {
+        "id": "pangaea6-910794:HER_GC_UB06:col18~610dede869",
+        "duplicate_of": "pangaea5-910794:Low_oxygen_indicators_",
+        "reason": "reviewed_complete_vector_duplicate_across_importers"
+      }
+    ],
+    "held_values": 1879,
+    "original_quarantine_location": "seed.curation_excluded_series"
+  },
+  "sha256": "6464da775a11f1e1d3f6fcb9039a12b9c8d914b5d6ade37772f8e1371c007652",
+  "bytes": 70032208,
   "chronology_and_denominator_audit": [
     {
       "entity": "Armena",

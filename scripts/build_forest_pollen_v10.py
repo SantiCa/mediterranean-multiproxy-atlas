@@ -11,7 +11,7 @@ BASE = ROOT / 'data/processed/atlas-v9.json'
 CONTRACT = ROOT / 'scripts/importers/pollen_v10_sources.json'
 
 
-def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
+def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10, finalize=None):
     """Build a pinned Reading-only child from a contract, parent and release number."""
     contract = json.loads(contract_path.read_bytes())
     if pollen.sha(baseline.read_bytes()) != contract['parent_sha256']:
@@ -84,6 +84,8 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
         version_prefix=f'atlas-quantitative-2026-11-05-v{version}-')
     if report['counts']['new_records'] != len(entities) or report['counts']['new_series'] != 6 * len(entities):
         raise ValueError('Admission quarantined a reviewed entity or series; inspect duplicates')
+    if finalize is not None:
+        seed, report = finalize(seed, report, contract)
     raw = json.dumps(seed, ensure_ascii=False, separators=(',', ':')).encode()
     report.update(parent_sha256=contract['parent_sha256'], sha256=pollen.sha(raw), bytes=len(raw),
         chronology_and_denominator_audit=audit, held=contract['held'],
