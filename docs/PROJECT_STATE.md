@@ -2,12 +2,19 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v13 validada, pendiente de publicar (05-11-2026)
+## Colección v14 validada, pendiente de publicar (05-11-2026)
+
+- Release v14-c21d91a390a: **233 registros / 1.834 series / 962.836 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 359 muestras, 60 series y 2.154 valores. Padre v13 íntegro; seis parámetros y suma armonizada de 205 taxones conservados.
+- Reproducción: `python scripts/build_forest_pollen_v14.py`; contrato pollen_v14_sources.json e informe quantitative_v14_release.json. Originales fijados por hash e importadores existentes reutilizados sin cambios. XL conserva el tratamiento corregido de fechas postmodernas del techo publicado en v3.
+- 107 pruebas Python, 15 Node y snapshot con 962.836 valores cotejados celda a celda. Sin cuarentenas ni solapamientos numéricos parciales detectados; auditoría exacta adicional de todos los vectores nuevos. Handoff docs/handoffs/cur-reading-14.md. No se certifica independencia física exhaustiva.
+- Producción permanece en v13, según recibo reports/reading_v13_sites_deployment.json. Publicación de v14 reservada al rol 04. Los contratos v9–v14 incorporan 79/122 entidades Reading; las 43 restantes incluyen bloqueos anteriores y casos de identidad/cronología pendientes.
+
+## Colección v13 publicada (05-11-2026)
 
 - Release v13-c0f960a7901: **223 registros / 1.774 series / 960.682 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 328 muestras, 60 series y 1.968 valores. Padre v12 íntegro; seis parámetros y denominadores conservados.
 - Reproducción: `python scripts/build_forest_pollen_v13.py`. Contrato pollen_v13_sources.json e informe quantitative_v13_release.json. Originales por hash y ensamblador existentes reutilizados. PATATERO conserva la corrección del techo publicada en v3. N-PEQ mantiene PANGAEA.738850 como referencia de dataset, sin atribuirlo como DOI de artículo ni cambiar la cronología Reading.
 - 101 pruebas Python, 15 Node y snapshot completo cotejado celda a celda. Sin cuarentenas ni solapamientos numéricos parciales detectados. Auditoría exacta adicional incluye vectores de menos de diez muestras: SERTAL y ESTACAS conservan sus nueve muestras cada uno, con advertencia. Handoff docs/handoffs/cur-reading-13.md.
-- Sites sigue en v9; publicación de v13 reservada al rol 04. Continúan los bloqueos anteriores; no se certifica independencia física exhaustiva ni resolución uniforme.
+- Publicación v13 registrada en reports/reading_v13_sites_deployment.json; acceso privado conservado. Continúan los bloqueos anteriores; no se certifica independencia física exhaustiva ni resolución uniforme.
 
 ## Colección v12 validada, sustituida por v13 (05-11-2026)
 
