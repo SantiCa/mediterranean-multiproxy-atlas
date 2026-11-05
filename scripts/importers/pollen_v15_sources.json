@@ -1,0 +1,244 @@
+{
+  "parent_sha256": "0dbc97ed90bb53928ca23dcb63df29d83cd8e8cb4f47378834049c885c407da7",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "SALOIO",
+      "site": "Lake Saloio",
+      "latitude": 39.6133,
+      "longitude": -9.0158,
+      "rows": 24,
+      "first_row": 5996,
+      "last_row": 6019,
+      "reference": "Gomes, S.D. 2011 13. Lake Saloio (Nazaré, western Portugal), Grana, 50(3), 228–231. doi:10.1080/00173134.2011.579620.",
+      "paper_dois": [
+        "10.1080/00173134.2011.579620"
+      ]
+    },
+    {
+      "entity": "PANERA",
+      "site": "Turbera de La Panera Cabras",
+      "latitude": 40.16583333,
+      "longitude": -5.758055556,
+      "rows": 23,
+      "first_row": 2806,
+      "last_row": 2828,
+      "reference": "Abel Schaad, D. et al. 2009 Cabras y quemorros: tres siglos de cambios en el paisaje de la vertiente extremeña de la Sierra de Gredos, Revista de Estudios Extremeños, 1, 449–478.",
+      "paper_dois": []
+    },
+    {
+      "entity": "LACRUZ",
+      "site": "La Cruz",
+      "latitude": 39.98777778,
+      "longitude": -1.873333333,
+      "rows": 23,
+      "first_row": 3642,
+      "last_row": 3664,
+      "reference": "Burjachs Casas, F. 1996 La secuencia palinológica de La Cruz (Cuenca, España), in Ruz-Zapata, M.B. (ed.) Estudios palinológicos. Spain: Servicio de Publicaciones de la Universidad de Alcalá edition, 31–36.",
+      "paper_dois": []
+    },
+    {
+      "entity": "BREZOSA",
+      "site": "El Brezosa",
+      "latitude": 39.3491,
+      "longitude": -4.3611,
+      "rows": 68,
+      "first_row": 4616,
+      "last_row": 4683,
+      "reference": "Morales-Molino, C. et al. 2018 Vegetation and fire dynamics during the last 4000 years in the Cabañeros National Park (central Spain), Review of Palaeobotany and Palynology, 253, 110–122. doi:10.1016/j.revpalbo.2018.04.001.",
+      "paper_dois": [
+        "10.1016/j.revpalbo.2018.04.001"
+      ]
+    },
+    {
+      "entity": "ELPERRO",
+      "site": "El Perro mire",
+      "latitude": 39.0513,
+      "longitude": -4.7596,
+      "rows": 41,
+      "first_row": 4684,
+      "last_row": 4724,
+      "reference": "Luelmo-Lautenschlaeger, R. et al. 2019 The Iberian Peninsula’s burning heart—Long-term fire history in the Toledo Mountains (Central Spain), Fire, 2(4), 54.; \nLuelmo-Lautenschlaeger, R. et al. 2019 The Toledo Mountains: A resilient landscape and a landscape for resilience? Hazards and strategies in a mid-elevation mountain region in Central Spain, Quaternary, 2(4), 35.",
+      "paper_dois": []
+    },
+    {
+      "entity": "VINUELAS",
+      "site": "Las Vinuelas",
+      "latitude": 39.3744,
+      "longitude": -4.4884,
+      "rows": 58,
+      "first_row": 4725,
+      "last_row": 4782,
+      "reference": "Morales‐Molino, C. et al. 2019 Unprecedented herbivory threatens rear‐edge populations of Betula in southwestern Eurasia, Ecology, 100(11), e02833. doi:10.1002/ecy.2833.",
+      "paper_dois": [
+        "10.1002/ecy.2833"
+      ]
+    },
+    {
+      "entity": "VILLUERCAS",
+      "site": "Serrania de las Villuercas",
+      "latitude": 39.483333,
+      "longitude": -5.4,
+      "rows": 31,
+      "first_row": 5396,
+      "last_row": 5426,
+      "reference": "Gil-Romera, G., García Antón, M. and Calleja, J.A. 2008 The late Holocene palaeoecological sequence of Serranía de las Villuercas (southern Meseta, western Spain), Vegetation History and Archaeobotany, 17(6), 653–666. doi:10.1007/s00334-008-0146-x.",
+      "paper_dois": [
+        "10.1007/s00334-008-0146-x"
+      ],
+      "qc_notes": [
+        "Reading v3 conserva edades IPE de autores y mediana IntCal20 para VILLUERCAS. Este lote usa solo INTCAL2020_median; no combina las dos cronologías."
+      ]
+    },
+    {
+      "entity": "MITJANA",
+      "site": "Serra Mitjana Fen",
+      "latitude": 42.4675,
+      "longitude": 1.5828,
+      "rows": 15,
+      "first_row": 6169,
+      "last_row": 6183,
+      "reference": "Miras, Y. et al. 2015 28. Andorran high Pyrenees (Perafita Valley, Andorra): SerraMijtana fen, Grana, 54(4), 313–316. doi:10.1080/00173134.2015.1087590.",
+      "paper_dois": [
+        "10.1080/00173134.2015.1087590"
+      ]
+    },
+    {
+      "entity": "ELPAYO",
+      "site": "El Payo",
+      "latitude": 40.2535,
+      "longitude": -6.7712,
+      "rows": 50,
+      "first_row": 7706,
+      "last_row": 7755,
+      "reference": "Abel Schaad, D. et al. 2009 Evolución de la vegetación en la Sierra de Gata (Cáceres-Salamanca, España) durante el Holoceno reciente. Implicaciones biogeográficas, Revista Española de Micropaleontologia, 41(1–2), 91–105.; \nSilva-Sánchez, N. et al. 2016 Influence of climate change and human activities on the organic and inorganic composition of peat during the ‘Little Ice Age’(El Payo mire, W Spain), The Holocene, 26(8), 1290–1303.",
+      "paper_dois": []
+    },
+    {
+      "entity": "Ojos del Tremendal core 1",
+      "site": "Ojos del Tremendal",
+      "latitude": 40.5417,
+      "longitude": -2.045,
+      "rows": 53,
+      "first_row": 7198,
+      "last_row": 7250,
+      "reference": "Stevenson, A.C. 2000 The Holocene forest history of the Montes Universales, Teruel, Spain, The Holocene, 10(5), 603–610. doi:10.1191/095968300670543500.",
+      "paper_dois": [
+        "10.1191/095968300670543500"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    },
+    {
+      "record": "Reading CANALEJA",
+      "reason": "Possible coordinate/reference inconsistency: Reading and PANGAEA archive latitude 40.9, longitude -2.45, elevation 1029 m, but cited publications identify Garganta Canaleja in Romangordo (Caceres). Physical identity and correct sampling coordinates require audit. No replacement coordinates inferred.",
+      "source_rows": [
+        479,
+        480,
+        481,
+        482,
+        483,
+        484
+      ],
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.835786",
+      "checked_date": "2026-11-05",
+      "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
+      "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+    },
+    {
+      "record": "Reading CUCU",
+      "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+      "source_rows": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "age_medians_original": [
+        "46057",
+        "61527",
+        "114264",
+        "130000"
+      ],
+      "calibration_doi": "10.1017/RDC.2020.41",
+      "checked_date": "2026-11-05"
+    }
+  ]
+}
