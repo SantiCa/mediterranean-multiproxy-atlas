@@ -4,20 +4,26 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { groupKey } from "../lib/proxies.mjs";
+import { applyQc } from "../lib/qc-corrections.mjs";
 
 const [seedPath, out, inventoryPath] = process.argv.slice(2);
 if (!seedPath || !out) throw new Error("uso: snapshot.mjs <seed.json> <outDir>");
-const seed = JSON.parse(readFileSync(seedPath, "utf8"));
+const rawSeed = JSON.parse(readFileSync(seedPath, "utf8"));
+const qcPath = fileURLToPath(new URL("../../../config/qc_corrections.json", import.meta.url));
+const qcFile = existsSync(qcPath) ? JSON.parse(readFileSync(qcPath, "utf8")) : {};
 // A newer file number must not hide fresh data curated into its parent release.
 // Check before replacing the checked snapshot, so a stale v6 never publishes
 // silently after v5 changes in another curation session.
-const parentNumber = seed.parent_version?.match(/-v(\d+)-/)?.[1];
+const parentNumber = rawSeed.parent_version?.match(/-v(\d+)-/)?.[1];
 if (parentNumber) {
   const parentPath = join(dirname(seedPath), `atlas-v${parentNumber}.json`);
-  if (existsSync(parentPath) && JSON.parse(readFileSync(parentPath, "utf8")).version !== seed.parent_version)
+  if (existsSync(parentPath) && JSON.parse(readFileSync(parentPath, "utf8")).version !== rawSeed.parent_version)
     throw new Error("Release padre modificada: regenerar la colección más reciente antes de crear el snapshot");
 }
+// Publication QC (config/qc_corrections.json): traceable, seed untouched.
+const { seed, qc } = applyQc(rawSeed, qcFile);
 rmSync(out, { recursive: true, force: true });
 mkdirSync(join(out, "obs"), { recursive: true });
 
@@ -53,6 +59,7 @@ writeFileSync(
     records,
     series: meta,
     snapshot: { groups: files },
+    qc,
   }),
 );
 // Site inventory (tab «Sondeos»), queried in the browser by lib/inventory-local.mjs.
