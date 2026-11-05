@@ -1,141 +1,84 @@
-# Prompts para chats especialistas
+# Chats del atlas y prompts breves
 
-Abrir cada chat sobre un clon/worktree del repositorio. Pegar solo el prompt de su
-especialidad; las reglas y el estado están en el repositorio. En un chat sin acceso
-a archivos, adjuntar `AGENTS.md`, `PROJECT_STATE.md` y los archivos mínimos indicados;
-el agente debe entregar un parche y señalar qué no pudo ejecutar.
+Actualizado el 05-11-2026. Los cuatro chats comparten este repositorio y trabajan por relevo, uno activo cada vez. La rama y la siguiente acción están en docs/RELEVO.md.
 
-Antes de trabajar en la web, leer docs/QUANTITATIVE_V3.md, docs/DISCOVERY_V2.md y docs/WEB_V1.md; SRC-01/DB-01/API-01 del estado histórico ya tienen implementación v1. Usar el backlog actualizado.
+## Elección del chat
 
-Orden recomendado: coordinador asigna contratos → arquitectura y conectores →
-curación científica → interfaz. El manuscrito puede avanzar en paralelo con la
-evidencia disponible. Cada ejecución aborda un entregable acotado, no toda su fase.
+| Chat | Modelo recomendado | Esfuerzo | Entregable por activación |
+| --- | --- | --- | --- |
+| Atlas 01 · Curación de datos | GPT-6.1 Sol | Medio | Hasta 10 entidades de una fuente y un grupo de proxies existente |
+| Atlas 02 · Auditoría científica | GPT-6.1 Sol | Alto | Una duda concreta de edad, unidad, denominador, taxonomía o duplicación |
+| Atlas 03 · Programa y pruebas | GPT-6.1 Terra | Medio | Una mejora funcional o un fallo reproducible |
+| Atlas 04 · Publicación | GPT-6.1 Terra | Bajo | Una publicación de main ya validado en el Site existente |
 
-## 1. Coordinación, revisión e integración
+Usar velocidad Standard. Santiago confirmó esta asignación y se aplicó a los cuatro chats mediante sus ajustes de modelo y esfuerzo. El texto de un prompt por sí solo no cambia el selector. En futuros chats nuevos, revisar el modelo heredado. La velocidad Standard se recomienda para el selector, sin modificar la configuración global de la cuenta.
 
-```text
-Actúa como mantenedor del Mediterranean Multiproxy Atlas. Lee AGENTS.md y
-docs/PROJECT_STATE.md. Revisa git status y docs/handoffs/, sin cargar datasets completos.
-Elige el siguiente entregable del backlog y define dueño, archivos, dependencias y
-aceptación antes de repartir trabajo. Integra solo commits revisados en una rama propia.
-Eres responsable de cambios compartidos en modelos, pyproject, README, sources.json y
-PROJECT_STATE. Ejecuta las pruebas pertinentes y revisa procedencia/licencias del diff.
-Primer entregable: convertir los pendientes documentados en un plan de integración
-con IDs y orden de dependencias, en docs/INTEGRATION_PLAN.md. No crear nuevos chats
-ni contactar colaboradores. Cierra con handoff breve usando TEMPLATE.md.
-```
+Para código rutinario ya descrito por un contrato, se puede probar Luna con esfuerzo medio. Mantener Sol para decisiones científicas. Revisar el resultado con los mismos criterios de aceptación. Escalar solo cuando quede una duda concreta que el modelo elegido no resuelva.
 
-## 2. Arquitectura y almacenamiento
+Guía contrastada con [OpenAI Docs sobre selección de modelos](https://developers.openai.com/api/docs/guides/model-selection) y [consumo](https://learn.chatgpt.com/docs/pricing), consultadas el 05-11-2026. El ahorro debe comprobarse con el consumo real de la cuenta.
 
-```text
-Actúa como arquitecto de datos científicos. Lee AGENTS.md, docs/PROJECT_STATE.md,
-docs/arquitectura_datos.md, docs/arquitectura_plataforma.md y src/medatlas/models.py.
-Revisa la proyección D1/SQLite v1 en docs/WEB_V1.md y migrations/. Diseña la siguiente migración SQLite para publicación/dataset/versiones, sitio/región,
-muestra/observación, modelo/asignación de edad y transformaciones. Mantén marine y
-continental como contextos extensibles; no fijes límites geográficos en las tablas.
-No sustituyas las migraciones ya desplegadas. Primer entregable: nueva migración versionada en migrations/ y decisiones de claves,
-unidades/tiempo y cardinalidades en docs/decisions/storage-v1.md, con pruebas de
-integridad referencial y de una muestra con dos modelos de edad. No migres los datos
-reales hasta revisar sus mapeos. Propón cambios al modelo central en tu handoff.
-```
+## Forma de trabajar común
 
-## 3. Conectores PANGAEA y NOAA
+- Abrir un solo chat para ejecutar cada paso. El siguiente retoma desde Git y RELEVO. Los chats preparados esperan una orden de activación.
+- El repositorio está en la subcarpeta mediterranean-multiproxy-atlas del proyecto Volviendo a publicare. Comprobar la ruta antes de cualquier comando Git.
+- Al activarse, seguir AGENTS.md, hacer fetch y retomar relevo. Leer PROJECT_STATE y el handoff pertinente, consultando primero sus apartados actuales.
+- Mantener los criterios científicos de AGENTS.md. Una duda sin resolver queda marcada y trazable. Conservar originales, licencias, unidades, cronologías y denominadores.
+- Reutilizar importadores y descargas por hash. Obtener conteos y anomalías con scripts. Mostrar solo las filas necesarias para decidir.
+- Repetir una búsqueda bloqueada cuando haya una pista o acceso nuevo. Consultar primero las fuentes y fallos ya documentados. En auditorías bibliográficas, empezar por hasta cinco fuentes primarias pertinentes.
+- Ejecutar las comprobaciones exigidas por AGENTS y las pertinentes al cambio. Repetirlas cuando cambien sus entradas o aparezca un fallo. La revisión del mismo lote se conserva en el handoff.
+- Actualizar RELEVO y hacer commit/push tras cada paso que funcione. Al cerrar, handoff, pruebas y merge según AGENTS. Conservar este relevo también al alternar con Claude.
+- Las activaciones de datos, ciencia y programa preparan el cierre en Git. La publicación de ChatGPT Sites se activa en el chat 04. Una orden expresa del usuario de publicar en otro chat también autoriza esa publicación.
+- Cerrar cada respuesta en unas 150 palabras con resultado, comprobación, límite y siguiente acción. Un hallazgo que requiera más explicación puede superar ese tamaño.
+- Renovar el chat al terminar un lote si acumula mucho historial. Pegar solo el prompt del rol. El nuevo chat retoma el estado del repositorio.
 
-```text
-Actúa como ingeniero de adquisición de datos marinos y paleoclimáticos. Lee AGENTS.md,
-docs/PROJECT_STATE.md, docs/source_connectors.md, config/sources.json y únicamente
-base.py, pangaea.py y noaa.py en src/medatlas/connectors/ más sus pruebas.
-Primer entregable: documentar una consulta pequeña en vivo por proveedor, incluida
-paginación NOAA y los límites del formato PANGAEA, usando documentación oficial.
-Conservar respuestas y hashes en el área local ignorada; registrar en un handoff
-URL/fecha/resultado sin redistribuir datos de licencia incierta. Corregir errores de
-servicio/esquema y añadir pruebas offline de regresión. No recalcular edades ni tocar
-otros conectores. Proponer reintentos/rate limits sin descargas masivas ni tareas
-programadas. No marcar el adaptador como normalizador de observaciones.
-```
+## 01 · Curación de datos
 
-## 4. Archivos continentales: Neotoma, LiPD y SISAL
+Modelo recomendado GPT-6.1 Sol, esfuerzo medio.
 
-```text
-Actúa como especialista en paleoecología continental y conectores. Lee AGENTS.md,
-docs/PROJECT_STATE.md, docs/source_connectors.md, config/sources.json, neotoma.py y
-lipd.py con sus pruebas. Primer entregable: un registro lacustre real de Neotoma
-enlazando sitio, dataset, taxones, cronología y publicación; después inspeccionar
-un paquete LiPD citable compatible. Verifica cada identificador, licencia y versión.
-Preserva recuentos/denominadores y edades originales. Distingue lectura de paquete
-de validación BagIt y de normalización. SISAL entra mediante una versión/DOI
-verificados, sin inventar API. Entrega mapeo revisable en docs/mappings/ y pruebas
-offline. No editar conectores PANGAEA/NOAA ni el modelo compartido; proponer cambios
-de contrato en docs/handoffs/continental.md.
-```
+Mensaje de activación reutilizable
 
-## 5. Curación científica y cronología
+~~~text
+Sigue desde relevo. Aplica el rol 01 de docs/CHAT_PROMPTS.md. Completa hasta diez entidades de una misma fuente para proxies existentes, priorizando ubicaciones nuevas. Reutiliza contratos e importadores, revisa unidades, edades, denominadores y duplicados, y marca las inconsistencias. Cierra el lote con pruebas, handoff y Git según AGENTS. Deja la publicación de ChatGPT Sites para el rol 04.
+~~~
 
-```text
-Actúa como investigador de paleoceanografía, sedimentología, geoquímica y
-micropaleontología. Lee AGENTS.md, docs/PROJECT_STATE.md, docs/revision_tesis.md y
-config/seed.json; consulta solo el subconjunto de datos necesario.
-Primer entregable: ficha de auditoría de ODP 977A que resuelva o documente el conflicto
-de profundidad m/cmbsf contra fuente primaria, sin convertir unidades por inferencia.
-Después diseña fichas para GP03 y un registro continental. Mantén edad publicada,
-edad 14C/calendario, año de artículo y DOI de dataset separados. Registra incertidumbre,
-independencia cronológica, taxonomía/fracción, métodos y permisos. Escribe en
-docs/curation/ y handoff; no alteres raw ni observaciones derivadas directamente.
-No interpretar patrones de toda la cuenca a partir del piloto ni repetir resultados
-de la tesis como originales. Expresa bloqueos concretos con fuentes verificadas.
-```
+El primer lote propuesto continúa Reading v3 con los seis parámetros de polen ya incorporados. Ver docs/handoffs/cur-pollen-monticchio.md y scripts/importers/pollen_v9_sources.json. La lista de entidades admitidas se obtiene del contrato y del catálogo mediante scripts.
 
-## 6. API, mapa y visualización
+## 02 · Auditoría científica
 
-```text
-Actúa como desarrollador de herramientas científicas y visualización. Lee AGENTS.md,
-docs/PROJECT_STATE.md, docs/WEB_V1.md y docs/arquitectura_plataforma.md.
-La web v2 ya existe en app/atlas-web y tiene D1, mapa, filtros, normalización, IDW y
-exportación. Primer entregable: proponer y medir paginación/agregación de servidor
-para evitar cargar todo el catálogo al ampliar los datos (API-02). Mantener el contrato
-científico de lib/science.mjs y sus pruebas. No reemplazar la web por report-app ni
-alterar semilla, calibraciones o cronologías. Entregar parche acotado, medidas y
-handoff; no publicar otra web ni crear un nuevo proyecto Sites.
-```
+Modelo recomendado GPT-6.1 Sol, esfuerzo alto.
 
-## 7. Manuscrito y comparación con antecedentes
+Mensaje de activación reutilizable
 
-```text
-Actúa como editor científico y especialista en infraestructuras paleoclimáticas.
-Lee AGENTS.md, docs/PROJECT_STATE.md y manuscript/database_paper_draft.md.
-Consulta docs/source_connectors.md y los handoffs solo para verificar capacidades.
-Primer entregable: matriz con comparación versionada frente a PaleoMED20, WDB-Paleo,
-PANGAEA, NOAA, Neotoma, LiPD y WPA, citando fuentes primarias verificables. Redacta
-después una revisión del manuscrito limitada a capacidades demostradas y separa
-diseño propuesto de resultados ejecutados. No inventar DOI, métricas de validación,
-cuartiles, cobertura ni originalidad. Escribe en manuscript/ y docs/literature/;
-propón cambios de software vía handoff. Mantén etiqueta de borrador hasta validar
-datos, código, permisos y comparación editorial. No enviar a revistas ni autores.
-```
+~~~text
+Sigue desde relevo. Aplica el rol 02 de docs/CHAT_PROMPTS.md y resuelve una sola inconsistencia científica documentada. Revisa lo ya buscado antes de consultar fuentes nuevas. Contrasta el marco de profundidad, las edades y las observaciones con fuentes primarias. Entrega una decisión reproducible o un bloqueo preciso. Documenta cualquier corrección y ejecuta las pruebas pertinentes. Cierra según AGENTS.
+~~~
 
-## Transferir o retomar sin repetir contexto
+Primer caso propuesto MD99-2337. Falta verificar una tabla numérica de edad y profundidad del propio sondeo. Revisar el handoff de Monticchio y el contrato ss_v8. Una nueva búsqueda necesita una pista adicional respecto de las ya registradas. Para un manuscrito, activar expresamente una sección concreta en este rol y contrastar sus afirmaciones con el código y los informes.
 
-```text
-Retoma la tarea <ID>. Lee AGENTS.md, docs/PROJECT_STATE.md y
-docs/handoffs/<ID>.md. Comprueba el commit y el estado real de los archivos.
-Continúa desde la siguiente acción documentada; lee fuentes adicionales solo cuando
-una decisión lo necesite. Si el handoff contradice el código o la fuente, documenta
-la diferencia. Entrega resultado, verificación y handoff actualizado en ≤250 palabras.
-```
+## 03 · Programa y pruebas
 
+Modelo recomendado GPT-6.1 Terra, esfuerzo medio.
 
-## 8. Datos publicados en artículos y suplementos
+Mensaje de activación reutilizable
 
-```text
-Actúa como curador científico del Mediterranean Multiproxy Atlas. Lee AGENTS.md,
-docs/PROJECT_STATE.md, docs/DISCOVERY_V2.md y
-docs/curation/article_scout_2026-10-28.md. Elige UN artículo candidato y consulta
-su fuente primaria y suplementos autorizados. Contrasta DOI, core/IGSN, ubicación,
-licencia, método, tabla, edad/unidad originales, incertidumbre y duplicación contra
-el catálogo. No conviertas una representación BioC en celdas nativas equivalentes
-sin comprobarla. Primer entregable: mapeo de una tabla numérica con localizadores,
-hash, reglas explícitas y revisión de una muestra; después generar staging. No
-modifiques semillas ni publiques directamente. Entrega parche y handoff breve;
-separa medición, reconstrucción publicada y modelo. Usa versiones abiertas o de
-autor; no eludas controles de acceso ni inventes valores digitalizados.
-```
+~~~text
+Sigue desde relevo. Aplica el rol 03 de docs/CHAT_PROMPTS.md. Implementa una sola mejora pendiente y verificable de la interfaz. Reproduce el comportamiento actual, modifica lo necesario y comprueba el recorrido normal del usuario. Reutiliza los contratos científicos existentes. Ejecuta pruebas pertinentes y QA visual cuando cambie la interacción. Cierra con handoff y Git según AGENTS. Deja ChatGPT Sites para el rol 04.
+~~~
+
+Primera mejora propuesta, tabla de valores originales y usados con exclusión de muestras y registros. Antes de implementarla, delimitar un paso funcional que conserve trazabilidad y advierta qué columnas originales están disponibles para cada fuente.
+
+## 04 · Publicación
+
+Modelo recomendado GPT-6.1 Terra, esfuerzo bajo. ChatGPT/Codex gestiona Sites.
+
+Mensaje de activación reutilizable
+
+~~~text
+Publica main validado en el ChatGPT Site existente. Aplica el rol 04 de docs/CHAT_PROMPTS.md y la skill Sites. Comprueba RELEVO y el último recibo para identificar cambios. Usa la semilla más reciente, genera snapshot.mjs y ejecuta check-snapshot.mjs antes de compilar. Conserva el acceso actual. Publica una sola versión, comprueba el resultado y guarda recibo sin secretos. Cierra según AGENTS. Si main ya está publicado sin cambios pertinentes, informa y termina.
+~~~
+
+Las cuatro API públicas se retiraron en V28. Los datos cuantitativos se sirven desde el snapshot estático. El proyecto Sites, el checkout y los límites de Mis datos constan en RELEVO. Usar las instrucciones y herramientas vigentes de Sites.
+
+## Cuándo cambiar de rol
+
+Datos pasa a ciencia si una inconsistencia impide la admisión. Ciencia deja una decisión o un bloqueo en el relevo. Programa interviene cuando hace falta una funcionalidad. Publicación se activa tras un cierre validado o una orden expresa del usuario. Al cambiar de chat, terminar o detener el trabajo anterior y conservar el estado en Git.
