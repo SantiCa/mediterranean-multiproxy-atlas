@@ -1,0 +1,211 @@
+{
+  "parent_sha256": "aabfb992b6ae6abb206df26e17dca4fed5c501167313d8e9896231b4fa999696",
+  "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
+  "reading_entities": [
+    {
+      "entity": "LAGNEGRA",
+      "site": "Laguna Negra",
+      "latitude": 42.00027778,
+      "longitude": -2.848333333,
+      "rows": 82,
+      "first_row": 1118,
+      "last_row": 1199,
+      "reference": "Engelbrechten, S. Von 1999 Late-glacial and holocene vegetation and environmental history of the Sierra de Urbión, North-West Central Spain. Trinity College, Dublin, Ireland.",
+      "paper_dois": []
+    },
+    {
+      "entity": "AYOO",
+      "site": "Ayoó de Vidriales",
+      "latitude": 42.12611111,
+      "longitude": -6.070277778,
+      "rows": 79,
+      "first_row": 400,
+      "last_row": 478,
+      "reference": "Morales-Molino, C. and García-Antón, M. 2014 Vegetation and fire history since the last glacial maximum in an inland area of the western Mediterranean Basin (Northern Iberian Plateau, NW Spain), Quaternary Research, 81(1), 63–77. doi:10.1016/j.yqres.2013.10.010.",
+      "paper_dois": [
+        "10.1016/j.yqres.2013.10.010"
+      ]
+    },
+    {
+      "entity": "LAGOAJO",
+      "site": "Lago de Ajo",
+      "latitude": 43.05,
+      "longitude": -6.15,
+      "rows": 78,
+      "first_row": 887,
+      "last_row": 964,
+      "reference": "McKeever, M.. 1984 Comparative palynological studies of two lake sites in western Ireland and northwestern Spain. Trinity College, Dublin, Ireland.; \nAllen, J.R.M., Huntley, B. and Watts, W.A. 1996 The vegetation and climate of northwest Iberia over the last 14,000 years, Journal of Quaternary Science, 11(2), 125–147. doi:10.1002/(SICI)1099-1417(199603/04)11:2<125::AID-JQS232>3.0.CO;2-U.",
+      "paper_dois": [
+        "10.1002/(SICI)1099-1417(199603/04)11:2<125::AID-JQS232>3.0.CO;2-U"
+      ]
+    },
+    {
+      "entity": "LASPARDI",
+      "site": "Las Pardillas",
+      "latitude": 42.0333,
+      "longitude": -3.0333,
+      "rows": 74,
+      "first_row": 1472,
+      "last_row": 1545,
+      "reference": "Sanchez Goñi, M.F. and Hannon, G.E. 1999 High-altitude vegetational pattern on the Iberian Mountain Chain (north-central Spain) during the Holocene, The Holocene, 9(1), 39–57. doi:10.1191/095968399671230625.",
+      "paper_dois": [
+        "10.1191/095968399671230625"
+      ]
+    },
+    {
+      "entity": "SALDROPO",
+      "site": "Saldropo",
+      "latitude": 43.05,
+      "longitude": -2.716666667,
+      "rows": 76,
+      "first_row": 2385,
+      "last_row": 2460,
+      "reference": "Penalba, M.C. and Garmendia, M.P. 1989 Dynamique de végétation tardiglaciaire et holocène du Centre-Nord de l’Espagne d’après l’analyse pollinique. Aix-Marseille 3. Available at: https://www.theses.fr/1989AIX30033 (Accessed: 22 March 2021).; \nPenalba, M.C. 1994 The History of the Holocene vegetation in Northern Spain from pollen analysis, Journal of Ecology, 82(4), 815. doi:10.2307/2261446.",
+      "paper_dois": [
+        "10.2307/2261446"
+      ]
+    },
+    {
+      "entity": "TUB",
+      "site": "Tubilla del Lago",
+      "latitude": 41.8084,
+      "longitude": -3.5727,
+      "rows": 88,
+      "first_row": 2718,
+      "last_row": 2805,
+      "reference": "Morales-Molino, C. et al. 2017 The historical demise of Pinus nigra forests in the Northern Iberian Plateau (south-western Europe), Journal of Ecology. 105(3), 634–646. doi:10.1111/1365-2745.12702.",
+      "paper_dois": [
+        "10.1111/1365-2745.12702"
+      ]
+    },
+    {
+      "entity": "PALANQUES",
+      "site": "Les Palanques",
+      "latitude": 42.16222222,
+      "longitude": 2.438055556,
+      "rows": 84,
+      "first_row": 2912,
+      "last_row": 2995,
+      "reference": "Revelles, J. et al. 2018 Human-environment interaction during the Mesolithic- Neolithic transition in the NE Iberian Peninsula. Vegetation history, climate change and human impact during the Early-Middle Holocene in the Eastern Pre-Pyrenees, Quaternary Science Reviews, 184, 183–200. doi:10.1016/j.quascirev.2017.08.025.",
+      "paper_dois": [
+        "10.1016/j.quascirev.2017.08.025"
+      ]
+    },
+    {
+      "entity": "PERAFITA",
+      "site": "Planell de Perafita",
+      "latitude": 42.4792,
+      "longitude": 1.5669,
+      "rows": 57,
+      "first_row": 6112,
+      "last_row": 6168,
+      "reference": "Miras, Y. et al. 2010 Prehistoric impact on landscape and vegetation at high altitudes: An integrated palaeoecological and archaeological approach in the eastern Pyrenees (Perafita valley, Andorra), Plant Biosystems, 144(4), 924–939. doi:10.1080/11263504.2010.491980.",
+      "paper_dois": [
+        "10.1080/11263504.2010.491980"
+      ]
+    },
+    {
+      "entity": "BELATE01",
+      "site": "Puerto de Belate",
+      "latitude": 43.03333333,
+      "longitude": -2.05,
+      "rows": 60,
+      "first_row": 2077,
+      "last_row": 2136,
+      "reference": "Penalba, M.C. and Garmendia, M.P. 1989 Dynamique de végétation tardiglaciaire et holocène du Centre-Nord de l’Espagne d’après l’analyse pollinique. Aix-Marseille 3. Available at: https://www.theses.fr/1989AIX30033 (Accessed: 22 March 2021).; \nPenalba, M.C. 1994 The history of the Holocene vegetation in Northern Spain from pollen analysis, Journal of Ecology, 82(4), 815. doi:10.2307/2261446.",
+      "paper_dois": [
+        "10.2307/2261446"
+      ]
+    },
+    {
+      "entity": "CULAZON",
+      "site": "Culazón",
+      "latitude": 43.23277778,
+      "longitude": -4.489166667,
+      "rows": 69,
+      "first_row": 523,
+      "last_row": 591,
+      "reference": "López-Sáez, J.A. et al. 2013 20. Culazón, Cantabrian Mountains (northern Spain), Grana, 52(4), 316–318.",
+      "paper_dois": []
+    }
+  ],
+  "held": [
+    {
+      "record": "Reading Villarquemado",
+      "reason": "All 361 IntCal20 medians absent. Published IPE chronology requires a separate age-column contract; no fallback or invented ages."
+    },
+    {
+      "record": "Reading coastal entities and existing-site overlaps",
+      "reason": "Held as in v9 pending entity-specific marine-date or physical-identity review. ELX remains held for 23 zero-sum rows."
+    },
+    {
+      "record": "Reading PEDRIDO",
+      "reason": "Zero retained-205 assemblage sum in 63 of 71 samples. Entire entity held for missing-assemblage review; zero denominators are not observed zero percentages.",
+      "source_rows": [
+        1902,
+        1903,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928,
+        1929,
+        1931,
+        1932,
+        1933,
+        1934,
+        1935,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1947,
+        1948,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1958,
+        1959,
+        1960,
+        1961,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    }
+  ]
+}
