@@ -32,6 +32,8 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
         raise ValueError('Entity already present in parent')
     records, series, audit = pollen.reading(
         resources['iberia.csv'], dict(previous, reading_entities=entities))
+    if any(row[0] > 55 for item in series for row in item['rows']):
+        raise ValueError('Age beyond IntCal20 domain (55 ka BP); source-specific chronology review required')
     notes = {entry['entity']: entry.get('qc_notes', []) for entry in entities}
     for item in records + series:
         entity_notes = notes[item.get('core') or item['source_event']]

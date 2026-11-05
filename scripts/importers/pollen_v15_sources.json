@@ -3,17 +3,16 @@
   "parser_contract_sha256": "d470ada61c6e40432876021cf10651afdd9d3de40b1e78b0b527a337850504f6",
   "reading_entities": [
     {
-      "entity": "CUCU",
-      "site": "Cucú cueva",
-      "latitude": 37.63861111,
-      "longitude": -2.258055556,
-      "rows": 4,
-      "first_row": 485,
-      "last_row": 488,
-      "reference": "González-Ramón, A. et al. 2012 Late Quaternary paleoenvironmental record from a sedimentary fill in Cucú cave, Almería, SE Spain, Quaternary Research, 77(2), 264–272.",
-      "paper_dois": [],
-      "qc_notes": [
-        "Registro de relleno sedimentario de la cueva Cucu, con cuatro muestras en Reading v3. No se interpreta como archivo lacustre ni se interpola una resolución uniforme."
+      "entity": "SALOIO",
+      "site": "Lake Saloio",
+      "latitude": 39.6133,
+      "longitude": -9.0158,
+      "rows": 24,
+      "first_row": 5996,
+      "last_row": 6019,
+      "reference": "Gomes, S.D. 2011 13. Lake Saloio (Nazaré, western Portugal), Grana, 50(3), 228–231. doi:10.1080/00173134.2011.579620.",
+      "paper_dois": [
+        "10.1080/00173134.2011.579620"
       ]
     },
     {
@@ -222,6 +221,24 @@
       "checked_date": "2026-11-05",
       "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
       "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+    },
+    {
+      "record": "Reading CUCU",
+      "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+      "source_rows": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "age_medians_original": [
+        "46057",
+        "61527",
+        "114264",
+        "130000"
+      ],
+      "calibration_doi": "10.1017/RDC.2020.41",
+      "checked_date": "2026-11-05"
     }
   ]
 }

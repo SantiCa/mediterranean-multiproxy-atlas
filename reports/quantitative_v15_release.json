@@ -1,22 +1,22 @@
 {
-  "version": "atlas-quantitative-2026-11-05-v15-c238c8dd19b",
+  "version": "atlas-quantitative-2026-11-05-v15-c43715a903d",
   "parent_version": "atlas-quantitative-2026-11-05-v14-c21d91a390a",
   "parent_sha256": "0dbc97ed90bb53928ca23dcb63df29d83cd8e8cb4f47378834049c885c407da7",
   "parent_unchanged": true,
   "counts": {
     "records": 243,
     "series": 1894,
-    "values": 965032,
+    "values": 965152,
     "new_records": 10,
     "new_series": 60,
-    "new_values": 2196,
+    "new_values": 2316,
     "missing_age_values": 6615
   },
   "input_fragments": {
     "reading_pollen_v15": {
       "records": 10,
       "series": 60,
-      "values": 2196
+      "values": 2316
     }
   },
   "family_counts": {
@@ -42,12 +42,12 @@
     4700.0
   ],
   "admitted_series": [
-    "reading9-cucu-Abies_",
-    "reading9-cucu-Alnus_",
-    "reading9-cucu-Betula_",
-    "reading9-cucu-Fagus_",
-    "reading9-cucu-Pinus_",
-    "reading9-cucu-Quercus_deciduous_",
+    "reading9-saloio-Abies_",
+    "reading9-saloio-Alnus_",
+    "reading9-saloio-Betula_",
+    "reading9-saloio-Fagus_",
+    "reading9-saloio-Pinus_",
+    "reading9-saloio-Quercus_deciduous_",
     "reading9-panera-Abies_",
     "reading9-panera-Alnus_",
     "reading9-panera-Betula_",
@@ -288,7 +288,7 @@
         "reading9-valdeyer",
         "reading9-xl",
         "reading9-leche",
-        "reading9-cucu",
+        "reading9-saloio",
         "reading9-panera",
         "reading9-lacruz",
         "reading9-brezosa",
@@ -418,27 +418,45 @@
         "checked_date": "2026-11-05",
         "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
         "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+      },
+      {
+        "record": "Reading CUCU",
+        "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+        "source_rows": [
+          485,
+          486,
+          487,
+          488
+        ],
+        "age_medians_original": [
+          "46057",
+          "61527",
+          "114264",
+          "130000"
+        ],
+        "calibration_doi": "10.1017/RDC.2020.41",
+        "checked_date": "2026-11-05"
       }
     ]
   },
-  "sha256": "1f74a56a5262496fc3becacae6260e69ca1e7631b45fa155063352679097713e",
-  "bytes": 68680148,
+  "sha256": "17df2d5959720dc3c83154c1dfd9acb691bdf094531f3f1af7d3a64002cb3b11",
+  "bytes": 68686906,
   "chronology_and_denominator_audit": [
     {
-      "entity": "CUCU",
-      "samples": 4,
+      "entity": "SALOIO",
+      "samples": 24,
       "age_ka_bp": [
-        46.057,
-        130.0
+        0.313,
+        2.804
       ],
       "denominator_range": [
-        52.0,
-        202.0
+        511.0,
+        1674.0
       ],
       "nearest_parent": {
-        "record_id": "reading9-sabinar",
-        "name": "El Sabinar",
-        "angular_distance_degrees": 0.578919945888972,
+        "record_id": "pangaea6-pos287_26_d13902",
+        "name": "POS287_26_D13902",
+        "angular_distance_degrees": 1.1081130492869395,
         "status": "Screening only; proximity does not establish physical identity"
       }
     },
@@ -698,6 +716,24 @@
       "checked_date": "2026-11-05",
       "publication_url": "https://epic.awi.de/36566/83/Cerrillo-Cuenca-Gonzales-Cordero_2011.pdf",
       "publication_access": "Access denied by Anubis; numeric corrected position not verified"
+    },
+    {
+      "record": "Reading CUCU",
+      "reason": "INTCAL2020_median spans 46057 to 130000 years BP, exceeding the IntCal20 curve domain (0 to 55000 cal BP). A source-specific chronology audit is required; an age-model extrapolation or non-radiocarbon age cannot be labelled calibrated IntCal20 without review. Entire entity held; no ages clipped or replaced.",
+      "source_rows": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "age_medians_original": [
+        "46057",
+        "61527",
+        "114264",
+        "130000"
+      ],
+      "calibration_doi": "10.1017/RDC.2020.41",
+      "checked_date": "2026-11-05"
     }
   ],
   "resources": [
