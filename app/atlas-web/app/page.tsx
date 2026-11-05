@@ -1237,6 +1237,8 @@ export default function Atlas() {
                       {active.series.evidence_type ===
                       "published_reconstruction"
                         ? "Reconstrucción publicada"
+                        : active.series.evidence_type === "derived_relative_abundance"
+                          ? "Abundancia relativa calculada"
                         : "Valor publicado"}
                     </dd>
                   </div>

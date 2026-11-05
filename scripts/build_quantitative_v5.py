@@ -92,7 +92,8 @@ def assemble(baseline=None, fragment_paths=None, version_prefix=VERSION_PREFIX, 
             s=copy.deepcopy(source)
             if s["record_id"] in linked:
                 s["linked_from_record"]=s["record_id"];s["record_id"]=linked[s["record_id"]]
-                note = ('Serie enlazada a la misma perforación IODP verificada en el contrato de fuente'
+                note = (fragment.get('parent_link_notes', {}).get(s['linked_from_record'])
+                        or 'Serie enlazada al mismo registro verificado en el contrato de fuente'
                         if s['linked_from_record'] in explicit_links else
                         'Serie nueva enlazada a registro padre por evento PANGAEA idéntico (etiqueta+coordenadas)')
                 s.setdefault('qc_notes', []).append(note)

@@ -1,0 +1,786 @@
+{
+  "version": "atlas-quantitative-2026-11-05-v9-c55489c6f83",
+  "parent_version": "atlas-quantitative-2026-11-05-v8-c131d231e50",
+  "parent_sha256": "f3fa459a341e68d83c677e9aecb6ceb9832a960253635d4a56cb8460f0c7bbd9",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 183,
+    "series": 1534,
+    "values": 944650,
+    "new_records": 29,
+    "new_series": 182,
+    "new_values": 19898,
+    "missing_age_values": 6615
+  },
+  "input_fragments": {
+    "forest_pollen": {
+      "records": 30,
+      "series": 182,
+      "values": 19898
+    }
+  },
+  "family_counts": {
+    "Temperatura": 38,
+    "Geoquímica elemental": 327,
+    "Sedimentología": 219,
+    "Biomarcadores": 20,
+    "Micropaleontología": 8,
+    "Isótopos estables": 157,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 172,
+    "Materia orgánica y biomarcadores": 57,
+    "Polen": 503,
+    "Oxigenación bentónica": 9
+  },
+  "comparison_groups": 1000,
+  "numeric_age_extent_ka_bp": [
+    -1.5,
+    4700.0
+  ],
+  "admitted_series": [
+    "pollen9-monticchio-noaa-subset-Woody_taxa_percent_",
+    "pollen9-monticchio-noaa-subset-Pinus_",
+    "pollen9-monticchio-noaa-subset-Juniperus_type_",
+    "pollen9-monticchio-noaa-subset-Betula_",
+    "pollen9-monticchio-noaa-subset-Quercus_",
+    "pollen9-monticchio-noaa-subset-Alnus_",
+    "pollen9-monticchio-noaa-subset-Abies_",
+    "pollen9-monticchio-noaa-subset-Fagus_",
+    "reading9-antas-Abies_",
+    "reading9-antas-Alnus_",
+    "reading9-antas-Betula_",
+    "reading9-antas-Fagus_",
+    "reading9-antas-Pinus_",
+    "reading9-antas-Quercus_deciduous_",
+    "reading9-n-cas-Abies_",
+    "reading9-n-cas-Alnus_",
+    "reading9-n-cas-Betula_",
+    "reading9-n-cas-Fagus_",
+    "reading9-n-cas-Pinus_",
+    "reading9-n-cas-Quercus_deciduous_",
+    "reading9-n-gua-Abies_",
+    "reading9-n-gua-Alnus_",
+    "reading9-n-gua-Betula_",
+    "reading9-n-gua-Fagus_",
+    "reading9-n-gua-Pinus_",
+    "reading9-n-gua-Quercus_deciduous_",
+    "reading9-laroya-Abies_",
+    "reading9-laroya-Alnus_",
+    "reading9-laroya-Betula_",
+    "reading9-laroya-Fagus_",
+    "reading9-laroya-Pinus_",
+    "reading9-laroya-Quercus_deciduous_",
+    "reading9-serranil-Abies_",
+    "reading9-serranil-Alnus_",
+    "reading9-serranil-Betula_",
+    "reading9-serranil-Fagus_",
+    "reading9-serranil-Pinus_",
+    "reading9-serranil-Quercus_deciduous_",
+    "reading9-sanrafa-Abies_",
+    "reading9-sanrafa-Alnus_",
+    "reading9-sanrafa-Betula_",
+    "reading9-sanrafa-Fagus_",
+    "reading9-sanrafa-Pinus_",
+    "reading9-sanrafa-Quercus_deciduous_",
+    "reading9-estanilles-Abies_",
+    "reading9-estanilles-Alnus_",
+    "reading9-estanilles-Betula_",
+    "reading9-estanilles-Fagus_",
+    "reading9-estanilles-Pinus_",
+    "reading9-estanilles-Quercus_deciduous_",
+    "reading9-bsn6-Abies_",
+    "reading9-bsn6-Alnus_",
+    "reading9-bsn6-Betula_",
+    "reading9-bsn6-Fagus_",
+    "reading9-bsn6-Pinus_",
+    "reading9-bsn6-Quercus_deciduous_",
+    "reading9-salines-Abies_",
+    "reading9-salines-Alnus_",
+    "reading9-salines-Betula_",
+    "reading9-salines-Fagus_",
+    "reading9-salines-Pinus_",
+    "reading9-salines-Quercus_deciduous_",
+    "reading9-sbaza-Abies_",
+    "reading9-sbaza-Alnus_",
+    "reading9-sbaza-Betula_",
+    "reading9-sbaza-Fagus_",
+    "reading9-sbaza-Pinus_",
+    "reading9-sbaza-Quercus_deciduous_",
+    "reading9-cancruz-Abies_",
+    "reading9-cancruz-Alnus_",
+    "reading9-cancruz-Betula_",
+    "reading9-cancruz-Fagus_",
+    "reading9-cancruz-Pinus_",
+    "reading9-cancruz-Quercus_deciduous_",
+    "reading9-gador-Abies_",
+    "reading9-gador-Alnus_",
+    "reading9-gador-Betula_",
+    "reading9-gador-Fagus_",
+    "reading9-gador-Pinus_",
+    "reading9-gador-Quercus_deciduous_",
+    "reading9-sabinar-Abies_",
+    "reading9-sabinar-Alnus_",
+    "reading9-sabinar-Betula_",
+    "reading9-sabinar-Fagus_",
+    "reading9-sabinar-Pinus_",
+    "reading9-sabinar-Quercus_deciduous_",
+    "reading9-villaverde-Abies_",
+    "reading9-villaverde-Alnus_",
+    "reading9-villaverde-Betula_",
+    "reading9-villaverde-Fagus_",
+    "reading9-villaverde-Pinus_",
+    "reading9-villaverde-Quercus_deciduous_",
+    "reading9-siles-Abies_",
+    "reading9-siles-Alnus_",
+    "reading9-siles-Betula_",
+    "reading9-siles-Fagus_",
+    "reading9-siles-Pinus_",
+    "reading9-siles-Quercus_deciduous_",
+    "reading9-bsm08-Abies_",
+    "reading9-bsm08-Alnus_",
+    "reading9-bsm08-Betula_",
+    "reading9-bsm08-Fagus_",
+    "reading9-bsm08-Pinus_",
+    "reading9-bsm08-Quercus_deciduous_",
+    "reading9-portalet-Abies_",
+    "reading9-portalet-Alnus_",
+    "reading9-portalet-Betula_",
+    "reading9-portalet-Fagus_",
+    "reading9-portalet-Pinus_",
+    "reading9-portalet-Quercus_deciduous_",
+    "reading9-enol-Abies_",
+    "reading9-enol-Alnus_",
+    "reading9-enol-Betula_",
+    "reading9-enol-Fagus_",
+    "reading9-enol-Pinus_",
+    "reading9-enol-Quercus_deciduous_",
+    "reading9-zonarcombined-Abies_",
+    "reading9-zonarcombined-Alnus_",
+    "reading9-zonarcombined-Betula_",
+    "reading9-zonarcombined-Fagus_",
+    "reading9-zonarcombined-Pinus_",
+    "reading9-zonarcombined-Quercus_deciduous_",
+    "reading9-carrizal-Abies_",
+    "reading9-carrizal-Alnus_",
+    "reading9-carrizal-Betula_",
+    "reading9-carrizal-Fagus_",
+    "reading9-carrizal-Pinus_",
+    "reading9-carrizal-Quercus_deciduous_",
+    "reading9-animas-Abies_",
+    "reading9-animas-Alnus_",
+    "reading9-animas-Betula_",
+    "reading9-animas-Fagus_",
+    "reading9-animas-Pinus_",
+    "reading9-animas-Quercus_deciduous_",
+    "reading9-navamuno_s3-Abies_",
+    "reading9-navamuno_s3-Alnus_",
+    "reading9-navamuno_s3-Betula_",
+    "reading9-navamuno_s3-Fagus_",
+    "reading9-navamuno_s3-Pinus_",
+    "reading9-navamuno_s3-Quercus_deciduous_",
+    "reading9-bdlc-01-Abies_",
+    "reading9-bdlc-01-Alnus_",
+    "reading9-bdlc-01-Betula_",
+    "reading9-bdlc-01-Fagus_",
+    "reading9-bdlc-01-Pinus_",
+    "reading9-bdlc-01-Quercus_deciduous_",
+    "reading9-algendar-Abies_",
+    "reading9-algendar-Alnus_",
+    "reading9-algendar-Betula_",
+    "reading9-algendar-Fagus_",
+    "reading9-algendar-Pinus_",
+    "reading9-algendar-Quercus_deciduous_",
+    "reading9-cporter-Abies_",
+    "reading9-cporter-Alnus_",
+    "reading9-cporter-Betula_",
+    "reading9-cporter-Fagus_",
+    "reading9-cporter-Pinus_",
+    "reading9-cporter-Quercus_deciduous_",
+    "reading9-htimoner-Abies_",
+    "reading9-htimoner-Alnus_",
+    "reading9-htimoner-Betula_",
+    "reading9-htimoner-Fagus_",
+    "reading9-htimoner-Pinus_",
+    "reading9-htimoner-Quercus_deciduous_",
+    "reading9-pratvila-Abies_",
+    "reading9-pratvila-Alnus_",
+    "reading9-pratvila-Betula_",
+    "reading9-pratvila-Fagus_",
+    "reading9-pratvila-Pinus_",
+    "reading9-pratvila-Quercus_deciduous_",
+    "reading9-sonbou-Abies_",
+    "reading9-sonbou-Alnus_",
+    "reading9-sonbou-Betula_",
+    "reading9-sonbou-Fagus_",
+    "reading9-sonbou-Pinus_",
+    "reading9-sonbou-Quercus_deciduous_",
+    "reading9-marbore-composite-Abies_",
+    "reading9-marbore-composite-Alnus_",
+    "reading9-marbore-composite-Betula_",
+    "reading9-marbore-composite-Fagus_",
+    "reading9-marbore-composite-Pinus_",
+    "reading9-marbore-composite-Quercus_deciduous_"
+  ],
+  "integration_quarantine": [],
+  "held_core_records": [],
+  "linked_to_parent_records": {
+    "pollen9-monticchio-noaa-subset": "noaa-5463-8909"
+  },
+  "partial_numeric_overlap_links": [],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "mendeley8-339-u1386",
+        "mendeley8-339-u1390"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "reading9-antas",
+        "reading9-n-cas",
+        "reading9-n-gua",
+        "reading9-laroya",
+        "reading9-serranil",
+        "reading9-sanrafa",
+        "reading9-estanilles",
+        "reading9-bsn6",
+        "reading9-salines",
+        "reading9-sbaza",
+        "reading9-cancruz",
+        "reading9-gador",
+        "reading9-sabinar",
+        "reading9-villaverde",
+        "reading9-siles",
+        "reading9-bsm08",
+        "reading9-portalet",
+        "reading9-enol",
+        "reading9-zonarcombined",
+        "reading9-carrizal",
+        "reading9-animas",
+        "reading9-navamuno_s3",
+        "reading9-bdlc-01",
+        "reading9-algendar",
+        "reading9-cporter",
+        "reading9-htimoner",
+        "reading9-pratvila",
+        "reading9-sonbou",
+        "reading9-marbore-composite"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "scripts/importers/pollen_v9_sources.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "forest_pollen": []
+  },
+  "pending_source_candidates": {
+    "forest_pollen": [
+      {
+        "record": "MD99-2337",
+        "reason": "No numeric same-core depth-age anchors verified. PANGAEA.971575, .971574 and .256528 supply depth only. Ducassou 2018 text inaccessible in this audit, official Elsevier text-mining endpoint returned 429. Published stratigraphic bands are insufficient.",
+        "paper_doi": "10.1016/j.margeo.2017.09.014",
+        "dataset_doi": "10.1594/PANGAEA.971575"
+      },
+      {
+        "record": "Neotoma 47525 Monticchio",
+        "reason": "924-sample composite overlaps NOAA 5463, retained for a later version-replacement audit. Includes older material to 132809 cal BP; not appended as independent replicates.",
+        "dataset_doi": "10.21233/KVNC-0856"
+      },
+      {
+        "record": "Reading ELX",
+        "reason": "23 of 110 rows have a zero retained assemblage sum. Held for a separate missing-assemblage review."
+      },
+      {
+        "record": "Reading other entities",
+        "reason": "Bounded batch of 29 new locations. Coastal marine-date and existing-parent overlaps require separate admission audits."
+      }
+    ]
+  },
+  "sha256": "540db9b8475ecf6974d20c5332b088d82876b2e0b6db935232b06e246045d647",
+  "bytes": 64082289,
+  "chronology_and_denominator_audit": [
+    {
+      "entity": "ANTAS",
+      "samples": 195,
+      "age_ka_bp": [
+        1.303,
+        13.665
+      ],
+      "denominator_range": [
+        44.0,
+        2721.0
+      ]
+    },
+    {
+      "entity": "N-CAS",
+      "samples": 34,
+      "age_ka_bp": [
+        5.629,
+        10.74
+      ],
+      "denominator_range": [
+        116.0,
+        430.0
+      ]
+    },
+    {
+      "entity": "N-GUA",
+      "samples": 30,
+      "age_ka_bp": [
+        8.056,
+        10.654
+      ],
+      "denominator_range": [
+        163.0,
+        358.0
+      ]
+    },
+    {
+      "entity": "LAROYA",
+      "samples": 72,
+      "age_ka_bp": [
+        -0.041,
+        16.334
+      ],
+      "denominator_range": [
+        239.0,
+        519.0
+      ]
+    },
+    {
+      "entity": "SERRANIL",
+      "samples": 34,
+      "age_ka_bp": [
+        -0.05,
+        2.254
+      ],
+      "denominator_range": [
+        510.0,
+        684.0
+      ]
+    },
+    {
+      "entity": "SANRAFA",
+      "samples": 160,
+      "age_ka_bp": [
+        -0.03,
+        13.498
+      ],
+      "denominator_range": [
+        28.0,
+        25239.0
+      ]
+    },
+    {
+      "entity": "ESTANILLES",
+      "samples": 58,
+      "age_ka_bp": [
+        7.646,
+        12.04
+      ],
+      "denominator_range": [
+        46.0,
+        2567.0
+      ]
+    },
+    {
+      "entity": "BSN6",
+      "samples": 62,
+      "age_ka_bp": [
+        -0.055,
+        9.599
+      ],
+      "denominator_range": [
+        218.0,
+        902.0
+      ]
+    },
+    {
+      "entity": "SALINES",
+      "samples": 98,
+      "age_ka_bp": [
+        1.394,
+        14.149
+      ],
+      "denominator_range": [
+        178.0,
+        1612.0
+      ]
+    },
+    {
+      "entity": "SBAZA",
+      "samples": 111,
+      "age_ka_bp": [
+        0.103,
+        8.46
+      ],
+      "denominator_range": [
+        249.0,
+        399.0
+      ]
+    },
+    {
+      "entity": "CANCRUZ",
+      "samples": 39,
+      "age_ka_bp": [
+        -0.006,
+        9.413
+      ],
+      "denominator_range": [
+        237.0,
+        779.0
+      ]
+    },
+    {
+      "entity": "GADOR",
+      "samples": 86,
+      "age_ka_bp": [
+        1.195,
+        6.222
+      ],
+      "denominator_range": [
+        212.0,
+        399.0
+      ]
+    },
+    {
+      "entity": "SABINAR",
+      "samples": 129,
+      "age_ka_bp": [
+        1.14,
+        6.58
+      ],
+      "denominator_range": [
+        339.0,
+        564.0
+      ]
+    },
+    {
+      "entity": "VILLAVERDE",
+      "samples": 116,
+      "age_ka_bp": [
+        0.0,
+        9.182
+      ],
+      "denominator_range": [
+        100.0,
+        383.0
+      ]
+    },
+    {
+      "entity": "SILES",
+      "samples": 86,
+      "age_ka_bp": [
+        0.189,
+        20.697
+      ],
+      "denominator_range": [
+        235.0,
+        520.0
+      ]
+    },
+    {
+      "entity": "BSM08",
+      "samples": 137,
+      "age_ka_bp": [
+        0.184,
+        9.856
+      ],
+      "denominator_range": [
+        261.0,
+        622.0
+      ]
+    },
+    {
+      "entity": "PORTALET",
+      "samples": 255,
+      "age_ka_bp": [
+        2.128,
+        14.584
+      ],
+      "denominator_range": [
+        208.0,
+        572.0
+      ]
+    },
+    {
+      "entity": "ENOL",
+      "samples": 33,
+      "age_ka_bp": [
+        2.487,
+        12.613
+      ],
+      "denominator_range": [
+        391.0,
+        631.0
+      ]
+    },
+    {
+      "entity": "ZONARcombined",
+      "samples": 52,
+      "age_ka_bp": [
+        -0.045,
+        3.234
+      ],
+      "denominator_range": [
+        135.0,
+        385.0
+      ]
+    },
+    {
+      "entity": "CARRIZAL",
+      "samples": 67,
+      "age_ka_bp": [
+        0.0,
+        12.967
+      ],
+      "denominator_range": [
+        333.0,
+        874.0
+      ]
+    },
+    {
+      "entity": "ANIMAS",
+      "samples": 48,
+      "age_ka_bp": [
+        -0.057,
+        0.797
+      ],
+      "denominator_range": [
+        268.0,
+        496.0
+      ]
+    },
+    {
+      "entity": "Navamuno_S3",
+      "samples": 264,
+      "age_ka_bp": [
+        -0.028,
+        14.466
+      ],
+      "denominator_range": [
+        112.0,
+        2355.0
+      ]
+    },
+    {
+      "entity": "BdlC-01",
+      "samples": 80,
+      "age_ka_bp": [
+        -0.056,
+        1.44
+      ],
+      "denominator_range": [
+        199.0,
+        351.0
+      ]
+    },
+    {
+      "entity": "ALGENDAR",
+      "samples": 137,
+      "age_ka_bp": [
+        3.447,
+        9.512
+      ],
+      "denominator_range": [
+        161.0,
+        995.0
+      ]
+    },
+    {
+      "entity": "CPORTER",
+      "samples": 88,
+      "age_ka_bp": [
+        4.597,
+        8.809
+      ],
+      "denominator_range": [
+        197.0,
+        646.0
+      ]
+    },
+    {
+      "entity": "HTIMONER",
+      "samples": 46,
+      "age_ka_bp": [
+        5.089,
+        8.686
+      ],
+      "denominator_range": [
+        259.0,
+        680.0
+      ]
+    },
+    {
+      "entity": "PRATVILA",
+      "samples": 48,
+      "age_ka_bp": [
+        0.357,
+        23.693
+      ],
+      "denominator_range": [
+        6.0,
+        1066.0
+      ]
+    },
+    {
+      "entity": "SONBOU",
+      "samples": 24,
+      "age_ka_bp": [
+        3.623,
+        12.386
+      ],
+      "denominator_range": [
+        127.0,
+        692.0
+      ]
+    },
+    {
+      "entity": "Marbore composite",
+      "samples": 66,
+      "age_ka_bp": [
+        -0.018,
+        12.699
+      ],
+      "denominator_range": [
+        300.0,
+        463.0
+      ]
+    }
+  ],
+  "held": [
+    {
+      "record": "MD99-2337",
+      "reason": "No numeric same-core depth-age anchors verified. PANGAEA.971575, .971574 and .256528 supply depth only. Ducassou 2018 text inaccessible in this audit, official Elsevier text-mining endpoint returned 429. Published stratigraphic bands are insufficient.",
+      "paper_doi": "10.1016/j.margeo.2017.09.014",
+      "dataset_doi": "10.1594/PANGAEA.971575"
+    },
+    {
+      "record": "Neotoma 47525 Monticchio",
+      "reason": "924-sample composite overlaps NOAA 5463, retained for a later version-replacement audit. Includes older material to 132809 cal BP; not appended as independent replicates.",
+      "dataset_doi": "10.21233/KVNC-0856"
+    },
+    {
+      "record": "Reading ELX",
+      "reason": "23 of 110 rows have a zero retained assemblage sum. Held for a separate missing-assemblage review."
+    },
+    {
+      "record": "Reading other entities",
+      "reason": "Bounded batch of 29 new locations. Coastal marine-date and existing-parent overlaps require separate admission audits."
+    }
+  ]
+}

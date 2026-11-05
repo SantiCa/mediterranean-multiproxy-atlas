@@ -2,7 +2,16 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Ejecutable v8 (actual, 05-11-2026)
+## Ejecutable v9 (actual, 05-11-2026)
+
+- Site privado actualizado en https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site.
+- Release v9-c55489c6f83 contiene **183 registros / 1.534 series / 944.650 valores / 1.000 grupos base**. Añade 29 ubicaciones ibéricas para seis parámetros forestales y amplía Monticchio NOAA con ocho series. Son 182 series y 19.898 valores nuevos.
+- Reading usa porcentajes del conjunto armonizado de 205 taxones, con contexto de comparación explícito y denominador por muestra. Incertidumbres cronológicas ambiguas conservadas como originales. Monticchio mantiene los porcentajes publicados y edades de laminación.
+- MD99-2337 continúa sin controles numéricos verificados. Neotoma Monticchio 47525 en espera por material compartido con NOAA/ACER. Límites y reproducción en docs/handoffs/cur-pollen-monticchio.md.
+- 81 pruebas Python, 28 Node, tsc, snapshot y build correctos. Producción comprobada en 1.002 archivos. QA local confirma Pinus 24/29 sitios con 507 valores en 6–8 ka BP y nube de 2.655 puntos. Rótulo de evidencia calculada corregido.
+- Recibos reports/pollen_v9_sites_*.json. Fuente Sites 788bc5f. Navegador de producción requiere inicio de sesión ChatGPT. Mis datos sigue desactivado por falta de OWNER_PASSWORD.
+
+## Referencia histórica v8 (05-11-2026)
 
 - Site privado: https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site.
 - Release v8-c131d231e50: **154 registros / 1.352 series / 924.752 valores / 986 grupos base**. Añade 306 mediciones de tamaño medio de sortable silt en U1386, U1390 y CADKS24. 248 quedan fechadas por interpolación entre controles publicados.
