@@ -39,6 +39,8 @@ class ReadingPollenSixthBatch(previous_tests.ReadingPollenBatch):
             seen.add(fingerprint)
 
     def test_out_of_domain_chronology_is_rejected_before_admission(self):
+        if not (batch.pipeline.pollen.RAW / 'iberia.csv').exists():
+            self.skipTest('Ignored Reading original absent; restore with --fetch')
         with patch.object(batch.pipeline.pollen, 'reading', return_value=([], [{'rows': [[56, 0]]}], [])):
             with self.assertRaisesRegex(ValueError, '55 ka BP'):
                 batch.build()
