@@ -10,13 +10,13 @@ BASE = ROOT / 'data/processed/atlas-v9.json'
 CONTRACT = ROOT / 'scripts/importers/pollen_v10_sources.json'
 
 
-def build(fetch=False):
-    """Build a pinned Reading-only child; preserve every parent object unchanged."""
-    contract = json.loads(CONTRACT.read_bytes())
-    if pollen.sha(BASE.read_bytes()) != contract['parent_sha256']:
-        raise ValueError('Stale v9 parent. Review overlaps before rebuilding v10.')
+def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
+    """Build a pinned Reading-only child from a contract, parent and release number."""
+    contract = json.loads(contract_path.read_bytes())
+    if pollen.sha(baseline.read_bytes()) != contract['parent_sha256']:
+        raise ValueError('Stale parent. Review overlaps before rebuilding the child.')
     if pollen.sha(pollen.CONTRACT.read_bytes()) != contract['parser_contract_sha256']:
-        raise ValueError('Reading parser contract changed; review before rebuilding v10.')
+        raise ValueError('Reading parser contract changed; review before rebuilding the child.')
     previous = json.loads(pollen.CONTRACT.read_bytes())
     entities = contract['reading_entities']
     names = {entry['entity'] for entry in entities}
@@ -27,7 +27,7 @@ def build(fetch=False):
     resources = {entry['file']: entry for entry in previous['resources']}
     for filename in ('iberia.csv', 'iberia-readme.docx'):
         pollen.original(resources[filename], fetch)
-    parent = json.loads(BASE.read_bytes())
+    parent = json.loads(baseline.read_bytes())
     if names & {series.get('source_event') for series in parent['series']}:
         raise ValueError('Entity already present in parent')
     records, series, audit = pollen.reading(
@@ -48,21 +48,21 @@ def build(fetch=False):
             angular_distance_degrees=distance,
             status='Screening only; proximity does not establish physical identity')
     fragment = dict(records=records, series=series, pending=contract['held'])
-    path = pollen.RAW / 'forest_pollen_v10_curated.json'
+    path = pollen.RAW / f'forest_pollen_v{version}_curated.json'
     path.write_text(json.dumps(fragment, ensure_ascii=False), encoding='utf8')
     seed, report = pollen.admission.assemble(
-        baseline=BASE, fragment_paths=[path], provider_names=['reading_pollen_v10'],
-        version_prefix='atlas-quantitative-2026-11-05-v10-')
+        baseline=baseline, fragment_paths=[path], provider_names=[f'reading_pollen_v{version}'],
+        version_prefix=f'atlas-quantitative-2026-11-05-v{version}-')
     if report['counts']['new_records'] != len(entities) or report['counts']['new_series'] != 6 * len(entities):
         raise ValueError('Admission quarantined a reviewed entity or series; inspect duplicates')
     raw = json.dumps(seed, ensure_ascii=False, separators=(',', ':')).encode()
     report.update(parent_sha256=contract['parent_sha256'], sha256=pollen.sha(raw), bytes=len(raw),
         chronology_and_denominator_audit=audit, held=contract['held'],
-        source_audits=['scripts/importers/pollen_v10_sources.json',
+        source_audits=[contract_path.relative_to(ROOT).as_posix(),
                        'scripts/importers/pollen_v9_sources.json'],
         resources=[resources[name] for name in ('iberia.csv', 'iberia-readme.docx')])
-    (ROOT / 'data/processed/atlas-v10.json').write_bytes(raw)
-    (ROOT / 'reports/quantitative_v10_release.json').write_text(
+    (ROOT / f'data/processed/atlas-v{version}.json').write_bytes(raw)
+    (ROOT / f'reports/quantitative_v{version}_release.json').write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
     return seed, report
 
