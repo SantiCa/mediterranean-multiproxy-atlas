@@ -2,7 +2,14 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v11 validada, pendiente de publicar (05-11-2026)
+## Colección v12 validada, pendiente de publicar (05-11-2026)
+
+- Release v12-cbfb32f9dfc: **213 registros / 1.714 series / 958.714 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 462 muestras, 60 series y 2.772 valores. Padre v11 íntegro; seis parámetros polínicos y denominadores conservados.
+- Reproducción: `python scripts/build_forest_pollen_v12.py`; contrato pollen_v12_sources.json e informe quantitative_v12_release.json. Reutiliza originales por hash y ensamblador parametrizado; notas científicas específicas del contrato llegan al registro y a sus series. QUINTA02 usa la cronología corregida de v3, documentada en el readme original.
+- 95 pruebas Python, 15 Node y snapshot completo cotejado celda a celda. Reproducción de v11 idéntica en contenido. Sin cuarentenas ni solapamientos numéricos parciales detectados en este lote; no se certifica independencia física exhaustiva. Handoff docs/handoffs/cur-reading-12.md.
+- Sites sigue en v9; publicación de v12 reservada al rol 04. Se mantienen los bloqueos de Pedrido, ELX, Villarquemado, entidades costeras y Monticchio.
+
+## Colección v11 validada, sustituida por v12 (05-11-2026)
 
 - Release v11-c58348d32e0: **203 registros / 1.654 series / 955.942 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 60 series y 4.482 valores; padre v10 íntegro. Abies, Alnus, Betula, Fagus, Pinus y Quercus deciduo conservan su contexto de comparación y denominadores.
 - Reproducción: `python scripts/build_forest_pollen_v11.py`; originales y parser v9 fijados por hash, ensamblador v10 parametrizado. La reproducción de v10 conserva la semilla y el informe sin cambios de contenido. Contrato pollen_v11_sources.json e informe quantitative_v11_release.json.
