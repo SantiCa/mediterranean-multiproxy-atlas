@@ -32,6 +32,11 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, version=10):
         raise ValueError('Entity already present in parent')
     records, series, audit = pollen.reading(
         resources['iberia.csv'], dict(previous, reading_entities=entities))
+    notes = {entry['entity']: entry.get('qc_notes', []) for entry in entities}
+    for item in records + series:
+        entity_notes = notes[item.get('core') or item['source_event']]
+        if entity_notes:
+            item['qc_notes'] = item['qc_notes'] + entity_notes
     for record in records:
         if record['core'] in ('MAI', 'MOLINAES'):
             record['qc_notes'].append(
