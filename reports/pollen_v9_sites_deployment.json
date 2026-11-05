@@ -1,0 +1,23 @@
+{
+  "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_460f0c21697c819198153255cc0c2081",
+  "deployment_id": "appgdep_6aec3335807c81919b6f59ae2ad612a9",
+  "status": "succeeded",
+  "url": "https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site",
+  "source_commit": "788bc5fbdd2be09dfbad10a8d3c4f63e4fd4a644",
+  "curation_commit": "f026050",
+  "release": "atlas-quantitative-2026-11-05-v9-c55489c6f83",
+  "checks": {
+    "python": 81,
+    "node": 28,
+    "typescript": true,
+    "snapshot_cells": 944650,
+    "snapshot_files": 1002,
+    "local_pinus_window": "24/29 locations, 507 values, 6-8 ka BP",
+    "local_pinus_cloud": "29 records, 2655 values",
+    "ui_screenshot": "outputs/pollen-v9-qa.png",
+    "production_browser": "ChatGPT sign-in gate; backend verified with existing service access"
+  },
+  "archive_sha256": "d88d2007c6f71bd2479ee284e28adb39c051b615f7a3715992b6558935668587",
+  "seed_sha256": "540db9b8475ecf6974d20c5332b088d82876b2e0b6db935232b06e246045d647"
+}
