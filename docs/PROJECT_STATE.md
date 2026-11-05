@@ -2,7 +2,14 @@
 
 Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v12 validada, pendiente de publicar (05-11-2026)
+## Colección v13 validada, pendiente de publicar (05-11-2026)
+
+- Release v13-c0f960a7901: **223 registros / 1.774 series / 960.682 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 328 muestras, 60 series y 1.968 valores. Padre v12 íntegro; seis parámetros y denominadores conservados.
+- Reproducción: `python scripts/build_forest_pollen_v13.py`. Contrato pollen_v13_sources.json e informe quantitative_v13_release.json. Originales por hash y ensamblador existentes reutilizados. PATATERO conserva la corrección del techo publicada en v3. N-PEQ mantiene PANGAEA.738850 como referencia de dataset, sin atribuirlo como DOI de artículo ni cambiar la cronología Reading.
+- 101 pruebas Python, 15 Node y snapshot completo cotejado celda a celda. Sin cuarentenas ni solapamientos numéricos parciales detectados. Auditoría exacta adicional incluye vectores de menos de diez muestras: SERTAL y ESTACAS conservan sus nueve muestras cada uno, con advertencia. Handoff docs/handoffs/cur-reading-13.md.
+- Sites sigue en v9; publicación de v13 reservada al rol 04. Continúan los bloqueos anteriores; no se certifica independencia física exhaustiva ni resolución uniforme.
+
+## Colección v12 validada, sustituida por v13 (05-11-2026)
 
 - Release v12-cbfb32f9dfc: **213 registros / 1.714 series / 958.714 valores / 1.000 grupos base**. Diez ubicaciones Reading v3 nuevas, 462 muestras, 60 series y 2.772 valores. Padre v11 íntegro; seis parámetros polínicos y denominadores conservados.
 - Reproducción: `python scripts/build_forest_pollen_v12.py`; contrato pollen_v12_sources.json e informe quantitative_v12_release.json. Reutiliza originales por hash y ensamblador parametrizado; notas científicas específicas del contrato llegan al registro y a sus series. QUINTA02 usa la cronología corregida de v3, documentada en el readme original.
