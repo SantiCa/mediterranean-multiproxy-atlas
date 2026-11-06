@@ -1,0 +1,475 @@
+{
+  "release": "atlas-quantitative-2026-11-06-v20-cf635885fac",
+  "checks": "passed",
+  "base_groups": 1020,
+  "aggregate_groups": 141,
+  "toc_percentage": {
+    "records": 24,
+    "series": 31,
+    "values": 3073
+  },
+  "controlled_aliases": [
+    {
+      "name": "Carbono orgánico total (TOC)",
+      "unit": "%",
+      "context": null,
+      "native_names": [
+        "Carbon, organic, total",
+        "TOC"
+      ],
+      "records": 24,
+      "series": 31,
+      "values": 3073,
+      "base_groups": 12
+    },
+    {
+      "name": "Calcium carbonate",
+      "unit": "%",
+      "context": null,
+      "native_names": [
+        "CaCO3",
+        "Calcium carbonate"
+      ],
+      "records": 19,
+      "series": 20,
+      "values": 2571,
+      "base_groups": 6
+    },
+    {
+      "name": "Ti/Ca ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf)",
+      "native_names": [
+        "Titanium/Calcium ratio"
+      ],
+      "records": 6,
+      "series": 7,
+      "values": 2767,
+      "base_groups": 7
+    },
+    {
+      "name": "Ti/Ca ratio",
+      "unit": "sin unidad",
+      "context": "ratio_basis_unspecified",
+      "native_names": [
+        "Titanium/Calcium ratio"
+      ],
+      "records": 7,
+      "series": 7,
+      "values": 1731,
+      "base_groups": 2
+    },
+    {
+      "name": "Fe/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_basis_unspecified",
+      "native_names": [
+        "Iron/Aluminium ratio"
+      ],
+      "records": 2,
+      "series": 2,
+      "values": 113,
+      "base_groups": 2
+    },
+    {
+      "name": "Carbono orgánico total (TOC)",
+      "unit": "g/g",
+      "context": null,
+      "native_names": [
+        "Carbon, organic, total"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 40,
+      "base_groups": 1
+    },
+    {
+      "name": "Mn/Ca ratio",
+      "unit": "µmol/mol",
+      "context": "ratio_molar",
+      "native_names": [
+        "Manganese/Calcium ratio"
+      ],
+      "records": 2,
+      "series": 2,
+      "values": 63,
+      "base_groups": 1
+    },
+    {
+      "name": "Ti/Ca ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Titanium/Calcium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 170,
+      "base_groups": 1
+    },
+    {
+      "name": "Fe/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Iron/Aluminium ratio"
+      ],
+      "records": 3,
+      "series": 3,
+      "values": 822,
+      "base_groups": 2
+    },
+    {
+      "name": "Silt/clay ratio",
+      "unit": "sin unidad",
+      "context": "grain_fraction_total",
+      "native_names": [
+        "Silt/clay ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 420,
+      "base_groups": 1
+    },
+    {
+      "name": "Rhenium/molybdenum ratio",
+      "unit": "sin unidad",
+      "context": null,
+      "native_names": [
+        "Rhenium/molybdenum ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 28,
+      "base_groups": 1
+    },
+    {
+      "name": "Mn/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_basis_unspecified",
+      "native_names": [
+        "Manganese/Aluminium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 37,
+      "base_groups": 1
+    },
+    {
+      "name": "K/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Potassium/Aluminium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 429,
+      "base_groups": 1
+    },
+    {
+      "name": "Ti/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Titanium/Aluminium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 429,
+      "base_groups": 1
+    },
+    {
+      "name": "Ba/Ti ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Barium/Titanium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 429,
+      "base_groups": 1
+    },
+    {
+      "name": "Zr/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Zirconium/Aluminium ratio"
+      ],
+      "records": 3,
+      "series": 3,
+      "values": 821,
+      "base_groups": 2
+    },
+    {
+      "name": "ln-Zr/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "ln-Zirconium/Aluminium ratio"
+      ],
+      "records": 3,
+      "series": 3,
+      "values": 821,
+      "base_groups": 2
+    },
+    {
+      "name": "Calcium/Iron ratio",
+      "unit": "sin unidad",
+      "context": null,
+      "native_names": [
+        "Calcium/Iron ratio"
+      ],
+      "records": 3,
+      "series": 3,
+      "values": 822,
+      "base_groups": 2
+    },
+    {
+      "name": "Si/Ca ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "Silicon/Calcium ratio"
+      ],
+      "records": 3,
+      "series": 3,
+      "values": 822,
+      "base_groups": 2
+    },
+    {
+      "name": "Ba/Ti ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence element scanner (xrf), cox analytical systems, itrax core scanner",
+      "native_names": [
+        "Barium/Titanium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 512,
+      "base_groups": 1
+    },
+    {
+      "name": "Sodium/Chlorine ratio",
+      "unit": "sin unidad",
+      "context": "matrix_pore_fluid",
+      "native_names": [
+        "Sodium/Chlorine ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 112,
+      "base_groups": 1
+    },
+    {
+      "name": "Magnesium/Chlorine ratio",
+      "unit": "sin unidad",
+      "context": "matrix_pore_fluid",
+      "native_names": [
+        "Magnesium/Chlorine ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 112,
+      "base_groups": 1
+    },
+    {
+      "name": "Bromine/Chlorine ratio",
+      "unit": "sin unidad",
+      "context": "matrix_pore_fluid",
+      "native_names": [
+        "Bromine/Chlorine ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 104,
+      "base_groups": 1
+    },
+    {
+      "name": "Bromine/Magnesium ratio",
+      "unit": "sin unidad",
+      "context": "matrix_pore_fluid",
+      "native_names": [
+        "Bromine/Magnesium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 104,
+      "base_groups": 1
+    },
+    {
+      "name": "Sodium/Chlorine ratio",
+      "unit": "sin unidad",
+      "context": "matrix_soluble_salt",
+      "native_names": [
+        "Sodium/Chlorine ratio"
+      ],
+      "records": 4,
+      "series": 4,
+      "values": 360,
+      "base_groups": 1
+    },
+    {
+      "name": "Magnesium/Chlorine ratio",
+      "unit": "sin unidad",
+      "context": "matrix_soluble_salt",
+      "native_names": [
+        "Magnesium/Chlorine ratio"
+      ],
+      "records": 4,
+      "series": 4,
+      "values": 360,
+      "base_groups": 1
+    },
+    {
+      "name": "Bromine/Chlorine ratio",
+      "unit": "sin unidad",
+      "context": "matrix_soluble_salt",
+      "native_names": [
+        "Bromine/Chlorine ratio"
+      ],
+      "records": 4,
+      "series": 4,
+      "values": 358,
+      "base_groups": 1
+    },
+    {
+      "name": "Bromine/Magnesium ratio",
+      "unit": "sin unidad",
+      "context": "matrix_soluble_salt",
+      "native_names": [
+        "Bromine/Magnesium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 206,
+      "base_groups": 1
+    },
+    {
+      "name": "log-Ti/Ca ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "log-Titanium/Calcium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 224,
+      "base_groups": 1
+    },
+    {
+      "name": "log-Ti/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "log-Titanium/Aluminium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 224,
+      "base_groups": 1
+    },
+    {
+      "name": "log-Ba/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:x-ray fluorescence core scanner (xrf), avaatech",
+      "native_names": [
+        "log-Barium/Aluminium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 224,
+      "base_groups": 1
+    },
+    {
+      "name": "log-Bromine/Titanium ratio",
+      "unit": "sin unidad",
+      "context": null,
+      "native_names": [
+        "log-Bromine/Titanium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 224,
+      "base_groups": 1
+    },
+    {
+      "name": "Clay/Silt ratio",
+      "unit": "sin unidad",
+      "context": null,
+      "native_names": [
+        "Clay/Silt ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 238,
+      "base_groups": 1
+    },
+    {
+      "name": "Mn/Al ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:xrf ratio as published",
+      "native_names": [
+        "Manganese/Aluminium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 183,
+      "base_groups": 1
+    },
+    {
+      "name": "Zr/Rb ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:xrf ratio as published",
+      "native_names": [
+        "Zirconium/Rubidium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 198,
+      "base_groups": 1
+    },
+    {
+      "name": "Ti/Ca ratio",
+      "unit": "sin unidad",
+      "context": "ratio_scanner:xrf ratio as published",
+      "native_names": [
+        "Titanium/Calcium ratio"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 198,
+      "base_groups": 1
+    },
+    {
+      "name": "Fe/Al ratio",
+      "unit": "%",
+      "context": "filippidi_Fe_Al_native_percent_label",
+      "native_names": [
+        "Iron/Aluminium ratio"
+      ],
+      "records": 2,
+      "series": 2,
+      "values": 293,
+      "base_groups": 1
+    },
+    {
+      "name": "Carbono orgánico total (TOC)",
+      "unit": "mg/g",
+      "context": null,
+      "native_names": [
+        "Carbon, organic, per unit sediment mass"
+      ],
+      "records": 1,
+      "series": 1,
+      "values": 33,
+      "base_groups": 1
+    }
+  ],
+  "limits": [
+    "Canonical names are discovery aliases, not conversions or calibration equivalence",
+    "Unknown ratio bases remain explicitly labelled; their aggregation does not establish scientific comparability"
+  ]
+}
