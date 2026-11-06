@@ -12,7 +12,7 @@ Se añaden tres series y 98 valores a BEN14-P4, ya existente; no aumenta el núm
 | Misma fuente, N/sed | Nitrógeno por masa de sedimento; aporte y preservación de nutrientes | mg/g | 33 |
 | Misma fuente, P/sed | Fósforo **lábil**, extracción Olsen con bicarbonato; nutrientes/eutrofización | µg/g | 32 |
 
-Datos CHN para C/N, fracción Olsen para P, edades archivadas en ka BP. Una celda P ausente sigue ausente; no se convierte en cero. P lábil conserva contexto explícito para no agruparlo con P total. Concentraciones aisladas no se convierten en tasas de productividad ni en C/N. La fuente CC-BY-4.0 es suplemento de [Perrette et al., 2019](https://doi.org/10.1016/j.ancene.2018.11.005). Las interpretaciones y unidades se incorporan en campos existentes, incluidos qc_notes y comparison_parameter_name.
+Datos CHN para C/N, fracción Olsen para P, edades archivadas en ka BP. Una celda P ausente sigue ausente; no se convierte en cero. P lábil conserva contexto explícito para no agruparlo con P total. Concentraciones aisladas no se convierten en tasas de productividad ni en C/N. La fuente CC-BY-4.0 es suplemento de [Bajard et al., Legacy of early anthropogenic effects on recent lake eutrophication](https://doi.org/10.1016/j.ancene.2018.11.005). Las interpretaciones y unidades se incorporan en campos existentes, incluidos qc_notes y comparison_parameter_name.
 
 [PANGAEA.667403](https://doi.org/10.1594/PANGAEA.667403): el original contiene TOC −1,710 % a 12,7679 ka BP y 1,010 m. La regla preexistente retiene la serie completa de 135 valores por porcentaje fuera de rango; no se recorta ni corrige el original.
 
