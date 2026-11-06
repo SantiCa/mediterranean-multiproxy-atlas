@@ -229,7 +229,7 @@ def curate(fetch=False, *, contract_path=CONTRACT, baseline=BASE, raw_dir=RAW,
                     out.append([age[2](age_value) if age_value is not None else None, value,
                         row, line, cells[age[0]], cells[col['column']], None, None,
                         cells[depth] if depth is not None else None])
-                if len(out) < 3:
+                if len(out) < entry.get('minimum_observations', 3):
                     continue
                 out.sort(key=lambda r: (r[0] is None, r[0] or 0, r[2]))
                 proxy = native.slug(col['name']) + '_' + native.slug(col['unit'])

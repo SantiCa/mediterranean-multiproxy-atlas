@@ -1,0 +1,862 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-05-v18-cd0f8159f62",
+  "parent_sha256": "6464da775a11f1e1d3f6fcb9039a12b9c8d914b5d6ade37772f8e1371c007652",
+  "bbox": [
+    -10,
+    28,
+    42,
+    48
+  ],
+  "datasets": [
+    {
+      "id": 853815,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.853815",
+      "sha": "f84a600d9e1d9975f7f510ddf8ee576b8092fa9fee5f6bc29a51336debe5f313",
+      "xml_sha": "0d51696cb0f259f5fc841ebcfae9303cf14901f446bf71be6448b406ab20c02c",
+      "title": "(Table 4) UK'37, LDI, TEX86 and corresponding SST values for sediment cores from the Sea of Marmara",
+      "header": [
+        "Event",
+        "Depth sed [m]",
+        "Depth top [m]",
+        "Depth bot [m]",
+        "Age [ka BP] (Estimated)",
+        "UK'37 (Calculated after Conte et al....)",
+        "UK'37 std dev",
+        "TEX86 (Calculated according to Schou...)",
+        "TEX86 std dev [±]",
+        "LDI (Calculated after Rampen et al...)",
+        "Std dev [±]",
+        "SST (1-12) [°C] (Calculated from UK'37 (Prahl ...)",
+        "SST (1-12) std dev [±]",
+        "SST (1-12) [°C] (Calculated from TEX86 (Kim et...)",
+        "SST (1-12) std dev [±]",
+        "SST (1-12) [°C] (Calculated from LDI (Rampen e...)",
+        "SST (1-12) std dev [±]"
+      ],
+      "events": [
+        {
+          "label": "M84/1_122-1",
+          "lat": 40.799,
+          "lon": 27.724,
+          "elevation": "-606.0",
+          "campaign": "M84/1",
+          "device": null
+        },
+        {
+          "label": "M84/1_123-1",
+          "lat": 40.799,
+          "lon": 27.724,
+          "elevation": "-600.0",
+          "campaign": "M84/1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.orggeochem.2015.04.008",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2015,
+        "dates": {
+          "published-print": [
+            [
+              2015,
+              8
+            ]
+          ],
+          "issued": [
+            [
+              2015,
+              8
+            ]
+          ],
+          "published": [
+            [
+              2015,
+              8
+            ]
+          ]
+        },
+        "title": "Rapid and simultaneous analysis of three molecular sea surface temperature proxies and application to sediments from the Sea of Marmara",
+        "sha256": "f5994d0e4be584b217cdde6ba339b11ff1eee7fcd2e56923a9d550e6e4d9319a"
+      },
+      "source_rows": 39,
+      "age_column": 4,
+      "age_transformation": "identity: source point age in ka BP",
+      "chronology_label": "Edad publicada BP; base y dependencias según fuente, sin recalibración local",
+      "columns": [
+        {
+          "name": "Alkenone, unsaturation index UK'37",
+          "short": "UK'37",
+          "unit": "sin unidad",
+          "method": "Calculated after Conte et al. (2006)",
+          "comment": null,
+          "column": 5,
+          "header": "UK'37 (Calculated after Conte et al....)",
+          "family": "indices",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Indicador compuesto de temperatura por biomarcadores; índice adimensional, no temperatura sin calibración",
+          "evidence_type": "published_value",
+          "error_column": 6
+        },
+        {
+          "name": "Tetraether index of 86 carbon atoms",
+          "short": "TEX86",
+          "unit": "sin unidad",
+          "method": "Calculated according to Schouten et al. (2002)",
+          "comment": null,
+          "column": 7,
+          "header": "TEX86 (Calculated according to Schou...)",
+          "family": "indices",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Indicador compuesto de temperatura por biomarcadores; índice adimensional, no temperatura sin calibración",
+          "evidence_type": "published_value",
+          "error_column": 8
+        },
+        {
+          "name": "Long chain diol index",
+          "short": "LDI",
+          "unit": "sin unidad",
+          "method": "Calculated after Rampen et al. (2012)",
+          "comment": null,
+          "column": 9,
+          "header": "LDI (Calculated after Rampen et al...)",
+          "family": "indices",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Indicador compuesto de temperatura por biomarcadores; índice adimensional, no temperatura sin calibración",
+          "evidence_type": "published_value",
+          "error_column": 10
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "Calculated from UK'37 (Prahl and Wakeham, 1987)",
+          "comment": null,
+          "column": 11,
+          "header": "SST (1-12) [°C] (Calculated from UK'37 (Prahl ...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": 12
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "Calculated from TEX86 (Kim et al., 2008)",
+          "comment": null,
+          "column": 13,
+          "header": "SST (1-12) [°C] (Calculated from TEX86 (Kim et...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": 14
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "Calculated from LDI (Rampen et al., 2012)",
+          "comment": null,
+          "column": 15,
+          "header": "SST (1-12) [°C] (Calculated from LDI (Rampen e...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": 16
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Unidades originales conservadas; señal indirecta y reconstrucción publicada se distinguen. Sin nueva calibración, modelo de edad ni interpolación.",
+        "Dos perforaciones MUC/GC con coordenadas idénticas: un solo nodo espacial, no dos vecinos independientes. Edades estimadas publicadas; soporte cronológico no auditado independientemente."
+      ]
+    },
+    {
+      "id": 854722,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.854722",
+      "sha": "a28ee7884ea41470719d101670a2fdadbab5d6ea2447892c17eec4720b30860d",
+      "xml_sha": "5cb3dc5c60ab0cf979416f4b20217058398ce6029b6df934a170b9e3900a587b",
+      "title": "BIT-index, TEX86 and TEX86-based temperatures in sediment core M72/5_640-1 (22-GC 8)",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "BIT",
+        "TEX86",
+        "Ratio",
+        "LST [°C]",
+        "SST (1-12) [°C]"
+      ],
+      "events": [
+        {
+          "label": "M72/5_640-1",
+          "lat": 42.2255,
+          "lon": 36.49317,
+          "elevation": "-847.0",
+          "campaign": "M72/5",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.epsl.2014.07.030",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2014,
+        "dates": {
+          "published-print": [
+            [
+              2014,
+              10
+            ]
+          ],
+          "issued": [
+            [
+              2014,
+              10
+            ]
+          ],
+          "published": [
+            [
+              2014,
+              10
+            ]
+          ]
+        },
+        "title": "Meltwater events and the Mediterranean reconnection at the Saalian–Eemian transition in the Black Sea",
+        "sha256": "2677c27b7cad5bc2038b8eea3f4b9047951b6c9456fe14fa7baa5fd81b2c0648"
+      },
+      "source_rows": 66,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "chronology_label": "Edad publicada BP; base y dependencias según fuente, sin recalibración local",
+      "columns": [
+        {
+          "name": "Branched and isoprenoid tetraether index",
+          "short": "BIT",
+          "unit": "sin unidad",
+          "method": "Calculated according to Hopmans et al. (2004)",
+          "comment": null,
+          "column": 2,
+          "header": "BIT",
+          "family": "indices",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Aporte relativo de GDGT ramificados/terrestres y control de interpretación de TEX86; no precipitación ni escorrentía cuantitativa directa",
+          "evidence_type": "published_value",
+          "error_column": null
+        },
+        {
+          "name": "Tetraether index of 86 carbon atoms",
+          "short": "TEX86",
+          "unit": "sin unidad",
+          "method": "Calculated according to Schouten et al. (2002)",
+          "comment": null,
+          "column": 3,
+          "header": "TEX86",
+          "family": "indices",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Indicador compuesto de temperatura por biomarcadores; índice adimensional, no temperatura sin calibración",
+          "evidence_type": "published_value",
+          "error_column": null
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "Calculated from TEX86 (Kim et al., 2008)",
+          "comment": "0-200 m",
+          "column": 6,
+          "header": "SST (1-12) [°C]",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "black_sea_0_200m_archived",
+          "environmental_interpretation": "Temperatura reconstruida de la capa oceánica 0–200 m, no temperatura de superficie estricta",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Unidades originales conservadas; señal indirecta y reconstrucción publicada se distinguen. Sin nueva calibración, modelo de edad ni interpolación.",
+        "Intervalo Saalian–Eemian publicado del mar Negro. La reconstrucción rotulada SST corresponde a 0–200 m: no se agrupa como superficie estricta ni con la reconstrucción lacustre LST. BIT advierte aportes terrestres y limitaciones de interpretación de TEX86."
+      ]
+    },
+    {
+      "id": 939417,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.939417",
+      "sha": "3ef132617abe721b664dc41eab4d4e8fe3a88011a159b44c7b36d87a8def791e",
+      "xml_sha": "513d2e75d91ef5f4525a2e90e471a4655e525fce321b1b3b5bbfbca5c6bad2cd",
+      "title": "Biomarker and SST reconstruction of sediment core MedSeA-S3-c1",
+      "header": [
+        "Depth sed [m]",
+        "Age [a AD/CE]",
+        "Age [ka BP]",
+        "C37:3Me [ng/g]",
+        "C37:2Me [ng/g]",
+        "UK'37",
+        "SST (1-12) [°C]"
+      ],
+      "events": [
+        {
+          "label": "MedSeA-S3-c1",
+          "lat": 36.0746,
+          "lon": -4.1104,
+          "elevation": "-1136.73",
+          "campaign": "MedSeA2013/1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": null,
+      "source_rows": 33,
+      "age_column": 1,
+      "age_transformation": "reference: (1950 - CE) / 1000 = ka BP",
+      "chronology_label": "Edad publicada BP; base y dependencias según fuente, sin recalibración local",
+      "columns": [
+        {
+          "name": "Alkenone, unsaturation index UK'37",
+          "short": "UK'37",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 5,
+          "header": "UK'37",
+          "family": "indices",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Indicador compuesto de temperatura por biomarcadores; índice adimensional, no temperatura sin calibración",
+          "evidence_type": "published_value",
+          "error_column": null
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "SST, from UK'37",
+          "comment": null,
+          "column": 6,
+          "header": "SST (1-12) [°C]",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "dataset_939417_calibration_unspecified",
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Unidades originales conservadas; señal indirecta y reconstrucción publicada se distinguen. Sin nueva calibración, modelo de edad ni interpolación.",
+        "Calibración específica de SST no declarada en la columna nativa; se aísla por dataset. Las columnas CE y ka BP coinciden por cambio de referencia 1950, sin recalibración."
+      ]
+    },
+    {
+      "id": 733103,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.733103",
+      "sha": "e1503d5643332f3cf91eb7095c96507b0de651d5fbcaad5ed7e42e0cfc68e247",
+      "xml_sha": "4636cccadae619a76a693b7f5adf855582b65b97e68f196f2d275f00ad44efc2",
+      "title": "Reconstruction of sea surface temperature and export productivity of sediment core MD99-2339",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Similarity",
+        "SST win [°C] (Modern analog technique (MAT)...)",
+        "SST win [°C] (Modern analog technique (MAT)...)",
+        "SST win std dev [±]",
+        "SST spr [°C] (Modern analog technique (MAT)...)",
+        "SST spr [°C] (Modern analog technique (MAT)...)",
+        "SST spr std dev [±]",
+        "SST sum [°C] (Modern analog technique (MAT)...)",
+        "SST sum [°C] (Modern analog technique (MAT)...)",
+        "SST sum std dev [±]",
+        "SST aut [°C] (Modern analog technique (MAT)...)",
+        "SST aut [°C] (Modern analog technique (MAT)...)",
+        "SST aut std dev [±]",
+        "PP exp [g/m**2/a] (annual, Modern analog techniq...)",
+        "PP exp [g/m**2/a] (annual, Modern analog techniq...)",
+        "PP exp std dev [±] (annual)",
+        "PP exp spr [g/m**2/a] (Modern analog technique (MAT)...)",
+        "PP exp spr [g/m**2/a] (Modern analog technique (MAT)...)",
+        "PP exp std dev [±] (spring)",
+        "PP exp sum [g/m**2/a] (Modern analog technique (MAT)...)",
+        "PP exp sum [g/m**2/a] (Modern analog technique (MAT)...)",
+        "PP exp std dev [±] (summer)"
+      ],
+      "events": [
+        {
+          "label": "MD99-2339",
+          "lat": 35.8855,
+          "lon": -7.5278333333333,
+          "elevation": "-1177.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 460,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "chronology_label": "Edad publicada BP; base y dependencias según fuente, sin recalibración local",
+      "columns": [
+        {
+          "name": "Sea surface temperature, winter",
+          "short": "SST win",
+          "unit": "°C",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 3,
+          "header": "SST win [°C] (Modern analog technique (MAT)...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Sea surface temperature, spring",
+          "short": "SST spr",
+          "unit": "°C",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 6,
+          "header": "SST spr [°C] (Modern analog technique (MAT)...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Sea surface temperature, summer",
+          "short": "SST sum",
+          "unit": "°C",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 9,
+          "header": "SST sum [°C] (Modern analog technique (MAT)...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Sea surface temperature, autumn",
+          "short": "SST aut",
+          "unit": "°C",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 12,
+          "header": "SST aut [°C] (Modern analog technique (MAT)...)",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Export production",
+          "short": "PP exp",
+          "unit": "g/m**2/a",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": "annual",
+          "column": 15,
+          "header": "PP exp [g/m**2/a] (annual, Modern analog techniq...)",
+          "family": "productivity",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Paleoproductividad marina: producción exportada reconstruida por función de transferencia, estación según parámetro/comentario",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Export production, spring",
+          "short": "PP exp spr",
+          "unit": "g/m**2/a",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 18,
+          "header": "PP exp spr [g/m**2/a] (Modern analog technique (MAT)...)",
+          "family": "productivity",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Paleoproductividad marina: producción exportada reconstruida por función de transferencia, estación según parámetro/comentario",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Export production, summer",
+          "short": "PP exp sum",
+          "unit": "g/m**2/a",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 21,
+          "header": "PP exp sum [g/m**2/a] (Modern analog technique (MAT)...)",
+          "family": "productivity",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Paleoproductividad marina: producción exportada reconstruida por función de transferencia, estación según parámetro/comentario",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Unidades originales conservadas; señal indirecta y reconstrucción publicada se distinguen. Sin nueva calibración, modelo de edad ni interpolación.",
+        "Se elige la reconstrucción SIMMAX28 ponderada por distancia. Alternativas no ponderadas no se suman como observaciones independientes. Desviaciones estándar publicadas sin asignación inequívoca al estimador ponderado/no ponderado: preservadas en original, no imputadas a una serie."
+      ]
+    },
+    {
+      "id": 743087,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.743087",
+      "sha": "d85cd8d9df7ffdd5e2da10c5633a3431c32939493acc116c25db43c33705929d",
+      "xml_sha": "feedd15f9301e70990dc81217473e2121f2e316820114415fa54231f79daac70",
+      "title": "Sea surface temperature and export production reconstructions of sediment core MD95-2040",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "SST sum [°C]",
+        "PP exp sum [g/m**2/a]"
+      ],
+      "events": [
+        {
+          "label": "MD95-2040",
+          "lat": 40.581833333333,
+          "lon": -9.8611666666667,
+          "elevation": "-2465.0",
+          "campaign": "MD101__Campaign",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2009.11.013",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2010,
+        "dates": {
+          "published-print": [
+            [
+              2010,
+              3
+            ]
+          ],
+          "issued": [
+            [
+              2010,
+              3
+            ]
+          ],
+          "published": [
+            [
+              2010,
+              3
+            ]
+          ]
+        },
+        "title": "Temperature and productivity changes off the western Iberian margin during the last 150 ky",
+        "sha256": "bb2c0d03653773bb1c9613d5d4db9f297fc2f18c93c3f475c68c5da6f1775add"
+      },
+      "source_rows": 582,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "chronology_label": "Edad publicada BP; base y dependencias según fuente, sin recalibración local",
+      "columns": [
+        {
+          "name": "Sea surface temperature, summer",
+          "short": "SST sum",
+          "unit": "°C",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 2,
+          "header": "SST sum [°C]",
+          "family": "sst",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida, estación anual o estacional según parámetro",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        },
+        {
+          "name": "Export production, summer",
+          "short": "PP exp sum",
+          "unit": "g/m**2/a",
+          "method": "Modern analog technique (MAT), SIMMAX28, distance-weighted",
+          "comment": null,
+          "column": 3,
+          "header": "PP exp sum [g/m**2/a]",
+          "family": "productivity",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "environmental_interpretation": "Paleoproductividad marina: producción exportada reconstruida por función de transferencia, estación según parámetro/comentario",
+          "evidence_type": "published_reconstruction",
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Unidades originales conservadas; señal indirecta y reconstrucción publicada se distinguen. Sin nueva calibración, modelo de edad ni interpolación."
+      ]
+    },
+    {
+      "id": 966665,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966665",
+      "sha": "5acfae0ff65a18a7098eafb6f2608278bba6e12f54f918f299fd856918a67d2c",
+      "xml_sha": "1a5af9e9a6100eb9e8d0e740f228e43ae5a7fcdbf01c1b9145b758e36546c2cb",
+      "title": "Stable isotopes of planktonic and benthic foraminifera of sediment cores GC-01A from Gulf of Cadiz",
+      "header": [
+        "Event",
+        "Sect",
+        "Depth rel [m] (Depth in section)",
+        "Depth sed [m] (Depth in core)",
+        "Age [ka BP]",
+        "G. bulloides δ13C [‰ PDB] (corr)",
+        "G. bulloides δ18O [‰ PDB] (corr)",
+        "C. pachyderma δ13C [‰ PDB] (corr)",
+        "C. pachyderma δ18O [‰ PDB] (corr)",
+        "C. pachyderma δ18O [‰ PDB] (corr+0.64)",
+        "C. lobatulus δ13C [‰ PDB] (corr)",
+        "C. lobatulus δ18O [‰ PDB] (corr)"
+      ],
+      "events": [
+        {
+          "label": "GC-01A-PC",
+          "lat": 36.71043,
+          "lon": -7.74529,
+          "elevation": "-566.0",
+          "campaign": "CONTOURIBER-1",
+          "device": null
+        },
+        {
+          "label": "GC-01A-TC",
+          "lat": 36.71043,
+          "lon": -7.74529,
+          "elevation": "-566.0",
+          "campaign": "CONTOURIBER-1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2018.07.036",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2018,
+        "dates": {
+          "published-print": [
+            [
+              2018,
+              10
+            ]
+          ],
+          "issued": [
+            [
+              2018,
+              10
+            ]
+          ],
+          "published": [
+            [
+              2018,
+              10
+            ]
+          ]
+        },
+        "title": "Paleoceanographic and climatic implications of a new Mediterranean Outflow branch in the southern Gulf of Cadiz",
+        "sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040"
+      },
+      "source_rows": 83,
+      "age_column": 4,
+      "age_transformation": "identity: source point age in ka BP",
+      "chronology_label": "Edad publicada BP; base y dependencias según fuente, sin recalibración local",
+      "columns": [
+        {
+          "name": "Globigerina bulloides, δ13C",
+          "short": "G. bulloides δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "corr",
+          "column": 5,
+          "header": "G. bulloides δ13C [‰ PDB] (corr)",
+          "family": "isotopes",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "Globigerina_bulloides_13C_native_corr_PDB",
+          "environmental_interpretation": "Ciclo del carbono y masas de agua; señal isotópica indirecta",
+          "evidence_type": "as_archived_parameter",
+          "error_column": null
+        },
+        {
+          "name": "Globigerina bulloides, δ18O",
+          "short": "G. bulloides δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "corr",
+          "column": 6,
+          "header": "G. bulloides δ18O [‰ PDB] (corr)",
+          "family": "isotopes",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "Globigerina_bulloides_18O_native_corr_PDB",
+          "environmental_interpretation": "Composición isotópica del carbonato: hidrográfica/temperatura y δ18O del agua",
+          "evidence_type": "as_archived_parameter",
+          "error_column": null
+        },
+        {
+          "name": "Cibicidoides pachyderma, δ13C",
+          "short": "C. pachyderma δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "corr",
+          "column": 7,
+          "header": "C. pachyderma δ13C [‰ PDB] (corr)",
+          "family": "isotopes",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "Cibicidoides_pachyderma_13C_native_corr_PDB",
+          "environmental_interpretation": "Ciclo del carbono y masas de agua; señal isotópica indirecta",
+          "evidence_type": "as_archived_parameter",
+          "error_column": null
+        },
+        {
+          "name": "Cibicidoides pachyderma, δ18O",
+          "short": "C. pachyderma δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "corr",
+          "column": 8,
+          "header": "C. pachyderma δ18O [‰ PDB] (corr)",
+          "family": "isotopes",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "Cibicidoides_pachyderma_18O_native_corr_PDB",
+          "environmental_interpretation": "Composición isotópica del carbonato: hidrográfica/temperatura y δ18O del agua",
+          "evidence_type": "as_archived_parameter",
+          "error_column": null
+        },
+        {
+          "name": "Cibicidoides lobatulus, δ13C",
+          "short": "C. lobatulus δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "corr",
+          "column": 10,
+          "header": "C. lobatulus δ13C [‰ PDB] (corr)",
+          "family": "isotopes",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "Cibicidoides_lobatulus_13C_native_corr_PDB",
+          "environmental_interpretation": "Ciclo del carbono y masas de agua; señal isotópica indirecta",
+          "evidence_type": "as_archived_parameter",
+          "error_column": null
+        },
+        {
+          "name": "Cibicidoides lobatulus, δ18O",
+          "short": "C. lobatulus δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "corr",
+          "column": 11,
+          "header": "C. lobatulus δ18O [‰ PDB] (corr)",
+          "family": "isotopes",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "Cibicidoides_lobatulus_18O_native_corr_PDB",
+          "environmental_interpretation": "Composición isotópica del carbonato: hidrográfica/temperatura y δ18O del agua",
+          "evidence_type": "as_archived_parameter",
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Unidades originales conservadas; señal indirecta y reconstrucción publicada se distinguen. Sin nueva calibración, modelo de edad ni interpolación.",
+        "Se eligen valores rotulados corr por especie; la alternativa C. pachyderma δ18O corr+0.64 no se añade como una réplica. δ18O integra temperatura y composición isotópica del agua/volumen de hielo; δ13C integra ciclo del carbono y masas de agua. No son reconstrucciones directas de temperatura, oxígeno ni salinidad. Referencia ‰ PDB archivada conservada, sin convertirla a VPDB."
+      ],
+      "minimum_observations": 1
+    },
+    {
+      "id": 939418,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.939418",
+      "sha": "efef3d11c4c18fef343eef5dae8d2fa52a1f29e49e54b40e2ac5aec191d2418d",
+      "xml_sha": "f67fd13d37fabd971d36285425e9d1671b0c3b5b5f1cee463b47562bb44d6027",
+      "status": "held",
+      "reason": "Two native event labels but no Event column: assignment to c1/c3 cannot be inferred from title or identical coordinates.",
+      "header": [
+        "Depth sed [m]",
+        "Age [a AD/CE]",
+        "Age [ka BP]",
+        "C37:3Me [ng/g]",
+        "C37:2Me [ng/g]",
+        "UK'37",
+        "SST (1-12) [°C]"
+      ],
+      "events": [
+        {
+          "label": "MedSeA-S23-c1",
+          "lat": 41.1121,
+          "lon": 2.382,
+          "elevation": "-1156.0",
+          "campaign": "MedSeA2013/2",
+          "device": null
+        },
+        {
+          "label": "MedSeA-S23-c3",
+          "lat": 41.1121,
+          "lon": 2.382,
+          "elevation": "-1156.0",
+          "campaign": "MedSeA2013/2",
+          "device": null
+        }
+      ],
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Bounded PANGAEA batch; no claim of exhaustive regional/global coverage",
+    "Six existing high-use proxy types prioritized; chemical alteration/redox ratios require verified material, oxides or concentrations and published normalization, never synthesized from unrelated scanner counts"
+  ],
+  "checked_date": "2026-11-06"
+}
