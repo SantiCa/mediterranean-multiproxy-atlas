@@ -1,0 +1,10 @@
+# CUR-COMMON-19: proxies comunes y compuestos publicados
+
+- Estado: validado para integración; publicación pendiente del rol 04.
+- Agente/rol: Codex / Atlas 01, 06-11-2026. Base 33bd43e; registro 88f3708; paso funcional d87aa2c; cierre en git log.
+- Archivos: build_common_v19.py, common_v19_sources.json, test_common_v19.py, atlas-v19.json, informes common/quantitative/scientific/proxy_use_v19; extensión opcional del mínimo de muestras en curate_priority_v6.py; estado/relevo.
+- Resultado: v19-c4262530e6b; 260 registros/2.016 series/974.983 valores. Añade 38 series/5.182 valores en ocho entidades de seis fuentes PANGAEA. Dos nuevos testigos de Marmara equivalen a una ubicación; seis registros existentes enriquecidos, padre y cuarentenas intactos.
+- Proxies: δ18O/δ13C por especie, UK′37/TEX86/LDI/BIT, SST moleculares/MAT y producción exportada MAT. Variables ambientales y unidades explícitas en campos existentes, sin cambiar estructura ni filas de nueve celdas. Detalle y enlaces primarios en docs/curation/common_v19.md.
+- Decisiones: métodos/estaciones/especies separados; estándar PDB sin conversión a VPDB. TEX86 Mar Negro 0–200 m aislado de superficie estricta. Incertidumbres publicadas inequívocas conservadas; otras no asignadas por conjetura. PANGAEA.939418 retenido por dos eventos sin columna Event. No se fabrican CIA/redox a partir de cuentas o razones radiométricas.
+- Evidencia: 142 Python, cero omisiones; 36 Node, tsc/build, snapshot íntegro (974.983 valores, 1.019 archivos). Auditorías sin errores estructurales; esquema, celdas, errores y duplicación completos comprobados. Recibo common_v19_validation.json.
+- Límites/siguiente: cobertura de familias nativas, no exhaustividad mundial ni calidad de interpolación validada. Dos series isotópicas tienen solo dos muestras. Rol 04 publica main/atlas-v19.json tras regenerar/verificar snapshot y compilar. Próxima tanda: isótopos, SST, XRF y compuestos con materiales/calibraciones explícitos según la nueva prioridad; no retomar bloqueos Reading sin pista nueva.
