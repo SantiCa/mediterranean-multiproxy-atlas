@@ -1,8 +1,16 @@
 # Estado breve del proyecto
 
-Actualizado: 05-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
+Actualizado: 06-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v18 validada, pendiente de publicar (05-11-2026)
+## Colección v19 validada, pendiente de publicar (06-11-2026)
+
+- v19-c4262530e6b: **260 registros / 2.016 series / 974.983 valores / 1.017 grupos**. Añade 38 series/5.182 valores de seis datasets PANGAEA en ocho entidades. Dos nuevos testigos de Marmara comparten una ubicación; seis registros existentes enriquecidos. Padre v18 y cuarentenas intactos.
+- Nueva prioridad: proxies comunes e índices consolidados. Esta tanda incorpora δ18O/δ13C por especie, UK′37/TEX86/LDI/BIT, SST moleculares y MAT/SIMMAX28, producción exportada por transferencia. Nombre, unidad e interpretación ambiental explícitos en campos existentes; estructura y nueve celdas por observación sin cambios. Detalle y unidades en docs/curation/common_v19.md.
+- Reproducción: `python scripts/build_common_v19.py --fetch`; contrato common_v19_sources.json y originales/TSV/XML por hash. Calibraciones, estaciones, especies y correcciones separadas; incertidumbres nativas inequívocas conservadas. TEX86 Mar Negro 0–200 m y SST sin calibración específica declarada tienen contextos propios. PANGAEA.939418 retenido por dos eventos sin columna Event. No se inventan CIA ni paleoredox desde razones radiométricas/cuentas.
+- Cobertura de la categoría nativa Temperatura: 26→30 ubicaciones fechadas; Isótopos estables: 34→35. No es un inventario mundial, cobertura SST exclusiva ni garantía de calidad de interpolación; los métodos conservan sus grupos de comparación.
+- 142 Python sin omisiones, 36 Node, tsc/build y snapshot íntegro (974.983 valores/1.019 archivos). Auditorías sin errores estructurales; avisos del padre y nuevo par coincidente explícitos. Recibo common_v19_validation.json; handoff cur-common-19.md. Publicación reservada al rol 04; última referencia de producción registrada v13.
+
+## Colección v18 validada, sustituida por v19 (05-11-2026)
 
 - v18-cd0f8159f62: **258 registros / 1.978 series / 969.801 valores / 994 grupos**. Armena/PEDRIDO añaden 12 series/300 valores de 50 muestras. Las 124 muestras originales y 57 controles siguen auditados; 74 sumas nulas excluidas explícitamente, sin imputación.
 - Incorpora las conclusiones Atlas 02 y QC V30: corrige 1.807 edades de 19 series Mondsee por cambio de referencia, sin recalibración, y retiene seis duplicados (1.879 valores). Objetos originales completos en seed.curation_excluded_series y en v17. Las 25 excepciones están declaradas; resto del padre y todos sus registros intactos.

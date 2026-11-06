@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-06",
+  "release": "atlas-quantitative-2026-11-06-v19-c4262530e6b",
+  "seed_sha256": "2e94b94889a5b63c75339b189254d480cfb680833e8ca63fdc8ddec8ec72a7dd",
+  "counts": {
+    "records": 260,
+    "series": 2016,
+    "values": 974983,
+    "new_records": 2,
+    "new_series": 38,
+    "new_values": 5182,
+    "missing_age_values": 6615
+  },
+  "checks": {
+    "python": {
+      "tests": 142,
+      "skipped": 0,
+      "failed_files": 0,
+      "mode": "one process per test file; outputs/v19-test_*.py.log"
+    },
+    "node": {
+      "tests": 36,
+      "failed": 0
+    },
+    "typescript": "passed",
+    "build": "passed; outputs/common-v19-build.log",
+    "schema": "same root fields, native record/series field sets and compact nine-cell row structure as v18",
+    "snapshot": {
+      "values": 974983,
+      "groups": 1017,
+      "files": 1019,
+      "cell_by_cell": "passed"
+    },
+    "science": {
+      "errors": 0,
+      "warnings": {
+        "registros_mismas_coordenadas": 8,
+        "edad_futura": 14,
+        "inversiones_de_edad_en_orden_fuente": 40,
+        "series_identicas_en_registros_distintos": 57
+      }
+    },
+    "proxy_use": {
+      "errors": 0,
+      "report": "reports/proxy_use_v19_audit.json"
+    }
+  },
+  "publication": "Not performed; reserved for role 04",
+  "limits": [
+    "Native methods and corrections are not assumed equivalent",
+    "Two new Marmara cores are one spatial location",
+    "No claim of globally exhaustive coverage or validated interpolation quality"
+  ]
+}
