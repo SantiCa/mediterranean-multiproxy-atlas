@@ -30,20 +30,22 @@ def coverage(seed):
     return result
 
 
-def build(fetch=False):
+def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, version=19,
+          age_rule=curator.native.age_rule):
     """Extract pinned native values and append compatible, traceable series to v18."""
-    contract = json.loads(CONTRACT.read_bytes())
+    contract = json.loads(contract_path.read_bytes())
     curator.FAMILIES.update(sst='Temperatura', indices='Biomarcadores',
-                            isotopes='Isótopos estables', productivity='Micropaleontología')
-    fragment_path = RAW / 'curated.json'
-    audit_path = ROOT / 'reports/common_v19_extraction_audit.json'
-    curator.curate(fetch, contract_path=CONTRACT, baseline=BASE, raw_dir=RAW,
-                   fragment_path=fragment_path, audit_path=audit_path, namespace='pangaea19')
+                            isotopes='Isótopos estables', productivity='Micropaleontología',
+                            toc='Materia orgánica y biomarcadores', nutrients='Geoquímica elemental')
+    fragment_path = raw_dir / 'curated.json'
+    audit_path = ROOT / f'reports/common_v{version}_extraction_audit.json'
+    curator.curate(fetch, contract_path=contract_path, baseline=baseline, raw_dir=raw_dir,
+                   fragment_path=fragment_path, audit_path=audit_path, namespace=f'pangaea{version}', age_rule=age_rule)
     fragment = json.loads(fragment_path.read_bytes())
     specs = {entry['id']: entry for entry in contract['datasets'] if entry['status'] == 'ready'}
     native_tables = {}
     for ident, entry in specs.items():
-        _, header, rows = curator.native.parse_tsv((RAW / f'{ident}.tsv').read_bytes())
+        _, header, rows = curator.native.parse_tsv((raw_dir / f'{ident}.tsv').read_bytes())
         native_tables[ident] = {index: cells for index, _, cells in rows}
         if ident == 939417:
             for _, _, cells in rows:
@@ -79,18 +81,22 @@ def build(fetch=False):
             series['uncertainty_type'] = 'Published companion standard deviation; no propagated or calibration error invented'
         elif ident == 733103:
             series['uncertainty_type'] = 'Native standard-deviation columns retained in original; estimator assignment unresolved'
+    for record in fragment['records']:
+        entry = next(entry for entry in specs.values()
+                     if record['core'] in {event['label'] for event in entry['events']})
+        record.update(entry.get('record_metadata', {}))
     fragment_path.write_text(json.dumps(fragment, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
-    seed, report = admission.assemble(baseline=BASE, fragment_paths=[fragment_path],
-        provider_names=['pangaea_common'], version_prefix='atlas-quantitative-2026-11-06-v19-')
+    seed, report = admission.assemble(baseline=baseline, fragment_paths=[fragment_path],
+        provider_names=['pangaea_common'], version_prefix=f'atlas-quantitative-2026-11-06-v{version}-')
     report.update(parent_sha256=contract['parent_sha256'],
-        source_audits=['scripts/importers/common_v19_sources.json', 'reports/common_v19_extraction_audit.json'],
+        source_audits=[contract_path.relative_to(ROOT).as_posix(), audit_path.relative_to(ROOT).as_posix()],
         selection_limits=contract['selection_limits'],
-        coverage_before=coverage(json.loads(BASE.read_bytes())), coverage_after=coverage(seed),
+        coverage_before=coverage(json.loads(baseline.read_bytes())), coverage_after=coverage(seed),
         coverage_scope='Broad native family and four-decimal coordinates; not methodological equivalence, SST-only coverage or independent neighbours')
     raw = json.dumps(seed, ensure_ascii=False, separators=(',', ':')).encode()
     report.update(sha256=curator.native.sha(raw), bytes=len(raw))
-    (ROOT / 'data/processed/atlas-v19.json').write_bytes(raw)
-    (ROOT / 'reports/quantitative_v19_release.json').write_text(
+    (ROOT / f'data/processed/atlas-v{version}.json').write_bytes(raw)
+    (ROOT / f'reports/quantitative_v{version}_release.json').write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
     print(json.dumps({key: report[key] for key in ('version', 'counts')}, ensure_ascii=False))
     return seed, report

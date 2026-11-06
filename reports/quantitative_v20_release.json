@@ -1,0 +1,500 @@
+{
+  "version": "atlas-quantitative-2026-11-06-v20-cf635885fac",
+  "parent_version": "atlas-quantitative-2026-11-06-v19-c4262530e6b",
+  "parent_sha256": "2e94b94889a5b63c75339b189254d480cfb680833e8ca63fdc8ddec8ec72a7dd",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 260,
+    "series": 2019,
+    "values": 975081,
+    "new_records": 0,
+    "new_series": 3,
+    "new_values": 98,
+    "missing_age_values": 6615
+  },
+  "input_fragments": {
+    "pangaea_common": {
+      "records": 1,
+      "series": 3,
+      "values": 98
+    }
+  },
+  "family_counts": {
+    "Temperatura": 51,
+    "Geoquímica elemental": 329,
+    "Sedimentología": 216,
+    "Biomarcadores": 29,
+    "Micropaleontología": 12,
+    "Isótopos estables": 169,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 2,
+    "Foraminíferos": 172,
+    "Materia orgánica y biomarcadores": 58,
+    "Polen": 951,
+    "Oxigenación bentónica": 8
+  },
+  "comparison_groups": 1020,
+  "numeric_age_extent_ka_bp": [
+    -0.14,
+    4700.0
+  ],
+  "admitted_series": [
+    "pangaea20-896609:BEN14_P4:col4~c9d314b885",
+    "pangaea20-896609:BEN14_P4:col5~8c222312f0",
+    "pangaea20-896609:BEN14_P4:col6~db777a15cf"
+  ],
+  "integration_quarantine": [],
+  "held_core_records": [],
+  "linked_to_parent_records": {
+    "pangaea20-ben14_p4": "pangaea5-ben14_p4"
+  },
+  "partial_numeric_overlap_links": [],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea19-m84_1_122_1",
+        "pangaea19-m84_1_123_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "mendeley8-339-u1386",
+        "mendeley8-339-u1390"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "reading9-antas",
+        "reading9-n-cas",
+        "reading9-n-gua",
+        "reading9-laroya",
+        "reading9-serranil",
+        "reading9-sanrafa",
+        "reading9-estanilles",
+        "reading9-bsn6",
+        "reading9-salines",
+        "reading9-sbaza",
+        "reading9-cancruz",
+        "reading9-gador",
+        "reading9-sabinar",
+        "reading9-villaverde",
+        "reading9-siles",
+        "reading9-bsm08",
+        "reading9-portalet",
+        "reading9-enol",
+        "reading9-zonarcombined",
+        "reading9-carrizal",
+        "reading9-animas",
+        "reading9-navamuno_s3",
+        "reading9-bdlc-01",
+        "reading9-algendar",
+        "reading9-cporter",
+        "reading9-htimoner",
+        "reading9-pratvila",
+        "reading9-sonbou",
+        "reading9-marbore-composite",
+        "reading9-cerrato",
+        "reading9-molinaes",
+        "reading9-lagmesag",
+        "reading9-verdeospesoa",
+        "reading9-mai",
+        "reading9-sanabria",
+        "reading9-pinoblanco",
+        "reading9-boscesta",
+        "reading9-arbarrain",
+        "reading9-cadela",
+        "reading9-lagnegra",
+        "reading9-ayoo",
+        "reading9-lagoajo",
+        "reading9-laspardi",
+        "reading9-saldropo",
+        "reading9-tub",
+        "reading9-palanques",
+        "reading9-perafita",
+        "reading9-belate01",
+        "reading9-culazon",
+        "reading9-adaja",
+        "reading9-alsa",
+        "reading9-navalaca",
+        "reading9-valdecon",
+        "reading9-carcavas",
+        "reading9-atxuri01",
+        "reading9-quinta02",
+        "reading9-areo",
+        "reading9-lameiras",
+        "reading9-tiemblo",
+        "reading9-cuetoav",
+        "reading9-n-sal",
+        "reading9-lanzbog",
+        "reading9-cuaii",
+        "reading9-prd4",
+        "reading9-patatero",
+        "reading9-sertal",
+        "reading9-tornos01",
+        "reading9-estacas",
+        "reading9-n-peq",
+        "reading9-labradillos",
+        "reading9-botija",
+        "reading9-lanchas",
+        "reading9-bossier",
+        "reading9-aguasfrias",
+        "reading9-bermu",
+        "reading9-redondo",
+        "reading9-valdeyer",
+        "reading9-xl",
+        "reading9-leche",
+        "reading9-saloio",
+        "reading9-panera",
+        "reading9-lacruz",
+        "reading9-brezosa",
+        "reading9-elperro",
+        "reading9-vinuelas",
+        "reading9-villuercas",
+        "reading9-mitjana",
+        "reading9-elpayo",
+        "reading9-ojos-del-tremendal-core-1",
+        "reading9-plaestany",
+        "reading9-manaderos-core",
+        "reading9-pozon_2015-core",
+        "reading9-laguna-de-rio-seco-core-1",
+        "reading9-ldlm-10-02",
+        "reading9-ldlmo-composite",
+        "reading9-penanegr",
+        "reading9-lagoa_co",
+        "reading9-candieir",
+        "reading9-creixellt",
+        "reading9-travess1",
+        "reading9-vdl-pb2",
+        "reading9-adp-01/06",
+        "reading9-armena",
+        "reading9-pedrido"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea19-m84_1_122_1",
+        "pangaea19-m84_1_123_1"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "scripts/importers/common_v20_sources.json",
+    "reports/common_v20_extraction_audit.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "pangaea_common": [
+      {
+        "id": "pangaea20-667403:GeoB7608_1:col2~0eb50f881f",
+        "record_id": "pangaea20-geob7608_1",
+        "proxy": "Carbon_organic_total_",
+        "variable_id": "Carbon_organic_total_",
+        "label": "Carbon, organic, total",
+        "unit": "%",
+        "original_unit": "%",
+        "family": "Materia orgánica y biomarcadores",
+        "proxy_families": [
+          "toc"
+        ],
+        "parameter_name_pangaea": "Carbon, organic, total",
+        "parameter_comment": null,
+        "method": "Element analyser CHN",
+        "compatibility_group": "Carbon_organic_total__Element_analyser_CHN",
+        "comparison_context_key": null,
+        "evidence_type": "as_archived_parameter",
+        "taxon": null,
+        "dataset_doi": "10.1594/PANGAEA.667403",
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.667403?format=textfile",
+        "source_column": "TOC [%]",
+        "source_column_index": 2,
+        "raw_sha256": "de4ed40f3ce459c40ab014370c76622ca2701d9639407e841ee9cf968e1d5b58",
+        "xml_sha256": "fbe7a32b2fac6fd5ad652062bd656cfb41bc734a3069ce32c221dca09295a23e",
+        "source_event": "GeoB7608-1",
+        "citation": "Bahr, André (2007): Age and total organic carbon of sediment core GeoB7608-1 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.667403, ",
+        "license": "Creative Commons Attribution 3.0 Unported",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "paper_doi": "10.1029/2007GC001683",
+        "publication_year": 2008,
+        "publication_relation": "native_supplement_to",
+        "paper_identity_sha256": "0f64fd272a5e1b72a8274ca95ca5a5791bdae3564be32158de31528e35031db1",
+        "chronology_status": "published_BP",
+        "chronology_label": "Published native age; calendar harmonization not independently audited",
+        "age_column_original": "Age [ka BP]",
+        "age_column_index": 1,
+        "age_unit_original": "Age [ka BP]",
+        "age_scale": "identity: source point age in ka BP",
+        "age_model": "identity: source point age in ka BP",
+        "age_transformation": "identity: source point age in ka BP",
+        "depth_frame": "Depth sed [m]",
+        "uncertainty_type": "not supplied for selected value; no error estimated",
+        "qc_notes": [
+          "Original source values; no new proxy calibration or forest-type inference"
+        ],
+        "review_status": "native_contract_checked; independent_scientific_review_pending",
+        "source_dataset_title": "Age and total organic carbon of sediment core GeoB7608-1",
+        "search_aliases": [
+          "Carbon, organic, total",
+          "TOC",
+          "toc",
+          "ratios razones elementos inorgánicos"
+        ],
+        "quarantine_reason": "native percentage outside [0,100]"
+      }
+    ]
+  },
+  "pending_source_candidates": {
+    "pangaea_common": [
+      {
+        "id": 993109,
+        "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993109",
+        "sha": "49410cb5eeaab54ceb13540a0a139bbc669840e778d1a78190f59b4f015a047f",
+        "xml_sha": "c283df974227f0f3164043894f41d72053a872572ae613766cb2bacde92bb8ba",
+        "status": "held",
+        "header": [
+          "Cal age min [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Cal age max [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Cal age median [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Cal age mean [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+          "Depth sed [m]",
+          "Depth ref [m] (Radiocarbon depth)",
+          "Age [ka BP] (Radiocarbon age, mean, Age mo...)",
+          "Age std dev [±] (Age model, Bacon (Blaauw & Ch...)",
+          "Lab label",
+          "AP [%] (Relative abundance (calculated))",
+          "Tre.shr [%] (Relative abundance (calculated))",
+          "Betula [%] (Relative abundance (calculated))",
+          "Jun [%] (Relative abundance (calculated))",
+          "Pinus s/g Pinus [%] (Relative abundance (calculated))",
+          "Artemisia [%] (Relative abundance (calculated))",
+          "Poac [%] (Relative abundance (calculated))",
+          "Pollen tot [#] (Counted)",
+          "Moisture [%]",
+          "DBD [g/cm**3]",
+          "TOC [%] (% of weight, dry, Calculated)",
+          "TIC [%] (% of weight, dry, Calculated)",
+          "TN [%] (% of weight, dry, Calculated)",
+          "TS [%] (% of weight, dry, Calculated)",
+          "TOC/TN (Calculated)",
+          "AP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "RP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "MnCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Fe redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Fe org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "FeCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Fe res/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+          "Chloropigm a/sed [µg/g] (Measurement on wet sediment, ...)",
+          "BChl a/sed [µg/g] (Measurement on wet sediment, ...)",
+          "Chl a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Phaeopho a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Phaeophytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Green pigm/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Carotenoids/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Cantha/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Echin/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Asta/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Zea/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Oke/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Isor/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Allo/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Diadino/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Fuco/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Lut/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Diatox/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Sphe/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "BPhytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+          "Batch no [#] (Number of batch of pigment ex...)"
+        ],
+        "events": [
+          {
+            "label": "UBE22-COMP1",
+            "lat": 46.7344,
+            "lon": 7.565,
+            "elevation": "641.0",
+            "campaign": null,
+            "device": null
+          }
+        ],
+        "columns": [],
+        "reason": "Calendar-age columns labelled ka BP contain values 11167–17706, while the primary abstract states 11–17 ka BP. The radiocarbon column also has year-scale values. No implicit factor 1000 or calibration is applied; verify source units and age-model bounds before adding carbon/redox/pigment values."
+      }
+    ]
+  },
+  "selection_limits": [
+    "Two georeferenced native organic-carbon/nutrient sources; third dataset held for chronological unit audit",
+    "TOC aliases unify discovery, not wet/dry or unit conversions; nutrient fractions remain distinct"
+  ],
+  "coverage_before": {
+    "Temperatura": {
+      "records": 32,
+      "distinct_locations": 30,
+      "series": 51,
+      "values": 7317
+    },
+    "Isótopos estables": {
+      "records": 36,
+      "distinct_locations": 35,
+      "series": 169,
+      "values": 33434
+    },
+    "Biomarcadores": {
+      "records": 13,
+      "distinct_locations": 11,
+      "series": 27,
+      "values": 3185
+    },
+    "Micropaleontología": {
+      "records": 4,
+      "distinct_locations": 4,
+      "series": 12,
+      "values": 2732
+    }
+  },
+  "coverage_after": {
+    "Temperatura": {
+      "records": 32,
+      "distinct_locations": 30,
+      "series": 51,
+      "values": 7317
+    },
+    "Isótopos estables": {
+      "records": 36,
+      "distinct_locations": 35,
+      "series": 169,
+      "values": 33434
+    },
+    "Biomarcadores": {
+      "records": 13,
+      "distinct_locations": 11,
+      "series": 27,
+      "values": 3185
+    },
+    "Micropaleontología": {
+      "records": 4,
+      "distinct_locations": 4,
+      "series": 12,
+      "values": 2732
+    }
+  },
+  "coverage_scope": "Broad native family and four-decimal coordinates; not methodological equivalence, SST-only coverage or independent neighbours",
+  "sha256": "623fced64a05305ed21e0931786f66a5d95ef60035105aedffc91a004d07c8bf",
+  "bytes": 70492561
+}

@@ -1,0 +1,62 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-06-v19-c4262530e6b",
+  "counts": {
+    "records": 1,
+    "series": 3,
+    "observations": 98,
+    "quarantined_series": 1
+  },
+  "audit": [
+    {
+      "id": "pangaea20-667403:GeoB7608_1:col2~0eb50f881f",
+      "dataset": "10.1594/PANGAEA.667403",
+      "event": "GeoB7608-1",
+      "source_column": 2,
+      "observations": 135,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "quarantined",
+      "reason": "native percentage outside [0,100]"
+    },
+    {
+      "id": "pangaea20-896609:BEN14_P4:col4~c9d314b885",
+      "dataset": "10.1594/PANGAEA.896609",
+      "event": "BEN14-P4",
+      "source_column": 4,
+      "observations": 33,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea20-896609:BEN14_P4:col5~8c222312f0",
+      "dataset": "10.1594/PANGAEA.896609",
+      "event": "BEN14-P4",
+      "source_column": 5,
+      "observations": 33,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea20-896609:BEN14_P4:col6~db777a15cf",
+      "dataset": "10.1594/PANGAEA.896609",
+      "event": "BEN14-P4",
+      "source_column": 6,
+      "observations": 32,
+      "missing_cells": 1,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 993109,
+      "status": "held",
+      "reason": "Calendar-age columns labelled ka BP contain values 11167–17706, while the primary abstract states 11–17 ka BP. The radiocarbon column also has year-scale values. No implicit factor 1000 or calibration is applied; verify source units and age-model bounds before adding carbon/redox/pigment values."
+    }
+  ]
+}
