@@ -29,6 +29,19 @@ export function elementRatioAlias(name) {
   const elements = { titanium:"Ti", calcium:"Ca", aluminium:"Al", aluminum:"Al", iron:"Fe", potassium:"K", zirconium:"Zr", rubidium:"Rb", barium:"Ba", strontium:"Sr", manganese:"Mn", silicon:"Si", bromine:"Br", chlorine:"Cl", molybdenum:"Mo", uranium:"U", thorium:"Th" };
   return String(name || "").replace(/\b(titanium|calcium|aluminium|aluminum|iron|potassium|zirconium|rubidium|barium|strontium|manganese|silicon|bromine|chlorine|molybdenum|uranium|thorium)\b/gi, x => elements[x.toLowerCase()]);
 }
+/** Canonical discovery names only; base groups, units and native values stay intact. */
+export function canonicalParameterName(s) {
+  const raw = s.comparison_parameter_name || s.parameter_name_pangaea || s.proxy || s.variable_label || s.label || "";
+  const name = fold(raw).replace(/[_ ,]+/g, " ").replace(/\s+/g, " ").trim();
+  if (["toc", "total organic carbon", "carbon organic total", "carbono organico total", "corg", "c org", "carbon organic per unit sediment mass"].includes(name)) return "Carbono orgánico total (TOC)";
+  if (["caco3", "calcium carbonate", "carbonato calcico"].includes(name)) return "Calcium carbonate";
+  const ratio = fold(elementRatioAlias(raw)).replace(/_/g, " ").trim().match(/^(?:(ln|log|log10)[\s(-]*)?(ti|fe|si|zr|k|mn|u|mo|ba)\s*\/\s*(ca|al|ti|rb|th)\)?(?:\s+ratio)?$/);
+  if (ratio) {
+    const symbols = { ti:"Ti", fe:"Fe", si:"Si", zr:"Zr", k:"K", mn:"Mn", u:"U", mo:"Mo", ba:"Ba", ca:"Ca", al:"Al", rb:"Rb", th:"Th" };
+    return (ratio[1] ? ratio[1] + "-" : "") + symbols[ratio[2]] + "/" + symbols[ratio[3]] + " ratio";
+  }
+  return s.comparison_parameter_name || s.parameter_name_pangaea || null;
+}
 export function recordMatches(r, f) {
   return (
     (!f.provider || f.provider === "all" || r.provider === f.provider) &&
@@ -58,14 +71,16 @@ export function proxyGroups(data, f = {}) {
     const r = records.get(s.record_id);
     if (!r || !seriesMatches(s, r, f)) continue;
     const key = groupKey(s);
+    const canonical = canonicalParameterName(s);
+    const controlledAlias = canonical === "Carbono orgánico total (TOC)" || canonical === "Calcium carbonate" || / ratio$/.test(canonical || "") && /^[\w-]+\/[\w]+ ratio$/.test(canonical);
     if (!groups.has(key))
       groups.set(key, {
         key,
         id: s.proxy,
-        label: s.label,
+        label: controlledAlias ? canonical : s.label,
         unit: s.unit,
         family: proxyFamily(s),
-        variable: s.variable_label || s.label,
+        variable: controlledAlias ? canonical : s.variable_label || s.label,
         method: s.method || "Método archivado",
         compatibility: s.compatibility_group,
         evidence: s.evidence_type || "published_value",
@@ -102,6 +117,8 @@ export function proxyGroups(data, f = {}) {
         s.search_aliases,
         associationAliases(s),
         elementRatioAlias(s.comparison_parameter_name || s.parameter_name_pangaea),
+        canonicalParameterName(s),
+        canonical === "Carbono orgánico total (TOC)" ? "TOC total organic carbon Corg carbono orgánico total" : "",
         /polen|pollen/i.test(s.family || "") ? "bosque vegetación árboles" : "",
       ]
         .flat()
@@ -171,14 +188,14 @@ export const AGGREGATES = [
   { id: "d18o_bent", label: "δ18O foraminíferos bentónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "18") && BENTHIC.test(t) && !PLANKTIC.test(t) },
   { id: "d13c_planct", label: "δ13C foraminíferos planctónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "13") && PLANKTIC.test(t) && !BENTHIC.test(t) },
   { id: "d13c_bent", label: "δ13C foraminíferos bentónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "13") && BENTHIC.test(t) && !PLANKTIC.test(t) },
-  { id: "toc_pct", label: "Carbono orgánico total (TOC) · todos los métodos", unit: "%", family: "Materia orgánica y biomarcadores", test: (s, t) => s.unit === "%" && /carbon.?organic|(^|[^a-z])toc([^a-z]|$)|corg|carbono organico/.test(t) && !/isotop|13c|accumulation|flux/.test(t) },
+  { id: "toc_pct", label: "Carbono orgánico total (TOC) · todos los métodos", unit: "%", family: "Materia orgánica y biomarcadores", test: (s) => s.unit === "%" && canonicalParameterName(s) === "Carbono orgánico total (TOC)" && !comparisonContext(s) },
   { id: "caco3_pct", label: "Carbonato cálcico (CaCO3) · todos los métodos", unit: "%", family: "Sedimentología", test: (s, t) => s.unit === "%" && /calcium carbonate|caco3|carbonato/.test(t) && !/accumulation|flux|free/.test(t) },
 ];
 export const aggregateKey = (a) => JSON.stringify(["agg", a.id, a.unit]);
 export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["agg"');
 /* Same PANGAEA parameter (controlled vocabulary) and same unit, any method: the
  * parameter defines the measured quantity; methods remain per series. */
-const paramName = (s) => s.comparison_parameter_name || s.parameter_name_pangaea || null;
+const paramName = canonicalParameterName;
 /** Identical parameter names can hide different fractions or pollen sums.
  * Native counts remain sample counts, not abundance percentages. */
 export function comparisonContext(s) {
@@ -196,8 +213,17 @@ export function comparisonContext(s) {
   }
   if (/pore fluids/.test(t)) return "matrix_pore_fluid";
   if (/soluble salts/.test(t)) return "matrix_soluble_salt";
+  if (/^(?:(?:ln|log|log10)-)?[A-Z][a-z]?\/[A-Z][a-z]? ratio$/.test(paramName(s) || "")) {
+    const basis = fold([s.method, s.parameter_comment, s.source_column, s.original_unit].filter(Boolean).join(" "));
+    if (/molar|mol\/mol|mmol\/mol|umol\/mol|atomic/.test(basis)) return "ratio_molar";
+    if (/mass ratio|weight ratio|razon masica|concentration ratio/.test(basis)) return "ratio_mass";
+    if (/scanner|xrf ratio|cps|counts|itrax|avaatech/.test(basis)) return "ratio_scanner:" + fold(s.method || "instrument unspecified");
+    return "ratio_basis_unspecified";
+  }
   return null;
 }
+const contextLabel = (context) => ({ pollen_sum_excludes_pinus:"suma sin Pinus", grain_fraction_noncarbonate:"fracción no carbonatada", grain_fraction_total:"fracción total", sortable_silt_percent_pelagics:"sedimento pelágico", sortable_silt_percent_contourites:"contornitas", matrix_pore_fluid:"fluido intersticial", matrix_soluble_salt:"sales solubles", ratio_molar:"razón molar", ratio_mass:"razón másica", ratio_basis_unspecified:"base de la razón no declarada" }[context]
+  || (context?.startsWith("ratio_scanner:") ? "señal de escáner · " + context.slice("ratio_scanner:".length) : "contexto específico"));
 export const paramKey = (s) =>
   paramName(s) && !s.derivation && !(s.unit === "#" && /polen|pollen/i.test(s.family || "")) &&
     !(s.unit === "%" && proxyFamily(s) === "Polen" && !comparisonContext(s))
@@ -258,7 +284,7 @@ export function aggregateGroups(groups, data) {
     out.push({
       key,
       id: "agg:" + key,
-      label: a.name + (a.context ? " · " + ({pollen_sum_excludes_pinus:"suma sin Pinus",grain_fraction_noncarbonate:"fracción no carbonatada",grain_fraction_total:"fracción total",sortable_silt_percent_pelagics:"sedimento pelágico",sortable_silt_percent_contourites:"contornitas",matrix_pore_fluid:"fluido intersticial",matrix_soluble_salt:"sales solubles"}[a.context] || "contexto específico") : "") + " · todos los métodos",
+      label: a.name + (a.context ? " · " + contextLabel(a.context) : "") + " · todos los métodos",
       unit: a.unit,
       family: a.family,
       variable: a.name,

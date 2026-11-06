@@ -2,7 +2,14 @@
 
 Actualizado: 06-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v19 validada, pendiente de publicar (06-11-2026)
+## Colección v20 validada en relevo, integración/publicación para rol 04 (06-11-2026)
+
+- v20-cf635885fac: **260 registros / 2.019 series / 975.081 valores / 1.020 grupos base**. Tres series/98 valores de carbono orgánico, N y P lábil en BEN14-P4 existente; sin nuevas ubicaciones independientes. Padre v19, esquema y cuarentenas anteriores intactos.
+- Alias TOC/total organic carbon/C org/sed y razones elementales (Ti/Ca, etc.) unificados para consulta. Un agregado TOC % completo: 24 registros/31 series. CaCO3 normalizado; grupos base, unidades, fracciones, métodos, logaritmos y bases de cocientes incompatibles conservados por separado. Detalle docs/curation/groups_v20.md.
+- 146 Python sin omisiones, 39 Node, tsc/build y snapshot íntegro (975.081 valores/1.022 archivos). Auditorías sin errores, avisos heredados sin cambios; 38 contextos de alias comprobados. Reproducción v19 idéntica. Recibo common_v20_validation.json y handoff cur-groups-20.md.
+- PANGAEA.667403 en cuarentena por TOC negativo; 993109 retenida por unidades de edad contradictorias. Sin correcciones implícitas. Auditoría rol 02 intacta. Se deja en relevo: push a main activaría publicación automática de Cloudflare; integración y publicación siguen reservadas al rol 04.
+
+## Colección v19 validada, sustituida por v20 en relevo (06-11-2026)
 
 - v19-c4262530e6b: **260 registros / 2.016 series / 974.983 valores / 1.017 grupos**. Añade 38 series/5.182 valores de seis datasets PANGAEA en ocho entidades. Dos nuevos testigos de Marmara comparten una ubicación; seis registros existentes enriquecidos. Padre v18 y cuarentenas intactos.
 - Nueva prioridad: proxies comunes e índices consolidados. Esta tanda incorpora δ18O/δ13C por especie, UK′37/TEX86/LDI/BIT, SST moleculares y MAT/SIMMAX28, producción exportada por transferencia. Nombre, unidad e interpretación ambiental explícitos en campos existentes; estructura y nueve celdas por observación sin cambios. Detalle y unidades en docs/curation/common_v19.md.

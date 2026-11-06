@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-06",
+  "release": "atlas-quantitative-2026-11-06-v20-cf635885fac",
+  "seed_sha256": "623fced64a05305ed21e0931786f66a5d95ef60035105aedffc91a004d07c8bf",
+  "counts": {"records": 260, "series": 2019, "values": 975081, "new_records": 0, "new_series": 3, "new_values": 98, "missing_age_values": 6615},
+  "checks": {
+    "python": {"tests": 146, "skipped": 0, "failed_files": 0, "mode": "one process per file; outputs/v20-test_*.py.log"},
+    "node": {"tests": 39, "failed": 0, "log": "outputs/common-v20-node.log"},
+    "typescript": "passed",
+    "build": "passed; outputs/common-v20-build.log",
+    "parent_reproduction": "v19 exact seed bytes preserved",
+    "schema": "same root and existing record/series fields; nine native observation cells",
+    "snapshot": {"values": 975081, "groups": 1020, "files": 1022, "cell_by_cell": "passed"},
+    "science": {"errors": 0, "warnings": {"registros_mismas_coordenadas": 8, "edad_futura": 14, "inversiones_de_edad_en_orden_fuente": 40, "series_identicas_en_registros_distintos": 57}},
+    "proxy_use": {"errors": 0, "report": "reports/proxy_use_v20_audit.json"},
+    "aliases": {"checks": "passed", "controlled_contexts": 38, "report": "reports/group_aliases_v20.json"},
+    "visual_qa": "not repeated; catalogue semantics checked by membership regressions and real-seed audit"
+  },
+  "publication": "Not performed; role 04 must integrate relevo and publish. Main push would trigger automatic Cloudflare deployment.",
+  "limits": ["No new independent spatial locations", "667403 whole series quarantined for negative percentage", "993109 age-unit mismatch held", "Canonical labels do not establish scientific equivalence or convert units"]
+}

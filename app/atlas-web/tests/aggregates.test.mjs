@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { proxyCatalog as proxyGroups, sortGroups, inGroup, groupKey, filterGroups, paramKey, elementRatioAlias } from "../lib/proxies.mjs";
+import { proxyCatalog as proxyGroups, sortGroups, inGroup, groupKey, filterGroups, paramKey, elementRatioAlias, canonicalParameterName } from "../lib/proxies.mjs";
 const rec = (id) => ({ id, name: id, provider: "PANGAEA", realm: "marine", publication_year: 2010 });
 const ser = (id, r, proxy, cg, unit, label, n) => ({ id, record_id: r, proxy, compatibility_group: cg, unit, label, observation_count: n, rows: [] });
 const data = {
@@ -55,4 +55,47 @@ test("fractions, pollen sums and sample counts cannot be silently pooled", () =>
 test("inorganic ratio search accepts symbols without changing logs", () => {
   assert.equal(elementRatioAlias("Titanium/Calcium ratio"),"Ti/Ca ratio");
   assert.equal(elementRatioAlias("ln-Zirconium/Aluminium ratio"),"ln-Zr/Al ratio");
+});
+
+test("TOC aliases give one complete aggregate and a shared variable filter", () => {
+  const names = ["TOC", "total organic carbon", "Carbon, organic, total"];
+  const d = { records: ["a", "b", "c"].map(rec), series: names.map((name, i) => ({
+    ...ser(String(i), ["a", "b", "c"][i], name, String(i), "%", name, 5),
+    parameter_name_pangaea: name,
+  })) };
+  const before = structuredClone(d);
+  const groups = proxyGroups(d);
+  const aggregates = groups.filter(g => g.aggregate);
+  assert.equal(aggregates.length, 1);
+  assert.equal(aggregates[0].series.length, 3);
+  assert.equal(aggregates[0].records, 3);
+  assert.equal(new Set(groups.filter(g => !g.aggregate).map(g => g.variable)).size, 1);
+  assert.equal(filterGroups(groups, {search: "total organic carbon", aggregates: false}).length, 3);
+  assert.ok(d.series.every(s => inGroup(s, aggregates[0].key)));
+  assert.deepEqual(d, before, "discovery must not rewrite native metadata or values");
+});
+
+test("organic carbon names do not merge units, fractions, isotope ratios or inorganic carbon", () => {
+  const toc = {parameter_name_pangaea: "TOC", unit: "%"};
+  assert.equal(paramKey(toc), paramKey({...toc, parameter_name_pangaea: "Carbon, organic, total"}));
+  for (const change of [
+    {unit:"mg/g"}, {comparison_context_key:"organic_carbon_dissolved"},
+    {parameter_name_pangaea:"Carbon, inorganic, total"},
+    {parameter_name_pangaea:"Carbon, organic, total, delta13C", unit:"‰ PDB"},
+    {parameter_name_pangaea:"TOC/TN"}, {parameter_name_pangaea:"Organic carbon accumulation rate"},
+  ]) assert.notEqual(paramKey(toc), paramKey({...toc, ...change}));
+  assert.equal(canonicalParameterName({parameter_name_pangaea:"CaCO3"}), "Calcium carbonate");
+  assert.notEqual(paramKey({parameter_name_pangaea:"TIC", unit:"%"}), paramKey({parameter_name_pangaea:"CaCO3", unit:"%"}));
+});
+
+test("element ratio aliases unify only the same ratio and measurement basis", () => {
+  const ratio = {parameter_name_pangaea:"Titanium/Calcium ratio", unit:"sin unidad", method:"X-ray fluorescence core scanner (XRF)"};
+  assert.equal(paramKey(ratio), paramKey({...ratio,parameter_name_pangaea:"Ti/Ca"}));
+  for (const change of [
+    {parameter_name_pangaea:"ln-Ti/Ca ratio"}, {parameter_name_pangaea:"log10(Ti/Ca)"},
+    {parameter_name_pangaea:"Ti/Al"}, {method:"molar ratio"}, {method:"mass ratio"},
+    {method:"not documented"}, {method:"ITRAX scanner"}, {unit:"mmol/mol"},
+  ]) assert.notEqual(paramKey(ratio), paramKey({...ratio, ...change}));
+  assert.equal(canonicalParameterName({parameter_name_pangaea:"Iron/Calcium ratio"}), "Fe/Ca ratio");
+  assert.equal(canonicalParameterName({parameter_name_pangaea:"ln(Titanium/Calcium)"}), "ln-Ti/Ca ratio");
 });

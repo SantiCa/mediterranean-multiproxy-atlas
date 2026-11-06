@@ -1,0 +1,291 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-06-v19-c4262530e6b",
+  "parent_sha256": "2e94b94889a5b63c75339b189254d480cfb680833e8ca63fdc8ddec8ec72a7dd",
+  "datasets": [
+    {
+      "id": 667403,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.667403",
+      "sha": "de4ed40f3ce459c40ab014370c76622ca2701d9639407e841ee9cf968e1d5b58",
+      "xml_sha": "fbe7a32b2fac6fd5ad652062bd656cfb41bc734a3069ce32c221dca09295a23e",
+      "title": "Age and total organic carbon of sediment core GeoB7608-1",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "TOC [%]"
+      ],
+      "events": [
+        {
+          "label": "GeoB7608-1",
+          "lat": 43.486666666667,
+          "lon": 30.196666666667,
+          "elevation": "-1202.0",
+          "campaign": "M51/4",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2007GC001683",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2008,
+        "dates": {
+          "published-print": [
+            [
+              2008,
+              1
+            ]
+          ],
+          "published-online": [
+            [
+              2008,
+              1,
+              12
+            ]
+          ],
+          "issued": [
+            [
+              2008,
+              1
+            ]
+          ],
+          "published": [
+            [
+              2008,
+              1
+            ]
+          ]
+        },
+        "title": "Abrupt changes of temperature and water chemistry in the late Pleistocene and early Holocene Black Sea",
+        "sha256": "0f64fd272a5e1b72a8274ca95ca5a5791bdae3564be32158de31528e35031db1"
+      },
+      "source_rows": 135,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Carbon, organic, total",
+          "short": "TOC",
+          "unit": "%",
+          "method": "Element analyser CHN",
+          "comment": null,
+          "column": 2,
+          "header": "TOC [%]",
+          "family": "toc",
+          "environmental_interpretation": "Contenido de carbono orgánico sedimentario: aporte, producción y preservación; no productividad por sí solo",
+          "evidence_type": "as_archived_parameter",
+          "status": "reviewed_native_contract",
+          "alias": "TOC",
+          "comparison_context": null,
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Variable, unidad y fracción conservadas. No se convierten mg/g a % ni fósforo lábil a total; no se calcula C/N ni productividad a partir de concentraciones aisladas."
+      ]
+    },
+    {
+      "id": 896609,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.896609",
+      "sha": "4dcd5b32bed5ab8ec201e9c1651a237553d2fa1b455253f634da0f4c0da74fdb",
+      "xml_sha": "9b2238865c5f2d1c919794f6976cf2ce76c46b26aa9377e9f6aa6314d8d9b699",
+      "title": "Organic carbon, nitrogen and phosphorus in sediment core BEN14-P4 from Lake Benit",
+      "header": [
+        "Depth sed [m]",
+        "Depth top [m]",
+        "Depth bot [m]",
+        "Age [ka BP]",
+        "C org/sed [mg/g]",
+        "N/sed [mg/g]",
+        "P/sed [µg/g]"
+      ],
+      "events": [
+        {
+          "label": "BEN14-P4",
+          "lat": 46.02769,
+          "lon": 6.50402,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1016/j.ancene.2018.11.005",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2018,
+        "dates": {
+          "published-print": [
+            [
+              2018,
+              12
+            ]
+          ],
+          "issued": [
+            [
+              2018,
+              12
+            ]
+          ],
+          "published": [
+            [
+              2018,
+              12
+            ]
+          ]
+        },
+        "title": "Legacy of early anthropogenic effects on recent lake eutrophication (Lake Bénit, northern French Alps)",
+        "sha256": "d52518f6cc1094eb269f98ce5dc08f3cfb4415ed0c61670292e80ba9a4b52d7e"
+      },
+      "source_rows": 33,
+      "age_column": 3,
+      "age_transformation": "identity: source point age in ka BP",
+      "columns": [
+        {
+          "name": "Carbon, organic, per unit sediment mass",
+          "short": "C org/sed",
+          "unit": "mg/g",
+          "method": "Element analyser CHN",
+          "comment": "Corg",
+          "column": 4,
+          "header": "C org/sed [mg/g]",
+          "family": "toc",
+          "environmental_interpretation": "Contenido de carbono orgánico sedimentario: aporte, producción y preservación; no productividad por sí solo",
+          "evidence_type": "as_archived_parameter",
+          "status": "reviewed_native_contract",
+          "alias": "TOC",
+          "comparison_context": null,
+          "error_column": null
+        },
+        {
+          "name": "Nitrogen, per unit sediment mass",
+          "short": "N/sed",
+          "unit": "mg/g",
+          "method": "Element analyser CHN",
+          "comment": null,
+          "column": 5,
+          "header": "N/sed [mg/g]",
+          "family": "nutrients",
+          "environmental_interpretation": "Contenido de nitrógeno sedimentario, con dependencia de fuente y preservación",
+          "evidence_type": "as_archived_parameter",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": null,
+          "error_column": null
+        },
+        {
+          "name": "Phosphorus, per unit sediment mass",
+          "short": "P/sed",
+          "unit": "µg/g",
+          "method": "Labile fraction of total P extraction with sodium bicarbonate after Olsen, 1954",
+          "comment": "P_olsen",
+          "column": 6,
+          "header": "P/sed [µg/g]",
+          "family": "nutrients",
+          "environmental_interpretation": "Fósforo lábil extraíble por Olsen: disponibilidad de nutrientes/eutrofización, no fósforo total ni tasa de productividad",
+          "evidence_type": "as_archived_parameter",
+          "status": "reviewed_native_contract",
+          "alias": null,
+          "comparison_context": "phosphorus_labile_olsen_sediment",
+          "error_column": null
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Variable, unidad y fracción conservadas. No se convierten mg/g a % ni fósforo lábil a total; no se calcula C/N ni productividad a partir de concentraciones aisladas."
+      ],
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "record_metadata": {
+        "water_depth_m": 6,
+        "elevation_m": 1450
+      }
+    },
+    {
+      "id": 993109,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.993109",
+      "sha": "49410cb5eeaab54ceb13540a0a139bbc669840e778d1a78190f59b4f015a047f",
+      "xml_sha": "c283df974227f0f3164043894f41d72053a872572ae613766cb2bacde92bb8ba",
+      "status": "held",
+      "header": [
+        "Cal age min [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+        "Cal age max [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+        "Cal age median [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+        "Cal age mean [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+        "Depth sed [m]",
+        "Depth ref [m] (Radiocarbon depth)",
+        "Age [ka BP] (Radiocarbon age, mean, Age mo...)",
+        "Age std dev [±] (Age model, Bacon (Blaauw & Ch...)",
+        "Lab label",
+        "AP [%] (Relative abundance (calculated))",
+        "Tre.shr [%] (Relative abundance (calculated))",
+        "Betula [%] (Relative abundance (calculated))",
+        "Jun [%] (Relative abundance (calculated))",
+        "Pinus s/g Pinus [%] (Relative abundance (calculated))",
+        "Artemisia [%] (Relative abundance (calculated))",
+        "Poac [%] (Relative abundance (calculated))",
+        "Pollen tot [#] (Counted)",
+        "Moisture [%]",
+        "DBD [g/cm**3]",
+        "TOC [%] (% of weight, dry, Calculated)",
+        "TIC [%] (% of weight, dry, Calculated)",
+        "TN [%] (% of weight, dry, Calculated)",
+        "TS [%] (% of weight, dry, Calculated)",
+        "TOC/TN (Calculated)",
+        "AP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "RP/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Mn redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Mn org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "MnCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Mn/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Fe redox-sensitive/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Fe org-bound/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "FeCO3/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Fe res/sed dm [µg/mg] (Inductively coupled plasma ma...)",
+        "Chloropigm a/sed [µg/g] (Measurement on wet sediment, ...)",
+        "BChl a/sed [µg/g] (Measurement on wet sediment, ...)",
+        "Chl a/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Phaeopho a/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Phaeophytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Green pigm/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Carotenoids/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Cantha/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Echin/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Asta/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Zea/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Oke/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Isor/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Allo/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Diadino/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Fuco/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Lut/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Diatox/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Sphe/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "BPhytin a/sed [nmol/g] (Measurement on wet sediment, ...)",
+        "Batch no [#] (Number of batch of pigment ex...)"
+      ],
+      "events": [
+        {
+          "label": "UBE22-COMP1",
+          "lat": 46.7344,
+          "lon": 7.565,
+          "elevation": "641.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "columns": [],
+      "reason": "Calendar-age columns labelled ka BP contain values 11167–17706, while the primary abstract states 11–17 ka BP. The radiocarbon column also has year-scale values. No implicit factor 1000 or calibration is applied; verify source units and age-model bounds before adding carbon/redox/pigment values."
+    }
+  ],
+  "selection_limits": [
+    "Two georeferenced native organic-carbon/nutrient sources; third dataset held for chronological unit audit",
+    "TOC aliases unify discovery, not wet/dry or unit conversions; nutrient fractions remain distinct"
+  ],
+  "checked_date": "2026-11-06"
+}
