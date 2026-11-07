@@ -1,0 +1,342 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v27-cdeefdc51f6",
+  "parent_sha256": "9bd0c8dec5590eec474f9dba1b24b3bd10b763f18d06125932d5db914d98f3ae",
+  "datasets": [
+    {
+      "id": 726198,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.726198",
+      "sha": "77df1924420fe5f633b61deb1d89f5eb99abb64f953030e7b4b39744d8845460",
+      "xml_sha": "a36327c07180e040c676e2046cd878f438d434365e6378ac8ed131d9f3482361",
+      "title": "Carbon contents and isotopic compositions from the ODP Hole 161-974C near the center of the Tyrrhenian Basin (Table 1)",
+      "header": [
+        "Sample label (DSDP/ODP/IODP sample designation)",
+        "Depth sed [m]",
+        "Depth comp [mcd] (Intercore correlation)",
+        "Age [ka BP]",
+        "SR [cm/ka] (Calculated)",
+        "DBD [g/cm**3]",
+        "Acc rate TOC [g/cm**2/ka] (Calculated)",
+        "CaCO3 [%] (Element analyser CHNS-O, Carl...)",
+        "Acc rate CaCO3 [g/cm**2/ka] (CaCO3, Calculated)",
+        "TOC [%] (Element analyser CHNS-O, Carl...)",
+        "CO/CI (Calculated)",
+        "Acc rate TOC [g/cm**2/ka] (TOC, Calculated)",
+        "δ13C Corg [‰ PDB] (Element analyser CHN, Carlo Erba)",
+        "δ15N [‰ air] (Element analyser CHN, Carlo Erba)",
+        "C/N (Calculated as atomic ratio)"
+      ],
+      "events": [
+        {
+          "label": "161-974C",
+          "lat": 40.3558,
+          "lon": 12.14221,
+          "elevation": "-3464.0",
+          "campaign": "Leg161",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.margeo.2005.07.003",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2005,
+        "dates": {
+          "published-print": [
+            [
+              2005,
+              10
+            ]
+          ],
+          "issued": [
+            [
+              2005,
+              10
+            ]
+          ],
+          "published": [
+            [
+              2005,
+              10
+            ]
+          ]
+        },
+        "title": "Carbon and nitrogen isotope excursions in mid-Pleistocene sapropels from the Tyrrhenian Basin: Evidence for climate-induced increases in microbial primary production",
+        "sha256": "6d35e3bce2f51b055b093185f8b4421aac22f2996437522447203a04fff2de76"
+      },
+      "source_rows": 122,
+      "age_column": 3,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Calcium carbonate",
+          "short": "CaCO3",
+          "unit": "%",
+          "method": "Element analyser CHNS-O, Carlo Erba EA1108",
+          "comment": null,
+          "column": 7,
+          "header": "CaCO3 [%] (Element analyser CHNS-O, Carl...)",
+          "family": "carbonate",
+          "environmental_interpretation": "Proporción de carbonato cálcico en sedimento marino, sensible a producción, disolución y dilución",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "CaCO3"
+        },
+        {
+          "name": "Carbon, organic, total",
+          "short": "TOC",
+          "unit": "%",
+          "method": "Element analyser CHNS-O, Carlo Erba EA1108",
+          "comment": null,
+          "column": 9,
+          "header": "TOC [%] (Element analyser CHNS-O, Carl...)",
+          "family": "toc",
+          "environmental_interpretation": "Contenido de carbono orgánico sedimentario sensible a aporte, producción y preservación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TOC"
+        },
+        {
+          "name": "Accumulation rate, total organic carbon",
+          "short": "Acc rate TOC",
+          "unit": "g/cm**2/ka",
+          "method": "Calculated",
+          "comment": "TOC",
+          "column": 11,
+          "header": "Acc rate TOC [g/cm**2/ka] (TOC, Calculated)",
+          "family": "productivity",
+          "environmental_interpretation": "Acumulación sedimentaria de carbono orgánico publicada, sensible a exportación y preservación",
+          "comparison_context": "tyrrhenian_974c_toc_burial",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Acc rate TOC"
+        },
+        {
+          "name": "δ13C, organic carbon",
+          "short": "δ13C Corg",
+          "unit": "‰ PDB",
+          "method": "Element analyser CHN, Carlo Erba",
+          "comment": null,
+          "column": 12,
+          "header": "δ13C Corg [‰ PDB] (Element analyser CHN, Carlo Erba)",
+          "family": "organic_isotopes",
+          "environmental_interpretation": "Composición isotópica del carbono orgánico sedimentario sensible a fuente y productividad",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "δ13C Corg"
+        },
+        {
+          "name": "δ15N",
+          "short": "δ15N",
+          "unit": "‰ air",
+          "method": "Element analyser CHN, Carlo Erba",
+          "comment": null,
+          "column": 13,
+          "header": "δ15N [‰ air] (Element analyser CHN, Carlo Erba)",
+          "family": "organic_isotopes",
+          "environmental_interpretation": "Composición isotópica del nitrógeno sedimentario sensible a cambios del ciclo del nitrógeno",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "δ15N"
+        },
+        {
+          "name": "Carbon/Nitrogen ratio",
+          "short": "C/N",
+          "unit": "sin unidad",
+          "method": "Calculated as atomic ratio",
+          "comment": null,
+          "column": 14,
+          "header": "C/N (Calculated as atomic ratio)",
+          "family": "toc",
+          "environmental_interpretation": "Cociente atómico C/N sensible a la fuente y transformación de la materia orgánica",
+          "comparison_context": "atomic_cn_bulk_sediment",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C/N"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas ka BP. Sin ajuste ni interpolación.",
+        "La columna 6 rotulada como acumulación TOC coincide con sedimentación por densidad seca. Se usa solo la columna 11 marcada TOC, coherente con el factor de contenido orgánico. Sin recalcular valores."
+      ]
+    },
+    {
+      "id": 881553,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.881553",
+      "sha": "4ef9dfc584b019b8ea044168543f9b7467ee57cbf9879ef7bc13de73495feeca",
+      "xml_sha": "272ee7a10b688e683585dbedb061c88bb04e0694742e3e4764ddd2e9e7e35138",
+      "title": "TEX86 and BIT of sediment core 4WS00-4P section 8-9",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "TEX86",
+        "BIT"
+      ],
+      "events": [
+        {
+          "label": "4WS00-4P",
+          "lat": 47.017,
+          "lon": 8.4,
+          "elevation": "434.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 196,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Tetraether index of 86 carbon atoms",
+          "short": "TEX86",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "TEX86",
+          "family": "indices",
+          "environmental_interpretation": "Índice TEX86 lacustre sensible a la temperatura del agua",
+          "comparison_context": "lacustrine_lucerne_tex86",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TEX86"
+        },
+        {
+          "name": "Branched and isoprenoid tetraether index",
+          "short": "BIT",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "BIT",
+          "family": "indices",
+          "environmental_interpretation": "Índice BIT lacustre sensible a la contribución de GDGT ramificados frente a crenarqueol",
+          "comparison_context": "lacustrine_lucerne_bit",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "BIT"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas ka BP. Sin ajuste ni interpolación.",
+        "Contexto lacustre conservado. Se archivan los índices publicados sin reconstruir temperaturas nuevas."
+      ],
+      "record_metadata": {
+        "water_depth_m": 95,
+        "elevation_m": 434
+      }
+    },
+    {
+      "id": 854726,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.854726",
+      "sha": "a6d810a06c611d1516bafba324ece7d3b8b20ce256398018d917509ba9daac8e",
+      "xml_sha": "0dde9eec6c554d57494d113c3603e69616292dde0e5c5233f231bbf9dc4eeb34",
+      "title": "Alkenone-derived UK'37 and sea surface temperatures of sediment core M72/5_640-1 (22-GC 8)",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "UK'37",
+        "SST [°C]",
+        "C37+C38+C39/TOC [µg/g]"
+      ],
+      "events": [
+        {
+          "label": "M72/5_640-1",
+          "lat": 42.2255,
+          "lon": 36.49317,
+          "elevation": "-847.0",
+          "campaign": "M72/5",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 17,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Alkenone, unsaturation index UK'37",
+          "short": "UK'37",
+          "unit": "sin unidad",
+          "method": "Calculated from C37 alkenones (Prahl & Wakeham, 1987)",
+          "comment": null,
+          "column": 2,
+          "header": "UK'37",
+          "family": "indices",
+          "environmental_interpretation": "Índice de insaturación UK′37 sensible a temperatura superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "UK'37"
+        },
+        {
+          "name": "Sea surface temperature",
+          "short": "SST",
+          "unit": "°C",
+          "method": "Calculated after Conte et al. (2006)",
+          "comment": "early summer",
+          "column": 3,
+          "header": "SST [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial marina de principios de verano publicada a partir de alquenonas",
+          "comparison_context": "black_sea_640_1_alkenone_early_summer",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST",
+          "label": "SST · alquenonas · principios de verano"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas ka BP. Sin ajuste ni interpolación.",
+        "SST de principios de verano según el XML. Calibración de la tabla conservada con contexto propio."
+      ]
+    },
+    {
+      "id": 831554,
+      "status": "held",
+      "reason": "Event west of pilot longitude boundary",
+      "sha": "2948e830a531ae556bd96d2b41e63be05b07b894fcbed15d298eaab6f92589e9",
+      "xml_sha": "56faba049ba16e671071c608ed13edfb06565bcf1de7240f23ff6667594b567b",
+      "columns": []
+    },
+    {
+      "id": 857890,
+      "status": "held",
+      "reason": "Age controls only; not a quantitative proxy table",
+      "sha": "9691fba4e4ab0d9264f325bdb1707b1282682ea0174065093ccca7edba190069",
+      "xml_sha": "71628b841d55e59a6992e2737571c8a200d1b4ef66e16583f86f670b927ed674",
+      "columns": []
+    },
+    {
+      "id": 901418,
+      "status": "held",
+      "reason": "Existing LC21 event; review dual depth frames and overlap before admission",
+      "sha": "fed6da4c4395886cb76ff60862f0d1f5f6af19055cc87564b573e1cab2a954ec",
+      "xml_sha": "9e558c5a8a50d3b5110d19c0d555bf312cd0e21961b139911e1bb41a2c1a361a",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Two new locations and one existing Black Sea core.",
+    "No new accumulation or temperature calculations."
+  ]
+}

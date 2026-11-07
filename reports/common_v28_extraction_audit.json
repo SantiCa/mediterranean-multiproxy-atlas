@@ -1,0 +1,138 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v27-cdeefdc51f6",
+  "counts": {
+    "records": 3,
+    "series": 10,
+    "observations": 1135,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea28-726198:161_974C:col7~f2ee6c16f5",
+      "dataset": "10.1594/PANGAEA.726198",
+      "event": "161-974C",
+      "source_column": 7,
+      "observations": 122,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-726198:161_974C:col9~70e4ba9f87",
+      "dataset": "10.1594/PANGAEA.726198",
+      "event": "161-974C",
+      "source_column": 9,
+      "observations": 122,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-726198:161_974C:col11~b43a59b59e",
+      "dataset": "10.1594/PANGAEA.726198",
+      "event": "161-974C",
+      "source_column": 11,
+      "observations": 122,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-726198:161_974C:col12~01c13db565",
+      "dataset": "10.1594/PANGAEA.726198",
+      "event": "161-974C",
+      "source_column": 12,
+      "observations": 115,
+      "missing_cells": 7,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-726198:161_974C:col13~f06e10a8e7",
+      "dataset": "10.1594/PANGAEA.726198",
+      "event": "161-974C",
+      "source_column": 13,
+      "observations": 115,
+      "missing_cells": 7,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-726198:161_974C:col14~1c4666f80a",
+      "dataset": "10.1594/PANGAEA.726198",
+      "event": "161-974C",
+      "source_column": 14,
+      "observations": 116,
+      "missing_cells": 6,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-881553:4WS00_4P:col2~84ddc200ab",
+      "dataset": "10.1594/PANGAEA.881553",
+      "event": "4WS00-4P",
+      "source_column": 2,
+      "observations": 196,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-881553:4WS00_4P:col3~47fba1dd4d",
+      "dataset": "10.1594/PANGAEA.881553",
+      "event": "4WS00-4P",
+      "source_column": 3,
+      "observations": 193,
+      "missing_cells": 3,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-854726:M72_5_640_1:col2~fa013bf5b5",
+      "dataset": "10.1594/PANGAEA.854726",
+      "event": "M72/5_640-1",
+      "source_column": 2,
+      "observations": 17,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea28-854726:M72_5_640_1:col3~00729af13d",
+      "dataset": "10.1594/PANGAEA.854726",
+      "event": "M72/5_640-1",
+      "source_column": 3,
+      "observations": 17,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 831554,
+      "status": "held",
+      "reason": "Event west of pilot longitude boundary"
+    },
+    {
+      "id": 857890,
+      "status": "held",
+      "reason": "Age controls only; not a quantitative proxy table"
+    },
+    {
+      "id": 901418,
+      "status": "held",
+      "reason": "Existing LC21 event; review dual depth frames and overlap before admission"
+    }
+  ]
+}
