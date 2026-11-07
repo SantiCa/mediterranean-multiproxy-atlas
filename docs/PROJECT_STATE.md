@@ -1,8 +1,14 @@
 # Estado breve del proyecto
 
-Actualizado: 06-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
+Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v20 validada en relevo, integración/publicación para rol 04 (06-11-2026)
+## Colección v21 validada en relevo (07-11-2026)
+
+- v21-c80c881825a reúne **262 registros, 2.026 series, 980.691 valores y 1.027 grupos base**. Siete series y 5.610 valores de susceptibilidad magnética, isótopos de ostrácodos, micro-XRF y SST publicada. Dos registros nuevos. Tabla de fuentes y límites en docs/handoffs/cur-common-21.md.
+- UK′37 reúne 11 series y 1.108 valores bajo un nombre y unidad de consulta comunes. TIC reúne 10 series y 685 valores. Se normaliza la escritura de Br/Ti y Sr en cocientes sin alterar logaritmos, métodos ni unidades archivadas.
+- 146 pruebas Python, 41 Node, TypeScript, compilación y snapshot de 1.029 archivos correctos. La admisión cotejó el esquema y cada observación nueva con su origen. Auditorías con cero errores. Rol 04 tiene la integración y publicación.
+
+## Colección v20 publicada en Sites (07-11-2026)
 
 - v20-cf635885fac: **260 registros / 2.019 series / 975.081 valores / 1.020 grupos base**. Tres series/98 valores de carbono orgánico, N y P lábil en BEN14-P4 existente; sin nuevas ubicaciones independientes. Padre v19, esquema y cuarentenas anteriores intactos.
 - Alias TOC/total organic carbon/C org/sed y razones elementales (Ti/Ca, etc.) unificados para consulta. Un agregado TOC % completo: 24 registros/31 series. CaCO3 normalizado; grupos base, unidades, fracciones, métodos, logaritmos y bases de cocientes incompatibles conservados por separado. Detalle docs/curation/groups_v20.md.
