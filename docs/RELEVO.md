@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 07-11-2026
+- Tarea en curso CUR-COMMON-24. Incorporar series nativas y revisar el catálogo de agrupaciones. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-23. v23-c339e7f2aa6 reúne 267 registros, 2.067 series, 988.578 observaciones y 1.047 grupos base. Añade 34 series y 3.461 observaciones de GDGT, SST, UK′37 e isótopos por especie. Los 144 agregados tienen membresías distintas y se aclaran los rótulos estivales. Pasaron 146 Python, 42 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Handoff docs/handoffs/cur-common-23.md. Publicación a cargo del rol 04.
 - Tarea cerrada CUR-COMMON-22. v22-cf1f6241933 reúne 263 registros, 2.033 series, 985.117 observaciones y 1.034 grupos base. Siete series y 4.426 observaciones nuevas de Lungo, Tajo y Alborán. Tarjeta anual SST consolidada y reconstrucción de 0–200 m separada. Pasaron 146 Python, 42 Node, TypeScript, compilación y snapshot completo. Handoff docs/handoffs/cur-common-22.md. Publicación a cargo del rol 04.
 - Tarea cerrada CUR-COMMON-21. v21-c80c881825a reúne 262 registros, 2.026 series, 980.691 valores y 1.027 grupos base. Siete series y 5.610 observaciones de cinco tablas en tres ubicaciones. UK′37 reúne 11 series y TIC 10. Br/Ti conserva su transformación y contexto. 146 Python, 41 Node, TypeScript, compilación y snapshot completo verificados. Auditorías con cero errores. Handoff docs/handoffs/cur-common-21.md. Publicación a cargo del rol 04.
