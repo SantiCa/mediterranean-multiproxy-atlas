@@ -22,6 +22,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 07-11: Santiago solicita integrar todos los PR pendientes y publicar la última versión del mapa. GitHub no muestra PR abiertos; rol 04 prepara integración de relevo v25 y despliegue del Site existente.
 1. Rol 04 revisa e integra relevo y publica atlas-v25.json. Snapshot local verificado con 1.024.357 valores y 1.064 archivos. El push a main activa Cloudflare. Sites sirve v20 según el último recibo registrado.
 2. Nueva prioridad del usuario (06-11): ampliar proxies comunes de alta densidad espacial e índices compuestos publicados, preservando estructura exacta, variable ambiental y unidad. Continuar isótopos, SST, XRF (Fe/Ca, Ti/Al, Si/Ti), susceptibilidad y asociaciones cuando haya originales, cronología/materiales/calibración verificables. CIA exige óxidos/correcciones molares documentados; U/Th radiométrico no es automáticamente redox. No fabricar índices desde cuentas de escáner ni mezclar estaciones/métodos. Contrato common_v19_sources.json e inventario de cobertura son puntos de partida. Reading sigue en 104/122 entidades, 18 bloqueadas; no repetir búsquedas sin pista nueva (ver handoff v18).
 3. MD99-2337 sigue en espera. Falta una tabla numérica de edad y profundidad del propio sondeo. Consultar el handoff actual y el contrato ss_v8 antes de repetir búsquedas ya documentadas. No usar MD99-2339 como sustituto. Revisar una versión pública de Ducassou 2018 o sus suplementos si aparece acceso nuevo.
