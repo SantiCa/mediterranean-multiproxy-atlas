@@ -40,7 +40,7 @@ export function canonicalParameterName(s) {
   if (["uk'37", "alkenone uk37prime", "alkenone unsaturation index uk'37"].includes(indexName)
       || (indexName === "alkenone uk37" && /^uk['′’]37\b/i.test(s.source_column || ""))) return UK37_PRIME;
   if (["tic", "total inorganic carbon", "carbon inorganic total", "carbono inorganico total"].includes(name)) return "Carbono inorgánico total (TIC)";
-  const ratio = fold(elementRatioAlias(raw)).replace(/_/g, " ").trim().match(/^(?:(ln|log|log10)[\s(-]*)?(ti|fe|si|zr|k|mn|u|mo|ba|br|sr)\s*\/\s*(ca|al|ti|rb|th|sr)\)?(?:\s+ratio)?$/);
+  const ratio = fold(elementRatioAlias(raw)).replace(/_/g, " ").trim().match(/^(?:(ln|log|log10)[\s(-]*)?(ti|fe|si|zr|k|mn|u|mo|ba|br|sr|ca)\s*\/\s*(ca|al|ti|rb|th|sr)\)?(?:\s+ratio)?$/);
   if (ratio) {
     const symbols = { ti:"Ti", fe:"Fe", si:"Si", zr:"Zr", k:"K", mn:"Mn", u:"U", mo:"Mo", ba:"Ba", ca:"Ca", al:"Al", rb:"Rb", th:"Th", br:"Br", sr:"Sr" };
     return (ratio[1] ? ratio[1] + "-" : "") + symbols[ratio[2]] + "/" + symbols[ratio[3]] + " ratio";
@@ -198,7 +198,7 @@ export const AGGREGATES = [
   { id: "d13c_planct", label: "δ13C foraminíferos planctónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "13") && PLANKTIC.test(t) && !BENTHIC.test(t) },
   { id: "d13c_bent", label: "δ13C foraminíferos bentónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "13") && BENTHIC.test(t) && !PLANKTIC.test(t) },
   { id: "toc_pct", label: "Carbono orgánico total (TOC) · todos los métodos", unit: "%", family: "Materia orgánica y biomarcadores", test: (s) => s.unit === "%" && canonicalParameterName(s) === "Carbono orgánico total (TOC)" && !comparisonContext(s) },
-  { id: "caco3_pct", label: "Carbonato cálcico (CaCO3) · todos los métodos", unit: "%", family: "Sedimentología", test: (s, t) => s.unit === "%" && /calcium carbonate|caco3|carbonato/.test(t) && !/accumulation|flux|free/.test(t) },
+  { id: "caco3_pct", label: "Carbonato cálcico (CaCO3) · todos los métodos", unit: "%", family: "Sedimentología", test: (s, t) => s.unit === "%" && canonicalParameterName(s) === "Calcium carbonate" && !comparisonContext(s) && !/accumulation|flux|free/.test(t) },
 ];
 export const aggregateKey = (a) => JSON.stringify(["agg", a.id, a.unit]);
 export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["agg"');

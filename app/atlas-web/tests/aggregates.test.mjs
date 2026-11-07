@@ -138,3 +138,12 @@ test("bromine ratio symbols retain logarithm and TIC stays separate from carbona
   assert.equal(paramKey({proxy:"TIC", unit:"%"}), paramKey({parameter_name_pangaea:"Carbon, inorganic, total", unit:"%"}));
   assert.notEqual(paramKey({proxy:"TIC", unit:"%"}), paramKey({proxy:"CaCO3", unit:"%"}));
 });
+
+test("Ca/Al aliases agree while carbonate discovery requires the actual CaCO3 parameter", () => {
+  const ratio = {parameter_name_pangaea:"Calcium/Aluminium ratio", unit:"sin unidad"};
+  assert.equal(paramKey(ratio), paramKey({...ratio, parameter_name_pangaea:"Ca/Al"}));
+  const key = JSON.stringify(["agg", "caco3_pct", "%"]);
+  assert.ok(inGroup({parameter_name_pangaea:"Calcium carbonate", unit:"%"}, key));
+  assert.ok(!inGroup({parameter_name_pangaea:"Carbon, inorganic, total", label:"Carbono inorgánico en carbonatos", unit:"%"}, key));
+  assert.ok(!inGroup({parameter_name_pangaea:"Calcium carbonate", unit:"%", comparison_context_key:"selected_fraction"}, key));
+});
