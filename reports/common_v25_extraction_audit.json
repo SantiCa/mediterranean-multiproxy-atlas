@@ -1,0 +1,144 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v24-c17c40ccf3b",
+  "counts": {
+    "records": 3,
+    "series": 11,
+    "observations": 21457,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea25-804611:Co1215:col4~3ab68beded",
+      "dataset": "10.1594/PANGAEA.804611",
+      "event": "Co1215",
+      "source_column": 4,
+      "observations": 17363,
+      "missing_cells": 394,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-908113:ICDP5045_1:col8~fb51ea7107",
+      "dataset": "10.1594/PANGAEA.908113",
+      "event": "ICDP5045-1",
+      "source_column": 8,
+      "observations": 1352,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759529:MD99_2343:col2~37d2901aee",
+      "dataset": "10.1594/PANGAEA.759529",
+      "event": "MD99-2343",
+      "source_column": 2,
+      "observations": 415,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759531:MD99_2343:col2~60e838f5e5",
+      "dataset": "10.1594/PANGAEA.759531",
+      "event": "MD99-2343",
+      "source_column": 2,
+      "observations": 345,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759531:MD99_2343:col3~c19a6f5ba4",
+      "dataset": "10.1594/PANGAEA.759531",
+      "event": "MD99-2343",
+      "source_column": 3,
+      "observations": 345,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759531:MD99_2343:col4~48d9d6595c",
+      "dataset": "10.1594/PANGAEA.759531",
+      "event": "MD99-2343",
+      "source_column": 4,
+      "observations": 345,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759531:MD99_2343:col5~5ff88299d8",
+      "dataset": "10.1594/PANGAEA.759531",
+      "event": "MD99-2343",
+      "source_column": 5,
+      "observations": 345,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759532:MD99_2343:col2~a6d0d2e77f",
+      "dataset": "10.1594/PANGAEA.759532",
+      "event": "MD99-2343",
+      "source_column": 2,
+      "observations": 202,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759533:MD99_2343:col2~3ddd93a0f5",
+      "dataset": "10.1594/PANGAEA.759533",
+      "event": "MD99-2343",
+      "source_column": 2,
+      "observations": 173,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759536:MD99_2343:col2~7bce7f0375",
+      "dataset": "10.1594/PANGAEA.759536",
+      "event": "MD99-2343",
+      "source_column": 2,
+      "observations": 286,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea25-759536:MD99_2343:col3~b8dabd88e5",
+      "dataset": "10.1594/PANGAEA.759536",
+      "event": "MD99-2343",
+      "source_column": 3,
+      "observations": 286,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 819811,
+      "status": "held",
+      "reason": "Species-specific Mg/Ca temperatures require separate depth habitat and calibration review"
+    },
+    {
+      "id": 904197,
+      "status": "held",
+      "reason": "Outside pilot region"
+    }
+  ]
+}

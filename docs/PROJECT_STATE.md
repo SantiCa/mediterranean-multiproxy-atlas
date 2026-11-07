@@ -1,8 +1,35 @@
 # Estado breve del proyecto
 
-Actualizado: 06-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
+Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v20 validada en relevo, integración/publicación para rol 04 (06-11-2026)
+## Colección v25 validada en relevo (07-11-2026)
+
+- v25-c4c7fe7c54e reúne **267 registros, 2.085 series, 1.024.357 observaciones y 1.062 grupos base**. Añade 11 series y 21.457 observaciones de Prespa, Ohrid y Baleares. Fuentes y límites en docs/handoffs/cur-common-25.md.
+- Alias Ca/Al y criterio de admisión CaCO₃ revisados. Catálogo completo y 21 vistas filtradas sin conjuntos de series agregadas idénticos. Pasaron 146 Python, 43 Node, TypeScript, compilación y snapshot completo. Auditorías con cero errores. Integración y publicación para rol 04.
+
+## Colección v24 validada en relevo (07-11-2026)
+
+- v24-c17c40ccf3b reúne **267 registros, 2.074 series, 1.002.900 observaciones y 1.051 grupos base**. Siete series y 14.322 observaciones de calcio XRF, granulometría y δ¹⁸O planctónico en dos testigos existentes del golfo de León. Fuentes y límites en docs/handoffs/cur-common-24.md.
+- Catálogo completo y 21 vistas filtradas sin membresías agregadas idénticas. Verificadas las unidades XRF y las fracciones granulométricas. Pasaron 146 pruebas Python, 42 Node, TypeScript, compilación y snapshot completo. Auditorías con cero errores. Integración y publicación para rol 04.
+
+## Colección v23 validada en relevo (07-11-2026)
+
+- v23-c339e7f2aa6 reúne **267 registros, 2.067 series, 988.578 observaciones y 1.047 grupos base**. Añade 34 series y 3.461 observaciones de GDGT, SST, UK′37 e isótopos por especie. Cuatro eventos nuevos, con los sondeos de U1387 pertenecientes al mismo sitio. Fuentes y límites en docs/handoffs/cur-common-23.md.
+- Cotejadas las membresías de los 144 agregados. Rótulos estivales diferenciados según el alcance de la selección. Pasaron 146 pruebas Python, 42 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Integración y publicación para rol 04.
+
+## Colección v22 validada en relevo (07-11-2026)
+
+- v22-cf1f6241933 reúne **263 registros, 2.033 series, 985.117 valores y 1.034 grupos base**. Añade siete series y 4.426 observaciones de susceptibilidad volumétrica, SST y biomarcadores. Lungo y 161-977A enlazados a eventos existentes. Identidad cruzada de D13902 pendiente. Fuentes y límites en docs/handoffs/cur-common-22.md.
+- Tarjeta anual SST consolidada con 22 series de 16 registros. La reconstrucción de 0–200 m conserva su grupo específico.
+- 146 pruebas Python, 42 Node, TypeScript, compilación y snapshot completo verificados. Auditorías con cero errores. Integración y publicación para rol 04.
+
+## Colección v21 validada en relevo (07-11-2026)
+
+- v21-c80c881825a reúne **262 registros, 2.026 series, 980.691 valores y 1.027 grupos base**. Siete series y 5.610 valores de susceptibilidad magnética, isótopos de ostrácodos, micro-XRF y SST publicada. Dos registros nuevos. Tabla de fuentes y límites en docs/handoffs/cur-common-21.md.
+- UK′37 reúne 11 series y 1.108 valores bajo un nombre y unidad de consulta comunes. TIC reúne 10 series y 685 valores. Se normaliza la escritura de Br/Ti y Sr en cocientes sin alterar logaritmos, métodos ni unidades archivadas.
+- 146 pruebas Python, 41 Node, TypeScript, compilación y snapshot de 1.029 archivos correctos. La admisión cotejó el esquema y cada observación nueva con su origen. Auditorías con cero errores. Rol 04 tiene la integración y publicación.
+
+## Colección v20 publicada en Sites (07-11-2026)
 
 - v20-cf635885fac: **260 registros / 2.019 series / 975.081 valores / 1.020 grupos base**. Tres series/98 valores de carbono orgánico, N y P lábil en BEN14-P4 existente; sin nuevas ubicaciones independientes. Padre v19, esquema y cuarentenas anteriores intactos.
 - Alias TOC/total organic carbon/C org/sed y razones elementales (Ti/Ca, etc.) unificados para consulta. Un agregado TOC % completo: 24 registros/31 series. CaCO3 normalizado; grupos base, unidades, fracciones, métodos, logaritmos y bases de cocientes incompatibles conservados por separado. Detalle docs/curation/groups_v20.md.

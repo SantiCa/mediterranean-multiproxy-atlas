@@ -1,0 +1,601 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v23-c339e7f2aa6",
+  "parent_sha256": "bb5fbb7366a0b0c4485ec9ae172f87b743e81352fc7e77bf5e8e71a366b02ae0",
+  "datasets": [
+    {
+      "id": 911430,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911430",
+      "sha": "24321a6581c627052b387b1bb8d7f111d25080af75c2e8d3b353807d2d18eb8f",
+      "xml_sha": "13881900f03bfa17bcec453462337244e9dbecf56e8569cffda5b80152044146",
+      "title": "XRF-Ca record of borehole PRGL1-4 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "Ca [cts]"
+      ],
+      "events": [
+        {
+          "label": "PRGL1-4",
+          "lat": 42.689846,
+          "lon": 3.837663,
+          "elevation": "-298.48",
+          "campaign": "PROMESS1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 8202,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Calcium",
+          "short": "Ca",
+          "unit": "cts",
+          "method": "X-ray fluorescence core scanner (XRF)",
+          "comment": null,
+          "column": 2,
+          "header": "Ca [cts]",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Intensidad de calcio por escáner XRF, sensible a composición y matriz sedimentaria",
+          "comparison_context": "prgl1_4_xrf_ca_native_counts",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ca"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "Intensidad nativa en cts. Sin conversión a cps, concentración o CaCO3."
+      ]
+    },
+    {
+      "id": 911431,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911431",
+      "sha": "3180388b59843b9c976d1db8e23cdb57b16003ffbc7a149f8ecdd7390e13fb87",
+      "xml_sha": "7f7f1d3f47b23c2ddefde1d50af5908d146e72aa377ceaf6fa032523beb3e7eb",
+      "title": "Fine sand percentages of the total fraction of borehole PRGL1-4 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "250-125 µm [%]"
+      ],
+      "events": [
+        {
+          "label": "PRGL1-4",
+          "lat": 42.689846,
+          "lon": 3.837663,
+          "elevation": "-298.48",
+          "campaign": "PROMESS1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 2185,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Size fraction 0.250-0.125 mm, 2.0-3.0 phi, fine sand",
+          "short": "250-125 µm",
+          "unit": "%",
+          "method": null,
+          "comment": "Total fine sand",
+          "column": 2,
+          "header": "250-125 µm [%]",
+          "family": "corrientes",
+          "environmental_interpretation": "Proporción de arena fina de 125–250 µm en la fracción total, sensible a transporte y deposición",
+          "comparison_context": "grain_fraction_total",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "250-125 µm"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "Se mantiene el denominador de la fracción y el orden del cociente nativo."
+      ]
+    },
+    {
+      "id": 911432,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911432",
+      "sha": "d55181da1ef4b2fc44b845741e21166f58ee4f92987c50dbfebb970c50d8a3ac",
+      "xml_sha": "f717200f19a4260199470c3b79e812b51cfcd63e2e5b754662bfa0fd35bea044",
+      "title": "Silt/clay ratio of the decarbonated fraction of borehole PRGL1-4 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "Silt/clay"
+      ],
+      "events": [
+        {
+          "label": "PRGL1-4",
+          "lat": 42.689846,
+          "lon": 3.837663,
+          "elevation": "-298.48",
+          "campaign": "PROMESS1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 1731,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Silt/clay ratio",
+          "short": "Silt/clay",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": "Decarbonated silt/clay ratio",
+          "column": 2,
+          "header": "Silt/clay",
+          "family": "corrientes",
+          "environmental_interpretation": "Razón limo/arcilla de la fracción descarbonatada, sensible al transporte y aporte detrítico",
+          "comparison_context": "grain_fraction_noncarbonate",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Silt/clay"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "Se mantiene el denominador de la fracción y el orden del cociente nativo."
+      ]
+    },
+    {
+      "id": 911433,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911433",
+      "sha": "ab9ed37975d038cb8f485ef0f913b7f13310faa632715968064afe3130c05883",
+      "xml_sha": "e002a27d469ad5b586f4dc7a1c546686a04a2bd7fd62114effedb69368a03557",
+      "title": "Globigerina bulloides δ18O record from borehole PRGL1-4 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "G. bulloides δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "PRGL1-4",
+          "lat": 42.689846,
+          "lon": 3.837663,
+          "elevation": "-298.48",
+          "campaign": "PROMESS1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 1552,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerina bulloides, δ18O",
+          "short": "G. bulloides δ18O",
+          "unit": "‰ PDB",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "G. bulloides δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ18O"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "La estratigrafía isotópica participa en la cronología publicada. No es prueba independiente de sincronía."
+      ]
+    },
+    {
+      "id": 911436,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911436",
+      "sha": "49c49ac7a520a4ae5a72a0cdcb2c2cd55a1c47a63ec6c907fcb2f67b0b20904c",
+      "xml_sha": "0154d5b373b6bef4cb40d59b12e4a7770b8601a9202d121b3ad8c025588b6d60",
+      "title": "Fine sand percentages of the total fraction of sediment core MD99-2348 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "250-125 µm [%]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2348",
+          "lat": 42.693,
+          "lon": 3.8416666666667,
+          "elevation": "-296.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 197,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Size fraction 0.250-0.125 mm, 2.0-3.0 phi, fine sand",
+          "short": "250-125 µm",
+          "unit": "%",
+          "method": null,
+          "comment": "Total fine sand",
+          "column": 2,
+          "header": "250-125 µm [%]",
+          "family": "corrientes",
+          "environmental_interpretation": "Proporción de arena fina de 125–250 µm en la fracción total, sensible a transporte y deposición",
+          "comparison_context": "grain_fraction_total",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "250-125 µm"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "Se mantiene el denominador de la fracción y el orden del cociente nativo."
+      ]
+    },
+    {
+      "id": 911437,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911437",
+      "sha": "92d44c1be6815c2cc2a79daaa68eebdb8a5e7cd35a850baaed347820721f5a0a",
+      "xml_sha": "bbdf53e8ff3b5cfe2cec5223bc5abd0d973538b21db08362557f773f1846d17c",
+      "title": "Decarbonated silt/clay ratio from sediment core MD99-2348 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "Silt/clay"
+      ],
+      "events": [
+        {
+          "label": "MD99-2348",
+          "lat": 42.693,
+          "lon": 3.8416666666667,
+          "elevation": "-296.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 228,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Silt/clay ratio",
+          "short": "Silt/clay",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": "Decarbonated silt/clay ratio",
+          "column": 2,
+          "header": "Silt/clay",
+          "family": "corrientes",
+          "environmental_interpretation": "Razón limo/arcilla de la fracción descarbonatada, sensible al transporte y aporte detrítico",
+          "comparison_context": "grain_fraction_noncarbonate",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Silt/clay"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "Se mantiene el denominador de la fracción y el orden del cociente nativo."
+      ]
+    },
+    {
+      "id": 911438,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.911438",
+      "sha": "99d6039908575697fea73c77fbf3ce6d4cfe4612c767ba2553c9a04531644bdf",
+      "xml_sha": "88f031d65a2d75256cdbe293624c8c7393f75e30be24350fd2a1cf5fc2c5447b",
+      "title": "Globigerina bulloides δ18O record from sediment core MD99-2348 from the Gulf of Lion, Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "G. bulloides δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2348",
+          "lat": 42.693,
+          "lon": 3.8416666666667,
+          "elevation": "-296.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-8-1067-2012",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2012,
+        "dates": {
+          "published-online": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "issued": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ],
+          "published": [
+            [
+              2012,
+              6,
+              22
+            ]
+          ]
+        },
+        "title": "A 500 kyr record of global sea-level oscillations in the Gulf of Lion, Mediterranean Sea: new insights into MIS 3 sea-level variability",
+        "sha256": "63ecdfff13e9883dea53714c23b12f11e5b7985d8085ac0a007a8f31d80a5f46"
+      },
+      "source_rows": 227,
+      "age_column": 1,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerina bulloides, δ18O",
+          "short": "G. bulloides δ18O",
+          "unit": "‰ PDB",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "G. bulloides δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ18O"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Cronología calendárica nativa de Frigola et al. Conservada sin ajuste ni interpolación. Los dos archivos comparten marco estratigráfico publicado.",
+        "La estratigrafía isotópica participa en la cronología publicada. No es prueba independiente de sincronía."
+      ]
+    },
+    {
+      "id": 882219,
+      "status": "held",
+      "reason": "Acid treatment alternatives and approximate ages require per-method review; event alias coordinates differ",
+      "sha": "38cd47e0c5b4671871bbcaf3fb011f1d645b65f44e1e63c97052ff1b06bf7401",
+      "xml_sha": "1c5ece92ebc7024b567615f4921d09c6e1f0acbb21cfd3df2465ee4090e43e71",
+      "columns": []
+    },
+    {
+      "id": 902764,
+      "status": "held",
+      "reason": "PRGL_1-4 metadata rounded differently from PRGL1-4; verify cross-source identity before admission",
+      "sha": "216c20f504b009b6e3b8547e1194bd02ae96418953379bea7a1cdfe62fc1d5c6",
+      "xml_sha": "8270084afe162d061f4612329a14cf3796a36a43f9515d10dbae775f15ce875f",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Seven dated proxy tables from bundle PANGAEA.911440. Age controls remain separate.",
+    "Two existing events, no new independent spatial locations.",
+    "PRGL aliases with different coordinates remain under identity review."
+  ]
+}

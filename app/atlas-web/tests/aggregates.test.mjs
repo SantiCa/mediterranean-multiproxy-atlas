@@ -30,6 +30,22 @@ test("sorting by records and values; aggregation can be hidden", () => {
   assert.ok(filterGroups(g, { aggregates: false }).every((x) => !x.aggregate));
   assert.ok(filterGroups(g, { minRecords: 2 }).every((x) => x.records >= 2));
 });
+test("the annual SST card subsumes its generic subset and excludes 0–200 m", () => {
+  const annual = (id, r) => ({
+    ...ser(id, r, "Sea_surface_temperature_annual_mean", id, "°C", "Sea surface temperature, annual mean", 5),
+    parameter_name_pangaea: "Sea surface temperature, annual mean",
+  });
+  const legacy = ser("legacy", "c", "alkenone_SST", "legacy", "°C", "SST anual", 5);
+  const subsurface = {...annual("deep", "c"), comparison_context_key: "black_sea_0_200m_archived"};
+  const d = {records: ["a", "b", "c"].map(rec), series: [annual("one", "a"), annual("two", "b"), legacy, subsurface]};
+  const groups = proxyGroups(d);
+  assert.equal(groups.filter(g => g.aggregate && /annual mean/.test(g.label)).length, 0);
+  assert.deepEqual(new Set(groups.find(g => g.id === "agg:sst_annual").series.map(s => s.id)),
+    new Set(["one", "two", "legacy"]));
+  assert.ok(!inGroup(subsurface, groups.find(g => g.id === "agg:sst_all").key));
+  assert.ok(groups.some(g => !g.aggregate && g.key === groupKey(subsurface)));
+  assert.ok(inGroup(d.series[0], paramKey(d.series[0])), "Saved generic selection still resolves");
+});
 test("same PANGAEA parameter and unit aggregate across methods", () => {
   const d = {
     records: ["a", "b"].map(rec),
@@ -98,4 +114,36 @@ test("element ratio aliases unify only the same ratio and measurement basis", ()
   ]) assert.notEqual(paramKey(ratio), paramKey({...ratio, ...change}));
   assert.equal(canonicalParameterName({parameter_name_pangaea:"Iron/Calcium ratio"}), "Fe/Ca ratio");
   assert.equal(canonicalParameterName({parameter_name_pangaea:"ln(Titanium/Calcium)"}), "ln-Ti/Ca ratio");
+});
+
+test("UK prime archive aliases share a dimensionless aggregate and keep native units", () => {
+  const d = {records: ["a", "b", "c"].map(rec), series: [
+    {...ser("u1", "a", "alkenone_UK37", "conte", "adimensional", "UK′37", 3), source_column: "UK'37"},
+    ser("u2", "b", "alkenone_UK37prime", "jalali", "índice", "UK′37", 4),
+    {...ser("u3", "c", "native", "native", "sin unidad", "UK′37", 5),
+      parameter_name_pangaea: "Alkenone, unsaturation index UK'37"},
+  ]};
+  const group = proxyGroups(d).find(g => g.aggregate);
+  assert.equal(group.unit, "adimensional");
+  assert.deepEqual(new Set(group.series.map(s => s.id)), new Set(["u1", "u2", "u3"]));
+  assert.deepEqual(d.series.map(s => s.unit), ["adimensional", "índice", "sin unidad"]);
+  assert.notEqual(paramKey(d.series[0]), paramKey({...d.series[0], source_column: "UK37"}));
+  assert.notEqual(paramKey(d.series[0]), paramKey({...d.series[0], unit: "°C"}));
+});
+
+test("bromine ratio symbols retain logarithm and TIC stays separate from carbonate", () => {
+  const a = {parameter_name_pangaea:"log-Bromine/Titanium ratio", unit:"sin unidad", method:"Avaatech scanner"};
+  assert.equal(paramKey(a), paramKey({...a, parameter_name_pangaea:"log(Br/Ti)"}));
+  assert.notEqual(paramKey(a), paramKey({...a, parameter_name_pangaea:"Br/Ti"}));
+  assert.equal(paramKey({proxy:"TIC", unit:"%"}), paramKey({parameter_name_pangaea:"Carbon, inorganic, total", unit:"%"}));
+  assert.notEqual(paramKey({proxy:"TIC", unit:"%"}), paramKey({proxy:"CaCO3", unit:"%"}));
+});
+
+test("Ca/Al aliases agree while carbonate discovery requires the actual CaCO3 parameter", () => {
+  const ratio = {parameter_name_pangaea:"Calcium/Aluminium ratio", unit:"sin unidad"};
+  assert.equal(paramKey(ratio), paramKey({...ratio, parameter_name_pangaea:"Ca/Al"}));
+  const key = JSON.stringify(["agg", "caco3_pct", "%"]);
+  assert.ok(inGroup({parameter_name_pangaea:"Calcium carbonate", unit:"%"}, key));
+  assert.ok(!inGroup({parameter_name_pangaea:"Carbon, inorganic, total", label:"Carbono inorgánico en carbonatos", unit:"%"}, key));
+  assert.ok(!inGroup({parameter_name_pangaea:"Calcium carbonate", unit:"%", comparison_context_key:"selected_fraction"}, key));
 });

@@ -1,0 +1,603 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v24-c17c40ccf3b",
+  "parent_sha256": "b788ba58c57e4fd51f4f37688edd17845e8f38eb21b022e2abda30c1ec831c03",
+  "datasets": [
+    {
+      "id": 804611,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.804611",
+      "sha": "3d760a50910ea28f25ed80a033929c85b4ca7fd603eb78fb963c23502a7ff62e",
+      "xml_sha": "415fc03880dec886243cd63b4f323bff4c26397eb6afd8f78fc239ca942251be",
+      "title": "Susceptibility on sediment core Co1215",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Sec label",
+        "Depth uncorr [m]",
+        "kappa [10**-6 SI]"
+      ],
+      "events": [
+        {
+          "label": "Co1215",
+          "lat": 40.96398,
+          "lon": 20.97815,
+          "elevation": "849.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 17757,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Magnetic susceptibility, volume",
+          "short": "kappa",
+          "unit": "10**-6 SI",
+          "method": "Multi-Sensor Core Logger (MSCL), GEOTEK",
+          "comment": null,
+          "column": 4,
+          "header": "kappa [10**-6 SI]",
+          "family": "magnetism",
+          "environmental_interpretation": "Susceptibilidad volumétrica sensible al contenido y propiedades de minerales magnéticos",
+          "comparison_context": "prespa_geotek_volumetric_susceptibility",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "kappa"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "Profundidad publicada y susceptibilidad volumétrica de GEOTEK. Los huecos de la columna se conservan en el original y no se imputan."
+      ]
+    },
+    {
+      "id": 908113,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.908113",
+      "sha": "ae6a88c4214fa959ac24a57e96b346ff1566add7af90cb4c81006d75167fa658",
+      "xml_sha": "af5c1f90861e4f4d6551ccb240fa5fa1616b8ff72c33396b04265693ed6f69b0",
+      "title": "Downcore magnetic data of composite sediment core ICDP5045-1 from Lake Ohrid, Balkans",
+      "header": [
+        "Sample ID",
+        "Depth sed [m] (CCD March 2017)",
+        "Age [ka BP] (Nature Oktober 2018)",
+        "Inten (IRM) [mA/m] (1500 mT)",
+        "Inten (IRM) [mA/m] (IRM bf, 200 mT)",
+        "Inten (IRM) [mA/m] (700 mT)",
+        "ARM [mA/m]",
+        "Δ GRM/Δ NRM",
+        "MAGS [10**-6 SI]",
+        "Incl (ChRM) [deg]",
+        "MAD [deg]",
+        "MDF (ARM) [mT] (MDF of ARM)",
+        "MDF (NRM) [mT] (MDF of NRM)",
+        "NRM/ARM (NRM(30mT)/ARM(30mT))"
+      ],
+      "events": [
+        {
+          "label": "ICDP5045-1",
+          "lat": 41.04917,
+          "lon": 20.715,
+          "elevation": "693.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": null,
+      "source_rows": 1352,
+      "age_column": 2,
+      "age_transformation": "identity: source Ohrid composite point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Magnetic susceptibility",
+          "short": "MAGS",
+          "unit": "10**-6 SI",
+          "method": "Magnetometer, cryogenic",
+          "comment": null,
+          "column": 8,
+          "header": "MAGS [10**-6 SI]",
+          "family": "magnetism",
+          "environmental_interpretation": "Susceptibilidad magnética de muestras discretas sensible a la mineralogía y a procesos diagenéticos",
+          "comparison_context": "ohrid_discrete_cryogenic_susceptibility",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "MAGS"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "Edades de la columna Nature Oktober 2018 y profundidad compuesta CCD March 2017, tal como se archivan."
+      ]
+    },
+    {
+      "id": 759529,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.759529",
+      "sha": "6f992e996b16c32241b85aa265cd7851627d6caa65d693efecbc920a17f0e76b",
+      "xml_sha": "290a5b4e23b6c3daf7eccfc3a59fdfc223cf0d2d21aa64cda158aa376d4aaaa5",
+      "title": "(Fig. 2) Stable oxygen isotope record of Globigerina bulloides of sediment core MD99-2343",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "G. bulloides δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2343",
+          "lat": 40.497333333333,
+          "lon": 4.0281666666667,
+          "elevation": "-2391.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 415,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerina bulloides, δ18O",
+          "short": "G. bulloides δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": "size fraction 300-350 µm",
+          "column": 2,
+          "header": "G. bulloides δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": "md99_2343_g_bulloides_300_350_um",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ18O"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación."
+      ]
+    },
+    {
+      "id": 759531,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.759531",
+      "sha": "102f11adc409e545a16b61f4fcc67d2361d1f7734e52ee2c328634a4a9513fbb",
+      "xml_sha": "ae2f3e6efee0db4abcf6fc93fb888093dead6dfa77645f2c27f937f256260647",
+      "title": "(Fig. 3) Al, Ti, Ca, and K geochemical record of sediment core MD99-2343",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Si/Al",
+        "Ti/Al",
+        "Ca/Al",
+        "K/Al"
+      ],
+      "events": [
+        {
+          "label": "MD99-2343",
+          "lat": 40.497333333333,
+          "lon": 4.0281666666667,
+          "elevation": "-2391.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2006PA001307",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2007,
+        "dates": {
+          "published-print": [
+            [
+              2007,
+              6
+            ]
+          ],
+          "published-online": [
+            [
+              2007,
+              5,
+              4
+            ]
+          ],
+          "issued": [
+            [
+              2007,
+              5,
+              4
+            ]
+          ],
+          "published": [
+            [
+              2007,
+              5,
+              4
+            ]
+          ]
+        },
+        "title": "Holocene climate variability in the western Mediterranean region from a deepwater sediment record",
+        "sha256": "cf7cf56a1aa994b7c4c6adc07d2bf62f4803ab32980730b32260c45ac38defb3"
+      },
+      "source_rows": 345,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Silicon/Aluminium ratio",
+          "short": "Si/Al",
+          "unit": "sin unidad",
+          "method": "X-ray fluorescence (XRF)",
+          "comment": null,
+          "column": 2,
+          "header": "Si/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Si/Al sedimentario sensible a variaciones de composición detrítica",
+          "comparison_context": "md99_2343_native_element_ratio",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Si/Al"
+        },
+        {
+          "name": "Titanium/Aluminium ratio",
+          "short": "Ti/Al",
+          "unit": "sin unidad",
+          "method": "X-ray fluorescence (XRF)",
+          "comment": null,
+          "column": 3,
+          "header": "Ti/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Ti/Al sedimentario sensible a composición y aporte detrítico",
+          "comparison_context": "md99_2343_native_element_ratio",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ti/Al"
+        },
+        {
+          "name": "Calcium/Aluminium ratio",
+          "short": "Ca/Al",
+          "unit": "sin unidad",
+          "method": "X-ray fluorescence (XRF)",
+          "comment": null,
+          "column": 4,
+          "header": "Ca/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Ca/Al sedimentario sensible al balance entre componentes ricos en calcio y aluminosilicatos",
+          "comparison_context": "md99_2343_native_element_ratio",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ca/Al"
+        },
+        {
+          "name": "Potassium/Aluminium ratio",
+          "short": "K/Al",
+          "unit": "sin unidad",
+          "method": "X-ray fluorescence (XRF)",
+          "comment": null,
+          "column": 5,
+          "header": "K/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "K/Al sedimentario sensible a la composición de los aluminosilicatos",
+          "comparison_context": "md99_2343_native_element_ratio",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "K/Al"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "Cocientes publicados con Al en el denominador. La tabla no especifica base analítica; se mantiene un contexto propio."
+      ]
+    },
+    {
+      "id": 759532,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.759532",
+      "sha": "0998d9a0b8fbd2064e6878131bbf655d8dbac47f21fee0e222bc7dfa9e372429",
+      "xml_sha": "d2af17705fc0d7f61c1d6aeb256882f2c03c81e79ce9c0dce21fe4983e2155da",
+      "title": "(Fig. 3) Relative abundance of Neogloboquadrina pachyderma (s) in sediment core MD99-2343",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "N. pachyderma s [%]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2343",
+          "lat": 40.497333333333,
+          "lon": 4.0281666666667,
+          "elevation": "-2391.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2004PA001051",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2005,
+        "dates": {
+          "published-print": [
+            [
+              2005,
+              6
+            ]
+          ],
+          "published-online": [
+            [
+              2005,
+              6,
+              29
+            ]
+          ],
+          "issued": [
+            [
+              2005,
+              6
+            ]
+          ],
+          "published": [
+            [
+              2005,
+              6
+            ]
+          ]
+        },
+        "title": "Impact of iceberg melting on Mediterranean thermohaline circulation during Heinrich events",
+        "sha256": "1f7506cb283eabeb4c3c0a5d0c03c88cd9e01b5a6df857f15fbf21c5962680e3"
+      },
+      "source_rows": 202,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Neogloboquadrina pachyderma sinistral",
+          "short": "N. pachyderma s",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "N. pachyderma s [%]",
+          "family": "microfossils",
+          "environmental_interpretation": "Abundancia relativa de N. pachyderma sinistral asociada a condiciones superficiales frías",
+          "comparison_context": "md99_2343_planktonic_foram_abundance",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "N. pachyderma s",
+          "taxon": "Neogloboquadrina pachyderma sinistral"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación."
+      ]
+    },
+    {
+      "id": 759533,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.759533",
+      "sha": "4748269ddb1b08f3830b574ebd6ce569b70f8843345637dc2657daf05180930f",
+      "xml_sha": "c85a6799b0ef9f48fa773a817089fb485cc0bd9081abf5968a80007ba83ab3d3",
+      "title": "(Fig. 3) Relative abundance of Emiliania huxleyi in sediment core MD99-2343",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "E. huxleyi [%]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2343",
+          "lat": 40.497333333333,
+          "lon": 4.0281666666667,
+          "elevation": "-2391.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2004PA001051",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2005,
+        "dates": {
+          "published-print": [
+            [
+              2005,
+              6
+            ]
+          ],
+          "published-online": [
+            [
+              2005,
+              6,
+              29
+            ]
+          ],
+          "issued": [
+            [
+              2005,
+              6
+            ]
+          ],
+          "published": [
+            [
+              2005,
+              6
+            ]
+          ]
+        },
+        "title": "Impact of iceberg melting on Mediterranean thermohaline circulation during Heinrich events",
+        "sha256": "1f7506cb283eabeb4c3c0a5d0c03c88cd9e01b5a6df857f15fbf21c5962680e3"
+      },
+      "source_rows": 173,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Emiliania huxleyi",
+          "short": "E. huxleyi",
+          "unit": "%",
+          "method": null,
+          "comment": "large >4 µm",
+          "column": 2,
+          "header": "E. huxleyi [%]",
+          "family": "microfossils",
+          "environmental_interpretation": "Abundancia relativa de E. huxleyi grande, sensible a condiciones ecológicas superficiales",
+          "comparison_context": "md99_2343_emiliania_huxleyi_gt4_um",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "E. huxleyi",
+          "taxon": "Emiliania huxleyi"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación."
+      ]
+    },
+    {
+      "id": 759536,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.759536",
+      "sha": "4570dff9aebc71430c102f33654dc8055eeabbab3b512b7ecf8f0d6586316595",
+      "xml_sha": "3fa37a388241ff1167d834c58f77d5c4340779daa9ab81ef915bc132ade62177",
+      "title": "(Fig. 5) Stable carbon and oxygen isotope record of Cibicidoides pachyderma of sediment core MD99-2343",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "C. pachyderma δ18O [‰ PDB]",
+        "C. pachyderma δ13C [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2343",
+          "lat": 40.497333333333,
+          "lon": 4.0281666666667,
+          "elevation": "-2391.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2004PA001051",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2005,
+        "dates": {
+          "published-print": [
+            [
+              2005,
+              6
+            ]
+          ],
+          "published-online": [
+            [
+              2005,
+              6,
+              29
+            ]
+          ],
+          "issued": [
+            [
+              2005,
+              6
+            ]
+          ],
+          "published": [
+            [
+              2005,
+              6
+            ]
+          ]
+        },
+        "title": "Impact of iceberg melting on Mediterranean thermohaline circulation during Heinrich events",
+        "sha256": "1f7506cb283eabeb4c3c0a5d0c03c88cd9e01b5a6df857f15fbf21c5962680e3"
+      },
+      "source_rows": 286,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Cibicidoides pachyderma, δ18O",
+          "short": "C. pachyderma δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": null,
+          "column": 2,
+          "header": "C. pachyderma δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O bentónico sensible a temperatura profunda y composición isotópica del agua",
+          "comparison_context": "md99_2343_c_pachyderma",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C. pachyderma δ18O"
+        },
+        {
+          "name": "Cibicidoides pachyderma, δ13C",
+          "short": "C. pachyderma δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer, Finnigan, MAT 252",
+          "comment": null,
+          "column": 3,
+          "header": "C. pachyderma δ13C [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C bentónico sensible al carbono inorgánico disuelto y a la ventilación",
+          "comparison_context": "md99_2343_c_pachyderma",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C. pachyderma δ13C"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación."
+      ]
+    },
+    {
+      "id": 819811,
+      "status": "held",
+      "reason": "Species-specific Mg/Ca temperatures require separate depth habitat and calibration review",
+      "sha": "1872416a4f5a530346cb86c5286cdcba11c463586b0df7079bbe0a12b84b9305",
+      "xml_sha": "579c9fed27ac967c3c7485e80c8de85c972619f9cbea66e289c8d4653c53d151",
+      "columns": []
+    },
+    {
+      "id": 904197,
+      "status": "held",
+      "reason": "Outside pilot region",
+      "sha": "2ccc0b09b25d966d3135ceb71f1665c4b633792baaabf7c932d07aef36f6eb41",
+      "xml_sha": "7729573b5d84ba78aaba32c9e86440cf69a348e8a8e764b846b66cd12fd66f8e",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Seven original tables; three existing events.",
+    "Different magnetic measurement protocols, taxonomic fractions and elemental ratio bases retained."
+  ]
+}

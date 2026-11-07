@@ -1,0 +1,89 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-06-v20-cf635885fac",
+  "counts": {
+    "records": 3,
+    "series": 7,
+    "observations": 5610,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea21-982341:Limni_Volvi:col2~438491236c",
+      "dataset": "10.1594/PANGAEA.982341",
+      "event": "Limni_Volvi",
+      "source_column": 2,
+      "observations": 3783,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea21-881321:Hz11_PO3:col1~eb495cf665",
+      "dataset": "10.1594/PANGAEA.881321",
+      "event": "Hz11-PO3",
+      "source_column": 1,
+      "observations": 339,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea21-881322:Hz11_PO3:col2~1e14f3c612",
+      "dataset": "10.1594/PANGAEA.881322",
+      "event": "Hz11-PO3",
+      "source_column": 2,
+      "observations": 81,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea21-881322:Hz11_PO3:col3~b28ea3c424",
+      "dataset": "10.1594/PANGAEA.881322",
+      "event": "Hz11-PO3",
+      "source_column": 3,
+      "observations": 81,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea21-881323:Hz11_PO3:col2~097a0f7a5d",
+      "dataset": "10.1594/PANGAEA.881323",
+      "event": "Hz11-PO3",
+      "source_column": 2,
+      "observations": 633,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea21-881323:Hz11_PO3:col6~43ef487c53",
+      "dataset": "10.1594/PANGAEA.881323",
+      "event": "Hz11-PO3",
+      "source_column": 6,
+      "observations": 633,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea21-920704:SW104_ND11:col2~c2ef5ff310",
+      "dataset": "10.1594/PANGAEA.920704",
+      "event": "SW104-ND11",
+      "source_column": 2,
+      "observations": 60,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": []
+}

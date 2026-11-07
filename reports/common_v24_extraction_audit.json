@@ -1,0 +1,100 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v23-c339e7f2aa6",
+  "counts": {
+    "records": 2,
+    "series": 7,
+    "observations": 14322,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea24-911430:PRGL1_4:col2~c7b56a83b0",
+      "dataset": "10.1594/PANGAEA.911430",
+      "event": "PRGL1-4",
+      "source_column": 2,
+      "observations": 8202,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea24-911431:PRGL1_4:col2~3d6398ca67",
+      "dataset": "10.1594/PANGAEA.911431",
+      "event": "PRGL1-4",
+      "source_column": 2,
+      "observations": 2185,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea24-911432:PRGL1_4:col2~7b4e8f0879",
+      "dataset": "10.1594/PANGAEA.911432",
+      "event": "PRGL1-4",
+      "source_column": 2,
+      "observations": 1731,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea24-911433:PRGL1_4:col2~c9c40f582a",
+      "dataset": "10.1594/PANGAEA.911433",
+      "event": "PRGL1-4",
+      "source_column": 2,
+      "observations": 1552,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea24-911436:MD99_2348:col2~169a2da94a",
+      "dataset": "10.1594/PANGAEA.911436",
+      "event": "MD99-2348",
+      "source_column": 2,
+      "observations": 197,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea24-911437:MD99_2348:col2~b9cd092160",
+      "dataset": "10.1594/PANGAEA.911437",
+      "event": "MD99-2348",
+      "source_column": 2,
+      "observations": 228,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea24-911438:MD99_2348:col2~33a4c8eb01",
+      "dataset": "10.1594/PANGAEA.911438",
+      "event": "MD99-2348",
+      "source_column": 2,
+      "observations": 227,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 882219,
+      "status": "held",
+      "reason": "Acid treatment alternatives and approximate ages require per-method review; event alias coordinates differ"
+    },
+    {
+      "id": 902764,
+      "status": "held",
+      "reason": "PRGL_1-4 metadata rounded differently from PRGL1-4; verify cross-source identity before admission"
+    }
+  ]
+}
