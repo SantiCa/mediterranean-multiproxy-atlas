@@ -180,6 +180,7 @@ const season = (t) =>
         : /annual|anual|yearly|year.mean|mean.annual/.test(t) ? "annual" : "unspecified";
 const isSST = (s, t) =>
   s.unit === "°C" &&
+  s.comparison_context_key !== "black_sea_0_200m_archived" &&
   /sea.?surface.?temp|(^|[^a-z])sst([^a-z]|$)|temperatura superficial del mar/.test(t) &&
   !/maat|air|lake|lago|subsurface|subsuperficial/.test(t);
 const foram = (s, t, iso) =>
@@ -278,6 +279,7 @@ export function aggregateGroups(groups, data) {
     });
   }
   const signature = (series) => JSON.stringify(series.map((s) => s.id).sort());
+  const annualSst = new Set(out.find((g) => g.id === "agg:sst_annual")?.series.map((s) => s.id));
   const seen = new Set(out.map((g) => signature(g.series))),
     byParam = new Map();
   for (const g of groups)
@@ -291,6 +293,9 @@ export function aggregateGroups(groups, data) {
     const members = [...a.members.values()];
     if (members.length < 2) continue;
     const series = members.flatMap((g) => g.series.filter((s) => paramKey(s) === key));
+    // Native annual SST is already represented by the annual card, including legacy aliases.
+    if (a.name === "Sea surface temperature, annual mean" && !a.context
+        && series.every((s) => annualSst.has(s.id))) continue;
     const selection = signature(series);
     if (seen.has(selection)) continue;
     const records = new Set(series.map((s) => s.record_id)).size;

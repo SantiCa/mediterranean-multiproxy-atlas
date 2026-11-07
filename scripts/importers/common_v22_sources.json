@@ -1,0 +1,331 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v21-c80c881825a",
+  "parent_sha256": "f99855c45f2dc0cafed1fc26e3ee9180fd1045a6d96956d2bd40ce8a434e1737",
+  "datasets": [
+    {
+      "id": 885937,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.885937",
+      "sha": "1956e49beeaaa0c82c5df9d808d648570af6b7d5328cc8807786d60a407f2a24",
+      "xml_sha": "3f595c7109fc6dc59e65d65e2212166601c02cbb823a787dff077a6622075748",
+      "title": "Ages and magnetic susceptibility of Lake Lungo, Italy",
+      "header": [
+        "Age [a AD/CE]",
+        "Age [ka BP]",
+        "Depth sed [m]",
+        "kappa [10**-6 SI]"
+      ],
+      "events": [
+        {
+          "label": "Lake_Lungo",
+          "lat": 42.4762,
+          "lon": 12.847,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 2877,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Magnetic susceptibility, volume",
+          "short": "kappa",
+          "unit": "10**-6 SI",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "kappa [10**-6 SI]",
+          "family": "magnetism",
+          "environmental_interpretation": "Variación de la fracción magnética lacustre sensible al aporte mineral y cambios posdeposicionales",
+          "comparison_context": "lake_lungo_volumetric_method_unspecified",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "kappa"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales de la columna nativa ka BP. Sin interpolación ni recalibración.",
+        "Control CE frente a BP en 2877 filas con ambos datos: diferencia máxima de 0.1 años. Prevalece la columna ka BP archivada."
+      ]
+    },
+    {
+      "id": 762035,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.762035",
+      "sha": "dcac74c9d0e4c202f2a6380f70e15ebae68abf84257031e69fd3d0d02dda8e64",
+      "xml_sha": "0cd5a5f3c62d8f1f0da87ca47dfc024846238af1adde026cfa9b91b0c41c4070",
+      "title": "Decadal-to-centennial scale variations during the Holocene reconstructed from sediment core D13902",
+      "header": [
+        "Depth sed [m]",
+        "Age [a AD/CE]",
+        "Age [ka BP]",
+        "UK'37",
+        "SST [°C]",
+        "n-Alcohol tot/sed [µg/g]",
+        "n-OH [ng/g]",
+        "C37 tot [ng/g]"
+      ],
+      "events": [
+        {
+          "label": "D13902",
+          "lat": 38.554,
+          "lon": -9.3355,
+          "elevation": "-90.0",
+          "campaign": "D249",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2008GC002367",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2009,
+        "dates": {
+          "published-print": [
+            [
+              2009,
+              7
+            ]
+          ],
+          "published-online": [
+            [
+              2009,
+              7,
+              23
+            ]
+          ],
+          "issued": [
+            [
+              2009,
+              7
+            ]
+          ],
+          "published": [
+            [
+              2009,
+              7
+            ]
+          ]
+        },
+        "title": "Holocene interdependences of changes in sea surface temperature, productivity, and fluvial inputs in the Iberian continental shelf (Tagus mud patch)",
+        "sha256": "941ee8cf33f71fe61ef483b701904d5397658ecc36f3d4679d45d1e814c9152a"
+      },
+      "source_rows": 77,
+      "age_column": 2,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Alkenone, unsaturation index UK'37",
+          "short": "UK'37",
+          "unit": "sin unidad",
+          "method": "Calculated from C37 alkenones (Prahl & Wakeham, 1987)",
+          "comment": null,
+          "column": 3,
+          "header": "UK'37",
+          "family": "indices",
+          "environmental_interpretation": "Índice de insaturación de alquenonas sensible a la temperatura superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "UK'37"
+        },
+        {
+          "name": "Sea surface temperature",
+          "short": "SST",
+          "unit": "°C",
+          "method": null,
+          "comment": null,
+          "column": 4,
+          "header": "SST [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial marina reconstruida con alquenonas",
+          "comparison_context": "tagus_alkenone_sst_published",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST"
+        },
+        {
+          "name": "n-Alcohol, total, per unit sediment mass",
+          "short": "n-Alcohol tot/sed",
+          "unit": "µg/g",
+          "method": "Gas chromatography",
+          "comment": null,
+          "column": 5,
+          "header": "n-Alcohol tot/sed [µg/g]",
+          "family": "indices",
+          "environmental_interpretation": "Aporte de materia orgánica terrestre a la plataforma del Tajo",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "n-Alcohol tot/sed"
+        },
+        {
+          "name": "Alkenone, C37 total (C37:2+C37:3)",
+          "short": "C37 tot",
+          "unit": "ng/g",
+          "method": null,
+          "comment": null,
+          "column": 7,
+          "header": "C37 tot [ng/g]",
+          "family": "indices",
+          "environmental_interpretation": "Concentración de alquenonas C37:2 y C37:3 asociada a producción y preservación local",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C37 tot"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales de la columna nativa ka BP. Sin interpolación ni recalibración.",
+        "Control CE frente a BP en 43 filas con ambos datos: diferencia máxima de 5.0 años. Prevalece la columna ka BP archivada.",
+        "SST por alquenonas. La tabla no identifica ecuación ni estación de la SST. Contexto propio por fuente.",
+        "Evento D13902 del crucero D249. Relación con POS287_26_D13902 sin resolver por diferencias de evento, campaña y posición."
+      ]
+    },
+    {
+      "id": 787811,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.787811",
+      "sha": "f14b96e13cdad8a0621e31c5bcaa2727bedcf39018928ec8bff06231ecb6e2af",
+      "xml_sha": "f0c76b17bc1f428b1162b1ff9279be6ce22e493bf1a25bef76a099f0e8ac53e8",
+      "title": "Sea surface temperatures, alkenones and sedimentation rate from ODP Hole 161-977A",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "SST [°C]",
+        "C37:4 [%]"
+      ],
+      "events": [
+        {
+          "label": "161-977A",
+          "lat": 36.0317,
+          "lon": -1.95528,
+          "elevation": "-1984.0",
+          "campaign": "Leg161",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1126/science.1101706",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2004,
+        "dates": {
+          "published-print": [
+            [
+              2004,
+              12,
+              3
+            ]
+          ],
+          "issued": [
+            [
+              2004,
+              12,
+              3
+            ]
+          ],
+          "published": [
+            [
+              2004,
+              12,
+              3
+            ]
+          ]
+        },
+        "title": "Abrupt Temperature Changes in the Western Mediterranean over the Past 250,000 Years",
+        "sha256": "b29f95eccd85b5f76a3aaa81232cb2003a85e7939ab2e0f47a33095f56922ca0"
+      },
+      "source_rows": 655,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Sea surface temperature",
+          "short": "SST",
+          "unit": "°C",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "SST [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial marina reconstruida con alquenonas",
+          "comparison_context": "alboran_alkenone_sst_published",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST"
+        },
+        {
+          "name": "Alkenone, C37:4",
+          "short": "C37:4",
+          "unit": "%",
+          "method": "Gas chromatography",
+          "comment": null,
+          "column": 3,
+          "header": "C37:4 [%]",
+          "family": "indices",
+          "environmental_interpretation": "Proporción de alquenona C37:4 sensible a cambios de fuente y condiciones hidrográficas",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C37:4"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales de la columna nativa ka BP. Sin interpolación ni recalibración.",
+        "SST por alquenonas. La tabla no identifica ecuación ni estación de la SST. Contexto propio por fuente."
+      ]
+    },
+    {
+      "id": 737194,
+      "status": "held",
+      "reason": "18-value SST at site 161-977 held pending independence from 161-977A published SST",
+      "sha": "08ef981d1f5bfbbad3464cb0bca3ccdf6880a7a88f61217ff7470c56197d4bd3",
+      "xml_sha": "45a01df988c425a026a809e0399b4da43dbc2377d99c2c720881694a598d38e7",
+      "columns": []
+    },
+    {
+      "id": 957608,
+      "status": "held",
+      "reason": "Event west of pilot longitude boundary",
+      "sha": "05102e5b339532d5b593e8b4e69e24309c6e9d047a2df9762c7d29fc71098ac8",
+      "xml_sha": "ed9ae87588c843d5b8fd01c35d01773a0d6cdeedef67ba49f24d4a9a698daf7f",
+      "columns": []
+    },
+    {
+      "id": 898709,
+      "status": "held",
+      "reason": "Pissouri South outcrop location estimated on map; verify before georeferenced marine admission",
+      "sha": "b9cf8af851bab2b1e44d7bcb6badb200aa6f8b466210c7e3f76106992069f8e9",
+      "xml_sha": "74846783b618323b49bfdc82d6c1ae27cbfd7b1337da349c1ee406274a1a10df",
+      "columns": []
+    },
+    {
+      "id": 960342,
+      "status": "held",
+      "reason": "Units and synthetic depth frame require source reconciliation before admission",
+      "sha": "808fbcb052f346d511d1daf3e36fc3b59a3c70d3d78d41a7e827b2bb3d8646d4",
+      "xml_sha": "fd3daa1f92903f31a5408b8675fa9585a737d5a06c9ca2c924463bebbd0292e3",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Three native tables. D13902 kept as source event pending identity review against POS287_26_D13902.",
+    "Hazar ICA attribution remains pending. No new ratios or calibration from elemental measurements."
+  ]
+}

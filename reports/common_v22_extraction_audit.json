@@ -1,0 +1,110 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v21-c80c881825a",
+  "counts": {
+    "records": 3,
+    "series": 7,
+    "observations": 4426,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea22-885937:Lake_Lungo:col3~a084d3f2be",
+      "dataset": "10.1594/PANGAEA.885937",
+      "event": "Lake_Lungo",
+      "source_column": 3,
+      "observations": 2809,
+      "missing_cells": 68,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea22-762035:D13902:col3~1fa27784d1",
+      "dataset": "10.1594/PANGAEA.762035",
+      "event": "D13902",
+      "source_column": 3,
+      "observations": 77,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea22-762035:D13902:col4~b9a709e5b7",
+      "dataset": "10.1594/PANGAEA.762035",
+      "event": "D13902",
+      "source_column": 4,
+      "observations": 77,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea22-762035:D13902:col5~7814c08733",
+      "dataset": "10.1594/PANGAEA.762035",
+      "event": "D13902",
+      "source_column": 5,
+      "observations": 77,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea22-762035:D13902:col7~f0c6f82d9b",
+      "dataset": "10.1594/PANGAEA.762035",
+      "event": "D13902",
+      "source_column": 7,
+      "observations": 77,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea22-787811:161_977A:col2~e50abfdb8b",
+      "dataset": "10.1594/PANGAEA.787811",
+      "event": "161-977A",
+      "source_column": 2,
+      "observations": 655,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea22-787811:161_977A:col3~fe46068278",
+      "dataset": "10.1594/PANGAEA.787811",
+      "event": "161-977A",
+      "source_column": 3,
+      "observations": 654,
+      "missing_cells": 1,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 737194,
+      "status": "held",
+      "reason": "18-value SST at site 161-977 held pending independence from 161-977A published SST"
+    },
+    {
+      "id": 957608,
+      "status": "held",
+      "reason": "Event west of pilot longitude boundary"
+    },
+    {
+      "id": 898709,
+      "status": "held",
+      "reason": "Pissouri South outcrop location estimated on map; verify before georeferenced marine admission"
+    },
+    {
+      "id": 960342,
+      "status": "held",
+      "reason": "Units and synthetic depth frame require source reconciliation before admission"
+    }
+  ]
+}

@@ -30,6 +30,22 @@ test("sorting by records and values; aggregation can be hidden", () => {
   assert.ok(filterGroups(g, { aggregates: false }).every((x) => !x.aggregate));
   assert.ok(filterGroups(g, { minRecords: 2 }).every((x) => x.records >= 2));
 });
+test("the annual SST card subsumes its generic subset and excludes 0–200 m", () => {
+  const annual = (id, r) => ({
+    ...ser(id, r, "Sea_surface_temperature_annual_mean", id, "°C", "Sea surface temperature, annual mean", 5),
+    parameter_name_pangaea: "Sea surface temperature, annual mean",
+  });
+  const legacy = ser("legacy", "c", "alkenone_SST", "legacy", "°C", "SST anual", 5);
+  const subsurface = {...annual("deep", "c"), comparison_context_key: "black_sea_0_200m_archived"};
+  const d = {records: ["a", "b", "c"].map(rec), series: [annual("one", "a"), annual("two", "b"), legacy, subsurface]};
+  const groups = proxyGroups(d);
+  assert.equal(groups.filter(g => g.aggregate && /annual mean/.test(g.label)).length, 0);
+  assert.deepEqual(new Set(groups.find(g => g.id === "agg:sst_annual").series.map(s => s.id)),
+    new Set(["one", "two", "legacy"]));
+  assert.ok(!inGroup(subsurface, groups.find(g => g.id === "agg:sst_all").key));
+  assert.ok(groups.some(g => !g.aggregate && g.key === groupKey(subsurface)));
+  assert.ok(inGroup(d.series[0], paramKey(d.series[0])), "Saved generic selection still resolves");
+});
 test("same PANGAEA parameter and unit aggregate across methods", () => {
   const d = {
     records: ["a", "b"].map(rec),
