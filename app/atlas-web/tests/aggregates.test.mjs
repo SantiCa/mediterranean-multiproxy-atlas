@@ -147,3 +147,11 @@ test("Ca/Al aliases agree while carbonate discovery requires the actual CaCO3 pa
   assert.ok(!inGroup({parameter_name_pangaea:"Carbon, inorganic, total", label:"Carbono inorgánico en carbonatos", unit:"%"}, key));
   assert.ok(!inGroup({parameter_name_pangaea:"Calcium carbonate", unit:"%", comparison_context_key:"selected_fraction"}, key));
 });
+
+test("bulk organic carbon isotope aliases preserve fractions and isotope standards", () => {
+  const organic = {parameter_name_pangaea:"δ13C, organic carbon", unit:"‰ PDB"};
+  assert.equal(paramKey(organic), paramKey({...organic, parameter_name_pangaea:"δ13C, total organic carbon"}));
+  assert.notEqual(paramKey(organic), paramKey({...organic, comparison_context_key:"selected_lipid_fraction"}));
+  assert.notEqual(paramKey(organic), paramKey({...organic, parameter_name_pangaea:"Globigerina bulloides, δ13C"}));
+  assert.notEqual(paramKey(organic), paramKey({...organic, unit:"‰ SMOW"}));
+});
