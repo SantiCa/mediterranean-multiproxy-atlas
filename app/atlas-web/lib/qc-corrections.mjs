@@ -6,6 +6,18 @@ const TRANSFORMS = {
 };
 
 export function applyQc(seed, qc) {
+  const sitesByRecord = new Map();
+  for (const site of qc.spatial_sites || []) {
+    for (const id of site.record_ids) {
+      if (sitesByRecord.has(id)) throw new Error("QC: sondeo asignado a más de un sitio " + id);
+      sitesByRecord.set(id, site);
+    }
+  }
+  const records = seed.records?.map((record) => {
+    const site = sitesByRecord.get(record.id);
+    return site ? { ...record, spatial_site_id: site.id, spatial_site_source_url: site.source_url,
+      qc_notes: [...new Set([...(record.qc_notes || []), site.note])] } : record;
+  });
   const holds = new Map((qc.holds || []).map((h) => [h.id, h]));
   const ids = new Set(seed.series.map((s) => s.id));
   for (const h of holds.values()) {
@@ -38,9 +50,27 @@ export function applyQc(seed, qc) {
         age_model: "qc_corrected: " + c.transform + " (original archivado conservado en age_original)",
         qc_notes: [...(s.qc_notes || []), "Corrección QC de edad: " + c.reason],
       };
+    })
+    .map((series) => {
+      const annotation = qc.dataset_annotations?.[series.dataset_doi];
+      if (!annotation) return series;
+      if (series.raw_sha256 !== annotation.raw_sha256)
+        throw new Error("QC: original distinto del auditado " + series.dataset_doi);
+      if (annotation.age_model)
+        return { ...series, age_model: annotation.age_model, age_model_source_url: annotation.source_url };
+      const warning = annotation.chronology_warning;
+      if (!warning) return series;
+      const samples = warning.samples.filter((sample) => {
+        const row = series.rows.find((row) => row[2] === sample.row && row[3] === sample.line);
+        if (!row) return false;
+        if (row[4] !== sample.age_original || row[8] !== sample.depth_original)
+          throw new Error("QC: localizador distinto del auditado " + series.id + ":" + sample.line);
+        return true;
+      });
+      return samples.length ? { ...series, chronology_warning: { ...warning, samples, source_url: annotation.source_url } } : series;
     });
   return {
-    seed: { ...seed, series },
+    seed: { ...seed, ...(records ? { records } : {}), series },
     qc: {
       age_corrected_series: applied.length,
       age_corrections: (qc.age_corrections || []).map(({ dataset_doi, transform, reason }) => ({ dataset_doi, transform, reason })),

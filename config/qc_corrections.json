@@ -1,6 +1,38 @@
 {
-  "_doc": "Correcciones de QC aplicadas al publicar (snapshot) sobre la semilla versionada, sin modificarla. Cada entrada es idempotente y trazable; el rol de datos debe incorporarlas en la siguiente release y retirarlas de aquí. Ver docs/handoffs/auditoria-v17.md.",
+  "_doc": "Control de calidad aplicado al publicar (snapshot) sobre una copia de la semilla. Las correcciones numéricas y retenciones se integran en la siguiente release; las identidades espaciales y notas trazables se aplican como metadatos sin cambiar los datos.",
   "integrated_in": "atlas-v18; scripts/importers/pollen_v18_sources.json preserves the reviewed corrections. Older seeds require their historical QC configuration.",
   "age_corrections": [],
-  "holds": []
+  "holds": [],
+  "spatial_sites": [
+    {
+      "id": "odp:leg160:site969",
+      "record_ids": ["pangaea5-160_969d", "pangaea27-160_969e"],
+      "source_url": "https://www-odp.tamu.edu/publications/160_IR/VOLUME/CHAPTERS/ir160_10.pdf",
+      "note": "969D y 969E son perforaciones distintas del sitio ODP 969. Cuentan como un sitio para cobertura espacial e IDW."
+    }
+  ],
+  "dataset_annotations": {
+    "10.1594/PANGAEA.908113": {
+      "raw_sha256": "ae6a88c4214fa959ac24a57e96b346ff1566add7af90cb4c81006d75167fa658",
+      "source_url": "https://doi.org/10.1594/PANGAEA.908113",
+      "chronology_warning": {
+        "code": "native_age_depth_inversion",
+        "message": "Inversión nativa de 4,8 años (líneas TSV 1004–1005): de 311,259 a 311,261 m CCD, la edad disminuye de 877,39640 a 877,39160 ka BP. Ambas muestras se conservan con sus edades publicadas.",
+        "samples": [
+          { "row": 979, "line": 1004, "age_original": "877.39640", "depth_original": "311.259" },
+          { "row": 980, "line": 1005, "age_original": "877.39160", "depth_original": "311.261" }
+        ]
+      }
+    },
+    "10.1594/PANGAEA.875737": {
+      "raw_sha256": "1638893b7270c5c2e0161a1135d9719933e34033c324b097aa29b4f491680a95",
+      "source_url": "https://doi.org/10.1016/j.quascirev.2015.05.031",
+      "age_model": "MS21PC: edades calendario publicadas en ka BP. Modelo de Hennekam et al. (2015, §2, tabla 1 y fig. 2): seis controles AMS ¹⁴C en foraminíferos planctónicos, calibración marina con CALIB 7.0.2 y corrección local de reservorio de 21 ± 63 años. Ajuste lineal en los 18,5 cm superiores y polinomio de tercer grado entre 18,5 y 143 cm. El atlas conserva las edades archivadas sin recalibrarlas."
+    },
+    "10.1594/PANGAEA.875736": {
+      "raw_sha256": "a260b934538ce34397cc395b4acec2a0d654c8a65510c1f268be14c0582537a3",
+      "source_url": "https://doi.org/10.1016/j.quascirev.2015.05.031",
+      "age_model": "PS009PC: edades calendario publicadas en ka BP. Modelo descrito en Hennekam et al. (2015, §2, tabla 1 y fig. 2): siete controles AMS ¹⁴C en foraminíferos planctónicos, calibración marina con OxCal 4.1.7 y corrección local de reservorio de 21 ± 63 años. Ajuste cuadrático entre 0 y 190 cm y lineal entre 191 y 323 cm. El techo depende de una correlación con el testigo de caja PS008BC, fechado con ²¹⁰Pb. El atlas conserva las edades archivadas sin recalibrarlas."
+    }
+  }
 }
