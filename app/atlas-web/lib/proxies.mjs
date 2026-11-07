@@ -190,8 +190,8 @@ const foram = (s, t, iso) =>
 export const AGGREGATES = [
   { id: "sst_all", label: "Temperatura superficial del mar · todos los métodos y estaciones", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) },
   { id: "sst_annual", label: "Temperatura superficial del mar · anual (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "annual" },
-  { id: "sst_summer", label: "Temperatura superficial del mar · verano (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "summer" },
-  { id: "sst_winter", label: "Temperatura superficial del mar · invierno (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "winter" },
+  { id: "sst_summer", label: "Temperatura superficial del mar · verano y meses estivales", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "summer" },
+  { id: "sst_winter", label: "Temperatura superficial del mar · invierno y meses invernales", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "winter" },
   { id: "sst_unspecified", label: "Temperatura superficial del mar · estación no declarada (todos los métodos)", unit: "°C", family: "Temperatura", test: (s, t) => isSST(s, t) && season(t) === "unspecified" },
   { id: "d18o_planct", label: "δ18O foraminíferos planctónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "18") && PLANKTIC.test(t) && !BENTHIC.test(t) },
   { id: "d18o_bent", label: "δ18O foraminíferos bentónicos · todas las especies", unit: "‰ (V)PDB", family: "Isótopos estables", test: (s, t) => foram(s, t, "18") && BENTHIC.test(t) && !PLANKTIC.test(t) },
@@ -304,7 +304,9 @@ export function aggregateGroups(groups, data) {
     out.push({
       key,
       id: "agg:" + key,
-      label: a.name + (a.context ? " · " + contextLabel(a.context) : "") + " · todos los métodos",
+      label: (a.name === "Sea surface temperature, summer"
+        ? "Temperatura superficial del mar · verano declarado en la fuente" : a.name)
+        + (a.context ? " · " + contextLabel(a.context) : "") + " · todos los métodos",
       unit: a.unit,
       family: a.family,
       variable: a.name,

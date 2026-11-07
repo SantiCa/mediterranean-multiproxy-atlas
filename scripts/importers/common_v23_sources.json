@@ -1,0 +1,500 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v22-cf1f6241933",
+  "parent_sha256": "029a1929997b1e454ca51c5859b0572290b212a46a38f8ffd804ebeeb38a2703",
+  "datasets": [
+    {
+      "id": 900448,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.900448",
+      "sha": "4df26e5a5783307f70a358f61417a0fbfa0e57be1d080888e69c0cfeeb830e60",
+      "xml_sha": "7382812f9c42d27f99ec492ba1ff6f878e3ca722242f84fb22f0480951f32c70",
+      "title": "Indices derived from archaeal glycerol dialkyl glycerol tetraether lipids and tetraether-derived sea surface temperature estimates in sediment core MD99-2348 and borehole PRGL1-4",
+      "header": [
+        "Event",
+        "Sect",
+        "Sample label",
+        "Depth sed [m] (mbsf)",
+        "Age [ka BP]",
+        "MIS",
+        "RI OH-GDGTs",
+        "SST (1-12) [°C] (SST, from Ri OH-GDGTs, Lü et ...)",
+        "TEX86",
+        "SST (1-12) [°C] (2.5th percentile, SST, from T...)",
+        "SST (1-12) [°C] (16th percentile, SST, from TE...)",
+        "SST (1-12) [°C] (50th percentile, SST, from TE...)",
+        "SST (1-12) [°C] (84th percentile, SST, from TE...)",
+        "SST (1-12) [°C] (97.5th percentile, SST, from ...)",
+        "BIT",
+        "MI",
+        "RI",
+        "RI-TEX86"
+      ],
+      "events": [
+        {
+          "label": "MD99-2348",
+          "lat": 42.693,
+          "lon": 3.8416666666667,
+          "elevation": "-296.0",
+          "campaign": "MD114",
+          "device": null
+        },
+        {
+          "label": "PRGL1-4",
+          "lat": 42.689846,
+          "lon": 3.837663,
+          "elevation": "-298.48",
+          "campaign": "PROMESS1",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1029/2018PA003452",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2019,
+        "dates": {
+          "published-print": [
+            [
+              2019,
+              4
+            ]
+          ],
+          "published-online": [
+            [
+              2019,
+              4,
+              29
+            ]
+          ],
+          "issued": [
+            [
+              2019,
+              4
+            ]
+          ],
+          "published": [
+            [
+              2019,
+              4
+            ]
+          ]
+        },
+        "title": "Western Mediterranean Sea Paleothermometry Over the Last Glacial Cycle Based on the Novel RI‐OH Index",
+        "sha256": "7895ff35017dec4c45d05f43b527c0e39459a6274f34c7c8f6b6ca3d495cab04"
+      },
+      "source_rows": 425,
+      "age_column": 4,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Ring index of hydroxylated glycerol dialkyl glycerol tetraethers",
+          "short": "RI OH-GDGTs",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 6,
+          "header": "RI OH-GDGTs",
+          "family": "indices",
+          "environmental_interpretation": "Índice RI-OH de GDGT hidroxilados sensible a la temperatura marina",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "RI OH-GDGTs"
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "SST, from Ri OH-GDGTs, Lü et al. (2015)",
+          "comment": null,
+          "column": 7,
+          "header": "SST (1-12) [°C] (SST, from Ri OH-GDGTs, Lü et ...)",
+          "family": "sst",
+          "environmental_interpretation": "SST anual publicada por RI-OH, calibración Lü et al. 2015",
+          "comparison_context": "gulf_lions_ri_oh_lu_2015",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST (1-12)"
+        },
+        {
+          "name": "Tetraether index of 86 carbon atoms",
+          "short": "TEX86",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 8,
+          "header": "TEX86",
+          "family": "indices",
+          "environmental_interpretation": "Índice TEX86 de GDGT isoprenoides sensible a la temperatura marina",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TEX86"
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "SST, from TEXH86, BAYSPAR (BAYesian SPAtially-varying Regression) (Tierney and Tingley, 2014, 2015)",
+          "comment": "50th percentile",
+          "column": 11,
+          "header": "SST (1-12) [°C] (50th percentile, SST, from TE...)",
+          "family": "sst",
+          "environmental_interpretation": "Mediana publicada de la reconstrucción anual TEX86H BAYSPAR",
+          "comparison_context": "gulf_lions_tex86h_bayspar_median",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST (1-12)"
+        },
+        {
+          "name": "Branched and isoprenoid tetraether index",
+          "short": "BIT",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 14,
+          "header": "BIT",
+          "family": "indices",
+          "environmental_interpretation": "Índice BIT sensible al aporte terrestre y a fuentes locales de GDGT",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "BIT"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales de la fuente. Sin interpolación ni recalibración.",
+        "BAYSPAR: únicamente mediana publicada como serie central. Percentiles 2,5/16/84/97,5 en tabla original; sin tratarlos como series independientes ni error simétrico. RI-OH y TEX86H conservan calibraciones distintas."
+      ]
+    },
+    {
+      "id": 986649,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.986649",
+      "sha": "ff427403bcb29cea3b3611c058ba223df367a6f95206aefbde786de090c16709",
+      "xml_sha": "ed72d9dd26a31108b6a4e6199a8622f99c525ee0bda5a2ab3b066f898bb0aa05",
+      "title": "Lipid biomarker and Sea-surface Temperature results for the interval of Marine Isotope Stage (MIS) 43 to late MIS 46 in IODP Site 339-U1387, Gulf of Cadiz",
+      "header": [
+        "Event",
+        "Sample label",
+        "Depth sed [m]",
+        "Depth comp top [mcd]",
+        "Depth comp corr top [c-mcd]",
+        "Age [ka BP]",
+        "UK'37",
+        "SST [°C]",
+        "Alk [ng/g]",
+        "n-Alkanes [ng/g]",
+        "n-Alco [ng/g]"
+      ],
+      "events": [
+        {
+          "label": "339-U1387A",
+          "lat": 36.80541,
+          "lon": -7.7190133333333,
+          "elevation": "-558.7",
+          "campaign": "Exp339",
+          "device": null
+        },
+        {
+          "label": "339-U1387B",
+          "lat": 36.80541,
+          "lon": -7.7187966666667,
+          "elevation": "-558.2",
+          "campaign": "Exp339",
+          "device": null
+        },
+        {
+          "label": "339-U1387C",
+          "lat": 36.805231666667,
+          "lon": -7.718795,
+          "elevation": "-558.4",
+          "campaign": "Exp339",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1016/j.palaeo.2025.113041",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2025,
+        "dates": {
+          "published-print": [
+            [
+              2025,
+              9
+            ]
+          ],
+          "issued": [
+            [
+              2025,
+              9
+            ]
+          ],
+          "published": [
+            [
+              2025,
+              9
+            ]
+          ]
+        },
+        "title": "High-frequency glacial climate instability during the Early Pleistocene: Insights from IODP site U1387 (Gulf of Cadiz)",
+        "sha256": "a1c0687f7039164eafa99a2fb5fda6d074ab14a24a10088778155fff4a39a8f7"
+      },
+      "source_rows": 113,
+      "age_column": 5,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Alkenone, unsaturation index UK'37",
+          "short": "UK'37",
+          "unit": "sin unidad",
+          "method": "Total lipid extraction and gas chromatography",
+          "comment": null,
+          "column": 6,
+          "header": "UK'37",
+          "family": "indices",
+          "environmental_interpretation": "Índice de insaturación UK′37 sensible a la temperatura superficial marina",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "UK'37"
+        },
+        {
+          "name": "Sea surface temperature",
+          "short": "SST",
+          "unit": "°C",
+          "method": "Calculated from UK'37 (Müller et al, 1998)",
+          "comment": null,
+          "column": 7,
+          "header": "SST [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial marina reconstruida con UK′37 según Müller et al. 1998",
+          "comparison_context": "u1387_uk37_muller_1998",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales de la fuente. Sin interpolación ni recalibración.",
+        "Cronología nativa relacionada con LR04 mediante correlación isotópica con U1385. Los sondeos U1387 representan un sitio de perforación, no vecinos espaciales independientes."
+      ]
+    },
+    {
+      "id": 986643,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.986643",
+      "sha": "687ede307ad9a30966467569d017adcfb861f692cd2f39c3ad2a2f093cf515a6",
+      "xml_sha": "5fccbcab9777922fe472cd4af78919cd91c2826f06a65ecf68597569684986eb",
+      "title": "Planktonic and benthic foraminifera carbon and oxygen stable isotope records of IODP Site 339-U1387 (Gulf of Cadiz) for the interval of Marine Isotope Stage (MIS) 42 to MIS 46 (1.34-1.41 Ma)",
+      "header": [
+        "Event",
+        "Sample label (DSDP/ODP/IODP sample designation)",
+        "Depth sed [m] (mbsf, top of sampled interval...)",
+        "Depth comp top [mcd] (top of sampled interval, IODP...)",
+        "Depth comp corr top [c-mcd] (related to Voelker et al. (20...)",
+        "Age [ka BP] (Age model according to Lisiec...)",
+        "Age [ka BP] (Age model according to Ahn et...)",
+        "G. bulloides δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+        "G. bulloides δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+        "P. ariminensis δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+        "C. pachyderma δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+        "P. ariminensis δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+        "C. pachyderma δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+        "Foram benth δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)"
+      ],
+      "events": [
+        {
+          "label": "339-U1387A",
+          "lat": 36.80541,
+          "lon": -7.7190133333333,
+          "elevation": "-558.7",
+          "campaign": "Exp339",
+          "device": null
+        },
+        {
+          "label": "339-U1387B",
+          "lat": 36.80541,
+          "lon": -7.7187966666667,
+          "elevation": "-558.2",
+          "campaign": "Exp339",
+          "device": null
+        },
+        {
+          "label": "339-U1387C",
+          "lat": 36.805231666667,
+          "lon": -7.718795,
+          "elevation": "-558.4",
+          "campaign": "Exp339",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": null,
+      "source_rows": 295,
+      "age_column": 5,
+      "age_transformation": "identity: source LR04 point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerina bulloides, δ18O",
+          "short": "G. bulloides δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+          "comment": "vs. VPDB",
+          "column": 7,
+          "header": "G. bulloides δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ18O"
+        },
+        {
+          "name": "Globigerina bulloides, δ13C",
+          "short": "G. bulloides δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+          "comment": "vs. VPDB",
+          "column": 8,
+          "header": "G. bulloides δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C planctónico sensible al ciclo del carbono y a efectos vitales",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ13C"
+        },
+        {
+          "name": "Planulina ariminensis, δ18O",
+          "short": "P. ariminensis δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+          "comment": "vs. VPDB",
+          "column": 9,
+          "header": "P. ariminensis δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O bentónico sensible a temperatura profunda y volumen de hielo",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "P. ariminensis δ18O"
+        },
+        {
+          "name": "Cibicidoides pachyderma, δ18O",
+          "short": "C. pachyderma δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+          "comment": "vs. VPDB",
+          "column": 10,
+          "header": "C. pachyderma δ18O [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O bentónico sensible a temperatura profunda y volumen de hielo",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C. pachyderma δ18O"
+        },
+        {
+          "name": "Planulina ariminensis, δ13C",
+          "short": "P. ariminensis δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+          "comment": "vs. VPDB",
+          "column": 11,
+          "header": "P. ariminensis δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C bentónico sensible al carbono inorgánico disuelto y a la ventilación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "P. ariminensis δ13C"
+        },
+        {
+          "name": "Cibicidoides pachyderma, δ13C",
+          "short": "C. pachyderma δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251 equipped with automated carbonate preparation line (Kiel I)",
+          "comment": "vs. VPDB",
+          "column": 12,
+          "header": "C. pachyderma δ13C [‰ PDB] (vs. VPDB, Mass spectrometer F...)",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C bentónico sensible al carbono inorgánico disuelto y a la ventilación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "C. pachyderma δ13C"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales de la fuente. Sin interpolación ni recalibración.",
+        "Se elige la cronología LR04 nativa para cotejo con los biomarcadores de U1387. Probstack permanece en el original. Se excluye el δ13C bentónico compuesto para evitar redundancia con especies."
+      ]
+    },
+    {
+      "id": 854682,
+      "status": "held",
+      "reason": "PRGL1_Site and PRGL1-4 are near-coincident; resolve borehole identity before admitting a second spatial record",
+      "sha": "e196b58943a8a65059c085523597555ac7785cea7d1607e78446bcbfb0f7b8a7",
+      "xml_sha": "ba80c18ded99da9c843ee2e8af5253129e715b84736adbd26f246bf29b4694b4",
+      "columns": []
+    },
+    {
+      "id": 995416,
+      "status": "held",
+      "reason": "Composite depth and linkage to existing U1386 site require review",
+      "sha": "cc92de5cc24e94408fee3a074dc7235c09369c75a2af37358906f0733cd7f72e",
+      "xml_sha": "35403c7b6aac69ed92955262e0e477560584174960eac65798f22a9ece4b1fb1",
+      "columns": []
+    },
+    {
+      "id": 885603,
+      "status": "held",
+      "reason": "Multi-event compilation with alternate calibrations and potentially reused original data",
+      "sha": "ebefa4467c9132ee173047dcd8a00c67a428cf66b7f9f0f86bf7c4e19a8d4607",
+      "xml_sha": "e5d0fa34d33239c590f10c74c48dca9a0ab1fe340c53b111bc376e76559fff2f",
+      "columns": []
+    },
+    {
+      "id": 974466,
+      "status": "held",
+      "reason": "Overlap with previously admitted U1387 G. bulloides interval and alternate age models require source-row audit",
+      "sha": "0122e026e163d83f5e405c7f8e29a063015c916d876ef534209c140dccd98c90",
+      "xml_sha": "02c855aaf85fad1d09d19a2d3fda5db4e3d59c054b2c58b7fe143256f5906205",
+      "columns": []
+    },
+    {
+      "id": 856564,
+      "status": "held",
+      "reason": "Outside pilot boundary and CC BY-NC-SA licence",
+      "sha": "0281b69a4cff8829d335ab257e07d4e382cb38de11a9e2d58ee0917869915512",
+      "xml_sha": "db913af43a5a6541d87145e595863d6a8a5733e1756d72827e6bdf6be902af72",
+      "columns": []
+    },
+    {
+      "id": 951395,
+      "status": "held",
+      "reason": "Outside pilot boundary; composite and alternative chronologies",
+      "sha": "0689830bd5bfb0a5e13249001237b35701511b514c4b9692c18e58368318aa30",
+      "xml_sha": "97da4b70092050fc73d69b7256cbcfaa93d1da20bd69a3c269e107ac8ee01a06",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "U1387 holes are distinct archives within one drilling site.",
+    "Only central BAYSPAR estimate; original asymmetric quantiles retained in pinned TSV.",
+    "Hazar ICA remains pending."
+  ]
+}
