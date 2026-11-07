@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 07-11-2026
+- Tarea en curso CUR-COMMON-26. Ampliación de series nativas tras v25. Publicación para rol 04.
 - Publicación v25 completada en Sites: main 86f0f09, fuente Sites 4947d58, despliegue appgdep_6aef4c3b9e308191821fe3c000b6dfa4. Snapshot cotejado de 1.024.357 valores, 43 Node, TypeScript y compilación correctos. GitHub no mostró PR abiertos. Acceso privado conservado. Recibo reports/common_v25_sites_deployment.json; handoff docs/handoffs/publication-v25.md. Estado del flujo Cloudflare no comprobado.
 - Tarea cerrada CUR-COMMON-25. v25-c4c7fe7c54e reúne 267 registros, 2.085 series, 1.024.357 observaciones y 1.062 grupos base. Añade 11 series y 21.457 observaciones de Baleares, Prespa y Ohrid. Alias Ca/Al y admisión CaCO₃ revisados. Comprobadas 22 vistas. Pasaron 146 Python, 43 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Handoff docs/handoffs/cur-common-25.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-24. v24-c17c40ccf3b reúne 267 registros, 2.074 series, 1.002.900 observaciones y 1.051 grupos base. Añade siete series y 14.322 observaciones de PRGL1-4 y MD99-2348. Cotejados 144 agregados en catálogo y comprobadas 21 vistas filtradas. Pasaron 146 Python, 42 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Handoff docs/handoffs/cur-common-24.md. Publicación para rol 04.
