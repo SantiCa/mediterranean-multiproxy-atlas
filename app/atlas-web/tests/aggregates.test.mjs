@@ -99,3 +99,26 @@ test("element ratio aliases unify only the same ratio and measurement basis", ()
   assert.equal(canonicalParameterName({parameter_name_pangaea:"Iron/Calcium ratio"}), "Fe/Ca ratio");
   assert.equal(canonicalParameterName({parameter_name_pangaea:"ln(Titanium/Calcium)"}), "ln-Ti/Ca ratio");
 });
+
+test("UK prime archive aliases share a dimensionless aggregate and keep native units", () => {
+  const d = {records: ["a", "b", "c"].map(rec), series: [
+    {...ser("u1", "a", "alkenone_UK37", "conte", "adimensional", "UK′37", 3), source_column: "UK'37"},
+    ser("u2", "b", "alkenone_UK37prime", "jalali", "índice", "UK′37", 4),
+    {...ser("u3", "c", "native", "native", "sin unidad", "UK′37", 5),
+      parameter_name_pangaea: "Alkenone, unsaturation index UK'37"},
+  ]};
+  const group = proxyGroups(d).find(g => g.aggregate);
+  assert.equal(group.unit, "adimensional");
+  assert.deepEqual(new Set(group.series.map(s => s.id)), new Set(["u1", "u2", "u3"]));
+  assert.deepEqual(d.series.map(s => s.unit), ["adimensional", "índice", "sin unidad"]);
+  assert.notEqual(paramKey(d.series[0]), paramKey({...d.series[0], source_column: "UK37"}));
+  assert.notEqual(paramKey(d.series[0]), paramKey({...d.series[0], unit: "°C"}));
+});
+
+test("bromine ratio symbols retain logarithm and TIC stays separate from carbonate", () => {
+  const a = {parameter_name_pangaea:"log-Bromine/Titanium ratio", unit:"sin unidad", method:"Avaatech scanner"};
+  assert.equal(paramKey(a), paramKey({...a, parameter_name_pangaea:"log(Br/Ti)"}));
+  assert.notEqual(paramKey(a), paramKey({...a, parameter_name_pangaea:"Br/Ti"}));
+  assert.equal(paramKey({proxy:"TIC", unit:"%"}), paramKey({parameter_name_pangaea:"Carbon, inorganic, total", unit:"%"}));
+  assert.notEqual(paramKey({proxy:"TIC", unit:"%"}), paramKey({proxy:"CaCO3", unit:"%"}));
+});

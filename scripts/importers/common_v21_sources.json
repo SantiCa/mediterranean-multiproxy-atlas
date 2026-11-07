@@ -1,0 +1,468 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-06-v20-cf635885fac",
+  "parent_sha256": "623fced64a05305ed21e0931786f66a5d95ef60035105aedffc91a004d07c8bf",
+  "datasets": [
+    {
+      "id": 982341,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.982341",
+      "sha": "9fa0def4deb4d1c98cb4ac8a9066d7c0c9de4590eddefa1fbdc96a02ea13f0e9",
+      "xml_sha": "a707558d52c01451d95b15fde6e86013b204649ad104a0bf9219615fa3412797",
+      "title": "Magnetic susceptibility measurements of a Holocene sediment core from Limni Volvi, Greece",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "MAGS [10**-6 SI]"
+      ],
+      "events": [
+        {
+          "label": "Limni_Volvi",
+          "lat": 40.664278,
+          "lon": 23.541861,
+          "elevation": "37.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1177/09596836241297665",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2025,
+        "dates": {
+          "published-print": [
+            [
+              2025,
+              3
+            ]
+          ],
+          "published-online": [
+            [
+              2024,
+              11,
+              29
+            ]
+          ],
+          "issued": [
+            [
+              2024,
+              11,
+              29
+            ]
+          ],
+          "published": [
+            [
+              2024,
+              11,
+              29
+            ]
+          ]
+        },
+        "title": "Holocene climate–vegetation–land use interactions in the mesomediterranean coastlands of northern Greece",
+        "sha256": "e2df67b5e7022231f1439348db987048b5aa63eff02987d4a1614822cd2986a8"
+      },
+      "source_rows": 3783,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Magnetic susceptibility",
+          "short": "MAGS",
+          "unit": "10**-6 SI",
+          "method": "Magnetic susceptibility meter, Bartington Instruments Ltd., MS2E sensor",
+          "comment": null,
+          "column": 2,
+          "header": "MAGS [10**-6 SI]",
+          "family": "magnetism",
+          "environmental_interpretation": "Susceptibilidad magnética MS2E: variación del contenido y propiedades de minerales magnéticos del sedimento lacustre",
+          "comparison_context": "volumetric_surface_sensor_ms2e",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "MAGS"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales archivadas en ka BP; sin interpolación ni recalibración."
+      ],
+      "record_metadata": {
+        "water_depth_m": 19.3,
+        "elevation_m": 37
+      }
+    },
+    {
+      "id": 881321,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.881321",
+      "sha": "d53134c9c36d1e0ed0c35dc1b002061a8a78f3a44c677dcee68af2f6470423fd",
+      "xml_sha": "2eff058634bd262177ae05ad33f189a64273288476ca4e9c66758d5f90b076c7",
+      "title": "Age determaination and magnetic susceptibility measurement of sediment core Hz11-PO3 from Lake Hazar in Eastern Anatolia",
+      "header": [
+        "Age [ka BP]",
+        "MAGS [10**-6 SI]"
+      ],
+      "events": [
+        {
+          "label": "Hz11-PO3",
+          "lat": 38.477819,
+          "lon": 39.3368888,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quaint.2017.08.066",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2018,
+        "dates": {
+          "published-print": [
+            [
+              2018,
+              8
+            ]
+          ],
+          "issued": [
+            [
+              2018,
+              8
+            ]
+          ],
+          "published": [
+            [
+              2018,
+              8
+            ]
+          ]
+        },
+        "title": "Climate proxies for the last 17.3 ka from Lake Hazar (Eastern Anatolia), extracted by independent component analysis of μ -XRF data",
+        "sha256": "26f2997bf6c15fccf55b9e21408ae43d36ac9e39691a4eb036f1ebe56450981f"
+      },
+      "source_rows": 339,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Magnetic susceptibility",
+          "short": "MAGS",
+          "unit": "10**-6 SI",
+          "method": "Multi-Sensor Core Logger (MSCL), GEOTEK",
+          "comment": "10^-6 SI",
+          "column": 1,
+          "header": "MAGS [10**-6 SI]",
+          "family": "magnetism",
+          "environmental_interpretation": "Susceptibilidad magnética GEOTEK: variación de la fracción magnética del sedimento lacustre",
+          "comparison_context": "geotek_mscl_native_susceptibility",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "MAGS"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales archivadas en ka BP; sin interpolación ni recalibración."
+      ]
+    },
+    {
+      "id": 881322,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.881322",
+      "sha": "3aaf3bfd6406cfe7adef6a040fec3a7aa82023c400ca1380a0b1ec19222b645d",
+      "xml_sha": "2e58ae34e46100a31bf0e1f11821d41f268fa4b2f9f5dd199132a76013c36dd3",
+      "title": "Stable oxygen and carbon analysis from ostracod shells of sediment core Hz11-PO3 from Lake Hazar in Eastern Anatolia",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ostrac δ13C [‰ PDB]",
+        "Ostrac δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "Hz11-PO3",
+          "lat": 38.477819,
+          "lon": 39.3368888,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quaint.2017.08.066",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2018,
+        "dates": {
+          "published-print": [
+            [
+              2018,
+              8
+            ]
+          ],
+          "issued": [
+            [
+              2018,
+              8
+            ]
+          ],
+          "published": [
+            [
+              2018,
+              8
+            ]
+          ]
+        },
+        "title": "Climate proxies for the last 17.3 ka from Lake Hazar (Eastern Anatolia), extracted by independent component analysis of μ -XRF data",
+        "sha256": "26f2997bf6c15fccf55b9e21408ae43d36ac9e39691a4eb036f1ebe56450981f"
+      },
+      "source_rows": 81,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Ostracoda, δ13C",
+          "short": "Ostrac δ13C",
+          "unit": "‰ PDB",
+          "method": null,
+          "comment": "vs. VPDB",
+          "column": 2,
+          "header": "Ostrac δ13C [‰ PDB]",
+          "family": "ostracod_isotopes",
+          "environmental_interpretation": "Composición isotópica del carbono inorgánico disuelto y procesos del ciclo del carbono lacustre",
+          "comparison_context": "hazar_ostracod_shell_vpdb",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ostrac δ13C",
+          "taxon": "Ostracoda"
+        },
+        {
+          "name": "Ostracoda, δ18O",
+          "short": "Ostrac δ18O",
+          "unit": "‰ PDB",
+          "method": null,
+          "comment": "vs. VPDB",
+          "column": 3,
+          "header": "Ostrac δ18O [‰ PDB]",
+          "family": "ostracod_isotopes",
+          "environmental_interpretation": "Balance hídrico y composición isotópica del agua del lago, con sensibilidad a temperatura y efectos vitales",
+          "comparison_context": "hazar_ostracod_shell_vpdb",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ostrac δ18O",
+          "taxon": "Ostracoda"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales archivadas en ka BP; sin interpolación ni recalibración."
+      ]
+    },
+    {
+      "id": 881323,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.881323",
+      "sha": "bd00bc51cea58ca0a23938903bd29661fc5f7d8af6e4e1329fd08bbe232c402b",
+      "xml_sha": "83c8c657ba3ff381abd9b6d7aff6dc8c9961a3f54f6cae3b2f00b04d88ae22fb",
+      "title": "Micro XRF core scanner analysis of sediment core Hz11-PO3 from Lake Hazar in Eastern Anatolia",
+      "header": [
+        "Age [ka BP]",
+        "Ca [cps] (Micro X-ray fluorescence (µ-XRF))",
+        "Fe [cps] (Micro X-ray fluorescence (µ-XRF))",
+        "K [cps] (Micro X-ray fluorescence (µ-XRF))",
+        "Mn [cps] (Micro X-ray fluorescence (µ-XRF))",
+        "Sr [cps] (Micro X-ray fluorescence (µ-XRF))",
+        "Ti [cps] (Micro X-ray fluorescence (µ-XRF))",
+        "- (ICA 1, Independent Component ...)",
+        "- (ICA 2, Independent Component ...)",
+        "- (ICA 3, Independent Component ...)",
+        "- (ICA 4, Independent Component ...)",
+        "- (ICA 5, Independent Component ...)",
+        "- (ICA 6, Independent Component ...)"
+      ],
+      "events": [
+        {
+          "label": "Hz11-PO3",
+          "lat": 38.477819,
+          "lon": 39.3368888,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quaint.2017.08.066",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2018,
+        "dates": {
+          "published-print": [
+            [
+              2018,
+              8
+            ]
+          ],
+          "issued": [
+            [
+              2018,
+              8
+            ]
+          ],
+          "published": [
+            [
+              2018,
+              8
+            ]
+          ]
+        },
+        "title": "Climate proxies for the last 17.3 ka from Lake Hazar (Eastern Anatolia), extracted by independent component analysis of μ -XRF data",
+        "sha256": "26f2997bf6c15fccf55b9e21408ae43d36ac9e39691a4eb036f1ebe56450981f"
+      },
+      "source_rows": 633,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Iron",
+          "short": "Fe",
+          "unit": "cps",
+          "method": "Micro X-ray fluorescence (µ-XRF)",
+          "comment": null,
+          "column": 2,
+          "header": "Fe [cps] (Micro X-ray fluorescence (µ-XRF))",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Señal de Fe sedimentario sensible al aporte mineral y a movilización redox",
+          "comparison_context": "hazar_micro_xrf_native_counts",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Fe"
+        },
+        {
+          "name": "Titanium",
+          "short": "Ti",
+          "unit": "cps",
+          "method": "Micro X-ray fluorescence (µ-XRF)",
+          "comment": null,
+          "column": 6,
+          "header": "Ti [cps] (Micro X-ray fluorescence (µ-XRF))",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Señal de Ti detrítico sensible al aporte de sedimento terrígeno",
+          "comparison_context": "hazar_micro_xrf_native_counts",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ti"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales archivadas en ka BP; sin interpolación ni recalibración.",
+        "Señales instrumentales en cps. ICA 1–6 reservados hasta verificar la atribución individual en el texto primario; sin calcular cocientes."
+      ]
+    },
+    {
+      "id": 920704,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.920704",
+      "sha": "ec578f85d3b76d0764b95c185ce3b09a848579bd370adf21beeaebc080ebcc60",
+      "xml_sha": "ef08279e84bde0cec30fc006663d3ee424b9f9d5c71545d245d295090060403f",
+      "title": "Warm signature of the Roman period in Mediterranean sea surface temperatures",
+      "header": [
+        "Age [ka BP]",
+        "Age [a AD/CE]",
+        "SST [°C]",
+        "SST e [±]"
+      ],
+      "events": [
+        {
+          "label": "SW104-ND11",
+          "lat": 37.03213,
+          "lon": 13.18184,
+          "elevation": null,
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1038/s41598-020-67281-2",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2020,
+        "dates": {
+          "published-online": [
+            [
+              2020,
+              6,
+              26
+            ]
+          ],
+          "issued": [
+            [
+              2020,
+              6,
+              26
+            ]
+          ],
+          "published": [
+            [
+              2020,
+              6,
+              26
+            ]
+          ]
+        },
+        "title": "Persistent warm Mediterranean surface waters during the Roman period",
+        "sha256": "cbae12291ee92edded5359f8dfb9f5c33e2aa13796ecaa84246a6cc56ccbaa8e"
+      },
+      "source_rows": 60,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Sea surface temperature",
+          "short": "SST",
+          "unit": "°C",
+          "method": "Calculated from Mg/Ca ratios",
+          "comment": null,
+          "column": 2,
+          "header": "SST [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial del mar reconstruida con Mg/Ca de G. ruber blanco, señal de final de verano a otoño",
+          "comparison_context": "mgca_g_ruber_white_elderfield_ganssen_2000_late_summer_autumn",
+          "error_column": 3,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST",
+          "taxon": "Globigerinoides ruber (white, sensu stricto)",
+          "uncertainty_type": "Published absolute standard error of SST in °C",
+          "label": "SST · Mg/Ca · G. ruber blanco · final de verano a otoño"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales archivadas en ka BP; sin interpolación ni recalibración.",
+        "SST absoluta en °C según columna y artículo, calibración Elderfield y Ganssen (2000). Error estándar absoluto archivado, sin propagación nueva."
+      ],
+      "record_metadata": {
+        "water_depth_m": 475
+      }
+    }
+  ],
+  "selection_limits": [
+    "Five native datasets in three locations; three Hazar datasets describe the same core.",
+    "AD91-17 (438366) and KC-13 checked against legacy record and series DOI before admission.",
+    "ICA columns held pending primary-source component attribution. Raw scanner intensities remain instrument-specific."
+  ]
+}

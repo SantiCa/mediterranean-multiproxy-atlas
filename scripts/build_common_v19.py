@@ -31,6 +31,7 @@ def coverage(seed):
 
 
 def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, version=19,
+          release_date='2026-11-06',
           age_rule=curator.native.age_rule):
     """Extract pinned native values and append compatible, traceable series to v18."""
     contract = json.loads(contract_path.read_bytes())
@@ -63,6 +64,8 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, ve
         series['evidence_type'] = spec['evidence_type']
         series['comparison_parameter_name'] = spec['name']
         series['search_aliases'] += [spec['environmental_interpretation'], spec['short']]
+        if spec.get('taxon'):
+            series['taxon'] = spec['taxon']
         if spec['family'] == 'isotopes':
             series['taxon'] = spec['name'].split(',')[0]
             isotope = 'd18O' if '18O' in spec['name'] else 'd13C'
@@ -78,7 +81,8 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, ve
                     raise ValueError('Negative native standard deviation')
                 row[7] = error
             series['value_uncertainty_source_column'] = entry['header'][error_column]
-            series['uncertainty_type'] = 'Published companion standard deviation; no propagated or calibration error invented'
+            series['uncertainty_type'] = spec.get('uncertainty_type',
+                'Published companion standard deviation; no propagated or calibration error invented')
         elif ident == 733103:
             series['uncertainty_type'] = 'Native standard-deviation columns retained in original; estimator assignment unresolved'
     for record in fragment['records']:
@@ -87,7 +91,7 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, ve
         record.update(entry.get('record_metadata', {}))
     fragment_path.write_text(json.dumps(fragment, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
     seed, report = admission.assemble(baseline=baseline, fragment_paths=[fragment_path],
-        provider_names=['pangaea_common'], version_prefix=f'atlas-quantitative-2026-11-06-v{version}-')
+        provider_names=['pangaea_common'], version_prefix=f'atlas-quantitative-{release_date}-v{version}-')
     report.update(parent_sha256=contract['parent_sha256'],
         source_audits=[contract_path.relative_to(ROOT).as_posix(), audit_path.relative_to(ROOT).as_posix()],
         selection_limits=contract['selection_limits'],

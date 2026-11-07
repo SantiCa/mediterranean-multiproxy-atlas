@@ -30,14 +30,19 @@ export function elementRatioAlias(name) {
   return String(name || "").replace(/\b(titanium|calcium|aluminium|aluminum|iron|potassium|zirconium|rubidium|barium|strontium|manganese|silicon|bromine|chlorine|molybdenum|uranium|thorium)\b/gi, x => elements[x.toLowerCase()]);
 }
 /** Canonical discovery names only; base groups, units and native values stay intact. */
+const UK37_PRIME = "Índice de insaturación de alquenonas (UK′37)";
 export function canonicalParameterName(s) {
   const raw = s.comparison_parameter_name || s.parameter_name_pangaea || s.proxy || s.variable_label || s.label || "";
   const name = fold(raw).replace(/[_ ,]+/g, " ").replace(/\s+/g, " ").trim();
   if (["toc", "total organic carbon", "carbon organic total", "carbono organico total", "corg", "c org", "carbon organic per unit sediment mass"].includes(name)) return "Carbono orgánico total (TOC)";
   if (["caco3", "calcium carbonate", "carbonato calcico"].includes(name)) return "Calcium carbonate";
-  const ratio = fold(elementRatioAlias(raw)).replace(/_/g, " ").trim().match(/^(?:(ln|log|log10)[\s(-]*)?(ti|fe|si|zr|k|mn|u|mo|ba)\s*\/\s*(ca|al|ti|rb|th)\)?(?:\s+ratio)?$/);
+  const indexName = name.replace(/[′’]/g, "'");
+  if (["uk'37", "alkenone uk37prime", "alkenone unsaturation index uk'37"].includes(indexName)
+      || (indexName === "alkenone uk37" && /^uk['′’]37\b/i.test(s.source_column || ""))) return UK37_PRIME;
+  if (["tic", "total inorganic carbon", "carbon inorganic total", "carbono inorganico total"].includes(name)) return "Carbono inorgánico total (TIC)";
+  const ratio = fold(elementRatioAlias(raw)).replace(/_/g, " ").trim().match(/^(?:(ln|log|log10)[\s(-]*)?(ti|fe|si|zr|k|mn|u|mo|ba|br|sr)\s*\/\s*(ca|al|ti|rb|th|sr)\)?(?:\s+ratio)?$/);
   if (ratio) {
-    const symbols = { ti:"Ti", fe:"Fe", si:"Si", zr:"Zr", k:"K", mn:"Mn", u:"U", mo:"Mo", ba:"Ba", ca:"Ca", al:"Al", rb:"Rb", th:"Th" };
+    const symbols = { ti:"Ti", fe:"Fe", si:"Si", zr:"Zr", k:"K", mn:"Mn", u:"U", mo:"Mo", ba:"Ba", ca:"Ca", al:"Al", rb:"Rb", th:"Th", br:"Br", sr:"Sr" };
     return (ratio[1] ? ratio[1] + "-" : "") + symbols[ratio[2]] + "/" + symbols[ratio[3]] + " ratio";
   }
   return s.comparison_parameter_name || s.parameter_name_pangaea || null;
@@ -72,7 +77,8 @@ export function proxyGroups(data, f = {}) {
     if (!r || !seriesMatches(s, r, f)) continue;
     const key = groupKey(s);
     const canonical = canonicalParameterName(s);
-    const controlledAlias = canonical === "Carbono orgánico total (TOC)" || canonical === "Calcium carbonate" || / ratio$/.test(canonical || "") && /^[\w-]+\/[\w]+ ratio$/.test(canonical);
+    const controlledAlias = [UK37_PRIME, "Carbono orgánico total (TOC)", "Carbono inorgánico total (TIC)", "Calcium carbonate"].includes(canonical)
+      || /^[\w-]+\/[\w]+ ratio$/.test(canonical || "");
     if (!groups.has(key))
       groups.set(key, {
         key,
@@ -163,7 +169,9 @@ const PLANKTIC = /bulloides|ruber|inflata|pachyderma|globigerin|globorotalia|neo
 const BENTHIC = /cibicid|uvigerina|melonis|planulina|hoeglundina|bent|oridorsalis|pyrgo|globobulimina/;
 const permil = (s) => /‰/.test(s.unit) && /pdb/i.test(s.unit) && !/smow/i.test(s.unit);
 const season = (t) =>
-  /summer|july|august|jul.?sep|verano|\bjas\b/.test(t)
+  /late.summer.{0,12}autumn|final.{0,12}verano.{0,12}otono/.test(t)
+    ? "other"
+    : /summer|july|august|jul.?sep|verano|\bjas\b/.test(t)
     ? "summer"
     : /winter|january|february|jan.?mar|invierno|\bjfm\b/.test(t)
       ? "winter"
@@ -196,6 +204,9 @@ export const isAggregateKey = (k) => typeof k === "string" && k.startsWith('["ag
 /* Same PANGAEA parameter (controlled vocabulary) and same unit, any method: the
  * parameter defines the measured quantity; methods remain per series. */
 const paramName = canonicalParameterName;
+// The known UK′37 archive labels all describe the same dimensionless index.
+const comparisonUnit = (s) => paramName(s) === UK37_PRIME && ["índice", "adimensional", "sin unidad"].includes(s.unit)
+  ? "adimensional" : s.unit;
 /** Identical parameter names can hide different fractions or pollen sums.
  * Native counts remain sample counts, not abundance percentages. */
 export function comparisonContext(s) {
@@ -227,7 +238,7 @@ const contextLabel = (context) => ({ pollen_sum_excludes_pinus:"suma sin Pinus",
 export const paramKey = (s) =>
   paramName(s) && !s.derivation && !(s.unit === "#" && /polen|pollen/i.test(s.family || "")) &&
     !(s.unit === "%" && proxyFamily(s) === "Polen" && !comparisonContext(s))
-    ? JSON.stringify(["agg", "p:" + fold(paramName(s)), s.unit, ...(comparisonContext(s) ? [comparisonContext(s)] : [])]) : null;
+    ? JSON.stringify(["agg", "p:" + fold(paramName(s)), comparisonUnit(s), ...(comparisonContext(s) ? [comparisonContext(s)] : [])]) : null;
 export function aggregatesOf(s) {
   if (s.derivation) return [];
   const t = txt(s),
@@ -266,21 +277,25 @@ export function aggregateGroups(groups, data) {
       search: fold(a.label + " agrupado " + members.map((g) => g.search).join(" ")),
     });
   }
-  const seen = new Set(out.map((g) => g.members.join("|"))),
+  const signature = (series) => JSON.stringify(series.map((s) => s.id).sort());
+  const seen = new Set(out.map((g) => signature(g.series))),
     byParam = new Map();
   for (const g of groups)
     for (const s of g.series) {
       const k = paramKey(s);
       if (!k) continue;
-      if (!byParam.has(k)) byParam.set(k, { name: paramName(s), unit: s.unit, family: g.family, context: comparisonContext(s), members: new Map() });
+      if (!byParam.has(k)) byParam.set(k, { name: paramName(s), unit: comparisonUnit(s), family: g.family, context: comparisonContext(s), members: new Map() });
       byParam.get(k).members.set(g.key, g);
     }
   for (const [key, a] of byParam) {
     const members = [...a.members.values()];
-    if (members.length < 2 || seen.has(members.map((g) => g.key).join("|"))) continue;
+    if (members.length < 2) continue;
     const series = members.flatMap((g) => g.series.filter((s) => paramKey(s) === key));
+    const selection = signature(series);
+    if (seen.has(selection)) continue;
     const records = new Set(series.map((s) => s.record_id)).size;
     if (records < 2) continue;
+    seen.add(selection);
     out.push({
       key,
       id: "agg:" + key,
