@@ -2,6 +2,11 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v27 validada en relevo (07-11-2026)
+
+- v27-cdeefdc51f6 reúne **271 registros, 2.107 series, 1.027.294 observaciones y 1.079 grupos base**. Dos sondeos nuevos, nueve series y 1.233 observaciones de isótopos y alquenonas. 969E comparte sitio con 969D. Fuentes y decisiones en docs/handoffs/cur-common-27.md.
+- Pasaron 146 Python, 44 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores y agrupaciones comprobadas en 22 vistas. Publicación para rol 04.
+
 ## Colección v26 validada en relevo (07-11-2026)
 
 - v26-cc3b334b8f6 reúne **269 registros, 2.098 series, 1.026.061 observaciones y 1.072 grupos base**. Añade 13 series y 1.704 observaciones de cuatro tablas, con dos testigos nuevos del Nilo. Fuentes y decisiones en docs/handoffs/cur-common-26.md.

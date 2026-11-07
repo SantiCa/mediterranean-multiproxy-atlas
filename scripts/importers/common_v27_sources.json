@@ -1,0 +1,367 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v26-cc3b334b8f6",
+  "parent_sha256": "77bad716d8bba6a9c64cff5855c65bb8c88bb1c91ba62c235ff60e39252feeda",
+  "datasets": [
+    {
+      "id": 69826,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.69826",
+      "sha": "52a9d72d85ecad1678844ad1cc841acca5109ebbc7b2a61d2955497651940e88",
+      "xml_sha": "7dd6db9c0c1766b9de6613cff30f778a15274c4353618f1bf17309ecfb8aa51b",
+      "title": "Age and stable oxygen isotope ratios of Globigerinoides ruber from sediment core M40/4_SL87 in the western Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "G. ruber w δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "M40/4_SL87",
+          "lat": 38.988,
+          "lon": 4.023,
+          "elevation": "-1897.0",
+          "campaign": "M40/4",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 233,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerinoides ruber white, δ18O",
+          "short": "G. ruber w δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251",
+          "comment": null,
+          "column": 2,
+          "header": "G. ruber w δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. ruber w δ18O",
+          "habitat": "planct"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades de la columna ka BP archivada. Sin interpolación ni ajuste."
+      ]
+    },
+    {
+      "id": 79182,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.79182",
+      "sha": "bc540073d24b60009431f4716cfca774d31cb13a8ce5e64e77981c3efd0fa803",
+      "xml_sha": "75fdc7091903a2ab24d360eb66de82dd41ea73c85e3b4163fe4466e5a6a5d579",
+      "title": "Age and stable oxygen isotope ratios of Globigerinoides ruber from ODP Hole 160-969E in the eastern Mediterranean Sea",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Sample label",
+        "Depth comp [mcd]",
+        "G. ruber w δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "160-969E",
+          "lat": 33.8411,
+          "lon": 24.8831,
+          "elevation": "-2201.0",
+          "campaign": "Leg160",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 121,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerinoides ruber white, δ18O",
+          "short": "G. ruber w δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251",
+          "comment": null,
+          "column": 4,
+          "header": "G. ruber w δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. ruber w δ18O",
+          "habitat": "planct"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades de la columna ka BP archivada. Sin interpolación ni ajuste.",
+        "969E y 969D son perforaciones distintas del mismo sitio ODP. No representan ubicaciones espaciales independientes."
+      ]
+    },
+    {
+      "id": 857573,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.857573",
+      "sha": "8524efbc35adfa5d535769117b87fc620c9642a473c3e0b8fff2fd95e5eafb17",
+      "xml_sha": "306f78b6b89d6afc5e09c6b7cd1173dbbd2a6e25ca9664ac8cdf701f7f2d1461",
+      "title": "A foraminiferal δ¹⁸O record of sediment core GT90-3 covering the last 2,200 years",
+      "header": [
+        "Depth sed [m]",
+        "Age [a AD/CE]",
+        "Age [ka BP]",
+        "G. ruber δ18O [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "GT90-3",
+          "lat": 39.7619,
+          "lon": 17.8986,
+          "elevation": "-178.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 560,
+      "age_column": 2,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Globigerinoides ruber, δ18O",
+          "short": "G. ruber δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer VG Prism",
+          "comment": null,
+          "column": 3,
+          "header": "G. ruber δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua superficial",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. ruber δ18O",
+          "habitat": "planct"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades de la columna ka BP archivada. Sin interpolación ni ajuste.",
+        "Contraste con CE en 560 filas: diferencia máxima 0.00 años."
+      ]
+    },
+    {
+      "id": 465031,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.465031",
+      "sha": "2aaf19efe1d39819b5a5073c18370854a79bab6e3dc5a0133fdc21b043e2a3e5",
+      "xml_sha": "310983e6b6adf7b4c3bf5d914339773e5136d9e5a9ca63bab8a3ec5e59adda12",
+      "title": "(Fig. 2) Stable oxygen and carbon isotopes on Uvigerina sp. and U. mediterranea from sediment core MD99-2339",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Uvigerina sp. δ18O [‰ PDB]",
+        "Uvigerina sp. δ13C [‰ PDB]",
+        "U. mediterranea δ18O [‰ PDB]",
+        "U. mediterranea δ13C [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2339",
+          "lat": 35.8855,
+          "lon": -7.5278333333333,
+          "elevation": "-1177.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 94,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Uvigerina sp., δ18O",
+          "short": "Uvigerina sp. δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251",
+          "comment": null,
+          "column": 2,
+          "header": "Uvigerina sp. δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O bentónico sensible a temperatura y composición isotópica de aguas profundas",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Uvigerina sp. δ18O"
+        },
+        {
+          "name": "Uvigerina sp., δ13C",
+          "short": "Uvigerina sp. δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251",
+          "comment": null,
+          "column": 3,
+          "header": "Uvigerina sp. δ13C [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C bentónico sensible al carbono inorgánico disuelto y a la ventilación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Uvigerina sp. δ13C"
+        },
+        {
+          "name": "Uvigerina mediterranea, δ18O",
+          "short": "U. mediterranea δ18O",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251",
+          "comment": null,
+          "column": 4,
+          "header": "U. mediterranea δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O bentónico sensible a temperatura y composición isotópica de aguas profundas",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "U. mediterranea δ18O"
+        },
+        {
+          "name": "Uvigerina mediterranea, δ13C",
+          "short": "U. mediterranea δ13C",
+          "unit": "‰ PDB",
+          "method": "Mass spectrometer Finnigan MAT 251",
+          "comment": null,
+          "column": 5,
+          "header": "U. mediterranea δ13C [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C bentónico sensible al carbono inorgánico disuelto y a la ventilación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "U. mediterranea δ13C"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades de la columna ka BP archivada. Sin interpolación ni ajuste.",
+        "Se mantienen separadas las identificaciones Uvigerina sp. y U. mediterranea."
+      ]
+    },
+    {
+      "id": 882266,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.882266",
+      "sha": "79091abe948948c7b9148d7446d6d086e0549cda0e872aea479ac7aabb22fc72",
+      "xml_sha": "b77524ee7ee69af1bd5195dd00c21b0f9eb6e6946f838dfae8203db933c98682",
+      "title": "Biomarker content of sediment core POPEI_VC2B",
+      "header": [
+        "Depth sed [m]",
+        "Age [a AD/CE]",
+        "Age [ka BP]",
+        "UK'37",
+        "SST (1-12) [°C]",
+        "n-Alkanes [ng/g]",
+        "n-OH [ng/g]",
+        "C37 [ng/g]"
+      ],
+      "events": [
+        {
+          "label": "POPEI_VC2B",
+          "lat": 36.88,
+          "lon": -8.07,
+          "elevation": "-96.0",
+          "campaign": "POPEI0113",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": null,
+      "source_rows": 78,
+      "age_column": 2,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Alkenone, unsaturation index UK'37",
+          "short": "UK'37",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "UK'37",
+          "family": "indices",
+          "environmental_interpretation": "Índice UK′37 sensible a temperatura superficial marina",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "UK'37"
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": null,
+          "comment": null,
+          "column": 4,
+          "header": "SST (1-12) [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial marina reconstruida por alquenonas",
+          "comparison_context": "popei_vc2b_alkenone_sst_native",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST (1-12)"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades de la columna ka BP archivada. Sin interpolación ni ajuste.",
+        "Se conserva la SST anual publicada con contexto propio; el XML no indica la ecuación de calibración.",
+        "Contraste con CE en 78 filas: diferencia máxima 0.00 años."
+      ]
+    },
+    {
+      "id": 438838,
+      "status": "held",
+      "reason": "Outside pilot region",
+      "sha": "51fe6d0d5c0b78a2411241777070f4feaacb8da6aa6c7e148036e897a5499ee4",
+      "xml_sha": "dbf1402fb1e50cb0dce7c244a0dfa41b71c9384ae6a1f7a0f66e9f6e930a2c9e",
+      "columns": []
+    },
+    {
+      "id": 930775,
+      "status": "held",
+      "reason": "Dataset title and XML event differ; description includes multiple sample categories",
+      "sha": "9b6eb284cb00b762e8570d1241a0f8a7626ab6aec867f791e8dd554aa64068d3",
+      "xml_sha": "629d973abf984b38905aa3f712d0b29c87ca80c2ee0a9adab7d4913a9f273d88",
+      "columns": []
+    },
+    {
+      "id": 884646,
+      "status": "held",
+      "reason": "Site-to-hole linkage and averaged isotope columns require review",
+      "sha": "a1fafca9a9f8c760913d007e08a504609141ee8bec92924de2d689e178820740",
+      "xml_sha": "4d414c9cdacc2f37408d738364d5fc8ed6c14fa151d0df0cd7c6e548c8f78bc8",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Five original sources. Hole 969E and nearby 969D belong to one drilling site."
+  ]
+}
