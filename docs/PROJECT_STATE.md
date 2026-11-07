@@ -2,7 +2,27 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
-## Colección v25 validada en relevo (07-11-2026)
+## Colección v29 validada en relevo (07-11-2026)
+
+- v29-c45997d0668 reúne **276 registros, 2.187 series, 1.032.367 observaciones y 1.156 grupos base**. Añade AMC99-1, SA03-1 y ST04-1 con 70 series y 3.938 observaciones de foraminíferos planctónicos. Fuentes y decisiones en docs/handoffs/cur-common-29.md.
+- Recuentos por muestra y concentraciones por gramo separados. Sin conjuntos agregados idénticos en 22 vistas. Pasaron 146 Python, 46 Node, TypeScript, compilación y snapshot íntegro. Publicación para rol 04.
+
+## Colección v28 validada en relevo (07-11-2026)
+
+- v28-c5fa6332d0f reúne **273 registros, 2.117 series, 1.028.429 observaciones y 1.088 grupos base**. Añade 161-974C y 4WS00-4P, 10 series y 1.135 observaciones. Fuentes y decisiones en docs/handoffs/cur-common-28.md.
+- Las 22 vistas comprobadas tienen membresías agregadas distintas. Pasaron 146 Python, 44 Node, TypeScript, compilación y cotejo completo del snapshot. Auditorías con cero errores. Publicación para rol 04.
+
+## Colección v27 validada en relevo (07-11-2026)
+
+- v27-cdeefdc51f6 reúne **271 registros, 2.107 series, 1.027.294 observaciones y 1.079 grupos base**. Dos sondeos nuevos, nueve series y 1.233 observaciones de isótopos y alquenonas. 969E comparte sitio con 969D. Fuentes y decisiones en docs/handoffs/cur-common-27.md.
+- Pasaron 146 Python, 44 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores y agrupaciones comprobadas en 22 vistas. Publicación para rol 04.
+
+## Colección v26 validada en relevo (07-11-2026)
+
+- v26-cc3b334b8f6 reúne **269 registros, 2.098 series, 1.026.061 observaciones y 1.072 grupos base**. Añade 13 series y 1.704 observaciones de cuatro tablas, con dos testigos nuevos del Nilo. Fuentes y decisiones en docs/handoffs/cur-common-26.md.
+- δ¹³C del TOC reúne cuatro series bajo un nombre de consulta. Se comprobaron 22 vistas. Pasaron 146 Python, 44 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Integración y publicación para rol 04.
+
+## Colección v25 validada (07-11-2026)
 
 - v25-c4c7fe7c54e reúne **267 registros, 2.085 series, 1.024.357 observaciones y 1.062 grupos base**. Añade 11 series y 21.457 observaciones de Prespa, Ohrid y Baleares. Fuentes y límites en docs/handoffs/cur-common-25.md.
 - Alias Ca/Al y criterio de admisión CaCO₃ revisados. Catálogo completo y 21 vistas filtradas sin conjuntos de series agregadas idénticos. Pasaron 146 Python, 43 Node, TypeScript, compilación y snapshot completo. Auditorías con cero errores. Integración y publicación para rol 04.

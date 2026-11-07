@@ -40,6 +40,7 @@ export function canonicalParameterName(s) {
   if (["uk'37", "alkenone uk37prime", "alkenone unsaturation index uk'37"].includes(indexName)
       || (indexName === "alkenone uk37" && /^uk['′’]37\b/i.test(s.source_column || ""))) return UK37_PRIME;
   if (["tic", "total inorganic carbon", "carbon inorganic total", "carbono inorganico total"].includes(name)) return "Carbono inorgánico total (TIC)";
+  if (["d13c organic carbon", "d13c total organic carbon"].includes(name)) return "δ13C, total organic carbon";
   const ratio = fold(elementRatioAlias(raw)).replace(/_/g, " ").trim().match(/^(?:(ln|log|log10)[\s(-]*)?(ti|fe|si|zr|k|mn|u|mo|ba|br|sr|ca)\s*\/\s*(ca|al|ti|rb|th|sr)\)?(?:\s+ratio)?$/);
   if (ratio) {
     const symbols = { ti:"Ti", fe:"Fe", si:"Si", zr:"Zr", k:"K", mn:"Mn", u:"U", mo:"Mo", ba:"Ba", ca:"Ca", al:"Al", rb:"Rb", th:"Th", br:"Br", sr:"Sr" };
@@ -77,7 +78,7 @@ export function proxyGroups(data, f = {}) {
     if (!r || !seriesMatches(s, r, f)) continue;
     const key = groupKey(s);
     const canonical = canonicalParameterName(s);
-    const controlledAlias = [UK37_PRIME, "Carbono orgánico total (TOC)", "Carbono inorgánico total (TIC)", "Calcium carbonate"].includes(canonical)
+    const controlledAlias = [UK37_PRIME, "Carbono orgánico total (TOC)", "Carbono inorgánico total (TIC)", "Calcium carbonate", "δ13C, total organic carbon"].includes(canonical)
       || /^[\w-]+\/[\w]+ ratio$/.test(canonical || "");
     if (!groups.has(key))
       groups.set(key, {

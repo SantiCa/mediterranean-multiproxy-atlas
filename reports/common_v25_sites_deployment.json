@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-07",
+  "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_35586de111908191b0765872302c4146",
+  "deployment_id": "appgdep_6aef4c3b9e308191821fe3c000b6dfa4",
+  "status": "succeeded",
+  "url": "https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site",
+  "source_commit": "4947d582cf6be6370c3e97106c38f8c12c694f9d",
+  "main_commit": "86f0f094416278d26ae31f6d9ca7c8d82a298976",
+  "release": "atlas-quantitative-2026-11-07-v25-c4c7fe7c54e",
+  "seed_sha256": "c5377e6033657ed7d61744f67eb2acefe48767af0b7919aaf252223c35c58bf2",
+  "checks": {"snapshot_values": 1024357, "snapshot_groups": 1062, "snapshot_files": 1064, "node_tests": 43, "typescript": true, "build": true},
+  "verification": "Sites returned succeeded and production URL. Production content and Cloudflare workflow not independently checked; GitHub listed no open pull requests."
+}

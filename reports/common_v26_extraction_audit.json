@@ -1,0 +1,171 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v25-c4c7fe7c54e",
+  "counts": {
+    "records": 4,
+    "series": 13,
+    "observations": 1704,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea26-819805:161_977A:col2~2eb35f8f12",
+      "dataset": "10.1594/PANGAEA.819805",
+      "event": "161-977A",
+      "source_column": 2,
+      "observations": 199,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-819805:161_977A:col4~0a4e0ee957",
+      "dataset": "10.1594/PANGAEA.819805",
+      "event": "161-977A",
+      "source_column": 4,
+      "observations": 199,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-819805:161_977A:col6~5c626fcf7d",
+      "dataset": "10.1594/PANGAEA.819805",
+      "event": "161-977A",
+      "source_column": 6,
+      "observations": 199,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-693919:161_975B:col4~818acd5a05",
+      "dataset": "10.1594/PANGAEA.693919",
+      "event": "161-975B",
+      "source_column": 4,
+      "observations": 63,
+      "missing_cells": 13,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-693919:161_975B:col5~62b18ea128",
+      "dataset": "10.1594/PANGAEA.693919",
+      "event": "161-975B",
+      "source_column": 5,
+      "observations": 76,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-693919:161_975B:col6~3b2d4eb7da",
+      "dataset": "10.1594/PANGAEA.693919",
+      "event": "161-975B",
+      "source_column": 6,
+      "observations": 76,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-693919:161_975B:col8~f0d305bb05",
+      "dataset": "10.1594/PANGAEA.693919",
+      "event": "161-975B",
+      "source_column": 8,
+      "observations": 76,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-693919:161_975B:col9~fb0ff94dbf",
+      "dataset": "10.1594/PANGAEA.693919",
+      "event": "161-975B",
+      "source_column": 9,
+      "observations": 36,
+      "missing_cells": 40,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-693919:161_975B:col10~e4abe50b1b",
+      "dataset": "10.1594/PANGAEA.693919",
+      "event": "161-975B",
+      "source_column": 10,
+      "observations": 35,
+      "missing_cells": 41,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-875737:MS21PC:col2~498ba5b755",
+      "dataset": "10.1594/PANGAEA.875737",
+      "event": "MS21PC",
+      "source_column": 2,
+      "observations": 277,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-875737:MS21PC:col3~dbdf76dd39",
+      "dataset": "10.1594/PANGAEA.875737",
+      "event": "MS21PC",
+      "source_column": 3,
+      "observations": 218,
+      "missing_cells": 59,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-875737:MS21PC:col4~b834ee6777",
+      "dataset": "10.1594/PANGAEA.875737",
+      "event": "MS21PC",
+      "source_column": 4,
+      "observations": 19,
+      "missing_cells": 258,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea26-875736:PASSAP_PS009PC:col2~30ba90d420",
+      "dataset": "10.1594/PANGAEA.875736",
+      "event": "PASSAP_PS009PC",
+      "source_column": 2,
+      "observations": 231,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 819811,
+      "status": "held",
+      "reason": "Species-specific Mg/Ca depth habitat and calibration still require review"
+    },
+    {
+      "id": 854682,
+      "status": "held",
+      "reason": "PRGL1_Site identity relative to PRGL1-4 remains unresolved"
+    },
+    {
+      "id": 829368,
+      "status": "held",
+      "reason": "Outside pilot region"
+    }
+  ]
+}

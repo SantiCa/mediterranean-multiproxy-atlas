@@ -1,0 +1,506 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-07-v25-c4c7fe7c54e",
+  "parent_sha256": "c5377e6033657ed7d61744f67eb2acefe48767af0b7919aaf252223c35c58bf2",
+  "datasets": [
+    {
+      "id": 819805,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.819805",
+      "sha": "730766cc922d205a28c1e537f3558a489a4f080a063cb9d786ea5f7d6f113de3",
+      "xml_sha": "56526205638699f43878f4d3688dcc052f03655f4e5a3b6100854a8fb2938afb",
+      "title": "Sea surface temperature (TEX86), marine GDGTs and BIT index from ODP Hole 161-977A",
+      "header": [
+        "Sample label",
+        "Age [ka BP]",
+        "TEX86",
+        "brGDGT [µg/g]",
+        "SST (1-12) [°C]",
+        "delta T [°C]",
+        "BIT"
+      ],
+      "events": [
+        {
+          "label": "161-977A",
+          "lat": 36.0317,
+          "lon": -1.95528,
+          "elevation": "-1984.0",
+          "campaign": "Leg161",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1029/2010PA002048",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2011,
+        "dates": {
+          "published-print": [
+            [
+              2011,
+              6
+            ]
+          ],
+          "published-online": [
+            [
+              2011,
+              6,
+              3
+            ]
+          ],
+          "issued": [
+            [
+              2011,
+              6
+            ]
+          ],
+          "published": [
+            [
+              2011,
+              6
+            ]
+          ]
+        },
+        "title": "Coherent millennial‐scale patterns in U<sub>37</sub><sup>k′</sup>and TEX<sub>86</sub><sup>H</sup>temperature records during the penultimate interglacial‐to‐glacial cycle in the western Mediterranean",
+        "sha256": "0ac12bc62b2989debdb350d3a5eb9a9930a23bffef89290c10a6b820efe2d9a6"
+      },
+      "source_rows": 199,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Tetraether index of 86 carbon atoms",
+          "short": "TEX86",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "TEX86",
+          "family": "indices",
+          "environmental_interpretation": "Índice TEX86 de GDGT sensible a la temperatura marina",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TEX86"
+        },
+        {
+          "name": "Sea surface temperature, annual mean",
+          "short": "SST (1-12)",
+          "unit": "°C",
+          "method": "Calculated from TEX86 (Kim et al., 2010)",
+          "comment": null,
+          "column": 4,
+          "header": "SST (1-12) [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura marina publicada por TEX86H con calibración Kim et al. 2010",
+          "comparison_context": "alboran_977a_tex86h_kim2010",
+          "error_column": null,
+          "evidence_type": "published_reconstruction",
+          "alias": "SST (1-12)"
+        },
+        {
+          "name": "Branched and isoprenoid tetraether index",
+          "short": "BIT",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 6,
+          "header": "BIT",
+          "family": "indices",
+          "environmental_interpretation": "Índice BIT sensible a la contribución de GDGT ramificados frente a crenarqueol",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "BIT"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "SST TEX86H publicada por Huguet et al., según Kim et al. 2010. La tabla la rotula anual y el artículo discute un posible sesgo estival. Se conserva el contexto de la calibración y el contraste con UK′37 queda fuera de la selección."
+      ]
+    },
+    {
+      "id": 693919,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.693919",
+      "sha": "5296209f5bb65450ff6883b57cbbe40c27dfd26a08d09e855aa003f4ebadf593",
+      "xml_sha": "c841cfe7dbd73ebb9000f2552f3c61b3846e56f5bd2c85fce2107ae3e9de1a81",
+      "title": "(Appendix, Fig. 4) Mineral analysis, element/aluminium and stable isotope ratios in sediments of ODP Hole 161-975B in the Alboran Basin, western Mediterranean Sea",
+      "header": [
+        "Age [ka BP]",
+        "Depth sed [m]",
+        "Qz [%]",
+        "Zr/Al",
+        "Ti/Al",
+        "K/Al",
+        "Cal [%]",
+        "Ba/Al",
+        "Ba xs [mg/kg]",
+        "G. bulloides δ18O [‰ PDB]",
+        "G. bulloides δ13C [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "161-975B",
+          "lat": 38.8964,
+          "lon": 4.50993,
+          "elevation": "-2416.0",
+          "campaign": "Leg161",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.palaeo.2006.10.005",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2007,
+        "dates": {
+          "published-print": [
+            [
+              2007,
+              4
+            ]
+          ],
+          "issued": [
+            [
+              2007,
+              4
+            ]
+          ],
+          "published": [
+            [
+              2007,
+              4
+            ]
+          ]
+        },
+        "title": "Paleoenvironmental changes in the western Mediterranean since the last glacial maximum: High resolution multiproxy record from the Algero–Balearic basin",
+        "sha256": "730b28ca69975c0bbcec772ec8403a674b82e35c48d22a0084c91108731cd87a"
+      },
+      "source_rows": 76,
+      "age_column": 0,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Titanium/Aluminium ratio",
+          "short": "Ti/Al",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": "Ti(mean)/Al",
+          "column": 4,
+          "header": "Ti/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Ti/Al sensible a variaciones de composición y aporte detrítico",
+          "comparison_context": "odp975b_native_ti_mean_al",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ti/Al"
+        },
+        {
+          "name": "Potassium/Aluminium ratio",
+          "short": "K/Al",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 5,
+          "header": "K/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "K/Al sensible a composición de aluminosilicatos",
+          "comparison_context": "odp975b_native_element_ratio",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "K/Al"
+        },
+        {
+          "name": "Calcite",
+          "short": "Cal",
+          "unit": "%",
+          "method": "X-ray diffraction (XRD)",
+          "comment": null,
+          "column": 6,
+          "header": "Cal [%]",
+          "family": "mineralogy",
+          "environmental_interpretation": "Proporción de calcita cristalina determinada por difracción",
+          "comparison_context": "odp975b_xrd_calcite",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Cal"
+        },
+        {
+          "name": "Barium excess",
+          "short": "Ba xs",
+          "unit": "mg/kg",
+          "method": null,
+          "comment": null,
+          "column": 8,
+          "header": "Ba xs [mg/kg]",
+          "family": "productivity",
+          "environmental_interpretation": "Bario en exceso sobre la fracción detrítica, indicador contextual de exportación y preservación",
+          "comparison_context": "odp975b_native_excess_barium",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ba xs"
+        },
+        {
+          "name": "Globigerina bulloides, δ18O",
+          "short": "G. bulloides δ18O",
+          "unit": "‰ PDB",
+          "method": "Isotope ratio mass spectrometry",
+          "comment": ">125 µm",
+          "column": 9,
+          "header": "G. bulloides δ18O [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ18O planctónico sensible a temperatura y composición isotópica del agua",
+          "comparison_context": "odp975b_g_bulloides_gt125_um",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ18O"
+        },
+        {
+          "name": "Globigerina bulloides, δ13C",
+          "short": "G. bulloides δ13C",
+          "unit": "‰ PDB",
+          "method": "Isotope ratio mass spectrometry",
+          "comment": ">125 µm",
+          "column": 10,
+          "header": "G. bulloides δ13C [‰ PDB]",
+          "family": "isotopes",
+          "environmental_interpretation": "δ13C planctónico sensible al ciclo del carbono y efectos vitales",
+          "comparison_context": "odp975b_g_bulloides_gt125_um",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "G. bulloides δ13C"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "Se retienen Zr/Al y Ba/Al por la discrepancia de escala documentada. Calcita XRD se mantiene separada de CaCO3 total. El Ba en exceso es una concentración publicada, no un flujo."
+      ]
+    },
+    {
+      "id": 875737,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.875737",
+      "sha": "1638893b7270c5c2e0161a1135d9719933e34033c324b097aa29b4f491680a95",
+      "xml_sha": "e60b8435f152d712d13c2bcbe5301a4556cde85122544215af5250bc55e80516",
+      "title": "Geochemistry of sediment core MS21PC",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Ti/Al",
+        "TOC [%]",
+        "δ13C Corg [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "MS21PC",
+          "lat": 32.34497,
+          "lon": 31.65008,
+          "elevation": "-1022.0",
+          "campaign": "MIMES",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2015.05.031",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2015,
+        "dates": {
+          "published-print": [
+            [
+              2015,
+              12
+            ]
+          ],
+          "issued": [
+            [
+              2015,
+              12
+            ]
+          ],
+          "published": [
+            [
+              2015,
+              12
+            ]
+          ]
+        },
+        "title": "Integral view of Holocene precipitation and vegetation changes in the Nile catchment area as inferred from its delta sediments",
+        "sha256": "e7f43d9a5abded82bfbe2cc2f36d2b98331581439c494fe026912a421768f096"
+      },
+      "source_rows": 277,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Titanium/Aluminium ratio",
+          "short": "Ti/Al",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": null,
+          "column": 2,
+          "header": "Ti/Al",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Ti/Al sensible a composición y aporte terrígeno del Nilo",
+          "comparison_context": "nile_ms21pc_native_ti_al",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ti/Al"
+        },
+        {
+          "name": "Carbon, organic, total",
+          "short": "TOC",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "TOC [%]",
+          "family": "toc",
+          "environmental_interpretation": "Contenido de carbono orgánico sedimentario, sensible a aporte y preservación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TOC"
+        },
+        {
+          "name": "δ13C, organic carbon",
+          "short": "δ13C Corg",
+          "unit": "‰ PDB",
+          "method": null,
+          "comment": "vs. VPDB",
+          "column": 4,
+          "header": "δ13C Corg [‰ PDB]",
+          "family": "organic_isotopes",
+          "environmental_interpretation": "Composición isotópica del carbono orgánico total, sensible a la mezcla de fuentes marinas y continentales",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "δ13C Corg"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "δ13C medido en carbono orgánico total del sedimento, con referencia VPDB declarada. Véase la colección PANGAEA.875738."
+      ]
+    },
+    {
+      "id": 875736,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.875736",
+      "sha": "a260b934538ce34397cc395b4acec2a0d654c8a65510c1f268be14c0582537a3",
+      "xml_sha": "8b0b08fc5d7b2db80ee2a9f26892811c52a3dd6059b132cde7af583711e1ab92",
+      "title": "Stable carbon isotopes of TOC of sediment core PS009PC",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "δ13C Corg [‰ PDB]"
+      ],
+      "events": [
+        {
+          "label": "PASSAP_PS009PC",
+          "lat": 32.12833,
+          "lon": 34.40667,
+          "elevation": "-552.0",
+          "campaign": "PASSAP",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2015.05.031",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2015,
+        "dates": {
+          "published-print": [
+            [
+              2015,
+              12
+            ]
+          ],
+          "issued": [
+            [
+              2015,
+              12
+            ]
+          ],
+          "published": [
+            [
+              2015,
+              12
+            ]
+          ]
+        },
+        "title": "Integral view of Holocene precipitation and vegetation changes in the Nile catchment area as inferred from its delta sediments",
+        "sha256": "e7f43d9a5abded82bfbe2cc2f36d2b98331581439c494fe026912a421768f096"
+      },
+      "source_rows": 231,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "δ13C, organic carbon",
+          "short": "δ13C Corg",
+          "unit": "‰ PDB",
+          "method": null,
+          "comment": "vs. VPDB",
+          "column": 2,
+          "header": "δ13C Corg [‰ PDB]",
+          "family": "organic_isotopes",
+          "environmental_interpretation": "Composición isotópica del carbono orgánico total, sensible a la mezcla de fuentes marinas y continentales",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "δ13C Corg"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades nativas en ka BP. Sin ajuste ni interpolación.",
+        "δ13C medido en carbono orgánico total del sedimento, con referencia VPDB declarada. Véase la colección PANGAEA.875738."
+      ]
+    },
+    {
+      "id": 819811,
+      "status": "held",
+      "reason": "Species-specific Mg/Ca depth habitat and calibration still require review",
+      "sha": "1872416a4f5a530346cb86c5286cdcba11c463586b0df7079bbe0a12b84b9305",
+      "xml_sha": "579c9fed27ac967c3c7485e80c8de85c972619f9cbea66e289c8d4653c53d151",
+      "columns": []
+    },
+    {
+      "id": 854682,
+      "status": "held",
+      "reason": "PRGL1_Site identity relative to PRGL1-4 remains unresolved",
+      "sha": "e196b58943a8a65059c085523597555ac7785cea7d1607e78446bcbfb0f7b8a7",
+      "xml_sha": "ba80c18ded99da9c843ee2e8af5253129e715b84736adbd26f246bf29b4694b4",
+      "columns": []
+    },
+    {
+      "id": 829368,
+      "status": "held",
+      "reason": "Outside pilot region",
+      "sha": "463f3011bf5ffbb5fe91f1e1f796522308cf404e631d3ad589581181f0586a47",
+      "xml_sha": "848dd1245c38ab060058f1307b027ec3ecb3a37c6ed2ee6ec0f38fe2f745ba7c",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Four original sources, including two new locations in the Nile delta.",
+    "No new computation of export productivity or conversion of elemental ratios."
+  ]
+}

@@ -19,9 +19,13 @@ const fail = (m) => {
 };
 if (cat.release.id !== seed.version) fail("versión distinta");
 if (cat.records.length !== seed.records.length || cat.series.length !== seed.series.length) fail("recuentos distintos");
+const catalogRecords = new Map(cat.records.map((record) => [record.id, record]));
+if (seed.records.some((record) => JSON.stringify(catalogRecords.get(record.id)) !== JSON.stringify(record)))
+  fail("metadatos de registros distintos");
 if (cat.series.some((s) => s.rows.length)) fail("el catálogo no debe llevar observaciones");
 if (cat.series.some((s) => s.age_min_ka_bp < -0.5)) fail("edades futuras (< -0,5 ka BP) en el catálogo");
 const want = new Map(seed.series.map((s) => [s.id, s]));
+const catalogSeries = new Map(cat.series.map(({ rows, ...metadata }) => [metadata.id, metadata]));
 let cells = 0, files = 0, biggest = 0;
 for (const [key, file] of Object.entries(cat.snapshot.groups)) {
   const path = join(dir, "obs", file), size = statSync(path).size;
@@ -35,6 +39,7 @@ for (const [key, file] of Object.entries(cat.snapshot.groups)) {
     if (a.size !== w.rows.length || w.rows.some((r) => a.get(r[2]) !== JSON.stringify(r))) fail("valores distintos en " + s.id);
     const { rows, ...m } = s, { rows: _, ...n } = w;
     if (JSON.stringify(m) !== JSON.stringify(n)) fail("metadatos distintos en " + s.id);
+    if (JSON.stringify(catalogSeries.get(s.id)) !== JSON.stringify(n)) fail("metadatos del catálogo distintos en " + s.id);
     cells += s.rows.length;
     want.delete(s.id);
   }

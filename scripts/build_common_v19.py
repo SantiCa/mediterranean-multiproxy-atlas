@@ -69,7 +69,8 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, ve
         if spec['family'] == 'isotopes':
             series['taxon'] = spec['name'].split(',')[0]
             isotope = 'd18O' if '18O' in spec['name'] else 'd13C'
-            habitat = 'planct' if series['taxon'] == 'Globigerina bulloides' else 'bent'
+            habitat = spec.get('habitat',
+                'planct' if series['taxon'] == 'Globigerina bulloides' else 'bent')
             series['proxy_families'] = [isotope + '_' + habitat]
         elif spec['family'] == 'indices':
             series['proxy_families'] = ['biomarcadores_indices']

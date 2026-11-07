@@ -145,12 +145,12 @@ export function landMask(geojson) {
         !g.rings.slice(1).some((h) => inside(p, h)),
     );
 }
-// Four decimals group coordinates reported at slightly different precision.
-// Use the same location key for map coverage and interpolation.
-function siteKey({ longitude, latitude }) {
-  return finite(longitude) && finite(latitude)
-    ? `${Math.round(longitude * 1e4)},${Math.round(latitude * 1e4)}`
-    : null;
+// Reviewed site identity takes priority over the coordinate fallback.
+function siteKey({ longitude, latitude, spatial_site_id = "" }) {
+  if (!finite(longitude) || !finite(latitude)) return null;
+  return spatial_site_id
+    ? `site:${spatial_site_id}`
+    : `${Math.round(longitude * 1e4)},${Math.round(latitude * 1e4)}`;
 }
 
 export function mapSiteCounts(items) {
@@ -235,7 +235,7 @@ export function fieldGrid(items, radiusKm = 600, isLand = null) {
     merged,
     reason: cells.length
       ? merged
-        ? `${merged} sitios con varias series en las mismas coordenadas a cuatro decimales. Cada sitio cuenta una vez en la superficie (mediana).`
+        ? `${merged} sitios con varias series (identidad de sitio revisada o mismas coordenadas a cuatro decimales). Cada sitio cuenta una vez en la superficie (mediana).`
         : null
       : "Sin celdas con 3 vecinos dentro del radio. Se conservan los puntos observados.",
   };

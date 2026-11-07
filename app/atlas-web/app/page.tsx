@@ -39,7 +39,7 @@ import DerivedProxyBuilder from "../components/DerivedProxyBuilder";
 import { derivationRow } from "../lib/derived-proxies.mjs";
 import { groupKey, proxyCatalog as proxyGroups, isAggregateKey, inGroup, seriesMatches } from "../lib/proxies.mjs";
 import PrivateData from "../components/PrivateData";
-import { seriesSource, rowUncertainty } from "../lib/provenance.mjs";
+import { seriesSource, rowUncertainty, rowQcNote } from "../lib/provenance.mjs";
 import { scientificNumber } from "../lib/format.mjs";
 
 const fmt = (x: any, n?: number) =>
@@ -527,6 +527,9 @@ export default function Atlas() {
       "derivation_formula",
       "derivation_inputs_json",
       "evidence_type",
+      "age_model",
+      "age_model_source_url",
+      "sample_qc",
     ];
     const rows = items.flatMap((i) =>
       i.target.map((r: any) => [
@@ -576,6 +579,9 @@ export default function Atlas() {
         i.series.derivation?.formula,
         JSON.stringify(derivationRow(i.series, r)),
         i.series.evidence_type,
+        seriesSource(i.series, i.record).age_model,
+        i.series.age_model_source_url,
+        rowQcNote(i.series, r),
       ]),
     );
     download(
@@ -1320,6 +1326,12 @@ export default function Atlas() {
                     <ExternalLink size={12} />
                   </a>
                 </div>
+                {active.series.chronology_warning && (
+                  <p className="field-note" role="note">
+                    <strong>Aviso de cronología:</strong> {active.series.chronology_warning.message}{" "}
+                    <a href={active.series.chronology_warning.source_url} target="_blank" rel="noreferrer">Tabla original</a>
+                  </p>
+                )}
                 <details className="quality">
                   <summary>
                     Procedencia y límites <ChevronDown size={13} />
@@ -1332,6 +1344,11 @@ export default function Atlas() {
                       active.record.time_scale ||
                       "Cronología archivada; sin armonización local"}
                   </p>
+                  {active.series.age_model_source_url && (
+                    <p>{active.series.age_model}{" "}
+                      <a href={active.series.age_model_source_url} target="_blank" rel="noreferrer">Fuente del modelo</a>
+                    </p>
+                  )}
                   {[...new Set([...(active.record.qc_notes || []), ...(active.series.qc_notes || [])])].map(
                     (n: string, i: number) => (
                       <p key={i}>{n}</p>

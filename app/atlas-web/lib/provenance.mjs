@@ -34,3 +34,9 @@ export function rowUncertainty(s, row) {
       s.age_probability_bounds?.find((b) => b[0] === row[2]) ?? null,
   };
 }
+
+export function rowQcNote(series, row) {
+  const warning = series.chronology_warning;
+  return warning?.samples.some((sample) => sample.row === row[2] && sample.line === row[3])
+    ? warning.message : null;
+}
