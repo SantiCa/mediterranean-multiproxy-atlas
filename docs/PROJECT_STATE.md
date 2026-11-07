@@ -2,6 +2,12 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v22 validada en relevo (07-11-2026)
+
+- v22-cf1f6241933 reúne **263 registros, 2.033 series, 985.117 valores y 1.034 grupos base**. Añade siete series y 4.426 observaciones de susceptibilidad volumétrica, SST y biomarcadores. Lungo y 161-977A enlazados a eventos existentes. Identidad cruzada de D13902 pendiente. Fuentes y límites en docs/handoffs/cur-common-22.md.
+- Tarjeta anual SST consolidada con 22 series de 16 registros. La reconstrucción de 0–200 m conserva su grupo específico.
+- 146 pruebas Python, 42 Node, TypeScript, compilación y snapshot completo verificados. Auditorías con cero errores. Integración y publicación para rol 04.
+
 ## Colección v21 validada en relevo (07-11-2026)
 
 - v21-c80c881825a reúne **262 registros, 2.026 series, 980.691 valores y 1.027 grupos base**. Siete series y 5.610 valores de susceptibilidad magnética, isótopos de ostrácodos, micro-XRF y SST publicada. Dos registros nuevos. Tabla de fuentes y límites en docs/handoffs/cur-common-21.md.
