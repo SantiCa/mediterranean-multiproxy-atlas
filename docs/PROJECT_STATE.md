@@ -2,6 +2,11 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v25 validada en relevo (07-11-2026)
+
+- v25-c4c7fe7c54e reúne **267 registros, 2.085 series, 1.024.357 observaciones y 1.062 grupos base**. Añade 11 series y 21.457 observaciones de Prespa, Ohrid y Baleares. Fuentes y límites en docs/handoffs/cur-common-25.md.
+- Alias Ca/Al y criterio de admisión CaCO₃ revisados. Catálogo completo y 21 vistas filtradas sin conjuntos de series agregadas idénticos. Pasaron 146 Python, 43 Node, TypeScript, compilación y snapshot completo. Auditorías con cero errores. Integración y publicación para rol 04.
+
 ## Colección v24 validada en relevo (07-11-2026)
 
 - v24-c17c40ccf3b reúne **267 registros, 2.074 series, 1.002.900 observaciones y 1.051 grupos base**. Siete series y 14.322 observaciones de calcio XRF, granulometría y δ¹⁸O planctónico en dos testigos existentes del golfo de León. Fuentes y límites en docs/handoffs/cur-common-24.md.
