@@ -2,6 +2,11 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v23 validada en relevo (07-11-2026)
+
+- v23-c339e7f2aa6 reúne **267 registros, 2.067 series, 988.578 observaciones y 1.047 grupos base**. Añade 34 series y 3.461 observaciones de GDGT, SST, UK′37 e isótopos por especie. Cuatro eventos nuevos, con los sondeos de U1387 pertenecientes al mismo sitio. Fuentes y límites en docs/handoffs/cur-common-23.md.
+- Cotejadas las membresías de los 144 agregados. Rótulos estivales diferenciados según el alcance de la selección. Pasaron 146 pruebas Python, 42 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Integración y publicación para rol 04.
+
 ## Colección v22 validada en relevo (07-11-2026)
 
 - v22-cf1f6241933 reúne **263 registros, 2.033 series, 985.117 valores y 1.034 grupos base**. Añade siete series y 4.426 observaciones de susceptibilidad volumétrica, SST y biomarcadores. Lungo y 161-977A enlazados a eventos existentes. Identidad cruzada de D13902 pendiente. Fuentes y límites en docs/handoffs/cur-common-22.md.
