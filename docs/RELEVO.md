@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 07-11-2026
+- Tarea en curso CUR-COMMON-22. Ampliación de proxies comunes con originales trazables y revisión de agrupaciones. Publicación a cargo del rol 04.
 - Tarea cerrada CUR-COMMON-21. v21-c80c881825a reúne 262 registros, 2.026 series, 980.691 valores y 1.027 grupos base. Siete series y 5.610 observaciones de cinco tablas en tres ubicaciones. UK′37 reúne 11 series y TIC 10. Br/Ti conserva su transformación y contexto. 146 Python, 41 Node, TypeScript, compilación y snapshot completo verificados. Auditorías con cero errores. Handoff docs/handoffs/cur-common-21.md. Publicación a cargo del rol 04.
 - Publicación v20 completada: main 8615875, fuente Sites 49feefd, despliegue appgdep_6aee5f71c2f4819181333e89dcece6cd. Snapshot verificado de 975.081 valores, 39 Node, tsc y build correctos; acceso privado conservado. Recibo reports/common_v20_sites_deployment.json; handoff docs/handoffs/publication-v20.md. El push de main activa Cloudflare; resultado de ese flujo no comprobado.
 - Cierre CUR-GROUPS-20 comprobado en e3d56da; referencia bibliográfica de Bénit cotejada con el original nativo. Consultar git log para el commit final de documentación.
