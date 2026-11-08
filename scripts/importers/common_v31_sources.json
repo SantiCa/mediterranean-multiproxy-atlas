@@ -1,0 +1,328 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-08-v30-ccb62d8bae8",
+  "parent_sha256": "be3bc93a3b6da643f659183b66258cb3635c99711822da1471df6bf8b12c556e",
+  "datasets": [
+    {
+      "id": 966840,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.966840",
+      "sha": "97528a8b069dee1146fea3286c1a35fab6a802610cf46dcd331efa83af7552a2",
+      "xml_sha": "d2701234446d98f7eb87aeb5602625da82b955c036d09d038b87b5791aaf0fba",
+      "title": "Climate associations of planktic foraminifera of sediment core MVSEIS08_TG-2 from Gulf of Cadiz",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "N. pachyderma s [%]",
+        "G. scitula [%]",
+        "Foram plankt subtropical [%]",
+        "Foram plankt transitional [%]",
+        "Foram plankt subpolar [%]",
+        "Foram plankt polar [%]"
+      ],
+      "events": [
+        {
+          "label": "MVSEIS08_TG-2",
+          "lat": 34.97133,
+          "lon": -6.84117,
+          "elevation": "-530.0",
+          "campaign": "MVSEIS2008",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2018.07.036",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2018,
+        "dates": {
+          "published-print": [
+            [
+              2018,
+              10
+            ]
+          ],
+          "issued": [
+            [
+              2018,
+              10
+            ]
+          ],
+          "published": [
+            [
+              2018,
+              10
+            ]
+          ]
+        },
+        "title": "Paleoceanographic and climatic implications of a new Mediterranean Outflow branch in the southern Gulf of Cadiz",
+        "sha256": "c957fa8047f3e4e741b4b1ed6cafc74fbcfdb17d3a7212ff7d6512f4602c3040"
+      },
+      "source_rows": 27,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Foraminifera, planktic, subtropical",
+          "short": "Foram plankt subtropical",
+          "unit": "%",
+          "method": "Counting >150 µm fraction",
+          "comment": null,
+          "column": 4,
+          "header": "Foram plankt subtropical [%]",
+          "family": "productivity",
+          "environmental_interpretation": "Asociación planctónica sensible a las masas de agua superficiales",
+          "comparison_context": "published_966840_4",
+          "error_column": null,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "as_archived_parameter",
+          "alias": "Foram plankt subtropical"
+        },
+        {
+          "name": "Foraminifera, planktic, transitional",
+          "short": "Foram plankt transitional",
+          "unit": "%",
+          "method": "Counting >150 µm fraction",
+          "comment": null,
+          "column": 5,
+          "header": "Foram plankt transitional [%]",
+          "family": "productivity",
+          "environmental_interpretation": "Asociación planctónica sensible a las masas de agua superficiales",
+          "comparison_context": "published_966840_5",
+          "error_column": null,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "as_archived_parameter",
+          "alias": "Foram plankt transitional"
+        },
+        {
+          "name": "Foraminifera, planktic, subpolar",
+          "short": "Foram plankt subpolar",
+          "unit": "%",
+          "method": "Counting >150 µm fraction",
+          "comment": null,
+          "column": 6,
+          "header": "Foram plankt subpolar [%]",
+          "family": "productivity",
+          "environmental_interpretation": "Asociación planctónica sensible a las masas de agua superficiales",
+          "comparison_context": "published_966840_6",
+          "error_column": null,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "as_archived_parameter",
+          "alias": "Foram plankt subpolar"
+        },
+        {
+          "name": "Foraminifera, planktic, polar",
+          "short": "Foram plankt polar",
+          "unit": "%",
+          "method": "Counting >150 µm fraction",
+          "comment": null,
+          "column": 7,
+          "header": "Foram plankt polar [%]",
+          "family": "productivity",
+          "environmental_interpretation": "Asociación planctónica sensible a las masas de agua superficiales",
+          "comparison_context": "published_966840_7",
+          "error_column": null,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "as_archived_parameter",
+          "alias": "Foram plankt polar"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades y valores publicados. Se mantienen los contextos de cada método y variable."
+      ]
+    },
+    {
+      "id": 932720,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.932720",
+      "sha": "e278956d904ce2c792b82c63a1f881c683f01f975e2e9d2ef38f90772a1e5f7e",
+      "xml_sha": "d5ccf47c1af37af7d809550f61213d559206b39b87a439f3da38116719c31bf1",
+      "title": "Benthic foraminiferal data of sediment core GeoB9064-1, Gulf of Cadiz",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "Mg/Ca [mmol/mol]",
+        "BWT [°C]",
+        "BWT e [±]",
+        "δ18O H2O [‰ SMOW]",
+        "δ18O H2O std dev [±]",
+        "Mn/Ca [µmol/mol]",
+        "Acc rate benth forams [#/cm**2/ka]"
+      ],
+      "events": [
+        {
+          "label": "GeoB9064-1",
+          "lat": 35.415166666667,
+          "lon": -6.8451666666667,
+          "elevation": "-702.0",
+          "campaign": "SO175",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1371/journal.pbio.3001628",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2022,
+        "dates": {
+          "published-online": [
+            [
+              2022,
+              5,
+              19
+            ]
+          ],
+          "issued": [
+            [
+              2022,
+              5,
+              19
+            ]
+          ],
+          "published": [
+            [
+              2022,
+              5,
+              19
+            ]
+          ]
+        },
+        "title": "Major environmental drivers determining life and death of cold-water corals through time",
+        "sha256": "f6d3c6f145b335854f865aa5008e7d4cd96ac09575947929d513aba626d0f868"
+      },
+      "source_rows": 32,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Bottom water temperature",
+          "short": "BWT",
+          "unit": "°C",
+          "method": null,
+          "comment": null,
+          "column": 3,
+          "header": "BWT [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura del agua de fondo reconstruida con Mg/Ca bentónico",
+          "comparison_context": "published_932720_3",
+          "error_column": 4,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "published_reconstruction",
+          "alias": "BWT"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades y valores publicados. Se mantienen los contextos de cada método y variable."
+      ]
+    },
+    {
+      "id": 857153,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.857153",
+      "sha": "0cb8c905678fe127f7f27908140eb7d01f75711d0639ffe86e1f7f281bdda916",
+      "xml_sha": "e8a3b609c075784b2a31551296743f76f21082e53943d83a37f0a4fb53d61e94",
+      "title": "Summer sea surface temperature and export production sediment core MD99-2339",
+      "header": [
+        "Depth sed [m]",
+        "Age [ka BP]",
+        "G. bulloides δ18O [‰ PDB]",
+        "N. pachyderma s [%]",
+        "SST sum [°C]",
+        "PP exp [g/m**2/a]"
+      ],
+      "events": [
+        {
+          "label": "MD99-2339",
+          "lat": 35.8855,
+          "lon": -7.5278333333333,
+          "elevation": "-1177.0",
+          "campaign": "MD114",
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2014.09.001",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2014,
+        "dates": {
+          "published-print": [
+            [
+              2014,
+              12
+            ]
+          ],
+          "issued": [
+            [
+              2014,
+              12
+            ]
+          ],
+          "published": [
+            [
+              2014,
+              12
+            ]
+          ]
+        },
+        "title": "Past circulation along the western Iberian margin: a time slice vision from the Last Glacial to the Holocene",
+        "sha256": "437db42089173a3039a72d57456dc6dd324d522ee99de95e61ae2895d94fd7fa"
+      },
+      "source_rows": 216,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "marine",
+      "archive_type": "marine sediment",
+      "columns": [
+        {
+          "name": "Sea surface temperature, summer",
+          "short": "SST sum",
+          "unit": "°C",
+          "method": "Modern analog technique (MAT), SIMMAX28, non-distance-weighted",
+          "comment": null,
+          "column": 4,
+          "header": "SST sum [°C]",
+          "family": "sst",
+          "environmental_interpretation": "Temperatura superficial estival por SIMMAX28",
+          "comparison_context": "published_857153_4",
+          "error_column": null,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "published_reconstruction",
+          "alias": "SST sum"
+        },
+        {
+          "name": "Export production",
+          "short": "PP exp",
+          "unit": "g/m**2/a",
+          "method": "Modern analog technique (MAT), SIMMAX28, non-distance-weighted",
+          "comment": null,
+          "column": 5,
+          "header": "PP exp [g/m**2/a]",
+          "family": "productivity",
+          "environmental_interpretation": "Producción exportada reconstruida por SIMMAX28",
+          "comparison_context": "published_857153_5",
+          "error_column": null,
+          "uncertainty_type": "Published companion error of bottom-water temperature",
+          "evidence_type": "published_reconstruction",
+          "alias": "PP exp"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades y valores publicados. Se mantienen los contextos de cada método y variable."
+      ]
+    }
+  ],
+  "selection_limits": [
+    "Three existing cores. Original methods, sample fractions and published values.",
+    "Mn/Ca and benthic accumulation from 932720 already present; omitted. Two taxon percentages from 966840 already present; only four climate associations added."
+  ]
+}

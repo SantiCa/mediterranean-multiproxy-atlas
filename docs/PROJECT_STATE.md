@@ -2,6 +2,10 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v31 validada en relevo (08-11-2026)
+
+- v31-c3f90e6626c reúne 277 registros, 2.216 series, 1.038.072 observaciones y 1.178 grupos base. Añade siete series y 486 observaciones de asociaciones planctónicas, temperatura de fondo, SST estival y producción exportada. Detalle en docs/handoffs/cur-common-31.md. Publicación para rol 04.
+
 ## Colección v30 validada en relevo (08-11-2026)
 
 - v30-ccb62d8bae8 reúne 277 registros, 2.209 series, 1.037.586 observaciones y 1.171 grupos base. Añade U1391 y amplía SA03-1 y ST04-1 con 22 series y 5.219 observaciones. Detalle en docs/handoffs/cur-common-30.md. Publicación para rol 04.
