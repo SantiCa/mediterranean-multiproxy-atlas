@@ -62,7 +62,7 @@ def build(fetch=False, *, baseline=BASE, contract_path=CONTRACT, raw_dir=RAW, ve
             'Unidad estándar del proxy: ' + ('adimensional (1), archivada como sin unidad'
                 if spec['unit'] == 'sin unidad' else spec['unit'])]
         series['evidence_type'] = spec['evidence_type']
-        series['comparison_parameter_name'] = spec['name']
+        series['comparison_parameter_name'] = spec.get('comparison_parameter_name', spec['name'])
         series['search_aliases'] += [spec['environmental_interpretation'], spec['short']]
         if spec.get('taxon'):
             series['taxon'] = spec['taxon']

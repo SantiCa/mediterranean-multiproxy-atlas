@@ -2,6 +2,10 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v30 validada en relevo (08-11-2026)
+
+- v30-ccb62d8bae8 reúne 277 registros, 2.209 series, 1.037.586 observaciones y 1.171 grupos base. Añade U1391 y amplía SA03-1 y ST04-1 con 22 series y 5.219 observaciones. Detalle en docs/handoffs/cur-common-30.md. Publicación para rol 04.
+
 ## Colección v29 validada en relevo (07-11-2026)
 
 - v29-c45997d0668 reúne **276 registros, 2.187 series, 1.032.367 observaciones y 1.156 grupos base**. Añade AMC99-1, SA03-1 y ST04-1 con 70 series y 3.938 observaciones de foraminíferos planctónicos. Fuentes y decisiones en docs/handoffs/cur-common-29.md.
