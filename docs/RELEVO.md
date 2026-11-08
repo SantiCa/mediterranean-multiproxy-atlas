@@ -3,7 +3,8 @@
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
 - Último agente: ChatGPT/Codex
-- Fecha: 07-11-2026
+- Fecha: 08-11-2026
+- Tarea en curso CUR-COMMON-30. Revisar los recuentos bentónicos pendientes y candidatos nuevos. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-29. v29-c45997d0668 reúne 276 registros, 2.187 series, 1.032.367 observaciones y 1.156 grupos base. Tres sondeos nuevos del Adriático, 70 series y 3.938 observaciones. Comprobadas 22 vistas. Pasaron 146 Python, 46 Node, TypeScript, compilación y snapshot íntegro en checkout aislado. Auditorías con cero errores. Handoff docs/handoffs/cur-common-29.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-28. v28-c5fa6332d0f reúne 273 registros, 2.117 series, 1.028.429 observaciones y 1.088 grupos base. Añade dos sondeos nuevos, 10 series y 1.135 observaciones. Cotejadas 22 vistas de agrupaciones. Pasaron 146 Python, 44 Node, TypeScript, compilación y snapshot íntegro. Auditorías con cero errores. Handoff docs/handoffs/cur-common-28.md. Publicación para rol 04.
 - Atlas 02: revisión v25–v27 y seguimiento cerrados. Las 33 series/24.394 observaciones nuevas coinciden con 16 tablas originales. El snapshot aplica un sitio espacial común a 969D/E, marca dos filas de Ohrid (inversión nativa de 4,8 años) y documenta los modelos publicados de MS21PC y PS009PC. No cambia observaciones ni fusiona registros. Pasaron 46 pruebas Node, TypeScript, compilación y cotejo íntegro de v28. Handoffs docs/handoffs/aud-recent-cores-v27.md y docs/handoffs/qc-sites-969-ohrid-nile.md. Sin despliegue.
