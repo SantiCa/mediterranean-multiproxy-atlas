@@ -32,6 +32,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 08-11: Santiago solicita terminar la integración y publicar la última versión; rol 04 prepara v33 validada con su QC.
 0. 07-11: Santiago solicita integrar y publicar la última versión; rol 04 prepara v29 con QC validado.
 1. Rol 04 revisa e integra relevo y publica atlas-v33.json. Regenerar snapshot con config/qc_corrections.json actual. Verificado con 1.070.765 valores y 1.210 archivos. Main activa Cloudflare.
 2. Nueva prioridad del usuario (06-11): ampliar proxies comunes de alta densidad espacial e índices compuestos publicados, preservando estructura exacta, variable ambiental y unidad. Continuar isótopos, SST, XRF (Fe/Ca, Ti/Al, Si/Ti), susceptibilidad y asociaciones cuando haya originales, cronología/materiales/calibración verificables. CIA exige óxidos/correcciones molares documentados; U/Th radiométrico no es automáticamente redox. No fabricar índices desde cuentas de escáner ni mezclar estaciones/métodos. Contrato common_v19_sources.json e inventario de cobertura son puntos de partida. Reading sigue en 104/122 entidades, 18 bloqueadas; no repetir búsquedas sin pista nueva (ver handoff v18).
