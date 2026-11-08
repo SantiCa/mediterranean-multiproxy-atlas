@@ -2,6 +2,10 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v33 validada en relevo (08-11-2026)
+
+- v33-c90987c7018 reúne 281 registros, 2.247 series, 1.070.765 observaciones y 1.208 grupos base. Añade Padul-15-05 y LC-IZN_comp, 22 series y 2.370 observaciones de interés ecológico. Fuentes y límites en docs/handoffs/cur-eco-33.md. Publicación para rol 04.
+
 ## Colección v32 validada en relevo (08-11-2026)
 
 - v32-c9a4ef57496 reúne 279 registros, 2.225 series, 1.068.395 observaciones y 1.186 grupos base. Añade Fucino F1/F3 y Anterne ANT07, nueve series y 30.323 observaciones. Detalle en docs/handoffs/cur-common-32.md. Publicación para rol 04.
