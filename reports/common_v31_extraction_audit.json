@@ -1,0 +1,89 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-08-v30-ccb62d8bae8",
+  "counts": {
+    "records": 3,
+    "series": 7,
+    "observations": 486,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea31-966840:MVSEIS08_TG_2:col4~48199d80e3",
+      "dataset": "10.1594/PANGAEA.966840",
+      "event": "MVSEIS08_TG-2",
+      "source_column": 4,
+      "observations": 27,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea31-966840:MVSEIS08_TG_2:col5~c66e23f494",
+      "dataset": "10.1594/PANGAEA.966840",
+      "event": "MVSEIS08_TG-2",
+      "source_column": 5,
+      "observations": 27,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea31-966840:MVSEIS08_TG_2:col6~60d8aa69ec",
+      "dataset": "10.1594/PANGAEA.966840",
+      "event": "MVSEIS08_TG-2",
+      "source_column": 6,
+      "observations": 27,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea31-966840:MVSEIS08_TG_2:col7~637151f338",
+      "dataset": "10.1594/PANGAEA.966840",
+      "event": "MVSEIS08_TG-2",
+      "source_column": 7,
+      "observations": 27,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea31-932720:GeoB9064_1:col3~0abddb53a9",
+      "dataset": "10.1594/PANGAEA.932720",
+      "event": "GeoB9064-1",
+      "source_column": 3,
+      "observations": 22,
+      "missing_cells": 10,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea31-857153:MD99_2339:col4~7ece898e55",
+      "dataset": "10.1594/PANGAEA.857153",
+      "event": "MD99-2339",
+      "source_column": 4,
+      "observations": 178,
+      "missing_cells": 38,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea31-857153:MD99_2339:col5~5a3f06a839",
+      "dataset": "10.1594/PANGAEA.857153",
+      "event": "MD99-2339",
+      "source_column": 5,
+      "observations": 178,
+      "missing_cells": 38,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": []
+}

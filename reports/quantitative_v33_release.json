@@ -1,0 +1,431 @@
+{
+  "version": "atlas-quantitative-2026-11-08-v33-c90987c7018",
+  "parent_version": "atlas-quantitative-2026-11-08-v32-c9a4ef57496",
+  "parent_sha256": "7342e583a8f3c602cd43b5cf8b99b3c879ef099ad19a377e8faa2376ff1f6e8f",
+  "parent_unchanged": true,
+  "counts": {
+    "records": 281,
+    "series": 2247,
+    "values": 1070765,
+    "new_records": 2,
+    "new_series": 22,
+    "new_values": 2370,
+    "missing_age_values": 6615
+  },
+  "input_fragments": {
+    "pangaea_common": {
+      "records": 2,
+      "series": 22,
+      "values": 2370
+    }
+  },
+  "family_counts": {
+    "Temperatura": 66,
+    "Geoquímica elemental": 343,
+    "Sedimentología": 228,
+    "Biomarcadores": 48,
+    "Micropaleontología": 23,
+    "Isótopos estables": 207,
+    "Palinología": 14,
+    "Paleoincendios": 1,
+    "Isótopos radiogénicos": 6,
+    "Paleopolvo": 1,
+    "Mineralogía": 3,
+    "Foraminíferos": 252,
+    "Materia orgánica y biomarcadores": 64,
+    "Polen": 971,
+    "Oxigenación bentónica": 20
+  },
+  "comparison_groups": 1208,
+  "numeric_age_extent_ka_bp": [
+    -0.14,
+    4700.0
+  ],
+  "admitted_series": [
+    "pangaea33-904053:Padul_15_05:col2~7566846fe7",
+    "pangaea33-904053:Padul_15_05:col3~ca4f9aebe9",
+    "pangaea33-904053:Padul_15_05:col4~90938eab3b",
+    "pangaea33-904053:Padul_15_05:col5~5e24388768",
+    "pangaea33-858056:LC_IZN_comp:col3~38a9b0deea",
+    "pangaea33-858056:LC_IZN_comp:col6~8d890e8839",
+    "pangaea33-858056:LC_IZN_comp:col14~d81c8284d6",
+    "pangaea33-858056:LC_IZN_comp:col15~f7a8adb01d",
+    "pangaea33-858056:LC_IZN_comp:col19~c30684c3d3",
+    "pangaea33-858056:LC_IZN_comp:col22~3f3cc6e708",
+    "pangaea33-858056:LC_IZN_comp:col26~c375be5fcb",
+    "pangaea33-858056:LC_IZN_comp:col27~298a457f70",
+    "pangaea33-858056:LC_IZN_comp:col31~75d45b4318",
+    "pangaea33-858056:LC_IZN_comp:col32~83e54ebac5",
+    "pangaea33-858056:LC_IZN_comp:col40~7d7951452b",
+    "pangaea33-858056:LC_IZN_comp:col46~1442050baf",
+    "pangaea33-858056:LC_IZN_comp:col56~357417882e",
+    "pangaea33-858056:LC_IZN_comp:col57~2d89ba4086",
+    "pangaea33-858056:LC_IZN_comp:col88~07834365e4",
+    "pangaea33-858056:LC_IZN_comp:col90~b7608ef048",
+    "pangaea33-858056:LC_IZN_comp:col131~1a8bd52eed",
+    "pangaea33-858056:LC_IZN_comp:col132~8d269ba1e3"
+  ],
+  "integration_quarantine": [],
+  "held_core_records": [],
+  "linked_to_parent_records": {},
+  "partial_numeric_overlap_links": [],
+  "possible_record_overlap_links": [
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea-789686",
+        "pangaea-789690"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "noaa-28070-58190",
+        "pangaea5-icdp5045_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-339_u1389b",
+        "pangaea5-339_u1389c"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea5-medsea_s7_c2",
+        "pangaea5-medsea_s7_c4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "exact_position",
+      "records": [
+        "pangaea19-m84_1_122_1",
+        "pangaea19-m84_1_123_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-soreq-2003",
+        "noaa-peqiin-2003"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-32914-58840",
+        "noaa-32914-58841",
+        "noaa-32914-58842",
+        "noaa-32914-58843"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "noaa-13666-54311",
+        "noaa-13666-54312"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea6-gc_01a_pc",
+        "pangaea6-gc_01a_tc"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea7-fu_2001",
+        "pangaea7-fu_2017"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "mendeley8-339-u1386",
+        "mendeley8-339-u1390"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "reading9-antas",
+        "reading9-n-cas",
+        "reading9-n-gua",
+        "reading9-laroya",
+        "reading9-serranil",
+        "reading9-sanrafa",
+        "reading9-estanilles",
+        "reading9-bsn6",
+        "reading9-salines",
+        "reading9-sbaza",
+        "reading9-cancruz",
+        "reading9-gador",
+        "reading9-sabinar",
+        "reading9-villaverde",
+        "reading9-siles",
+        "reading9-bsm08",
+        "reading9-portalet",
+        "reading9-enol",
+        "reading9-zonarcombined",
+        "reading9-carrizal",
+        "reading9-animas",
+        "reading9-navamuno_s3",
+        "reading9-bdlc-01",
+        "reading9-algendar",
+        "reading9-cporter",
+        "reading9-htimoner",
+        "reading9-pratvila",
+        "reading9-sonbou",
+        "reading9-marbore-composite",
+        "reading9-cerrato",
+        "reading9-molinaes",
+        "reading9-lagmesag",
+        "reading9-verdeospesoa",
+        "reading9-mai",
+        "reading9-sanabria",
+        "reading9-pinoblanco",
+        "reading9-boscesta",
+        "reading9-arbarrain",
+        "reading9-cadela",
+        "reading9-lagnegra",
+        "reading9-ayoo",
+        "reading9-lagoajo",
+        "reading9-laspardi",
+        "reading9-saldropo",
+        "reading9-tub",
+        "reading9-palanques",
+        "reading9-perafita",
+        "reading9-belate01",
+        "reading9-culazon",
+        "reading9-adaja",
+        "reading9-alsa",
+        "reading9-navalaca",
+        "reading9-valdecon",
+        "reading9-carcavas",
+        "reading9-atxuri01",
+        "reading9-quinta02",
+        "reading9-areo",
+        "reading9-lameiras",
+        "reading9-tiemblo",
+        "reading9-cuetoav",
+        "reading9-n-sal",
+        "reading9-lanzbog",
+        "reading9-cuaii",
+        "reading9-prd4",
+        "reading9-patatero",
+        "reading9-sertal",
+        "reading9-tornos01",
+        "reading9-estacas",
+        "reading9-n-peq",
+        "reading9-labradillos",
+        "reading9-botija",
+        "reading9-lanchas",
+        "reading9-bossier",
+        "reading9-aguasfrias",
+        "reading9-bermu",
+        "reading9-redondo",
+        "reading9-valdeyer",
+        "reading9-xl",
+        "reading9-leche",
+        "reading9-saloio",
+        "reading9-panera",
+        "reading9-lacruz",
+        "reading9-brezosa",
+        "reading9-elperro",
+        "reading9-vinuelas",
+        "reading9-villuercas",
+        "reading9-mitjana",
+        "reading9-elpayo",
+        "reading9-ojos-del-tremendal-core-1",
+        "reading9-plaestany",
+        "reading9-manaderos-core",
+        "reading9-pozon_2015-core",
+        "reading9-laguna-de-rio-seco-core-1",
+        "reading9-ldlm-10-02",
+        "reading9-ldlmo-composite",
+        "reading9-penanegr",
+        "reading9-lagoa_co",
+        "reading9-candieir",
+        "reading9-creixellt",
+        "reading9-travess1",
+        "reading9-vdl-pb2",
+        "reading9-adp-01/06",
+        "reading9-armena",
+        "reading9-pedrido"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea19-m84_1_122_1",
+        "pangaea19-m84_1_123_1"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea23-md99_2348",
+        "pangaea23-prgl1_4"
+      ],
+      "status": "review_link; not merged"
+    },
+    {
+      "basis": "dataset_doi",
+      "records": [
+        "pangaea23-339_u1387a",
+        "pangaea23-339_u1387b"
+      ],
+      "status": "review_link; not merged"
+    }
+  ],
+  "source_audits": [
+    "scripts/importers/common_v33_sources.json",
+    "reports/common_v33_extraction_audit.json"
+  ],
+  "limitations": [
+    "Bounded reviewed batch, not a complete numerical harvest",
+    "Published chronologies retained; no independent recalibration. Series flagged interpolated_from_age_model take ages by linear depth interpolation from a published age model of the same PANGAEA event, without extrapolation",
+    "Exact and partial duplicates audited; positional/name similarity alone never establishes physical identity",
+    "Legacy v3 quality restrictions and quarantines remain in force"
+  ],
+  "scope": {
+    "label": "Mediterráneo y zonas adyacentes",
+    "bbox": [
+      -10,
+      28,
+      42,
+      48
+    ]
+  },
+  "provider_quarantines": {
+    "pangaea_common": []
+  },
+  "pending_source_candidates": {
+    "pangaea_common": [
+      {
+        "id": 885796,
+        "status": "held",
+        "reason": "CC BY-NC-ND pending reuse review",
+        "sha": "d2796834450d212920aadebf79700a067f468257715aac3e9bea4d85ae8ae2ce",
+        "xml_sha": "9604faec5f20e9010556c3394fba8d6eb2d8f7163e2f620f1643b284e3451983",
+        "columns": []
+      },
+      {
+        "id": 893950,
+        "status": "held",
+        "reason": "Two native chronologies require attribution",
+        "sha": "36ac51508871fce4449b3d33058ccdae133dd0e8ad409458890e17784ccf581c",
+        "xml_sha": "e3a1a9ac9baaf1c22429217b8d5ed6b7a6fe6e4e3d1a053c0220780ca59113db",
+        "columns": []
+      },
+      {
+        "id": 969731,
+        "status": "held",
+        "reason": "Check corrected depth units and overlap with ACER first",
+        "sha": "af8341390aee47afa607a06df9c593c383a8d7e6bb3b8b28666b4fcd36f86ade",
+        "xml_sha": "30f7aa393f53c31fb7b8481c77a3d7757ef431ef0d05b166f3c26b8316ddfa33",
+        "columns": []
+      },
+      {
+        "id": 939160,
+        "status": "held",
+        "reason": "Composite-to-hole identity requires review",
+        "sha": "05138ff4d90ff814d65b41dc07cf093b51fc5cf52cbda1c5c4145e2a7482f6f8",
+        "xml_sha": "9971ce5075757fba25dad19352f001b9c03b833bf02505e73f40204ec358902f",
+        "columns": []
+      }
+    ]
+  },
+  "selection_limits": [
+    "Two new archives. Selected ecological indicators.",
+    "No percentages calculated from the selected counts."
+  ],
+  "coverage_before": {
+    "Temperatura": {
+      "records": 42,
+      "distinct_locations": 40,
+      "series": 66,
+      "values": 9566
+    },
+    "Isótopos estables": {
+      "records": 48,
+      "distinct_locations": 47,
+      "series": 207,
+      "values": 39100
+    },
+    "Biomarcadores": {
+      "records": 22,
+      "distinct_locations": 20,
+      "series": 46,
+      "values": 6340
+    },
+    "Micropaleontología": {
+      "records": 8,
+      "distinct_locations": 8,
+      "series": 21,
+      "values": 3591
+    }
+  },
+  "coverage_after": {
+    "Temperatura": {
+      "records": 42,
+      "distinct_locations": 40,
+      "series": 66,
+      "values": 9566
+    },
+    "Isótopos estables": {
+      "records": 48,
+      "distinct_locations": 47,
+      "series": 207,
+      "values": 39100
+    },
+    "Biomarcadores": {
+      "records": 22,
+      "distinct_locations": 20,
+      "series": 46,
+      "values": 6340
+    },
+    "Micropaleontología": {
+      "records": 9,
+      "distinct_locations": 9,
+      "series": 23,
+      "values": 3813
+    }
+  },
+  "coverage_scope": "Broad native family and four-decimal coordinates; not methodological equivalence, SST-only coverage or independent neighbours",
+  "sha256": "9e67db1e2e2cc85054ba59e93af45d7f098b99ff17857527914364fb1bf3120f",
+  "bytes": 77324214
+}

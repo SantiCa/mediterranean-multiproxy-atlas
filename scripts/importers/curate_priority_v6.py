@@ -199,7 +199,7 @@ def curate(fetch=False, *, contract_path=CONTRACT, baseline=BASE, raw_dir=RAW,
                 native.get('https://api.crossref.org/works/' + quote(paper['doi'], safe=''), cr, paper['sha256'], limit=3_000_000)
             if native.sha(cr.read_bytes()) != paper['sha256']:
                 raise ValueError('Pinned Crossref identity metadata changed')
-        depth = native.depth_column(header)
+        depth = entry.get('depth_column', native.depth_column(header))
         for label, event in labels.items():
             rid = namespace + '-' + native.slug(label).lower()
             elevation = native.number(event.get('elevation') or '')
