@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 08-11-2026
+- Tarea en curso CUR-COMMON-32. Sondeos nuevos y revisión de agrupaciones. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-31. v31-c3f90e6626c añade siete series y 486 observaciones a tres testigos existentes. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Handoff docs/handoffs/cur-common-31.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-30. v30-ccb62d8bae8 añade U1391, 22 series y 5.219 observaciones. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Auditorías con cero errores. Handoff docs/handoffs/cur-common-30.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-29. v29-c45997d0668 reúne 276 registros, 2.187 series, 1.032.367 observaciones y 1.156 grupos base. Tres sondeos nuevos del Adriático, 70 series y 3.938 observaciones. Comprobadas 22 vistas. Pasaron 146 Python, 46 Node, TypeScript, compilación y snapshot íntegro en checkout aislado. Auditorías con cero errores. Handoff docs/handoffs/cur-common-29.md. Publicación para rol 04.
