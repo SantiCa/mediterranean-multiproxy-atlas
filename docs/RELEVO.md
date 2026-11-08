@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 08-11-2026
+- Tarea en curso CUR-ECO-33. Priorizar sondeos nuevos con proxies de interpretación ecológica publicados. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-32. v32-c9a4ef57496 añade dos archivos lacustres, nueve series y 30.323 observaciones. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Handoff docs/handoffs/cur-common-32.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-31. v31-c3f90e6626c añade siete series y 486 observaciones a tres testigos existentes. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Handoff docs/handoffs/cur-common-31.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-30. v30-ccb62d8bae8 añade U1391, 22 series y 5.219 observaciones. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Auditorías con cero errores. Handoff docs/handoffs/cur-common-30.md. Publicación para rol 04.
