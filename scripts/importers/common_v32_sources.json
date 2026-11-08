@@ -1,0 +1,324 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-08-v31-c3f90e6626c",
+  "parent_sha256": "038b5741a6920b4b6b6f2595eb30a51b445b5adce0ee57cc45a3e929b9ca2a08",
+  "datasets": [
+    {
+      "id": 906204,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.906204",
+      "sha": "6419bacecfdb7130fdaed7d926c4ffb4dd3b0b1ebdfc6a262255d77050f9297a",
+      "xml_sha": "8fc5069522d043c7c4dc2eff1eb21d8904a28685ce44c0f3592af2491bcaf373",
+      "title": "Fucino palaeolake multiproxy data from F1-F3 core (Holocene - 190 ka)",
+      "header": [
+        "Core",
+        "Depth sed [m] (In-core position, mean)",
+        "Pos [mm] (In-core position TOP)",
+        "Pos [mm] (In-core position BOTTOM)",
+        "Sample ID",
+        "Depth comp [mcd] (Giaccio et al. 2015)",
+        "Depth comp [mcd] (Giaccio et al. 2015 no tephra)",
+        "Depth comp [mcd] (Mannella et al. 2019)",
+        "Depth comp [mcd] (Mannella et al. 2019 no tephra)",
+        "Age min [ka] (ka BP, Age model, Bacon (Blaa...)",
+        "Age max [ka] (ka BP, Age model, Bacon (Blaa...)",
+        "Age [ka BP] (Age model, Bacon (Blaauw & Ch...)",
+        "TN [%]",
+        "TIC [%]",
+        "TOC [%]",
+        "TOC/TN (atom)",
+        "Coh scat [cts] (Cr coh, X-ray fluorescence IT...)",
+        "Ca [cts] (normalised to coherent scatte...)",
+        "Ti [cts] (normalised to coherent scatte...)",
+        "Zr [cts] (normalised to coherent scatte...)",
+        ">6 phi [%] (fine fraction)"
+      ],
+      "events": [
+        {
+          "label": "Fucino_F1-3",
+          "lat": 42.0,
+          "lon": 13.56,
+          "elevation": "650.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1016/j.quascirev.2019.02.032",
+        "relation": "native_supplement_to",
+        "status": "crossref_identity_verified",
+        "year": 2019,
+        "dates": {
+          "published-print": [
+            [
+              2019,
+              4
+            ]
+          ],
+          "issued": [
+            [
+              2019,
+              4
+            ]
+          ],
+          "published": [
+            [
+              2019,
+              4
+            ]
+          ]
+        },
+        "title": "Palaeoenvironmental and palaeohydrological variability of mountain areas in the central Mediterranean region: A 190 ka-long chronicle from the independently dated Fucino palaeolake record (central Italy)",
+        "sha256": "72765ca91ed728c22b47f609dc91e7a2f029ea839257a386b1e4226eaadca8d9"
+      },
+      "source_rows": 1820,
+      "age_column": 11,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Nitrogen, total",
+          "short": "TN",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 12,
+          "header": "TN [%]",
+          "family": "nutrients",
+          "environmental_interpretation": "Nitrógeno total del sedimento, sensible a aporte y preservación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TN"
+        },
+        {
+          "name": "Carbon, inorganic, total",
+          "short": "TIC",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 13,
+          "header": "TIC [%]",
+          "family": "toc",
+          "environmental_interpretation": "Carbono inorgánico total sensible a producción y aporte de carbonatos",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TIC"
+        },
+        {
+          "name": "Carbon, organic, total",
+          "short": "TOC",
+          "unit": "%",
+          "method": null,
+          "comment": null,
+          "column": 14,
+          "header": "TOC [%]",
+          "family": "toc",
+          "environmental_interpretation": "Carbono orgánico sedimentario sensible a aporte, producción y preservación",
+          "comparison_context": null,
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TOC"
+        },
+        {
+          "name": "Carbon, organic, total/Nitrogen, total ratio",
+          "short": "TOC/TN",
+          "unit": "sin unidad",
+          "method": null,
+          "comment": "atom",
+          "column": 15,
+          "header": "TOC/TN (atom)",
+          "family": "toc",
+          "environmental_interpretation": "Razón atómica TOC/TN sensible al origen y transformación de materia orgánica",
+          "comparison_context": "atomic_cn_bulk_sediment",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "TOC/TN"
+        },
+        {
+          "name": "Calcium",
+          "short": "Ca",
+          "unit": "cts",
+          "method": "X-ray fluorescence ITRAX core scanner",
+          "comment": "normalised to coherent scattering Cr coh",
+          "column": 17,
+          "header": "Ca [cts] (normalised to coherent scatte...)",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Señal de calcio sensible a cambios de carbonatos y matriz",
+          "comparison_context": "fucino_itrax_coherent_scatter",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ca"
+        },
+        {
+          "name": "Titanium",
+          "short": "Ti",
+          "unit": "cts",
+          "method": "X-ray fluorescence ITRAX core scanner",
+          "comment": "normalised to coherent scattering Cr coh",
+          "column": 18,
+          "header": "Ti [cts] (normalised to coherent scatte...)",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Señal de titanio sensible al aporte detrítico",
+          "comparison_context": "fucino_itrax_coherent_scatter",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Ti"
+        },
+        {
+          "name": "Zirconium",
+          "short": "Zr",
+          "unit": "cts",
+          "method": "X-ray fluorescence ITRAX core scanner",
+          "comment": "normalised to coherent scattering Cr coh",
+          "column": 19,
+          "header": "Zr [cts] (normalised to coherent scatte...)",
+          "family": "xrf_razones",
+          "environmental_interpretation": "Señal de zirconio sensible al aporte y composición detrítica",
+          "comparison_context": "fucino_itrax_coherent_scatter",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Zr"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales y valores según la fuente.",
+        "Archivo compuesto F1/F3. Edad Bacon publicada; límites asimétricos conservados en el original. Profundidad compuesta Mannella 2019. Ca, Ti y Zr normalizados por dispersión coherente, en la unidad cts declarada; sin interpretar como cuentas brutas ni concentraciones."
+      ],
+      "depth_column": 7
+    },
+    {
+      "id": 958979,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.958979",
+      "sha": "14ac1e0ae7db278041417a4c00901c52d0a17940b14ec17dfb2188e5a74f0cd3",
+      "xml_sha": "227b8636e3349091c3932fdf476c68b1f3214e7061712ea0176b28e7ac96e10d",
+      "title": "Erosion intensity recorded in Lake Anterne (North-western Alps) over the Holocene",
+      "header": [
+        "Lake",
+        "Age [ka BP] (Age model, radiocarbon dates ...)",
+        "Age [a AD/CE] (Age model, radiocarbon dates ...)",
+        "Period cultural",
+        "Flood freq 101 [#] (running window of 101 years)",
+        "Flood freq norm z (running window of 101 years, ...)",
+        "Flood deposit thick [cm]",
+        "SR [cm/a] (Continuous)",
+        "SR [cm/a] (Total sedimentary accumulatio...)",
+        "Ti norm z (Total accumulation rate, Norm...)"
+      ],
+      "events": [
+        {
+          "label": "ANT07",
+          "lat": 45.9911333,
+          "lon": 6.797783333,
+          "elevation": "2063.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.1007/s10113-023-02030-5",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2023,
+        "dates": {
+          "published-print": [
+            [
+              2023,
+              6
+            ]
+          ],
+          "published-online": [
+            [
+              2023,
+              4,
+              5
+            ]
+          ],
+          "issued": [
+            [
+              2023,
+              4,
+              5
+            ]
+          ],
+          "published": [
+            [
+              2023,
+              4,
+              5
+            ]
+          ]
+        },
+        "title": "Long-term trajectories of mountain agro-ecosystems in the North-Western Alps",
+        "sha256": "fd0473ad797ed652a54a1707d3a8b58821489cf904b5b70776088fc7b09a6546"
+      },
+      "source_rows": 10229,
+      "age_column": 1,
+      "age_transformation": "identity: source point age in ka BP",
+      "realm": "continental",
+      "archive_type": "lake sediment",
+      "columns": [
+        {
+          "name": "Flood frequency per 101 years",
+          "short": "Flood freq 101",
+          "unit": "#",
+          "method": null,
+          "comment": "running window of 101 years",
+          "column": 4,
+          "header": "Flood freq 101 [#] (running window of 101 years)",
+          "family": "erosion",
+          "environmental_interpretation": "Frecuencia de crecidas con depósitos superiores a 5 mm en ventana móvil de 101 años",
+          "comparison_context": "anterne_flood_count_101_years",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "Flood freq 101"
+        },
+        {
+          "name": "Sedimentation rate per year",
+          "short": "SR",
+          "unit": "cm/a",
+          "method": null,
+          "comment": "Continuous",
+          "column": 7,
+          "header": "SR [cm/a] (Continuous)",
+          "family": "erosion",
+          "environmental_interpretation": "Tasa continua de sedimentación sensible a erosión y aporte de la cuenca",
+          "comparison_context": "anterne_continuous_sedimentation",
+          "error_column": null,
+          "evidence_type": "as_archived_parameter",
+          "alias": "SR"
+        }
+      ],
+      "status": "ready",
+      "qc_notes": [
+        "Edades puntuales y valores según la fuente.",
+        "Ventana móvil de 101 años con observaciones solapadas. Sin profundidad en la tabla. Se mantienen por separado la frecuencia publicada y la tasa continua."
+      ]
+    },
+    {
+      "id": 885787,
+      "status": "held",
+      "reason": "CC BY-NC-ND; reuse review pending",
+      "sha": "7414a799ac47d7f7fe5dbdfa979a076efa22b5b896182542546f3e681b3c3e84",
+      "xml_sha": "3784eea2af057fe23fc1717c9072e09eb5c4dc9a80822629684ab5c757be757f",
+      "columns": []
+    },
+    {
+      "id": 969557,
+      "status": "held",
+      "reason": "Near existing ZONARcombined; cross-source event identity pending",
+      "sha": "3fdb7d461f24c53cb654173138910917b81dd5a7eabf1732d04fc2785758066f",
+      "xml_sha": "9178ded69b80f070a0bb32f5dbcabd58cd0370c2ca30b67bc619c3834b25dddf",
+      "columns": []
+    }
+  ],
+  "selection_limits": [
+    "Two new lake archives. Fucino is a composite of adjacent cores.",
+    "No new normalizations or interpolations. Anterne windows are not independent events."
+  ]
+}

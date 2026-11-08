@@ -1,0 +1,122 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-08-v31-c3f90e6626c",
+  "counts": {
+    "records": 2,
+    "series": 9,
+    "observations": 30323,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col12~50d67e0456",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 12,
+      "observations": 1136,
+      "missing_cells": 684,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col13~66e7ea28fa",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 13,
+      "observations": 1136,
+      "missing_cells": 684,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col14~23177f4edb",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 14,
+      "observations": 1136,
+      "missing_cells": 684,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col15~8f9a555251",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 15,
+      "observations": 1136,
+      "missing_cells": 684,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col17~9c2d7f6cb1",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 17,
+      "observations": 1790,
+      "missing_cells": 30,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col18~4d7fb13bbe",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 18,
+      "observations": 1790,
+      "missing_cells": 30,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-906204:Fucino_F1_3:col19~f2f97e5712",
+      "dataset": "10.1594/PANGAEA.906204",
+      "event": "Fucino_F1-3",
+      "source_column": 19,
+      "observations": 1790,
+      "missing_cells": 30,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-958979:ANT07:col4~a291274453",
+      "dataset": "10.1594/PANGAEA.958979",
+      "event": "ANT07",
+      "source_column": 4,
+      "observations": 10180,
+      "missing_cells": 49,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea32-958979:ANT07:col7~663da53640",
+      "dataset": "10.1594/PANGAEA.958979",
+      "event": "ANT07",
+      "source_column": 7,
+      "observations": 10229,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": [
+    {
+      "id": 885787,
+      "status": "held",
+      "reason": "CC BY-NC-ND; reuse review pending"
+    },
+    {
+      "id": 969557,
+      "status": "held",
+      "reason": "Near existing ZONARcombined; cross-source event identity pending"
+    }
+  ]
+}
