@@ -35,6 +35,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 17-11: Santiago solicita publicar; rol 04 prepara integración de v35 y despliegue con QC.
 0. Publicación v33 completada; continuar curación según las siguientes acciones.
 0. 07-11: Santiago solicita integrar y publicar la última versión; rol 04 prepara v29 con QC validado.
 1. Rol 04 revisa e integra relevo y publica atlas-v35.json. Snapshot verificado con 1.074.940 valores y 1.245 archivos. Main activa Cloudflare.
