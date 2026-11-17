@@ -1,0 +1,199 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-17-v34-c9d76a74dab",
+  "counts": {
+    "records": 1,
+    "series": 17,
+    "observations": 1241,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea35-884740:KI10_I_II:col3~0365a23ce5",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 3,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col4~48d15a6731",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 4,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col5~b5ed5f7c16",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 5,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col7~6debc74464",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 7,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col8~675bf9eeba",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 8,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col9~d7a4e4af52",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 9,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col10~d6b57511e9",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 10,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col11~64f4f1daf3",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 11,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col12~6b9075f703",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 12,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col14~0d4519f898",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 14,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col15~ded1eb40c2",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 15,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col21~86a5d13f52",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 21,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col24~bb2f2b836c",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 24,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col25~239c777eea",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 25,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col26~6d952809da",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 26,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col27~e325d423b9",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 27,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea35-884740:KI10_I_II:col41~86068928af",
+      "dataset": "10.1594/PANGAEA.884740",
+      "event": "KI10_I_II",
+      "source_column": 41,
+      "observations": 73,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": []
+}

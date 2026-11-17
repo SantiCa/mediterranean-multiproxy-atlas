@@ -2,6 +2,10 @@
 
 Actualizado el 07-11-2026. Repositorio privado `SantiCa/mediterranean-multiproxy-atlas`. Consultar git log para el commit efectivo.
 
+## Colección v35 validada en relevo (17-11-2026)
+
+- v35-cd4671360c2 reúne 283 registros, 2.282 series y 1.074.940 observaciones. Añade el archivo compuesto KI10 I/II, 17 series y 1.241 observaciones polínicas. Fuentes en docs/handoffs/cur-eco-35.md. Publicación para rol 04.
+
 ## Colección v34 validada en relevo (17-11-2026)
 
 - v34-c9d76a74dab reúne 282 registros, 2.265 series y 1.073.699 observaciones. Añade un sondeo del mar Negro, 18 series y 2.934 observaciones de interés ecológico. Fuentes en docs/handoffs/cur-eco-34.md. Publicación para rol 04.
