@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 08-11-2026
+- Tarea en curso CUR-ECO-34. Seleccionar sondeos nuevos con proxies ecológicos y fuentes primarias. Publicación para rol 04.
 - Publicación v33 completada en Sites: main 6156bf9, fuente 7d8a60c, despliegue appgdep_6af08a86be08819188903df91566d784. Snapshot con QC cotejado: 1.070.765 valores y 1.210 archivos; 46 Node, TypeScript y compilación correctos. Acceso privado conservado. Recibo reports/eco_v33_sites_deployment.json y handoff docs/handoffs/publication-v33.md. Flujo Cloudflare no comprobado.
 - Tarea cerrada CUR-ECO-33. v33-c90987c7018 añade Padul e İznik, 22 series y 2.370 observaciones. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Handoff docs/handoffs/cur-eco-33.md. Publicación para rol 04.
 - Tarea cerrada CUR-COMMON-32. v32-c9a4ef57496 añade dos archivos lacustres, nueve series y 30.323 observaciones. Cotejo nativo, 22 vistas, 146 Python, 46 Node, TypeScript, compilación y snapshot completos. Handoff docs/handoffs/cur-common-32.md. Publicación para rol 04.
