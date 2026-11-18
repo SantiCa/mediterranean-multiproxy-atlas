@@ -39,6 +39,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 18-11: Santiago solicita activar el piloto privado de revisión; rol 04 prepara integración y migración 0005. Falta identificar dos cuentas reales distintas para asignar roles y comprobar el recorrido.
 0. Rol 04: integrar y publicar v37 tras revisar docs/handoffs/cur-eco-36.md y cur-eco-37.md; no sustituir ni omitir el QC heredado. La publicación v35 sigue vigente hasta entonces.
 0. Publicación v35 completada; continuar curación según las siguientes acciones.
 0. Publicación v33 completada; continuar curación según las siguientes acciones.
