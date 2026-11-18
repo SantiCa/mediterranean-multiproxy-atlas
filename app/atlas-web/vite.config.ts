@@ -1,10 +1,13 @@
 import vinext from "vinext";
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { configureToolEnvironment } from "./scripts/tool-environment.mjs";
 import { sites } from "./scripts/vite/sites-vite-plugin";
 import { connectorPreview } from "./scripts/vite/connector-preview-plugin.mjs";
+import { REVIEW_GROUP, type ReviewSnapshot } from "./lib/review-pilot.mjs";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
@@ -20,6 +23,19 @@ const ownDatabaseId = process.env.CF_D1_DATABASE_ID;
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const managedLinux = readExecutionProfile() === "managed-linux";
+
+function reviewSnapshot(): ReviewSnapshot | null {
+  const groupFile = createHash("sha1").update(REVIEW_GROUP).digest("hex").slice(0, 16);
+  try {
+    const snapshot: ReviewSnapshot = JSON.parse(
+      readFileSync(new URL(`./public/snapshot/obs/${groupFile}.json`, import.meta.url), "utf8"),
+    );
+    return snapshot.group === REVIEW_GROUP ? snapshot : null;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw error;
+  }
+}
 
 const localBindingConfig = {
   ...(ownWorkerName ? { name: ownWorkerName } : {}),
@@ -51,6 +67,10 @@ export default defineConfig(async ({ command }) => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    define: {
+      __REVIEW_SNAPSHOT__: JSON.stringify(ownWorkerName ? null : reviewSnapshot()),
+      __REVIEW_LOCAL_AUTH__: JSON.stringify(command === "serve" && !managedLinux),
+    },
     server: {
       ...(managedLinux
         ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }

@@ -1,9 +1,11 @@
+import { sql } from "drizzle-orm";
 import {
   sqliteTable,
   text,
   real,
   integer,
   index,
+  uniqueIndex,
 } from "drizzle-orm/sqlite-core";
 
 export const records = sqliteTable("atlas_records", {
@@ -125,4 +127,26 @@ export const privateFailures = sqliteTable(
     at: text("at").notNull(),
   },
   (t) => [index("atlas_private_failures_at_idx").on(t.at)],
+);
+
+export const reviewProposals = sqliteTable(
+  "atlas_review_proposals",
+  {
+    id: text("id").primaryKey(),
+    releaseId: text("release_id").notNull(),
+    sampleKey: text("sample_key").notNull(),
+    evidence: text("evidence_json").notNull(),
+    reason: text("reason").notNull(),
+    status: text("status", { enum: ["pending", "approved", "rejected"] }).notNull().default("pending"),
+    createdBy: text("created_by").notNull(),
+    createdAt: text("created_at").notNull(),
+    decidedBy: text("decided_by"),
+    decidedAt: text("decided_at"),
+    reviewNote: text("review_note"),
+  },
+  (table) => [
+    index("atlas_review_release_created_idx").on(table.releaseId, table.createdAt),
+    uniqueIndex("atlas_review_active_sample_idx").on(table.releaseId, table.sampleKey)
+      .where(sql`${table.status} <> 'rejected'`),
+  ],
 );

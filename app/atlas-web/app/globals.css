@@ -621,6 +621,17 @@ h3 {
 .scale-controls input { display: block; width: 100%; padding: 3px; border: 1px solid #a6b7b5; border-radius: 3px; }
 .scale-controls button { padding: 4px; border: 1px solid #7a9692; border-radius: 3px; }
 .scale-controls small { font-size: 9px; margin-top: 5px; }
+.review-panel { margin: 14px 0; padding: 12px; border: 1px solid #c9d8d3; border-radius: 6px; font-size: 12px; }
+.review-panel h3 { margin: 0 0 8px; font-size: 14px; }
+.review-panel p, .review-panel form, .review-panel details { margin: 8px 0; }
+.review-panel label { display: grid; gap: 4px; margin: 8px 0; }
+.review-panel select, .review-panel textarea { width: 100%; min-width: 0; border: 1px solid #a6b7b5; border-radius: 4px; padding: 5px; }
+.review-panel button { border: 1px solid #78938e; border-radius: 4px; padding: 5px 8px; }
+.review-panel button:disabled { opacity: 0.55; }
+.review-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+.review-panel a { text-decoration: underline; }
+.review-panel ul { max-height: 220px; overflow: auto; overflow-wrap: anywhere; padding-left: 14px; }
+.review-panel li { margin-top: 8px; }
 .missing-dot {
   display: inline-block;
   background: #a9b4b9;

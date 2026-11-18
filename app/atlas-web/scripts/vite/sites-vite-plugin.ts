@@ -4,9 +4,10 @@ import { access, cp, mkdir, rm } from "node:fs/promises";
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { resolve } from "node:path";
 import type { Plugin } from "vite";
+import { LOCAL_REVIEW_EDITOR, LOCAL_REVIEW_REVIEWER } from "../../lib/review-pilot.mjs";
 
 const localUserId = "local_seedy";
-const localEmail = "seedy@sites.test";
+const localEmail = LOCAL_REVIEW_EDITOR;
 const localFullName = "Seedy";
 const localCookieName = "__sites_local_auth";
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
@@ -105,13 +106,15 @@ export function sites({ mockAuth = true } = {}): Plugin {
         const signIn = url.pathname === "/signin-with-chatgpt";
         const signOut = url.pathname === "/signout-with-chatgpt";
         if (!signIn && !signOut) {
-          if (signInCookies.length === 1 && signInCookies[0] === "1") {
-            setHeader(request, "oai-authenticated-user-id", localUserId);
-            setHeader(request, "oai-authenticated-user-email", localEmail);
+          const localSession = signInCookies.length === 1 ? signInCookies[0] : null;
+          if (localSession === "1" || localSession === "reviewer") {
+            const isReviewer = localSession === "reviewer";
+            setHeader(request, "oai-authenticated-user-id", isReviewer ? "local_reviewer" : localUserId);
+            setHeader(request, "oai-authenticated-user-email", isReviewer ? LOCAL_REVIEW_REVIEWER : localEmail);
             setHeader(
               request,
               "oai-authenticated-user-full-name",
-              localFullName,
+              isReviewer ? "Revisión local" : localFullName,
             );
             setHeader(
               request,
@@ -163,7 +166,7 @@ export function sites({ mockAuth = true } = {}): Plugin {
         );
         response.setHeader(
           "Set-Cookie",
-          `${localCookieName}=${signIn ? "1" : ""}; Path=/; ${
+          `${localCookieName}=${signIn ? (url.searchParams.get("local_account") === "reviewer" ? "reviewer" : "1") : ""}; Path=/; ${
             signOut ? "Max-Age=0; " : ""
           }HttpOnly; SameSite=Lax${secure ? "; Secure" : ""}`,
         );
