@@ -1,0 +1,276 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-18-v36-c4a7ca8ed8e",
+  "counts": {
+    "records": 6,
+    "series": 24,
+    "observations": 2292,
+    "quarantined_series": 0
+  },
+  "audit": [
+    {
+      "id": "pangaea37-989934:BCOMBE1:col14~078bdbb334",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BCOMBE1",
+      "source_column": 14,
+      "observations": 50,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BCOMBE1:col17~1c04635397",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BCOMBE1",
+      "source_column": 17,
+      "observations": 50,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BCOMBE1:col20~a1da4418be",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BCOMBE1",
+      "source_column": 20,
+      "observations": 50,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BCOMBE1:col23~a75e857463",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BCOMBE1",
+      "source_column": 23,
+      "observations": 50,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BRAMELOU:col14~9b4db04ba3",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BRAMELOU",
+      "source_column": 14,
+      "observations": 85,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BRAMELOU:col17~c5f77fadab",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BRAMELOU",
+      "source_column": 17,
+      "observations": 85,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BRAMELOU:col20~98fc00dded",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BRAMELOU",
+      "source_column": 20,
+      "observations": 85,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:BRAMELOU:col23~ad04aa66b4",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "BRAMELOU",
+      "source_column": 23,
+      "observations": 85,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:LL081:col14~119bdf95b2",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "LL081",
+      "source_column": 14,
+      "observations": 187,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:LL081:col17~2e60600a33",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "LL081",
+      "source_column": 17,
+      "observations": 187,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:LL081:col20~acf5ac2ebd",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "LL081",
+      "source_column": 20,
+      "observations": 187,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:LL081:col23~6ef96f28c2",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "LL081",
+      "source_column": 23,
+      "observations": 187,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:MARTIGAN:col14~67834c0b64",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "MARTIGAN",
+      "source_column": 14,
+      "observations": 68,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:MARTIGAN:col17~3e51b912e6",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "MARTIGAN",
+      "source_column": 17,
+      "observations": 68,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:MARTIGAN:col20~78ad7a21b6",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "MARTIGAN",
+      "source_column": 20,
+      "observations": 68,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:MARTIGAN:col23~017227a846",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "MARTIGAN",
+      "source_column": 23,
+      "observations": 68,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:QUATTROC:col14~d510c274d0",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "QUATTROC",
+      "source_column": 14,
+      "observations": 92,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:QUATTROC:col17~66f2f9d44a",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "QUATTROC",
+      "source_column": 17,
+      "observations": 92,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:QUATTROC:col20~a19dc6451a",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "QUATTROC",
+      "source_column": 20,
+      "observations": 92,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:QUATTROC:col23~6f2063cd8c",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "QUATTROC",
+      "source_column": 23,
+      "observations": 92,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:SEGRINO:col14~e81b2da2d3",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "SEGRINO",
+      "source_column": 14,
+      "observations": 91,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:SEGRINO:col17~ec75fadd2c",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "SEGRINO",
+      "source_column": 17,
+      "observations": 91,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:SEGRINO:col20~154f1f67ed",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "SEGRINO",
+      "source_column": 20,
+      "observations": 91,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    },
+    {
+      "id": "pangaea37-989934:SEGRINO:col23~bc786e8f34",
+      "dataset": "10.1594/PANGAEA.989934",
+      "event": "SEGRINO",
+      "source_column": 23,
+      "observations": 91,
+      "missing_cells": 0,
+      "censored_or_non_numeric": 0,
+      "status": "extracted",
+      "reason": null
+    }
+  ],
+  "held": []
+}

@@ -73,6 +73,18 @@ def contexts(column, title=''):
     return None
 
 
+def select_events(labels, selected):
+    """Restrict a multi-event table only after validating its native event list."""
+    if selected is None:
+        return labels
+    if not selected or len(selected) != len(set(selected)):
+        raise ValueError('Selected events must be nonempty and unique')
+    missing = set(selected) - labels.keys()
+    if missing:
+        raise ValueError(f'Selected events absent from native XML: {sorted(missing)}')
+    return {label: labels[label] for label in selected}
+
+
 def paper_reference(head, supplied, fetch, raw_dir=RAW):
     """Resolve an explicit native article relation without guessing a paper year.
 
@@ -191,6 +203,7 @@ def curate(fetch=False, *, contract_path=CONTRACT, baseline=BASE, raw_dir=RAW,
         event_col = header.index('Event') if 'Event' in header else None
         if event_col is not None and any(cells[event_col] not in labels for _, _, cells in rows):
             raise ValueError('Row Event is absent from native XML')
+        labels = select_events(labels, entry.get('selected_events'))
         doi = '10.1594/PANGAEA.' + i
         paper = entry.get('paper') or {}
         if paper.get('sha256'):

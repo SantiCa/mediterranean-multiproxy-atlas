@@ -1,0 +1,8 @@
+# Piloto de revisión por muestra
+
+- Estado: listo para revisión y activación privada. Atlas 03, rama `relevo`, base `794d068`, solicitud registrada en `b2c1813`.
+- Alcance: SST anual de alquenonas (Müller). En «Proxies y series», selecciona un sondeo y abre «Revisión de muestras». La cuenta editora propone una exclusión motivada. La revisora previsualiza y aprueba o rechaza con comentario. El selector cambia mapa, escala de valores calculados y exportaciones. La leyenda de color conserva los límites durante la comparación.
+- Almacenamiento: D1 guarda original, localizador, hash, versión, autor, revisor y decisión. Cada exclusión queda ligada a su release. El CSV de selección retiene la fila marcada y el SVG registra las exclusiones en metadatos. Sin migración de la colección.
+- Prueba local: aplicar `0005_review_proposals.sql` según [STARTER](../../app/atlas-web/STARTER.md#local-d1-migrations). Iniciar `node scripts/run-framework.mjs dev` y abrir `/?pilot=1`. Usar los dos enlaces de cuenta local. Quedó una exclusión de demostración en D1 local.
+- Evidencia: 49 Node, TypeScript y compilación. Con v35, MD95-2043 de 6–8 ka pasó de 17 a 16 muestras y de 0,821 a 0,930 z. Verificados permisos, persistencia y original por API local. Se accionaron ambas descargas en el visor. La conservación de la fila excluida se comprobó mediante prueba automatizada.
+- Rol 04: preparar la versión aprobada, aplicar migración 0005 y configurar los dos correos distintos en los secretos de Sites según [plantilla](../../app/atlas-web/.env.example). Confirmar acceso al Site privado para ambas cuentas y repetir el flujo. Cloudflare autónomo conserva el piloto inactivo.

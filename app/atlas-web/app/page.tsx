@@ -41,6 +41,9 @@ import { groupKey, proxyCatalog as proxyGroups, isAggregateKey, inGroup, seriesM
 import PrivateData from "../components/PrivateData";
 import { seriesSource, rowUncertainty, rowQcNote } from "../lib/provenance.mjs";
 import { scientificNumber } from "../lib/format.mjs";
+import ReviewPilotPanel from "../components/ReviewPilotPanel";
+import { useReviewPilot } from "../hooks/use-review-pilot";
+import { appliedReviewExclusions, applyReviewExclusions, REVIEW_GROUP, reviewExportSamples } from "../lib/review-pilot.mjs";
 
 const fmt = (x: any, n?: number) =>
   typeof x === "number" && Number.isFinite(x)
@@ -125,6 +128,11 @@ export default function Atlas() {
     chronology: "all",
     group: "",
   });
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("pilot") !== "1") return;
+    setF((previous: any) => ({ ...previous, group: REVIEW_GROUP }));
+    setTab("map");
+  }, []);
   const [base, setBase] = useState("ocean"),
     [surface, setSurface] = useState(false),
     [radius, setRadius] = useState(600),
@@ -367,7 +375,13 @@ export default function Atlas() {
     privateSets,
     derivedSets,
   ]);
-  const summary = useMemo(() => {
+  const reviewRelease = f.group === REVIEW_GROUP ? data?.release?.id ?? null : null;
+  const review = useReviewPilot(reviewRelease);
+  const reviewExclusions = useMemo(
+    () => appliedReviewExclusions(review.state?.proposals ?? [], review.view),
+    [review.state, review.view.mode, review.view.mode === "preview" ? review.view.proposalId : null],
+  );
+  const originalSummary = useMemo(() => {
     if (!data) return { items: [], error: "" };
     try {
       return { items: summarize(data, f), error: "" };
@@ -375,6 +389,13 @@ export default function Atlas() {
       return { items: [], error: e.message };
     }
   }, [data, f]);
+  const summary = useMemo(() => {
+    if (!data || !reviewExclusions.size || originalSummary.error) return originalSummary;
+    return {
+      items: summarize({ ...data, series: applyReviewExclusions(data.series, reviewExclusions) }, f),
+      error: "",
+    };
+  }, [data, f, originalSummary, reviewExclusions]);
   const items: any[] = summary.items,
     valid = items.filter((s) => finite(s.value)),
     active = items.find((s) => s.record.id === selected) || items[0];
@@ -384,7 +405,7 @@ export default function Atlas() {
       setSelected(items[0].record.id);
   }, [items, selected]);
   const scaleKey = JSON.stringify([f.group, f.mode, f.refMin, f.refMax]);
-  const windowDomain = colorDomain(items, f.mode === "z") as [number, number];
+  const windowDomain = colorDomain(originalSummary.items, f.mode === "z") as [number, number];
   useEffect(() => {
     if (seriesLoading || !valid.length || scale?.key === scaleKey) return;
     let [minimum, maximum] = windowDomain;
@@ -484,6 +505,7 @@ export default function Atlas() {
     }
   }
   function exportCSV() {
+    const hasReview = Boolean(reviewRelease && review.state?.role);
     const header = [
       "record",
       "series",
@@ -530,9 +552,10 @@ export default function Atlas() {
       "age_model",
       "age_model_source_url",
       "sample_qc",
+      ...(hasReview ? ["release_id", "review_view", "included_in_target_window", "review_exclusion_json"] : []),
     ];
     const rows = items.flatMap((i) =>
-      i.target.map((r: any) => [
+      reviewExportSamples(i.series, i.target, reviewExclusions, f).map(({ row: r, exclusion, inWindow }) => [
         i.record.name,
         i.series.proxy,
         r[0],
@@ -540,11 +563,11 @@ export default function Atlas() {
         i.series.derivation ? null : r[5] ?? r[1],
         r[1],
         i.series.unit,
-        f.mode === "z" && i.reference.n >= 5 && i.reference.sd > 0
+        !exclusion && f.mode === "z" && i.reference.n >= 5 && i.reference.sd > 0
           ? (r[1] - i.reference.mean) / i.reference.sd
           : null,
         i.value,
-        i.reason,
+        exclusion ? "Exclusión del piloto de revisión" : i.reason,
         f.min,
         f.max,
         f.stat,
@@ -582,6 +605,12 @@ export default function Atlas() {
         seriesSource(i.series, i.record).age_model,
         i.series.age_model_source_url,
         rowQcNote(i.series, r),
+        ...(hasReview ? [
+          reviewRelease,
+          review.view.mode,
+          !exclusion && inWindow,
+          exclusion ? JSON.stringify(exclusion) : null,
+        ] : []),
       ]),
     );
     download(
@@ -651,9 +680,12 @@ export default function Atlas() {
       .map((i) => seriesSource(i.series, i.record).dataset_doi)
       .filter(Boolean)
       .join("; ");
+    const reviewMetadata = reviewRelease && review.state?.role
+      ? { view: review.view.mode, exclusions: [...reviewExclusions.values()] }
+      : undefined;
     download(
       "medatlas-map.svg",
-      `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840"><metadata>${xml(JSON.stringify({ filters: f, radius, surface, domain, projection: "equirectangular", bounds: { west, east, south, north }, version: data.release.id, sources: valid.map((i) => seriesSource(i.series, i.record)), dois: cites }))}</metadata><defs><linearGradient id="scale"><stop stop-color="${color(domain[0], ...domain, f.mode === "z")}"/><stop offset="50%" stop-color="${color((domain[0] + domain[1]) / 2, ...domain, f.mode === "z")}"/><stop offset="100%" stop-color="${color(domain[1], ...domain, f.mode === "z")}"/></linearGradient><clipPath id="map"><rect width="1200" height="720"/></clipPath></defs><rect width="1200" height="840" fill="#f7faf9"/><g clip-path="url(#map)" font-family="Arial">${shapes}${cells}${dots}</g><g font-family="Arial" fill="#183944"><rect x="950" y="740" width="220" height="8" fill="url(#scale)"/><text x="950" y="765" font-size="11">${fmt(domain[0])}</text><text x="1170" y="765" text-anchor="end" font-size="11">${fmt(domain[1])}</text><text x="24" y="750" font-size="20">${xml(proxy?.label)} · ${f.min}–${f.max} ka BP · ${f.mode === "z" ? "z por sondeo" : "valores originales"}</text><text x="24" y="775" font-size="12">${xml(f.mode === "z" ? `Referencia ${f.refMin}–${f.refMax} ka BP; media y σ por serie; mínimo 5 valores` : "Mediana/media por sitio, sin conversión entre métodos")}</text><text x="24" y="795" font-size="10">${xml(cites)}</text><text x="24" y="815" font-size="10">Proyección equirectangular; costa Natural Earth (dominio público). ${surface ? "IDW exploratorio, no reconstrucción validada." : "Puntos observados agregados."} Edades archivadas; BP antes de 1950.</text></g></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840"><metadata>${xml(JSON.stringify({ filters: f, radius, surface, domain, projection: "equirectangular", bounds: { west, east, south, north }, version: data.release.id, review: reviewMetadata, sources: valid.map((i) => seriesSource(i.series, i.record)), dois: cites }))}</metadata><defs><linearGradient id="scale"><stop stop-color="${color(domain[0], ...domain, f.mode === "z")}"/><stop offset="50%" stop-color="${color((domain[0] + domain[1]) / 2, ...domain, f.mode === "z")}"/><stop offset="100%" stop-color="${color(domain[1], ...domain, f.mode === "z")}"/></linearGradient><clipPath id="map"><rect width="1200" height="720"/></clipPath></defs><rect width="1200" height="840" fill="#f7faf9"/><g clip-path="url(#map)" font-family="Arial">${shapes}${cells}${dots}</g><g font-family="Arial" fill="#183944"><rect x="950" y="740" width="220" height="8" fill="url(#scale)"/><text x="950" y="765" font-size="11">${fmt(domain[0])}</text><text x="1170" y="765" text-anchor="end" font-size="11">${fmt(domain[1])}</text><text x="24" y="750" font-size="20">${xml(proxy?.label)} · ${f.min}–${f.max} ka BP · ${f.mode === "z" ? "z por sondeo" : "valores originales"}</text><text x="24" y="775" font-size="12">${xml(f.mode === "z" ? `Referencia ${f.refMin}–${f.refMax} ka BP; media y σ por serie; mínimo 5 valores` : "Mediana/media por sitio, sin conversión entre métodos")}</text><text x="24" y="795" font-size="10">${xml(cites)}</text><text x="24" y="815" font-size="10">Proyección equirectangular; costa Natural Earth (dominio público). ${surface ? "IDW exploratorio, no reconstrucción validada." : "Puntos observados agregados."} Edades archivadas; BP antes de 1950.</text></g></svg>`,
       "image/svg+xml",
     );
   }
@@ -1244,6 +1276,16 @@ export default function Atlas() {
                   </p>
                   {active.reason && <p className="warning">{active.reason}</p>}
                 </div>
+                {reviewRelease && (
+                  <ReviewPilotPanel
+                    review={review}
+                    original={originalSummary.items.find((item: typeof active) => item.series.id === active.series.id)}
+                    current={active}
+                    recordName={active.record.name}
+                    unit={f.mode === "z" ? "z" : proxy?.unit ?? ""}
+                    focusRecord={setSelected}
+                  />
+                )}
                 <SeriesComparison
                   items={items}
                   active={active}

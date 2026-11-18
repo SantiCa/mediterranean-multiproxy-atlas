@@ -1,0 +1,463 @@
+{
+  "parent_version": "atlas-quantitative-2026-11-18-v36-c4a7ca8ed8e",
+  "parent_sha256": "362d75a28e51ce3742b14f7955e7de70041af2d62bad4c57f885197f1f58e384",
+  "datasets": [
+    {
+      "id": 989934,
+      "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.989934",
+      "sha": "b3a82525413a80b41a9c6ac4c76a3001e08bd4797506634e3cbe2250012bab7a",
+      "xml_sha": "d59486ff84ad42bb5b98348d2f10590729760b8b160f9f247a05c9a2effce700",
+      "title": "Pollen-based summer and winter Holocene palaeoclimate reconstruction of central Mediterranean",
+      "header": [
+        "Event",
+        "Latitude",
+        "Longitude",
+        "Elevation [m]",
+        "URL ref (Source reference 1)",
+        "URL ref (Source reference 2)",
+        "ID (Site)",
+        "ID (Dataset)",
+        "Site",
+        "Location",
+        "Depth sed [m]",
+        "Cal age [ka BP]",
+        "T air summer (6-8) [°C] (Reconstructed mean summer tem...)",
+        "T air summer (6-8) [°C] (Reconstructed mean summer tem...)",
+        "T air summer (6-8) [°C] (MAT and BRT averaged climate ...)",
+        "T air winter (12-2) [°C] (Reconstructed mean winter tem...)",
+        "T air winter (12-2) [°C] (Reconstructed mean winter tem...)",
+        "T air winter (12-2) [°C] (MAT and BRT averaged climate ...)",
+        "Precip summer (6-8) [mm] (Reconstructed mean summer pre...)",
+        "Precip summer (6-8) [mm] (Reconstructed mean summer pre...)",
+        "Precip summer (6-8) [mm] (MAT and BRT averaged climate ...)",
+        "Precip winter (12-2) [mm] (Reconstructed mean winter pre...)",
+        "Precip winter (12-2) [mm] (Reconstructed mean summer pre...)",
+        "Precip winter (12-2) [mm] (MAT and BRT averaged climate ...)"
+      ],
+      "events": [
+        {
+          "label": "AC4HOLO",
+          "lat": 42.986389,
+          "lon": 10.883333,
+          "elevation": "157.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "ALLOS",
+          "lat": 44.241667,
+          "lon": 6.702222,
+          "elevation": "2121.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "BAL2",
+          "lat": 46.15919,
+          "lon": 8.74872,
+          "elevation": "390.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "BCOMBE1",
+          "lat": 44.56666,
+          "lon": 3.125,
+          "elevation": "1340.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "BOSCESTA",
+          "lat": 42.480278,
+          "lon": 1.628889,
+          "elevation": "2180.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "BOUCHB5",
+          "lat": 44.916667,
+          "lon": 3.783333,
+          "elevation": "1200.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "BRAMELOU",
+          "lat": 44.74444,
+          "lon": 3.08111,
+          "elevation": "1196.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "CAN02",
+          "lat": 43.64667,
+          "lon": 2.587289,
+          "elevation": "790.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "CBB75",
+          "lat": 44.391111,
+          "lon": 6.404167,
+          "elevation": "2075.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "CORREO",
+          "lat": 44.508333,
+          "lon": 5.983056,
+          "elevation": "1090.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "DURA",
+          "lat": 46.64,
+          "lon": 11.458889,
+          "elevation": "2080.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "EMBOU",
+          "lat": 43.566389,
+          "lon": 3.916667,
+          "elevation": "1.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "GBASSO",
+          "lat": 37.6,
+          "lon": 12.65,
+          "elevation": "6.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "GREN",
+          "lat": 44.09825,
+          "lon": 7.48358,
+          "elevation": "1810.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "GREPPO",
+          "lat": 44.1199,
+          "lon": 10.67378,
+          "elevation": "1442.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "LAVPICCO",
+          "lat": 45.05247,
+          "lon": 7.39149,
+          "elevation": "356.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "LL081",
+          "lat": 45.87,
+          "lon": 10.75,
+          "elevation": "652.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "LMZ-B",
+          "lat": 42.36,
+          "lon": 11.46,
+          "elevation": "452.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "LPBC",
+          "lat": 37.61666,
+          "lon": 12.63333,
+          "elevation": "6.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "MALSCH",
+          "lat": 46.666111,
+          "lon": 11.458333,
+          "elevation": "2050.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "MARTIGAN",
+          "lat": 42.116667,
+          "lon": 12.333333,
+          "elevation": "200.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "MONTICCHIO",
+          "lat": 40.93,
+          "lon": 15.61,
+          "elevation": "656.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "NMOR1967",
+          "lat": 44.43333,
+          "lon": 3.6,
+          "elevation": "1400.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PADULE",
+          "lat": 44.298611,
+          "lon": 10.214722,
+          "elevation": "1187.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PALANQUE",
+          "lat": 42.162222,
+          "lon": 2.438056,
+          "elevation": "480.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PAVULLO",
+          "lat": 44.32009,
+          "lon": 10.83865,
+          "elevation": "675.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PERAFITA",
+          "lat": 42.479167,
+          "lon": 1.566944,
+          "elevation": "2240.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PEYREII",
+          "lat": 44.960278,
+          "lon": 2.718889,
+          "elevation": "1100.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PG2",
+          "lat": 37.52,
+          "lon": 14.3,
+          "elevation": "667.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "PNEM94-1B",
+          "lat": 41.72,
+          "lon": 12.7,
+          "elevation": "320.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "QUATTROC",
+          "lat": 37.90121,
+          "lon": 14.39575,
+          "elevation": "1044.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "RAC20",
+          "lat": 42.55416,
+          "lon": 2.00833,
+          "elevation": "2000.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "RINDERP",
+          "lat": 46.644722,
+          "lon": 11.494444,
+          "elevation": "1780.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "S2",
+          "lat": 39.55,
+          "lon": 16.02,
+          "elevation": "1048.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "SCHWARZ",
+          "lat": 46.666389,
+          "lon": 11.431944,
+          "elevation": "2033.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "SEGRINO",
+          "lat": 45.82802,
+          "lon": 9.26482,
+          "elevation": "374.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "SIGURET",
+          "lat": 44.61361,
+          "lon": 6.55694,
+          "elevation": "1066.0",
+          "campaign": null,
+          "device": null
+        },
+        {
+          "label": "TOURVES",
+          "lat": 43.5,
+          "lon": 5.9,
+          "elevation": "298.0",
+          "campaign": null,
+          "device": null
+        }
+      ],
+      "selected_events": [
+        "BCOMBE1",
+        "BRAMELOU",
+        "LL081",
+        "MARTIGAN",
+        "QUATTROC",
+        "SEGRINO"
+      ],
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "paper": {
+        "doi": "10.5194/cp-21-2331-2025",
+        "relation": "native_related_to",
+        "status": "crossref_identity_verified",
+        "year": 2025,
+        "dates": {
+          "published-online": [
+            [
+              2025,
+              11,
+              19
+            ]
+          ],
+          "issued": [
+            [
+              2025,
+              11,
+              19
+            ]
+          ],
+          "published": [
+            [
+              2025,
+              11,
+              19
+            ]
+          ]
+        },
+        "title": "Holocene climate dynamics in the central Mediterranean inferred from pollen data",
+        "sha256": "10322df29c4739ce116c04807d71ea1dcc4cc0703ef40490624806196ffa1c33"
+      },
+      "status": "ready",
+      "columns": [
+        {
+          "name": "Temperature, air, summer, June-August",
+          "short": "T air summer (6-8)",
+          "unit": "°C",
+          "method": "Average",
+          "comment": "MAT and BRT averaged climate signal.",
+          "column": 14,
+          "header": "T air summer (6-8) [°C] (MAT and BRT averaged climate ...)",
+          "family": "pollen_climate",
+          "alias": null,
+          "comparison_context": "pollen_mat_brt_mean_air_temperature_jja",
+          "environmental_interpretation": "temperatura del aire en verano (junio-agosto)",
+          "evidence_type": "published_pollen_climate_reconstruction"
+        },
+        {
+          "name": "Temperature, air, winter, December-February",
+          "short": "T air winter (12-2)",
+          "unit": "°C",
+          "method": "Average",
+          "comment": "MAT and BRT averaged climate signal.",
+          "column": 17,
+          "header": "T air winter (12-2) [°C] (MAT and BRT averaged climate ...)",
+          "family": "pollen_climate",
+          "alias": null,
+          "comparison_context": "pollen_mat_brt_mean_air_temperature_djf",
+          "environmental_interpretation": "temperatura del aire en invierno (diciembre-febrero)",
+          "evidence_type": "published_pollen_climate_reconstruction"
+        },
+        {
+          "name": "Precipitation, summer, June-August",
+          "short": "Precip summer (6-8)",
+          "unit": "mm",
+          "method": "Average",
+          "comment": "MAT and BRT averaged climate signal.",
+          "column": 20,
+          "header": "Precip summer (6-8) [mm] (MAT and BRT averaged climate ...)",
+          "family": "pollen_climate",
+          "alias": null,
+          "comparison_context": "pollen_mat_brt_mean_precipitation_jja",
+          "environmental_interpretation": "precipitación de verano (junio-agosto)",
+          "evidence_type": "published_pollen_climate_reconstruction"
+        },
+        {
+          "name": "Precipitation, winter, December-February",
+          "short": "Precip winter (12-2)",
+          "unit": "mm",
+          "method": "Average",
+          "comment": "MAT and BRT averaged climate signal.",
+          "column": 23,
+          "header": "Precip winter (12-2) [mm] (MAT and BRT averaged climate ...)",
+          "family": "pollen_climate",
+          "alias": null,
+          "comparison_context": "pollen_mat_brt_mean_precipitation_djf",
+          "environmental_interpretation": "precipitación de invierno (diciembre-febrero)",
+          "evidence_type": "published_pollen_climate_reconstruction"
+        }
+      ],
+      "age_column": 11,
+      "age_transformation": "identity: source calendar point age in ka BP",
+      "depth_column": 10,
+      "realm": "terrestrial",
+      "archive_type": "sediment",
+      "minimum_observations": 3,
+      "chronology_label": "Published calendar ages; original studies and age models require independent review",
+      "qc_notes": [
+        "Pollen-derived published average of MAT and BRT reconstructions; not direct observations or independent replicate methods.",
+        "Previously published pollen sequences may overlap other archives; cross-study physical core and sample identity remain to be audited.",
+        "Precipitation is in mm for the indicated season, not mm per year.",
+        "Source TSV contains replacement characters in some metadata; column units are cross-checked with native XML."
+      ]
+    }
+  ],
+  "selection_limits": [
+    "Six geographically distinct events selected; no claim of independent samples across databases.",
+    "Only published MAT/BRT averages are included; component estimates are not independent additional observations.",
+    "No interpolation, new calibration, uncertainty estimate or calculation of climate proxies."
+  ]
+}
