@@ -3,8 +3,8 @@
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
 - Último agente: ChatGPT/Codex
-- Fecha: 17-11-2026
-- Tarea en curso CUR-ECO-36. Seleccionar sondeos nuevos con proxies ecológicos y fuentes primarias. Publicación para rol 04.
+- Fecha: 18-11-2026
+- Tarea cerrada CUR-ECO-36. v36-c4a7ca8ed8e añade cuatro sondeos, 16 series y 1.408 reconstrucciones climáticas estacionales publicadas basadas en polen. Cotejados originales, padre y snapshot completo; pruebas y auditorías completadas. Identidad cruzada y cronología requieren revisión científica adicional. Handoff docs/handoffs/cur-eco-36.md. Integración y publicación reservadas al rol 04.
 - Publicación v35 completada: main c022dc9, fuente Sites 88bd147, despliegue appgdep_6afc9b70ae6881918d211489b73093fc. Snapshot con QC cotejado: 1.074.940 valores y 1.245 archivos; 46 Node, TypeScript y compilación correctos. Acceso privado conservado. Recibo reports/eco_v35_sites_deployment.json; handoff docs/handoffs/publication-v35.md. Flujo Cloudflare no comprobado.
 - Tarea cerrada CUR-ECO-35. v35-cd4671360c2 añade un sondeo de Kinneret, 17 series y 1.241 observaciones. Cotejo nativo, 22 vistas, pruebas y snapshot completos. Handoff docs/handoffs/cur-eco-35.md. Publicación para rol 04.
 - Tarea cerrada CUR-ECO-34. v34-c9d76a74dab añade un sondeo del mar Negro, 18 series y 2.934 observaciones. Cotejo nativo, 22 vistas, pruebas y snapshot completos. Handoff docs/handoffs/cur-eco-34.md. Publicación para rol 04.
@@ -37,6 +37,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. Rol 04: integrar y publicar v36 tras revisar docs/handoffs/cur-eco-36.md; no sustituir ni omitir el QC heredado. La publicación v35 sigue vigente hasta entonces.
 0. Publicación v35 completada; continuar curación según las siguientes acciones.
 0. Publicación v33 completada; continuar curación según las siguientes acciones.
 0. 07-11: Santiago solicita integrar y publicar la última versión; rol 04 prepara v29 con QC validado.
