@@ -1,0 +1,7 @@
+# Separación del visor público y el Site privado
+
+- Estado: preparado y validado localmente. Atlas 03, rama `relevo`, base `5cedc7b`, solicitud `97ec477`. Cambios en visor, compilación pública, ruta de candidatos y workflow.
+- Cloudflare: el mismo Worker `med` publica solo archivos estáticos y conserva `med.proxyatlas.workers.dev`. Sigue ofreciendo inventario, mapas, series y exportaciones. El pipeline anterior deja de publicar código de servidor, migrar D1 y administrar el subdominio. `medatlas` se conserva.
+- Sites: mantiene Mis datos y el piloto de revisión. Añadir fuente requiere identidad de Sites y origen válido para las escrituras. La activación con cuentas reales sigue con rol 04.
+- Pruebas: 49 Node, TypeScript y builds. v37 cotejada celda a celda (1.078.640 observaciones). `wrangler deploy --dry-run` sin bindings. Navegador local con mapa, CSV de inventario preparado y exportación de selección accionada. Comprobación HTTP local: 404 en las cuatro rutas privadas del visor, CSP presente, cola DOI 401 sin sesión y 200 con sesión en Sites local.
+- Siguiente: tras aprobar la integración, empujar a `main` para sustituir el visor actual con el workflow y verificar los 404 públicos. Publicar Sites por separado y mantener su audiencia restringida. No cambiar planes. Si se necesita trasladar información de la base histórica, inventariarla primero con el propietario. Instrucciones en [DEPLOY_CLOUDFLARE](../DEPLOY_CLOUDFLARE.md).

@@ -1,0 +1,10 @@
+{
+  "name": "med",
+  "compatibility_date": "2026-05-15",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist-public",
+    "not_found_handling": "none"
+  }
+}

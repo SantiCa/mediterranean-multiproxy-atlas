@@ -14,11 +14,8 @@ const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
 
 const { d1, r2 } = hostingConfig;
 
-// Self-hosted Cloudflare deployment (see docs/DEPLOY_CLOUDFLARE.md). When these
-// variables are absent the build stays identical to the ChatGPT Sites build.
-const ownWorkerName = process.env.CF_WORKER_NAME;
-const ownDatabaseName = process.env.CF_D1_DATABASE_NAME;
-const ownDatabaseId = process.env.CF_D1_DATABASE_ID;
+if (process.env.CF_WORKER_NAME || process.env.CF_D1_DATABASE_ID || process.env.CF_D1_DATABASE_NAME)
+  throw new Error("El visor de Cloudflare se compila con scripts/build-public-viewer.mjs.");
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
@@ -38,15 +35,14 @@ function reviewSnapshot(): ReviewSnapshot | null {
 }
 
 const localBindingConfig = {
-  ...(ownWorkerName ? { name: ownWorkerName } : {}),
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
     ? [
         {
           binding: d1,
-          database_name: ownDatabaseName ?? "site-creator-d1",
-          database_id: ownDatabaseId ?? SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
+          database_name: "site-creator-d1",
+          database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
         },
       ]
     : [],
@@ -68,7 +64,7 @@ export default defineConfig(async ({ command }) => {
 
   return {
     define: {
-      __REVIEW_SNAPSHOT__: JSON.stringify(ownWorkerName ? null : reviewSnapshot()),
+      __REVIEW_SNAPSHOT__: JSON.stringify(reviewSnapshot()),
       __REVIEW_LOCAL_AUTH__: JSON.stringify(command === "serve" && !managedLinux),
     },
     server: {
