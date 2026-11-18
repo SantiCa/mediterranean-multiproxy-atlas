@@ -4,6 +4,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 - Último agente: ChatGPT/Codex
 - Fecha: 18-11-2026
+- En curso, Atlas 03: separar el visor público de Cloudflare como archivos estáticos en la misma URL. Reservar Mis datos, Añadir fuente y el piloto de revisión al Site privado. Mantener los planes actuales.
 - Piloto de revisión por muestra validado localmente por Atlas 03. SST anual de alquenonas (Müller), edición y revisión separadas, previsualización y exportación trazable con original. Handoff docs/handoffs/piloto-revision-muestras.md. Falta configurar las dos identidades y verificar en Sites privado por el rol 04.
 - Tarea cerrada CUR-ECO-37. v37-ca98c1d0c15 añade seis sondeos y 2.292 reconstrucciones estacionales en 24 series de polen. Cotejados originales y snapshot; pruebas y auditorías completadas. Identidad cruzada y cronología pendientes de revisión independiente. Handoff docs/handoffs/cur-eco-37.md. Publicación para rol 04.
 - Tarea cerrada CUR-ECO-36. v36-c4a7ca8ed8e añade cuatro sondeos, 16 series y 1.408 reconstrucciones climáticas estacionales publicadas basadas en polen. Cotejados originales, padre y snapshot completo; pruebas y auditorías completadas. Identidad cruzada y cronología requieren revisión científica adicional. Handoff docs/handoffs/cur-eco-36.md. Integración y publicación reservadas al rol 04.
