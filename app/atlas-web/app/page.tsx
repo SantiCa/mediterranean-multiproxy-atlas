@@ -45,6 +45,9 @@ import ReviewPilotPanel from "../components/ReviewPilotPanel";
 import { useReviewPilot } from "../hooks/use-review-pilot";
 import { appliedReviewExclusions, applyReviewExclusions, REVIEW_GROUP, reviewExportSamples } from "../lib/review-pilot.mjs";
 
+declare const __ATLAS_PUBLIC_VIEWER__: boolean;
+const publicViewer = typeof __ATLAS_PUBLIC_VIEWER__ !== "undefined" && __ATLAS_PUBLIC_VIEWER__;
+
 const fmt = (x: any, n?: number) =>
   typeof x === "number" && Number.isFinite(x)
     ? n === undefined
@@ -129,7 +132,7 @@ export default function Atlas() {
     group: "",
   });
   useEffect(() => {
-    if (new URLSearchParams(window.location.search).get("pilot") !== "1") return;
+    if (publicViewer || new URLSearchParams(window.location.search).get("pilot") !== "1") return;
     setF((previous: any) => ({ ...previous, group: REVIEW_GROUP }));
     setTab("map");
   }, []);
@@ -164,6 +167,7 @@ export default function Atlas() {
     });
   }, [privateSets]);
   useEffect(() => {
+    if (publicViewer) return;
     fetch("/api/private/session")
       .then((r) => r.json())
       .then(async (s: any) => {
@@ -375,7 +379,7 @@ export default function Atlas() {
     privateSets,
     derivedSets,
   ]);
-  const reviewRelease = f.group === REVIEW_GROUP ? data?.release?.id ?? null : null;
+  const reviewRelease = !publicViewer && f.group === REVIEW_GROUP ? data?.release?.id ?? null : null;
   const review = useReviewPilot(reviewRelease);
   const reviewExclusions = useMemo(
     () => appliedReviewExclusions(review.state?.proposals ?? [], review.view),
@@ -692,9 +696,14 @@ export default function Atlas() {
   async function openSources() {
     setModal("source");
     setAddMessage("");
-    const r = await fetch("/api/candidates");
-    const d: any = await r.json();
-    setCandidates(d.candidates || []);
+    try {
+      const response = await fetch("/api/candidates");
+      const result: any = await response.json();
+      if (!response.ok) throw new Error(result.error);
+      setCandidates(result.candidates || []);
+    } catch (error) {
+      setAddMessage((error as Error).message);
+    }
   }
   async function addDOI(e: any) {
     e.preventDefault();
@@ -773,12 +782,16 @@ export default function Atlas() {
             <i /> ATLAS · datos v
             {data.release.id.match(/-v([0-9]+)-/)?.[1] || "3"}
           </span>
-          <button className="add-source" onClick={() => setModal("private")}>
-            <Lock size={15} /> Mis datos
-          </button>
-          <button className="add-source" onClick={openSources}>
-            <Plus size={15} /> Añadir fuente
-          </button>
+          {!publicViewer && (
+            <>
+              <button className="add-source" onClick={() => setModal("private")}>
+                <Lock size={15} /> Mis datos
+              </button>
+              <button className="add-source" onClick={openSources}>
+                <Plus size={15} /> Añadir fuente
+              </button>
+            </>
+          )}
         </div>
       </header>
       {tab === "inventory" && (
@@ -838,8 +851,10 @@ export default function Atlas() {
               setFiltersOpen(false);
             }}
           />
-          <DerivedProxyBuilder catalog={catalog} privateSets={privateSets} onChange={setDerivedSets}
-            onSelect={(series: any) => setF((previous: any) => ({ ...previous, proxy: series.proxy, group: groupKey(series), mode: "raw" }))} />
+          {!publicViewer && (
+            <DerivedProxyBuilder catalog={catalog} privateSets={privateSets} onChange={setDerivedSets}
+              onSelect={(series: any) => setF((previous: any) => ({ ...previous, proxy: series.proxy, group: groupKey(series), mode: "raw" }))} />
+          )}
           <section>
             <label className="overline" htmlFor="realm">
               02 / ARCHIVO
@@ -1545,7 +1560,7 @@ export default function Atlas() {
             >
               <X size={20} />
             </button>
-            {modal === "private" ? (
+            {!publicViewer && modal === "private" ? (
               <PrivateData
                 catalog={catalog}
                 datasets={privateSets}
@@ -1646,7 +1661,7 @@ export default function Atlas() {
                   </p>
                 )}
               </>
-            ) : (
+            ) : !publicViewer && modal === "source" ? (
               <>
                 <span className="overline">CRECER CON LA LITERATURA</span>
                 <h2>Una nueva fuente para el atlas</h2>
@@ -1709,7 +1724,7 @@ export default function Atlas() {
                   </p>
                 )}
               </>
-            )}
+            ) : null}
           </section>
         </div>
       )}

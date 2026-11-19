@@ -1,12 +1,12 @@
 name: Deploy web to Cloudflare
-# Self-hosted deployment independent of ChatGPT Sites (docs/DEPLOY_CLOUDFLARE.md).
-# Runs on every push to main that touches the web, or by hand from the Actions tab.
-# Needs repository secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID; without
-# them the job stops early with a notice instead of failing.
 on:
   push:
     branches: [main]
-    paths: ['app/atlas-web/**', 'data/processed/atlas-v*.json', '.github/workflows/deploy-cloudflare.yml']
+    paths:
+      - 'app/atlas-web/**'
+      - 'data/processed/atlas-v*.json'
+      - 'config/qc_corrections.json'
+      - '.github/workflows/deploy-cloudflare.yml'
   workflow_dispatch:
 
 permissions:
@@ -16,190 +16,55 @@ concurrency:
   group: deploy-cloudflare
   cancel-in-progress: false
 
-env:
-  # Public URL: https://$WORKER_NAME.$SUBDOMAIN.workers.dev (med.proxyatlas, chosen by Santiago).
-  # DB_NAME stays medatlas so the loaded data is reused.
-  WORKER_NAME: med
-  DB_NAME: medatlas
-  SUBDOMAIN: proxyatlas
-
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: app/atlas-web
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
-      - name: Check secrets
-        id: gate
-        working-directory: .
-        run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::notice::Cloudflare secrets not configured; skipping deploy."
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "ok=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.ok == 'true'
-
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
-        if: steps.gate.outputs.ok == 'true'
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: app/atlas-web/package-lock.json
-
       - name: Install
-        if: steps.gate.outputs.ok == 'true'
         run: npm ci --no-audit --no-fund
-
-      - name: Scientific contract tests
-        if: steps.gate.outputs.ok == 'true'
-        run: node --test tests/science.test.mjs tests/timeline.test.mjs tests/proxies.test.mjs
-
-      # Create the D1 database on first run; reuse it afterwards (looked up by name).
-      - name: Resolve D1 database
-        if: steps.gate.outputs.ok == 'true'
-        id: db
+      - name: Web tests
+        run: node --test tests/*.test.mjs
+      - name: Build and verify public catalogue
         run: |
-          # Secrets pasted from a browser often carry a trailing newline/space.
-          # Drop whitespace, quotes/backticks and an accidental "Bearer" prefix.
-          CLOUDFLARE_API_TOKEN="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]"`'"'" | sed 's/^Bearer//')"
-          # Keep only the 32-hex account id, in case it was pasted with quotes/backticks.
-          raw_account="$CLOUDFLARE_ACCOUNT_ID"
-          CLOUDFLARE_ACCOUNT_ID="$(printf %s "$raw_account" | grep -Eio '[0-9a-f]{32}' | head -1 || true)"
-          echo "::notice title=Account ID::secreto de ${#raw_account} car.; id usado: ${CLOUDFLARE_ACCOUNT_ID:-NINGUNO}"
-          [ -n "$CLOUDFLARE_ACCOUNT_ID" ] || { echo "::error title=Account ID::CLOUDFLARE_ACCOUNT_ID no contiene un id de 32 caracteres hexadecimales."; exit 1; }
-          export CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID
-          # Later wrangler steps reuse the cleaned (non-secret) account id.
-          echo "CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID" >> "$GITHUB_ENV"
-          echo "::add-mask::$CLOUDFLARE_API_TOKEN"
-          echo "Longitudes: token=${#CLOUDFLARE_API_TOKEN} account=${#CLOUDFLARE_ACCOUNT_ID}"
-          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/d1/database"
-          call() { curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" "$@"; }
-          fail() { echo "::error title=Cloudflare D1::$1"; exit 1; }
-          pick() { node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{let j;try{j=JSON.parse(s)}catch{console.log("ERR:respuesta no JSON");return}if(!j.success){console.log("ERR:"+JSON.stringify(j.errors));return}const r=j.result;const m=Array.isArray(r)?r.find(d=>d.name===process.argv[1]):r;console.log(m?m.uuid:"")})' "$DB_NAME"; }
-          raw="$(call -w '\nHTTP %{http_code}' "$api?name=$DB_NAME" || true)"
-          code="$(printf '%s' "$raw" | tail -1)"
-          body="$(printf '%s' "$raw" | sed '$d')"
-          echo "$code"
-          out="$(printf '%s' "$body" | pick)"
-          case "$out" in ERR:*) echo "::error title=Cloudflare respuesta::$code ${body:0:300}" ;; esac
-          case "$out" in ERR:*) fail "No se puede listar D1 ($out). Revisa que el token tenga Account > D1 > Edit y que CLOUDFLARE_ACCOUNT_ID sea el de esa cuenta." ;; esac
-          if [ -z "$out" ]; then
-            out="$(call -X POST "$api" -d "{\"name\":\"$DB_NAME\"}" | pick)"
-            case "$out" in ERR:*) fail "No se puede crear D1 ($out)." ;; esac
+          seed="$(git -C ../.. ls-files 'data/processed/atlas-v*.json' | sort -V | tail -1)"
+          test -n "$seed"
+          python3 ../../scripts/audit_science.py "../../$seed" > audit.log || { cat audit.log; exit 1; }
+          node scripts/build-public-viewer.mjs "../../$seed"
+      - name: Publish static assets to the existing Worker
+        id: publish
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::Cloudflare secrets not configured; skipping publication."
+            exit 0
           fi
-          test -n "$out" || fail "No se obtuvo el id de la base D1."
-          echo "id=$out" >> "$GITHUB_OUTPUT"
-
-      # Schema is owned by the versioned drizzle/*.sql migrations; never DDL from requests.
-      - name: Apply D1 migrations
-        if: steps.gate.outputs.ok == 'true'
+          npx --no-install wrangler deploy --config wrangler.public.json
+          echo "done=true" >> "$GITHUB_OUTPUT"
+      - name: Verify the public hostname and API separation
+        if: steps.publish.outputs.done == 'true'
         run: |
-          cat > wrangler.migrations.json <<EOF
-          {"name":"$WORKER_NAME","d1_databases":[{"binding":"DB","database_name":"$DB_NAME","database_id":"${{ steps.db.outputs.id }}","migrations_dir":"drizzle"}]}
-          EOF
-          if ! npx wrangler d1 migrations apply "$DB_NAME" --remote --config wrangler.migrations.json > migrate.log 2>&1; then
-            cat migrate.log
-            if grep -qE "row (write|read) limit" migrate.log; then
-              # Daily Free limit: deploy anyway (public data are static); migrations retry on the next deploy.
-              echo "::warning title=Migraciones D1::límite diario D1; se aplican en el siguiente despliegue (afecta solo a Mis datos)"
-            else
-              echo "::error title=Migraciones D1::$(grep -iE 'error|✘' migrate.log | tail -3 | tr '\n' ' ' | cut -c1-400)"
-              exit 1
+          url="https://med.proxyatlas.workers.dev"
+          for attempt in $(seq 1 12); do
+            if curl --silent --show-error --fail --max-time 15 "$url/" --output /dev/null &&
+              curl --silent --show-error --fail --max-time 15 "$url/snapshot/catalog.json" --output live.json &&
+              cmp -s live.json dist-public/snapshot/catalog.json &&
+              [ "$(curl --silent --show-error --max-time 15 --output /dev/null --write-out '%{http_code}' "$url/api/candidates")" = 404 ]; then
+              echo "### Visor público: $url" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
             fi
-          fi
-          tail -5 migrate.log
-
-      - name: Build
-        if: steps.gate.outputs.ok == 'true'
-        env:
-          CF_WORKER_NAME: ${{ env.WORKER_NAME }}
-          CF_D1_DATABASE_NAME: ${{ env.DB_NAME }}
-          CF_D1_DATABASE_ID: ${{ steps.db.outputs.id }}
-        # Public data as static assets (public/snapshot) from the newest seed, checked
-        # cell by cell before deploying. D1 keeps only private data and the DOI queue.
-        run: |
-          SEED="$(ls ../../data/processed/atlas-v*.json | sort -V | tail -1)"
-          # Scientific audit of the seed: fails only on integrity errors; warnings go to the log.
-          python3 ../../scripts/audit_science.py "$SEED" > audit.log || { cat audit.log; exit 1; }
-          head -60 audit.log
-          node scripts/snapshot.mjs "$SEED" public/snapshot data/inventory.json
-          node scripts/check-snapshot.mjs "$SEED" public/snapshot | tee check.log
-          echo "::notice title=Instantánea::$(tail -1 check.log)"
-          npx vinext build
-
-      - name: Deploy Worker
-        if: steps.gate.outputs.ok == 'true'
-        run: npx wrangler deploy --config dist/server/wrangler.json
-
-      # Owner password for the private area («Mis datos»), from the GitHub secret
-      # ATLAS_OWNER_PASSWORD. Never printed; skipped when the secret is absent.
-      - name: Owner password secret
-        if: steps.gate.outputs.ok == 'true'
-        env:
-          OWNER_PASSWORD: ${{ secrets.ATLAS_OWNER_PASSWORD }}
-        run: |
-          if [ -z "$OWNER_PASSWORD" ]; then echo "::notice title=Mis datos::Sin ATLAS_OWNER_PASSWORD; el área privada queda desactivada."; exit 0; fi
-          [ ${#OWNER_PASSWORD} -ge 12 ] || { echo "::warning title=Mis datos::ATLAS_OWNER_PASSWORD debe tener al menos 12 caracteres"; exit 0; }
-          printf %s "$OWNER_PASSWORD" | npx wrangler secret put OWNER_PASSWORD --name "$WORKER_NAME" > /dev/null && echo "::notice title=Mis datos::Contraseña del área privada actualizada."
-
-      # Give the Worker a public workers.dev URL: register the account subdomain on
-      # first use (SUBDOMAIN below) and enable workers.dev for this script.
-      - name: Enable workers.dev URL
-        if: steps.gate.outputs.ok == 'true'
-        id: deploy
-        run: |
-          T="$(printf %s "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')"
-          echo "::add-mask::$T"
-          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers"
-          call() { curl -sS -H "Authorization: Bearer $T" -H "Content-Type: application/json" "$@"; }
-          field() { node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);if(!j.success){console.log("ERR:"+JSON.stringify(j.errors));return}console.log((j.result&&j.result[process.argv[1]])??"")}catch{console.log("ERR:no JSON")}})' "$1"; }
-          sub="$(call "$api/subdomain" | field subdomain)"
-          case "$sub" in ERR:*) sub="";; esac
-          # Register or rename the account subdomain to SUBDOMAIN. Renaming changes the
-          # URL of every Worker in the account. If the name is taken, keep the current one.
-          if [ "$sub" != "$SUBDOMAIN" ]; then
-            put() { call -X PUT "$api/subdomain" -d "{\"subdomain\":\"$1\"}" | field subdomain; }
-            new="$(put "$SUBDOMAIN")"
-            # Cloudflare refuses a rename (10036); delete the account subdomain and
-            # register the new one, restoring the previous name if that fails.
-            case "$new" in *10036*)
-              call -X DELETE "$api/subdomain" >/dev/null || true
-              new="$(put "$SUBDOMAIN")"
-              case "$new" in ERR:*|"") [ -n "$sub" ] && put "$sub" >/dev/null;; esac ;;
-            esac
-            case "$new" in
-              ERR:*|"") echo "::warning title=workers.dev::No se pudo usar '$SUBDOMAIN' ($new); se mantiene '${sub:-ninguno}'.";;
-              *) sub="$new";;
-            esac
-          fi
-          [ -n "$sub" ] || { echo "::error title=workers.dev::No se pudo registrar el subdominio de la cuenta."; exit 1; }
-          r="$(call -X POST "$api/scripts/$WORKER_NAME/subdomain" -d '{"enabled":true,"previews_enabled":false}' | field enabled)"
-          case "$r" in ERR:*) echo "::error title=workers.dev::No se pudo activar ($r)"; exit 1;; esac
-          url="https://$WORKER_NAME.$sub.workers.dev"
-          echo "url=$url" >> "$GITHUB_OUTPUT"
-          echo "::notice title=Atlas desplegado::$url"
-          echo "### Atlas desplegado: $url" >> "$GITHUB_STEP_SUMMARY"
-          # A newly enabled subdomain can take a minute to resolve.
-          # A new workers.dev hostname can take several minutes to start routing.
-          for i in $(seq 1 60); do curl -s -o /dev/null -w '%{http_code}' "$url/snapshot/catalog.json" | grep -q 200 && break; sleep 10; done
-
-      - name: Check public snapshot
-        if: steps.gate.outputs.ok == 'true'
-        env:
-          URL: ${{ steps.deploy.outputs.url }}
-        run: |
-          want="$(node -e 'const fs=require("fs");console.log(JSON.parse(fs.readFileSync("public/snapshot/catalog.json")).release.id)')"
-          for i in $(seq 1 30); do
-            got="$(curl -s -A 'medatlas-check' "$URL/snapshot/catalog.json" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).release.id)}catch{console.log("")}})')"
-            [ "$got" = "$want" ] && break; sleep 10
+            sleep 5
           done
-          [ "$got" = "$want" ] || { echo "::error title=Web::la URL pública no sirve $want (sirve '${got:-nada}')"; exit 1; }
-          echo "::notice title=Web publicada::$URL sirve $want"
+          echo "::error::La URL pública no sirve aún el catálogo esperado o conserva la API anterior."
+          exit 1

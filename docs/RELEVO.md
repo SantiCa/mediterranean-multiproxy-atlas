@@ -3,7 +3,9 @@
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
 - Último agente: ChatGPT/Codex
-- Fecha: 18-11-2026
+- Fecha: 19-11-2026
+- Tarea cerrada CUR-ECO-38. v38-c87e896832c añade seis sondeos, 24 series y 2.660 reconstrucciones estacionales basadas en polen. Cotejados originales y snapshot; pruebas y auditorías completadas. Documentados avisos de temperatura invernal y revisión pendiente de identidad y cronología. Handoff docs/handoffs/cur-eco-38.md. Publicación para rol 04.
+- Separación público/privado preparada y comprobada por Atlas 03. Cloudflare queda listo para publicar solo el visor estático en la URL actual. Mis datos y revisión se conservan en Sites, y Añadir fuente exige sesión. Pendiente integrar y verificar ambos despliegues por separado. Handoff docs/handoffs/visor-publico-estatico.md.
 - Piloto de revisión por muestra validado localmente por Atlas 03. SST anual de alquenonas (Müller), edición y revisión separadas, previsualización y exportación trazable con original. Handoff docs/handoffs/piloto-revision-muestras.md. Falta configurar las dos identidades y verificar en Sites privado por el rol 04.
 - Tarea cerrada CUR-ECO-37. v37-ca98c1d0c15 añade seis sondeos y 2.292 reconstrucciones estacionales en 24 series de polen. Cotejados originales y snapshot; pruebas y auditorías completadas. Identidad cruzada y cronología pendientes de revisión independiente. Handoff docs/handoffs/cur-eco-37.md. Publicación para rol 04.
 - Tarea cerrada CUR-ECO-36. v36-c4a7ca8ed8e añade cuatro sondeos, 16 series y 1.408 reconstrucciones climáticas estacionales publicadas basadas en polen. Cotejados originales, padre y snapshot completo; pruebas y auditorías completadas. Identidad cruzada y cronología requieren revisión científica adicional. Handoff docs/handoffs/cur-eco-36.md. Integración y publicación reservadas al rol 04.
@@ -39,8 +41,9 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 19-11: Santiago solicita publicar la última versión; rol 04 prepara v38, visor público separado y Site privado. El piloto permanece pendiente de segunda cuenta revisora.
 0. 18-11: Santiago solicita activar el piloto privado de revisión. Snapshot v37 con QC cotejado: 1.078.640 valores y 1.249 archivos; tres pruebas focalizadas correctas. La revisión automática rechazó integrar toda la rama en main porque incluye cambios adicionales al piloto. No desplegado ni aplicada la migración en Sites; faltan dos cuentas reales distintas para asignar roles y comprobar el recorrido. Pedir aprobación para esa integración y los correos de ambas cuentas.
-0. Rol 04: integrar y publicar v37 tras revisar docs/handoffs/cur-eco-36.md y cur-eco-37.md; no sustituir ni omitir el QC heredado. La publicación v35 sigue vigente hasta entonces.
+0. Rol 04: integrar y publicar v38 tras revisar docs/handoffs/cur-eco-36.md, cur-eco-37.md y cur-eco-38.md; no sustituir ni omitir el QC heredado. La publicación v35 sigue vigente hasta entonces.
 0. Publicación v35 completada; continuar curación según las siguientes acciones.
 0. Publicación v33 completada; continuar curación según las siguientes acciones.
 0. 07-11: Santiago solicita integrar y publicar la última versión; rol 04 prepara v29 con QC validado.
