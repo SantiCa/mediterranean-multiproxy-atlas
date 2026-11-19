@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-19",
+  "project_id": "appgprj_6ae21e92359c819185d57ecd9bed0133",
+  "version_id": "appgprj_6ae21e92359c819185d57ecd9bed0133~appgver_b6ebdab4c8b0819188a8128d9eb28a17",
+  "deployment_id": "appgdep_6aff4202d068819182849ca7e489e5ea",
+  "status": "succeeded",
+  "url": "https://mediterranean-multiproxy-atlas.santic1290.chatgpt.site",
+  "public_url": "https://med.proxyatlas.workers.dev",
+  "public_workflow_run": "https://github.com/SantiCa/mediterranean-multiproxy-atlas/actions/runs/44589630358",
+  "source_commit": "ab241df209256fc8aea3eae808f5d6dcb2a44a53",
+  "main_commit": "35c1ef190ce169cd2a58fafc56fb7388955078a8",
+  "release": "atlas-quantitative-2026-11-19-v38-c87e896832c",
+  "seed_sha256": "5ecd9f64e2016e7e8df9a3742261f5588ddb666a7082b389b34adc9ebca4fcb5",
+  "checks": {"snapshot_values": 1081300, "snapshot_groups": 1247, "snapshot_files": 1249, "node_tests": 49, "typescript": true, "private_build": true, "public_build": true, "migration_table_present": true, "public_workflow": "success"},
+  "limits": "Pilot requires a second real reviewer; end-to-end two-account verification pending. Sites production content not independently checked."
+}
