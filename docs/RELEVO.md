@@ -3,7 +3,8 @@
 Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGENTS.md.
 
 - Último agente: ChatGPT/Codex
-- Fecha: 18-11-2026
+- Fecha: 19-11-2026
+- Tarea en curso CUR-ECO-38: ampliar sondeos y registros con fuentes publicadas, revisar duplicados y preservar la publicación para rol 04.
 - Separación público/privado preparada y comprobada por Atlas 03. Cloudflare queda listo para publicar solo el visor estático en la URL actual. Mis datos y revisión se conservan en Sites, y Añadir fuente exige sesión. Pendiente integrar y verificar ambos despliegues por separado. Handoff docs/handoffs/visor-publico-estatico.md.
 - Piloto de revisión por muestra validado localmente por Atlas 03. SST anual de alquenonas (Müller), edición y revisión separadas, previsualización y exportación trazable con original. Handoff docs/handoffs/piloto-revision-muestras.md. Falta configurar las dos identidades y verificar en Sites privado por el rol 04.
 - Tarea cerrada CUR-ECO-37. v37-ca98c1d0c15 añade seis sondeos y 2.292 reconstrucciones estacionales en 24 series de polen. Cotejados originales y snapshot; pruebas y auditorías completadas. Identidad cruzada y cronología pendientes de revisión independiente. Handoff docs/handoffs/cur-eco-37.md. Publicación para rol 04.
