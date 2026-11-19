@@ -41,6 +41,7 @@ Copia válida: rama `relevo`. Actualizar con commit+push tras cada paso; ver AGE
 
 ## Siguiente acción
 
+0. 19-11: Santiago solicita publicar la última versión; rol 04 prepara v38, visor público separado y Site privado. El piloto permanece pendiente de segunda cuenta revisora.
 0. 18-11: Santiago solicita activar el piloto privado de revisión. Snapshot v37 con QC cotejado: 1.078.640 valores y 1.249 archivos; tres pruebas focalizadas correctas. La revisión automática rechazó integrar toda la rama en main porque incluye cambios adicionales al piloto. No desplegado ni aplicada la migración en Sites; faltan dos cuentas reales distintas para asignar roles y comprobar el recorrido. Pedir aprobación para esa integración y los correos de ambas cuentas.
 0. Rol 04: integrar y publicar v38 tras revisar docs/handoffs/cur-eco-36.md, cur-eco-37.md y cur-eco-38.md; no sustituir ni omitir el QC heredado. La publicación v35 sigue vigente hasta entonces.
 0. Publicación v35 completada; continuar curación según las siguientes acciones.
